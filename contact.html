@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Islam Darwish</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2980b9;
+            --accent: #f39c12;
+            --text: #333;
+            --light-bg: #f8f9fa;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light-bg);
+            padding: 0;
+            margin: 0;
+        }
+
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 15px var(--shadow);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            color: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .page-header {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .page-title {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        .page-subtitle {
+            color: #777;
+            font-weight: normal;
+            font-size: 1.1rem;
+        }
+
+        .contact-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: var(--transition);
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+        }
+
+        .info-item:hover {
+            transform: translateX(5px);
+        }
+
+        .info-item i {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--primary);
+            font-size: 1.2rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+            transition: var(--transition);
+        }
+
+        .info-item:hover i {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .email-link {
+            color: var(--text);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .email-link:hover {
+            color: var(--primary);
+        }
+
+        .email-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .email-link:hover::after {
+            width: 100%;
+        }
+
+        .info-item:hover .email-link {
+            color: var(--primary);
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            width: 100%;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 0.9rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            margin: 1rem 0;
+        }
+
+        .whatsapp-btn i {
+            font-size: 1.5rem;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: var(--whatsapp-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-btn:active {
+            transform: translateY(1px);
+        }
+
+        .toggle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            margin: 1.5rem 0 0.5rem;
+            text-align: left;
+        }
+
+        .toggle-btn:hover {
+            background-color: var(--secondary);
+        }
+
+        .toggle-btn i {
+            transition: var(--transition);
+        }
+
+        .toggle-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        .collapsible {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .collapsible.show {
+            max-height: 2000px;
+        }
+
+        .donation-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .donation-section h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .crypto-addresses {
+            margin-top: 1rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .crypto-item {
+            margin-bottom: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .crypto-item.active {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .crypto-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .crypto-header:hover {
+            background-color: rgba(52, 152, 219, 0.05);
+        }
+
+        .crypto-expand-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .crypto-expand-btn:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        .crypto-expand-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        .crypto-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding: 0 0.5rem;
+        }
+
+        .crypto-details.show {
+            max-height: 500px;
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .crypto-label {
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .crypto-label i {
+            color: var(--primary);
+        }
+
+        .crypto-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .qr-code {
+            background-color: white;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .qr-code:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .crypto-item.active .qr-code img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .crypto-address-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .crypto-address {
+            flex: 1;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 6px 0 0 6px;
+            background-color: white;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        .copy-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.7rem;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .copy-btn:hover {
+            background-color: var(--secondary);
+        }
+
+        .copy-success {
+            background-color: #4CAF50 !important;
+        }
+
+        /* Modal styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-container {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            max-width: 90%;
+            animation: scaleIn 0.3s ease;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            background-color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .modal-title {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .modal-qr img {
+            width: 300px;
+            height: 300px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (min-width: 768px) {
+            .crypto-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .crypto-address-container {
+                flex: 1;
+                margin-left: 1.5rem;
+            }
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+            }
+
+            .crypto-item.active .qr-code img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .crypto-address {
+                font-size: 0.75rem;
+            }
+
+            .modal-qr img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <a href="/" class="logo">Islam Darwish</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="page-title">Get In Touch</h1>
+        <p class="page-subtitle">Questions, feedback, or project ideas? Reach out and let's talk!</p>
+    </div>
+
+    <div class="contact-card">
+        <h2 class="section-title">Contact Information</h2>
+
+        <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:islam.saad2005@gmail.com" class="email-link">
+                islam.saad2005@gmail.com
+            </a>
+        </div>
+
+        <div class="whatsapp-contact">
+            <a href="https://wa.me/201023665657" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Message on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="donation-section">
+        <h2>Support My Work</h2>
+        <p>If you appreciate my work and would like to support me, you can donate using cryptocurrency.</p>
+
+        <button class="toggle-btn" id="donationToggle">
+            <span>Show Donation Options</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <div class="collapsible" id="cryptoOptions">
+            <div class="crypto-addresses">
+                <div class="crypto-item">
+                    <div class="crypto-header">
+                        <p class="crypto-label"><i class="fab fa-bitcoin"></i> Bitcoin (BTC)</p>
+                        <button class="crypto-expand-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="crypto-details">
+                        <div class="crypto-content">
+                            <div class="qr-code">
+                                <img src="assets/assets/images/btc.jpg" alt="Bitcoin Address QR Code">
+                            </div>
+                            <div class="crypto-address-container">
+                                <input type="text" class="crypto-address" value="bc1qwzfdgswmxn7sxt2uxq63nwqggce3g2usf9d276" readonly>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="crypto-item">
+                    <div class="crypto-header">
+                        <p class="crypto-label"><i class="fab fa-ethereum"></i> Ethereum (ETH)</p>
+                        <button class="crypto-expand-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="crypto-details">
+                        <div class="crypto-content">
+                            <div class="qr-code">
+                                <img src="assets/assets/images/eth.jpg" alt="Ethereum Address QR Code">
+                            </div>
+                            <div class="crypto-address-container">
+                                <input type="text" class="crypto-address" value="0x5ce7DfD614A3F4A73e35e2907f6941E5aE70CD21" readonly>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="crypto-item">
+                    <div class="crypto-header">
+                        <p class="crypto-label"><i class="fas fa-coins"></i> USDT</p>
+                        <button class="crypto-expand-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="crypto-details">
+                        <div class="crypto-content">
+                            <div class="qr-code">
+                                <img src="assets/assets/images/usdt.jpg" alt="USDT Address QR Code">
+                            </div>
+                            <div class="crypto-address-container">
+                                <input type="text" class="crypto-address" value="0x5ce7DfD614A3F4A73e35e2907f6941E5aE70CD21" readonly>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="crypto-item">
+                    <div class="crypto-header">
+                        <p class="crypto-label"><i class="fas fa-coins"></i> USDC</p>
+                        <button class="crypto-expand-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="crypto-details">
+                        <div class="crypto-content">
+                            <div class="qr-code">
+                                <img src="assets/assets/images/usdc.jpg" alt="USDC Address QR Code">
+                            </div>
+                            <div class="crypto-address-container">
+                                <input type="text" class="crypto-address" value="0x5ce7DfD614A3F4A73e35e2907f6941E5aE70CD21" readonly>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Islam Darwish. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- QR Code Modal -->
+<div class="modal-overlay" id="qrModal">
+    <div class="modal-container">
+        <button class="modal-close" id="modalClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 class="modal-title" id="modalTitle">Cryptocurrency QR Code</h3>
+        <div class="modal-qr">
+            <img id="modalQrImage" src="" alt="QR Code">
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle functionality for donation section
+    document.getElementById('donationToggle').addEventListener('click', function() {
+        this.classList.toggle('active');
+        const cryptoOptions = document.getElementById('cryptoOptions');
+        cryptoOptions.classList.toggle('show');
+
+        // Change button text based on state
+        const buttonText = this.querySelector('span');
+        if (this.classList.contains('active')) {
+            buttonText.textContent = 'Hide Donation Options';
+        } else {
+            buttonText.textContent = 'Show Donation Options';
+
+            // Close all expanded crypto items when hiding donation options
+            document.querySelectorAll('.crypto-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.crypto-details').classList.remove('show');
+                item.querySelector('.crypto-expand-btn').classList.remove('active');
+            });
+        }
+    });
+
+    // Toggle functionality for crypto items
+    document.querySelectorAll('.crypto-header').forEach(header => {
+        header.addEventListener('click', function() {
+            const cryptoItem = this.parentElement;
+            const details = this.nextElementSibling;
+            const expandBtn = this.querySelector('.crypto-expand-btn');
+
+            // Close all other items
+            document.querySelectorAll('.crypto-item').forEach(item => {
+                if (item !== cryptoItem && item.querySelector('.crypto-details').classList.contains('show')) {
+                    item.querySelector('.crypto-details').classList.remove('show');
+                    item.classList.remove('active');
+                    item.querySelector('.crypto-expand-btn').classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            cryptoItem.classList.toggle('active');
+            details.classList.toggle('show');
+            expandBtn.classList.toggle('active');
+        });
+    });
+
+    // Copy address functionality
+    document.querySelectorAll('.copy-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent triggering the crypto-header click
+            const addressInput = this.previousElementSibling;
+            addressInput.select();
+            document.execCommand('copy');
+
+            // Visual feedback
+            this.classList.add('copy-success');
+            this.innerHTML = '<i class="fas fa-check"></i>';
+
+            setTimeout(() => {
+                this.classList.remove('copy-success');
+                this.innerHTML = '<i class="fas fa-copy"></i>';
+            }, 2000);
+        });
+    });
+
+    // QR Code modal functionality
+    const modal = document.getElementById('qrModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalQrImage = document.getElementById('modalQrImage');
+    const modalTitle = document.getElementById('modalTitle');
+
+    // Open modal when clicking on QR codes
+    document.querySelectorAll('.qr-code').forEach(qrCode => {
+        qrCode.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent triggering the crypto-header click
+
+            // Get the QR code image source and crypto name
+            const qrImg = this.querySelector('img');
+            const cryptoItem = this.closest('.crypto-item');
+            const cryptoName = cryptoItem.querySelector('.crypto-label').textContent.trim();
+
+            // Set modal content
+            modalQrImage.src = qrImg.src;
+            modalTitle.textContent = cryptoName + ' QR Code';
+
+            // Show modal
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    // Close modal when clicking on close button
+    modalClose.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+    });
+
+    // Close modal when clicking outside the modal content
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+
+    // Close modal on Escape key press
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+</script>
+</body>
+</html>
