@@ -259,6 +259,16 @@
             transform: rotate(180deg);
         }
 
+        .secondary-btn {
+            background-color: var(--accent);
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .secondary-btn:hover {
+            background-color: #e67e22;
+        }
+
         .collapsible {
             max-height: 0;
             overflow: hidden;
@@ -283,6 +293,68 @@
             color: var(--primary);
             margin-bottom: 1rem;
             font-size: 1.8rem;
+        }
+
+        .info-note {
+            background-color: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .info-note i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-right: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .info-note p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .info-note strong {
+            color: var(--primary);
+        }
+
+        .promo-content {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .promo-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .video-container {
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+            max-height: 500px;
+        }
+
+        .instruction-steps {
+            padding-left: 1.5rem;
+        }
+
+        .instruction-steps li {
+            margin-bottom: 0.5rem;
         }
 
         .crypto-addresses {
@@ -596,6 +668,46 @@
         <h2>Support My Work</h2>
         <p>If you appreciate my work and would like to support me, you can donate using cryptocurrency.</p>
 
+        <!-- Information note about alternative payment -->
+        <div class="info-note">
+            <i class="fas fa-info-circle"></i>
+            <p>Payment not working in the app? No problem! You can still purchase coins or unlock the pro version:<br>
+            1) Make a cryptocurrency donation below<br>
+            2) <strong>Send me a message</strong> after donating<br>
+            3) I'll give you a promo code to activate your premium features<br>
+            <strong>Watch the video below</strong> to see exactly how to apply your promo code!</p>
+        </div>
+
+        <!-- Promo code instructions toggle -->
+        <button class="toggle-btn secondary-btn" id="promoToggle">
+            <span>Show How to Apply Promo Code</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <!-- Collapsible promo instructions -->
+        <div class="collapsible" id="promoInstructions">
+            <div class="promo-content">
+                <h3>How to Apply Your Promo Code</h3>
+                <p>Follow these steps to redeem your promo code in Google Play:</p>
+
+                <div class="video-container">
+                    <video controls>
+                        <source src="assets/videos/promo.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <ol class="instruction-steps">
+                    <li>Open the Google Play Store app on your device</li>
+                    <li>Tap on your profile icon in the top-right corner</li>
+                    <li>Select "Payments & subscriptions"</li>
+                    <li>Tap on "Redeem gift code"</li>
+                    <li>Enter the promo code you received</li>
+                    <li>Tap "Redeem" to apply the code</li>
+                </ol>
+            </div>
+        </div>
+
         <button class="toggle-btn" id="donationToggle">
             <span>Show Donation Options</span>
             <i class="fas fa-chevron-down"></i>
@@ -704,6 +816,21 @@
 </div>
 
 <script>
+    // Toggle functionality for promo instructions
+    document.getElementById('promoToggle').addEventListener('click', function() {
+        this.classList.toggle('active');
+        const promoInstructions = document.getElementById('promoInstructions');
+        promoInstructions.classList.toggle('show');
+
+        // Change button text based on state
+        const buttonText = this.querySelector('span');
+        if (this.classList.contains('active')) {
+            buttonText.textContent = 'Hide Promo Code Instructions';
+        } else {
+            buttonText.textContent = 'Show How to Apply Promo Code';
+        }
+    });
+
     // Toggle functionality for donation section
     document.getElementById('donationToggle').addEventListener('click', function() {
         this.classList.toggle('active');
