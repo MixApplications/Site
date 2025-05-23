@@ -406,6 +406,69 @@
             transform: scale(1.1);
         }
 
+        /* Quality selector styles */
+        .quality-selector {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 20;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .video-wrapper:hover .quality-selector,
+        .video-element[controls] ~ .quality-selector {
+            opacity: 1;
+        }
+
+        .quality-btn {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .quality-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .quality-menu {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 4px;
+            margin-bottom: 5px;
+            display: none;
+            flex-direction: column;
+            min-width: 120px;
+        }
+
+        .quality-selector.open .quality-menu {
+            display: flex;
+        }
+
+        .quality-option {
+            color: white;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .quality-option:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .quality-option.active {
+            color: var(--primary);
+        }
+
         .instruction-steps {
             padding-left: 1.5rem;
         }
@@ -747,18 +810,28 @@
                 <h3>How to Apply Your Promo Code</h3>
                 <p>Follow these steps to redeem your promo code in Google Play:</p>
 
-                <!-- Fixed video player with first-frame thumbnail -->
+                <!-- Updated video container with adaptive streaming -->
                 <div class="video-container" id="videoContainer">
                     <div class="video-wrapper">
-                        <video id="videoPlayer" controls preload="metadata" class="video-element">
-                            <source src="assets/assets/videos/promo.mp4" type="video/mp4">
-                            <source src="assets/assets/videos/promo.webm" type="video/webm">
+                        <video id="videoPlayer" preload="metadata" class="video-element">
                             Your browser doesn't support HTML5 video.
                         </video>
                         <div class="play-overlay" id="playOverlay">
                             <button class="play-button">
                                 <i class="fas fa-play"></i>
                             </button>
+                        </div>
+                        <div class="quality-selector" id="qualitySelector">
+                            <button class="quality-btn">
+                                <i class="fas fa-cog"></i>
+                                <span id="currentQuality">Auto</span>
+                            </button>
+                            <div class="quality-menu">
+                                <div class="quality-option active" data-quality="auto">Auto</div>
+                                <div class="quality-option" data-quality="high">High (1080p)</div>
+                                <div class="quality-option" data-quality="medium">Medium (720p)</div>
+                                <div class="quality-option" data-quality="low">Low (480p)</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -784,15 +857,19 @@
                 <div class="crypto-item">
                     <div class="crypto-header">
                         <p class="crypto-label"><i class="fab fa-bitcoin"></i> Bitcoin (BTC)</p>
-                        <button class="crypto-expand-btn"><i class="fas fa-chevron-down"></i></button>
+                        <button class="crypto-expand-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="crypto-details">
                         <div class="crypto-content">
                             <div class="qr-code">
-                                <img src="assets/assets/images/btc.jpg" alt="Bitcoin Address QR Code">
+                                <img src="assets/assets/images/btc.jpg"
+                                     alt="Bitcoin Address QR Code">
                             </div>
                             <div class="crypto-address-container">
-                                <input type="text" class="crypto-address" value="bc1qwzfdgswmxn7sxt2uxq63nwqggce3g2usf9d276" readonly>
+                                <input type="text" class="crypto-address"
+                                       value="bc1qwzfdgswmxn7sxt2uxq63nwqggce3g2usf9d276" readonly>
                                 <button class="copy-btn"><i class="fas fa-copy"></i></button>
                             </div>
                         </div>
@@ -801,15 +878,19 @@
                 <div class="crypto-item">
                     <div class="crypto-header">
                         <p class="crypto-label"><i class="fab fa-ethereum"></i> Ethereum (ETH)</p>
-                        <button class="crypto-expand-btn"><i class="fas fa-chevron-down"></i></button>
+                        <button class="crypto-expand-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="crypto-details">
                         <div class="crypto-content">
                             <div class="qr-code">
-                                <img src="assets/assets/images/eth.jpg" alt="Ethereum Address QR Code">
+                                <img src="assets/assets/images/eth.jpg"
+                                     alt="Ethereum Address QR Code">
                             </div>
                             <div class="crypto-address-container">
-                                <input type="text" class="crypto-address" value="0xf3a286d9b8e4d7500ad1a402b202ba0296750ef8" readonly>
+                                <input type="text" class="crypto-address"
+                                       value="0x5ce7DfD614A3F4A73e35e2907f6941E5aE70CD21" readonly>
                                 <button class="copy-btn"><i class="fas fa-copy"></i></button>
                             </div>
                         </div>
@@ -817,16 +898,19 @@
                 </div>
                 <div class="crypto-item">
                     <div class="crypto-header">
-                        <p class="crypto-label"><i class="fas fa-dollar-sign"></i> Tether (USDT)</p>
-                        <button class="crypto-expand-btn"><i class="fas fa-chevron-down"></i></button>
+                        <p class="crypto-label"><i class="fas fa-coins"></i> USDT</p>
+                        <button class="crypto-expand-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="crypto-details">
                         <div class="crypto-content">
                             <div class="qr-code">
-                                <img src="assets/assets/images/usdt.jpg" alt="Tether Address QR Code">
+                                <img src="assets/assets/images/usdt.jpg" alt="USDT Address QR Code">
                             </div>
                             <div class="crypto-address-container">
-                                <input type="text" class="crypto-address" value="TEamSbBqZZQC7GgPcUkcELXPwEyjL5J3mQ" readonly>
+                                <input type="text" class="crypto-address"
+                                       value="0x5ce7DfD614A3F4A73e35e2907f6941E5aE70CD21" readonly>
                                 <button class="copy-btn"><i class="fas fa-copy"></i></button>
                             </div>
                         </div>
@@ -834,16 +918,19 @@
                 </div>
                 <div class="crypto-item">
                     <div class="crypto-header">
-                        <p class="crypto-label"><i class="fas fa-coins"></i> Litecoin (LTC)</p>
-                        <button class="crypto-expand-btn"><i class="fas fa-chevron-down"></i></button>
+                        <p class="crypto-label"><i class="fas fa-coins"></i> USDC</p>
+                        <button class="crypto-expand-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="crypto-details">
                         <div class="crypto-content">
                             <div class="qr-code">
-                                <img src="assets/assets/images/ltc.jpg" alt="Litecoin Address QR Code">
+                                <img src="assets/assets/images/usdc.jpg" alt="USDC Address QR Code">
                             </div>
                             <div class="crypto-address-container">
-                                <input type="text" class="crypto-address" value="LTeVY5hmK2KkjLCWnxYpQh7NaXXrLPzJZd" readonly>
+                                <input type="text" class="crypto-address"
+                                       value="0x5ce7DfD614A3F4A73e35e2907f6941E5aE70CD21" readonly>
                                 <button class="copy-btn"><i class="fas fa-copy"></i></button>
                             </div>
                         </div>
@@ -1001,46 +1088,135 @@
         }
     });
 
-    // Improved video player functionality
+    // Adaptive video streaming functionality
     document.addEventListener('DOMContentLoaded', function() {
         const videoPlayer = document.getElementById('videoPlayer');
         const playOverlay = document.getElementById('playOverlay');
+        const qualitySelector = document.getElementById('qualitySelector');
+        const qualityBtn = qualitySelector.querySelector('.quality-btn');
+        const qualityMenu = qualitySelector.querySelector('.quality-menu');
+        const currentQualityDisplay = document.getElementById('currentQuality');
+        const videoSources = {
+            high: 'assets/assets/videos/promo-1080p.mp4',
+            medium: 'assets/assets/videos/promo-720p.mp4',
+            low: 'assets/assets/videos/promo-480p.mp4'
+        };
+        let currentQuality = 'auto';
+        let userSelectedQuality = null;
+        let currentTime = 0;
 
-        if (videoPlayer && playOverlay) {
-            // Use the first frame of the video as thumbnail
-            videoPlayer.addEventListener('loadeddata', function() {
-                // Video has loaded enough data to display first frame
-                if (videoPlayer.readyState >= 2) {
-                    // Controls are initially hidden until user clicks play
-                    videoPlayer.controls = false;
+        // Function to set video source based on quality
+        function setVideoQuality(quality) {
+            // Store current playback time and playing state
+            const wasPlaying = !videoPlayer.paused;
+            currentTime = videoPlayer.currentTime;
+
+            // Auto quality uses connection type to determine best quality
+            if (quality === 'auto') {
+                qualityOptions.forEach(o => o.classList.toggle('active', o.dataset.quality === 'auto'));
+                currentQualityDisplay.textContent = 'Auto';
+
+                // Detect connection speed and set appropriate quality
+                const connection = navigator.connection || navigator.mozConnection ||
+                                  navigator.webkitConnection || null;
+
+                if (connection) {
+                    if (connection.effectiveType === '4g') {
+                        quality = 'high';
+                    } else if (connection.effectiveType === '3g') {
+                        quality = 'medium';
+                    } else {
+                        quality = 'low';
+                    }
+                } else {
+                    // Default to medium if connection API not available
+                    quality = 'medium';
                 }
+            }
+
+            // Set video source based on quality
+            videoPlayer.src = videoSources[quality];
+
+            // After loading metadata, restore playback position and state
+            videoPlayer.addEventListener('loadedmetadata', function onMetadataLoaded() {
+                videoPlayer.currentTime = currentTime;
+                if (wasPlaying) {
+                    videoPlayer.play();
+                }
+                videoPlayer.removeEventListener('loadedmetadata', onMetadataLoaded);
             });
 
-            // Play video when overlay is clicked
-            playOverlay.addEventListener('click', function() {
-                // Hide the overlay
-                playOverlay.style.display = 'none';
+            // Display actual quality level when in auto mode
+            if (currentQuality === 'auto') {
+                currentQualityDisplay.textContent = `Auto (${quality.charAt(0).toUpperCase() + quality.slice(1)})`;
+            }
+        }
 
-                // Show controls and start playing
-                videoPlayer.controls = true;
+        // Initialize quality options
+        const qualityOptions = qualityMenu.querySelectorAll('.quality-option');
+        qualityOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                const quality = this.dataset.quality;
+                userSelectedQuality = quality === 'auto' ? null : quality;
+                currentQuality = quality;
 
-                try {
-                    videoPlayer.play().catch(function(error) {
-                        console.log('Autoplay prevented:', error);
-                        // Show controls anyway so user can play manually
-                        videoPlayer.controls = true;
-                    });
-                } catch(e) {
-                    console.log('Video play error:', e);
-                    videoPlayer.controls = true;
-                }
+                // Update UI
+                qualityOptions.forEach(o => o.classList.remove('active'));
+                this.classList.add('active');
+                currentQualityDisplay.textContent = quality.charAt(0).toUpperCase() + quality.slice(1);
+
+                // Change video quality
+                setVideoQuality(quality);
+                qualitySelector.classList.remove('open');
             });
+        });
 
-            // Return to thumbnail view if video ends
-            videoPlayer.addEventListener('ended', function() {
+        // Show/hide quality menu
+        qualityBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            qualitySelector.classList.toggle('open');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function() {
+            qualitySelector.classList.remove('open');
+        });
+
+        // Load just enough of the video to show the first frame as thumbnail
+        videoPlayer.addEventListener('loadeddata', function() {
+            if (videoPlayer.readyState >= 2) {
                 playOverlay.style.display = 'flex';
-                videoPlayer.controls = false;
-                videoPlayer.currentTime = 0;
+            }
+        });
+
+        // Play video when overlay is clicked
+        playOverlay.addEventListener('click', function() {
+            playOverlay.style.display = 'none';
+            videoPlayer.controls = true;
+
+            try {
+                videoPlayer.play();
+            } catch (error) {
+                console.error('Error playing video:', error);
+            }
+        });
+
+        // Reset to thumbnail view if video ends
+        videoPlayer.addEventListener('ended', function() {
+            playOverlay.style.display = 'flex';
+            videoPlayer.controls = false;
+            videoPlayer.currentTime = 0;
+        });
+
+        // Set initial video quality
+        setVideoQuality('auto');
+
+        // Monitor network changes if API is available
+        if ('connection' in navigator && navigator.connection.addEventListener) {
+            navigator.connection.addEventListener('change', function() {
+                if (currentQuality === 'auto') {
+                    setVideoQuality('auto');
+                }
             });
         }
     });
