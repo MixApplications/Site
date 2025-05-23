@@ -343,10 +343,41 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        .video-container video {
+        .thumbnail-overlay {
+            position: relative;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-thumbnail {
             width: 100%;
             display: block;
-            max-height: 500px;
+            border-radius: 8px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: rgba(52, 152, 219, 0.9);
+            transform: translate(-50%, -50%) scale(1.1);
         }
 
         .instruction-steps {
@@ -690,11 +721,19 @@
                 <h3>How to Apply Your Promo Code</h3>
                 <p>Follow these steps to redeem your promo code in Google Play:</p>
 
-                <div class="video-container">
-                    <video controls>
-                        <source src="assets/assets/videos/promo.webm" type="video/webm">
-                        Your browser does not support the video tag.
-                    </video>
+                <!-- Video thumbnail solution -->
+                <div class="video-container" id="videoThumbnailContainer">
+                    <div class="thumbnail-overlay">
+                        <img src="assets/assets/images/video-thumbnail.jpg" alt="Video Thumbnail" class="video-thumbnail">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Hidden video player container -->
+                <div class="video-container" id="videoPlayerContainer" style="display: none;">
+                    <iframe id="videoPlayer" frameborder="0" allowfullscreen></iframe>
                 </div>
 
                 <ol class="instruction-steps">
@@ -940,6 +979,35 @@
         if (event.key === 'Escape' && modal.style.display === 'flex') {
             modal.style.display = 'none';
             document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+    
+    // Video thumbnail click to load actual video
+    document.addEventListener('DOMContentLoaded', function() {
+        const thumbnailContainer = document.getElementById('videoThumbnailContainer');
+        const videoPlayerContainer = document.getElementById('videoPlayerContainer');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoUrl = "assets/assets/videos/promo.webm"; // Video URL
+        
+        if (thumbnailContainer) {
+            thumbnailContainer.addEventListener('click', function() {
+                // Set video source
+                videoPlayer.src = videoUrl;
+                
+                // Hide thumbnail, show actual video player
+                thumbnailContainer.style.display = 'none';
+                videoPlayerContainer.style.display = 'block';
+                
+                // Optional autoplay
+                videoPlayer.onload = function() {
+                    try {
+                        // For iframe-specific autoplay
+                        videoPlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                    } catch(e) {
+                        console.log('Video play error:', e);
+                    }
+                };
+            });
         }
     });
 </script>
