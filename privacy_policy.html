@@ -7,25 +7,8 @@
     <style>
         html, body { margin: 0; padding: 0; width: 100%; box-sizing: border-box; }
         *, *:before, *:after { box-sizing: inherit; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            width: 100%;
-            max-width: 950px;
-            overflow: hidden;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #2c3e50; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .container { background-color: #ffffff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); width: 100%; max-width: 950px; overflow: hidden; }
         h1 { color: #1a252f; border-bottom: 2px solid #ecf0f1; padding-bottom: 15px; margin-bottom: 5px; font-size: 28px; }
         h2 { color: #2980b9; margin-top: 35px; border-bottom: 1px solid #ecf0f1; padding-bottom: 8px; font-size: 22px; }
         h3 { color: #34495e; margin-top: 25px; font-size: 18px; }
@@ -35,20 +18,13 @@
         a { color: #3498db; text-decoration: none; font-weight: 500; }
         a:hover { text-decoration: underline; color: #2980b9; }
         .last-updated { font-style: italic; color: #7f8c8d; margin-bottom: 30px; display: block; }
-        .highlight-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
         .table-container { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; }
         table { width: 100%; min-width: 800px; border-collapse: collapse; }
         th, td { padding: 14px 16px; border-bottom: 1px solid #e2e8f0; text-align: left; vertical-align: top; word-break: break-word; }
         th { background-color: #f7fafc; color: #4a5568; font-weight: 600; }
         tr:last-child td { border-bottom: none; }
         address { font-style: normal; background-color: #ecf0f1; padding: 15px; border-radius: 6px; margin-top: 10px; line-height: 1.8; }
-        @media (max-width: 768px) {
-            body { padding: 10px; }
-            .container { padding: 25px 20px; border-radius: 8px; }
-            h1 { font-size: 24px; }
-            h2 { font-size: 20px; }
-            h3 { font-size: 16px; }
-        }
+        @media (max-width: 768px) { body { padding: 10px; } .container { padding: 25px 20px; border-radius: 8px; } h1 { font-size: 24px; } h2 { font-size: 20px; } h3 { font-size: 16px; } }
     </style>
 </head>
 <body>
@@ -69,8 +45,9 @@
     <p>We do not store user profiles on our servers. Any anonymous usage data collected via third-party SDKs (like Firebase) is automatically deleted. Specifically, Crashlytics data is retained for up to 90 days, and Firebase Analytics data is retained for 2 months before being automatically deleted.</p>
     <p><strong>Right to Request Deletion:</strong> You have the right to request to delete personal data that we collect. Since we do not host data, you can achieve complete deletion by uninstalling the app and resetting your device's Advertising ID.</p>
 
-    <h2>4. European Privacy Rights (GDPR & UK GDPR)</h2>
-    <p>For users in the EEA, UK, and Switzerland, we process information based on the following legal bases: Consent (for advertising/analytics), Legitimate Interests (for fixing bugs/fraud prevention), and Contractual Necessity. You possess the following rights:</p>
+    <h2>4. European Privacy Rights (GDPR)</h2>
+    <p>This section outlines the rights under the General Data Protection Regulation (GDPR) for users in the EU and the European Economic Area (EEA). If you are located in the EU/EEA, your personal data is processed in accordance with the General Data Protection Regulation (GDPR).</p>
+    <p>We process information based on the following legal bases: Consent (for advertising/analytics), Legitimate Interests (for fixing bugs/fraud prevention), and Contractual Necessity. You possess the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we collect.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -79,9 +56,10 @@
         <li>The right to lodge a complaint with a supervisory authority regarding the processing of your data.</li>
     </ul>
 
-    <h2>5. United States Privacy Rights (CCPA, VCDPA, etc.)</h2>
-    <p>Residents of California, Virginia, Colorado, and other applicable US states possess specific privacy rights under state laws. We provide the following rights:</p>
+    <h2>5. United States Privacy Rights (CCPA)</h2>
+    <p>This section outlines the rights under the California Consumer Privacy Act (CCPA) for users in California, as well as residents of Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), and Utah (UCPA).</p>
     <ul>
+        <li><strong>Right to Know About Data Sales:</strong> You have the right to know whether your personal data is sold or shared.</li>
         <li><strong>Right to Know:</strong> You have the right to request disclosure of what personal data we collect and share.</li>
         <li><strong>Right to Delete:</strong> You have the right to request the deletion of your personal data.</li>
         <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
@@ -101,15 +79,13 @@
     <p>Under the Lei Geral de Proteção de Dados (LGPD), users in Brazil have the right to request access, correction, anonymization, blocking, or deletion of personal data. You can exercise these rights using the opt-out methods described above.</p>
 
     <h2>7. Other Global Privacy Rights</h2>
-    <p>We comply with international data protection frameworks including Canada (PIPEDA, Quebec Law 25, Alberta PIPA), South Korea (PIPA), Japan (APPI), China (PIPL), South Africa (POPIA), India (DPDPA), and Australia (Privacy Act 1988). You have the right to access, correct, and request the deletion of your data as governed by these laws.</p>
+    <p>We comply with international data protection frameworks including Canada (PIPEDA), South Korea (PIPA), Japan (APPI), China (PIPL), South Africa (POPIA), India (DPDPA), and Australia (Privacy Act 1988). You have the right to access, correct, and request the deletion of your data as governed by these laws.</p>
 
     <h2>8. Children's Privacy</h2>
     <p>Our Services are not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
 
     <h2>9. Changes to This Privacy Policy</h2>
     <p>We may update this policy periodically. We will notify you by updating the "Last Updated" date at the top.</p>
-
-    <!-- PERSONAL DATA AND TECHNICAL DETAILS PLACED AT THE BOTTOM AS REQUESTED -->
     
     <h2>10. Data Types Collected and Shared</h2>
     <p>To operate, monetize, and improve our Services, we collect and share specific categories of data through third-party SDKs. To ensure absolute alignment with our Google Play Data Safety declaration, we explicitly declare that we collect and share the following data types:</p>
