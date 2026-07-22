@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,19 +32,21 @@
 
 <div class="container">
     <h1>Privacy Policy</h1>
-    <span class="last-updated">Last Updated and Effective Date: June 19, 2026</span>
+    <span class="last-updated">Last Updated and Effective Date: July 23, 2026</span>
 
     <p>This Privacy Policy applies to all mobile applications and services developed and published by <strong>MixApplications</strong> ("we," "us," or "our"). By downloading or using any of our applications, you agree to the practices described in this policy.</p>
 
-    <h2>1. General Overview & Zero-Upload Policy</h2>
-    <p>Our applications are designed to perform utility tasks locally on your device. We strictly declare that any files, media, or data processed through our utility features are handled 100% locally. We do not upload, collect, or transmit your personal files or disk contents to our servers.</p>
+    <h2>1. General Overview &amp; Local-First Processing</h2>
+    <p>Our applications are designed to perform utility tasks locally on your device. The <strong>content</strong> of the files, disk images, and media you process through our utility features (formatting, burning, conversion, and similar operations) is handled 100% locally — we do not upload, collect, or transmit the contents of your personal files or disk images to our servers.</p>
+    <p>Two limited exceptions apply, described in full in the sections referenced below: (1) if a file-access error or app crash occurs, our crash-reporting tool may record diagnostic information that includes the file path or file name involved, as part of standard crash/error logging (see Section 10); and (2) when you complete an in-app purchase, a purchase identifier and a Google-issued verification token — not file content — are sent to our own server-side function to confirm the purchase with Google Play (see Section 2).</p>
 
     <h2>2. In-App Purchases and Virtual Rewards</h2>
     <p>All financial transactions and in-app purchases are securely processed by the <strong>Google Play Billing</strong> system. We do not directly collect or store your credit card or financial information. Virtual coin balances are stored strictly locally on your device.</p>
+    <p>To confirm a purchase's validity — for example, to restore your Pro entitlement after reinstalling the app — the product identifier and a Google-issued purchase token are sent to our own server-side verification function, which checks them against Google Play's records. This function does not persistently store the data it receives (see Section 3).</p>
 
     <h2>3. Data Retention and Deletion Policy</h2>
-    <p>We do not store user profiles on our servers. Any anonymous usage data collected via third-party SDKs (like Firebase) is automatically deleted. Specifically, Crashlytics data is retained for up to 90 days, and Firebase Analytics data is retained for 2 months before being automatically deleted.</p>
-    <p><strong>Right to Request Deletion:</strong> You have the right to request to delete personal data that we collect. Since we do not host data, you can achieve complete deletion by uninstalling the app and resetting your device's Advertising ID.</p>
+    <p>We do not maintain a persistent database of user profiles. When you make a purchase, the purchase identifier and verification token are processed transiently by our server-side verification function solely to confirm the purchase with Google Play; they are not written to a database, though — like any server request — they may briefly appear in our cloud infrastructure provider's operational logs. Anonymous usage data collected via third-party SDKs is retained for a limited period and then automatically deleted: Crashlytics data (crash stack traces and associated identifiers) is retained for 90 days, and Firebase Analytics data (both event data and user data) is retained for 2 months.</p>
+    <p><strong>Right to Request Deletion:</strong> You have the right to request deletion of personal data we process. Uninstalling the app permanently removes all data stored locally on your device, including your coin balance. To request deletion of data tied to SDK-level identifiers (such as your Advertising ID), you may reset that identifier in your device's Android settings, or contact us using the details in Section 11.</p>
 
     <h2>4. European Privacy Rights (GDPR)</h2>
     <p>This section outlines the rights under the General Data Protection Regulation (GDPR) for users in the EU and the European Economic Area (EEA). If you are located in the EU/EEA, your personal data is processed in accordance with the General Data Protection Regulation (GDPR).</p>
@@ -68,34 +71,36 @@
     </ul>
 
     <h3>How to Opt-Out of the Sale or Sharing of Your Data</h3>
-    <p>We provide clear methods for users to opt-out. To exercise your right to opt-out of the sale or sharing of your personal data, you can use any of the following methods:</p>
+    <p>We provide methods for users to opt-out. To exercise your right to opt-out of the sale or sharing of your personal data, you can use any of the following methods:</p>
     <ul>
-        <li><strong>In-App Opt-Out:</strong> Open the application, go to the Help (?) or Settings menu, click on the "Privacy Settings" button, and withdraw your consent for personalized tracking.</li>
-        <li><strong>Email Request:</strong> Submit an opt-out request by sending an email to our Data Protection Officer at: islam.saad2005@gmail.com.</li>
-        <li><strong>Device Settings:</strong> Reset or delete your device's Advertising ID from your Android system settings (Settings > Google > Ads).</li>
+        <li><strong>In-App Opt-Out (when shown):</strong> Some users will see a "Privacy Settings" button in the app's Help (?) menu. This button is shown automatically when our consent management platform determines a privacy choice is required for your account, and lets you withdraw consent for ad personalization directly. If you do not see this button, our systems have determined a regional consent prompt is not currently required for you — you can still opt out using either of the methods below.</li>
+        <li><strong>Email Request:</strong> Submit an opt-out request by sending an email to our Data Protection Officer at <a href="mailto:islam.saad2005@gmail.com">islam.saad2005@gmail.com</a>.</li>
+        <li><strong>Device Settings:</strong> Reset or delete your device's Advertising ID from your Android system settings (Settings &gt; Google &gt; Ads).</li>
     </ul>
 
     <h2>6. Brazil Privacy Rights (LGPD)</h2>
     <p>Under the Lei Geral de Proteção de Dados (LGPD), users in Brazil have the right to request access, correction, anonymization, blocking, or deletion of personal data. You can exercise these rights using the opt-out methods described above.</p>
 
     <h2>7. Other Global Privacy Rights</h2>
-    <p>We comply with international data protection frameworks including Canada (PIPEDA), South Korea (PIPA), Japan (APPI), China (PIPL), South Africa (POPIA), India (DPDPA), and Australia (Privacy Act 1988). You have the right to access, correct, and request the deletion of your data as governed by these laws.</p>
+    <p>We aim to honor data subject rights for users in other jurisdictions with comprehensive privacy laws, including Canada (PIPEDA), South Korea (PIPA), Japan (APPI), China (PIPL), South Africa (POPIA), India (DPDPA), and Australia (Privacy Act 1988), to the extent required by applicable law. Where those laws apply to you, you may request access, correction, or deletion of your data using the contact details in Section 11. This section describes rights we extend on request and is not a representation of independently certified or audited compliance with each named framework.</p>
 
-    <h2>8. Children's Privacy</h2>
-    <p>Our Services are not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
+    <h2>8. Age-Appropriate Experience &amp; Children's Privacy</h2>
+    <p>This application's declared target audience on Google Play is users aged 18 and older, and our Services are not designed or marketed to attract children. Because app stores cannot fully prevent younger users from installing an app, we have built in additional safeguards for the possibility that a user is a minor: where available, we use signals from Google Play's Age Signals API (see Section 10) to provide an age-appropriate advertising experience — showing non-personalized, contextual ads rather than personalized ads to users who are identified as being under 18 — and we tag ad requests accordingly using Google's industry-standard "under age of consent" mechanism. In-app purchases attempted by a user identified this way require an additional parental-gate verification step before they can complete.</p>
+    <p>We do not knowingly collect personal information from children beyond what is necessary to provide these age-appropriate safeguards, and the underlying age signal is not stored long-term by us (see Section 10).</p>
 
     <h2>9. Changes to This Privacy Policy</h2>
     <p>We may update this policy periodically. We will notify you by updating the "Last Updated" date at the top.</p>
-    
+
     <h2>10. Data Types Collected and Shared</h2>
-    <p>To operate, monetize, and improve our Services, we collect and share specific categories of data through third-party SDKs. To ensure absolute alignment with our Google Play Data Safety declaration, we explicitly declare that we collect and share the following data types:</p>
+    <p>To operate, monetize, and improve our Services, we collect and share specific categories of data through third-party SDKs. To ensure alignment with our Google Play Data Safety declaration, we explicitly declare that we collect and/or share the following data types:</p>
     <ul>
         <li><strong>Diagnostics</strong></li>
-        <li><strong>Crash logs</strong></li>
+        <li><strong>Crash logs</strong> — may include on-device file paths or file names encountered at the time of an error, as diagnostic context</li>
         <li><strong>Other app performance data</strong></li>
         <li><strong>App interactions</strong></li>
-        <li><strong>Approximate location</strong></li>
+        <li><strong>Approximate location</strong> — inferred by advertising SDKs from network information; this app does not request or use Android location permissions or APIs directly</li>
         <li><strong>Device or other IDs</strong></li>
+        <li><strong>Purchase history</strong> — product identifiers and purchase tokens processed as described in Sections 2 and 3</li>
     </ul>
 
     <div class="table-container">
@@ -109,14 +114,24 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Analytics & Crash Reporting (Firebase)</strong></td>
+                    <td><strong>Analytics &amp; Crash Reporting (Firebase)</strong></td>
                     <td>App functionality, Analytics, Bug fixing</td>
-                    <td>Data is deleted after 2 Months (Analytics) or 90 Days (Crashlytics).</td>
+                    <td>Crashlytics data is retained for 90 days; Firebase Analytics data is retained for 2 months. Deleted automatically thereafter. See Section 3.</td>
                 </tr>
                 <tr>
-                    <td><strong>Ad Networks (Appodeal, AdMob, AppLovin, UnityAds)</strong></td>
-                    <td>Advertising targeting, Marketing, Ad personalization</td>
-                    <td>Subject to the respective partner's policies.</td>
+                    <td><strong>Purchase Verification (our server-side function, via Google Play Billing)</strong></td>
+                    <td>Confirming purchase validity and restoring entitlements (e.g. Pro status) after reinstall</td>
+                    <td>Not persistently stored by us; processed transiently to verify with Google Play (see Section 3).</td>
+                </tr>
+                <tr>
+                    <td><strong>Ad Networks &amp; Mediation</strong> (Appodeal mediation platform, and networks reachable through it: Google AdMob / Google Ad Manager, AppLovin (incl. MAX mediation), Unity Ads (incl. LevelPlay mediation), BidMachine, Bidon, Chartboost, Digital Turbine Exchange (Fyber), MobileFuse, Moloco, myTarget, Ogury, PubMatic, Smaato, StartIO, TaurusX, Verve, VK Ads, Vungle, Yandex Ads, and ZMaticoo)</td>
+                    <td>Advertising targeting, Marketing, Ad personalization (where consented / permitted)</td>
+                    <td>Subject to each respective partner's policies.</td>
+                </tr>
+                <tr>
+                    <td><strong>Play Age Signals (Google Play)</strong></td>
+                    <td>Determining an age-appropriate advertising and purchase experience (see Section 8)</td>
+                    <td>Not stored by us; queried live each app session per Google Play's Age Signals API terms.</td>
                 </tr>
             </tbody>
         </table>
