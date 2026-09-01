@@ -1,48 +1,498 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="home.title">MixApplications — USB &amp; Bootable Drive Tools for Android</title>
+<meta name="description" content="Android tools for USB drives: create bootable USB from ISO without a PC, multi-boot with Ventoy, partition and format FAT32/exFAT/NTFS/ext4, wipe and repair drives. All processing on-device, no root needed for USB OTG.">
+<meta property="og:title" content="MixApplications — USB &amp; Bootable Drive Tools for Android">
+<meta property="og:description" content="Bootable USB creation, multi-boot, partitioning, formatting and drive repair — directly from your Android phone.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mixapplications.com/">
+<meta property="og:image" content="https://www.mixapplications.com/assets/logo.png">
+<meta name="theme-color" content="#F3F7FB">
+<link rel="canonical" href="https://www.mixapplications.com/">
+<link rel="alternate" hreflang="x-default" href="https://www.mixapplications.com/">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="app-ads" href="app-ads.txt">
+<link rel="privacy_policy" href="privacy_policy.html">
+<link rel="contact" href="contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://play-lh.googleusercontent.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Islam Darwish Portfolio.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Islam Darwish">
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <title>Islam Darwish</title> 
-  <link rel="app-ads" href="app-ads.txt"> 
-  <link rel="privacy_policy" href="privacy_policy.html"> 
-  <link rel="contact" href="contact.html"> 
- 
-  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+<header class="site">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html">
+      <img src="assets/mark.png" alt="" width="53" height="34"><span>MixApplications</span>
+    </a>
+    <nav class="top" aria-label="Main">
+      <a href="index.html" aria-current="page" data-i18n="nav.apps">Apps</a>
+      <a href="contact.html" data-i18n="nav.support">Support</a>
+      <a href="privacy_policy.html" data-i18n="nav.privacy">Privacy</a>
+    </nav>
+      <div class="lang" id="langpicker" hidden>
+        <button type="button" class="lang-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Language">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg>
+          <span class="lang-current">EN</span>
+        </button>
+        <div class="lang-menu" role="menu"></div>
+      </div>
+
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap reveal in">
+    <h1 data-i18n="home.1">USB drive tools that run on <em>your phone</em>, not on a PC.</h1>
+    <p class="sub" data-i18n="home.2">MixApplications builds storage utilities for Android: create bootable USB drives from ISO files, run multi-boot setups, partition, format, wipe and repair — over a plain USB-OTG connection. <strong>Everything is processed on your device. No cloud, no PC, no root needed for USB drives.</strong></p>
+
+    <div class="strip" aria-hidden="true">
+      <span style="background:var(--blue);flex:27"></span>
+      <span style="background:var(--amber);flex:19"></span>
+      <span style="background:var(--green);flex:15"></span>
+      <span style="background:var(--violet);flex:14"></span>
+      <span style="background:var(--rose);flex:12"></span>
+      <span style="background:var(--gray);flex:16"></span>
+    </div>
+    <div class="pills">
+      <a class="pill" style="--c:var(--blue)" href="#ultimate-usb">Ultimate USB</a>
+      <a class="pill" style="--c:var(--amber)" href="#drofus">DROFUS</a>
+      <a class="pill" style="--c:var(--green)" href="#ventoy">Ventoy</a>
+      <a class="pill" style="--c:var(--violet)" href="#usb-tools">USB Tools</a>
+      <a class="pill" style="--c:var(--rose)" href="#chaome">ChaoMe</a>
+      <a class="pill un" style="--c:var(--gray)" href="#legacy" data-i18n="home.more">More</a>
+    </div>
+  </section>
+
+  <section class="apps wrap" id="apps">
+
+    <article class="card reveal" id="ultimate-usb" data-pkg="com.mixapplications.ultimateusb" style="--c:var(--blue);--csoft:var(--blue-soft)">
+      <div class="accent"></div>
+      <div class="inner">
+        <div class="cardhead">
+          <div class="appicon"><img src="https://play-lh.googleusercontent.com/KfoSg6mRuLJaJJfYllYX0l_8QvEV7bsf-R16dSsO6DcxMppopj8D8Yo6b-VHJWdMzNxFbMn_2uc_QPH24ykc=s192" alt="Ultimate USB icon" width="84" height="84"></div>
+          <div class="headtxt">
+            <h2>Ultimate USB</h2>
+            <p class="tagline" data-f="summary">Create bootable USBs, format drives, and manage retro PS2/PS3 games on Android!</p>
+            <div class="badges">
+              <span class="badge rate" data-rate><span class="star">★</span><span data-f="rating">4.6</span> · <span data-f="reviews">18.6K</span> <span data-i18n="home.rv">reviews</span></span>
+              <span class="badge"><span data-f="installs">1,000,000+</span> <span data-i18n="home.dl">downloads</span></span>
+            </div>
+          </div>
+        </div>
+        <p class="desc" data-i18n="home.5">The all-in-one USB toolbox. Partition drives with GPT or MBR, format across six file systems, write bootable ISOs, run Ventoy, image drives byte-by-byte, encrypt drives with a password, and prepare drives for retro gaming consoles — <strong>from one app</strong>.</p>
+        <div class="chips">
+          <span class="chip">FAT16→ext4</span><span class="chip">MBR / GPT</span><span class="chip">Ventoy</span><span class="chip">Windows To Go</span><span class="chip">Linux persistence</span><span class="chip">USB encryption</span><span class="chip">fake-flash check</span><span class="chip">PS2/PS3 tools</span>
+        </div>
+        <div class="shots" aria-label="Ultimate USB screenshots">
+          <img src="https://play-lh.googleusercontent.com/V_cKY9m-lGriqJRPYwvXMExHVLsNMI4JtLNiFjE7nlLySDBdB_VgBr4vt9_kcV81d2Vu-SYffgEMQsE-sStF31I=w720-h405" alt="Ultimate USB screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/EFjMAb9dVgQpSB1XS41cMU6ny31uI33Sn4N9Q8gKdwH06LGWvnM81vGHdEqpMl2tgf8bL7HIM8IqZSUAylL-WQ=w720-h405" alt="Ultimate USB screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/9O2wdMTjaxJfBkFC9CDUh_0PazuszIyqUOyE_Xpd4gRbudVdaV5wqNE5xn5D-u_IW4vyz6pJ3slB4TWlr57WYw=w720-h405" alt="Ultimate USB screenshot" width="329" height="185" loading="lazy">
+        </div>
+        <details class="full">
+          <summary data-i18n="home.full">Full description from Google Play</summary>
+          <div class="fulldesc" data-f="description">🔌 Ultimate USB – USB Manager & Bootable Creator
+Turn your phone into a PC repair shop: bootable USB drives, formatting, partitioning, drive tests and retro game tools — over a simple OTG cable.
+
+Nearly everything works WITHOUT root (only the internal SD slot needs it), on real native FAT16/FAT32/exFAT/NTFS/EXT2/3/4 drivers.
+
+🛠️ BOOTABLE USB & IMAGE WRITING
+• Ventoy (Unofficial): multi-boot USB — many ISOs on one drive, pick at boot. Secure Boot support, 4K alignment, MBR/GPT.
+• ISO Burner (ISO2USB / DROFUS): Windows 7–11, Linux, Apple DMG, Raspberry Pi, MS-DOS, FreeDOS.
+• Windows To Go: a full portable Windows that boots and runs from the drive itself.
+• Linux persistence: keep your files and changes between boots.
+• Raw Write (DD): write any image byte by byte, exactly as-is.
+
+🧹 ADVANCED DISK MANAGEMENT
+• Format USB: FAT16, FAT32, exFAT, NTFS, EXT2/3/4, with MBR/GPT, cluster size and label.
+• Partition Wizard: create, delete, format, rename, wipe, back up and restore partitions, convert MBR ↔ GPT.
+• Bad Blocks Check: find failing sectors and fake-capacity drives.
+• Wipe USB, USB Defragmenter, full byte-by-byte Backup & Restore.
+
+🎮 RETRO GAMING TOOLS
+• PS2 USB Utils, PS3 ISO Tools, Game Converter (ISO ↔ ZSO / CSO / CHD / VCD).
+
+📁 FILES & STORAGE
+• USB File Manager, Partition Mounter, Partition Image Manager, Archive Extractor (7z, RAR, ZIP, ISO and more).
+
+📊 DIAGNOSTICS
+• Device Info & Benchmark: sequential and random speed tests.</div>
+        </details>
+        <div class="cta-row">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.mixapplications.ultimateusb">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17l11-8.5z"/><path d="M16.5 9.7 19.8 12l-3.3 2.3L13 12z" opacity=".7"/></svg>
+            <span data-i18n="home.view">View on Google Play</span></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card reveal" id="drofus" data-pkg="com.mixapplications.rufus" style="--c:var(--amber);--csoft:var(--amber-soft)">
+      <div class="accent"></div>
+      <div class="inner">
+        <div class="cardhead">
+          <div class="appicon"><img src="https://play-lh.googleusercontent.com/rWQ8vSkeSMVt85fzmIhZKg02mA_VbL-ecF1k3sYoe1jo8I8WM6TeWiWV999mJmKDA4Bd5gRxbwwnS3iB6Mh3=s192" alt="DROFUS icon" width="84" height="84"></div>
+          <div class="headtxt">
+            <h2>DROFUS — ISO 2 USB</h2>
+            <p class="tagline" data-f="summary">Bootable Windows &amp; Linux from Android. No PC, No Root!</p>
+            <div class="badges">
+              <span class="badge rate" data-rate><span class="star">★</span><span data-f="rating">4.7</span> · <span data-f="reviews">24.2K</span> <span data-i18n="home.rv">reviews</span></span>
+              <span class="badge"><span data-f="installs">1,000,000+</span> <span data-i18n="home.dl">downloads</span></span>
+            </div>
+          </div>
+        </div>
+        <p class="desc" data-i18n="home.9">A dedicated bootable-USB creator. Pick an ISO, plug in a drive, and get a bootable installer — <strong>no PC and no root required</strong>. Full manual control over partition scheme and file system, with Windows 11 requirement bypass and automated setup customization. <strong>DROFUS now carries every feature from ISO 2 USB</strong>, so it is the one app to install for burning images.</p>
+        <div class="chips">
+          <span class="chip">Windows 7–11</span><span class="chip">auto WIM split</span><span class="chip">Linux</span><span class="chip">macOS DMG</span><span class="chip">Raspberry Pi</span><span class="chip">NTFS / FAT32</span><span class="chip">GPT / MBR</span><span class="chip">persistence</span>
+        </div>
+        <div class="shots" aria-label="DROFUS screenshots">
+          <img src="https://play-lh.googleusercontent.com/tyG8gsjMSepPWYubZu7sLTdcFUBgwYpv2ZBd3T87jNz2SMK47uYFQWrtoWhWkg4gZdBIs1biWoOVHsnPB5Di=w720-h405" alt="DROFUS screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/9EmFexnalgmSEL-pIhq4iGz1YG6qLP9b0j_eVgCKPAM9Ccqf6CFZ_NyJ-QDT7ldPsS0TS6Soupnt-OeuHyPCIg=w720-h405" alt="DROFUS screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/WNbzzofumacZrv9xGJuUkbi1Ohc2zPpB37exRyhxnKqLH4QmQcn60qpw-1nb2qdSgpg5OFSfN9YKaDjD8iTj=w720-h405" alt="DROFUS screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/MiwMn5Wf8bF08zNljtru89uOel75h4oHetut-l6Hx6V-l5Nir540Z--QbJf_r4dAkJ1if9W3BKPXnwLJ4CVy=w720-h405" alt="DROFUS screenshot" width="329" height="185" loading="lazy">
+        </div>
+        <details class="full">
+          <summary data-i18n="home.full">Full description from Google Play</summary>
+          <div class="fulldesc" data-f="description">🔥 DROFUS — ISO Burner for Android
+(Also known as ISO 2 USB or ISO to USB)
+
+Burn full operating system images directly to USB — no PC required. DROFUS is a standalone ISO burning utility built for Android, with full control over partition schemes, file systems, and image handling.
+
+🧨 Supported Image Types
+• Burn ISO, DMG, and IMG files directly to USB
+• Windows 7, 8, 8.1, 10, 11 · FreeDOS / MS-DOS
+• Modern GNU/Linux distributions (Ubuntu, Fedora, Debian, Arch…)
+• macOS DMG (Intel-based) · Raspberry Pi OS and other ARM images
+
+Windows ISO Handling
+• GPT (UEFI) or MBR (Legacy BIOS) · NTFS or FAT32
+• Bypass Windows 11 minimum requirements
+• Automated Windows setup customization (Win10/11)
+• Split large install.wim files for FAT32 compatibility
+• Compatible with official Microsoft ISOs — no modification needed
+
+USB Compatibility
+• USB flash drives, SD card adapters and external SSDs
+• OTG support required · root only for the internal SD slot</div>
+        </details>
+        <div class="cta-row">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.mixapplications.rufus">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17l11-8.5z"/><path d="M16.5 9.7 19.8 12l-3.3 2.3L13 12z" opacity=".7"/></svg>
+            <span data-i18n="home.view">View on Google Play</span></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card reveal" id="ventoy" data-pkg="com.mixapplications.ventoy_app" style="--c:var(--green);--csoft:var(--green-soft)">
+      <div class="accent"></div>
+      <div class="inner">
+        <div class="cardhead">
+          <div class="appicon"><img src="https://play-lh.googleusercontent.com/iDmPs-RP3nd2DwTpONpFk7CYDY6aBnsq36lS6Ac43w6uosKKaTTjaIl5LVKG6tVQ602ycUIeozQlpXKFSzFMug=s192" alt="Ventoy (Unofficial) icon" width="84" height="84"></div>
+          <div class="headtxt">
+            <h2>Ventoy — Unofficial</h2>
+            <p class="tagline" data-f="summary">Create Multi Boot USB drive.</p>
+            <div class="badges">
+              <span class="badge rate" data-rate><span class="star">★</span><span data-f="rating">4.6</span> · <span data-f="reviews">18K</span> <span data-i18n="home.rv">reviews</span></span>
+              <span class="badge"><span data-f="installs">1,000,000+</span> <span data-i18n="home.dl">downloads</span></span>
+            </div>
+          </div>
+        </div>
+        <p class="desc" data-i18n="home.13">Install Ventoy on a USB drive straight from Android. Then just copy as many ISO files as the drive holds — or download them directly to the drive — and pick the one to boot at startup. <strong>One drive, every OS installer you need.</strong></p>
+        <div class="chips">
+          <span class="chip">multi-boot</span><span class="chip">MBR / GPT</span><span class="chip">exFAT · NTFS · FAT32</span><span class="chip">Secure Boot</span><span class="chip">Win 11 bypass</span><span class="chip">theme import</span>
+        </div>
+        <div class="shots" aria-label="Ventoy screenshots">
+          <img src="https://play-lh.googleusercontent.com/mQzlSeNdC8IJ-2OJLcP-jXml-tFxRLn49rOqiciq6knRz5VmbQv7cYEu5uyMoOep1bSwL48mslIevKq2TZ_aog=w720-h405" alt="Ventoy screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/txQMJCKEeq2uS4YfKcaJDrzD5DBmGGs9ML0TtAcaYNvL7634VC8bTjml2Ps-HEI4lUKeLh9tw_2WUpzR23S_bWw=w720-h405" alt="Ventoy screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/GSTRrLZzZFABRjlhZtT5W9Ud_7GkctuftL4D4SNQJh6HMzWAp6t3I0wWipnhdYsTFAwPF4jpkmmL45DASHst3g=w720-h405" alt="Ventoy screenshot" width="329" height="185" loading="lazy">
+        </div>
+        <details class="full">
+          <summary data-i18n="home.full">Full description from Google Play</summary>
+          <div class="fulldesc" data-f="description">🧭 Ventoy — Multi-Boot USB Creator for Android
+Create multi-boot USB drives with dynamic ISO menus — no PC required.
+
+Install once, then copy ISO files directly to your USB — no need to reformat or reburn. Boot any supported image from a dynamic menu.
+
+🛠️ Core Features
+• Create multi-boot USB drives with ISO boot menu
+• Supports Windows 7–11 and all major Linux distributions
+• Bypass Windows 11 minimum requirements
+• Manual selection of partition scheme: GPT (UEFI) or MBR (Legacy)
+• File system support: NTFS, FAT32, exFAT
+• Add or remove ISOs anytime — no reburn needed
+• Copy ISO files or download them directly to USB
+• Import Ventoy themes and change settings without editing files</div>
+        </details>
+        <div class="cta-row">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.mixapplications.ventoy_app">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17l11-8.5z"/><path d="M16.5 9.7 19.8 12l-3.3 2.3L13 12z" opacity=".7"/></svg>
+            <span data-i18n="home.view">View on Google Play</span></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card reveal" id="usb-tools" data-pkg="com.mixapplications.usbtools" style="--c:var(--violet);--csoft:var(--violet-soft)">
+      <div class="accent"></div>
+      <div class="inner">
+        <div class="cardhead">
+          <div class="appicon"><img src="https://play-lh.googleusercontent.com/oBQsvUvNuEokudV-SEPjK7j1yT0Ky3pCwH8E6iZ0EeU3_o9WP19WI0Bj5MffkT-Xfrz9ijka9xKT7M43ZU7dbw=s192" alt="USB Tools icon" width="84" height="84"></div>
+          <div class="headtxt">
+            <h2>USB Tools</h2>
+            <p class="tagline" data-f="summary">Multi Tool For USB Devices / Console Games</p>
+            <div class="badges">
+              <span class="badge rate" data-rate><span class="star">★</span><span data-f="rating">4.6</span> · <span data-f="reviews">22.5K</span> <span data-i18n="home.rv">reviews</span></span>
+              <span class="badge"><span data-f="installs">1,000,000+</span> <span data-i18n="home.dl">downloads</span></span>
+            </div>
+          </div>
+        </div>
+        <p class="desc" data-i18n="home.17">Maintenance and rescue for flash drives: format, securely wipe with a signed PDF erasure certificate, detect fake-capacity drives, benchmark, defragment, and <strong>fix corrupted and unreadable drives</strong> — without root.</p>
+        <div class="chips">
+          <span class="chip">repair drives</span><span class="chip">secure wipe + PDF cert</span><span class="chip">bad-blocks scan</span><span class="chip">fake-flash detect</span><span class="chip">benchmark</span><span class="chip">FAT16→ext4</span><span class="chip">PS2/PS3 tools</span>
+        </div>
+        <div class="shots" aria-label="USB Tools screenshots">
+          <img src="https://play-lh.googleusercontent.com/mO7cQNw3f_6-p0sFrpioG7y3CV-JTHp55wRi5tvP5pzCxJOjsF3ZpEsbuQSCR-MYG6bW0mkLqUdOrlyIr1JSlQ=w720-h405" alt="USB Tools screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/Z3wi0zyVhW0kYjUyYPuNV6fdgP4-iSant9RTgYq_Etv5fmjZbt4QzVbgWMKbEgjChNE1E6-dZHdgKBj-IGe2=w720-h405" alt="USB Tools screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/-rmSGcffN5zuRmAeOS5Yse9b06iF2YICrRmJbaOIphlxiy6hSQnvfirlQLKoSuxVAzPLfKska3ofVzwtpDwDzw=w720-h405" alt="USB Tools screenshot" width="329" height="185" loading="lazy">
+        </div>
+        <details class="full">
+          <summary data-i18n="home.full">Full description from Google Play</summary>
+          <div class="fulldesc" data-f="description">🧰 USB Tools — Format, Repair, Test & Back Up USB Drives
+Format, partition, defragment, benchmark and test USB drives — no PC required.
+
+💽 Disk Management
+• USB Formatter: FAT16, FAT32, exFAT, NTFS, EXT2/3/4 · MBR or GPT · cluster size and label
+• Partition Wizard: create, delete, format and rename partitions · convert MBR ↔ GPT · back up and restore partitions
+• USB Defragmenter: defragment FAT32 and exFAT (required by PS2/OPL)
+• USB Wipe: securely erase all data and partitions
+• Backup & Restore: full backups of USB content
+
+🔍 Diagnostics & Info
+• Bad Blocks Check: detect failing sectors and fake USB drives / fake SD cards (counterfeit capacity)
+• USB Device Benchmark: sequential and random read/write speed tests
+• Device Info & USB Descriptors: vendor, product, serial, capacity, block size
+
+🎮 Gaming Tools
+• PS2 USB Utils (OPL), PS3 ISO Tools, Game Converter (ISO, BIN/CUE, VCD, ZSO, CSO, CHD)
+
+🌍 Available in 40+ languages</div>
+        </details>
+        <div class="cta-row">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.mixapplications.usbtools">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17l11-8.5z"/><path d="M16.5 9.7 19.8 12l-3.3 2.3L13 12z" opacity=".7"/></svg>
+            <span data-i18n="home.view">View on Google Play</span></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card reveal" id="chaome" data-pkg="com.mixapplications.miuithemeeditor" style="--c:var(--rose);--csoft:var(--rose-soft)">
+      <div class="accent"></div>
+      <div class="inner">
+        <div class="cardhead">
+          <div class="appicon"><img src="https://play-lh.googleusercontent.com/BKYePvvhZgrTcUo5B6Iv8JETZLszfq7exl3HOLdCuJDsh3NpT8cuw4pc0V-FSaDN7VDp62XvIlmf_z8ltjnz3A=s192" alt="ChaoMe Theme Editor icon" width="84" height="84"></div>
+          <div class="headtxt">
+            <h2>ChaoMe Theme Editor</h2>
+            <p class="tagline" data-f="summary">Build &amp; install custom MIUI and HyperOS themes: icons, wallpapers &amp; fonts.</p>
+            <div class="badges">
+              <span class="badge rate" data-rate hidden><span class="star">★</span><span data-f="rating"></span> · <span data-f="reviews"></span> <span data-i18n="home.rv">reviews</span></span>
+              <span class="badge"><span data-f="installs">5,000,000+</span> <span data-i18n="home.dl">downloads</span></span>
+            </div>
+          </div>
+        </div>
+        <p class="desc" data-i18n="home.21">A complete theme studio for Xiaomi devices. Create, customize and install themes on <strong>MIUI and HyperOS</strong> — icons, wallpapers, fonts, status bar, boot animation — and export a standard .mtz file. No PC, no root.</p>
+        <div class="chips">
+          <span class="chip">MIUI · HyperOS</span><span class="chip">.mtz export</span><span class="chip">icons &amp; fonts</span><span class="chip">boot animation</span><span class="chip">Shizuku install</span>
+        </div>
+        <div class="shots" aria-label="ChaoMe screenshots">
+          <img src="https://play-lh.googleusercontent.com/v3saCVcyHYD016upb2Qsf2JkDCcosvwoYhBdWJHehh2fh4OzIVf16J5UmtTXag1dUdQnSffyTzgr1fpHp6HALw=w720-h405" alt="ChaoMe screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/HJas5aFdooUWXrzM_hSotWGPQFucUKsGGfp2KFGIigm5EfrLjbRUAty8OqplZGxhtK3L77kyPLLAYbeCt1Ik=w720-h405" alt="ChaoMe screenshot" width="329" height="185" loading="lazy">
+          <img src="https://play-lh.googleusercontent.com/vy952UeekO7fPgAdyAKGKboU6zTZyulBft6cYn0GcHGJ63Q4JV0C9FLmwi3NBBzHH44Lk_BbyL06MdRSVjG1mg=w720-h405" alt="ChaoMe screenshot" width="329" height="185" loading="lazy">
+        </div>
+        <details class="full">
+          <summary data-i18n="home.full">Full description from Google Play</summary>
+          <div class="fulldesc" data-f="description">Make your Xiaomi phone truly yours. ChaoMe Theme Editor is a complete studio for creating, customizing, and installing themes on MIUI and HyperOS — no PC, no root required.
+
+WHAT YOU CAN CUSTOMIZE
+• App icons — icon packs, masks, or your own images
+• Wallpapers & lock screen
+• Status bar and notification panel
+• Fonts and boot animation
+• Contacts, dialer & call screen
+
+HOW IT WORKS
+1. Open an installed theme to edit it, or start a new one from scratch.
+2. Change whatever you like — every screen has a live preview.
+3. Export a standard .mtz theme file.
+4. Install it into the stock Themes app and apply.
+
+On Android 11+, ChaoMe uses Shizuku to install themes cleanly — no root needed. ChaoMe writes the theme-engine compatibility fields (uiVersion, miuiAdapterVersion, miuixAdapterVersion) so components actually apply, including on the latest HyperOS releases.
+
+Note: ChaoMe Theme Editor is an independent tool. It is not affiliated with, endorsed by, or sponsored by Xiaomi.</div>
+        </details>
+        <div class="cta-row">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.mixapplications.miuithemeeditor">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17l11-8.5z"/><path d="M16.5 9.7 19.8 12l-3.3 2.3L13 12z" opacity=".7"/></svg>
+            <span data-i18n="home.view">View on Google Play</span></a>
+        </div>
+      </div>
+    </article>
+
+    <div class="legacy2" id="legacy">
+      <article class="card reveal" id="iso2usb" style="--c:var(--gray);--csoft:var(--gray-soft)">
+        <div class="accent"></div>
+        <div class="inner">
+          <div class="cardhead">
+            <div class="appicon gen" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4.6"/><circle cx="12" cy="8" r="1.2"/><path d="M8.6 11.6 6.4 20.5h11.2l-2.2-8.9"/></svg>
+            </div>
+            <div class="headtxt">
+              <h2>ISO 2 USB</h2>
+              <p class="tagline">The original ISO burner. Every feature it had now lives in DROFUS, alongside everything added since.</p>
+            </div>
+          </div>
+          <div class="cta-row"><span class="merged" data-i18n="home.merged">Merged into <a href="#drofus">DROFUS</a></span></div>
+        </div>
+      </article>
+
+      <article class="card reveal" id="multios-usb" style="--c:var(--gray);--csoft:var(--gray-soft)">
+        <div class="accent"></div>
+        <div class="inner">
+          <div class="cardhead">
+            <div class="appicon gen" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="9"/></svg>
+            </div>
+            <div class="headtxt">
+              <h2>MultiOS-USB — Unofficial</h2>
+              <p class="tagline">Multi-boot USB setup built around the open-source MultiOS-USB project.</p>
+            </div>
+          </div>
+          <div class="cta-row"><span class="offline" data-i18n="home.offline">Currently unpublished from Google Play</span></div>
+        </div>
+      </article>
+
+      <article class="card reveal" id="usb-file-manager" style="--c:var(--gray);--csoft:var(--gray-soft)">
+        <div class="accent"></div>
+        <div class="inner">
+          <div class="cardhead">
+            <div class="appicon gen" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <div class="headtxt">
+              <h2>USB File Manager</h2>
+              <p class="tagline">Browse, copy and manage files on USB drives over OTG — without root.</p>
+            </div>
+          </div>
+          <div class="cta-row"><span class="offline" data-i18n="home.offline">Currently unpublished from Google Play</span></div>
+        </div>
+      </article>
+    </div>
+
+  </section>
+
+  <section class="principles wrap reveal">
+    <h3 data-i18n="home.29">How every app here is built</h3>
+    <div class="plist">
+      <div class="reveal" style="--c:var(--blue)"><b data-i18n="home.pr.1">On-device processing</b><span data-i18n="home.prd.1">Your files and drives never leave your phone. There are no cloud servers.</span></div>
+      <div class="reveal d1" style="--c:var(--green)"><b data-i18n="home.pr.2">No root for USB drives</b><span data-i18n="home.prd.2">Everything works over USB-OTG on a stock phone. Root is only ever needed for internal SD cards.</span></div>
+      <div class="reveal d2" style="--c:var(--violet)"><b data-i18n="home.pr.3">Native low-level engine</b><span data-i18n="home.prd.3">File systems and partition tables are handled by native C/C++ code written for Android.</span></div>
+      <div class="reveal d3" style="--c:var(--amber)"><b data-i18n="home.pr.4">Free first</b><span data-i18n="home.prd.4">The vast majority of tools are free with ads. A one-time Pro upgrade removes ads permanently — no subscriptions.</span></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="frow">
+      <img src="assets/logo-white.png" alt="MixApplications" width="80" height="54">
+      <span>
+        <a href="https://play.google.com/store/apps/developer?id=MixApplications" data-i18n="nav.play">Google Play</a> ·
+        <a href="contact.html" data-i18n="nav.support">Support</a> ·
+        <a href="privacy_policy.html" data-i18n="nav.privacypolicy">Privacy Policy</a>
+      </span>
+    </div>
+    <p class="fnote" data-i18n="home.fnote">&copy; 2026 MixApplications. Need help? See the <a href="contact.html">support page</a>. Ratings, icons and screenshots are loaded from the apps' Google Play listings.</p>
+  </div>
+</footer>
+
+<script>
+/* Live data: play/data.json is refreshed daily from Google Play by
+   .github/workflows/sync-play.yml. Values in the HTML are the fallback.
+   Rating badges are shown only at 3.5 and above — handled in one place below. */
+(function () {
+  var MIN_RATING = 3.5;
+  var compact = function (n) {
+    return Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 }).format(n);
+  };
+  var resize = function (url, params) { return url.split('=')[0] + '=' + params; };
+
+  function applyRating(card, score, ratings) {
+    var badge = card.querySelector('[data-rate]');
+    if (!badge) return;
+    if (typeof score !== 'number' || score < MIN_RATING) { badge.hidden = true; return; }
+    var s = badge.querySelector('[data-f=rating]');
+    var r = badge.querySelector('[data-f=reviews]');
+    if (s) s.textContent = score.toFixed(1);
+    if (r && ratings) r.textContent = compact(ratings);
+    badge.hidden = false;
+  }
+
+  // Enforce the threshold on the baked-in values immediately, so a stale
+  // hard-coded rating can never sit on the page above its real value.
+  document.querySelectorAll('[data-pkg]').forEach(function (card) {
+    var badge = card.querySelector('[data-rate]');
+    if (!badge || badge.hidden) return;
+    var el = card.querySelector('[data-f=rating]');
+    var baked = el ? parseFloat(el.textContent) : NaN;
+    if (!(baked >= MIN_RATING)) badge.hidden = true;
+  });
+
+  fetch('play/data.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.apps) return;
+      document.querySelectorAll('[data-pkg]').forEach(function (card) {
+        var a = d.apps[card.dataset.pkg];
+        if (!a) return;
+
+        var icon = card.querySelector('.appicon img');
+        if (icon && a.icon) icon.src = resize(a.icon, 's192');
+
+        var shots = card.querySelector('.shots');
+        if (shots && Array.isArray(a.screenshots) && a.screenshots.length) {
+          shots.innerHTML = '';
+          a.screenshots.slice(0, 4).forEach(function (u) {
+            var im = new Image();
+            im.loading = 'lazy';
+            im.height = 185;
+            im.alt = (a.title || '') + ' screenshot';
+            im.src = resize(u, 'w720-h405');
+            shots.appendChild(im);
+          });
+        }
+
+        var set = function (f, v) {
+          var el = card.querySelector('[data-f=' + f + ']');
+          if (el && v != null && v !== '') el.textContent = v;
+        };
+        if (a.installs) set('installs', a.installs);
+        set('summary', a.summary);
+        set('description', a.description);
+
+        applyRating(card, a.score, a.ratings);
+      });
+    })
+    .catch(function () {});
+})();
+</script>
+<script src="site.js" defer></script>
 </body>
 </html>

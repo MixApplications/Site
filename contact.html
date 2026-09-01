@@ -1,293 +1,749 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Islam Darwish</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #3498db;
-            --secondary: #2980b9;
-            --accent: #f39c12;
-            --text: #333;
-            --light-bg: #f8f9fa;
-            --shadow: rgba(0, 0, 0, 0.08);
-            --border-radius: 12px;
-            --transition: all 0.3s ease;
-            --whatsapp: #25D366;
-            --whatsapp-dark: #128C7E;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="sup.title">Support &amp; Contact — MixApplications</title>
+<meta name="description" content="Answers to the most common questions about Ultimate USB, DROFUS, Ventoy Unofficial, USB Tools and ChaoMe: OTG connection, ads and tokens, Pro purchases, formatting, bootable USB and drive problems.">
+<meta name="theme-color" content="#F3F7FB">
+<link rel="canonical" href="https://www.mixapplications.com/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mixapplications.com/contact.html">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--light-bg);
-            padding: 0;
-            margin: 0;
-        }
-
-        .header {
-            background-color: white;
-            box-shadow: 0 2px 15px var(--shadow);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 0;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .logo:hover {
-            color: var(--secondary);
-            transform: scale(1.05);
-        }
-
-        .nav-links a {
-            margin-left: 1.5rem;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--primary);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .page-header {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .page-title {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 2.5rem;
-        }
-
-        .page-subtitle {
-            color: #777;
-            font-weight: normal;
-            font-size: 1.1rem;
-        }
-
-        .contact-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: 0 8px 30px var(--shadow);
-            transition: var(--transition);
-            max-width: 800px;
-            margin: 0 auto 3rem auto;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .section-title {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-            font-size: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.2rem;
-            transition: var(--transition);
-            padding: 0.5rem 0;
-        }
-
-        .info-item:hover {
-            transform: translateX(5px);
-        }
-
-        .info-item i {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(52, 152, 219, 0.1);
-            color: var(--primary);
-            font-size: 1.2rem;
-            border-radius: 50%;
-            margin-right: 1rem;
-            transition: var(--transition);
-        }
-
-        .info-item:hover i {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .email-link {
-            color: var(--text);
-            text-decoration: none;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .email-link:hover {
-            color: var(--primary);
-        }
-
-        .email-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--primary);
-            transition: var(--transition);
-        }
-
-        .email-link:hover::after {
-            width: 100%;
-        }
-
-        .info-item:hover .email-link {
-            color: var(--primary);
-        }
-
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-            width: 100%;
-            background-color: var(--whatsapp);
-            color: white;
-            padding: 0.9rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            margin: 1rem 0;
-        }
-
-        .whatsapp-btn i {
-            font-size: 1.5rem;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: var(--whatsapp-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .whatsapp-btn:active {
-            transform: translateY(1px);
-        }
-
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 576px) {
-            .page-title {
-                font-size: 2rem;
-            }
-
-            .contact-card {
-                padding: 1.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <nav class="nav">
-            <a href="/" class="logo">Islam Darwish</a>
-            <div class="nav-links">
-                <a href="/">Home</a>
-            </div>
-        </nav>
-    </div>
+<a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+<header class="site">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html"><img src="assets/mark.png" alt="" width="53" height="34"><span>MixApplications</span></a>
+    <nav class="top" aria-label="Main">
+      <a href="index.html" data-i18n="nav.apps">Apps</a>
+      <a href="contact.html" aria-current="page" data-i18n="nav.support">Support</a>
+      <a href="privacy_policy.html" data-i18n="nav.privacy">Privacy</a>
+    </nav>
+      <div class="lang" id="langpicker" hidden>
+        <button type="button" class="lang-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Language">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg>
+          <span class="lang-current">EN</span>
+        </button>
+        <div class="lang-menu" role="menu"></div>
+      </div>
+
+  </div>
 </header>
 
-<div class="container">
-    <div class="page-header">
-        <h1 class="page-title">Get In Touch</h1>
-        <p class="page-subtitle">Questions, feedback, or project ideas? Reach out and let's talk!</p>
+<main id="main" class="wrap narrow">
+  <section class="pagehead reveal in">
+    <h1 data-i18n="sup.1">Support</h1>
+    <p data-i18n="sup.2">The support button in the app brings you here. Most problems are answered below — these are the questions we actually get asked, in the order we get asked them. If yours isn't here, message us and we'll take it from there.</p>
+  </section>
+
+  <a class="jump reveal" href="#faq">
+    <span class="jic" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.2"/><path d="m20 20-3.9-3.9"/><path d="M11 8.2v.01M11 10.2v3.4"/></svg>
+    </span>
+    <span class="jtxt">
+      <b data-i18n="sup.jump.t">Search 57 answers</b>
+      <em data-i18n="sup.jump.s">OTG, ads and tokens, Pro, formatting, bootable USB, drive problems &mdash; the questions we're asked most</em>
+    </span>
+    <span class="jarrow" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m5.5 12.5 6.5 6.5 6.5-6.5"/></svg>
+    </span>
+  </a>
+
+  <div class="support-first reveal">
+    <div class="icon-tile" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v11H8.5L4 20.2z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg></div>
+    <div>
+      <h2 data-i18n="sup.3">Writing to us? Send these four things</h2>
+      <p data-i18n="sup.4">Every case that gets solved in one reply includes them, and every case that drags on is missing them:</p>
+      <ol>
+        <li data-i18n="sup.5">Your <strong>phone model</strong> and the <strong>app name and version</strong></li>
+        <li data-i18n="sup.6">The <strong>drive size and file system</strong>, and the adapter you're using</li>
+        <li data-i18n="sup.7">Exactly <strong>what you were doing</strong> when it happened, step by step</li>
+        <li data-i18n="sup.8">A <strong>screenshot</strong> of the error or the screen you're stuck on</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="contact-grid" id="channels">
+    <div class="ccard reveal" style="--c:var(--blue);--csoft:var(--blue-soft)">
+      <div class="accent"></div>
+      <div class="in">
+        <div class="icon-tile" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></div>
+        <h2 data-i18n="sup.9">Email</h2>
+        <p data-i18n="sup.10">For purchases, refunds, business enquiries and press — anything that needs a written record.</p>
+        <a class="btn" href="mailto:islam.saad2005@gmail.com">islam.saad2005@gmail.com</a>
+      </div>
     </div>
 
-    <div class="contact-card">
-        <h2 class="section-title">Contact Information</h2>
+    <div class="ccard reveal d1" style="--c:var(--green);--csoft:var(--green-soft)">
+      <div class="accent"></div>
+      <div class="in">
+        <div class="icon-tile" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor"><path d="M12.02 2C6.58 2 2.16 6.42 2.16 11.86c0 1.74.46 3.44 1.32 4.94L2 22l5.34-1.4a9.82 9.82 0 0 0 4.68 1.19h.01c5.43 0 9.85-4.42 9.85-9.86C21.88 6.42 17.46 2 12.02 2Zm5.77 14.1c-.24.68-1.41 1.3-1.96 1.35-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35h.52c.17 0 .4-.06.62.48.24.57.8 1.96.87 2.1.07.14.12.31.02.5-.09.19-.14.31-.28.47l-.42.49c-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.92 1.06.94 1.95 1.23 2.23 1.37.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.64.77 1.92.91.28.14.47.21.54.33.07.11.07.66-.16 1.34Z"/></svg></div>
+        <h2 data-i18n="sup.11">WhatsApp</h2>
+        <p data-i18n="sup.12">For quick questions and screenshots. Include the app name, your phone model, and what you were doing when it happened.</p>
+        <a class="btn" href="https://wa.me/201111707320" target="_blank" rel="noopener"><span data-i18n="sup.wa.btn">Message on WhatsApp</span></a>
+      </div>
+    </div>
+  </div>
 
-        <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:islam.saad2005@gmail.com" class="email-link">
-                islam.saad2005@gmail.com
-            </a>
+  <!-- ============ KNOWLEDGE BASE ============ -->
+  <section class="kb reveal" id="faq">
+    <div class="kb-head">
+      <h2 data-i18n="sup.13">Answers</h2>
+      <p data-i18n="sup.14">Built from the questions our support desk receives most.</p>
+    </div>
+
+    <div class="kb-tools">
+      <div class="search">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        <input type="search" id="kbsearch" data-i18n-ph="sup.search" placeholder="Search — try &ldquo;OTG&rdquo;, &ldquo;ad&rdquo;, &ldquo;Pro&rdquo;, &ldquo;NTFS&rdquo;, &ldquo;stuck&rdquo;" aria-label="Search the answers" autocomplete="off">
+      </div>
+      <div class="filters" id="kbfilters" role="group" aria-label="Filter by topic">
+        <button type="button" data-cat="all" aria-pressed="true" data-i18n="sup.cat.all">All</button>
+        <button type="button" data-cat="connect" aria-pressed="false" data-i18n="sup.cat.connect">Connecting a drive</button>
+        <button type="button" data-cat="tokens" aria-pressed="false" data-i18n="sup.cat.tokens">Ads &amp; tokens</button>
+        <button type="button" data-cat="pro" aria-pressed="false" data-i18n="sup.cat.pro">Pro &amp; purchases</button>
+        <button type="button" data-cat="format" aria-pressed="false" data-i18n="sup.cat.format">Formatting</button>
+        <button type="button" data-cat="boot" aria-pressed="false" data-i18n="sup.cat.boot">Bootable USB</button>
+        <button type="button" data-cat="fail" aria-pressed="false" data-i18n="sup.cat.fail">Failures &amp; stalls</button>
+        <button type="button" data-cat="health" aria-pressed="false" data-i18n="sup.cat.health">Drive health</button>
+        <button type="button" data-cat="games" aria-pressed="false" data-i18n="sup.cat.games">Console games</button>
+        <button type="button" data-cat="apps" aria-pressed="false" data-i18n="sup.cat.apps">Apps &amp; data</button>
+      </div>
+      <p class="kb-count" id="kbcount" aria-live="polite" data-i18n-tpl="sup.count" data-tpl="{n} answers"></p>
+    </div>
+
+    <!-- ---------- CONNECTING ---------- -->
+    <div class="group" data-group="connect" style="--c:var(--blue)">
+      <h3 data-i18n="sup.15">Connecting a drive</h3>
+
+      <details class="q" data-cat="connect">
+        <summary data-i18n="sup.16">The app says no device is connected</summary>
+        <div class="a">
+          <p data-i18n="sup.17">The app can only see a drive that Android itself has already recognised. Work through this in order:</p>
+          <ol>
+            <li data-i18n="sup.18">Open your phone's <strong>Settings</strong>, search for <code>OTG</code>, and switch it on if the option exists.</li>
+            <li data-i18n="sup.19">Check your adapter is a real <strong>data</strong> OTG adapter, not a charge-only cable. This is by far the most common cause.</li>
+            <li data-i18n="sup.20">Open your phone's own file manager. If the drive isn't visible there either, no app can reach it — the problem is the cable, the port or the drive.</li>
+            <li data-i18n="sup.21">Test the same drive on a PC to rule the drive out.</li>
+            <li data-i18n="sup.22">Check the charging port for dust or lint.</li>
+          </ol>
         </div>
+      </details>
 
-        <div class="whatsapp-contact">
-            <a href="https://wa.me/201111707320" class="whatsapp-btn" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> Message on WhatsApp
-            </a>
+      <details class="q" data-cat="connect">
+        <summary data-i18n="sup.23">Does my phone support OTG?</summary>
+        <div class="a">
+          <p data-i18n="sup.24">Most Android phones made in the last several years do. If searching Settings for <code>OTG</code> returns nothing, your phone most likely enables it automatically — the absence of a toggle isn't a sign it's unsupported. Confirm by plugging in a drive and checking your file manager.</p>
         </div>
-    </div>
-</div>
+      </details>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2024 Islam Darwish. All Rights Reserved.</p>
+      <details class="q" data-cat="connect">
+        <summary data-i18n="sup.25">Do I need root?</summary>
+        <div class="a">
+          <p data-i18n="sup.26">No — not for USB drives over OTG, which is what these apps are built for.</p>
+          <p data-i18n="sup.27">Root is only needed to reach the phone's <strong>internal SD card slot</strong>, because Android doesn't expose it the same way. If you need to work on a microSD card without root, put it in a USB card reader and connect that over OTG instead.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="connect">
+        <summary data-i18n="sup.28">Can I use an external hard drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.29">Flash drives, card readers, portable SSDs and OTG hubs are supported. Mechanical external hard drives (HDDs) are <strong>not officially supported</strong> — they draw more power than a phone's USB port reliably provides, so they may fail to spin up or cut out mid-operation.</p>
+          <p data-i18n="sup.30">If you try one anyway: charge the phone fully first, and use a powered USB hub if you have one.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="connect">
+        <summary data-i18n="sup.31">The drive disconnects part-way through an operation</summary>
+        <div class="a">
+          <p data-i18n="sup.32">A drive that drops out mid-write is almost always a physical connection problem, not a software one:</p>
+          <ul>
+            <li data-i18n="sup.33">Don't move the phone or the cable while an operation is running — a fractionally loose adapter will disconnect on the smallest movement.</li>
+            <li data-i18n="sup.34">Try a different OTG adapter. Cheap adapters fail under sustained load even when they work for a quick file copy.</li>
+            <li data-i18n="sup.35">Keep the phone charged; a drive under sustained write load draws real power.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="q" data-cat="connect">
+        <summary data-i18n="sup.36">Android says the drive is corrupted or unsupported after I format it</summary>
+        <div class="a">
+          <p data-i18n="sup.37">That notification is expected after formatting to <strong>NTFS</strong> or <strong>ext2/3/4</strong>, and it does not mean anything is wrong. Most Android devices have no built-in driver for either, so the system sees a file system it can't read and reports the drive as damaged or unsupported.</p>
+          <p data-i18n="sup.38">The format succeeded and the app can still use the drive normally, because it reads and writes these file systems with its own native drivers rather than relying on Android's.</p>
+          <p data-i18n="sup.39">Dismiss the notification and <strong>never tap the option to format</strong> — that offer comes from Android, not from us, and it will erase the drive you just prepared.</p>
+        </div>
+      </details>
     </div>
+
+    <!-- ---------- TOKENS / ADS ---------- -->
+    <div class="group" data-group="tokens" style="--c:var(--amber)">
+      <h3 data-i18n="sup.40">Ads &amp; tokens</h3>
+
+      <details class="q" data-cat="tokens">
+        <summary data-i18n="sup.41">The ad won't load, or says &ldquo;try again&rdquo;</summary>
+        <div class="a">
+          <p data-i18n="sup.42">This is the single most common report, and it's nearly always the network — not the app. In order of how often it's the fix:</p>
+          <ol>
+            <li data-i18n="sup.43"><strong>Private DNS.</strong> Open Settings, search for <code>Private DNS</code>, choose <em>Private DNS provider hostname</em> and enter <code>dns.google</code>. Save, toggle your connection off and on, then restart the app. Ad-blocking DNS providers block the ad servers, so no ad can load.</li>
+            <li data-i18n="sup.44"><strong>Ad blockers and blocking VPNs.</strong> Disable them for the app. There is nothing to load through a blocker.</li>
+            <li data-i18n="sup.45">Switch between Wi-Fi and mobile data. If ads load on one and not the other, the network is the cause.</li>
+            <li data-i18n="sup.46">Watch the ad to the very end and close it with the <strong>X</strong> that appears. Pressing Back early cancels the reward.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="q" data-cat="tokens">
+        <summary data-i18n="sup.47">Why does the app need internet just to format a drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.48">The operation itself doesn't. The connection is for loading ads, which is what funds the free version — the ads are the price of the tools being free.</p>
+          <p data-i18n="sup.49">If you want the apps to work fully offline, the one-time <strong>Pro</strong> upgrade removes ads and the token system entirely, and offline use comes with it.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="tokens">
+        <summary data-i18n="sup.50">How do I get tokens?</summary>
+        <div class="a">
+          <p data-i18n="sup.51">Two ways: watch a rewarded ad (about a minute), or buy them directly. Watching an ad is free and unlimited over time.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="tokens">
+        <summary data-i18n="sup.52">The &ldquo;watch an ad&rdquo; option disappeared</summary>
+        <div class="a">
+          <p data-i18n="sup.53">That's a cap, not a bug. Earning by ads stops at a maximum balance of <strong>5 tokens</strong>. Spend some and the option comes back on its own once you're under the cap.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="tokens">
+        <summary data-i18n="sup.54">Which actions cost tokens?</summary>
+        <div class="a">
+          <p data-i18n="sup.55">The large majority of tools are free. Tokens apply only to the heavy write operations — formatting, the partition wizard, installing or updating Ventoy, and burning a Windows image. The cost is one to three tokens depending on the operation, and the exact figure is always shown before you confirm.</p>
+          <p data-i18n="sup.56">Wiping, backup and restore, bad-blocks checking, benchmarking, defragmenting, the file manager, image conversion and the console-game tools are all free.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="tokens">
+        <summary data-i18n="sup.57">I watched the ad but got no token</summary>
+        <div class="a">
+          <p data-i18n="sup.58">The reward is granted when the ad reports completion, so it's lost if the ad is closed early or the connection drops mid-ad. Watch to the end, close with the <strong>X</strong>, and stay connected.</p>
+          <p data-i18n="sup.59">If the ad definitely completed and the balance didn't move, force-stop the app (Settings &rarr; Apps &rarr; the app &rarr; Force stop) and reopen it while online.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="tokens">
+        <summary data-i18n="sup.60">My tokens disappeared</summary>
+        <div class="a">
+          <p data-i18n="sup.61">Token balances are stored <strong>on your device</strong>, not on an account. Clearing the app's data, uninstalling, or moving to a new phone clears them.</p>
+          <p data-i18n="sup.62">Pro is different — it's tied to your Google account and survives all of that.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ---------- PRO / PURCHASES ---------- -->
+    <div class="group" data-group="pro" style="--c:var(--green)">
+      <h3 data-i18n="sup.63">Pro &amp; purchases</h3>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.64">What does Pro actually give me?</summary>
+        <div class="a">
+          <p data-i18n="sup.65">A one-time, lifetime purchase that removes all ads, removes the token system, and lets the app run fully offline and with ad blockers enabled. There is no subscription.</p>
+          <p data-i18n="sup.66">To be precise about what it isn't: Pro removes the ads and the token requirement. It isn't a separate feature set — the tools themselves are the same.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.67">I bought Pro and it isn't showing</summary>
+        <div class="a">
+          <ol>
+            <li data-i18n="sup.68">Make sure the app is signed in with the <strong>same Google account</strong> that made the purchase.</li>
+            <li data-i18n="sup.69">Force-stop the app (Settings &rarr; Apps &rarr; the app &rarr; Force stop), then reopen it while online — the entitlement is confirmed with Google Play on launch.</li>
+            <li data-i18n="sup.70">Check the purchase actually completed in the Play Store under Payments &amp; subscriptions.</li>
+          </ol>
+          <p data-i18n="sup.71">If it still doesn't appear, email us with the Play Store order number.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.72">I bought tokens and they didn't arrive</summary>
+        <div class="a">
+          <p data-i18n="sup.73">Force-stop the app and reopen it while connected — the purchase is verified on launch, so a purchase made while offline or during a dropped connection can land a moment later.</p>
+          <p data-i18n="sup.74">If they still aren't there, send us a screenshot of the app and a screenshot of the purchase in your Google Play payment history, and we'll sort it out.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.75">Do I keep Pro on a new phone?</summary>
+        <div class="a">
+          <p data-i18n="sup.76">Yes. Pro follows the Google account, not the device. Install the app on the new phone, sign in with the same account, and it's there. Your token balance does <em>not</em> transfer — that lives on the old device.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.77">Do I have to buy Pro separately for each app?</summary>
+        <div class="a">
+          <p data-i18n="sup.78">Yes. Each app is a separate product on Google Play with its own purchase. If you want everything in one place, Ultimate USB contains the features of the individual tools.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.79">I can't complete a purchase in my country</summary>
+        <div class="a">
+          <p data-i18n="sup.80">In-app purchases go through Google Play billing, and Play payment support varies by country — in some regions purchases are restricted regardless of the app. Nothing on our side can override that.</p>
+          <p data-i18n="sup.81">Everything remains usable in the meantime: tokens are earned free by watching a rewarded ad, and no feature is locked behind payment alone.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.82">Can I get a discount or promo code?</summary>
+        <div class="a">
+          <p data-i18n="sup.83">Google Play promo codes can only make an item completely free — there is no mechanism for a partial per-user discount, so we can't issue one.</p>
+          <p data-i18n="sup.84">Every paid action is also reachable free by watching a rewarded ad, so nothing is locked behind payment.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.85">How do I request a refund?</summary>
+        <div class="a">
+          <p data-i18n="sup.86">Refunds are processed by Google Play, not by us, so start there: open the Play Store, find the purchase in your order history, and use the option to report a problem with it.</p>
+          <p data-i18n="sup.87">If the purchase failed to deliver, email us first with a screenshot of the app and of the Play purchase history — most cases turn out to be recoverable without a refund.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro">
+        <summary data-i18n="sup.88">Is there an iPhone version?</summary>
+        <div class="a">
+          <p data-i18n="sup.89">No. These apps rely on low-level USB and storage access that iOS doesn't provide. Android only, and a purchase on Android doesn't carry to any other platform.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ---------- FORMATTING ---------- -->
+    <div class="group" data-group="format" style="--c:var(--violet)">
+      <h3 data-i18n="sup.90">Formatting &amp; file systems</h3>
+
+      <details class="q" data-cat="format">
+        <summary data-i18n="sup.91">Which file system should I choose?</summary>
+        <div class="a">
+          <ul>
+            <li data-i18n="sup.92"><strong>FAT32</strong> — maximum compatibility (TVs, car stereos, consoles, BIOS boot). Single files are limited to 4&nbsp;GB.</li>
+            <li data-i18n="sup.93"><strong>exFAT</strong> — no practical file-size limit, still read by phones, Windows and macOS. The best default for general use.</li>
+            <li data-i18n="sup.94"><strong>NTFS</strong> — for Windows. No practical file-size limit, but most Android phones can't read it.</li>
+            <li data-i18n="sup.95"><strong>ext2/3/4</strong> — for Linux. Neither Android nor Windows reads it without extra software.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="q" data-cat="format">
+        <summary data-i18n="sup.96">I formatted to NTFS (or ext4) and now my phone can't read the drive</summary>
+        <div class="a">
+          <p data-i18n="sup.97">The format succeeded. The limitation is Android itself: <strong>most Android devices have no built-in NTFS or ext2/3/4 support</strong>, so the system can't mount the drive even though a PC will read it perfectly. A handful of manufacturers add NTFS support, but it is the exception rather than the rule.</p>
+          <p data-i18n="sup.98">Inside our apps the drive still works normally — they carry their own native drivers for these file systems instead of relying on Android's.</p>
+          <p data-i18n="sup.99">If you need the drive readable by the phone's own file manager and other apps, use <strong>exFAT</strong>. It has no practical file-size limit and is read by Android, Windows and macOS alike.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="format">
+        <summary data-i18n="sup.100">Format failed, or the verification check failed</summary>
+        <div class="a">
+          <ol>
+            <li data-i18n="sup.101">Confirm the adapter is a data OTG adapter and reseat it.</li>
+            <li data-i18n="sup.102">Test the drive on a PC — a drive that fails verification usually has failing flash.</li>
+            <li data-i18n="sup.103">Try a different USB port on the adapter or a different adapter entirely.</li>
+            <li data-i18n="sup.104">Run the bad-blocks check to confirm whether the flash itself is at fault.</li>
+          </ol>
+          <p data-i18n="sup.105">A verification failure means data written to the drive read back differently. That is a hardware symptom, and no app can format around it.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="format">
+        <summary data-i18n="sup.106">The drive shows less capacity than it should</summary>
+        <div class="a">
+          <p data-i18n="sup.107">Two ordinary causes and one bad one:</p>
+          <ul>
+            <li data-i18n="sup.108">Manufacturers count in decimal gigabytes; your phone counts in binary. A "64&nbsp;GB" drive genuinely holds about 59&nbsp;GiB.</li>
+            <li data-i18n="sup.109">A previous bootable write may have left hidden partitions taking up space. Use the partition wizard, or wipe the drive and format fresh, to recover it.</li>
+            <li data-i18n="sup.110">If the shortfall is large, the drive may be counterfeit — see the drive health section.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="q" data-cat="format">
+        <summary data-i18n="sup.111">How do I get back unallocated space?</summary>
+        <div class="a">
+          <p data-i18n="sup.112">Open the partition wizard, select the unallocated block and create a partition, or delete the existing partitions and let the app lay out the full drive. Changes are queued so you can review them, then applied together.</p>
+          <p data-i18n="sup.113">The quickest route, if you don't need what's on the drive: wipe it and format fresh.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="format">
+        <summary data-i18n="sup.114">MBR or GPT?</summary>
+        <div class="a">
+          <p data-i18n="sup.115"><strong>GPT</strong> for modern UEFI machines. <strong>MBR</strong> for older BIOS/legacy boot, and for consoles like the PS2 that require it.</p>
+          <p data-i18n="sup.116">You can convert between them in the app, without a PC. Back the drive up first regardless — any change to a partition table is a change you don't want to get halfway through.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ---------- BOOTABLE ---------- -->
+    <div class="group" data-group="boot" style="--c:var(--rose)">
+      <h3 data-i18n="sup.117">Bootable USB</h3>
+
+      <details class="q" data-cat="boot">
+        <summary data-i18n="sup.118">Which app should I use to make a bootable drive?</summary>
+        <div class="a">
+          <ul>
+            <li data-i18n="sup.119"><strong>DROFUS</strong> — one ISO, maximum control over the result. The straightforward choice for a Windows or Linux installer.</li>
+            <li data-i18n="sup.120"><strong>Ventoy (Unofficial)</strong> — install once, then drag as many ISOs onto the drive as it holds and pick at boot. Best if you carry several installers.</li>
+            <li data-i18n="sup.121"><strong>Ultimate USB</strong> — contains both, plus partitioning, diagnostics and the rest.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="q" data-cat="boot">
+        <summary data-i18n="sup.122">The drive was created but the PC won't boot from it</summary>
+        <div class="a">
+          <p data-i18n="sup.123">The write can be perfect and the PC still refuse it. Check, in this order:</p>
+          <ol>
+            <li data-i18n="sup.124"><strong>Boot menu.</strong> Actually select the USB drive in the boot menu (usually F12, F11, F9 or Esc at power-on) rather than expecting it to boot on its own.</li>
+            <li data-i18n="sup.125"><strong>Secure Boot.</strong> Disable it in the BIOS/UEFI, or use a build that supports it.</li>
+            <li data-i18n="sup.126"><strong>Partition scheme.</strong> GPT drives need UEFI mode; MBR drives need legacy/CSM. A mismatch means the drive simply won't appear.</li>
+            <li data-i18n="sup.127"><strong>USB port.</strong> Try a rear port directly on the motherboard, not a front-panel or hub port.</li>
+            <li data-i18n="sup.128"><strong>The ISO itself.</strong> Re-download it if it came from anywhere other than the official source — a truncated ISO writes fine and boots into nothing.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="q" data-cat="boot">
+        <summary data-i18n="sup.129">My Windows ISO has a file bigger than 4 GB</summary>
+        <div class="a">
+          <p data-i18n="sup.130">That's <code>install.wim</code>, and FAT32 can't hold it. The app splits it automatically into <code>.swm</code> parts so the drive can stay FAT32 — which is what Secure Boot machines usually need. Windows setup reassembles the parts itself; nothing is lost.</p>
+          <p data-i18n="sup.131">The alternative is NTFS, which has no size limit but isn't accepted by every UEFI firmware.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="boot">
+        <summary data-i18n="sup.132">How do I switch Ventoy between MBR and GPT?</summary>
+        <div class="a">
+          <p data-i18n="sup.133">Inside the app, before installing — you don't need a PC. Choose the partition table on the main screen, then tap Install.</p>
+          <p data-i18n="sup.134"><strong>Install wipes the drive completely</strong>, including any ISOs already copied to it, so copy them back afterwards with the copy-to-USB button.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="boot">
+        <summary data-i18n="sup.135">How do I add or remove ISOs on a Ventoy drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.136">Once Ventoy is installed, just copy ISO files onto the drive like ordinary files, or download them straight to the drive from inside the app. No reburning, no reinstalling. Deleting an ISO removes it from the boot menu.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="boot">
+        <summary data-i18n="sup.137">What is Linux persistence, and why is the option greyed out?</summary>
+        <div class="a">
+          <p data-i18n="sup.138">Persistence adds a separate ext3/ext4 partition so files and changes survive a reboot of the live system.</p>
+          <p data-i18n="sup.139">It's only enabled for ISOs that are confirmed to support it — most distributions don't, and offering it for those would produce a drive that silently fails to keep anything.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="boot">
+        <summary data-i18n="sup.140">What is Windows To Go?</summary>
+        <div class="a">
+          <p data-i18n="sup.141">A full Windows installation that runs from the USB drive itself, rather than an installer that puts Windows onto a PC. Use a fast drive — a slow flash drive makes it painful to use.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="boot">
+        <summary data-i18n="sup.142">Can I burn a macOS DMG or a Raspberry Pi image?</summary>
+        <div class="a">
+          <p data-i18n="sup.143">Yes — macOS DMG (Intel-based), Raspberry Pi OS and other ARM images are written as raw blocks, preserving the original layout and boot structure. There's no customisation applied to these, by design.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ---------- FAILURES ---------- -->
+    <div class="group" data-group="fail" style="--c:var(--blue)">
+      <h3 data-i18n="sup.144">Failures &amp; stalls</h3>
+
+      <details class="q" data-cat="fail">
+        <summary data-i18n="sup.145">The operation is stuck or won't finish</summary>
+        <div class="a">
+          <p data-i18n="sup.146">Two causes cover almost every case:</p>
+          <ol>
+            <li data-i18n="sup.147"><strong>The app was minimised.</strong> Operations pause when the app leaves the foreground — that's deliberate, to protect the drive from a half-finished write. Keep it on screen and keep the screen awake.</li>
+            <li data-i18n="sup.148"><strong>The adapter or drive.</strong> Reseat the adapter, don't move the phone while it runs, and try another adapter if it recurs. A loose or charge-only adapter is the usual culprit.</li>
+          </ol>
+          <p data-i18n="sup.149">Large drives and large images simply take time — a write that looks frozen on a slow drive is often still progressing. If the progress figure hasn't moved at all for a long stretch, treat it as a stall and check the two points above.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="fail">
+        <summary data-i18n="sup.150">It stalls near the very end — 99%, or in the last few percent</summary>
+        <div class="a">
+          <p data-i18n="sup.151">The end of a write is where data reaches the far end of the drive. Stalling there is the classic signature of a drive that <strong>reports more capacity than it physically has</strong>, or whose flash is failing at the far end.</p>
+          <p data-i18n="sup.152">Run the bad-blocks check with fake-capacity detection to confirm. If it comes back bad, no app can fix it — the drive is the problem.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="fail">
+        <summary data-i18n="sup.153">Can the app damage my USB drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.154">No. Nothing the app does is unrecoverable at the hardware level — the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="fail">
+        <summary data-i18n="sup.155">Can I use my phone while an operation runs?</summary>
+        <div class="a">
+          <p data-i18n="sup.156">Not on other apps — operations pause when the app is minimised. Leave it in the foreground until it finishes. Long operations on large drives can take a while, so start them when you don't need the phone.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="fail">
+        <summary data-i18n="sup.157">The app crashed or closed by itself</summary>
+        <div class="a">
+          <p data-i18n="sup.158">First check you installed from Google Play. Modified or repackaged copies from APK sites are a common source of crashes we can't reproduce or fix.</p>
+          <p data-i18n="sup.159">If it's the Play version, write to us with the app version, your phone model, the drive size and file system, and what you were doing when it closed. Crashes we can reproduce get fixed quickly.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ---------- HEALTH ---------- -->
+    <div class="group" data-group="health" style="--c:var(--amber)">
+      <h3 data-i18n="sup.160">Drive health</h3>
+
+      <details class="q" data-cat="health">
+        <summary data-i18n="sup.161">How do I tell if a drive is counterfeit?</summary>
+        <div class="a">
+          <p data-i18n="sup.162">Run the bad-blocks check with fake-capacity detection. It writes across the whole drive and reads it back — a counterfeit drive reports a large capacity but silently discards anything past its real size, which the test exposes.</p>
+          <p data-i18n="sup.163">Symptoms before you test: files that copy successfully but are corrupt afterwards, and writes that stall near the end.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="health">
+        <summary data-i18n="sup.164">Can a corrupted drive be repaired?</summary>
+        <div class="a">
+          <p data-i18n="sup.165">Logical corruption — a broken partition table or file system — is usually fixable by wiping and formatting fresh. That's what the repair tools address.</p>
+          <p data-i18n="sup.166">Physical flash failure isn't repairable by any software. If the bad-blocks check reports errors, replace the drive.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="health">
+        <summary data-i18n="sup.167">Does secure wipe really erase everything?</summary>
+        <div class="a">
+          <p data-i18n="sup.168">It performs a full single-pass zero overwrite of the whole device — equivalent to the "Clear" level in NIST SP 800-88. That defeats all normal file-recovery software.</p>
+          <p data-i18n="sup.169">It is not a multi-pass or "Purge"-level erase, and we don't claim it is. For legally mandated destruction standards, follow your own policy.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="health">
+        <summary data-i18n="sup.170">My drive is slower than advertised</summary>
+        <div class="a">
+          <p data-i18n="sup.171">Run the benchmark for real numbers. Bear in mind the whole chain limits speed: a USB 3.0 drive in a USB 2.0 adapter runs at USB 2.0 speed, and advertised figures are usually peak read, not sustained write.</p>
+          <p data-i18n="sup.172">Small-file writes are always dramatically slower than large sequential ones. That's how flash works, not a fault.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ---------- GAMES ---------- -->
+    <div class="group" data-group="games" style="--c:var(--green)">
+      <h3 data-i18n="sup.173">Console games</h3>
+
+      <details class="q" data-cat="games">
+        <summary data-i18n="sup.174">How do I set up a drive for PS2 / OPL?</summary>
+        <div class="a">
+          <p data-i18n="sup.175">Format the drive to FAT32 with an MBR partition table, then use the PS2 tools to import your games. The app handles the USBExtreme (<code>.ul</code>) conversion for images over 4&nbsp;GB and generates the <code>ul.cfg</code> and playlists.</p>
+          <p data-i18n="sup.176">Run the defragmenter afterwards — OPL requires unfragmented files, and skipping this is the usual cause of games that won't load.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="games">
+        <summary data-i18n="sup.177">Which game formats can be converted?</summary>
+        <div class="a">
+          <p data-i18n="sup.178">Between ISO, BIN/CUE, VCD, ZSO, CSO and CHD, in the directions each format supports. Compressing to ZSO or CSO saves considerable space at a small performance cost.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="games">
+        <summary data-i18n="sup.179">Do you supply the games, BIOS files, or console firmware?</summary>
+        <div class="a">
+          <p data-i18n="sup.180">No. The apps are tools for organising files you already own. We don't bundle, host or distribute game images, BIOS files, console firmware or any proprietary console component, and we won't add features that depend on them.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="games">
+        <summary data-i18n="sup.181">Game covers aren't downloading</summary>
+        <div class="a">
+          <p data-i18n="sup.182">Artwork is fetched online, so it needs a working connection. Games with an unusual or renamed game ID may have no artwork available to match.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- ---------- APPS & DATA ---------- -->
+    <div class="group" data-group="apps" style="--c:var(--violet)">
+      <h3 data-i18n="sup.183">Apps &amp; data</h3>
+
+      <details class="q" data-cat="apps">
+        <summary data-i18n="sup.184">What happened to ISO 2 USB?</summary>
+        <div class="a">
+          <p data-i18n="sup.185">It's been retired. Every feature it had is in <strong>DROFUS</strong>, along with everything added since — install that instead.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps">
+        <summary data-i18n="sup.186">Which app do I need if I only want one?</summary>
+        <div class="a">
+          <p data-i18n="sup.187"><strong>Ultimate USB.</strong> It contains the bootable-USB writer, Ventoy, formatting, partitioning, diagnostics, backup and the console-game tools in one app. The separate apps exist for people who want just one job done.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps">
+        <summary data-i18n="sup.188">Do my files get uploaded anywhere?</summary>
+        <div class="a">
+          <p data-i18n="sup.189">No. Every operation runs locally on your device. The contents of your files, images and drives are never uploaded — there is no cloud service behind these apps. The full detail is in the <a href="privacy_policy.html">privacy policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps">
+        <summary data-i18n="sup.190">Do the apps create an account?</summary>
+        <div class="a">
+          <p data-i18n="sup.191">No. There's no sign-up, no profile and no account to delete. Pro is tied to your Google Play purchase, which Google manages, and tokens live on your device.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps">
+        <summary data-i18n="sup.192">How do I restore a backup, or open a .bk file?</summary>
+        <div class="a">
+          <p data-i18n="sup.193">Use <strong>Restore</strong> to write a backup back to a drive. To inspect one without restoring it, open the <code>.bk</code> file in the partition image manager and browse its contents.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps">
+        <summary data-i18n="sup.194">Is the app available in my language?</summary>
+        <div class="a">
+          <p data-i18n="sup.195">The apps are translated into many languages and follow your phone's language setting. If a translation is wrong or missing, send us the screen and the correct wording — corrections from native speakers are genuinely welcome.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps">
+        <summary data-i18n="sup.196">ChaoMe: my theme resets after a while</summary>
+        <div class="a">
+          <p data-i18n="sup.197">MIUI and HyperOS revert themes on their own — the theme file is applied correctly, then the system replaces it. There's no reliable fix from an app without root; it's a limitation of the theme engine, not of the export.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps">
+        <summary data-i18n="sup.198">ChaoMe: why does it need Shizuku?</summary>
+        <div class="a">
+          <p data-i18n="sup.199">From Android 11 onwards, Google's storage rules stop any app from writing into the Themes app's private folder. Shizuku bridges that gap so the theme installs cleanly — and it means no root is required. The app walks you through the one-time setup.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="noresult hidden" id="noresult">
+      <b data-i18n="sup.none.t">Nothing matches that</b>
+      <span data-i18n="sup.none.s">Try a different word, or <a href="#channels">message us directly</a>.</span>
+    </div>
+  </section>
+
+  <div class="still reveal">
+    <h2 data-i18n="sup.200">Still stuck?</h2>
+    <p data-i18n="sup.201">Message us with the four details above and we'll work through it with you. WhatsApp is quickest for anything involving a screenshot; email is better for purchases and refunds.</p>
+    <div class="still-btns">
+      <a class="btn" style="--c:var(--green)" href="https://wa.me/201111707320" target="_blank" rel="noopener">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.02 2C6.58 2 2.16 6.42 2.16 11.86c0 1.74.46 3.44 1.32 4.94L2 22l5.34-1.4a9.82 9.82 0 0 0 4.68 1.19h.01c5.43 0 9.85-4.42 9.85-9.86C21.88 6.42 17.46 2 12.02 2Zm5.77 14.1c-.24.68-1.41 1.3-1.96 1.35-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35h.52c.17 0 .4-.06.62.48.24.57.8 1.96.87 2.1.07.14.12.31.02.5-.09.19-.14.31-.28.47l-.42.49c-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.92 1.06.94 1.95 1.23 2.23 1.37.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.64.77 1.92.91.28.14.47.21.54.33.07.11.07.66-.16 1.34Z"/></svg>
+        <span data-i18n="sup.11">WhatsApp</span></a>
+      <a class="btn" style="--c:var(--blue)" href="mailto:islam.saad2005@gmail.com">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+        <span data-i18n="sup.9">Email</span></a>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="frow">
+      <img src="assets/logo-white.png" alt="MixApplications" width="80" height="54">
+      <span>
+        <a href="index.html" data-i18n="nav.apps">Apps</a> &middot;
+        <a href="https://play.google.com/store/apps/developer?id=MixApplications" data-i18n="nav.play">Google Play</a> &middot;
+        <a href="privacy_policy.html" data-i18n="nav.privacypolicy">Privacy Policy</a>
+      </span>
+    </div>
+    <p class="fnote" data-i18n="sup.202">&copy; 2026 MixApplications. Developed in Egypt.</p>
+  </div>
 </footer>
+
+<script>
+/* Knowledge-base search + topic filter. Without JS every answer is
+   already on the page and openable — this only narrows the list. */
+(function () {
+  var input = document.getElementById('kbsearch');
+  var filters = document.getElementById('kbfilters');
+  var count = document.getElementById('kbcount');
+  var none = document.getElementById('noresult');
+  if (!input) return;
+
+  var items = [].slice.call(document.querySelectorAll('details.q'));
+  var groups = [].slice.call(document.querySelectorAll('.group'));
+  var cat = 'all';
+
+  function index() {
+    items.forEach(function (d) {
+      d.dataset.text = d.textContent.toLowerCase().replace(/\s+/g, ' ');
+    });
+  }
+  index();
+  document.addEventListener('i18n:applied', function () { index(); apply(); });
+
+  function apply() {
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+
+    items.forEach(function (d) {
+      var okCat = cat === 'all' || d.dataset.cat === cat;
+      var okText = !q || d.dataset.text.indexOf(q) !== -1;
+      var show = okCat && okText;
+      d.classList.toggle('hidden', !show);
+      if (show) shown++;
+      if (!show) d.open = false;
+    });
+
+    groups.forEach(function (g) {
+      var any = g.querySelector('details.q:not(.hidden)');
+      g.classList.toggle('hidden', !any);
+    });
+
+    none.classList.toggle('hidden', shown !== 0);
+    var tpl = count.dataset.tpl || '{n} answers';
+    var n = (q || cat !== 'all') ? shown : items.length;
+    count.textContent = tpl.replace('{n}', String(n));
+  }
+
+  input.addEventListener('input', apply);
+
+  filters.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    cat = b.dataset.cat;
+    [].forEach.call(filters.querySelectorAll('button'), function (x) {
+      x.setAttribute('aria-pressed', String(x === b));
+    });
+    apply();
+  });
+
+  apply();
+})();
+</script>
+<script src="site.js" defer></script>
 </body>
 </html>
