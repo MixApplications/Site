@@ -40,7 +40,7 @@
   /* geometry */
   --radius:18px;
   --radius-sm:13px;
-  --header-h:61px;
+  --header-h:68px;
 
   /* motion — every transition on the site uses these three */
   --ease:cubic-bezier(.22,.8,.3,1);
@@ -181,7 +181,6 @@ nav.top a[aria-current=page]{color:var(--ink);font-weight:600;background:var(--b
 }
 @media (max-width:430px){
   .lang-btn{padding:7px 9px;font-size:.84rem}
-  .lang-btn .lang-current{display:none}
   .lang-menu{position:fixed;top:calc(var(--header-h) + 6px);left:12px;right:12px;min-width:0}
 }
 
@@ -541,11 +540,26 @@ details.full .fulldesc{padding:0 18px 16px;color:var(--dim);font-size:.93rem;whi
   .nf{padding-block:60px 40px}
   .nf h1{font-size:1.6rem}
 }
+/* The header carries brand + nav + language picker. Nav labels run much
+   longer in some languages than in English — at 360px the row has ~305px
+   and Russian needs ~500px — so below this width the nav takes its own
+   row instead of pushing the picker off screen. It scrolls within that
+   row for the longest languages, which keeps the header height constant
+   (and therefore --header-h correct) whatever language is selected. */
+@media (max-width:760px){
+  :root{--header-h:112px}
+  .topbar{flex-wrap:wrap;row-gap:9px}
+  .brand{order:1}
+  .lang{order:2;margin-inline-start:auto}
+  nav.top{order:3;flex:1 0 100%;min-width:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+  nav.top::-webkit-scrollbar{display:none}
+  nav.top a{flex:0 0 auto}
+}
 @media (max-width:520px){
-  .brand span{display:none}
   nav.top a{padding:7px 9px;font-size:.9rem}
 }
 @media (max-width:340px){
+  .brand span{display:none}
   .topbar{gap:8px}
   nav.top a{padding:6px 7px;font-size:.85rem}
 }
