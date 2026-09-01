@@ -436,7 +436,7 @@ details.full .fulldesc{padding:0 18px 16px;color:var(--dim);font-size:.93rem;whi
 .kb{margin:46px 0 10px}
 .kb-head h2{font-size:1.6rem;font-weight:700}
 .kb-head p{color:var(--dim);margin-top:8px;max-width:62ch}
-.kb-tools{position:sticky;top:calc(var(--header-h) + 10px);z-index:20;background:var(--bg);padding:16px 0 12px;margin-top:18px}
+.kb-tools{background:var(--bg);padding:16px 0 12px;margin-top:18px}
 .search{position:relative}
 .search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--dim);pointer-events:none}
 .search input{
@@ -531,7 +531,7 @@ details.full .fulldesc{padding:0 18px 16px;color:var(--dim);font-size:.93rem;whi
   .support-first{flex-direction:column;padding:19px;gap:14px}
   .ccard .in{padding:20px}
   .kb-head h2{font-size:1.35rem}
-  .kb-tools{top:calc(var(--header-h) + 4px);padding:12px 0 10px}
+  .kb-tools{padding:12px 0 10px}
   details.q>summary{padding:14px 15px;font-size:.94rem}
   details.q .a{padding:0 15px 15px 37px}
   .panel{padding:18px 16px}
