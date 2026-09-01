@@ -1,0 +1,6 @@
+{
+ "_comment": "Languages offered in the header picker. English is built into the HTML and always available. To add a language: translate a copy of _source.en.json, save it as <code>.json in this folder, then add an entry here. Set \"rtl\": true for right-to-left languages — the stylesheet handles the layout flip automatically. The picker hides itself while this list has only one entry.",
+ "languages": [
+  { "code": "en", "name": "English", "native": "English" }
+ ]
+}

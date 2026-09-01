@@ -1,54 +1,89 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ltr-only>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - MixApplications</title>
-    <style>
-        html, body { margin: 0; padding: 0; width: 100%; box-sizing: border-box; }
-        *, *:before, *:after { box-sizing: inherit; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #2c3e50; background-color: #f8f9fa; display: flex; justify-content: center; align-items: center; padding: 20px; }
-        .container { background-color: #ffffff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); width: 100%; max-width: 950px; overflow: hidden; }
-        h1 { color: #1a252f; border-bottom: 2px solid #ecf0f1; padding-bottom: 15px; margin-bottom: 5px; font-size: 28px; }
-        h2 { color: #2980b9; margin-top: 35px; border-bottom: 1px solid #ecf0f1; padding-bottom: 8px; font-size: 22px; }
-        h3 { color: #34495e; margin-top: 25px; font-size: 18px; }
-        p { margin-bottom: 16px; text-align: justify; }
-        ul { margin-bottom: 20px; padding-left: 25px; }
-        li { margin-bottom: 10px; }
-        a { color: #3498db; text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; color: #2980b9; }
-        .last-updated { font-style: italic; color: #7f8c8d; margin-bottom: 30px; display: block; }
-        .table-container { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; }
-        table { width: 100%; min-width: 800px; border-collapse: collapse; }
-        th, td { padding: 14px 16px; border-bottom: 1px solid #e2e8f0; text-align: left; vertical-align: top; word-break: break-word; }
-        th { background-color: #f7fafc; color: #4a5568; font-weight: 600; }
-        tr:last-child td { border-bottom: none; }
-        address { font-style: normal; background-color: #ecf0f1; padding: 15px; border-radius: 6px; margin-top: 10px; line-height: 1.8; }
-        @media (max-width: 768px) { body { padding: 10px; } .container { padding: 25px 20px; border-radius: 8px; } h1 { font-size: 24px; } h2 { font-size: 20px; } h3 { font-size: 16px; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — MixApplications</title>
+<meta name="description" content="How MixApplications apps handle your data: local-first processing, what third-party SDKs collect, retention periods, and your rights under GDPR, CCPA and LGPD.">
+<meta name="theme-color" content="#F3F7FB">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+
 </head>
 <body>
+<a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
 
-<div class="container">
+<header class="site">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html"><img src="assets/mark.png" alt="" width="53" height="34"><span>MixApplications</span></a>
+    <nav class="top" aria-label="Main">
+      <a href="index.html" data-i18n="nav.apps">Apps</a>
+      <a href="contact.html" data-i18n="nav.support">Support</a>
+      <a href="privacy_policy.html" aria-current="page" data-i18n="nav.privacy">Privacy</a>
+    </nav>
+      <div class="lang" id="langpicker" hidden>
+        <button type="button" class="lang-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Language">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg>
+          <span class="lang-current">EN</span>
+        </button>
+        <div class="lang-menu" role="menu"></div>
+      </div>
+
+  </div>
+</header>
+
+<main id="main" class="wrap narrow">
+  <section class="pagehead reveal in">
     <h1>Privacy Policy</h1>
-    <span class="last-updated">Last Updated and Effective Date: July 23, 2026</span>
+    <p>This policy applies to every mobile application published by MixApplications.</p>
+    <span class="stamp">Last updated: July 23, 2026</span>
+  </section>
 
-    <p>This Privacy Policy applies to all mobile applications and services developed and published by <strong>MixApplications</strong> ("we," "us," or "our"). By downloading or using any of our applications, you agree to the practices described in this policy.</p>
+  <div class="highlight reveal">
+    <b>The short version</b>
+    <p>The files, disk images and drives you work on are processed entirely on your device — their contents are never uploaded to us. What is collected comes from advertising, analytics and crash-reporting SDKs, and from Google Play when you make a purchase. The sections below set out exactly what that means.</p>
+  </div>
 
-    <h2>1. General Overview &amp; Local-First Processing</h2>
+  <nav class="toc reveal d1" aria-label="Contents">
+    <b>Contents</b>
+    <ol>
+      <li><a href="#s1">General overview &amp; local-first processing</a></li>
+      <li><a href="#s2">In-app purchases and virtual rewards</a></li>
+      <li><a href="#s3">Data retention and deletion</a></li>
+      <li><a href="#s4">European privacy rights (GDPR)</a></li>
+      <li><a href="#s5">United States privacy rights (CCPA)</a></li>
+      <li><a href="#s6">Brazil privacy rights (LGPD)</a></li>
+      <li><a href="#s7">Other global privacy rights</a></li>
+      <li><a href="#s8">Age-appropriate experience</a></li>
+      <li><a href="#s9">Changes to this policy</a></li>
+      <li><a href="#s10">Data types collected and shared</a></li>
+      <li><a href="#s11">Data controller and contact</a></li>
+    </ol>
+  </nav>
+
+  <article class="panel reveal d2">
+<p>This Privacy Policy applies to all mobile applications and services developed and published by <strong>MixApplications</strong> ("we," "us," or "our"). By downloading or using any of our applications, you agree to the practices described in this policy.</p>
+
+    <h2 id="s1">1. General Overview &amp; Local-First Processing</h2>
     <p>Our applications are designed to perform utility tasks locally on your device. The <strong>content</strong> of the files, disk images, and media you process through our utility features (formatting, burning, conversion, and similar operations) is handled 100% locally — we do not upload, collect, or transmit the contents of your personal files or disk images to our servers.</p>
     <p>Two limited exceptions apply, described in full in the sections referenced below: (1) if a file-access error or app crash occurs, our crash-reporting tool may record diagnostic information that includes the file path or file name involved, as part of standard crash/error logging (see Section 10); and (2) when you complete an in-app purchase, a purchase identifier and a Google-issued verification token — not file content — are sent to our own server-side function to confirm the purchase with Google Play (see Section 2).</p>
 
-    <h2>2. In-App Purchases and Virtual Rewards</h2>
+    <h2 id="s2">2. In-App Purchases and Virtual Rewards</h2>
     <p>All financial transactions and in-app purchases are securely processed by the <strong>Google Play Billing</strong> system. We do not directly collect or store your credit card or financial information. Virtual coin balances are stored strictly locally on your device.</p>
     <p>To confirm a purchase's validity — for example, to restore your Pro entitlement after reinstalling the app — the product identifier and a Google-issued purchase token are sent to our own server-side verification function, which checks them against Google Play's records. This function does not persistently store the data it receives (see Section 3).</p>
 
-    <h2>3. Data Retention and Deletion Policy</h2>
+    <h2 id="s3">3. Data Retention and Deletion Policy</h2>
     <p>We do not maintain a persistent database of user profiles. When you make a purchase, the purchase identifier and verification token are processed transiently by our server-side verification function solely to confirm the purchase with Google Play; they are not written to a database, though — like any server request — they may briefly appear in our cloud infrastructure provider's operational logs. Anonymous usage data collected via third-party SDKs is retained for a limited period and then automatically deleted: Crashlytics data (crash stack traces and associated identifiers) is retained for 90 days, and Firebase Analytics data (both event data and user data) is retained for 2 months.</p>
     <p><strong>Right to Request Deletion:</strong> You have the right to request deletion of personal data we process. Uninstalling the app permanently removes all data stored locally on your device, including your coin balance. To request deletion of data tied to SDK-level identifiers (such as your Advertising ID), you may reset that identifier in your device's Android settings, or contact us using the details in Section 11.</p>
 
-    <h2>4. European Privacy Rights (GDPR)</h2>
+    <h2 id="s4">4. European Privacy Rights (GDPR)</h2>
     <p>This section outlines the rights under the General Data Protection Regulation (GDPR) for users in the EU and the European Economic Area (EEA). If you are located in the EU/EEA, your personal data is processed in accordance with the General Data Protection Regulation (GDPR).</p>
     <p>We process information based on the following legal bases: Consent (for advertising/analytics), Legitimate Interests (for fixing bugs/fraud prevention), and Contractual Necessity. You possess the following rights:</p>
     <ul>
@@ -59,7 +94,7 @@
         <li>The right to lodge a complaint with a supervisory authority regarding the processing of your data.</li>
     </ul>
 
-    <h2>5. United States Privacy Rights (CCPA)</h2>
+    <h2 id="s5">5. United States Privacy Rights (CCPA)</h2>
     <p>This section outlines the rights under the California Consumer Privacy Act (CCPA) for users in California, as well as residents of Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), and Utah (UCPA).</p>
     <ul>
         <li><strong>Right to Know About Data Sales:</strong> You have the right to know whether your personal data is sold or shared.</li>
@@ -78,20 +113,20 @@
         <li><strong>Device Settings:</strong> Reset or delete your device's Advertising ID from your Android system settings (Settings &gt; Google &gt; Ads).</li>
     </ul>
 
-    <h2>6. Brazil Privacy Rights (LGPD)</h2>
+    <h2 id="s6">6. Brazil Privacy Rights (LGPD)</h2>
     <p>Under the Lei Geral de Proteção de Dados (LGPD), users in Brazil have the right to request access, correction, anonymization, blocking, or deletion of personal data. You can exercise these rights using the opt-out methods described above.</p>
 
-    <h2>7. Other Global Privacy Rights</h2>
+    <h2 id="s7">7. Other Global Privacy Rights</h2>
     <p>We aim to honor data subject rights for users in other jurisdictions with comprehensive privacy laws, including Canada (PIPEDA), South Korea (PIPA), Japan (APPI), China (PIPL), South Africa (POPIA), India (DPDPA), and Australia (Privacy Act 1988), to the extent required by applicable law. Where those laws apply to you, you may request access, correction, or deletion of your data using the contact details in Section 11. This section describes rights we extend on request and is not a representation of independently certified or audited compliance with each named framework.</p>
 
-    <h2>8. Age-Appropriate Experience &amp; Children's Privacy</h2>
+    <h2 id="s8">8. Age-Appropriate Experience &amp; Children's Privacy</h2>
     <p>This application's declared target audience on Google Play is users aged 18 and older, and our Services are not designed or marketed to attract children. Because app stores cannot fully prevent younger users from installing an app, we have built in additional safeguards for the possibility that a user is a minor: where available, we use signals from Google Play's Age Signals API (see Section 10) to provide an age-appropriate advertising experience — showing non-personalized, contextual ads rather than personalized ads to users who are identified as being under 18 — and we tag ad requests accordingly using Google's industry-standard "under age of consent" mechanism. In-app purchases attempted by a user identified this way require an additional parental-gate verification step before they can complete.</p>
     <p>We do not knowingly collect personal information from children beyond what is necessary to provide these age-appropriate safeguards, and the underlying age signal is not stored long-term by us (see Section 10).</p>
 
-    <h2>9. Changes to This Privacy Policy</h2>
+    <h2 id="s9">9. Changes to This Privacy Policy</h2>
     <p>We may update this policy periodically. We will notify you by updating the "Last Updated" date at the top.</p>
 
-    <h2>10. Data Types Collected and Shared</h2>
+    <h2 id="s10">10. Data Types Collected and Shared</h2>
     <p>To operate, monetize, and improve our Services, we collect and share specific categories of data through third-party SDKs. To ensure alignment with our Google Play Data Safety declaration, we explicitly declare that we collect and/or share the following data types:</p>
     <ul>
         <li><strong>Diagnostics</strong></li>
@@ -137,7 +172,7 @@
         </table>
     </div>
 
-    <h2>11. Data Controller and Contact Information</h2>
+    <h2 id="s11">11. Data Controller and Contact Information</h2>
     <p>Our company, <strong>MixApplications</strong>, acts as the Data Controller responsible for the personal data processed under this policy. We provide the following specific identity and contact information for our Data Controller and Data Protection Officer:</p>
     <ul>
         <li><strong>Name of Data Controller:</strong> MixApplications</li>
@@ -151,8 +186,23 @@
         Desouk, Kafr El-Sheikh 33611<br>
         Egypt
     </address>
+  </article>
+</main>
 
-</div>
+<footer class="site">
+  <div class="wrap">
+    <div class="frow">
+      <img src="assets/logo-white.png" alt="MixApplications" width="80" height="54">
+      <span>
+        <a href="index.html" data-i18n="nav.apps">Apps</a> &middot;
+        <a href="https://play.google.com/store/apps/developer?id=MixApplications" data-i18n="nav.play">Google Play</a> &middot;
+        <a href="contact.html" data-i18n="nav.support">Support</a>
+      </span>
+    </div>
+    <p class="fnote">&copy; 2026 MixApplications. Developed in Egypt.</p>
+  </div>
+</footer>
 
+<script src="site.js" defer></script>
 </body>
 </html>
