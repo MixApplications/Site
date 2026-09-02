@@ -8,7 +8,7 @@
  "home.more": "Diğerleri",
  "home.rv": "değerlendirme",
  "home.dl": "indirme",
- "home.5": "Hepsi bir arada USB araç kutusu. Sürücüleri GPT veya MBR ile bölümleyin, altı dosya sisteminde biçimlendirin, önyüklenebilir ISO yazın, Ventoy çalıştırın, sürücülerin bayt bayt imajını alın, sürücüleri parolayla şifreleyin ve eski oyun konsolları için hazırlayın — <strong>tek bir uygulamadan</strong>.",
+ "home.5": "Hepsi bir arada USB araç kutusu. Sürücüleri GPT veya MBR ile bölümleyin, altı dosya sisteminde biçimlendirin, önyüklenebilir ISO yazın, Ventoy'u sürücüye kurun, sürücülerin bayt bayt imajını alın, sürücüleri parolayla şifreleyin ve eski oyun konsolları için hazırlayın — <strong>tek bir uygulamadan</strong>.",
  "home.full": "Google Play'deki tam açıklama",
  "home.view": "Google Play'de görüntüle",
  "home.9": "Önyüklenebilir USB oluşturmaya adanmış bir uygulama. Bir ISO seçin, sürücüyü takın ve önyüklenebilir bir kurulum medyası elde edin — <strong>PC de root da gerekmez</strong>. Bölüm şeması ve dosya sistemi üzerinde tam manuel kontrol, Windows 11 gereksinimlerini atlama ve kurulumu otomatik özelleştirme ile birlikte. <strong>DROFUS artık ISO 2 USB'deki tüm özellikleri taşıyor</strong>, yani imaj yazmak için kurulacak tek uygulama bu.",
