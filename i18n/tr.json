@@ -13,7 +13,7 @@
  "home.view": "Google Play'de görüntüle",
  "home.9": "Önyüklenebilir USB oluşturmaya adanmış bir uygulama. Bir ISO seçin, sürücüyü takın ve önyüklenebilir bir kurulum medyası elde edin — <strong>PC de root da gerekmez</strong>. Bölüm şeması ve dosya sistemi üzerinde tam manuel kontrol, Windows 11 gereksinimlerini atlama ve kurulumu otomatik özelleştirme ile birlikte. <strong>DROFUS artık ISO 2 USB'deki tüm özellikleri taşıyor</strong>, yani imaj yazmak için kurulacak tek uygulama bu.",
  "home.13": "Ventoy'u doğrudan Android'den bir USB sürücüye kurun. Sonra sürücüye sığdığı kadar ISO dosyası kopyalayın — ya da doğrudan sürücüye indirin — ve bilgisayarı açarken hangisinin önyükleneceğini seçin. <strong>Tek sürücü, ihtiyacınız olan tüm işletim sistemi kurulumları.</strong>",
- "home.17": "USB bellekler için bakım ve kurtarma: biçimlendirin, imzalı PDF silme sertifikasıyla güvenli şekilde silin, sahte kapasiteli sürücüleri tespit edin, performans testi yapın, birleştirin ve <strong>bozuk ve okunamayan sürücüleri onarın</strong> — root olmadan.",
+ "home.17": "USB bellekler için bakım ve kurtarma: biçimlendirin, imzalı PDF silme sertifikasıyla güvenli şekilde silin, sahte kapasiteli sürücüleri tespit edin, performans testi yapın, birleştirin ve <strong>bozuk ve okunamayan sürücüleri onarmayı deneyin</strong> — root olmadan.",
  "home.21": "Xiaomi cihazlar için eksiksiz bir tema stüdyosu. <strong>MIUI ve HyperOS</strong> üzerinde tema oluşturun, özelleştirin ve kurun — simgeler, duvar kâğıtları, yazı tipleri, durum çubuğu, açılış animasyonu — ve standart bir .mtz dosyası dışa aktarın. PC yok, root yok.",
  "home.merged": "<a href=\"#drofus\">DROFUS</a> ile birleştirildi",
  "home.offline": "Şu anda Google Play'de yayında değil",
