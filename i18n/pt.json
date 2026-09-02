@@ -13,7 +13,7 @@
  "home.view": "Ver no Google Play",
  "home.9": "Um criador dedicado de USB inicializável. Escolha uma ISO, conecte um drive e tenha um instalador inicializável — <strong>sem PC e sem root</strong>. Controle manual total do esquema de partição e do sistema de arquivos, com desvio dos requisitos do Windows 11 e personalização automatizada da instalação. <strong>O DROFUS agora traz todos os recursos do ISO 2 USB</strong>, então é o único app a instalar para gravar imagens.",
  "home.13": "Instale o Ventoy em um drive USB direto do Android. Depois é só copiar quantos arquivos ISO couberem no drive — ou baixá-los direto para ele — e escolher qual iniciar ao ligar o computador. <strong>Um drive, todos os instaladores de sistema que você precisa.</strong>",
- "home.17": "Manutenção e resgate de pen drives: formatar, apagar com segurança com um certificado de apagamento assinado em PDF, detectar drives com capacidade falsa, medir desempenho, desfragmentar e <strong>consertar drives corrompidos e ilegíveis</strong> — sem root.",
+ "home.17": "Manutenção e resgate de pen drives: formatar, apagar com segurança com um certificado de apagamento assinado em PDF, detectar drives com capacidade falsa, medir desempenho, desfragmentar e <strong>tentar consertar drives corrompidos e ilegíveis</strong> — sem root.",
  "home.21": "Um estúdio de temas completo para aparelhos Xiaomi. Crie, personalize e instale temas no <strong>MIUI e no HyperOS</strong> — ícones, papéis de parede, fontes, barra de status, animação de inicialização — e exporte um arquivo .mtz padrão. Sem PC, sem root.",
  "home.merged": "Incorporado ao <a href=\"#drofus\">DROFUS</a>",
  "home.offline": "No momento, fora do Google Play",

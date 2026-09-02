@@ -13,7 +13,7 @@
  "home.view": "View on Google Play",
  "home.9": "A dedicated bootable-USB creator. Pick an ISO, plug in a drive, and get a bootable installer — <strong>no PC and no root required</strong>. Full manual control over partition scheme and file system, with Windows 11 requirement bypass and automated setup customization. <strong>DROFUS now carries every feature from ISO 2 USB</strong>, so it is the one app to install for burning images.",
  "home.13": "Install Ventoy on a USB drive straight from Android. Then just copy as many ISO files as the drive holds — or download them directly to the drive — and pick the one to boot at startup. <strong>One drive, every OS installer you need.</strong>",
- "home.17": "Maintenance and rescue for flash drives: format, securely wipe with a signed PDF erasure certificate, detect fake-capacity drives, benchmark, defragment, and <strong>fix corrupted and unreadable drives</strong> — without root.",
+ "home.17": "Maintenance and rescue for flash drives: format, securely wipe with a signed PDF erasure certificate, detect fake-capacity drives, benchmark, defragment, and <strong>try to repair corrupted and unreadable drives</strong> — without root.",
  "home.21": "A complete theme studio for Xiaomi devices. Create, customize and install themes on <strong>MIUI and HyperOS</strong> — icons, wallpapers, fonts, status bar, boot animation — and export a standard .mtz file. No PC, no root.",
  "home.merged": "Merged into <a href=\"#drofus\">DROFUS</a>",
  "home.offline": "Currently unpublished from Google Play",
