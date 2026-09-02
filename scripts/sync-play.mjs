@@ -1,7 +1,12 @@
 // Syncs live Google Play data (icons, screenshots, ratings, descriptions)
 // into play/data.json. Run by GitHub Actions on a schedule.
-import gplay from 'google-play-scraper';
+import gplayModule from 'google-play-scraper';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
+
+// v9 and earlier were CommonJS, so the functions sat on .default when
+// imported from ESM. v10 is real ESM and puts them on the module itself.
+// Accept either, so an upgrade cannot silently break the call again.
+const gplay = gplayModule.default ?? gplayModule;
 
 const PACKAGES = [
   'com.mixapplications.ultimateusb',
@@ -21,7 +26,7 @@ if (existsSync('play/data.json')) {
 let ok = 0;
 for (const appId of PACKAGES) {
   try {
-    const a = await gplay.default.app({ appId });
+    const a = await gplay.app({ appId });
     out.apps[appId] = {
       title: a.title,
       icon: a.icon,
