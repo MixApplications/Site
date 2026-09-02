@@ -33,7 +33,11 @@
           e.target.classList.add('in');
           io.unobserve(e.target);
         });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      // threshold must stay 0: it is a fraction of the ELEMENT's own area,
+      // so any higher value makes tall blocks reveal later than short ones
+      // (.kb on the support page is ~4500px, and 0.05 delayed it by ~250px).
+      // rootMargin alone decides the trigger line, independent of height.
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
       items.forEach(function (el) { io.observe(el); });
       window.addEventListener('load', function () {
         setTimeout(function () {
