@@ -353,7 +353,7 @@ details.full{margin-top:16px;background:var(--tint)}
 details.full>summary{padding:12px 16px;font-size:.92rem;align-items:center}
 details.full>summary::before{content:'\25B8';color:var(--c);transition:transform var(--t-fast) var(--ease)}
 details.full[open]>summary::before{transform:rotate(90deg)}
-details.full .fulldesc{padding:0 18px 16px;color:var(--dim);font-size:.93rem;white-space:pre-line;max-height:340px;overflow-y:auto}
+details.full .fulldesc{padding:0 18px 16px;color:var(--dim);font-size:.93rem;white-space:pre-line}
 
 .cta-row{margin-top:20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .offline{font-size:.84rem;font-weight:600;color:var(--dim);border:1.5px dashed var(--border);border-radius:9px;padding:8px 14px}
