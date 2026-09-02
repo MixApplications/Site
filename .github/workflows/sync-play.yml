@@ -19,7 +19,7 @@ jobs:
           node-version: 20
 
       - name: Install scraper
-        run: npm install google-play-scraper
+        run: npm install google-play-scraper@^10
 
       - name: Fetch live Play data
         run: node scripts/sync-play.mjs
