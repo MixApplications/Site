@@ -137,7 +137,15 @@
     <p>We aim to honor data subject rights for users in other jurisdictions with comprehensive privacy laws, including Canada (PIPEDA), South Korea (PIPA), Japan (APPI), South Africa (POPIA), India (DPDPA), and Australia (Privacy Act 1988), to the extent required by applicable law. Where those laws apply to you, you may request access, correction, or deletion using the contact details in Section 13. This section describes rights we extend on request and is not a representation of independently certified or audited compliance with each named framework.</p>
 
     <h2 id="s10">10. Children and Audience</h2>
-    <p>TumTum&rsquo;s declared target audience on Google Play is users <strong>aged 13 and older</strong>. The Game is <strong>not directed to children under 13</strong>, and we do not knowingly collect personal information from children under 13. For users identified by Google&rsquo;s signals as being under the age of consent, ad requests are tagged using Google&rsquo;s industry-standard &ldquo;under age of consent&rdquo; mechanism so that ads are <strong>non-personalized</strong>. If you believe a child under 13 has provided us information, contact us (Section 13) and we will address it.</p>
+    <p>TumTum&rsquo;s declared target audience on Google Play is users <strong>aged 13 and older</strong>. The Game is <strong>not directed to children under 13</strong>, and we do not knowingly collect personal information from children under 13.</p>
+    <p>Because an app store cannot prevent a younger user from installing an app, we use Google Play&rsquo;s <strong>Age Signals API</strong> to provide an age-appropriate advertising experience. Before any ad is requested, the Game asks Google Play whether an age range has been shared for the account. Google Play &mdash; not the Game &mdash; decides whether to share it, and may show its own prompt asking permission to do so.</p>
+    <ul>
+        <li>If Google Play reports a user <strong>under 13</strong>, ad requests are tagged as <em>child-directed</em> and <em>under the age of consent</em>, and ads are <strong>never personalized</strong>.</li>
+        <li>If Google Play reports a user <strong>aged 13&ndash;17</strong>, ad requests are tagged as <em>under the age of consent</em> and ads are <strong>never personalized</strong>. They are not tagged child-directed, because a teenager is not a child under COPPA.</li>
+        <li>If Google Play reports an adult, or shares nothing at all &mdash; the account declined, the device has no Play services, or the request fails &mdash; the Game proceeds with its normal settings, where personalization still depends on your consent and on the &ldquo;do not sell or share&rdquo; control in Section 6.</li>
+    </ul>
+    <p>We receive only a broad age range from Google Play. <strong>We do not store it</strong>; it is used in memory for the current session to decide how ads are requested, and is queried again next time you play. We do not receive a birth date or any identity document.</p>
+    <p>If you believe a child under 13 has provided us information, contact us (Section 13) and we will address it.</p>
 
     <h2 id="s11">11. Data Types Collected and Shared</h2>
     <p>To operate and monetize the Game, we collect and share specific categories of data through third-party SDKs. To align with our Google Play Data Safety declaration, we declare that we collect and/or share the following data types:</p>
@@ -168,6 +176,11 @@
                     <td><strong>Ad Networks &amp; Mediation</strong> — Appodeal mediation platform, and the networks integrated in the Game through it: Google AdMob / Google Ad Manager, Amazon Publisher Services (APS), AppLovin, Bigo Ads, Digital Turbine Exchange (Fyber), InMobi, ironSource (Unity LevelPlay), Mintegral, myTarget / VK Ads, Unity Ads, Vungle (Liftoff), Yandex Ads, and Appodeal&rsquo;s own bidding demand (BidMachine, Bidon).</td>
                     <td>Advertising, Marketing, Ad personalization (where consented / permitted).</td>
                     <td>Subject to each respective partner&rsquo;s policy.</td>
+                </tr>
+                <tr>
+                    <td><strong>Play Age Signals (Google Play)</strong></td>
+                    <td>Determining an age-appropriate advertising experience (see Section 10).</td>
+                    <td>Not stored by us; a broad age range is used in memory for the current session and queried again on next launch.</td>
                 </tr>
             </tbody>
         </table>
