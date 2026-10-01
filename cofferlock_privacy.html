@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Cofferlock</title>
-<meta name="description" content="How the Cofferlock encrypted file vault handles data: it keeps your files encrypted in a vault file on your own device, reads the current time from public time servers when your phone&rsquo;s clock is set manually, and checks a Pro purchase with Google Play through our server. Purchases are processed by Google Play. Your rights under GDPR, CCPA and LGPD.">
+<meta name="description" content="How the Cofferlock encrypted file vault handles data: it keeps your files encrypted in a vault file on your own device, checks with Google Firebase whether a newer version is available, and checks a Pro purchase with Google Play through our server. Purchases are processed by Google Play. Your rights under GDPR, CCPA and LGPD.">
 <meta name="theme-color" content="#F3F7FB">
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -44,12 +44,12 @@
   <section class="pagehead reveal in">
     <h1>Privacy Policy — Cofferlock</h1>
     <p>This policy applies to the <strong>Cofferlock</strong> app (<code>com.mixapplications.cofferlock</code>) published by MixApplications. It is specific to Cofferlock; other MixApplications apps are covered by the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to Cofferlock.</p>
-    <span class="stamp">Last updated: October 1, 2026</span>
+    <span class="stamp">Last updated: October 2, 2026</span>
   </section>
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>Cofferlock is an encrypted file vault, and <strong>your files never leave your device</strong> unless you send them yourself. It has no accounts, no analytics, no advertising and no crash-reporting service. The only data that ever reaches us is a purchase token, and only if you buy Pro, so that Google Play can confirm the purchase; it is not kept. Your files are encrypted on your device inside a vault file that you place yourself. We cannot see, open, recover or decrypt your vault. Purchases are processed by Google Play.</p>
+    <p>Cofferlock is an encrypted file vault, and <strong>your files never leave your device</strong> unless you send them yourself. It has no accounts, no analytics, no advertising and no crash-reporting service. To tell you when a newer version is available, it asks Google Firebase, which receives a random installation identifier and basic app details. If you buy Pro, a purchase token is sent so that Google Play can confirm the purchase; it is not kept. Your files are encrypted on your device inside a vault file that you place yourself. We cannot see, open, recover or decrypt your vault. Purchases are processed by Google Play.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -81,10 +81,10 @@
 
     <h2 id="s1">1. Overview</h2>
     <p>Cofferlock stores files you choose inside an encrypted vault on your device. It contains no analytics, advertising or crash-reporting software, and it has no user accounts.</p>
-    <p>The App uses the internet for two things only.</p>
-    <p><strong>Time request.</strong> When your phone&rsquo;s clock is set manually (Automatic date &amp; time is off), it reads the current time from public time servers (such as pool.ntp.org, time.google.com, time.apple.com, time.windows.com and time.nist.gov). This is a standard time query; it contains no identifiers and nothing about you, your device or your files. As with any internet request, the time server sees your connection&rsquo;s IP address; we never receive it.</p>
+    <p>The App uses the internet for the following.</p>
+    <p><strong>Update check.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version of Cofferlock is available or required. As Google documents for Firebase (<a href="https://firebase.google.com/docs/android/play-data-disclosure" rel="nofollow">Firebase data disclosure</a>), Firebase collects with it a random <strong>Firebase installation identifier</strong> (created for this installation of the App; Google states it does not uniquely identify a user or a physical device), your device&rsquo;s model, brand and Android version, its country, language and time zone, and the App&rsquo;s package name and version. The answer is only the latest version numbers and the Google Play link. See also <a href="https://firebase.google.com/support/privacy" rel="nofollow">Privacy and Security in Firebase</a>.</p>
     <p><strong>Purchase check.</strong> If you buy Pro, the App sends that purchase&rsquo;s token, the product and the App&rsquo;s name to our purchase check, which asks Google Play whether the purchase is valid. See Section 4.</p>
-    <p>We do not receive your files, file or folder names, passwords, recovery phrase, biometric data, usage data, location, contacts or device identifiers.</p>
+    <p>Any other connection the App makes carries nothing about you, your device or your files. We do not receive your files, file or folder names, passwords, recovery phrase, biometric data, usage data, location or contacts.</p>
 
     <h2 id="s2">2. Where Your Data Is</h2>
     <ul>
@@ -96,10 +96,10 @@
 
     <h2 id="s3">3. Permissions</h2>
     <p>Cofferlock uses the <strong>biometric</strong> permission so that you can unlock with your fingerprint (or face, on phones where the system offers it as a strong biometric). Biometric data is handled by Android and is never available to the App; a successful scan only releases a key kept in your device&rsquo;s secure hardware (Android Keystore).</p>
-    <p>Google Play adds its own in-app purchase permission so that the App can ask the Play Store app about your purchases. The App also declares the internet permission, used only for the time request and the purchase check described in Section 1. It requests no storage, camera, microphone, location, contacts or notification permission. Files are added only through the Android file picker, one choice at a time.</p>
+    <p>The App declares the <strong>internet</strong> permission for the connections described in Section 1. The Google libraries it uses add their own standard entries, as their documentation describes: Google Play Billing adds the in-app purchase permission (to ask the Play Store app about your purchases) and network-state access; Google Firebase adds a wake-lock permission and the Firebase Cloud Messaging receive permission. Cofferlock receives no push messages and shows no notifications. On older Android versions the fingerprint permission is also listed for the biometric unlock. The App requests no storage, camera, microphone, location, contacts or notification permission. Files are added only through the Android file picker, one choice at a time.</p>
 
     <h2 id="s4">4. Purchases</h2>
-    <p>The one-time <strong>Pro</strong> and <strong>Supporter</strong> purchases are processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. The App asks the Google Play app on your device which purchases you own. When a purchase is new, the App sends its <strong>purchase token</strong>, the product (Pro or Supporter) and the App&rsquo;s package name over an encrypted connection (HTTPS) to our purchase check, a small program we run on Google Cloud (Firebase Cloud Functions, servers in the United States). It asks Google Play whether that purchase is valid and answers the App with a signed result. Nothing else is sent: no name, email, device identifier, file or vault data. We do not store the token or the answer; Google Cloud keeps its usual technical request logs.</p>
+    <p>The one-time <strong>Pro</strong> and <strong>Supporter</strong> purchases are processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. The App asks the Google Play app on your device which purchases you own. When a purchase is new, the App sends its <strong>purchase token</strong>, the product (Pro or Supporter) and the App&rsquo;s package name over an encrypted connection (HTTPS) to our purchase check, a small program we run on Google Cloud (Firebase Cloud Functions, servers in the United States). It asks Google Play whether that purchase is valid and answers the App with a signed result. Nothing else is sent by the App: no name, email, file or vault data. As Google documents for Firebase Cloud Functions, the call also carries your connection&rsquo;s IP address and a Firebase messaging token (an app-installation identifier); Cofferlock sends no messages with it. We do not store the token or the answer; Google Cloud keeps its usual technical request logs.</p>
     <p>We never receive your payment card or banking details. Google provides us with transaction records (such as order number, product, price, date and country) in the Google Play Console, which we use only for accounting, tax and refunds.</p>
 
     <h2 id="s5">5. Diagnostics You Choose to Share</h2>
@@ -121,12 +121,13 @@
         <li><strong>On-device data</strong> (your vault files, settings, attempt log and crash log) stays on your device. Delete your vault file(s) with your file manager and uninstall the App to remove all of it. Uninstalling alone does not delete vault files you placed in shared storage.</li>
         <li><strong>Support conversations and diagnostics logs you send us</strong> are kept only as long as needed to resolve your request and are deleted when the support case is closed.</li>
         <li><strong>Purchase checks</strong> are answered and not stored by us (Section 4).</li>
+        <li><strong>The Firebase installation identifier</strong> is kept by Google Firebase as Google describes in <a href="https://firebase.google.com/support/privacy" rel="nofollow">Privacy and Security in Firebase</a>; uninstalling the App ends its use. We do not store it.</li>
         <li><strong>Purchase records</strong> are held by Google Play under Google&rsquo;s policy; the transaction records we see in the Play Console are kept as long as tax and accounting law requires.</li>
     </ul>
     <p><strong>Right to request deletion:</strong> to have a support conversation or a diagnostics log you sent us deleted, contact us using the details in Section 18.</p>
 
     <h2 id="s10">10. European Privacy Rights (GDPR)</h2>
-    <p>If you are located in the EU/EEA or the UK, any personal data we process (only what you send us for support, a purchase token while your purchase is checked, and the transaction records Google Play provides) is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>performance of a contract</strong> (providing the purchase you made and answering your request) and compliance with <strong>legal obligations</strong> (tax and accounting). You have the following rights:</p>
+    <p>If you are located in the EU/EEA or the UK, any personal data we process (only what you send us for support, a purchase token while your purchase is checked, the Firebase installation identifier used for the update check, and the transaction records Google Play provides) is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>performance of a contract</strong> (providing the App and the purchase you made, keeping the App up to date, and answering your request) and compliance with <strong>legal obligations</strong> (tax and accounting). Google acts as our processor for Firebase. You have the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we process.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -154,7 +155,7 @@
     <p>Cofferlock&rsquo;s declared target audience on Google Play is users <strong>aged 18 and older</strong>. The App is <strong>not directed to children</strong>, and we do not knowingly collect personal information from children. The App does not use Google Play&rsquo;s Age Signals API. If you believe a child has sent us personal information through support, contact us (Section 18) and we will delete it.</p>
 
     <h2 id="s15">15. Data Types Collected and Shared</h2>
-    <p>In line with our Google Play Data safety declaration: Cofferlock collects one data type, <strong>purchase history</strong> (the token of a Pro purchase, only if you buy Pro), to confirm the purchase with Google Play. It is encrypted in transit, processed only while it is checked and not stored, and not shared with third parties. Cofferlock collects nothing else.</p>
+    <p>In line with our Google Play Data safety declaration, Cofferlock collects two data types, both for app functionality, encrypted in transit and not shared with third parties: <strong>device or other IDs</strong> (the Firebase installation identifier and messaging token that Google Firebase collects for the update and purchase checks) and <strong>purchase history</strong> (the token of a Pro purchase, only if you buy Pro, processed only while it is checked and not stored). Cofferlock collects nothing else.</p>
 
     <div class="table-container">
         <table>
@@ -192,6 +193,11 @@
                     <td>Only if you share it yourself (Section 5).</td>
                 </tr>
                 <tr>
+                    <td><strong>Firebase installation identifier</strong>, device model and brand, Android version, country, language, time zone, app version</td>
+                    <td>Sent to Google Firebase Remote Config to learn whether a newer version is available (Section 1).</td>
+                    <td>Yes, over HTTPS, when the App starts.</td>
+                </tr>
+                <tr>
                     <td><strong>Purchase token</strong> (only if you buy Pro)</td>
                     <td>Sent to our purchase check, which asks Google Play whether the purchase is valid; not stored. Payment processed by Google.</td>
                     <td>Yes, over HTTPS, once per purchase and when it must be checked again (Section 4).</td>
@@ -199,7 +205,7 @@
             </tbody>
         </table>
     </div>
-    <p class="fnote">The App contains no third-party analytics, advertising, attribution or crash-reporting SDK. If that ever changes, this page and the Google Play Data safety section will be updated before the change is released.</p>
+    <p class="fnote">The App uses Google Firebase only for the update check (Remote Config) and the purchase check (Cloud Functions). It contains no analytics, advertising, attribution or crash-reporting SDK. If that ever changes, this page and the Google Play Data safety section will be updated before the change is released.</p>
 
     <h2 id="s16">16. Security</h2>
     <p>Vault contents are encrypted with AES-256-GCM per 4 KiB block, with keys derived from your password by Argon2id and held in independent key slots for the password, the recovery phrase and biometric unlock. Screenshots are blocked by default, the App locks automatically, and wrong attempts are slowed down. No method of protection is perfect: the App cannot protect a vault on a rooted or compromised phone while it is unlocked, and it cannot protect a weak password. The App&rsquo;s <em>What this app does not protect against</em> page lists these limits.</p>
