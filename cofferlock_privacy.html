@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Cofferlock</title>
-<meta name="description" content="How the Cofferlock encrypted file vault handles data: it has no internet permission, collects nothing, and keeps your files encrypted in a vault file on your own device. Purchases are processed by Google Play. Your rights under GDPR, CCPA and LGPD.">
+<meta name="description" content="How the Cofferlock encrypted file vault handles data: it keeps your files encrypted in a vault file on your own device, reads the current time from public time servers when your phone&rsquo;s clock is set manually, and checks a Pro purchase with Google Play through our server. Purchases are processed by Google Play. Your rights under GDPR, CCPA and LGPD.">
 <meta name="theme-color" content="#F3F7FB">
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -44,12 +44,12 @@
   <section class="pagehead reveal in">
     <h1>Privacy Policy — Cofferlock</h1>
     <p>This policy applies to the <strong>Cofferlock</strong> app (<code>com.mixapplications.cofferlock</code>) published by MixApplications. It is specific to Cofferlock; other MixApplications apps are covered by the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to Cofferlock.</p>
-    <span class="stamp">Last updated: September 27, 2026</span>
+    <span class="stamp">Last updated: October 1, 2026</span>
   </section>
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>Cofferlock is an offline encrypted file vault. It has <strong>no internet permission</strong>, no accounts, no analytics, no advertising and no crash-reporting service, so it <strong>collects no data</strong>. Your files are encrypted on your device inside a vault file that you place yourself. We cannot see, open, recover or decrypt your vault. Purchases are processed by Google Play.</p>
+    <p>Cofferlock is an encrypted file vault, and <strong>your files never leave your device</strong> unless you send them yourself. It has no accounts, no analytics, no advertising and no crash-reporting service. The only data that ever reaches us is a purchase token, and only if you buy Pro, so that Google Play can confirm the purchase; it is not kept. Your files are encrypted on your device inside a vault file that you place yourself. We cannot see, open, recover or decrypt your vault. Purchases are processed by Google Play.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -80,7 +80,10 @@
 <p>This Privacy Policy explains how the mobile app <strong>Cofferlock</strong> (the &ldquo;App&rdquo;), published by <strong>MixApplications</strong> ("we," "us," or "our"), handles information. By downloading or using the App, you agree to the practices described here.</p>
 
     <h2 id="s1">1. Overview</h2>
-    <p>Cofferlock stores files you choose inside an encrypted vault on your device. The App does <strong>not</strong> declare the Android internet permission, so it cannot send anything over the network by itself. It contains no analytics, advertising or crash-reporting software, and it has no user accounts.</p>
+    <p>Cofferlock stores files you choose inside an encrypted vault on your device. It contains no analytics, advertising or crash-reporting software, and it has no user accounts.</p>
+    <p>The App uses the internet for two things only.</p>
+    <p><strong>Time request.</strong> When your phone&rsquo;s clock is set manually (Automatic date &amp; time is off), it reads the current time from public time servers (such as pool.ntp.org, time.google.com, time.apple.com, time.windows.com and time.nist.gov). This is a standard time query; it contains no identifiers and nothing about you, your device or your files. As with any internet request, the time server sees your connection&rsquo;s IP address; we never receive it.</p>
+    <p><strong>Purchase check.</strong> If you buy Pro, the App sends that purchase&rsquo;s token, the product and the App&rsquo;s name to our purchase check, which asks Google Play whether the purchase is valid. See Section 4.</p>
     <p>We do not receive your files, file or folder names, passwords, recovery phrase, biometric data, usage data, location, contacts or device identifiers.</p>
 
     <h2 id="s2">2. Where Your Data Is</h2>
@@ -92,11 +95,11 @@
     </ul>
 
     <h2 id="s3">3. Permissions</h2>
-    <p>Cofferlock requests only the <strong>biometric</strong> permission, so that you can unlock with your fingerprint (or face, on phones where the system offers it as a strong biometric). Biometric data is handled by Android and is never available to the App; a successful scan only releases a key kept in your device&rsquo;s secure hardware (Android Keystore).</p>
-    <p>Google Play adds its own in-app purchase permission so that the App can ask the Play Store app about your purchases. The App requests no internet, storage, camera, microphone, location, contacts or notification permission. Files are added only through the Android file picker, one choice at a time.</p>
+    <p>Cofferlock uses the <strong>biometric</strong> permission so that you can unlock with your fingerprint (or face, on phones where the system offers it as a strong biometric). Biometric data is handled by Android and is never available to the App; a successful scan only releases a key kept in your device&rsquo;s secure hardware (Android Keystore).</p>
+    <p>Google Play adds its own in-app purchase permission so that the App can ask the Play Store app about your purchases. The App also declares the internet permission, used only for the time request and the purchase check described in Section 1. It requests no storage, camera, microphone, location, contacts or notification permission. Files are added only through the Android file picker, one choice at a time.</p>
 
     <h2 id="s4">4. Purchases</h2>
-    <p>The one-time <strong>Pro</strong> and <strong>Supporter</strong> purchases are processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. The App checks your purchase status by asking the Google Play app on your device and verifies the answer on the device; it sends nothing to us.</p>
+    <p>The one-time <strong>Pro</strong> and <strong>Supporter</strong> purchases are processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. The App asks the Google Play app on your device which purchases you own. When a purchase is new, the App sends its <strong>purchase token</strong>, the product (Pro or Supporter) and the App&rsquo;s package name over an encrypted connection (HTTPS) to our purchase check, a small program we run on Google Cloud (Firebase Cloud Functions, servers in the United States). It asks Google Play whether that purchase is valid and answers the App with a signed result. Nothing else is sent: no name, email, device identifier, file or vault data. We do not store the token or the answer; Google Cloud keeps its usual technical request logs.</p>
     <p>We never receive your payment card or banking details. Google provides us with transaction records (such as order number, product, price, date and country) in the Google Play Console, which we use only for accounting, tax and refunds.</p>
 
     <h2 id="s5">5. Diagnostics You Choose to Share</h2>
@@ -117,12 +120,13 @@
     <ul>
         <li><strong>On-device data</strong> (your vault files, settings, attempt log and crash log) stays on your device. Delete your vault file(s) with your file manager and uninstall the App to remove all of it. Uninstalling alone does not delete vault files you placed in shared storage.</li>
         <li><strong>Support conversations and diagnostics logs you send us</strong> are kept only as long as needed to resolve your request and are deleted when the support case is closed.</li>
+        <li><strong>Purchase checks</strong> are answered and not stored by us (Section 4).</li>
         <li><strong>Purchase records</strong> are held by Google Play under Google&rsquo;s policy; the transaction records we see in the Play Console are kept as long as tax and accounting law requires.</li>
     </ul>
     <p><strong>Right to request deletion:</strong> to have a support conversation or a diagnostics log you sent us deleted, contact us using the details in Section 18.</p>
 
     <h2 id="s10">10. European Privacy Rights (GDPR)</h2>
-    <p>If you are located in the EU/EEA or the UK, any personal data we process (only what you send us for support, and the transaction records Google Play provides) is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>performance of a contract</strong> (providing the purchase you made and answering your request) and compliance with <strong>legal obligations</strong> (tax and accounting). You have the following rights:</p>
+    <p>If you are located in the EU/EEA or the UK, any personal data we process (only what you send us for support, a purchase token while your purchase is checked, and the transaction records Google Play provides) is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>performance of a contract</strong> (providing the purchase you made and answering your request) and compliance with <strong>legal obligations</strong> (tax and accounting). You have the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we process.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -147,10 +151,10 @@
     <p>We aim to honor data subject rights for users in other jurisdictions with comprehensive privacy laws, including Canada (PIPEDA), South Korea (PIPA), Japan (APPI), South Africa (POPIA), India (DPDPA), and Australia (Privacy Act 1988), to the extent required by applicable law. Where those laws apply to you, you may request access, correction, or deletion using the contact details in Section 18. This section describes rights we extend on request and is not a representation of independently certified or audited compliance with each named framework.</p>
 
     <h2 id="s14">14. Children and Audience</h2>
-    <p>Cofferlock&rsquo;s declared target audience on Google Play is users <strong>aged 18 and older</strong>. The App is <strong>not directed to children</strong>, and we do not knowingly collect personal information from children. Because the App collects no data, it does not use Google Play&rsquo;s Age Signals API. If you believe a child has sent us personal information through support, contact us (Section 18) and we will delete it.</p>
+    <p>Cofferlock&rsquo;s declared target audience on Google Play is users <strong>aged 18 and older</strong>. The App is <strong>not directed to children</strong>, and we do not knowingly collect personal information from children. The App does not use Google Play&rsquo;s Age Signals API. If you believe a child has sent us personal information through support, contact us (Section 18) and we will delete it.</p>
 
     <h2 id="s15">15. Data Types Collected and Shared</h2>
-    <p>In line with our Google Play Data safety declaration: Cofferlock <strong>collects no data</strong> and <strong>shares no data</strong> with third parties.</p>
+    <p>In line with our Google Play Data safety declaration: Cofferlock collects one data type, <strong>purchase history</strong> (the token of a Pro purchase, only if you buy Pro), to confirm the purchase with Google Play. It is encrypted in transit, processed only while it is checked and not stored, and not shared with third parties. Cofferlock collects nothing else.</p>
 
     <div class="table-container">
         <table>
@@ -188,9 +192,9 @@
                     <td>Only if you share it yourself (Section 5).</td>
                 </tr>
                 <tr>
-                    <td><strong>Purchase status</strong></td>
-                    <td>Checked with the Google Play app on your device; payment processed by Google.</td>
-                    <td>Not by the App. Google Play handles the transaction (Section 4).</td>
+                    <td><strong>Purchase token</strong> (only if you buy Pro)</td>
+                    <td>Sent to our purchase check, which asks Google Play whether the purchase is valid; not stored. Payment processed by Google.</td>
+                    <td>Yes, over HTTPS, once per purchase and when it must be checked again (Section 4).</td>
                 </tr>
             </tbody>
         </table>
