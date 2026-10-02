@@ -1,0 +1,422 @@
+{
+  "_comment": "Hand-written extras for the apps. Every app published by the developer below is found on Google Play by scripts/sync-play.mjs and shown automatically with its Play texts; an entry here only adds what Play cannot know: a curated description (desc + descKey, translated in src/i18n), chips, colour, category, its support answers (faq) and its policy page. status 'unlisted' = not released yet: nothing about it is shown (its policy page stays reachable by its URL, unlinked and noindex) until its pkg appears on Google Play, then it goes live by itself. A live entry that leaves Google Play is shown as unpublished.",
+  "developer": "MixApplications",
+  "categories": [
+    {
+      "id": "usb",
+      "key": "home.shelf.usb",
+      "name": "USB &amp; storage tools"
+    },
+    {
+      "id": "tools",
+      "key": "home.shelf.tools",
+      "name": "Tools &amp; productivity",
+      "genres": [
+        "*"
+      ]
+    },
+    {
+      "id": "custom",
+      "key": "home.shelf.custom",
+      "name": "Customization",
+      "genres": [
+        "PERSONALIZATION"
+      ]
+    },
+    {
+      "id": "games",
+      "key": "home.shelf.games",
+      "name": "Games",
+      "genres": [
+        "GAME_*"
+      ]
+    }
+  ],
+  "faqFamilies": [
+    {
+      "id": "usb",
+      "key": "sup.app.usb",
+      "name": "Ultimate USB, DROFUS, Ventoy, USB Tools"
+    },
+    {
+      "id": "usbfm",
+      "key": "sup.app.usbfm",
+      "name": "USB File Manager"
+    },
+    {
+      "id": "chaome",
+      "key": "sup.app.chaome",
+      "name": "ChaoMe"
+    },
+    {
+      "id": "tumtum",
+      "key": "sup.app.tumtum",
+      "name": "TumTum"
+    },
+    {
+      "id": "cofferlock",
+      "key": "sup.app.cofferlock",
+      "name": "Cofferlock"
+    },
+    {
+      "id": "mixdocs",
+      "key": "sup.app.mixdocs",
+      "name": "MixDocs"
+    }
+  ],
+  "apps": [
+    {
+      "id": "ultimate-usb",
+      "name": "Ultimate USB",
+      "pkg": "com.mixapplications.ultimateusb",
+      "status": "live",
+      "category": "usb",
+      "color": "blue",
+      "faq": "usb",
+      "policy": "privacy_policy.html",
+      "descKey": "home.5",
+      "desc": "The all-in-one USB toolbox. Partition drives with GPT or MBR, format across six file systems, write bootable ISOs, install Ventoy on a drive, image drives byte-by-byte, encrypt drives with a password, and prepare drives for retro gaming consoles — <strong>from one app</strong>.",
+      "chips": [
+        "FAT16→ext4",
+        "MBR / GPT",
+        "Ventoy",
+        "Windows To Go",
+        "Linux persistence",
+        "USB encryption",
+        "fake-flash check",
+        "PS2/PS3 tools"
+      ],
+      "headline": "Everything a PC does with a USB drive, done from your phone — the all-in-one USB workshop for Android.",
+      "features": [
+        {
+          "title": "Bootable USB without a PC",
+          "text": "Write Windows 7–11, Linux, macOS (Intel) DMG, Raspberry Pi, FreeDOS and MS-DOS images, with Windows To Go and Linux persistence."
+        },
+        {
+          "title": "Multi-boot with Ventoy",
+          "text": "Install Ventoy, then keep many ISOs on one drive and choose at boot — with Secure Boot, MBR or GPT."
+        },
+        {
+          "title": "Real disk management",
+          "text": "Format FAT16, FAT32, exFAT, NTFS and ext2/3/4, partition, convert MBR ↔ GPT, and back up or restore whole drives byte by byte."
+        },
+        {
+          "title": "Drive health and security",
+          "text": "Find failing sectors and fake-capacity drives, benchmark real speed, wipe securely, and protect drives with a password."
+        },
+        {
+          "title": "Retro gaming tools",
+          "text": "PS2 OPL utilities, PS3 ISO tools and a game converter for ISO, CSO, ZSO and CHD."
+        },
+        {
+          "title": "Native engine, no root",
+          "text": "Its own C/C++ file-system drivers work over a plain OTG cable. Root is only needed for the internal SD slot."
+        }
+      ]
+    },
+    {
+      "id": "drofus",
+      "name": "DROFUS — ISO 2 USB",
+      "short": "DROFUS",
+      "pkg": "com.mixapplications.rufus",
+      "status": "live",
+      "category": "usb",
+      "color": "amber",
+      "faq": "usb",
+      "policy": "privacy_policy.html",
+      "descKey": "home.9",
+      "desc": "A dedicated bootable-USB creator. Pick an ISO, plug in a drive, and get a bootable installer — <strong>no PC and no root required</strong>. Full manual control over partition scheme and file system, with Windows 11 requirement bypass and automated setup customization. <strong>DROFUS now carries every feature from ISO 2 USB</strong>, so it is the one app to install for burning images.",
+      "chips": [
+        "Windows 7–11",
+        "WIM split",
+        "Linux",
+        "macOS DMG",
+        "Raspberry Pi",
+        "NTFS / FAT32",
+        "GPT / MBR",
+        "persistence"
+      ],
+      "headline": "The full-power ISO burner for Android: PC-grade control over every bootable USB, with no PC at all.",
+      "features": [
+        {
+          "title": "Every major operating system",
+          "text": "Windows 7, 8, 8.1, 10 and 11, modern Linux distributions, macOS DMG (Intel), Raspberry Pi OS and ARM images, FreeDOS and MS-DOS."
+        },
+        {
+          "title": "Windows done right",
+          "text": "GPT (UEFI) or MBR (BIOS), NTFS or FAT32, and automatic install.wim splitting for FAT32 — with official Microsoft ISOs, unmodified."
+        },
+        {
+          "title": "Windows 11 on more PCs",
+          "text": "Bypass the Windows 11 minimum requirements and automate setup customization for Windows 10 and 11."
+        },
+        {
+          "title": "Linux persistence",
+          "text": "Keep your files and changes between boots on distributions that support it."
+        },
+        {
+          "title": "Any USB target, no root",
+          "text": "Flash drives, SD card adapters and external SSDs over OTG. Root only for the internal SD slot."
+        }
+      ]
+    },
+    {
+      "id": "ventoy",
+      "name": "Ventoy — Unofficial",
+      "short": "Ventoy",
+      "pkg": "com.mixapplications.ventoy_app",
+      "status": "live",
+      "category": "usb",
+      "color": "green",
+      "faq": "usb",
+      "policy": "privacy_policy.html",
+      "descKey": "home.13",
+      "desc": "Install Ventoy on a USB drive straight from Android. Then just copy as many ISO files as the drive holds — or download them directly to the drive — and pick the one to boot at startup. <strong>One drive, every OS installer you need.</strong>",
+      "chips": [
+        "multi-boot",
+        "MBR / GPT",
+        "exFAT · NTFS · FAT32",
+        "Secure Boot",
+        "Win 11 bypass",
+        "theme import"
+      ],
+      "headline": "Carry every operating system on one USB drive: install Ventoy from your phone, copy ISOs, and choose at boot.",
+      "features": [
+        {
+          "title": "One drive, many ISOs",
+          "text": "Copy as many ISO files as the drive holds. No reformatting and no reburning, ever."
+        },
+        {
+          "title": "Download straight to USB",
+          "text": "Fetch ISO files directly onto the drive from inside the app."
+        },
+        {
+          "title": "Boots what you need",
+          "text": "Windows 7–11 and all major Linux distributions, in UEFI or legacy BIOS, with Secure Boot support."
+        },
+        {
+          "title": "Full control",
+          "text": "GPT or MBR, exFAT, NTFS or FAT32, Windows 11 requirements bypass, and Ventoy themes and settings without editing files."
+        }
+      ]
+    },
+    {
+      "id": "usb-tools",
+      "name": "USB Tools",
+      "pkg": "com.mixapplications.usbtools",
+      "status": "live",
+      "category": "usb",
+      "color": "violet",
+      "faq": "usb",
+      "policy": "privacy_policy.html",
+      "descKey": "home.17",
+      "desc": "Maintenance and rescue for flash drives: format, securely wipe with a signed PDF erasure certificate, detect fake-capacity drives, benchmark, defragment, and <strong>try to repair corrupted and unreadable drives</strong> — without root.",
+      "chips": [
+        "repair drives",
+        "secure wipe + PDF cert",
+        "bad-blocks scan",
+        "fake-flash detect",
+        "benchmark",
+        "FAT16→ext4",
+        "PS2/PS3 tools"
+      ],
+      "headline": "A complete maintenance and rescue kit for USB drives: diagnose, repair, test and securely wipe — from your phone.",
+      "features": [
+        {
+          "title": "Repair and format",
+          "text": "Try to bring corrupted and unreadable drives back, and format FAT16 to ext4 with MBR or GPT, cluster size and label."
+        },
+        {
+          "title": "Catch fake drives",
+          "text": "The bad-blocks scan finds failing sectors and counterfeit capacity on flash drives and SD cards."
+        },
+        {
+          "title": "Measure real speed",
+          "text": "Sequential and random read/write benchmarks, plus device info and USB descriptors."
+        },
+        {
+          "title": "Secure wipe with certificate",
+          "text": "Erase all data and partitions, and get a signed PDF erasure certificate."
+        },
+        {
+          "title": "Backup, defragment, games",
+          "text": "Full drive backup and restore, a FAT32/exFAT defragmenter (needed by PS2 OPL), and PS2/PS3 game tools."
+        }
+      ]
+    },
+    {
+      "id": "usb-file-manager",
+      "name": "USB File Manager",
+      "pkg": "com.mixapplications.usbfilemanager",
+      "status": "live",
+      "category": "usb",
+      "color": "teal",
+      "faq": "usbfm",
+      "policy": "privacy_policy.html",
+      "descKey": "home.usbfm",
+      "desc": "Browse and manage USB flash drives, hard disks and card readers over OTG. Read and write FAT, exFAT, NTFS and ext2/3/4 drives, copy and move files between the phone and the drive, and open or share files with other apps — <strong>no root needed for USB drives</strong>.",
+      "chips": [
+        "FAT · exFAT · NTFS · ext4",
+        "read &amp; write",
+        "copy · move · rename",
+        "open &amp; share",
+        "disk images",
+        "safe eject"
+      ],
+      "headline": "Open any USB drive on Android — NTFS, exFAT, FAT and ext4 — and read and write it without root.",
+      "features": [
+        {
+          "title": "Every file system",
+          "text": "FAT, exFAT, NTFS and ext2/3/4, read and write, through the app's own native drivers."
+        },
+        {
+          "title": "A real file manager",
+          "text": "Copy, move, rename and delete between the phone and the drive, and open or share files with any app."
+        },
+        {
+          "title": "Drives of every kind",
+          "text": "Flash drives, card readers, hard disks and SSDs, hubs and drives with several partitions."
+        },
+        {
+          "title": "Disk images",
+          "text": "Open and create disk image files."
+        },
+        {
+          "title": "Safe by design",
+          "text": "Eject properly before unplugging. Root is only needed for the internal SD card slot."
+        }
+      ]
+    },
+    {
+      "id": "chaome",
+      "name": "ChaoMe Theme Editor",
+      "short": "ChaoMe",
+      "pkg": "com.mixapplications.miuithemeeditor",
+      "status": "live",
+      "category": "custom",
+      "color": "rose",
+      "faq": "chaome",
+      "policy": "privacy_policy.html",
+      "descKey": "home.21",
+      "desc": "A complete theme studio for Xiaomi devices. Create, customize and install themes on <strong>MIUI and HyperOS</strong> — icons, wallpapers, fonts, status bar, boot animation — and export a standard .mtz file. No PC, no root.",
+      "chips": [
+        "MIUI · HyperOS",
+        ".mtz export",
+        "icons &amp; fonts",
+        "boot animation",
+        "Shizuku install"
+      ],
+      "headline": "A complete theme studio for Xiaomi phones: design, build and install MIUI and HyperOS themes on the phone itself.",
+      "features": [
+        {
+          "title": "Customize everything",
+          "text": "Icons, icon packs and masks, wallpapers and lock screen, status bar and notifications, fonts, boot animation, contacts, dialer and call screen."
+        },
+        {
+          "title": "Live preview",
+          "text": "Every screen shows your changes as you make them."
+        },
+        {
+          "title": "Themes that actually apply",
+          "text": "Exports standard .mtz files with the compatibility fields the theme engine checks — including on the latest HyperOS."
+        },
+        {
+          "title": "Clean install without root",
+          "text": "On Android 11 and later, themes install through Shizuku."
+        },
+        {
+          "title": "Edit or start fresh",
+          "text": "Open an installed theme to change it, or build a new one from scratch."
+        }
+      ]
+    },
+    {
+      "id": "tumtum",
+      "name": "TumTum",
+      "pkg": "com.mixapplications.tumtum",
+      "status": "live",
+      "category": "games",
+      "color": "orange",
+      "faq": "tumtum",
+      "policy": "tumtum_privacy.html",
+      "descKey": "home.tumtum",
+      "desc": "A calm sliding puzzle with one rule: when you swipe, every character on the board moves at once. 1,100 handmade levels across 110 chapters, undo and hints whenever you need them, and it plays fully offline. <strong>Free with ads, and no in-app purchases.</strong>",
+      "chips": [
+        "1,100 levels",
+        "one-swipe puzzles",
+        "undo &amp; hints",
+        "plays offline",
+        "11 languages",
+        "no purchases"
+      ],
+      "headline": "A cozy puzzle built on one brilliant rule — one swipe moves everyone — with 1,100 handmade levels to master.",
+      "features": [
+        {
+          "title": "One rule, endless depth",
+          "text": "Every character slides until it hits something. Pits, spikes, crates, breakable blocks, one-way tiles, springs and belts keep it fresh."
+        },
+        {
+          "title": "1,100 handcrafted levels",
+          "text": "110 chapters, and every level checked by hand for a clean, fair solution."
+        },
+        {
+          "title": "Zero pressure",
+          "text": "No timers and no lives. Undo, restart or take a hint whenever you like."
+        },
+        {
+          "title": "Original art and music",
+          "text": "Hand-drawn characters that each move their own way, and soft music made for the game."
+        },
+        {
+          "title": "Fair by design",
+          "text": "Free, with no in-app purchases. Plays fully offline, in 11 languages."
+        }
+      ]
+    },
+    {
+      "id": "mixdocs",
+      "name": "MixDocs",
+      "pkg": "com.mixapplications.mixdocs",
+      "status": "unlisted",
+      "color": "blue",
+      "icon": "doc",
+      "faq": "mixdocs",
+      "policy": "mixdocs_privacy.html",
+      "descKey": "home.mixdocs",
+      "desc": "Open, edit, convert and scan documents — PDF, Word, Excel, PowerPoint and OpenDocument — with text recognition, all on your device.",
+      "category": "tools"
+    },
+    {
+      "id": "cofferlock",
+      "name": "Cofferlock",
+      "pkg": "com.mixapplications.cofferlock",
+      "status": "unlisted",
+      "color": "violet",
+      "icon": "lock",
+      "faq": "cofferlock",
+      "policy": "cofferlock_privacy.html",
+      "descKey": "home.coffer",
+      "desc": "An encrypted vault for your files that never leave your phone. Fingerprint unlock, a recovery phrase, and one vault file you can back up anywhere.",
+      "category": "tools"
+    },
+    {
+      "id": "iso2usb",
+      "name": "ISO 2 USB",
+      "status": "retired",
+      "color": "gray",
+      "icon": "disc",
+      "mergedInto": "drofus",
+      "descKey": "home.iso2usb",
+      "desc": "The original ISO burner. Every feature it had now lives in DROFUS, alongside everything added since."
+    },
+    {
+      "id": "multios-usb",
+      "name": "MultiOS-USB — Unofficial",
+      "status": "retired",
+      "color": "gray",
+      "icon": "rings",
+      "descKey": "home.multios",
+      "desc": "Multi-boot USB setup built around the open-source MultiOS-USB project."
+    }
+  ]
+}
