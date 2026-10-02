@@ -1,6 +1,7 @@
 .idea/
 .vscode/
 node_modules/
-package-lock.json
 .DS_Store
 DEPLOY.md
+_site/
+ui-shots/

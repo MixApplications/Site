@@ -1,0 +1,23 @@
+{
+  "name": "mixapplications-site",
+  "private": true,
+  "type": "module",
+  "description": "www.mixapplications.com: built from src/ into _site/ and deployed to GitHub Pages by .github/workflows/site.yml.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-play.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "ci": "node scripts/build.mjs --ci && node scripts/check.mjs && node scripts/ui-test.mjs",
+    "serve": "node scripts/serve.mjs",
+    "i18n:todo": "node scripts/i18n.mjs todo",
+    "i18n:accept": "node scripts/i18n.mjs accept",
+    "test:ui": "node scripts/ui-test.mjs"
+  },
+  "devDependencies": {
+    "google-play-scraper": "10.1.3",
+    "html-validate": "11.16.1"
+  }
+}

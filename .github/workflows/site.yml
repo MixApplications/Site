@@ -1,0 +1,111 @@
+# Builds www.mixapplications.com from src/ and deploys it to GitHub Pages.
+#
+#   push to main      sync Play data, build, check, deploy
+#   daily 03:00 UTC   same, so new apps, ratings and listing changes go live within a day
+#   manual run        same
+#   pull request      build + check with the committed Play data (no deploy)
+#
+# The Play sync never commits: each run fetches fresh data and, if Google Play
+# cannot be reached, falls back to the committed snapshot (src/data/play.json),
+# so the site is never emptied by a Play outage. When an app appears on or
+# leaves Google Play, the run opens a GitHub issue saying what changed.
+#
+# Pages must be set to "GitHub Actions" as its source (Settings > Pages).
+name: Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Sync, build and check
+    runs-on: ubuntu-latest
+    outputs:
+      report: ${{ steps.sync.outputs.report }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Sync live Google Play data
+        id: sync
+        if: github.event_name != 'pull_request'
+        # a failed sync keeps the committed snapshot; it must not stop the site from building
+        continue-on-error: true
+        run: |
+          node scripts/sync-play.mjs --report "$RUNNER_TEMP/play-report.md"
+          {
+            echo 'report<<PLAY_REPORT_EOF'
+            cat "$RUNNER_TEMP/play-report.md"
+            echo 'PLAY_REPORT_EOF'
+          } >> "$GITHUB_OUTPUT"
+      - name: Build
+        run: node scripts/build.mjs --ci
+      - name: Check HTML, links, anchors, app data and policy URLs
+        run: node scripts/check.mjs
+      - name: UI test in a real browser (filters, double taps, languages, phone width)
+        run: node scripts/ui-test.mjs --shots ui-shots
+      - name: Keep the UI test screenshots
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ui-screenshots
+          path: ui-shots
+          if-no-files-found: ignore
+          retention-days: 14
+      - uses: actions/configure-pages@v6
+        if: github.event_name != 'pull_request'
+      - uses: actions/upload-pages-artifact@v5
+        if: github.event_name != 'pull_request'
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+
+  notify:
+    name: Report app changes
+    needs: [build, deploy]
+    if: needs.build.outputs.report != ''
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Open an issue unless this change was already reported
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          REPORT: ${{ needs.build.outputs.report }}
+        run: |
+          title="Google Play apps changed: $(printf '%s' "$REPORT" | sha256sum | cut -c1-8)"
+          if [ -n "$(gh issue list --state all --search "\"$title\" in:title" --json number --jq '.[].number')" ]; then
+            echo "already reported: $title"; exit 0
+          fi
+          printf '%s\n\nThe site was updated automatically. This issue only lists what a person may want to add.\n' "$REPORT" > body.md
+          gh issue create --title "$title" --body-file body.md
