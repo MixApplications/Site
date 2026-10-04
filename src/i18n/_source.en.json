@@ -418,7 +418,7 @@
  "sup.fm.28": "It says an ad blocker was detected",
  "sup.fm.29": "While an operation runs, the free version pauses if ads are blocked by an ad-blocker app, Private DNS or your network. Turn the blocker off, or set Private DNS to <code>dns.google</code>, then restart the app. Pro works with ad blockers.",
  "sup.fm.30": "How do I open or share a file with another app?",
- "sup.fm.31": "Tap the file, or use <strong>Open with…</strong> or <strong>Share</strong> (up to 16 files). The file is read straight from the drive, and the app you choose can save changes back to it.",
+ "sup.fm.31": "Tap the file, or use <strong>Open with…</strong> or <strong>Share</strong> (up to 16 files). The file is read straight from the drive. With <strong>Open with…</strong> the app you choose can also save changes back to it; a shared file can only be read.",
  "sup.fm.32": "How do I copy files between my phone and the drive?",
  "sup.fm.33": "In a folder, tap <strong>Add → Import File / Files</strong> or <strong>Import Directory</strong>. To copy to the phone, select files and use <strong>Copy to…</strong> or <strong>Export</strong>. The phone side always goes through Android's folder picker.",
  "sup.fm.34": "How do I clear the Recent list or rename my drive?",

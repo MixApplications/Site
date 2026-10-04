@@ -491,7 +491,7 @@
  "sup.fm.28": "Dice que se detectó un bloqueador de anuncios",
  "sup.fm.29": "Mientras se ejecuta una operación, la versión gratuita se pausa si los anuncios están bloqueados por una app bloqueadora, el DNS privado o tu red. Desactiva el bloqueador o configura el DNS privado en <code>dns.google</code> y reinicia la app. Pro funciona con bloqueadores de anuncios.",
  "sup.fm.30": "¿Cómo abro o comparto un archivo con otra app?",
- "sup.fm.31": "Toca el archivo, o usa <strong>Abrir con…</strong> o <strong>Compartir</strong> (hasta 16 archivos). El archivo se lee directamente de la unidad, y la app que elijas puede guardar los cambios en él.",
+ "sup.fm.31": "Toca el archivo, o usa <strong>Abrir con…</strong> o <strong>Compartir</strong> (hasta 16 archivos). El archivo se lee directamente de la unidad. Con <strong>Abrir con…</strong>, la app que elijas también puede guardar los cambios en él; un archivo compartido solo se puede leer.",
  "sup.fm.32": "¿Cómo copio archivos entre mi teléfono y la unidad?",
  "sup.fm.33": "En una carpeta, toca <strong>Añadir → Importar archivo / archivos</strong> o <strong>Importar directorio</strong>. Para copiar al teléfono, selecciona archivos y usa <strong>Copiar a…</strong> o <strong>Exportar</strong>. El lado del teléfono siempre pasa por el selector de carpetas de Android.",
  "sup.fm.34": "¿Cómo borro la lista de Recientes o cambio el nombre de mi unidad?",

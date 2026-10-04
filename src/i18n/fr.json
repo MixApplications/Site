@@ -491,7 +491,7 @@
  "sup.fm.28": "Un bloqueur de publicités a été détecté",
  "sup.fm.29": "Pendant une opération, la version gratuite se met en pause si les publicités sont bloquées par une application de blocage, le DNS privé ou votre réseau. Désactivez le bloqueur, ou réglez le DNS privé sur <code>dns.google</code>, puis redémarrez l'application. Pro fonctionne avec les bloqueurs de publicités.",
  "sup.fm.30": "Comment ouvrir ou partager un fichier avec une autre application ?",
- "sup.fm.31": "Appuyez sur le fichier, ou utilisez <strong>Ouvrir avec…</strong> ou <strong>Partager</strong> (jusqu'à 16 fichiers). Le fichier est lu directement depuis la clé, et l'application choisie peut y enregistrer ses modifications.",
+ "sup.fm.31": "Appuyez sur le fichier, ou utilisez <strong>Ouvrir avec…</strong> ou <strong>Partager</strong> (jusqu'à 16 fichiers). Le fichier est lu directement depuis la clé. Avec <strong>Ouvrir avec…</strong>, l'application choisie peut aussi y enregistrer ses modifications ; un fichier partagé est en lecture seule.",
  "sup.fm.32": "Comment copier des fichiers entre mon téléphone et la clé ?",
  "sup.fm.33": "Dans un dossier, appuyez sur <strong>Ajouter → Importer fichier / fichiers</strong> ou <strong>Importer un répertoire</strong>. Pour copier vers le téléphone, sélectionnez des fichiers et utilisez <strong>Copier vers…</strong> ou <strong>Exporter</strong>. Côté téléphone, tout passe toujours par le sélecteur de dossiers d'Android.",
  "sup.fm.34": "Comment vider la liste Récents ou renommer ma clé ?",
