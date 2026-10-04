@@ -727,7 +727,7 @@
         <summary data-i18n="sup.cl.4">How do I back up my vault or move it to a new phone?</summary>
         <div class="a">
           <ol>
-            <li data-i18n="sup.cl.5">Copy the vault file with <strong>Settings &rarr; Copy file (backup)</strong>, or with any file manager.</li>
+            <li data-i18n="sup.cl.5">Copy the vault file with <strong>Settings &rarr; Copy file (backup)</strong>, or with any file manager. A vault kept inside the app can only be copied with <strong>Copy file (backup)</strong>.</li>
             <li data-i18n="sup.cl.6">On the new phone, install Cofferlock, choose <strong>I already have a vault file</strong> (or <strong>Vaults &rarr; Open a vault file</strong>) and enter your password.</li>
             <li data-i18n="sup.cl.7">Vault file names start with a dot, so in the file picker open the menu and choose <strong>Show hidden files</strong>.</li>
           </ol>
@@ -738,7 +738,8 @@
       <details class="q" data-cat="vault" data-app="cofferlock">
         <summary data-i18n="sup.cl.9">What happens if I uninstall the app?</summary>
         <div class="a">
-          <p data-i18n="sup.cl.10">Your vault file stays where you put it. After reinstalling, open the vault file again and turn fingerprint unlock back on. The app's settings and vault list start fresh.</p>
+          <p data-i18n="sup.cl.10">A vault file in a location you chose stays where you put it. After reinstalling, open the vault file again and turn fingerprint unlock back on. The app's settings and vault list start fresh.</p>
+          <p data-i18n="sup.cl.25">A vault kept inside the app is deleted for good when you uninstall Cofferlock or clear its data, and nobody can recover it. Before that, make a copy with <strong>Settings &rarr; Copy file (backup)</strong>.</p>
         </div>
       </details>
 
@@ -752,7 +753,7 @@
       <details class="q" data-cat="vault" data-app="cofferlock">
         <summary data-i18n="sup.cl.13">Where are my files, and how much can a vault hold?</summary>
         <div class="a">
-          <p data-i18n="sup.cl.14">Your files are encrypted inside the vault file, at the location you chose. Nothing is uploaded. Any file type can go in. A free vault holds up to 5&nbsp;GB; with Pro the only limit is your storage. Photos and videos open in your usual apps through <strong>Open</strong> or <strong>Share</strong>.</p>
+          <p data-i18n="sup.cl.14">Your files are encrypted inside the vault file: at the location you chose, or in Cofferlock's own folder if you picked <strong>Keep it inside the app</strong> (Settings then shows <strong>Inside Cofferlock (hidden from file managers)</strong>). Nothing is uploaded. Any file type can go in. A free vault holds up to 5&nbsp;GB; with Pro the only limit is your storage. Photos and videos open in your usual apps through <strong>Open</strong> or <strong>Share</strong>.</p>
         </div>
       </details>
 
@@ -760,6 +761,20 @@
         <summary data-i18n="sup.cl.15">I deleted a file by mistake</summary>
         <div class="a">
           <p data-i18n="sup.cl.16">In the free version, deleting is secure and immediate, so the file can't be brought back. Pro can keep a <strong>Trash</strong> for 7 or 30 days; once the Trash is emptied, the files are gone for good.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="vault" data-app="cofferlock">
+        <summary data-i18n="sup.cl.26">Can I import or copy out a whole folder?</summary>
+        <div class="a">
+          <p data-i18n="sup.cl.27">Yes. <strong>Import a folder</strong> brings in a folder with all its subfolders. To take files out, select a folder or several files and choose <strong>Copy out</strong>. The copy is decrypted on the phone, and the copy outside is a normal, unencrypted file.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="vault" data-app="cofferlock">
+        <summary data-i18n="sup.cl.28">The app says my vault file is damaged</summary>
+        <div class="a">
+          <p data-i18n="sup.cl.29">Cofferlock first tries to repair it. If it asks, unlock with your recovery phrase to repair the vault. If it can't be repaired, open a backup copy of the vault file. A damaged file is never reported as a wrong password.</p>
         </div>
       </details>
 
