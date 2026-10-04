@@ -252,7 +252,7 @@
       "category": "usb",
       "color": "teal",
       "faq": "usbfm",
-      "policy": "privacy_policy.html",
+      "policy": "usb_file_manager_privacy.html",
       "descKey": "home.usbfm",
       "desc": "Browse and manage USB flash drives, hard disks and card readers over OTG. Read and write FAT, exFAT, NTFS and ext2/3/4 drives, copy and move files between the phone and the drive, and open or share files with other apps — <strong>no root needed for USB drives</strong>.",
       "chips": [
@@ -260,7 +260,7 @@
         "read &amp; write",
         "copy · move · rename",
         "open &amp; share",
-        "disk images",
+        "tabs &amp; two panes",
         "safe eject"
       ],
       "headline": "Open any USB drive on Android — NTFS, exFAT, FAT and ext4 — and read and write it without root.",
@@ -278,12 +278,12 @@
           "text": "Flash drives, card readers, hard disks and SSDs, hubs and drives with several partitions."
         },
         {
-          "title": "Disk images",
-          "text": "Open and create disk image files."
+          "title": "Tabs and two panes",
+          "text": "Open several drives and partitions at once in up to 12 tabs, side by side in two panes, with a queue you can pause, resume or stop."
         },
         {
           "title": "Safe by design",
-          "text": "Eject properly before unplugging. Root is only needed for the internal SD card slot."
+          "text": "Eject writes out every change before you unplug, and a warning flags drives that may store less than their size says. Root is only needed for the internal SD card slot."
         }
       ]
     },

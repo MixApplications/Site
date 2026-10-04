@@ -1,7 +1,7 @@
 <!--meta {"title": "Privacy Policy — MixApplications", "description": "How the MixApplications USB apps handle your data: local-first processing, what third-party SDKs collect, retention periods, and your rights under GDPR, CCPA and LGPD."} -->
   <section class="pagehead reveal in">
     <h1>Privacy Policy</h1>
-    <p>This policy covers <strong>Ultimate USB</strong>, <strong>DROFUS (ISO 2 USB)</strong>, <strong>Ventoy (Unofficial)</strong>, <strong>USB Tools</strong> and <strong>USB File Manager</strong>, published by MixApplications.<!--app-policies--></p>
+    <p>This policy covers <strong>Ultimate USB</strong>, <strong>DROFUS (ISO 2 USB)</strong>, <strong>Ventoy (Unofficial)</strong> and <strong>USB Tools</strong>, published by MixApplications.<!--app-policies--></p>
     <span class="stamp">Last updated: October 4, 2026</span>
   </section>
 
@@ -36,16 +36,16 @@
     <p>The following limited exceptions apply, each described in the sections referenced:</p>
     <ul>
         <li><strong>Crash reports.</strong> If an error or crash occurs, the crash-reporting service may record diagnostic information that includes the name or path of the file, drive location or document involved, or the title of a game being processed (see Section 10).</li>
-        <li><strong>Purchase checks.</strong> In Ultimate USB, DROFUS, Ventoy, USB Tools and USB File Manager, a purchase identifier, the app&rsquo;s package name and a Google-issued purchase token (never file content) are sent to our server-side functions to confirm and complete the purchase with Google Play (see Section 2).</li>
+        <li><strong>Purchase checks.</strong> In Ultimate USB, DROFUS, Ventoy and USB Tools, a purchase identifier, the app&rsquo;s package name and a Google-issued purchase token (never file content) are sent to our server-side functions to confirm and complete the purchase with Google Play (see Section 2).</li>
         <li><strong>Game artwork.</strong> In the PS2 tools of Ultimate USB and USB Tools, the identifiers of games found on your drive (such as a disc serial) are sent to our artwork server to download the game list and cover art. File contents are never sent.</li>
         <li><strong>Downloads you start.</strong> In Ultimate USB and Ventoy, the built-in browser and ISO download fetch files directly from the website you choose; those requests go to that website, not to us. The Ventoy theme gallery opens the theme website in your browser.</li>
-        <li><strong>Update notices.</strong> Ultimate USB, DROFUS, Ventoy, USB Tools and USB File Manager ask Google Firebase Remote Config whether a newer version is available or required.</li>
+        <li><strong>Update notices.</strong> Ultimate USB, DROFUS, Ventoy and USB Tools ask Google Firebase Remote Config whether a newer version is available or required.</li>
         <li><strong>App integrity.</strong> Our apps use Google Play Integrity through Firebase App Check to confirm that requests come from a genuine copy of the app.</li>
     </ul>
 
     <h2 id="s2">2. In-App Purchases and Tokens</h2>
     <p>All financial transactions and in-app purchases are processed by the <strong>Google Play Billing</strong> system. We do not directly collect or store your credit card or financial information. In apps that use tokens (coins), the token balance is stored on your device.</p>
-    <p>In Ultimate USB, DROFUS, Ventoy, USB Tools and USB File Manager, to confirm a purchase&rsquo;s validity (for example, to restore your Pro entitlement after reinstalling the app), the product identifier, the app&rsquo;s package name and a Google-issued purchase token are sent to our server-side functions on Google Cloud (Firebase Cloud Functions). They check the purchase against Google Play&rsquo;s records and, where needed, acknowledge or consume it with Google Play. These functions do not store the data they receive in a database (see Section 3).</p>
+    <p>In Ultimate USB, DROFUS, Ventoy and USB Tools, to confirm a purchase&rsquo;s validity (for example, to restore your Pro entitlement after reinstalling the app), the product identifier, the app&rsquo;s package name and a Google-issued purchase token are sent to our server-side functions on Google Cloud (Firebase Cloud Functions). They check the purchase against Google Play&rsquo;s records and, where needed, acknowledge or consume it with Google Play. These functions do not store the data they receive in a database (see Section 3).</p>
 
     <h2 id="s3">3. Data Retention and Deletion Policy</h2>
     <p>We do not maintain a database of user profiles. Purchase identifiers and tokens are processed transiently by our server-side functions solely to confirm and complete the purchase with Google Play; they are not written to a database, though, like any server request, they may briefly appear in our cloud provider&rsquo;s operational logs. Requests to our artwork server are answered and not linked to any user. Data collected through third-party SDKs is retained for a limited period and then deleted automatically: Crashlytics data (crash stack traces and associated identifiers) is retained for 90 days, and Firebase Analytics data (both event data and user data) is retained for 2 months.</p>
@@ -165,7 +165,7 @@
             </tbody>
         </table>
     </div>
-    <p class="fnote">&ldquo;USB apps&rdquo; means Ultimate USB, DROFUS (ISO 2 USB), Ventoy (Unofficial), USB Tools and USB File Manager. The set of active ad networks may change as the mediation configuration is updated; this page is revised accordingly.</p>
+    <p class="fnote">&ldquo;USB apps&rdquo; means Ultimate USB, DROFUS (ISO 2 USB), Ventoy (Unofficial) and USB Tools. The set of active ad networks may change as the mediation configuration is updated; this page is revised accordingly.</p>
 
     <h2 id="s11">11. Security</h2>
     <p>Data sent by our apps to Firebase, Google Play, our server-side functions and our artwork server travels over encrypted (HTTPS) connections. Token balances and settings are kept in the app&rsquo;s private storage on your device, which other apps cannot read. Our server-side functions keep no database of users or purchases, so there is no store of personal data on our side that could be breached. No method of transmission or storage is perfectly secure, but we limit what leaves your device to what is described in this policy.</p>
