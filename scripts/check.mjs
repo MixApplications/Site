@@ -113,8 +113,10 @@ const AD_RULES = {
   'My Ad Center opt-out': /myadcenter\.google\.com/,
   'advertising ID and cookies disclosure': /advertising ID[\s\S]{0,200}cookies/i,
 };
-const AD_SUPPORTED = ['/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_privacy.html', '/chaome_privacy.html', '/usb_file_manager_privacy.html'];
-for (const page of ['/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_privacy.html', '/cofferlock_privacy.html', '/chaome_privacy.html', '/usb_file_manager_privacy.html']) {
+const USB_POLICIES = ['/ultimate_usb_privacy.html', '/drofus_privacy.html', '/ventoy_privacy.html', '/usb_tools_privacy.html',
+  '/iso2usb_privacy.html', '/multios_usb_privacy.html'];
+const AD_SUPPORTED = ['/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_privacy.html', '/chaome_privacy.html', '/usb_file_manager_privacy.html', ...USB_POLICIES];
+for (const page of ['/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_privacy.html', '/cofferlock_privacy.html', '/chaome_privacy.html', '/usb_file_manager_privacy.html', ...USB_POLICIES]) {
   const html = pages[page] || '';
   for (const [name, re] of Object.entries(POLICY_RULES)) if (!re.test(html)) bad(`${page}: privacy policy lacks ${name}`);
   if (AD_SUPPORTED.includes(page)) for (const [name, re] of Object.entries(AD_RULES)) if (!re.test(html)) bad(`${page}: ad-supported app policy lacks ${name}`);
@@ -122,7 +124,7 @@ for (const page of ['/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_pr
 
 // ---- 4. URLs that live outside this repo (Play listings, apps) must keep working
 for (const u of ['/privacy_policy.html', '/privacy_policy', '/tumtum_privacy.html', '/mixdocs_privacy.html',
-  '/cofferlock_privacy.html', '/chaome_privacy.html', '/usb_file_manager_privacy.html', '/contact.html', '/app-ads.txt', '/robots.txt', '/sitemap.xml', '/CNAME']) {
+  '/cofferlock_privacy.html', '/chaome_privacy.html', '/usb_file_manager_privacy.html', ...USB_POLICIES, '/contact.html', '/app-ads.txt', '/robots.txt', '/sitemap.xml', '/CNAME']) {
   if (!target(u)) bad(`required URL missing: ${u}`);
 }
 

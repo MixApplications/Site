@@ -73,7 +73,7 @@
       "category": "usb",
       "color": "blue",
       "faq": "usb",
-      "policy": "privacy_policy.html",
+      "policy": "ultimate_usb_privacy.html",
       "descKey": "home.5",
       "desc": "The all-in-one USB toolbox. Partition drives with GPT or MBR, format across six file systems, write bootable ISOs, install Ventoy on a drive, image drives byte-by-byte, encrypt drives with a password, and prepare drives for retro gaming consoles — <strong>from one app</strong>.",
       "chips": [
@@ -123,7 +123,7 @@
       "category": "usb",
       "color": "amber",
       "faq": "usb",
-      "policy": "privacy_policy.html",
+      "policy": "drofus_privacy.html",
       "descKey": "home.9",
       "desc": "A dedicated bootable-USB creator. Pick an ISO, plug in a drive, and get a bootable installer — <strong>no PC and no root required</strong>. Full manual control over partition scheme and file system, with Windows 11 requirement bypass and automated setup customization. <strong>DROFUS now carries every feature from ISO 2 USB</strong>, so it is the one app to install for burning images.",
       "chips": [
@@ -169,7 +169,7 @@
       "category": "usb",
       "color": "green",
       "faq": "usb",
-      "policy": "privacy_policy.html",
+      "policy": "ventoy_privacy.html",
       "descKey": "home.13",
       "desc": "Install Ventoy on a USB drive straight from Android. Then just copy as many ISO files as the drive holds — or download them directly to the drive — and pick the one to boot at startup. <strong>One drive, every OS installer you need.</strong>",
       "chips": [
@@ -208,7 +208,7 @@
       "category": "usb",
       "color": "violet",
       "faq": "usb",
-      "policy": "privacy_policy.html",
+      "policy": "usb_tools_privacy.html",
       "descKey": "home.17",
       "desc": "Maintenance and rescue for flash drives: format, securely wipe with a signed PDF erasure certificate, detect fake-capacity drives, benchmark, defragment, and <strong>try to repair corrupted and unreadable drives</strong> — without root.",
       "chips": [
