@@ -491,7 +491,7 @@
  "sup.fm.28": "Es wird gemeldet, dass ein Werbeblocker erkannt wurde",
  "sup.fm.29": "Während ein Vorgang läuft, pausiert die kostenlose Version, wenn Werbung durch eine Werbeblocker-App, privates DNS oder Ihr Netzwerk blockiert wird. Schalten Sie den Blocker aus oder stellen Sie privates DNS auf <code>dns.google</code> ein und starten Sie die App dann neu. Pro funktioniert mit Werbeblockern.",
  "sup.fm.30": "Wie öffne oder teile ich eine Datei mit einer anderen App?",
- "sup.fm.31": "Tippen Sie auf die Datei oder verwenden Sie <strong>Öffnen mit…</strong> oder <strong>Teilen</strong> (bis zu 16 Dateien). Die Datei wird direkt vom Laufwerk gelesen, und die gewählte App kann Änderungen dorthin zurückspeichern.",
+ "sup.fm.31": "Tippen Sie auf die Datei oder verwenden Sie <strong>Öffnen mit…</strong> oder <strong>Teilen</strong> (bis zu 16 Dateien). Die Datei wird direkt vom Laufwerk gelesen. Mit <strong>Öffnen mit…</strong> kann die gewählte App auch Änderungen dorthin zurückspeichern; eine geteilte Datei kann nur gelesen werden.",
  "sup.fm.32": "Wie kopiere ich Dateien zwischen meinem Smartphone und dem Laufwerk?",
  "sup.fm.33": "Tippen Sie in einem Ordner auf <strong>Hinzufügen → Datei / Dateien importieren</strong> oder <strong>Verzeichnis importieren</strong>. Um Dateien auf das Smartphone zu kopieren, wählen Sie sie aus und verwenden Sie <strong>Kopieren nach…</strong> oder <strong>Exportieren</strong>. Die Smartphone-Seite läuft immer über die Ordnerauswahl von Android.",
  "sup.fm.34": "Wie leere ich die Liste „Zuletzt“ oder benenne mein Laufwerk um?",

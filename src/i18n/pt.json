@@ -491,7 +491,7 @@
  "sup.fm.28": "Diz que foi detectado um bloqueador de anúncios",
  "sup.fm.29": "Enquanto uma operação está em andamento, a versão grátis pausa se os anúncios forem bloqueados por um app bloqueador, pelo DNS privado ou pela sua rede. Desative o bloqueador, ou defina o DNS privado como <code>dns.google</code>, e reinicie o app. O Pro funciona com bloqueadores de anúncios.",
  "sup.fm.30": "Como abro ou compartilho um arquivo com outro app?",
- "sup.fm.31": "Toque no arquivo, ou use <strong>Abrir com…</strong> ou <strong>Compartilhar</strong> (até 16 arquivos). O arquivo é lido direto do drive, e o app que você escolher pode salvar as alterações nele.",
+ "sup.fm.31": "Toque no arquivo, ou use <strong>Abrir com…</strong> ou <strong>Compartilhar</strong> (até 16 arquivos). O arquivo é lido direto do drive. Com <strong>Abrir com…</strong>, o app que você escolher também pode salvar as alterações nele; um arquivo compartilhado só pode ser lido.",
  "sup.fm.32": "Como copio arquivos entre o celular e o drive?",
  "sup.fm.33": "Em uma pasta, toque em <strong>Adicionar → Importar arquivo/arquivos</strong> ou <strong>Importar diretório</strong>. Para copiar para o celular, selecione os arquivos e use <strong>Copiar para…</strong> ou <strong>Exportar</strong>. O lado do celular sempre passa pelo seletor de pastas do Android.",
  "sup.fm.34": "Como limpo a lista de Recentes ou renomeio meu drive?",

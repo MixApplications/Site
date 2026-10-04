@@ -7,7 +7,7 @@
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>USB File Manager reads and writes USB drives on your phone. <strong>Your files and the data on your drives are handled on your device and are never uploaded.</strong> File and folder names stay on your device too, except that an error report can occasionally include the path of a file that failed. The App has no account and no coins or tokens. What is collected comes from the services built into it: ads (with consent where the law requires it), Firebase Analytics (adults only, once the consent step is complete or where none is required), crash reports, an update notice, Google Play app-integrity checks, and a purchase check if you buy Pro. Pro has no ads and needs no internet connection.</p>
+    <p>USB File Manager reads and writes USB drives on your phone. <strong>Your files and the data on your drives are handled on your device and are never uploaded.</strong> File and folder names stay on your device too, except that an error report can occasionally include the path of a file that failed. The App has no account and no coins or tokens. What is collected comes from the services built into it: ads (with consent where the law requires it), Firebase Analytics (adults only, and only with your consent where the law requires it), crash reports, an update notice, Google Play app-integrity checks, and a purchase check if you buy Pro. Pro has no ads and needs no internet connection.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -36,11 +36,11 @@
 <p>This Privacy Policy explains how the mobile app <strong>USB File Manager</strong> (the &ldquo;App&rdquo;), published by <strong>MixApplications</strong> ("we," "us," or "our"), handles information. By downloading or using the App, you agree to the practices described here.</p>
 
     <h2 id="s1">1. Overview</h2>
-    <p>The App reads and writes USB drives (and, on rooted phones, the internal SD card slot) directly on your device. The <strong>contents</strong> of your files, their file and folder names, and the data on your drives are handled on your device. We do not upload, collect or receive them; the only exception is that an error report can occasionally include the path of the file that failed (Section 13). A file goes to another app only when you choose <em>Share</em> or <em>Open with</em>, and that app can then read the file and save changes to it on the drive. The App has no user accounts.</p>
+    <p>The App reads and writes USB drives (and, on rooted phones, the internal SD card slot) directly on your device. The <strong>contents</strong> of your files, their file and folder names, and the data on your drives are handled on your device. We do not upload, collect or receive them; the only exception is that an error report can occasionally include the path of the file that failed (Section 13). A file goes to another app only when you choose <em>Share</em> or <em>Open with</em>. A shared file can only be read; with <em>Open with</em>, the app you pick can also save changes to the file on the drive. The App has no user accounts.</p>
     <p>The App connects to the internet for the following, each described below:</p>
     <ul>
         <li><strong>Ads</strong> through the Appodeal mediation platform and the ad networks reachable through it, after consent where the law requires it (Sections 5 and 13). Not in Pro.</li>
-        <li><strong>Firebase Analytics</strong> (app usage statistics). It stays off for anyone Google Play reports as under 18. For everyone else it is switched on once the consent step is complete: after you answer the consent form where one is required (for example in the EEA and the UK), and without a form elsewhere (Section 13).</li>
+        <li><strong>Firebase Analytics</strong> (app usage statistics). It stays off for anyone Google Play reports as under 18. Where your region requires consent (for example in the EEA and the UK), it follows the choices you make in the consent form, purpose by purpose: if you do not consent to analytics, no analytics data is collected, and nothing is collected until you have answered. Elsewhere it is switched on without a form. Pro users follow the same stored choices (Section 13).</li>
         <li><strong>Crash reports</strong> sent to Firebase Crashlytics when the App crashes or hits an error (Section 13).</li>
         <li><strong>Update notice.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version is available or required. Firebase receives a Firebase installation identifier and basic app and device details.</li>
         <li><strong>App integrity.</strong> The App obtains a Google Play Integrity token through Firebase App Check and attaches it to its requests to our purchase check, so they can be identified as coming from a genuine copy of the App.</li>
@@ -53,7 +53,7 @@
     <ul>
         <li><strong>Your files and drives</strong> stay where they are: on the USB drive, the SD card or your phone. Phone folders are opened only through the Android folder picker, and each USB drive only after you allow it in Android&rsquo;s access prompt.</li>
         <li><strong>Recent files</strong> (up to 200 entries with the drive name, volume label, file path, size and dates) are kept in the App&rsquo;s private storage so you can reopen them. <em>Clear history</em> removes the list. It is excluded from Android backups.</li>
-        <li><strong>Files you open or share with another app</strong> are read straight from the drive while that app uses them, and the app you pick can also save changes to the file on the drive. On Android 7, or if that fails, the file is first copied to the App&rsquo;s private cache, and the copy is deleted the next time the App starts.</li>
+        <li><strong>Files you open or share with another app</strong> are read straight from the drive while that app uses them. A shared file is read-only; with <em>Open with</em>, the app you pick can also save changes to the file on the drive. On Android 7, or if that fails, the file is first copied to the App&rsquo;s private cache, and the copy is deleted the next time the App starts.</li>
         <li><strong>Settings</strong> (theme, sort order, pane layout) are kept in app-private storage. Your <strong>Pro status</strong> and the record of your verified purchase are kept in encrypted app-private storage.</li>
     </ul>
 
@@ -63,7 +63,7 @@
         <li><strong>USB host</strong>: to read and write USB drives directly.</li>
         <li><strong>Foreground service (connected device) and notifications</strong>: to keep the App running while another app reads a file from your USB drive. The notification permission is asked just before a file is handed over.</li>
         <li><strong>Wake lock</strong>: to keep the phone awake during a file operation, for a limited time.</li>
-        <li><strong>Internet, network state and network change</strong>: for ads, Firebase, Google Play billing and the connection check.</li>
+        <li><strong>Internet, network state and network change</strong>: for ads, Firebase, Google Play billing, the connection check and the time check.</li>
         <li><strong>Advertising ID</strong>: used by the ad partners as described in Section 5.</li>
         <li><strong>Root access</strong> (optional, rooted phones only): to read the internal SD card slot. This is a prompt from your root manager, not an Android permission.</li>
     </ul>
@@ -80,7 +80,7 @@
 
     <h2 id="s6">6. Your Choices and Controls</h2>
     <ul>
-        <li><strong>Privacy Settings.</strong> Where a privacy choice is required for you, the App shows <em>Privacy Settings</em> under <em>&#8942; &rarr; Settings &rarr; Help &amp; about</em> (in earlier versions, in the Help (?) menu). It reopens the consent form so you can change or withdraw your consent.</li>
+        <li><strong>Privacy Settings.</strong> Where a privacy choice is required for you, the App shows <em>Privacy Settings</em> under <em>&#8942; &rarr; Settings &rarr; Help &amp; about</em> (in earlier versions, in the Help (?) menu). It reopens the consent form you answered (Appodeal&rsquo;s, or Google&rsquo;s privacy options form if your choice was made there) so you can change or withdraw your consent.</li>
         <li><strong>Privacy Policy</strong> in the same section always opens this page.</li>
         <li><strong>Device controls.</strong> You can reset or delete your advertising ID in your Android settings, and choose ad personalisation in <a href="https://myadcenter.google.com/" rel="nofollow">My Ad Center</a>, at any time.</li>
         <li><strong>Pro</strong> removes ads entirely.</li>
@@ -98,7 +98,7 @@
     <p><strong>Right to request deletion:</strong> to request deletion of data tied to SDK-level identifiers (such as your advertising ID), reset that identifier in your Android settings, or contact us using the details in Section 16.</p>
 
     <h2 id="s8">8. European Privacy Rights (GDPR)</h2>
-    <p>If you are located in the EU/EEA or the UK, your personal data is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>consent</strong> (personalised advertising), <strong>legitimate interests</strong> (fixing crashes, usage analytics for adults, update notices, app integrity, preventing fraud and invalid traffic, and non-personalised ads), <strong>performance of a contract</strong> (providing the Pro purchase) and compliance with <strong>legal obligations</strong> (tax and accounting). Google acts as our processor for Firebase. You have the following rights:</p>
+    <p>If you are located in the EU/EEA or the UK, your personal data is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>consent</strong> (personalised advertising and usage analytics), <strong>legitimate interests</strong> (fixing crashes, update notices, app integrity, preventing fraud and invalid traffic, and non-personalised ads), <strong>performance of a contract</strong> (providing the Pro purchase) and compliance with <strong>legal obligations</strong> (tax and accounting). Google acts as our processor for Firebase. You have the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we process.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -149,7 +149,7 @@
     <p>To operate, monetize and improve the App, we collect and share specific categories of data through third-party SDKs. In line with our Google Play Data safety declaration, the App collects and/or shares the following data types:</p>
     <ul>
         <li><strong>Diagnostics</strong>: crash logs and other app performance data: stack traces, device model and Android version, how the App was installed, and technical details of the drive transfer that failed (such as block addresses, sizes and the drive&rsquo;s error code). The error text in a crash report can occasionally contain a file path. File contents are never included.</li>
-        <li><strong>App interactions</strong>: through Firebase Analytics (adults only, once the consent step is complete or where none is required; see Section 1) and through the advertising SDKs.</li>
+        <li><strong>App interactions</strong>: through Firebase Analytics (adults only, and only with your consent where the law requires it; see Section 1) and through the advertising SDKs.</li>
         <li><strong>Approximate location</strong>: inferred by advertising SDKs from network information; the App does not request or use Android location permissions or APIs.</li>
         <li><strong>Device or other IDs</strong>: the advertising ID, the Firebase installation ID, and your IP address, which every network request carries.</li>
         <li><strong>Purchase history</strong>: the Pro purchase token, processed as described in Section 4.</li>
@@ -167,7 +167,7 @@
             <tbody>
                 <tr>
                     <td><strong>Analytics &amp; Crash Reporting (<a href="https://firebase.google.com/support/privacy" rel="nofollow">Firebase</a> Analytics and Crashlytics)</strong></td>
-                    <td>Bug fixing (Crashlytics, every user); usage statistics (Analytics, adults only, once the consent step is complete or where none is required)</td>
+                    <td>Bug fixing (Crashlytics, every user); usage statistics (Analytics, adults only, and only with your consent where the law requires it)</td>
                     <td>Crashlytics data is retained for 90 days; Firebase Analytics data for 2 months. Deleted automatically thereafter.</td>
                 </tr>
                 <tr>

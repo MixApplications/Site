@@ -491,7 +491,7 @@
  "sup.fm.28": "Muncul pesan bahwa pemblokir iklan terdeteksi",
  "sup.fm.29": "Saat operasi berjalan, versi gratis berhenti sementara jika iklan diblokir oleh aplikasi pemblokir iklan, DNS Pribadi, atau jaringan Anda. Matikan pemblokirnya, atau atur DNS Pribadi ke <code>dns.google</code>, lalu mulai ulang aplikasi. Pro berfungsi dengan pemblokir iklan.",
  "sup.fm.30": "Bagaimana cara membuka atau membagikan file dengan aplikasi lain?",
- "sup.fm.31": "Ketuk file, atau gunakan <strong>Buka dengan…</strong> atau <strong>Bagikan</strong> (hingga 16 file). File dibaca langsung dari drive, dan aplikasi yang Anda pilih bisa menyimpan perubahan kembali ke file tersebut.",
+ "sup.fm.31": "Ketuk file, atau gunakan <strong>Buka dengan…</strong> atau <strong>Bagikan</strong> (hingga 16 file). File dibaca langsung dari drive. Dengan <strong>Buka dengan…</strong>, aplikasi yang Anda pilih juga bisa menyimpan perubahan kembali ke file tersebut; file yang dibagikan hanya bisa dibaca.",
  "sup.fm.32": "Bagaimana cara menyalin file antara ponsel dan drive?",
  "sup.fm.33": "Di dalam folder, ketuk <strong>Tambah → Impor File / File-File</strong> atau <strong>Impor Direktori</strong>. Untuk menyalin ke ponsel, pilih file lalu gunakan <strong>Salin ke…</strong> atau <strong>Ekspor</strong>. Sisi ponsel selalu melalui pemilih folder Android.",
  "sup.fm.34": "Bagaimana cara menghapus daftar Terbaru atau mengganti nama drive saya?",
