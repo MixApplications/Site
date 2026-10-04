@@ -101,7 +101,13 @@ for (const a of apps.filter(x => x.status === 'live')) {
 // its support answers stay out of the page until the app goes live.
 const isLive = id => apps.some(a => a.id === id && a.status === 'live');
 const allPolicies = [
-  { file: 'privacy_policy.html', label: 'USB apps' },
+  { file: 'privacy_policy.html', label: 'All apps' },
+  { file: 'ultimate_usb_privacy.html', label: 'Ultimate USB', app: 'ultimate-usb' },
+  { file: 'drofus_privacy.html', label: 'DROFUS', app: 'drofus' },
+  { file: 'ventoy_privacy.html', label: 'Ventoy', app: 'ventoy' },
+  { file: 'usb_tools_privacy.html', label: 'USB Tools', app: 'usb-tools' },
+  { file: 'iso2usb_privacy.html', label: 'ISO2USB', app: 'iso2usb' },
+  { file: 'multios_usb_privacy.html', label: 'MultiOS USB', app: 'multiosusb' },
   { file: 'tumtum_privacy.html', label: 'TumTum', app: 'tumtum' },
   { file: 'chaome_privacy.html', label: 'ChaoMe', app: 'chaome' },
   { file: 'usb_file_manager_privacy.html', label: 'USB File Manager', app: 'usb-file-manager' },
@@ -154,7 +160,7 @@ for (const [k, v] of Object.entries(icons)) supportHtml = supportHtml.split(k).j
 list.push(pages.support(ctx, supportHtml));
 const ownPolicies = policies.filter(p => p.app);
 const policyList = ownPolicies.length
-  ? ' Some of our apps have their own policy, which applies to that app instead of this one: ' +
+  ? ' Each app has its own privacy policy, which applies to that app instead of this one: ' +
     ownPolicies.map(p => `<a href="${p.file}">${p.label}</a>`).join(', ') + '.'
   : '';
 for (const p of allPolicies) {
