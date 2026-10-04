@@ -577,19 +577,67 @@
       <h3>ChaoMe Theme Editor</h3>
 
       <details class="q" data-app="chaome" data-cat="apps">
-        <summary data-i18n="sup.196">ChaoMe: my theme resets after a while</summary>
+        <summary data-i18n="sup.ch.1">ChaoMe: which phones and versions are supported?</summary>
         <div class="a">
-          <p data-i18n="sup.197">MIUI and HyperOS revert themes on their own — the theme file is applied correctly, then the system replaces it. There's no reliable fix from an app without root; it's a limitation of the theme engine, not of the export.</p>
+          <p data-i18n="sup.ch.2">Themes can be built for MIUI 9.4 or earlier, MIUI 9.5 to 11, MIUI 12, 12.5, 13 and 14, and HyperOS 1, 2 and 3. Choose yours under <strong>Settings &rarr; Phone system version</strong>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="chaome" data-cat="apps">
+        <summary data-i18n="sup.196">ChaoMe: my theme won't apply, or resets after a while</summary>
+        <div class="a">
+          <p data-i18n="sup.197">On HyperOS 3, Xiaomi's Themes app checks a theme's rights with Xiaomi's servers and refuses edited themes, as a whole and part by part. No app can change that. You can still try single parts under <strong>Customize theme</strong> in the Themes app, and ChaoMe's <strong>Set Wallpaper</strong> button applies a theme's wallpaper directly. On older versions, a theme that does apply can later be reset by the Themes app's own rights check.</p>
         </div>
       </details>
 
       <details class="q" data-app="chaome" data-cat="apps">
         <summary data-i18n="sup.198">ChaoMe: why does it need Shizuku?</summary>
         <div class="a">
-          <p data-i18n="sup.199">From Android 11 onwards, Google's storage rules stop any app from writing into the Themes app's private folder. Shizuku bridges that gap so the theme installs cleanly — and it means no root is required. The app walks you through the one-time setup.</p>
+          <p data-i18n="sup.199">From Android 11 onwards, Google's storage rules stop apps from writing into the Themes app's folder. With Shizuku, ChaoMe puts your theme into <strong>Themes &rarr; My themes</strong> without root. Shizuku is optional: without it, the app still builds and exports the .mtz file.</p>
         </div>
       </details>
-    </div>
+
+      <details class="q" data-app="chaome" data-cat="apps">
+        <summary data-i18n="sup.ch.3">ChaoMe: what does Theme check do?</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.4"><strong>Theme check</strong> reads a theme and lists errors, warnings and store rules from the official theme rules, each with the screen that fixes it. It is advice only and never blocks an export. Open it from its tile in the editor, or from the button after a theme is saved.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="chaome" data-cat="apps">
+        <summary data-i18n="sup.ch.5">ChaoMe: where are my themes saved?</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.6">Exported .mtz files go to <strong>MIUI/theme</strong> on your phone, or to the folder you choose under <strong>Settings &rarr; Output folder</strong>. Every theme you build is also kept in the <strong>Theme library</strong>, where you can search, compare two themes, reuse single parts and start from a template. The library lives inside the app, so uninstalling it or clearing its data deletes the library: back it up to a zip file from the library first.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="chaome" data-cat="apps">
+        <summary data-i18n="sup.ch.7">ChaoMe: my font doesn't change everywhere</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.8">On HyperOS only the default system font changes. Apps that bring their own fonts keep them, and the new font shows after a restart.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="chaome" data-cat="apps">
+        <summary data-i18n="sup.ch.9">ChaoMe: how do I change the app's language?</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.10">Use <strong>Settings &rarr; Language</strong>. ChaoMe is available in English, Hindi, Indonesian, Russian and Simplified Chinese, and <strong>System default</strong> follows your phone's language.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="chaome" data-cat="pro">
+        <summary data-i18n="sup.ch.11">ChaoMe: what does PRO add, and how do I restore it?</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.12">PRO removes every ad and lets you use the app offline. Every editing feature is free either way. PRO is a one-time purchase tied to your Google account, and the app reads it from Google Play each time it starts, so there is no restore button: reinstall the app or sign in to Google Play with the account that bought it.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="chaome" data-cat="privacy">
+        <summary data-i18n="sup.ch.13">ChaoMe: how do I change my ad choices?</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.14">Open <strong>Settings &rarr; Privacy</strong>. Where your region requires it, <strong>Ad and data choices</strong> reopens the consent form, and in US states with an opt-out right <strong>Do not sell or share my personal information</strong> stops personalised ads. See the <a href="/chaome_privacy.html">ChaoMe privacy policy</a>.</p>
+        </div>
+      </details>    </div>
 
     <!-- ---------- USB FILE MANAGER ---------- -->
     <div class="group" data-group="usbfm" style="--c:var(--teal)">

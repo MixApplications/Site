@@ -101,8 +101,9 @@ for (const a of apps.filter(x => x.status === 'live')) {
 // its support answers stay out of the page until the app goes live.
 const isLive = id => apps.some(a => a.id === id && a.status === 'live');
 const allPolicies = [
-  { file: 'privacy_policy.html', label: 'USB apps &amp; ChaoMe' },
+  { file: 'privacy_policy.html', label: 'USB apps' },
   { file: 'tumtum_privacy.html', label: 'TumTum', app: 'tumtum' },
+  { file: 'chaome_privacy.html', label: 'ChaoMe', app: 'chaome' },
   { file: 'mixdocs_privacy.html', label: 'MixDocs', app: 'mixdocs' },
   { file: 'cofferlock_privacy.html', label: 'Cofferlock', app: 'cofferlock' },
 ];
