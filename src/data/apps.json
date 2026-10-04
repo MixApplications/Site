@@ -296,37 +296,41 @@
       "category": "custom",
       "color": "rose",
       "faq": "chaome",
-      "policy": "privacy_policy.html",
+      "policy": "chaome_privacy.html",
       "descKey": "home.21",
-      "desc": "A complete theme studio for Xiaomi devices. Create, customize and install themes on <strong>MIUI and HyperOS</strong> — icons, wallpapers, fonts, status bar, boot animation — and export a standard .mtz file. No PC, no root.",
+      "desc": "A complete theme studio for Xiaomi devices. Create, customize and install themes on <strong>MIUI and HyperOS</strong> — icons, wallpapers, fonts, status bar, Control Center — check them against the official theme rules, and export a standard .mtz file. No PC, no root.",
       "chips": [
         "MIUI · HyperOS",
         ".mtz export",
         "icons &amp; fonts",
-        "boot animation",
+        "theme check",
         "Shizuku install"
       ],
       "headline": "A complete theme studio for Xiaomi phones: design, build and install MIUI and HyperOS themes on the phone itself.",
       "features": [
         {
           "title": "Customize everything",
-          "text": "Icons, icon packs and masks, wallpapers and lock screen, status bar and notifications, fonts, boot animation, contacts, dialer and call screen."
+          "text": "Icons, icon packs and masks, dynamic calendar and clock icons, wallpapers and lock screen, status bar, notifications, Control Center and volume panel, fonts, contacts, dialer and call screen."
         },
         {
           "title": "Live preview",
           "text": "Every screen shows your changes as you make them."
         },
         {
-          "title": "Themes that actually apply",
-          "text": "Exports standard .mtz files with the compatibility fields the theme engine checks — including on the latest HyperOS."
+          "title": "Theme check",
+          "text": "Checks a theme against the official theme rules (errors, warnings and store rules) and names the screen that fixes each one. Exports standard .mtz files for MIUI 9 to 14 and HyperOS 1 to 3."
         },
         {
           "title": "Clean install without root",
-          "text": "On Android 11 and later, themes install through Shizuku."
+          "text": "On Android 11 and later, Shizuku puts the theme into Themes → My themes. Shizuku is optional: without it, the app still builds and exports .mtz files."
         },
         {
           "title": "Edit or start fresh",
-          "text": "Open an installed theme to change it, or build a new one from scratch."
+          "text": "Open an installed theme to change it, start from a Light or Dark template, or build one from scratch."
+        },
+        {
+          "title": "Theme library",
+          "text": "Every theme you build is kept in a library on the phone: search it, compare two themes, reuse single parts, and back it up to a zip file."
         }
       ]
     },
