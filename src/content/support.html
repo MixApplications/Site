@@ -658,14 +658,14 @@
       <details class="q" data-cat="connect" data-app="usbfm">
         <summary data-i18n="sup.fm.6">Android asks to allow access to the USB device</summary>
         <div class="a">
-          <p data-i18n="sup.fm.7">Tap <strong>Allow</strong>. The app can only open the drive after you allow it. If you closed the prompt, unplug the drive and plug it in again, or tap <strong>Retry</strong> in the app.</p>
+          <p data-i18n="sup.fm.7">Tap <strong>Allow</strong>. The app can only open the drive after you allow it. If you closed the prompt, tap <strong>Allow access</strong> on the drive's card, or unplug the drive and plug it in again. If opening fails, tap <strong>Try again</strong>.</p>
         </div>
       </details>
 
       <details class="q" data-cat="format" data-app="usbfm">
         <summary data-i18n="sup.fm.8">Can I write to NTFS drives?</summary>
         <div class="a">
-          <p data-i18n="sup.fm.9">Yes, NTFS drives are fully readable and writable. A drive opens <strong>read-only</strong> only when Windows left it hibernated (Fast Startup) or when the drive itself is write-protected. Shut Windows down fully (not Restart or Sleep) before unplugging the drive from the PC, then try again.</p>
+          <p data-i18n="sup.fm.9">Yes, NTFS drives are fully readable and writable. A drive opens <strong>read-only</strong> only when Windows hibernated it (Fast Startup) or did not close it cleanly, or when the drive itself is write-protected. Shut Windows down fully (not Restart or Sleep), then connect the drive again.</p>
         </div>
       </details>
 
@@ -679,7 +679,7 @@
       <details class="q" data-cat="format" data-app="usbfm">
         <summary data-i18n="sup.fm.12">Can USB File Manager format a drive?</summary>
         <div class="a">
-          <p data-i18n="sup.fm.13">No. USB File Manager browses and manages files. To format, partition or repair a drive, use <strong>USB Tools</strong> or <strong>Ultimate USB</strong>.</p>
+          <p data-i18n="sup.fm.13">No. USB File Manager browses and manages files; it has no formatting, partitioning or disk-image tools. To format, partition or repair a drive, use <strong>USB Tools</strong> or <strong>Ultimate USB</strong>.</p>
         </div>
       </details>
 
@@ -693,21 +693,42 @@
       <details class="q" data-cat="connect" data-app="usbfm">
         <summary data-i18n="sup.fm.16">How do I unplug the drive safely?</summary>
         <div class="a">
-          <p data-i18n="sup.fm.17">Tap <strong>Eject</strong> and wait until it has finished before you pull the drive out. Unplugging during a copy can damage the files being written.</p>
+          <p data-i18n="sup.fm.17">Tap <strong>Eject</strong> on the drive's card and wait until it shows <strong>Ejected</strong> before you pull the drive out. Eject waits for the current operation to finish and writes out every change; if something could not be saved, the app tells you to check the drive on a computer. Unplugging during a copy can damage the files being written.</p>
         </div>
       </details>
 
       <details class="q" data-cat="pro" data-app="usbfm">
         <summary data-i18n="sup.fm.18">I bought Pro and it isn't active</summary>
         <div class="a">
-          <p data-i18n="sup.fm.19">Pro is a one-time purchase tied to your Google account, and it is confirmed with Google Play each time the app starts. Force-stop the app and reopen it while online. If it still isn't active, check that the Play Store is signed in with the account that bought it and that the payment isn't still pending. Pro also removes the notice about ad blockers and Private DNS.</p>
+          <p data-i18n="sup.fm.19">Pro is a one-time purchase tied to your Google account. Open the Pro screen and tap <strong>Restore purchases</strong> while online. If it still isn't active, check that the Play Store is signed in with the account that bought it and that the payment isn't still pending. Pro removes all ads and the notice about ad blockers and Private DNS, and once confirmed it works offline for up to 30 days at a time.</p>
         </div>
       </details>
 
       <details class="q" data-cat="apps" data-app="usbfm">
         <summary data-i18n="sup.fm.20">The app says it is out of date</summary>
         <div class="a">
-          <p data-i18n="sup.fm.21">Update it from Google Play to keep using the app with the latest fixes.</p>
+          <p data-i18n="sup.fm.21">When the app shows <strong>Update Required</strong>, tap <strong>UPDATE NOW</strong> to open its Google Play page. If the update is mandatory, the app closes after a few seconds until it is updated.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="format" data-app="usbfm">
+        <summary data-i18n="sup.fm.22">Which file systems and drives work?</summary>
+        <div class="a">
+          <p data-i18n="sup.fm.23">FAT12, FAT16, FAT32, exFAT, NTFS and ext2/3/4, all readable and writable, on flash drives, card readers, hard disks and SSDs (through a powered hub if needed). Drives with several partitions (MBR or GPT) show each one as <strong>Partition 1</strong>, <strong>Partition 2</strong> and so on, and you can open several drives and partitions at once in tabs.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="connect" data-app="usbfm">
+        <summary data-i18n="sup.fm.24">The app warns that my drive may store less than its size says</summary>
+        <div class="a">
+          <p data-i18n="sup.fm.25">That is typical of counterfeit drives, which report more space than they really have. Files written beyond the real capacity can be lost, so don't keep your only copy of important files on that drive.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="privacy" data-app="usbfm">
+        <summary data-i18n="sup.fm.26">How do I change my ad choices in USB File Manager?</summary>
+        <div class="a">
+          <p data-i18n="sup.fm.27">Where your region requires it, open <strong>&#8942; &rarr; Settings &rarr; Help &amp; about &rarr; Privacy Settings</strong> to reopen the consent form. Pro has no ads at all. See the <a href="/usb_file_manager_privacy.html">USB File Manager privacy policy</a>.</p>
         </div>
       </details>
     </div>
