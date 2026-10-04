@@ -2,12 +2,12 @@
   <section class="pagehead reveal in">
     <h1>Privacy Policy — Cofferlock</h1>
     <p>This policy applies to the <strong>Cofferlock</strong> app (<code>com.mixapplications.cofferlock</code>) published by MixApplications. It is specific to Cofferlock; other MixApplications apps are covered by the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to Cofferlock.</p>
-    <span class="stamp">Last updated: October 2, 2026</span>
+    <span class="stamp">Last updated: October 4, 2026</span>
   </section>
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>Cofferlock is an encrypted file vault, and <strong>your files never leave your device</strong> unless you send them yourself. It has no accounts, no analytics, no advertising and no crash-reporting service. To tell you when a newer version is available, it asks Google Firebase, which receives a random installation identifier and basic app details. If you buy Pro or the Supporter edition, a purchase token is sent so that Google Play can confirm the purchase; it is not kept. Your files are encrypted on your device inside a vault file that you place yourself. We cannot see, open, recover or decrypt your vault. Purchases are processed by Google Play.</p>
+    <p>Cofferlock is an encrypted file vault, and <strong>your files never leave your device</strong> unless you send them yourself. It has no accounts, no analytics, no advertising and no crash-reporting service. To tell you when a newer version is available, it asks Google Firebase, which receives a random installation identifier and basic app details. If you buy Pro or the Supporter edition, a purchase token is sent so that Google Play can confirm the purchase; it is not kept. Your files are encrypted on your device inside a vault file that you place yourself, or that you keep in the App&rsquo;s own private storage. We cannot see, open, recover or decrypt your vault. Purchases are processed by Google Play.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -46,7 +46,7 @@
 
     <h2 id="s2">2. Where Your Data Is</h2>
     <ul>
-        <li><strong>Your files and their names</strong> are stored only inside the encrypted vault file that you create and place on your device&rsquo;s storage (or SD card) with the Android file picker. Every block of the vault is encrypted with AES-256-GCM.</li>
+        <li><strong>Your files and their names</strong> are stored only inside the encrypted vault file that you create and place on your device&rsquo;s storage (or SD card) with the Android file picker. If you choose <em>Keep it inside the app</em> instead, the vault file is kept in the App&rsquo;s private storage on your device, where file managers and other apps cannot see it; it is still encrypted, never uploaded and excluded from Android backups. Every block of the vault is encrypted with AES-256-GCM.</li>
         <li><strong>Your password and 12-word recovery phrase</strong> are used on your device to derive the encryption keys (Argon2id). They are never stored in readable form and never leave your device.</li>
         <li><strong>App settings</strong>, the list of vault files you opened, and a local log of failed unlock attempts (time and count only; no photo is ever taken) are kept in the App&rsquo;s private storage on your device.</li>
         <li>We have no copy of your keys. <strong>We cannot open, recover or decrypt a vault</strong>, and there is no backdoor. If you lose both your password and your recovery phrase, the vault cannot be opened by anyone, including us.</li>
@@ -71,12 +71,12 @@
     <p>The <em>Support</em> button opens our <a href="contact.html">contact page</a> in your browser. If you contact us there or through WhatsApp, we receive what you send (such as your email address or phone number and your message) and use it only to answer you.</p>
 
     <h2 id="s8">8. Backups</h2>
-    <p>Android cloud backup and device-to-device transfer of the App&rsquo;s own data are <strong>disabled</strong>. Your vault is a single file: copies of it that you make yourself (to another folder, an SD card or a cloud drive of your choice) stay fully encrypted and can be opened only with your password or recovery phrase.</p>
+    <p>Android cloud backup and device-to-device transfer of the App&rsquo;s own data are <strong>disabled</strong>. Your vault is a single file: copies of it that you make yourself (to another folder, an SD card or a cloud drive of your choice) stay fully encrypted and can be opened only with your password or recovery phrase. A vault kept inside the App is part of the App&rsquo;s private data, so it is excluded from Android backups too; make your own copy with <em>Settings &rarr; Copy file (backup)</em>.</p>
 
     <h2 id="s9">9. Data Retention and Deletion</h2>
     <p>We do not maintain a database of users.</p>
     <ul>
-        <li><strong>On-device data</strong> (your vault files, settings, attempt log and crash log) stays on your device. Delete your vault file(s) with your file manager and uninstall the App to remove all of it. Uninstalling alone does not delete vault files you placed in shared storage.</li>
+        <li><strong>On-device data</strong> (your vault files, settings, attempt log and crash log) stays on your device. Delete your vault file(s) with your file manager and uninstall the App to remove all of it. Uninstalling alone does not delete vault files you placed in shared storage. A vault kept inside the App is deleted permanently when you uninstall the App or clear its data, and nobody, including us, can recover it.</li>
         <li><strong>Support conversations and diagnostics logs you send us</strong> are kept only as long as needed to resolve your request and are deleted when the support case is closed.</li>
         <li><strong>Purchase checks</strong> are answered and not stored by us (Section 4).</li>
         <li><strong>The Firebase installation identifier</strong> is kept by Google Firebase as Google describes in <a href="https://firebase.google.com/support/privacy" rel="nofollow">Privacy and Security in Firebase</a>; uninstalling the App ends its use. We do not store it.</li>
