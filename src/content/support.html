@@ -66,11 +66,12 @@
       <details class="q" data-app="usb usbfm" data-cat="connect">
         <summary data-i18n="sup.16">The app says no device is connected</summary>
         <div class="a">
-          <p data-i18n="sup.17">The app can only see a drive that Android itself has already recognised. Work through this in order:</p>
+          <p data-i18n="sup.17">Our apps talk to the drive directly over USB, so they can open drives Android itself can't, such as NTFS, ext4 or bootable drives. The phone still has to detect the drive. Work through this in order:</p>
           <ol>
             <li data-i18n="sup.18">Open your phone's <strong>Settings</strong>, search for <code>OTG</code>, and switch it on if the option exists.</li>
             <li data-i18n="sup.19">Check your adapter is a real <strong>data</strong> OTG adapter, not a charge-only cable. This is by far the most common cause.</li>
-            <li data-i18n="sup.20">Open your phone's own file manager. If the drive isn't visible there either, no app can reach it — the problem is the cable, the port or the drive.</li>
+            <li data-i18n="sup.19b">When you plug the drive in, Android asks whether to let the app use the USB device. Tap <strong>OK</strong>. If you refused, unplug the drive and plug it in again. In Ultimate USB, DROFUS, Ventoy and USB Tools, also check the mode on the main screen is <strong>USB OTG</strong>, not <strong>SD Slot</strong>.</li>
+            <li data-i18n="sup.20">Plug in a drive formatted as FAT32 or exFAT and check that Android notices it: most phones show a notification or a USB access prompt. Your phone's own file manager may not list NTFS or ext4 drives even when our apps can open them. If even a FAT32 drive isn't noticed, the problem is the cable, the port or the drive.</li>
             <li data-i18n="sup.21">Test the same drive on a PC to rule the drive out.</li>
             <li data-i18n="sup.22">Check the charging port for dust or lint.</li>
           </ol>
@@ -80,7 +81,7 @@
       <details class="q" data-app="usb usbfm" data-cat="connect">
         <summary data-i18n="sup.23">Does my phone support OTG?</summary>
         <div class="a">
-          <p data-i18n="sup.24">Most Android phones made in the last several years do. If searching Settings for <code>OTG</code> returns nothing, your phone most likely enables it automatically — the absence of a toggle isn't a sign it's unsupported. Confirm by plugging in a drive and checking your file manager.</p>
+          <p data-i18n="sup.24">Most Android phones made in the last several years do. If searching Settings for <code>OTG</code> returns nothing, your phone most likely enables it automatically — the absence of a toggle isn't a sign it's unsupported. Confirm by plugging in a drive formatted as FAT32 or exFAT and checking your file manager.</p>
         </div>
       </details>
 
@@ -100,6 +101,20 @@
         </div>
       </details>
 
+      <details class="q" data-app="usb" data-cat="connect">
+        <summary data-i18n="sup.u.17">How do I use the phone's SD card slot?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.18">It needs a rooted phone. Choose <strong>SD Slot</strong> instead of <strong>USB OTG</strong> on the main screen, tap <strong>Grant</strong> and accept your root manager's prompt, then <strong>Mount</strong>. Without root, put the card in a USB card reader and use <strong>USB OTG</strong>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="connect">
+        <summary data-i18n="sup.u.19">What does &ldquo;CRITICAL WARNING: BAD DRIVE!&rdquo; mean?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.20">When a drive is connected, the app writes a test pattern near its end and reads it back. If that fails, the drive is faulty, the cable is loose, or the drive is counterfeit and smaller than it claims, and a write is likely to fail. If the app offers to scan for the real size, tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+        </div>
+      </details>
+
       <details class="q" data-app="usb usbfm" data-cat="connect">
         <summary data-i18n="sup.31">The drive disconnects part-way through an operation</summary>
         <div class="a">
@@ -115,8 +130,8 @@
       <details class="q" data-app="usb" data-cat="connect">
         <summary data-i18n="sup.36">Android says the drive is corrupted or unsupported after I format it</summary>
         <div class="a">
-          <p data-i18n="sup.37">That notification is expected after formatting to <strong>NTFS</strong> or <strong>ext2/3/4</strong>, and it does not mean anything is wrong. Most Android devices have no built-in driver for either, so the system sees a file system it can't read and reports the drive as damaged or unsupported.</p>
-          <p data-i18n="sup.38">The format succeeded and the app can still use the drive normally, because it reads and writes these file systems with its own native drivers rather than relying on Android's.</p>
+          <p data-i18n="sup.37">That notification is expected after a drive is formatted as <strong>NTFS</strong> or <strong>ext2/3/4</strong>, and often after a bootable drive is written. It does not mean anything is wrong. Most Android devices have no built-in driver for these, so the system sees a drive it can't read and reports it as damaged or unsupported.</p>
+          <p data-i18n="sup.38">The write succeeded. Our apps read and write these file systems with their own drivers, so in Ultimate USB and Ventoy the drive still opens in <strong>USB File Manager</strong>.</p>
           <p data-i18n="sup.39">Dismiss the notification and <strong>never tap the option to format</strong> — that offer comes from Android, not from us, and it will erase the drive you just prepared.</p>
         </div>
       </details>
@@ -150,22 +165,30 @@
       <details class="q" data-app="usb" data-cat="tokens">
         <summary data-i18n="sup.50">How do I get tokens?</summary>
         <div class="a">
-          <p data-i18n="sup.51">Two ways: watch a rewarded ad (about a minute), or buy them directly. Watching an ad is free and unlimited over time.</p>
+          <p data-i18n="sup.51">Tap the token counter on the main screen to open <strong>Get Tokens</strong>. Under <strong>Get 1 free token</strong>, tap <strong>Watch</strong>: one video ad of 60 seconds at most gives 1 token. Or buy <strong>Get 5 Tokens</strong>. Watching is free, up to a balance of 5 tokens and 4 ads each time you open the app.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="tokens">
         <summary data-i18n="sup.52">The &ldquo;watch an ad&rdquo; option disappeared</summary>
         <div class="a">
-          <p data-i18n="sup.53">That's a cap, not a bug. Earning by ads stops at a maximum balance of <strong>5 tokens</strong>. Spend some and the option comes back on its own once you're under the cap.</p>
+          <p data-i18n="sup.53">That's a limit, not a bug. Free tokens stop at a balance of <strong>5</strong>, and the card then says <strong>You have enough tokens.</strong> Spend some and <strong>Watch</strong> comes back. After 4 ads in one session it says <strong>No more ads, restart app and try again.</strong> Close the app fully and open it again.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="tokens">
         <summary data-i18n="sup.54">Which actions cost tokens?</summary>
         <div class="a">
-          <p data-i18n="sup.55">The large majority of tools are free. Tokens apply only to the heavy write operations — formatting, the partition wizard, installing or updating Ventoy, and burning a Windows image. The cost is one to three tokens depending on the operation, and the exact figure is always shown before you confirm.</p>
-          <p data-i18n="sup.56">Wiping, backup and restore, bad-blocks checking, benchmarking, defragmenting, the file manager, image conversion and the console-game tools are all free.</p>
+          <p data-i18n="sup.55">Most tools are free. Only these cost tokens, and the number is always shown before you confirm:</p>
+          <ul>
+            <li data-i18n="sup.55a"><strong>ISO Burner</strong> (Ultimate USB, DROFUS): 2 for a <strong>Disk or ISO image</strong> copied file by file, such as a Windows ISO; 1 for <strong>Non-bootable</strong>, <strong>MS-DOS</strong> or <strong>FreeDOS</strong>. Images written as an exact copy (Raspberry Pi and other .img files, macOS DMG, and Linux ISOs unless you tick Advanced Options) are free.</li>
+            <li data-i18n="sup.55b"><strong>Ventoy</strong> (Ultimate USB, Ventoy): <strong>Install</strong> 2, <strong>Update</strong> 1, <strong>Clear</strong> 1.</li>
+            <li data-i18n="sup.55c"><strong>Format USB</strong> (Ultimate USB, USB Tools): 1.</li>
+            <li data-i18n="sup.55d"><strong>Partition Wizard</strong> (Ultimate USB, USB Tools): 1 for each Create or Format step, at most 3 per <strong>Apply Changes</strong>.</li>
+            <li data-i18n="sup.55e"><strong>PS2 USB Utils</strong> (Ultimate USB, USB Tools): 1 when <strong>Fix</strong> formats the drive.</li>
+            <li data-i18n="sup.55f"><strong>USB Encryption</strong> (Ultimate USB): 1.</li>
+          </ul>
+          <p data-i18n="sup.56">Everything else is free, including Wipe USB, Bad Blocks Check, Benchmark, Backup / Restore, USB Defragmenter, Raw Write, the file managers, Game Converter and adding PS2 games. If an operation fails, or the app closes before it finishes, the tokens are given back.</p>
         </div>
       </details>
 
@@ -180,8 +203,29 @@
       <details class="q" data-app="usb" data-cat="tokens">
         <summary data-i18n="sup.60">My tokens disappeared</summary>
         <div class="a">
-          <p data-i18n="sup.61">Token balances are stored <strong>on your device</strong>, not on an account. Clearing the app's data, uninstalling, or moving to a new phone clears them.</p>
+          <p data-i18n="sup.61">Token balances are stored <strong>on your device</strong>, not on an account. Uninstalling the app or clearing its data deletes them. They move to a new phone only if Android's own backup or phone transfer brings back the app's data.</p>
           <p data-i18n="sup.62">Pro is different — it's tied to your Google account and survives all of that.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="tokens">
+        <summary data-i18n="sup.u.1">Do I lose tokens if an operation fails?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.2">No. If an operation fails, or the app closes before it finishes, the tokens it cost are given back, at the latest the next time you open the app.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb usbfm" data-cat="tokens">
+        <summary data-i18n="sup.u.3">Why did everything pause with &ldquo;No Internet Connection&rdquo;?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.4">The free version needs a connection for its ads. While you're offline it shows <strong>No Internet Connection</strong>, and running operations wait. Nothing is lost: they continue on their own once you're back online. Pro works fully offline.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="tokens">
+        <summary data-i18n="sup.u.5">It says &ldquo;Adblocker or Private DNS detected.&rdquo;</summary>
+        <div class="a">
+          <p data-i18n="sup.u.6">The free version can't load ads through an ad blocker, a blocking VPN or ad-blocking Private DNS. Running operations wait until it's switched off for the app. Set Private DNS to <code>dns.google</code> or turn it off, then restart the app. Pro, or any token pack you've bought on this install, lets the app run with an ad blocker on.</p>
         </div>
       </details>
     </div>
@@ -202,7 +246,7 @@
         <summary data-i18n="sup.67">I bought Pro and it isn't showing</summary>
         <div class="a">
           <ol>
-            <li data-i18n="sup.68">Make sure the app is signed in with the <strong>same Google account</strong> that made the purchase.</li>
+            <li data-i18n="sup.68">Make sure the Play Store on this phone uses the <strong>same Google account</strong> that made the purchase. The apps have no sign-in of their own.</li>
             <li data-i18n="sup.69">Force-stop the app (Settings &rarr; Apps &rarr; the app &rarr; Force stop), then reopen it while online — the entitlement is confirmed with Google Play on launch.</li>
             <li data-i18n="sup.70">Check the purchase actually completed in the Play Store under Payments &amp; subscriptions.</li>
           </ol>
@@ -221,7 +265,14 @@
       <details class="q" data-app="usb" data-cat="pro">
         <summary data-i18n="sup.75">Do I keep Pro on a new phone?</summary>
         <div class="a">
-          <p data-i18n="sup.76">Yes. Pro follows the Google account, not the device. Install the app on the new phone, sign in with the same account, and it's there. Your token balance does <em>not</em> transfer — that lives on the old device.</p>
+          <p data-i18n="sup.76">Yes. Pro follows the Google account, not the device. Install the app on the new phone with the same Google account in the Play Store, and Pro comes back when the app starts. Your token balance stays on the old phone unless Android's own backup or phone transfer brings back the app's data.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="pro">
+        <summary data-i18n="sup.u.7">Why does it ask me to solve a sum before buying?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.8">That's <strong>Parental Verification</strong>. If Google Play reports that the account belongs to a teenager, a purchase needs a parent's check first. For younger users, and for supervised accounts whose approval is pending or was declined, purchases are off.</p>
         </div>
       </details>
 
@@ -277,6 +328,7 @@
             <li data-i18n="sup.94"><strong>NTFS</strong> — for Windows. No practical file-size limit, but most Android phones can't read it.</li>
             <li data-i18n="sup.95"><strong>ext2/3/4</strong> — for Linux. Neither Android nor Windows reads it without extra software.</li>
           </ul>
+          <p data-i18n="sup.95b">Ultimate USB and USB Tools offer all of these in <strong>Format USB</strong>. DROFUS offers FAT32, exFAT and NTFS for a <strong>Non-bootable</strong> drive, and Ventoy offers FAT32, exFAT and NTFS for its drive.</p>
         </div>
       </details>
 
@@ -284,7 +336,7 @@
         <summary data-i18n="sup.96">I formatted to NTFS (or ext4) and now my phone can't read the drive</summary>
         <div class="a">
           <p data-i18n="sup.97">The format succeeded. The limitation is Android itself: <strong>most Android devices have no built-in NTFS or ext2/3/4 support</strong>, so the system can't mount the drive even though a PC will read it perfectly. A handful of manufacturers add NTFS support, but it is the exception rather than the rule.</p>
-          <p data-i18n="sup.98">Inside our apps the drive still works normally — they carry their own native drivers for these file systems instead of relying on Android's.</p>
+          <p data-i18n="sup.98">Ultimate USB and Ventoy still open the drive in <strong>USB File Manager</strong>, because they carry their own drivers for these file systems instead of relying on Android's.</p>
           <p data-i18n="sup.99">If you need the drive readable by the phone's own file manager and other apps, use <strong>exFAT</strong>. It has no practical file-size limit and is read by Android, Windows and macOS alike.</p>
         </div>
       </details>
@@ -296,7 +348,7 @@
             <li data-i18n="sup.101">Confirm the adapter is a data OTG adapter and reseat it.</li>
             <li data-i18n="sup.102">Test the drive on a PC — a drive that fails verification usually has failing flash.</li>
             <li data-i18n="sup.103">Try a different USB port on the adapter or a different adapter entirely.</li>
-            <li data-i18n="sup.104">Run the bad-blocks check to confirm whether the flash itself is at fault.</li>
+            <li data-i18n="sup.104">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> to confirm whether the flash itself is at fault. It erases the drive.</li>
           </ol>
           <p data-i18n="sup.105">A verification failure means data written to the drive read back differently. That is a hardware symptom, and no app can format around it.</p>
         </div>
@@ -308,8 +360,8 @@
           <p data-i18n="sup.107">Two ordinary causes and one bad one:</p>
           <ul>
             <li data-i18n="sup.108">Manufacturers count in decimal gigabytes; your phone counts in binary. A "64&nbsp;GB" drive genuinely holds about 59&nbsp;GiB.</li>
-            <li data-i18n="sup.109">A previous bootable write may have left hidden partitions taking up space. Use the partition wizard, or wipe the drive and format fresh, to recover it.</li>
-            <li data-i18n="sup.110">If the shortfall is large, the drive may be counterfeit — see the drive health section.</li>
+            <li data-i18n="sup.109">A previous bootable write may have left hidden partitions. Recover the space with <strong>Partition Wizard</strong> or <strong>Format USB</strong> in Ultimate USB and USB Tools, by writing the drive with <strong>Non-bootable</strong> in DROFUS, or with <strong>Clear</strong> in Ventoy.</li>
+            <li data-i18n="sup.110">If the shortfall is large, the drive may be counterfeit. All four apps test the end of the drive when it is connected and show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> if it fails.</li>
           </ul>
         </div>
       </details>
@@ -317,8 +369,8 @@
       <details class="q" data-app="usb" data-cat="format">
         <summary data-i18n="sup.111">How do I get back unallocated space?</summary>
         <div class="a">
-          <p data-i18n="sup.112">Open the partition wizard, select the unallocated block and create a partition, or delete the existing partitions and let the app lay out the full drive. Changes are queued so you can review them, then applied together.</p>
-          <p data-i18n="sup.113">The quickest route, if you don't need what's on the drive: wipe it and format fresh.</p>
+          <p data-i18n="sup.112">In Ultimate USB and USB Tools, open <strong>Partition Wizard</strong>, select the unallocated block and tap <strong>Create</strong>, or <strong>Delete</strong> the existing partitions and create one across the drive. Your changes are listed for review, then <strong>Apply Changes</strong> runs them together.</p>
+          <p data-i18n="sup.113">The quickest route, if you don't need what's on the drive: <strong>Format USB</strong> in Ultimate USB and USB Tools, or <strong>Non-bootable</strong> in DROFUS.</p>
         </div>
       </details>
 
@@ -326,7 +378,7 @@
         <summary data-i18n="sup.114">MBR or GPT?</summary>
         <div class="a">
           <p data-i18n="sup.115"><strong>GPT</strong> for modern UEFI machines. <strong>MBR</strong> for older BIOS/legacy boot, and for consoles like the PS2 that require it.</p>
-          <p data-i18n="sup.116">You can convert between them in the app, without a PC. Back the drive up first regardless — any change to a partition table is a change you don't want to get halfway through.</p>
+          <p data-i18n="sup.116">In Ultimate USB and USB Tools, <strong>Partition Wizard</strong> converts between them without a PC (<strong>Convert Partition Table</strong>). In DROFUS and Ventoy you choose the <strong>Partition Table:</strong> before writing. Back the drive up first regardless — any change to a partition table is a change you don't want to get halfway through.</p>
         </div>
       </details>
     </div>
@@ -363,45 +415,59 @@
       <details class="q" data-app="usb" data-cat="boot">
         <summary data-i18n="sup.129">My Windows ISO has a file bigger than 4 GB</summary>
         <div class="a">
-          <p data-i18n="sup.130">That's <code>install.wim</code>, and FAT32 can't hold it. The app splits it automatically into <code>.swm</code> parts so the drive can stay FAT32 — which is what Secure Boot machines usually need. Windows setup reassembles the parts itself; nothing is lost.</p>
-          <p data-i18n="sup.131">The alternative is NTFS, which has no size limit but isn't accepted by every UEFI firmware.</p>
+          <p data-i18n="sup.130">That's <code>install.wim</code>, and FAT32 can't hold it. In Ultimate USB and DROFUS, tick <strong>Split image for FAT32 compatibility.</strong> to split it into <code>.swm</code> parts so the drive can stay FAT32, which modern Secure Boot PCs usually need. Windows setup puts the parts back together; nothing is lost. Splitting takes a long time.</p>
+          <p data-i18n="sup.131">Without the tick the app uses NTFS, which has no size limit but isn't accepted by every UEFI firmware. On a Ventoy drive the ISO is copied as one file, so use exFAT or NTFS there.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="boot">
         <summary data-i18n="sup.132">How do I switch Ventoy between MBR and GPT?</summary>
         <div class="a">
-          <p data-i18n="sup.133">Inside the app, before installing — you don't need a PC. Choose the partition table on the main screen, then tap Install.</p>
-          <p data-i18n="sup.134"><strong>Install wipes the drive completely</strong>, including any ISOs already copied to it, so copy them back afterwards with the copy-to-USB button.</p>
+          <p data-i18n="sup.133">In Ventoy, or in Ultimate USB under <strong>Ventoy - Unofficial</strong>, choose MBR or GPT under <strong>Partition Table:</strong>, then tap <strong>Install</strong>. You don't need a PC.</p>
+          <p data-i18n="sup.134"><strong>Install wipes the drive completely</strong>, including any ISOs already copied to it, so copy them back afterwards with <strong>Copy File To USB</strong>. <strong>Update</strong> keeps your ISOs but doesn't change the partition table.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="boot">
         <summary data-i18n="sup.135">How do I add or remove ISOs on a Ventoy drive?</summary>
         <div class="a">
-          <p data-i18n="sup.136">Once Ventoy is installed, just copy ISO files onto the drive like ordinary files, or download them straight to the drive from inside the app. No reburning, no reinstalling. Deleting an ISO removes it from the boot menu.</p>
+          <p data-i18n="sup.136">In Ultimate USB and Ventoy, once Ventoy is installed, add ISOs with <strong>Copy File To USB</strong>, or save them straight to the drive with <strong>Download File Directly To USB FROM INTERNET</strong>. Copying them on a PC works too. No reburning, no reinstalling. Delete an ISO in <strong>USB File Manager</strong> and it leaves the boot menu.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="boot">
         <summary data-i18n="sup.137">What is Linux persistence, and why is the option greyed out?</summary>
         <div class="a">
-          <p data-i18n="sup.138">Persistence adds a separate ext3/ext4 partition so files and changes survive a reboot of the live system.</p>
-          <p data-i18n="sup.139">It's only enabled for ISOs that are confirmed to support it — most distributions don't, and offering it for those would produce a drive that silently fails to keep anything.</p>
+          <p data-i18n="sup.138">Persistence keeps your files and changes on the USB drive across reboots of a live Linux system. In Ultimate USB and DROFUS, tick <strong>Advanced Options (Filesystem, Partition &amp; Persistence)</strong>, then set <strong>Persistent partition size</strong>. The app adds an ext3 or ext4 partition for it.</p>
+          <p data-i18n="sup.139">It's offered only for images that support it. For the others the app says why: the image doesn't support it, the distribution sets it up itself, or the image is written sector by sector. It also needs enough free space on the drive. On a Ventoy drive, use <strong>Add persistence</strong> in <strong>Config Hub</strong> (Ultimate USB, Ventoy).</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="boot">
         <summary data-i18n="sup.140">What is Windows To Go?</summary>
         <div class="a">
-          <p data-i18n="sup.141">A full Windows installation that runs from the USB drive itself, rather than an installer that puts Windows onto a PC. Use a fast drive — a slow flash drive makes it painful to use.</p>
+          <p data-i18n="sup.141">In Ultimate USB and DROFUS, choosing <strong>Windows To Go</strong> instead of <strong>Standard Windows Installation</strong> puts a full Windows installation on the USB drive itself, rather than an installer for a PC. It can take several hours: use a fast drive, a fast phone and <strong>High-speed mode.</strong>, and start with a full battery.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="boot">
         <summary data-i18n="sup.142">Can I burn a macOS DMG or a Raspberry Pi image?</summary>
         <div class="a">
-          <p data-i18n="sup.143">Yes — macOS DMG (Intel-based), Raspberry Pi OS and other ARM images are written as raw blocks, preserving the original layout and boot structure. There's no customisation applied to these, by design.</p>
+          <p data-i18n="sup.143">Yes, in Ultimate USB and DROFUS (<strong>ISO Burner</strong>, <strong>Disk or ISO image</strong>), with no token cost. macOS DMG (Intel-based), Raspberry Pi OS and other ARM images are written as raw blocks, preserving the original layout and boot structure. There's no customisation applied to these, by design.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="boot">
+        <summary data-i18n="sup.u.21">What do the Windows setup options do?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.22">In Ultimate USB and DROFUS, <strong>Windows Setup Customization</strong> changes the installer you write. It can remove the TPM 2.0, Secure Boot and 4&nbsp;GB RAM checks, drop the online Microsoft account requirement, create a local account (Windows asks for its password at first sign-in), skip the privacy questions, copy regional settings from your phone and turn off automatic BitLocker encryption. Nothing you enter leaves the phone. On a Ventoy drive, <strong>Config Hub</strong> has <strong>Windows 11: bypass hardware checks</strong> and <strong>Windows 11: bypass online account</strong> instead.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="boot">
+        <summary data-i18n="sup.u.23">Can I theme or password-protect a Ventoy drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.24">Yes, in Ultimate USB and Ventoy. <strong>Theme Manager</strong> imports a GRUB2 theme archive onto the drive, and <strong>Get more themes</strong> opens a theme website in your browser. <strong>Config Hub</strong> sets a boot-menu password, menu options and persistence. These settings are written only to the drive.</p>
         </div>
       </details>
     </div>
@@ -413,10 +479,11 @@
       <details class="q" data-app="usb" data-cat="fail">
         <summary data-i18n="sup.145">The operation is stuck or won't finish</summary>
         <div class="a">
-          <p data-i18n="sup.146">Two causes cover almost every case:</p>
+          <p data-i18n="sup.146">Three causes cover almost every case:</p>
           <ol>
             <li data-i18n="sup.147"><strong>The app was minimised.</strong> Operations pause when the app leaves the foreground — that's deliberate, to protect the drive from a half-finished write. Keep it on screen and keep the screen awake.</li>
             <li data-i18n="sup.148"><strong>The adapter or drive.</strong> Reseat the adapter, don't move the phone while it runs, and try another adapter if it recurs. A loose or charge-only adapter is the usual culprit.</li>
+            <li data-i18n="sup.148b"><strong>No internet or an ad blocker (free version).</strong> The app shows <strong>No Internet Connection</strong> or <strong>Adblocker or Private DNS detected.</strong>, and running operations wait until that's fixed. Pro doesn't pause for either.</li>
           </ol>
           <p data-i18n="sup.149">Large drives and large images simply take time — a write that looks frozen on a slow drive is often still progressing. If the progress figure hasn't moved at all for a long stretch, treat it as a stall and check the two points above.</p>
         </div>
@@ -426,7 +493,7 @@
         <summary data-i18n="sup.150">It stalls near the very end — 99%, or in the last few percent</summary>
         <div class="a">
           <p data-i18n="sup.151">The end of a write is where data reaches the far end of the drive. Stalling there is the classic signature of a drive that <strong>reports more capacity than it physically has</strong>, or whose flash is failing at the far end.</p>
-          <p data-i18n="sup.152">Run the bad-blocks check with fake-capacity detection to confirm. If it comes back bad, no app can fix it — the drive is the problem.</p>
+          <p data-i18n="sup.152">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive). In DROFUS and Ventoy, reconnect the drive: if the end-of-drive test fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and may offer to scan for the size the drive really holds. If the drive is bad, no app can fix it.</p>
         </div>
       </details>
 
@@ -437,7 +504,7 @@
         </div>
       </details>
 
-      <details class="q" data-app="usb" data-cat="fail">
+      <details class="q" data-app="usb usbfm" data-cat="fail">
         <summary data-i18n="sup.155">Can I use my phone while an operation runs?</summary>
         <div class="a">
           <p data-i18n="sup.156">Not on other apps — operations pause when the app is minimised. Leave it in the foreground until it finishes. Long operations on large drives can take a while, so start them when you don't need the phone.</p>
@@ -460,7 +527,7 @@
       <details class="q" data-app="usb" data-cat="health">
         <summary data-i18n="sup.161">How do I tell if a drive is counterfeit?</summary>
         <div class="a">
-          <p data-i18n="sup.162">Run the bad-blocks check with fake-capacity detection. It writes across the whole drive and reads it back — a counterfeit drive reports a large capacity but silently discards anything past its real size, which the test exposes.</p>
+          <p data-i18n="sup.162">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked. It writes across the whole drive and reads it back, so it <strong>erases everything on it</strong>. A counterfeit drive reports a large capacity but silently discards anything past its real size, which the test exposes. All four apps also test the end of the drive when it is connected and show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> if it fails.</p>
           <p data-i18n="sup.163">Symptoms before you test: files that copy successfully but are corrupt afterwards, and writes that stall near the end.</p>
         </div>
       </details>
@@ -468,23 +535,30 @@
       <details class="q" data-app="usb" data-cat="health">
         <summary data-i18n="sup.164">Can a corrupted drive be repaired?</summary>
         <div class="a">
-          <p data-i18n="sup.165">Logical corruption — a broken partition table or file system — is usually fixable by wiping and formatting fresh. That's what the repair tools address.</p>
-          <p data-i18n="sup.166">Physical flash failure isn't repairable by any software. If the bad-blocks check reports errors, replace the drive.</p>
+          <p data-i18n="sup.165">Logical corruption, such as a broken partition table or file system, is usually fixed by formatting fresh: <strong>Format USB</strong> or <strong>Wipe USB</strong> in Ultimate USB and USB Tools, <strong>Non-bootable</strong> in DROFUS, or <strong>Install</strong> in Ventoy. The apps don't repair a drive in place, so copy off what you need first.</p>
+          <p data-i18n="sup.166">Physical flash failure isn't repairable by any software. If <strong>Bad Blocks Check</strong> (Ultimate USB, USB Tools) reports errors, replace the drive.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="health">
-        <summary data-i18n="sup.167">Does secure wipe really erase everything?</summary>
+        <summary data-i18n="sup.167">Does Wipe USB really erase everything?</summary>
         <div class="a">
-          <p data-i18n="sup.168">It performs a full single-pass zero overwrite of the whole device — equivalent to the "Clear" level in NIST SP 800-88. That defeats all normal file-recovery software.</p>
+          <p data-i18n="sup.168"><strong>Wipe USB</strong> (Ultimate USB, USB Tools) overwrites the whole drive once with zeros, which matches the "Clear" level in NIST SP 800-88 and defeats all normal file-recovery software. Choose <strong>Sampled (recommended)</strong> or <strong>Full</strong> verification to have it read the drive back, and save the erasure report and certificate when it finishes.</p>
           <p data-i18n="sup.169">It is not a multi-pass or "Purge"-level erase, and we don't claim it is. For legally mandated destruction standards, follow your own policy.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="health">
+        <summary data-i18n="sup.u.25">How do I get an erasure certificate?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.26">In Ultimate USB and USB Tools, run <strong>Wipe USB</strong>. When it finishes, tap <strong>View erasure report</strong> or <strong>View erasure certificate</strong> and save it. It can't be produced again later. The certificate is made on your phone and goes nowhere unless you share it.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="health">
         <summary data-i18n="sup.170">My drive is slower than advertised</summary>
         <div class="a">
-          <p data-i18n="sup.171">Run the benchmark for real numbers. Bear in mind the whole chain limits speed: a USB 3.0 drive in a USB 2.0 adapter runs at USB 2.0 speed, and advertised figures are usually peak read, not sustained write.</p>
+          <p data-i18n="sup.171">In Ultimate USB and USB Tools, run <strong>Benchmark</strong> for real numbers. Bear in mind the whole chain limits speed: a USB 3.0 drive in a USB 2.0 adapter runs at USB 2.0 speed, and advertised figures are usually peak read, not sustained write.</p>
           <p data-i18n="sup.172">Small-file writes are always dramatically slower than large sequential ones. That's how flash works, not a fault.</p>
         </div>
       </details>
@@ -497,29 +571,29 @@
       <details class="q" data-app="usb" data-cat="games">
         <summary data-i18n="sup.174">How do I set up a drive for PS2 / OPL?</summary>
         <div class="a">
-          <p data-i18n="sup.175">Format the drive to FAT32 with an MBR partition table, then use the PS2 tools to import your games. The app handles the USBExtreme (<code>.ul</code>) conversion for images over 4&nbsp;GB and generates the <code>ul.cfg</code> and playlists.</p>
-          <p data-i18n="sup.176">Run the defragmenter afterwards — OPL requires unfragmented files, and skipping this is the usual cause of games that won't load.</p>
+          <p data-i18n="sup.175">In Ultimate USB and USB Tools, open <strong>PS2 USB Utils</strong>. If the drive isn't FAT32 or exFAT with an MBR partition table, tap <strong>Fix</strong> to prepare it (1 token, erases the drive). Then add games with <strong>Import &amp; Split ISO</strong>. On FAT32, games of 4&nbsp;GB or more are converted to USBExtreme (<code>.ul</code>) and <code>ul.cfg</code> is updated. Other games can use <strong>Direct Copy - Recommended</strong>.</p>
+          <p data-i18n="sup.176">OPL needs unfragmented game files. If a game shows <strong>Fragmented</strong>, tap <strong>Defragment</strong>. If that can't finish, use <strong>Run Full Defragmenter</strong>.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="games">
         <summary data-i18n="sup.177">Which game formats can be converted?</summary>
         <div class="a">
-          <p data-i18n="sup.178">Between ISO, BIN/CUE, VCD, ZSO, CSO and CHD, in the directions each format supports. Compressing to ZSO or CSO saves considerable space at a small performance cost.</p>
+          <p data-i18n="sup.178">In Ultimate USB and USB Tools, <strong>Game Converter</strong> converts between ISO, BIN/CUE, VCD, ZSO, CSO and CHD, in the directions each format supports. Compressing to ZSO or CSO saves considerable space at a small performance cost.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="games">
         <summary data-i18n="sup.179">Do you supply the games, BIOS files, or console firmware?</summary>
         <div class="a">
-          <p data-i18n="sup.180">No. The apps are tools for organising files you already own. We don't bundle, host or distribute game images, BIOS files, console firmware or any proprietary console component, and we won't add features that depend on them.</p>
+          <p data-i18n="sup.180">No. The apps are tools for organising files you already own. We don't bundle, host or distribute game images, BIOS files, console firmware or any proprietary console component. PlayStation 1 games on a PS2 drive need a system file in <code>/POPS/</code> that you must supply yourself.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb" data-cat="games">
         <summary data-i18n="sup.181">Game covers aren't downloading</summary>
         <div class="a">
-          <p data-i18n="sup.182">Artwork is fetched online, so it needs a working connection. Games with an unusual or renamed game ID may have no artwork available to match.</p>
+          <p data-i18n="sup.182">In Ultimate USB and USB Tools, <strong>Download Game Arts</strong> fetches artwork online, so it needs a working connection. Games with an unusual or renamed game ID may have no artwork available to match.</p>
         </div>
       </details>
     </div>
@@ -542,10 +616,10 @@
         </div>
       </details>
 
-      <details class="q" data-app="usb usbfm chaome tumtum cofferlock mixdocs" data-cat="apps">
+      <details class="q" data-app="usb usbfm chaome cofferlock mixdocs" data-cat="apps">
         <summary data-i18n="sup.188">Do my files get uploaded anywhere?</summary>
         <div class="a">
-          <p data-i18n="sup.189">No. Your files are processed on your device, and their contents are never uploaded to us. What each app does send, such as ad requests, crash reports and purchase checks, is set out in its <a href="/privacy_policy.html">privacy policy</a>.</p>
+          <p data-i18n="sup.189">No. Your files are processed on your device, and their contents are never uploaded to us. What each app does send, such as ad requests, crash reports and purchase checks, is set out in that app's own privacy policy; each app links to it in its menu, and all of them are listed on our <a href="/privacy_policy.html">privacy page</a>.</p>
         </div>
       </details>
 
@@ -557,13 +631,41 @@
       </details>
 
       <details class="q" data-app="usb" data-cat="apps">
-        <summary data-i18n="sup.192">How do I restore a backup, or open a .bk file?</summary>
+        <summary data-i18n="sup.u.9">How do I change my ad and privacy choices?</summary>
         <div class="a">
-          <p data-i18n="sup.193">Use <strong>Restore</strong> to write a backup back to a drive. To inspect one without restoring it, open the <code>.bk</code> file in the partition image manager and browse its contents.</p>
+          <p data-i18n="sup.u.10">Tap the <strong>?</strong> (Help) button on the main screen. Where your region requires it, <strong>Privacy Settings</strong> reopens the consent form, where you can change or withdraw consent and, in US states with an opt-out right, opt out of the sale or sharing of your data. <strong>Privacy Policy</strong> in the same menu opens the app's policy: <a href="/ultimate_usb_privacy.html">Ultimate USB</a>, <a href="/drofus_privacy.html">DROFUS</a>, <a href="/ventoy_privacy.html">Ventoy</a>, <a href="/usb_tools_privacy.html">USB Tools</a>. Pro shows no ads at all.</p>
         </div>
       </details>
 
-      <details class="q" data-app="usb usbfm chaome tumtum cofferlock" data-cat="apps">
+      <details class="q" data-app="usb" data-cat="apps">
+        <summary data-i18n="sup.u.11">Can other apps open the files on my USB drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.12">In Ultimate USB, <strong>Partition Mounter</strong> mounts a partition as <strong>Read Only</strong> or <strong>Read / Write</strong>; tap <strong>Open Files App</strong> and other apps can open it through Android's file picker. Unmount it before unplugging. In Ultimate USB and Ventoy, opening a file in <strong>USB File Manager</strong> lets you choose another app to open it straight from the drive.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="apps">
+        <summary data-i18n="sup.u.13">Can I work on a disk image file instead of a drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.u.14">In Ultimate USB, <strong>Partition Image Manager</strong> opens or creates a partition image file (<strong>Create Partition Image .img</strong>) and lets you browse and edit it like a drive. <strong>Raw Write</strong> writes an image file to a drive byte by byte. DROFUS, Ventoy and USB Tools work on drives only.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="apps">
+        <summary data-i18n="sup.u.15">I forgot the password of an encrypted drive</summary>
+        <div class="a">
+          <p data-i18n="sup.u.16">It can't be recovered or reset; that's what protects the files. In Ultimate USB, <strong>USB Encryption</strong> can only make the drive usable again by formatting it, which erases everything. While you still know the password, <strong>Change Password</strong> changes it quickly.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb" data-cat="apps">
+        <summary data-i18n="sup.192">How do I restore a backup, or open a .bk file?</summary>
+        <div class="a">
+          <p data-i18n="sup.193">In Ultimate USB and USB Tools, open <strong>Backup / Restore</strong> and tap <strong>Restore</strong> to write a <code>.bk</code> backup back to a drive. To look inside one without restoring it, open the <code>.bk</code> file in Ultimate USB's <strong>Partition Image Manager</strong>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usb usbfm chaome cofferlock" data-cat="apps">
         <summary data-i18n="sup.194">Is the app available in my language?</summary>
         <div class="a">
           <p data-i18n="sup.195">The apps are translated into many languages and follow your phone's language setting. If a translation is wrong or missing, send us the screen and the correct wording — corrections from native speakers are genuinely welcome.</p>
@@ -586,14 +688,14 @@
       <details class="q" data-app="chaome" data-cat="apps">
         <summary data-i18n="sup.196">ChaoMe: my theme won't apply, or resets after a while</summary>
         <div class="a">
-          <p data-i18n="sup.197">On HyperOS 3, Xiaomi's Themes app checks a theme's rights with Xiaomi's servers and refuses edited themes, as a whole and part by part. No app can change that. You can still try single parts under <strong>Customize theme</strong> in the Themes app, and ChaoMe's <strong>Set Wallpaper</strong> button applies a theme's wallpaper directly. On older versions, a theme that does apply can later be reset by the Themes app's own rights check.</p>
+          <p data-i18n="sup.197">On recent HyperOS versions, Xiaomi's Themes app checks a theme's rights with Xiaomi's servers and may refuse an edited theme. No app can change that. You can still try single parts under <strong>Customize theme</strong> in the Themes app, and ChaoMe's <strong>Set Wallpaper</strong> button applies a theme's wallpaper directly. Where a theme does apply, Xiaomi's rights check usually resets it within a few hours; your edits stay in the .mtz file and you can apply it again.</p>
         </div>
       </details>
 
       <details class="q" data-app="chaome" data-cat="apps">
         <summary data-i18n="sup.198">ChaoMe: why does it need Shizuku?</summary>
         <div class="a">
-          <p data-i18n="sup.199">From Android 11 onwards, Google's storage rules stop apps from writing into the Themes app's folder. With Shizuku, ChaoMe puts your theme into <strong>Themes &rarr; My themes</strong> without root. Shizuku is optional: without it, the app still builds and exports the .mtz file.</p>
+          <p data-i18n="sup.199">From Android 11 onwards, apps can't read or write the Themes app's folder. With Shizuku (or root), ChaoMe lists the themes already on your phone and puts your theme into <strong>Themes &rarr; My themes</strong>. On Android 13 and later, Shizuku started in ADB (wireless debugging) mode can't write there; only Shizuku started with root can. Shizuku is optional: without it, ChaoMe still builds and exports the .mtz file.</p>
         </div>
       </details>
 
@@ -607,14 +709,14 @@
       <details class="q" data-app="chaome" data-cat="apps">
         <summary data-i18n="sup.ch.5">ChaoMe: where are my themes saved?</summary>
         <div class="a">
-          <p data-i18n="sup.ch.6">Exported .mtz files go to <strong>MIUI/theme</strong> on your phone, or to the folder you choose under <strong>Settings &rarr; Output folder</strong>. Every theme you build is also kept in the <strong>Theme library</strong>, where you can search, compare two themes, reuse single parts and start from a template. The library lives inside the app, so uninstalling it or clearing its data deletes the library: back it up to a zip file from the library first.</p>
+          <p data-i18n="sup.ch.6">Exported .mtz files go to <strong>MIUI/theme</strong> on your phone, or to a folder you choose on the export screen: tick <strong>Edit file name or path</strong>, clear <strong>Use the default path (MIUI/theme)</strong> and tap <strong>&hellip;</strong>. Every theme you build is also kept in the <strong>Theme library</strong>, where you can search, compare two themes, reuse single parts and start from a template. The library lives inside the app, so uninstalling it or clearing its data deletes the library: back it up to a zip file from the library first.</p>
         </div>
       </details>
 
       <details class="q" data-app="chaome" data-cat="apps">
         <summary data-i18n="sup.ch.7">ChaoMe: my font doesn't change everywhere</summary>
         <div class="a">
-          <p data-i18n="sup.ch.8">On HyperOS only the default system font changes. Apps that bring their own fonts keep them, and the new font shows after a restart.</p>
+          <p data-i18n="sup.ch.8">A font theme changes only the phone's default font. Other font styles, letters the font doesn't contain, and apps with their own fonts keep their font. Restart the phone after applying the theme to see the new font.</p>
         </div>
       </details>
 
@@ -628,14 +730,35 @@
       <details class="q" data-app="chaome" data-cat="pro">
         <summary data-i18n="sup.ch.11">ChaoMe: what does PRO add, and how do I restore it?</summary>
         <div class="a">
-          <p data-i18n="sup.ch.12">PRO removes every ad and lets you use the app offline. Every editing feature is free either way. PRO is a one-time purchase tied to your Google account, and the app reads it from Google Play each time it starts, so there is no restore button: reinstall the app or sign in to Google Play with the account that bought it.</p>
+          <p data-i18n="sup.ch.12">PRO removes every ad and lets you use the app offline. Every editing feature is free either way. PRO is a one-time purchase tied to your Google account, and the app reads it from Google Play each time it starts or comes back to the screen, so there is no restore button: reinstall the app or sign in to Google Play with the account that bought it.</p>
         </div>
       </details>
 
       <details class="q" data-app="chaome" data-cat="privacy">
         <summary data-i18n="sup.ch.13">ChaoMe: how do I change my ad choices?</summary>
         <div class="a">
-          <p data-i18n="sup.ch.14">Open <strong>Settings &rarr; Privacy</strong>. Where your region requires it, <strong>Ad and data choices</strong> reopens the consent form, and in US states with an opt-out right <strong>Do not sell or share my personal information</strong> stops personalised ads. See the <a href="/chaome_privacy.html">ChaoMe privacy policy</a>.</p>
+          <p data-i18n="sup.ch.14">Open <strong>Settings &rarr; Privacy</strong>. Where your region requires it, <strong>Ad and data choices</strong> reopens the consent form, and in US states with an opt-out right <strong>Do not sell or share my personal information</strong> stops personalised ads. With PRO, <strong>Settings &rarr; Privacy</strong> shows only the privacy policy. See the <a href="/chaome_privacy.html">ChaoMe privacy policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps" data-app="chaome">
+        <summary data-i18n="sup.ch.15">ChaoMe: why does the free version need the internet?</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.16">The free version is supported by ads and needs a connection while it is open. PRO removes ads and works offline. Your themes are always built on your phone and are never uploaded.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps" data-app="chaome">
+        <summary data-i18n="sup.ch.17">ChaoMe: I can't see the themes already on my phone</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.18">Since Android 11, apps can't read the installed-themes folder by themselves. Install Shizuku, start it and tap <strong>Allow</strong> when ChaoMe asks; on a rooted phone, allow root instead. The themes appear the next time ChaoMe starts.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps" data-app="chaome">
+        <summary data-i18n="sup.ch.19">ChaoMe: how do I move my theme library to a new phone?</summary>
+        <div class="a">
+          <p data-i18n="sup.ch.20">In the <strong>Theme library</strong>, tap <strong>Back up</strong> to save a zip file, copy it to the new phone and tap <strong>Restore</strong> there. PRO comes back from Google Play by itself.</p>
         </div>
       </details>    </div>
 
@@ -665,7 +788,7 @@
       <details class="q" data-cat="format" data-app="usbfm">
         <summary data-i18n="sup.fm.8">Can I write to NTFS drives?</summary>
         <div class="a">
-          <p data-i18n="sup.fm.9">Yes, NTFS drives are fully readable and writable. A drive opens <strong>read-only</strong> only when Windows hibernated it (Fast Startup) or did not close it cleanly, or when the drive itself is write-protected. Shut Windows down fully (not Restart or Sleep), then connect the drive again.</p>
+          <p data-i18n="sup.fm.9">Yes, NTFS drives are fully readable and writable. A drive opens <strong>read-only</strong> only when Windows hibernated it (Fast Startup), when Windows did not close it cleanly and it could not be repaired, or when the drive is write-protected or refuses writes. Shut Windows down fully (not Restart or Sleep), or check the drive in Windows, then connect it again.</p>
         </div>
       </details>
 
@@ -693,28 +816,28 @@
       <details class="q" data-cat="connect" data-app="usbfm">
         <summary data-i18n="sup.fm.16">How do I unplug the drive safely?</summary>
         <div class="a">
-          <p data-i18n="sup.fm.17">Tap <strong>Eject</strong> on the drive's card and wait until it shows <strong>Ejected</strong> before you pull the drive out. Eject waits for the current operation to finish and writes out every change; if something could not be saved, the app tells you to check the drive on a computer. Unplugging during a copy can damage the files being written.</p>
+          <p data-i18n="sup.fm.17">Wait for any running operation to finish, then tap <strong>Eject</strong> on the drive's card. When it says <strong>Safe to unplug</strong>, pull the drive out. If something could not be saved, the app tells you to check the drive on a computer. Unplugging during a copy can damage the files being written.</p>
         </div>
       </details>
 
       <details class="q" data-cat="pro" data-app="usbfm">
         <summary data-i18n="sup.fm.18">I bought Pro and it isn't active</summary>
         <div class="a">
-          <p data-i18n="sup.fm.19">Pro is a one-time purchase tied to your Google account. Open the Pro screen and tap <strong>Restore purchases</strong> while online. If it still isn't active, check that the Play Store is signed in with the account that bought it and that the payment isn't still pending. Pro removes all ads and the notice about ad blockers and Private DNS, and once confirmed it works offline for up to 30 days at a time.</p>
+          <p data-i18n="sup.fm.19">Pro is a one-time purchase tied to your Google account. Open <strong>&#8942; &rarr; Go Pro: remove ads</strong> (or <strong>Settings &rarr; Remove ads</strong>) and tap <strong>Restore purchases</strong> while online. If it still isn't active, check that the Play Store is signed in with the account that bought it and that the payment isn't still pending. Pro removes all ads, the <strong>No Internet Connection</strong> pause and the ad-blocker notice, and once confirmed it works offline for up to 30 days at a time.</p>
         </div>
       </details>
 
       <details class="q" data-cat="apps" data-app="usbfm">
         <summary data-i18n="sup.fm.20">The app says it is out of date</summary>
         <div class="a">
-          <p data-i18n="sup.fm.21">When the app shows <strong>Update Required</strong>, tap <strong>UPDATE NOW</strong> to open its Google Play page. If the update is mandatory, the app closes after a few seconds until it is updated.</p>
+          <p data-i18n="sup.fm.21">When the app shows <strong>Update Required</strong>, tap <strong>UPDATE NOW</strong> to open its Google Play page. If the update isn't mandatory you can tap <strong>LATER</strong>. If it is, there is no LATER button and the app closes after a few seconds until it is updated.</p>
         </div>
       </details>
 
       <details class="q" data-cat="format" data-app="usbfm">
         <summary data-i18n="sup.fm.22">Which file systems and drives work?</summary>
         <div class="a">
-          <p data-i18n="sup.fm.23">FAT12, FAT16, FAT32, exFAT, NTFS and ext2/3/4, all readable and writable, on flash drives, card readers, hard disks and SSDs (through a powered hub if needed). Drives with several partitions (MBR or GPT) show each one as <strong>Partition 1</strong>, <strong>Partition 2</strong> and so on, and you can open several drives and partitions at once in tabs.</p>
+          <p data-i18n="sup.fm.23">FAT12, FAT16, FAT32, exFAT, NTFS and ext2/3/4, all readable and writable, on flash drives, card readers, hard disks and SSDs (through a powered hub if needed). Drives with several partitions (MBR or GPT) show each one by its label, or as <strong>Partition 1</strong>, <strong>Partition 2</strong> and so on when it has none, and you can open several drives and partitions at once in tabs.</p>
         </div>
       </details>
 
@@ -729,6 +852,34 @@
         <summary data-i18n="sup.fm.26">How do I change my ad choices in USB File Manager?</summary>
         <div class="a">
           <p data-i18n="sup.fm.27">Where your region requires it, open <strong>&#8942; &rarr; Settings &rarr; Help &amp; about &rarr; Privacy Settings</strong> to reopen the consent form. Pro has no ads at all. See the <a href="/usb_file_manager_privacy.html">USB File Manager privacy policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usbfm" data-cat="apps">
+        <summary data-i18n="sup.fm.28">It says an ad blocker was detected</summary>
+        <div class="a">
+          <p data-i18n="sup.fm.29">While an operation runs, the free version pauses if ads are blocked by an ad-blocker app, Private DNS or your network. Turn the blocker off, or set Private DNS to <code>dns.google</code>, then restart the app. Pro works with ad blockers.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usbfm" data-cat="apps">
+        <summary data-i18n="sup.fm.30">How do I open or share a file with another app?</summary>
+        <div class="a">
+          <p data-i18n="sup.fm.31">Tap the file, or use <strong>Open with&hellip;</strong> or <strong>Share</strong> (up to 16 files). The file is read straight from the drive, and the app you choose can save changes back to it.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usbfm" data-cat="apps">
+        <summary data-i18n="sup.fm.32">How do I copy files between my phone and the drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.fm.33">In a folder, tap <strong>Add &rarr; Import File / Files</strong> or <strong>Import Directory</strong>. To copy to the phone, select files and use <strong>Copy to&hellip;</strong> or <strong>Export</strong>. The phone side always goes through Android's folder picker.</p>
+        </div>
+      </details>
+
+      <details class="q" data-app="usbfm" data-cat="apps">
+        <summary data-i18n="sup.fm.34">How do I clear the Recent list or rename my drive?</summary>
+        <div class="a">
+          <p data-i18n="sup.fm.35">Recent tab &rarr; <strong>Clear history</strong>; the list stays on your phone and is not backed up. To rename a drive, open it and use <strong>&#8942; &rarr; Rename label</strong>.</p>
         </div>
       </details>
     </div>
@@ -747,14 +898,14 @@
       <details class="q" data-cat="play" data-app="tumtum">
         <summary data-i18n="sup.tt.3">How do I get coins and hints?</summary>
         <div class="a">
-          <p data-i18n="sup.tt.4">Coins are earned by playing. If you want a hint and are short of coins, you can choose to watch a short video for a few more. Watching is always optional.</p>
+          <p data-i18n="sup.tt.4">You earn coins by solving levels for the first time (more for more stars and for 3-star streaks) and from a chest at the end of every fifth chapter. A hint costs 10 coins. If you tap <strong>Hint</strong> without enough coins and a video is available, you can choose <strong>Watch an ad</strong> to earn 15 coins. Watching is always optional.</p>
         </div>
       </details>
 
       <details class="q" data-cat="play" data-app="tumtum">
         <summary data-i18n="sup.tt.5">A level seems impossible</summary>
         <div class="a">
-          <p data-i18n="sup.tt.6">Every level has been checked by hand for a clean solution. Remember that one swipe moves <strong>every</strong> character until it hits something, so the order of your swipes matters. Use <strong>Undo</strong> or <strong>Restart</strong> freely, or take a hint.</p>
+          <p data-i18n="sup.tt.6">Every level is checked by a solver to make sure it has a solution, and the move limit is based on the best one. One swipe moves <strong>every</strong> character until it hits something, so the order of your swipes matters. Pits and spikes are one-way, and only <strong>Undo</strong> brings a character back. Use <strong>Undo</strong> or <strong>Restart</strong> freely, or tap <strong>Hint</strong>.</p>
         </div>
       </details>
 
@@ -768,14 +919,42 @@
       <details class="q" data-cat="play" data-app="tumtum">
         <summary data-i18n="sup.tt.9">My progress is gone, or I changed phones</summary>
         <div class="a">
-          <p data-i18n="sup.tt.10">Progress, stars and coins are saved <strong>on your device</strong>. There is no account and no cloud save, so clearing the game's data or uninstalling it resets your progress.</p>
+          <p data-i18n="sup.tt.10">Progress, stars and coins are saved <strong>on your device</strong>. There is no account and no cloud save, so clearing the game's data or uninstalling it resets your progress. If Android backup is on, reinstalling on the same phone may bring it back, but progress can't be moved to a different phone model.</p>
         </div>
       </details>
 
       <details class="q" data-cat="privacy" data-app="tumtum">
         <summary data-i18n="sup.tt.11">How do I turn off personalized ads or crash reports?</summary>
         <div class="a">
-          <p data-i18n="sup.tt.12">Open <strong>Settings &rarr; Privacy</strong> in the game. There you can turn off personalised ads (shown as &ldquo;Do not sell or share my personal information&rdquo; when your device's region is the United States), reopen <strong>Ad and data choices</strong> where your region requires it, and switch <strong>Crash reports</strong> off or on. See the <a href="/tumtum_privacy.html">TumTum privacy policy</a> for the details.</p>
+          <p data-i18n="sup.tt.12">Open <strong>Settings &rarr; Privacy</strong> in the game. Tap <strong>Personalised ads &bull; On</strong> to turn personalisation off (with US English it's shown as <strong>Do not sell or share my personal information</strong>). Where your region requires it, <strong>Ad and data choices</strong> reopens the consent form. Switch <strong>Crash reports</strong> off or on there too. See the <a href="/tumtum_privacy.html">TumTum privacy policy</a> for the details.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="play" data-app="tumtum">
+        <summary data-i18n="sup.tt.13">Why don't I see the &ldquo;Watch an ad&rdquo; option?</summary>
+        <div class="a">
+          <p data-i18n="sup.tt.14">It appears only when you tap <strong>Hint</strong> without enough coins and a video has loaded. You need a connection, and in regions that require consent, ads stay off until you answer the privacy prompt. You can change your answer in <strong>Settings &rarr; Privacy &rarr; Ad and data choices</strong>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="play" data-app="tumtum">
+        <summary data-i18n="sup.tt.15">How do I turn off sound, music or vibration?</summary>
+        <div class="a">
+          <p data-i18n="sup.tt.16">Open <strong>Settings &rarr; Sound &amp; vibration</strong> in the game. Sound, music and vibration each have their own switch, and sound and music have a volume slider.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="play" data-app="tumtum">
+        <summary data-i18n="sup.tt.17">Can I change the game's language?</summary>
+        <div class="a">
+          <p data-i18n="sup.tt.18">Yes. TumTum is available in 11 languages and follows your phone's language by default. To choose another, open <strong>Settings &rarr; Language</strong> in the game; pick <strong>System default</strong> to follow the phone again.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="privacy" data-app="tumtum">
+        <summary data-i18n="sup.tt.19">Does TumTum need an account or upload anything?</summary>
+        <div class="a">
+          <p data-i18n="sup.tt.20">No. There's no account or sign-up, and the game handles none of your files. It sends only ad requests and, if switched on, crash reports. See the <a href="/tumtum_privacy.html">TumTum privacy policy</a>.</p>
         </div>
       </details>
     </div>
@@ -815,7 +994,7 @@
       <details class="q" data-cat="vault" data-app="cofferlock">
         <summary data-i18n="sup.cl.11">Fingerprint unlock stopped working</summary>
         <div class="a">
-          <p data-i18n="sup.cl.12">Fingerprint unlock works per vault, on Android 9 and later with a strong fingerprint sensor. Your password always stays the master key. If you add or remove fingerprints in Android, unlock with the password and turn fingerprint unlock on again in Settings. Face unlock is not supported.</p>
+          <p data-i18n="sup.cl.12">Fingerprint unlock works per vault, on Android 9 and later with a strong fingerprint sensor. Your password always stays the master key. If you add or remove fingerprints in Android, unlock with the password and turn fingerprint unlock on again in Settings. It works with strong (Class 3) biometrics only; most phones' face unlock is not strong enough and is not offered.</p>
         </div>
       </details>
 
@@ -871,7 +1050,35 @@
       <details class="q" data-cat="privacy" data-app="cofferlock">
         <summary data-i18n="sup.cl.23">Does Cofferlock use the internet?</summary>
         <div class="a">
-          <p data-i18n="sup.cl.24">Only to check for app updates and to confirm purchases with Google Play. Your files, passwords and recovery phrase never leave your phone. See the <a href="/cofferlock_privacy.html">Cofferlock privacy policy</a>.</p>
+          <p data-i18n="sup.cl.24">Only to check for app updates, to confirm purchases with Google Play and, if your phone's automatic date and time is off, to read the time from a public time server. Vaults open offline. Your files, passwords and recovery phrase never leave your phone. See the <a href="/cofferlock_privacy.html">Cofferlock privacy policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="vault" data-app="cofferlock">
+        <summary data-i18n="sup.cl.30">Does Cofferlock work offline?</summary>
+        <div class="a">
+          <p data-i18n="sup.cl.31">Yes. Creating, opening and using vaults never needs the internet. Only the update check and the purchase check use it.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="vault" data-app="cofferlock">
+        <summary data-i18n="sup.cl.32">Cofferlock asks me to update before I can open a vault</summary>
+        <div class="a">
+          <p data-i18n="sup.cl.33">Update Cofferlock from Google Play. Your vaults are not changed and open again after the update. Keep automatic updates on so this doesn't interrupt you.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="pro" data-app="cofferlock">
+        <summary data-i18n="sup.cl.34">I bought Pro but it is not on yet</summary>
+        <div class="a">
+          <p data-i18n="sup.cl.35">Pro turns on once Google Play confirms the purchase, which needs an internet connection once. Wait a moment, or use <strong>Settings &rarr; About &rarr; Restore purchase</strong>. If it still fails, contact us with a screenshot of your Play purchase history.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="vault" data-app="cofferlock">
+        <summary data-i18n="sup.cl.36">How do I send a file securely?</summary>
+        <div class="a">
+          <p data-i18n="sup.cl.37">Select it and choose <strong>Send as sealed envelope</strong> (Pro). It becomes a small vault file with its own password; send it through any app and tell the password in person. Nothing goes through our servers.</p>
         </div>
       </details>
     </div>
@@ -890,7 +1097,7 @@
       <details class="q" data-cat="apps" data-app="mixdocs">
         <summary data-i18n="sup.md.3">A file won't open</summary>
         <div class="a">
-          <p data-i18n="sup.md.4">If a PDF is damaged, run the free <strong>Repair</strong> tool: it usually recovers the file and never changes the original. If MixDocs says the Office engine is missing, update or reinstall MixDocs from Google Play.</p>
+          <p data-i18n="sup.md.4">If a PDF is damaged, run the free <strong>Repair PDF</strong> tool (Tools tab): it usually recovers the file and never changes the original. If MixDocs shows <strong>Office engine missing</strong>, tap <strong>Open Google Play</strong> and update or reinstall MixDocs.</p>
         </div>
       </details>
 
@@ -904,7 +1111,7 @@
       <details class="q" data-cat="apps" data-app="mixdocs">
         <summary data-i18n="sup.md.7">Where are my saved files?</summary>
         <div class="a">
-          <p data-i18n="sup.md.8">New files go to <strong>Download/MixDocs</strong> by default, and the original is never overwritten. Change the folder in <strong>Settings &rarr; Where new files go</strong>, or use <strong>Save as…</strong> on a result.</p>
+          <p data-i18n="sup.md.8">New files go to <strong>Download/MixDocs</strong> by default, and your original is only changed if you choose <strong>Replace original</strong>. Change the folder in <strong>Settings &rarr; Where new files go</strong>, or use <strong>Save as…</strong> on a result.</p>
         </div>
       </details>
 
@@ -918,15 +1125,36 @@
       <details class="q" data-cat="pro" data-app="mixdocs">
         <summary data-i18n="sup.md.11">Does MixDocs work offline?</summary>
         <div class="a">
-          <p data-i18n="sup.md.12">Scanning and text recognition run on your phone, and your documents never leave it. The free version needs an internet connection because it is paid for by ads; <strong>MixDocs Pro</strong> works offline.</p>
+          <p data-i18n="sup.md.12">Scanning and text recognition run on your phone, and your documents never leave it. The free version needs an internet connection because it is paid for by ads; <strong>MixDocs Pro</strong> works offline. Right after installation, Google Play downloads the text-recognition models, and the first scan may need a connection while Google Play services sets up the scanner.</p>
         </div>
       </details>
 
       <details class="q" data-cat="pro" data-app="mixdocs">
         <summary data-i18n="sup.md.13">What does MixDocs Pro unlock, and how do I restore it?</summary>
         <div class="a">
-          <p data-i18n="sup.md.14">Pro is a one-time purchase that removes all ads, unlocks every Pro tool (such as converting PDF to Word, Excel or PowerPoint, text recognition, redaction and digital signatures) and lets MixDocs work offline. Without Pro, you can watch a short ad to use a Pro tool once.</p>
+          <p data-i18n="sup.md.14">Pro is a one-time purchase that removes all ads, unlocks every Pro tool (such as converting PDF to Word, Excel or PowerPoint, text recognition, redaction and digital signatures) and lets MixDocs work offline. Without Pro, you can watch a short ad to use most Pro tools once.</p>
           <p data-i18n="sup.md.15">Pro follows your Google account. MixDocs checks it at every start; you can also use <strong>Settings &rarr; MixDocs Pro &rarr; Restore</strong>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="privacy" data-app="mixdocs">
+        <summary data-i18n="sup.md.16">MixDocs says an ad blocker is on</summary>
+        <div class="a">
+          <p data-i18n="sup.md.17">The free version is paid for by ads. Turn off the ad-blocking app, VPN or Private DNS (<strong>Android Settings &rarr; Network &amp; internet &rarr; Private DNS &rarr; Automatic</strong> or <strong>Off</strong>), then tap <strong>I&rsquo;ve allowed ads &mdash; check again</strong>. MixDocs Pro removes ads and this check.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="privacy" data-app="mixdocs">
+        <summary data-i18n="sup.md.18">How do I change my ad consent, or delete my data?</summary>
+        <div class="a">
+          <p data-i18n="sup.md.19">Open <strong>Settings &rarr; Ad privacy choices</strong> (shown where the law in your region requires a choice). There is no account. Use <strong>Settings &rarr; Storage &rarr; Clear temporary files</strong>, <strong>Clear</strong> next to Recent, or Android's <strong>Apps &rarr; MixDocs &rarr; Storage &rarr; Clear storage</strong>; files you saved stay yours. See the <a href="/mixdocs_privacy.html">MixDocs privacy policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="q" data-cat="apps" data-app="mixdocs">
+        <summary data-i18n="sup.md.20">How do I move my MixDocs settings to a new phone?</summary>
+        <div class="a">
+          <p data-i18n="sup.md.21">Use <strong>Settings &rarr; Backup &rarr; Export settings and library</strong>, then <strong>Import from a backup</strong> on the new phone. Documents are not copied; add your folders again on the new phone.</p>
         </div>
       </details>
     </div>

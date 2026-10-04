@@ -3,12 +3,12 @@
   <section class="pagehead reveal in">
     <h1>Privacy Policy — MultiOS USB</h1>
     <p>This policy applies to the <strong>MultiOS USB</strong> app (<code>com.mixapplications.multiosusb</code>) published by MixApplications. It is specific to MultiOS USB; other MixApplications apps have their own policies, listed in the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to MultiOS USB.</p>
-    <span class="stamp">Last updated: October 4, 2026</span>
+    <span class="stamp">Last updated: October 5, 2026</span>
   </section>
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>MultiOS USB works on USB drives directly on your phone. <strong>The contents of your files, disk images and drives are processed on your device and never uploaded.</strong> The App has no account. What is collected comes from the services built into it: ads (with consent where the law requires it), Firebase Analytics (adults on the free version only, once the consent step is complete or where none is required), crash reports, an update notice, Google Play app-integrity checks, and a purchase check when you buy tokens or Pro. Pro has no ads and no tokens.</p>
+    <p>MultiOS USB works on USB drives directly on your phone. <strong>The contents of your files, disk images and drives are processed on your device and never uploaded.</strong> The App has no account. What is collected comes from the services built into it: ads (with consent where the law requires it), Firebase Analytics (adults only, once the consent step is complete or where none is required), crash reports, an update notice, Google Play app-integrity checks, and a purchase check when you buy tokens or Pro. Pro has no ads and no tokens.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -41,20 +41,21 @@
     <p>The App connects to the internet for the following, each described below:</p>
     <ul>
         <li><strong>Ads</strong> through the Appodeal mediation platform and the ad networks reachable through it, after consent where the law requires it (Sections 5 and 13). Not in Pro.</li>
-        <li><strong>Firebase Analytics</strong>, switched on only in the free version, only for users Google Play does not report as under 18, and only once the consent step is complete (or where your region requires none) (Section 13).</li>
+        <li><strong>Firebase Analytics</strong>, switched on only for users Google Play does not report as under 18, and only once the consent step is complete (or where your region requires none) (Section 13).</li>
         <li><strong>Crash reports</strong> sent to Firebase Crashlytics when the App crashes or hits an error (Section 13).</li>
         <li><strong>Update notice.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version is available or required. Firebase receives a Firebase installation identifier and basic app and device details.</li>
-        <li><strong>App integrity.</strong> Google Play Integrity, through Firebase App Check, confirms that requests come from a genuine copy of the App.</li>
+        <li><strong>App integrity.</strong> The App obtains a Google Play Integrity token through Firebase App Check and attaches it to its requests to our purchase check, so they can be identified as coming from a genuine copy of the App.</li>
+        <li><strong>Time check.</strong> The App asks public internet time servers (such as Google&rsquo;s, Apple&rsquo;s, Microsoft&rsquo;s, NIST&rsquo;s and the NTP Pool&rsquo;s) for the current date. The request contains no information about you; like any connection, it shows your IP address to that time server.</li>
         <li><strong>Purchase check</strong> when you buy tokens or Pro (Section 4).</li>
         <li><strong>Ad connection check</strong> (free version only). To tell you when an ad blocker or Private DNS stops ads from loading, the App tries to connect to a few advertising servers. Nothing is sent beyond the connection attempt. The free version needs an internet connection: running operations pause while you are offline or while ads are blocked.</li>
-        <li><strong>Downloads you start.</strong> <em>Download File Directly To USB FROM INTERNET</em> opens a built-in browser that starts at Google. The websites you visit receive your requests as in any browser, and the file you choose is downloaded from that website straight onto your USB drive. Those requests go to the websites you choose, not to us.</li>
+        <li><strong>Downloads you start.</strong> <em>Download File Directly To USB FROM INTERNET</em> opens a built-in browser that starts at Google; text you type that is not a web address is sent to Google Search. The websites you visit receive your requests as in any browser, and the file you choose is downloaded from that website straight onto your USB drive. Those requests go to the websites you choose, not to us.</li>
     </ul>
 
     <h2 id="s2">2. Where Your Data Is</h2>
     <ul>
         <li><strong>Your files, disk images and drives</strong> stay where they are. Files the App creates are saved on your USB drive or where you choose with the Android file picker.</li>
         <li><strong>Your token balance, Pro status, purchase records and settings</strong> are kept in the App&rsquo;s private storage on your device, which other apps cannot read. Your token balance is never sent anywhere.</li>
-        <li><strong>Temporary files</strong> (working files used while preparing a drive) are kept in the App&rsquo;s cache and removed when the App starts. The built-in browser keeps its own website data (such as cookies) in the App&rsquo;s private storage, and the web address of a download that has not finished is kept in the cache until the download completes or you clear the App&rsquo;s data.</li>
+        <li><strong>Temporary files</strong> (working files used while preparing a drive) are kept in the App&rsquo;s cache and deleted when the operation finishes; any left behind by an interrupted operation are removed the next time the App starts or when Android clears the cache. The built-in browser keeps its own website data (such as cookies) in the App&rsquo;s private storage, and, while a download is unfinished, a small progress file named after the file being downloaded (its size and how much has arrived, so it can resume) is kept in the cache until the download completes or you clear the App&rsquo;s data.</li>
     </ul>
 
     <h2 id="s3">3. Permissions</h2>
@@ -62,7 +63,7 @@
     <ul>
         <li><strong>USB access</strong>: to read and write a USB drive directly, after you allow it in Android&rsquo;s prompt.</li>
         <li><strong>Wake lock</strong>: to keep the phone awake during a long operation.</li>
-        <li><strong>Internet and network state</strong>: for ads, Firebase, Google Play billing and the connection check.</li>
+        <li><strong>Internet and network state</strong>: for ads, Firebase, Google Play billing, the connection check and the time check.</li>
         <li><strong>Advertising ID</strong>: used by the ad partners as described in Section 5.</li>
         <li><strong>Root access</strong> (rooted phones only): used only for the SD card slot. Your root manager may ask when the App starts; you can refuse. This is a prompt from your root manager, not an Android permission.</li>
     </ul>
@@ -147,7 +148,7 @@
     <p>To operate, monetize and improve the App, we collect and share specific categories of data through third-party SDKs. In line with our Google Play Data safety declaration, the App collects and/or shares the following data types:</p>
     <ul>
         <li><strong>Diagnostics</strong>: crash logs and other app performance data: stack traces, device model and Android version, how the App was installed, and technical details of the operation that failed (such as the partition layout, file system, write settings and the drive&rsquo;s error codes). A crash report can also contain the address or name of a file you picked and error text that includes a file path. File contents are never included. Crash reporting is used for every user, to keep the App working.</li>
-        <li><strong>App interactions</strong>: through Firebase Analytics (adults on the free version only, once the consent step is complete or where none is required) and through the advertising SDKs.</li>
+        <li><strong>App interactions</strong>: through Firebase Analytics (adults only, once the consent step is complete or where none is required) and through the advertising SDKs.</li>
         <li><strong>Approximate location</strong>: inferred by advertising SDKs from network information; the App does not request or use Android location permissions or APIs.</li>
         <li><strong>Device or other IDs</strong>: the advertising ID, the Firebase installation ID, and your IP address, which every network request carries.</li>
         <li><strong>Purchase history</strong>: purchase tokens of the tokens and Pro you buy, processed as described in Section 4.</li>
@@ -165,7 +166,7 @@
             <tbody>
                 <tr>
                     <td><strong>Analytics &amp; Crash Reporting (<a href="https://firebase.google.com/support/privacy" rel="nofollow">Firebase</a> Analytics and Crashlytics)</strong></td>
-                    <td>Bug fixing (Crashlytics, every user); Analytics only for adults on the free version, once the consent step is complete or where none is required</td>
+                    <td>Bug fixing (Crashlytics, every user); Analytics only for adults, once the consent step is complete or where none is required</td>
                     <td>Crashlytics data is retained for 90 days; Firebase Analytics data for 2 months. Deleted automatically thereafter.</td>
                 </tr>
                 <tr>
@@ -175,7 +176,7 @@
                 </tr>
                 <tr>
                     <td><strong>App integrity (Google Play Integrity via Firebase App Check)</strong></td>
-                    <td>Confirming that requests come from a genuine, unmodified copy of the App; fraud prevention</td>
+                    <td>Attesting that requests come from a genuine, unmodified copy of the App; fraud prevention</td>
                     <td>Handled by Google under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>; not stored by us.</td>
                 </tr>
                 <tr>
