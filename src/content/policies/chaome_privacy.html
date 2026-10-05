@@ -7,7 +7,7 @@
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>ChaoMe builds MIUI and HyperOS themes on your phone. <strong>Your themes, projects, images, fonts and exported .mtz files never leave your device</strong>, and the App has no account or login and no server of ours. What is collected comes from the services built into the App: ads (with consent where the law requires it), Firebase Analytics (adults only, once the consent step is complete or where none is required), crash reports, app-integrity checks, and Google Play when you buy PRO. The App&rsquo;s <em>Privacy</em> menu lets you change your ad choices.</p>
+    <p>ChaoMe builds MIUI and HyperOS themes on your phone. <strong>Your themes, projects, images, fonts and exported .mtz files never leave your device</strong>, and the App has no account or login and no server of ours. What is collected comes from the services built into the App: ads (with consent where the law requires it), Firebase Analytics (adults only, and only with your consent where the law requires it), crash reports, app-integrity checks, and Google Play when you buy PRO. The App&rsquo;s <em>Privacy</em> menu lets you change your ad choices.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -40,7 +40,7 @@
     <p>The App connects to the internet for the following, each described below:</p>
     <ul>
         <li><strong>Ads</strong> through the Appodeal mediation platform and the ad networks reachable through it, with consent where the law requires it (Sections 5 and 13).</li>
-        <li><strong>Firebase Analytics</strong>, switched on once the consent step is complete (or where none is required), unless Google Play reports you are under 18 or you choose <em>Do not sell or share my personal information</em> (Section 13).</li>
+        <li><strong>Firebase Analytics</strong>. It starts switched off, with every consent signal denied. Where your region requires consent (for example in the EEA and the UK), it follows the choices you make in the consent form, purpose by purpose: if you do not consent to analytics, no analytics data is collected. Elsewhere it follows the consent tool. It stays off if Google Play reports you are under 18 or you choose <em>Do not sell or share my personal information</em> (Section 13).</li>
         <li><strong>Crash reports</strong> sent to Firebase Crashlytics when the App crashes or hits an error (Section 13). The Appodeal SDK also sends its own crash reports to Appodeal.</li>
         <li><strong>App integrity</strong>: the App checks that it is a genuine, unmodified copy and that PRO was bought through Google Play. Firebase App Check with Google Play Integrity is included for the same purpose.</li>
         <li><strong>Google Play</strong> for the one-time PRO purchase (Section 4) and the Play Age Signals API (Section 12).</li>
@@ -52,7 +52,7 @@
         <li><strong>Your theme library</strong> (the themes the App builds and the themes and parts you add to it) is kept in the App&rsquo;s private storage. A library backup is a zip file saved where you choose with the Android file picker; it is never uploaded.</li>
         <li><strong>Exported themes</strong> (<code>.mtz</code> files) are saved to <code>MIUI/theme</code> on your phone&rsquo;s storage, or to a folder you choose with the Android folder picker. That is shared storage: the files are yours and stay there after the App is uninstalled.</li>
         <li><strong>Themes you install</strong> with Shizuku on Android 11 and later are handed to the phone&rsquo;s own Themes app, on your device. Shizuku is optional and runs locally; it sends nothing to us.</li>
-        <li><strong>Sharing and opening themes.</strong> When you <em>Share</em> a library theme, a copy goes only to the app you pick. <code>.mtz</code> files you open with ChaoMe from other apps, and (with Shizuku or root) the themes already installed in the Themes app, are read on your device.</li>
+        <li><strong>Sharing and opening themes.</strong> When you <em>Share</em> a library theme, a copy goes only to the app you pick. <code>.mtz</code> files you open with ChaoMe from other apps, and (with Shizuku) the themes already installed in the Themes app, are read on your device.</li>
         <li><strong>Settings</strong>, your PRO status and your <em>Do not sell or share</em> choice are kept in encrypted app-private storage on your device; the consent form&rsquo;s record is kept by the consent tools in the App&rsquo;s private storage.</li>
     </ul>
 
@@ -61,26 +61,26 @@
     <ul>
         <li><strong>Internet, network state and Wi-Fi state</strong>: for ads, Firebase, Google Play billing, and to check that the free version is online.</li>
         <li><strong>Set wallpaper</strong>: so that <em>Set Wallpaper</em> can apply a theme&rsquo;s wallpaper directly.</li>
-        <li><strong>Shizuku</strong> (optional): to place a theme in the Themes app&rsquo;s list on Android 11 and later. Without it, the App still edits and exports themes. On a rooted phone, the App can use root instead (after your root manager allows it) for the same local steps.</li>
+        <li><strong>Shizuku</strong> (optional): to place a theme in the Themes app&rsquo;s list on Android 11 and later. Without it, the App still edits and exports themes. Shizuku is the only privileged route the App uses (Shizuku itself may be started with root).</li>
         <li><strong>Storage</strong>: only on Android 10 and older, to read and write theme files.</li>
         <li><strong>Advertising ID</strong>: used by the ad partners as described in Section 5.</li>
         <li><strong>App icons</strong>: to theme app icons, the App reads the names and icons of the apps shown in your launcher and of installed icon packs. This stays on your device.</li>
-        <li>The Google Play licence-check permission, wake lock and vibration are also declared.</li>
+        <li>Wake lock and vibration are also declared.</li>
     </ul>
-    <p>The Google libraries and ad SDKs in the App add their own standard entries, as their documentation describes: Google Play Billing adds the in-app purchase permission; the ad SDKs add Android&rsquo;s advertising-services permissions (ad ID, attribution and topics), a foreground-service permission and, for Amazon ads, a fraud-prevention attestation permission; a library adds access to the Google Play Install Referrer service, which reports how the App was installed. The App does <strong>not</strong> request location, contacts, camera, microphone, notifications, access to all files, access to <em>all</em> installed apps, or permission to install apps; those that libraries would add are removed from the App.</p>
+    <p>The Google libraries and ad SDKs in the App add their own standard entries, as their documentation describes: Google Play Billing adds the in-app purchase permission; the ad SDKs add Android&rsquo;s advertising-services permissions (ad ID, attribution and topics), a licence-check permission (from the AppLovin SDK; the App does not use it), a foreground-service permission and, for Amazon ads, a fraud-prevention attestation permission; a library adds access to the Google Play Install Referrer service, which reports how the App was installed. The App does <strong>not</strong> request location, contacts, camera, microphone, notifications, access to all files, access to <em>all</em> installed apps, or permission to install apps; those that libraries would add are removed from the App.</p>
 
     <h2 id="s4">4. PRO Purchase</h2>
-    <p>PRO is a one-time purchase that removes ads, lets you use the App offline and unlocks the advanced tools (the resource editor, the lock-screen options and template builder, the always-on display editor, the component mixer, porting a theme between versions and the live preview); every other editor, <em>Theme check</em> and re-applying a theme stay free. Purchases are processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. The App checks your purchase <strong>on your device</strong> with Google Play each time it starts or comes back to the screen. We have no purchase server: no purchase token is sent to us. We never receive your payment card or banking details. Google provides us with transaction records (such as order number, product, price, date and country) in the Google Play Console, which we use only for accounting, tax and refunds.</p>
+    <p>PRO is a one-time purchase that removes ads, lets you use the App offline and unlocks the advanced tools (the advanced editors: file browser, XML editor, raw keys and resource catalogue; lock screen options; the new lock screen with its depth, dark-mode, charging and fingerprint options; always-on display and power menu; MAML code with live preview; combining with parts of other themes; and converting a theme for another system version); every other editor, <em>Theme check</em>, .bak import, sharing and exporting, previews and undo/redo stay free. Free users who open a PRO tool see a short explanation; where Google Play reports an age that does not allow purchases, the tool shows as not available on this account and no purchase is offered. Purchases are processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. The App checks your purchase <strong>on your device</strong> with Google Play each time it starts or comes back to the screen. We have no purchase server: no purchase token is sent to us. We never receive your payment card or banking details. Google provides us with transaction records (such as order number, product, price, date and country) in the Google Play Console, which we use only for accounting, tax and refunds.</p>
 
     <h2 id="s5">5. How Ads and Consent Work</h2>
-    <p>Ads are provided through the <strong>Appodeal</strong> mediation platform and the advertising networks reachable through it (listed in Section 13). Before ads are requested, the App asks a consent management platform &mdash; Appodeal&rsquo;s consent manager, with Google&rsquo;s User Messaging Platform (UMP) as a fallback &mdash; whether a consent form is required for you (for example in the EEA and the UK) and records your choice. If you do not consent, ads are shown without personalisation. Firebase Analytics is switched on once the consent step is complete, or where none is required (Section 1). Ad SDKs may note when an app advertised to you is installed, to measure ads.</p>
+    <p>Ads are provided through the <strong>Appodeal</strong> mediation platform and the advertising networks reachable through it (listed in Section 13). Before ads are requested, the App asks a consent management platform &mdash; Appodeal&rsquo;s consent manager, with Google&rsquo;s User Messaging Platform (UMP) as a fallback &mdash; whether a consent form is required for you (for example in the EEA and the UK) and records your choice. If you do not consent, ads are still shown, without personalisation, and the note before the form says so. Firebase Analytics and Google&rsquo;s consent signals follow your choices purpose by purpose (Section 1). Ad SDKs may note when an app advertised to you is installed, to measure ads.</p>
     <p>ChaoMe shows ads. Google AdMob and the other advertising partners named in this policy may serve ads, collect information directly from your device, and use your device&rsquo;s advertising ID (and, inside the web content of an ad, cookies or similar technologies) to show ads, limit how often you see them, measure their performance, prevent fraud and, where you have consented or the law allows, personalize them. To learn how Google uses this information, see <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow">How Google uses information from sites or apps that use our services</a>. You can choose whether Google shows you personalized ads in <a href="https://myadcenter.google.com/" rel="nofollow">My Ad Center</a>, and you can reset or delete your advertising ID at any time in your Android settings (<em>Settings &rarr; Privacy &rarr; Ads</em>, or <em>Settings &rarr; Google &rarr; Ads</em> on some devices).</p>
 
     <h2 id="s6">6. Your Choices and Controls</h2>
     <p>The App&rsquo;s <em>Privacy</em> menu is under <em>Settings &rarr; Privacy</em> (in earlier versions, the <em>Privacy</em> icon in the toolbar). It always contains <em>Privacy policy</em>, which opens this page. The other two entries appear where your local law gives you that right:</p>
     <ul>
         <li><strong>Ad and data choices</strong> reopens the consent form, so you can change or withdraw your consent (for example in the EEA and the UK).</li>
-        <li><strong>Do not sell or share my personal information</strong> opts you out of personalised ads where a US state opt-out right applies. Ads still appear but are not personalised using your advertising ID. The entry shows its current state, and you can allow personalised ads again.</li>
+        <li><strong>Do not sell or share my personal information</strong> opts you out of personalised ads where a US state opt-out right applies. Ads still appear but are not personalised using your advertising ID: the App sends Google&rsquo;s restricted data processing signal and asks Appodeal for non-personalised ads, and Firebase Analytics is switched off. The entry shows its current state, and you can allow personalised ads again.</li>
     </ul>
     <p>Wherever you are, you can also reset or delete your advertising ID in your Android settings, choose ad personalisation in <a href="https://myadcenter.google.com/" rel="nofollow">My Ad Center</a>, or email us (Section 16). Buying PRO removes ads entirely; with PRO, <em>Settings &rarr; Privacy</em> shows only <em>Privacy policy</em>. Crash reports and, where allowed, Firebase Analytics continue with PRO.</p>
 
@@ -95,7 +95,7 @@
     <p><strong>Right to request deletion:</strong> to request deletion of data tied to SDK-level identifiers (such as your advertising ID), reset that identifier in your Android settings, or contact us using the details in Section 16.</p>
 
     <h2 id="s8">8. European Privacy Rights (GDPR)</h2>
-    <p>If you are located in the EU/EEA or the UK, your personal data is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>consent</strong> (personalised advertising), <strong>legitimate interests</strong> (fixing crashes, usage analytics for adults, app integrity, preventing fraud and invalid traffic, and non-personalised ads), <strong>performance of a contract</strong> (providing the PRO purchase) and compliance with <strong>legal obligations</strong> (tax and accounting). You have the following rights:</p>
+    <p>If you are located in the EU/EEA or the UK, your personal data is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>consent</strong> (personalised advertising and usage analytics), <strong>legitimate interests</strong> (fixing crashes, app integrity, preventing fraud and invalid traffic, and non-personalised ads), <strong>performance of a contract</strong> (providing the PRO purchase) and compliance with <strong>legal obligations</strong> (tax and accounting). You have the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we process.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -134,7 +134,9 @@
     <h2 id="s12">12. Children and Audience</h2>
     <p>ChaoMe&rsquo;s declared target audience on Google Play is users <strong>aged 18 and older</strong>. The App is <strong>not directed to children</strong>, and we do not knowingly collect personal information from children. Because an app store cannot prevent a younger user from installing an app, the App uses Google Play&rsquo;s <strong>Age Signals API</strong>. Google Play &mdash; not the App &mdash; decides whether to share an age range, and may show its own prompt asking permission to do so.</p>
     <ul>
-        <li>If Google Play reports a user <strong>under 18</strong>, ad requests are tagged as child-directed and under the age of consent, ads are <strong>never personalised</strong>, Firebase Analytics is off, and PRO is not offered in the App (a parent or guardian needs to approve purchases).</li>
+        <li>If Google Play reports a user <strong>under 13</strong>, ad requests are tagged as child-directed (COPPA) in AdMob and Appodeal.</li>
+        <li>If Google Play reports a user <strong>aged 13&ndash;17</strong>, ad requests are tagged as under the age of consent in AdMob (not child-directed).</li>
+        <li>For anyone reported <strong>under 18</strong>, ads are <strong>never personalised</strong>, Firebase Analytics is off, and PRO is not offered in the App.</li>
         <li>If a supervised account has a pending or declined parental approval, ads are not personalised and PRO is blocked.</li>
         <li>If Google Play reports an adult, or shares nothing, the App uses its normal settings, where personalisation still depends on your consent and on the controls in Section 6.</li>
     </ul>
@@ -143,8 +145,8 @@
     <h2 id="s13">13. Data Types Collected and Shared</h2>
     <p>To operate, monetize and improve the App, we collect and share specific categories of data through third-party SDKs. In line with our Google Play Data safety declaration, the App collects and/or shares the following data types:</p>
     <ul>
-        <li><strong>Diagnostics</strong>: crash logs and other app performance data (stack traces, device model and Android version, how the App was installed, and technical details such as the file paths and commands involved in the failing step). No theme content, file contents, name or contact details.</li>
-        <li><strong>App interactions</strong>: through Firebase Analytics (adults only, once the consent step is complete or where none is required) and through the advertising SDKs.</li>
+        <li><strong>Diagnostics</strong>: crash logs and other app performance data (stack traces, device model and Android version, how the App was installed, and technical details such as the name of the command that failed and the error reason; never file paths). No theme content, file contents, name or contact details.</li>
+        <li><strong>App interactions</strong>: through Firebase Analytics (adults only, and only with your consent where the law requires it) and through the advertising SDKs.</li>
         <li><strong>Approximate location</strong>: inferred by advertising SDKs from network information; the App does not request or use Android location permissions or APIs.</li>
         <li><strong>Device or other IDs</strong>: the advertising ID, the Firebase installation ID, and your IP address, which every network request carries.</li>
         <li><strong>Purchase history</strong>: your PRO purchase, held by Google Play and checked on your device (Section 4).</li>
@@ -162,7 +164,7 @@
             <tbody>
                 <tr>
                     <td><strong>Analytics &amp; Crash Reporting (<a href="https://firebase.google.com/support/privacy" rel="nofollow">Firebase</a> Analytics and Crashlytics)</strong></td>
-                    <td>Bug fixing (Crashlytics, every user); Analytics only for adults, once the consent step is complete or where none is required</td>
+                    <td>Bug fixing (Crashlytics, every user); Analytics only for adults, and only with consent where the law requires it</td>
                     <td>Crashlytics data is retained for 90 days; Firebase Analytics data for 2 months. Deleted automatically thereafter.</td>
                 </tr>
                 <tr>
