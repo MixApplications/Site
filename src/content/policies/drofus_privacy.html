@@ -3,12 +3,12 @@
   <section class="pagehead reveal in">
     <h1>Privacy Policy — DROFUS (ISO 2 USB)</h1>
     <p>This policy applies to the <strong>DROFUS (ISO 2 USB)</strong> app (<code>com.mixapplications.rufus</code>) published by MixApplications. It is specific to DROFUS (ISO 2 USB); other MixApplications apps have their own policies, listed in the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to DROFUS (ISO 2 USB).</p>
-    <span class="stamp">Last updated: October 5, 2026</span>
+    <span class="stamp">Last updated: October 6, 2026</span>
   </section>
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>DROFUS (ISO 2 USB) works on USB drives directly on your phone. <strong>The contents of your files, disk images and drives are processed on your device and never uploaded.</strong> The App has no account. What is collected comes from the services built into it: ads (with consent where the law requires it), Firebase Analytics (adults only, once the consent step is complete or where none is required), crash reports, an update notice, Google Play app-integrity checks, and a purchase check when you buy tokens or Pro. Pro has no ads and no tokens.</p>
+    <p>DROFUS (ISO 2 USB) works on USB drives directly on your phone. <strong>The contents of your files, disk images and drives are processed on your device and never uploaded.</strong> The App has no account. What is collected comes from the services built into it: ads (with consent where the law requires it), Firebase Analytics (adults only, once the consent step is complete or where none is required), crash reports, an update notice and a purchase check when you buy tokens or Pro. Pro has no ads and no tokens.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -44,7 +44,7 @@
         <li><strong>Firebase Analytics</strong>, switched on only for users Google Play does not report as under 18, and only once the consent step is complete (or where your region requires none) (Section 13).</li>
         <li><strong>Crash reports</strong> sent to Firebase Crashlytics when the App crashes or hits an error (Section 13).</li>
         <li><strong>Update notice.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version is available or required. Firebase receives a Firebase installation identifier and basic app and device details.</li>
-        <li><strong>App integrity.</strong> The App obtains a Google Play Integrity token through Firebase App Check and attaches it to its requests to our purchase check, so they can be identified as coming from a genuine copy of the App.</li>
+        <li><strong>App integrity token (earlier versions only).</strong> Earlier versions of the App obtain a Google Play Integrity token through Firebase App Check and attach it to their requests to our purchase check. Our purchase check no longer requires or uses this token, and newer versions do not obtain it.</li>
         <li><strong>Time check.</strong> The App asks public internet time servers (such as Google&rsquo;s, Apple&rsquo;s, Microsoft&rsquo;s, NIST&rsquo;s and the NTP Pool&rsquo;s) for the current date. The request contains no information about you; like any connection, it shows your IP address to that time server.</li>
         <li><strong>Purchase check</strong> when you buy tokens or Pro (Section 4).</li>
         <li><strong>Ad connection check</strong> (free version only). To tell you when an ad blocker or Private DNS stops ads from loading, the App tries to connect to a few advertising servers. Nothing is sent beyond the connection attempt. The free version needs an internet connection: running operations pause while you are offline or while ads are blocked.</li>
@@ -71,7 +71,7 @@
 
     <h2 id="s4">4. Tokens, Pro and Purchases</h2>
     <p>Some operations cost <strong>tokens</strong>. You can get a free token by choosing to watch a rewarded video ad (<em>Get 1 free token</em>), or buy a token pack (<em>Get 5 Tokens</em>). <strong>Pro Version</strong> is a one-time purchase: lifetime, no tokens needed and no ads. Your token balance is kept only on your device: uninstalling the App or clearing its data deletes it, while Pro stays tied to your Google account and comes back automatically.</p>
-    <p>Purchases are processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. To confirm a purchase, and to complete it with Google Play where needed, the App sends the product identifier, the App&rsquo;s package name, the Google-issued <strong>purchase token</strong> and, when completing a purchase, whether it is a consumable (tokens) or not (Pro), over an encrypted connection (HTTPS) to our purchase check, a small program we run on Google Cloud (Firebase Cloud Functions). It asks Google Play whether the purchase is valid. Nothing else is sent: no name, email, file or drive data, and not your token balance. As Google documents for Firebase, the call also carries your connection&rsquo;s IP address, a Firebase installation identifier and a Firebase App Check token. We do not store the purchase token or the answer in a database; Google Cloud keeps its usual technical request logs. Each time the App starts, it asks Google Play which purchases you own, so there is no separate restore step; a purchase restored this way (for example after reinstalling) is checked in the same way.</p>
+    <p>Purchases are processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. To confirm a purchase, and to complete it with Google Play where needed, the App sends the product identifier, the App&rsquo;s package name, the Google-issued <strong>purchase token</strong> and, when completing a purchase, whether it is a consumable (tokens) or not (Pro), over an encrypted connection (HTTPS) to our purchase check, a small program we run on Google Cloud (Firebase Cloud Functions). It asks Google Play whether the purchase is valid. Nothing else is sent: no name, email, file or drive data, and not your token balance. As Google documents for Firebase, the call also carries your connection&rsquo;s IP address and a Firebase installation identifier. Earlier versions of the App also attach a Firebase App Check token, which our purchase check no longer requires or uses. We do not store the purchase token or the answer in a database; Google Cloud keeps its usual technical request logs. Each time the App starts, it asks Google Play which purchases you own, so there is no separate restore step; a purchase restored this way (for example after reinstalling) is checked in the same way.</p>
     <p>We never receive your payment card or banking details. Google provides us with transaction records (such as order number, product, price, date and country) in the Google Play Console, which we use only for accounting, tax and refunds.</p>
 
     <h2 id="s5">5. How Ads and Consent Work</h2>
@@ -98,7 +98,7 @@
     <p><strong>Right to request deletion:</strong> to request deletion of data tied to SDK-level identifiers (such as your advertising ID), reset that identifier in your Android settings, or contact us using the details in Section 16.</p>
 
     <h2 id="s8">8. European Privacy Rights (GDPR)</h2>
-    <p>If you are located in the EU/EEA or the UK, your personal data is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>consent</strong> (personalised advertising), <strong>legitimate interests</strong> (fixing crashes, usage analytics for adults, update notices, app integrity, preventing fraud and invalid traffic, and non-personalised ads; you can object at any time, Section 16), <strong>performance of a contract</strong> (providing the tokens and Pro you buy) and compliance with <strong>legal obligations</strong> (tax and accounting). Google acts as our processor for Firebase. You have the following rights:</p>
+    <p>If you are located in the EU/EEA or the UK, your personal data is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>consent</strong> (personalised advertising), <strong>legitimate interests</strong> (fixing crashes, usage analytics for adults, update notices, preventing fraud and invalid traffic, and non-personalised ads; you can object at any time, Section 16), <strong>performance of a contract</strong> (providing the tokens and Pro you buy) and compliance with <strong>legal obligations</strong> (tax and accounting). Google acts as our processor for Firebase. You have the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we process.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -175,8 +175,8 @@
                     <td>Held by Google Firebase under the <a href="https://firebase.google.com/support/privacy" rel="nofollow">Firebase privacy terms</a>; not stored by us.</td>
                 </tr>
                 <tr>
-                    <td><strong>App integrity (Google Play Integrity via Firebase App Check)</strong></td>
-                    <td>Attesting that requests come from a genuine, unmodified copy of the App; fraud prevention</td>
+                    <td><strong>App integrity token, earlier versions only (Google Play Integrity via Firebase App Check)</strong></td>
+                    <td>Earlier versions attach it to purchase-check requests; our purchase check no longer requires or uses it</td>
                     <td>Handled by Google under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>; not stored by us.</td>
                 </tr>
                 <tr>
