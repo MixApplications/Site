@@ -40,7 +40,6 @@
         <li><strong>Game artwork.</strong> In the PS2 tools of Ultimate USB and USB Tools, the identifiers of games found on your drive (such as a disc serial) are sent to our artwork server to download the game list and cover art. File contents are never sent.</li>
         <li><strong>Downloads you start.</strong> In Ultimate USB, Ventoy and MultiOS USB, the built-in browser and ISO download fetch files directly from the website you choose; those requests go to that website, not to us. The Ventoy theme gallery opens the theme website in your browser.</li>
         <li><strong>Update notices.</strong> Ultimate USB, DROFUS, Ventoy, USB Tools, ISO2USB and MultiOS USB ask Google Firebase Remote Config whether a newer version is available or required.</li>
-        <li><strong>App integrity token (earlier versions only).</strong> Earlier versions of our apps obtain a Google Play Integrity token through Firebase App Check and attach it to their requests to our purchase check. Our purchase check no longer requires or uses this token, and newer versions do not obtain it.</li>
         <li><strong>Time check.</strong> The apps ask public internet time servers (such as Google&rsquo;s, Apple&rsquo;s, Microsoft&rsquo;s, NIST&rsquo;s and the NTP Pool&rsquo;s) for the current date. The request contains no information about you; like any connection, it shows your IP address to that time server.</li>
         <li><strong>Ad connection check</strong> (free versions only). To tell you when an ad blocker or Private DNS stops ads from loading, the apps try to connect to a few advertising servers. Nothing is sent beyond the connection attempt. Running operations pause while you are offline or while ads are blocked.</li>
     </ul>
@@ -138,11 +137,6 @@
                     <td><strong>Update notices (Firebase Remote Config)</strong>: USB apps only</td>
                     <td>Telling you when a newer version is available or required. Firebase receives a Firebase installation identifier and basic app and device details.</td>
                     <td>Held by Google Firebase under the <a href="https://firebase.google.com/support/privacy" rel="nofollow">Firebase privacy terms</a>; not stored by us.</td>
-                </tr>
-                <tr>
-                    <td><strong>App integrity token, earlier versions only (Google Play Integrity via Firebase App Check)</strong></td>
-                    <td>Earlier versions attach it to purchase-check requests; our purchase check no longer requires or uses it</td>
-                    <td>Handled by Google under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>; not stored by us.</td>
                 </tr>
                 <tr>
                     <td><strong>Purchase Verification (our server-side functions, via Google Play Billing)</strong>: USB apps only</td>
