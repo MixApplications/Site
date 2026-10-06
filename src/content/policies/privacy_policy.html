@@ -2,12 +2,12 @@
   <section class="pagehead reveal in">
     <h1>Privacy Policy</h1>
     <p>This general policy applies to earlier versions of <strong>Ultimate USB</strong>, <strong>DROFUS (ISO 2 USB)</strong>, <strong>Ventoy (Unofficial)</strong>, <strong>USB Tools</strong>, and the retired <strong>ISO2USB</strong> and <strong>MultiOS USB</strong> apps, that link to this page, published by MixApplications.<!--app-policies--></p>
-    <span class="stamp">Last updated: October 5, 2026</span>
+    <span class="stamp">Last updated: October 6, 2026</span>
   </section>
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>The files, disk images and drives you work on are processed on your device, and their contents are never uploaded to us. What is collected comes from the advertising, analytics, crash-reporting and app-integrity services built into the apps, from Google Play when you make a purchase, and, in a few features named below, from the requests those features need to work. The sections below set out exactly what that means.</p>
+    <p>The files, disk images and drives you work on are processed on your device, and their contents are never uploaded to us. What is collected comes from the advertising, analytics and crash-reporting services built into the apps, from Google Play when you make a purchase, and, in a few features named below, from the requests those features need to work. The sections below set out exactly what that means.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -40,7 +40,7 @@
         <li><strong>Game artwork.</strong> In the PS2 tools of Ultimate USB and USB Tools, the identifiers of games found on your drive (such as a disc serial) are sent to our artwork server to download the game list and cover art. File contents are never sent.</li>
         <li><strong>Downloads you start.</strong> In Ultimate USB, Ventoy and MultiOS USB, the built-in browser and ISO download fetch files directly from the website you choose; those requests go to that website, not to us. The Ventoy theme gallery opens the theme website in your browser.</li>
         <li><strong>Update notices.</strong> Ultimate USB, DROFUS, Ventoy, USB Tools, ISO2USB and MultiOS USB ask Google Firebase Remote Config whether a newer version is available or required.</li>
-        <li><strong>App integrity.</strong> Our apps obtain a Google Play Integrity token through Firebase App Check and attach it to their requests to our purchase check, so they can be identified as coming from a genuine copy of the app.</li>
+        <li><strong>App integrity token (earlier versions only).</strong> Earlier versions of our apps obtain a Google Play Integrity token through Firebase App Check and attach it to their requests to our purchase check. Our purchase check no longer requires or uses this token, and newer versions do not obtain it.</li>
         <li><strong>Time check.</strong> The apps ask public internet time servers (such as Google&rsquo;s, Apple&rsquo;s, Microsoft&rsquo;s, NIST&rsquo;s and the NTP Pool&rsquo;s) for the current date. The request contains no information about you; like any connection, it shows your IP address to that time server.</li>
         <li><strong>Ad connection check</strong> (free versions only). To tell you when an ad blocker or Private DNS stops ads from loading, the apps try to connect to a few advertising servers. Nothing is sent beyond the connection attempt. Running operations pause while you are offline or while ads are blocked.</li>
     </ul>
@@ -55,7 +55,7 @@
 
     <h2 id="s4">4. European Privacy Rights (GDPR)</h2>
     <p>This section outlines the rights under the General Data Protection Regulation (GDPR) for users in the EU and the European Economic Area (EEA), and under the UK GDPR. If you are located in these regions, your personal data is processed in accordance with these laws.</p>
-    <p>We process information based on the following legal bases: Consent (for personalized advertising), Legitimate Interests (for fixing bugs, usage analytics for adults, app integrity and fraud prevention; you can object at any time), and Contractual Necessity (for providing purchases). You possess the following rights:</p>
+    <p>We process information based on the following legal bases: Consent (for personalized advertising), Legitimate Interests (for fixing bugs, usage analytics for adults and fraud prevention; you can object at any time), and Contractual Necessity (for providing purchases). You possess the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we collect.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -140,8 +140,8 @@
                     <td>Held by Google Firebase under the <a href="https://firebase.google.com/support/privacy" rel="nofollow">Firebase privacy terms</a>; not stored by us.</td>
                 </tr>
                 <tr>
-                    <td><strong>App integrity (Google Play Integrity via Firebase App Check)</strong></td>
-                    <td>Attesting that requests come from a genuine, unmodified copy of the app; fraud prevention</td>
+                    <td><strong>App integrity token, earlier versions only (Google Play Integrity via Firebase App Check)</strong></td>
+                    <td>Earlier versions attach it to purchase-check requests; our purchase check no longer requires or uses it</td>
                     <td>Handled by Google under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>; not stored by us.</td>
                 </tr>
                 <tr>

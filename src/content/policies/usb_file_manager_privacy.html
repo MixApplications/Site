@@ -2,12 +2,12 @@
   <section class="pagehead reveal in">
     <h1>Privacy Policy — USB File Manager</h1>
     <p>This policy applies to the <strong>USB File Manager</strong> app (<code>com.mixapplications.usbfilemanager</code>) published by MixApplications. It is specific to USB File Manager; other MixApplications apps are covered by the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to USB File Manager.</p>
-    <span class="stamp">Last updated: October 5, 2026</span>
+    <span class="stamp">Last updated: October 6, 2026</span>
   </section>
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>USB File Manager reads and writes USB drives on your phone. <strong>Your files and the data on your drives are handled on your device and are never uploaded.</strong> File and folder names stay on your device too, except that an error report can occasionally include the path of a file that failed. The App has no account and no coins or tokens. What is collected comes from the services built into it: ads (with consent where the law requires it), Firebase Analytics (adults only, and only with your consent where the law requires it), crash reports, an update notice, Google Play app-integrity checks, and a purchase check if you buy Pro. Pro has no ads and needs no internet connection.</p>
+    <p>USB File Manager reads and writes USB drives on your phone. <strong>Your files and the data on your drives are handled on your device and are never uploaded.</strong> File and folder names stay on your device too, except that an error report can occasionally include the path of a file that failed. The App has no account and no coins or tokens. What is collected comes from the services built into it: ads (with consent where the law requires it), Firebase Analytics (adults only, and only with your consent where the law requires it), crash reports, an update notice and a purchase check if you buy Pro. Pro has no ads and needs no internet connection.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -43,7 +43,7 @@
         <li><strong>Firebase Analytics</strong> (app usage statistics). It stays off for anyone Google Play reports as under 18. Where your region requires consent (for example in the EEA and the UK), it follows the choices you make in the consent form, purpose by purpose: if you do not consent to analytics, no analytics data is collected, and nothing is collected until you have answered. Elsewhere it is switched on without a form. Pro users follow the same stored choices (Section 13).</li>
         <li><strong>Crash reports</strong> sent to Firebase Crashlytics when the App crashes or hits an error (Section 13).</li>
         <li><strong>Update notice.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version is available or required. Firebase receives a Firebase installation identifier and basic app and device details.</li>
-        <li><strong>App integrity.</strong> The App obtains a Google Play Integrity token through Firebase App Check and attaches it to its requests to our purchase check, so they can be identified as coming from a genuine copy of the App.</li>
+        <li><strong>App integrity token (earlier versions only).</strong> Earlier versions of the App obtain a Google Play Integrity token through Firebase App Check and attach it to their requests to our purchase check. Our purchase check no longer requires or uses this token, and newer versions do not obtain it.</li>
         <li><strong>Time check.</strong> The App asks public internet time servers (such as Google&rsquo;s, Apple&rsquo;s, Microsoft&rsquo;s, NIST&rsquo;s and the NTP Pool&rsquo;s) for the current date. The request contains no information about you; like any connection, it shows your IP address to that time server.</li>
         <li><strong>Purchase check</strong> if you buy Pro (Section 4).</li>
         <li><strong>Ad connection check</strong> (free version only). To tell you when an ad blocker or Private DNS stops ads from loading, the App tries to connect to a few advertising servers. Nothing is sent beyond the connection attempt.</li>
@@ -71,7 +71,7 @@
 
     <h2 id="s4">4. Pro Purchase</h2>
     <p>Pro is a one-time purchase: no ads, no internet connection needed, and no notice about ad blockers or Private DNS. It is processed by <strong>Google Play</strong> under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. The App has <strong>no coins or tokens</strong>. Earlier versions (12.x) also sold coin packs and offered optional reward videos for coins, with the coin balance kept on your device; those are gone.</p>
-    <p>To confirm a new purchase, or to restore Pro with <em>Restore purchases</em>, the App sends the product identifier, the App&rsquo;s package name and the Google-issued <strong>purchase token</strong> over an encrypted connection (HTTPS) to our purchase check, a small program we run on Google Cloud (Firebase Cloud Functions). It asks Google Play whether the purchase is valid and, where needed, completes it with Google Play. Nothing else is sent: no name, email, file or drive data. As Google documents for Firebase, the call also carries your connection&rsquo;s IP address and a Firebase installation identifier. We do not store the token or the answer in a database; Google Cloud keeps its usual technical request logs. The call also carries a Firebase App Check token, and the purchase check answers only requests that carry a valid one. If it refuses a request because it could not confirm the copy of the App, the App instead checks <strong>on your device</strong> Google Play&rsquo;s signature on the purchase (that it is for this App, for this purchase, and that the payment is complete); nothing is sent for that check. If it does not pass, nothing is granted and nothing you already own is taken away. Once confirmed, Pro works offline for up to 30 days before Google Play is asked again. Pro users still send crash reports, receive update notices and use the purchase check when online.</p>
+    <p>To confirm a new purchase, or to restore Pro with <em>Restore purchases</em>, the App sends the product identifier, the App&rsquo;s package name and the Google-issued <strong>purchase token</strong> over an encrypted connection (HTTPS) to our purchase check, a small program we run on Google Cloud (Firebase Cloud Functions). It asks Google Play whether the purchase is valid and, where needed, completes it with Google Play. Nothing else is sent: no name, email, file or drive data. As Google documents for Firebase, the call also carries your connection&rsquo;s IP address and a Firebase installation identifier. We do not store the token or the answer in a database; Google Cloud keeps its usual technical request logs. Earlier versions of the App also attach a Firebase App Check token to the call, which the purchase check no longer requires or uses. If it refuses a request because it could not confirm the copy of the App, the App instead checks <strong>on your device</strong> Google Play&rsquo;s signature on the purchase (that it is for this App, for this purchase, and that the payment is complete); nothing is sent for that check. If it does not pass, nothing is granted and nothing you already own is taken away. Once confirmed, Pro works offline for up to 30 days before Google Play is asked again. Pro users still send crash reports, receive update notices and use the purchase check when online.</p>
     <p>We never receive your payment card or banking details. Google provides us with transaction records (such as order number, product, price, date and country) in the Google Play Console, which we use only for accounting, tax and refunds.</p>
 
     <h2 id="s5">5. How Ads and Consent Work</h2>
@@ -98,7 +98,7 @@
     <p><strong>Right to request deletion:</strong> to request deletion of data tied to SDK-level identifiers (such as your advertising ID), reset that identifier in your Android settings, or contact us using the details in Section 16.</p>
 
     <h2 id="s8">8. European Privacy Rights (GDPR)</h2>
-    <p>If you are located in the EU/EEA or the UK, your personal data is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>consent</strong> (personalised advertising and usage analytics), <strong>legitimate interests</strong> (fixing crashes, update notices, app integrity, preventing fraud and invalid traffic, and non-personalised ads), <strong>performance of a contract</strong> (providing the Pro purchase) and compliance with <strong>legal obligations</strong> (tax and accounting). Google acts as our processor for Firebase. You have the following rights:</p>
+    <p>If you are located in the EU/EEA or the UK, your personal data is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>consent</strong> (personalised advertising and usage analytics), <strong>legitimate interests</strong> (fixing crashes, update notices, preventing fraud and invalid traffic, and non-personalised ads), <strong>performance of a contract</strong> (providing the Pro purchase) and compliance with <strong>legal obligations</strong> (tax and accounting). Google acts as our processor for Firebase. You have the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we process.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -176,8 +176,8 @@
                     <td>Held by Google Firebase under the <a href="https://firebase.google.com/support/privacy" rel="nofollow">Firebase privacy terms</a>; not stored by us.</td>
                 </tr>
                 <tr>
-                    <td><strong>App integrity (Google Play Integrity via Firebase App Check)</strong></td>
-                    <td>Confirming that requests come from a genuine, unmodified copy of the App; fraud prevention</td>
+                    <td><strong>App integrity token, earlier versions only (Google Play Integrity via Firebase App Check)</strong></td>
+                    <td>Earlier versions attach it to purchase-check requests; our purchase check no longer requires or uses it</td>
                     <td>Handled by Google under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>; not stored by us.</td>
                 </tr>
                 <tr>
