@@ -42,7 +42,7 @@
         <li><strong>Ads</strong> through the Appodeal mediation platform and the ad networks reachable through it, with consent where the law requires it (Sections 5 and 13).</li>
         <li><strong>Firebase Analytics</strong>. It starts switched off, with every consent signal denied. Where your region requires consent (for example in the EEA and the UK), it follows the choices you make in the consent form, purpose by purpose: if you do not consent to analytics, no analytics data is collected. Elsewhere it follows the consent tool. It stays off if Google Play reports you are under 18 or you choose <em>Do not sell or share my personal information</em> (Section 13). When it is on, it also records which screens and features you use (for example that a theme build finished, which export route you used, or which PRO tool you opened), using fixed values only: never file, theme or package names, paths or text you typed.</li>
         <li><strong>Crash reports</strong> sent to Firebase Crashlytics when the App crashes or hits an error (Section 13). The Appodeal SDK also sends its own crash reports to Appodeal.</li>
-        <li><strong>App integrity</strong>: the App checks that it is a genuine, unmodified copy and that PRO was bought through Google Play. Version 2.2.0 of the App also includes Firebase App Check, which can obtain a Google Play Integrity token and exchange it with Google Firebase; we do not use it, and newer versions do not include it.</li>
+        <li><strong>App integrity</strong>: the App checks that it is a genuine, unmodified copy and that PRO was bought through Google Play.</li>
         <li><strong>Purchase check</strong>: if you bought PRO, the App asks our purchase check whether the purchase is valid (Section 4).</li>
         <li><strong>Google Play</strong> for the one-time PRO purchase (Section 4) and the Play Age Signals API (Section 12).</li>
         <li><strong>Rating prompt</strong>: after the third successful export since it last asked, the App may ask Google Play to show its in-app review card, at most once per app version and never during a build or right after an ad or an error. Google Play decides whether to show it, and the App never learns whether or how you rated it.</li>
@@ -172,11 +172,6 @@
                     <td><strong>Analytics &amp; Crash Reporting (<a href="https://firebase.google.com/support/privacy" rel="nofollow">Firebase</a> Analytics and Crashlytics)</strong></td>
                     <td>Bug fixing (Crashlytics, every user); Analytics only for adults, and only with consent where the law requires it</td>
                     <td>Crashlytics data is retained for 90 days; Firebase Analytics data for 2 months. Deleted automatically thereafter.</td>
-                </tr>
-                <tr>
-                    <td><strong>App integrity token, earlier versions only (Google Play Integrity via Firebase App Check)</strong></td>
-                    <td>Included in version 2.2.0 only; not used by us</td>
-                    <td>Handled by Google under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>; not stored by us.</td>
                 </tr>
                 <tr>
                     <td><strong>Purchases (Google Play Billing)</strong></td>
