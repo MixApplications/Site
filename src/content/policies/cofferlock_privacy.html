@@ -2,7 +2,7 @@
   <section class="pagehead reveal in">
     <h1>Privacy Policy — Cofferlock</h1>
     <p>This policy applies to the <strong>Cofferlock</strong> app (<code>com.mixapplications.cofferlock</code>) published by MixApplications. It is specific to Cofferlock; other MixApplications apps have their own policies, listed in the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to Cofferlock.</p>
-    <span class="stamp">Last updated: October 6, 2026</span>
+    <span class="stamp">Last updated: October 7, 2026</span>
   </section>
 
   <div class="highlight reveal">
@@ -43,6 +43,7 @@
     <p><strong>Update check.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version of Cofferlock is available or required. As Google documents for Firebase (<a href="https://firebase.google.com/docs/android/play-data-disclosure" rel="nofollow">Firebase data disclosure</a>), Firebase collects with it a random <strong>Firebase installation identifier</strong> (created for this installation of the App; Google states it does not uniquely identify a user or a physical device), your device&rsquo;s model, brand and Android version, its country, language and time zone, and the App&rsquo;s package name and version. The answer is only the latest version numbers and the Google Play link. See also <a href="https://firebase.google.com/support/privacy" rel="nofollow">Privacy and Security in Firebase</a>.</p>
     <p><strong>Purchase check.</strong> If you buy Pro or the Supporter edition, the App sends that purchase&rsquo;s token, the product and the App&rsquo;s name to our purchase check, which asks Google Play whether the purchase is valid. See Section 4.</p>
     <p><strong>Time check.</strong> If your phone&rsquo;s automatic date and time is turned off, the App reads the current time from public internet time servers (such as time.google.com or pool.ntp.org). The request contains only a random number. With automatic date and time on, no request is made.</p>
+    <p><strong>Rating card.</strong> After you have used the App for a while, it may ask the Google Play app on your device to show Google Play&rsquo;s rating card (the <a href="https://developer.android.com/guide/playcore/in-app-review" rel="nofollow">Google Play In-App Review</a> feature). Google Play decides whether the card appears, and the card, any rating or review you give and their handling are Google Play&rsquo;s, under the <a href="https://policies.google.com/privacy" rel="nofollow">Google privacy policy</a>. The App does not receive your rating, your review or whether you left one. To decide when to ask, the App counts on your device how often and on how many days it was unlocked and when it last asked; these counts never leave your device.</p>
     <p>If a version is no longer supported, the App asks you to update it from Google Play before vaults can be opened; your vaults are not changed. Every internet request, including the update check, reveals your IP address to the server that answers it; we do not store it. We do not receive your files, file or folder names, passwords, recovery phrase, biometric data, usage data, location or contacts.</p>
 
     <h2 id="s2">2. Where Your Data Is</h2>
@@ -168,7 +169,7 @@
             </tbody>
         </table>
     </div>
-    <p class="fnote">The App uses Google Firebase only for the update check (Remote Config) and the purchase check (Cloud Functions). It contains no analytics, advertising, attribution or crash-reporting SDK. The Google Play Billing Library is included as Google supplies it and may send Google technical information about the purchase flow, as Google describes in its own documentation. If that ever changes, this page and the Google Play Data safety section will be updated before the change is released.</p>
+    <p class="fnote">The App uses Google Firebase only for the update check (Remote Config) and the purchase check (Cloud Functions). It contains no analytics, advertising, attribution or crash-reporting SDK. The Google Play In-App Review library only asks the Google Play app to show its rating card (Section 1); the App receives no rating or review. The Google Play Billing Library is included as Google supplies it and may send Google technical information about the purchase flow, as Google describes in its own documentation. If that ever changes, this page and the Google Play Data safety section will be updated before the change is released.</p>
 
     <h2 id="s16">16. Security</h2>
     <p>Vault contents are encrypted with AES-256-GCM per 4 KiB block, with keys derived from your password by Argon2id and held in independent key slots for the password, the recovery phrase and biometric unlock. Screenshots are blocked by default, the App locks automatically, and wrong attempts are slowed down. No method of protection is perfect: the App cannot protect a vault on a rooted or compromised phone while it is unlocked, and it cannot protect a weak password. The App&rsquo;s <em>What this app does not protect against</em> page lists these limits.</p>

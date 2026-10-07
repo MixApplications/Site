@@ -290,7 +290,8 @@ export function policy(file, meta, fragment, ctx) {
   const toc = pick(/<nav class="toc[\s\S]*?<\/nav>/);
   const art = pick(/<article class="panel[\s\S]*?<\/article>/);
   if (!head || !toc || !art) throw new Error('policy fragment missing a part: ' + file);
-  const clean = s => s.replace(/ reveal( in| d\d)?/g, '');
+  // Only inside class attributes: policy text uses the words "reveal", "reveals" and "revealed".
+  const clean = s => s.replace(/class="[^"]*"/g, c => c.replace(/ reveal( in| d\d)?/g, ''));
   const links = `<nav class="policy-links" aria-label="Privacy policies">
 ${ctx.policies.map(p => `      <a href="/${p.file}"${p.file === file ? ' aria-current="page"' : ''}>${p.label}</a>`).join('\n')}
     </nav>`;
