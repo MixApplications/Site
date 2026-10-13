@@ -543,5 +543,16 @@
  "sup.md.18": "Wie ändere ich meine Werbeeinwilligung oder lösche meine Daten?",
  "sup.md.19": "Öffnen Sie <strong>Einstellungen → Datenschutzoptionen für Werbung</strong> (wird angezeigt, wo das Gesetz in Ihrer Region eine Wahl vorschreibt). Es gibt kein Konto. Verwenden Sie <strong>Einstellungen → Speicher → Temporäre Dateien löschen</strong>, <strong>Löschen</strong> neben „Zuletzt geöffnet“ oder in Android <strong>Apps → MixDocs → Speicher → Speicher leeren</strong>; von Ihnen gespeicherte Dateien bleiben erhalten. Siehe die <a href=\"/mixdocs_privacy.html\">Datenschutzerklärung von MixDocs</a>.",
  "sup.md.20": "Wie übertrage ich meine MixDocs-Einstellungen auf ein neues Smartphone?",
- "sup.md.21": "Verwenden Sie <strong>Einstellungen → Sicherung → Einstellungen und Bibliothek exportieren</strong> und dann auf dem neuen Smartphone <strong>Aus einer Sicherung importieren</strong>. Dokumente werden nicht kopiert; fügen Sie Ihre Ordner auf dem neuen Smartphone erneut hinzu."
+ "sup.md.21": "Verwenden Sie <strong>Einstellungen → Sicherung → Einstellungen und Bibliothek exportieren</strong> und dann auf dem neuen Smartphone <strong>Aus einer Sicherung importieren</strong>. Dokumente werden nicht kopiert; fügen Sie Ihre Ordner auf dem neuen Smartphone erneut hinzu.",
+ "app.cofferlock.h": "Ihre privaten Fotos, Videos und Dokumente in einer einzigen verschlüsselten Tresordatei auf Ihrem Smartphone, mit einem echten Dateimanager darin. Ohne Konto und ohne Cloud.",
+ "app.cofferlock.f1": "Ein Tresor, eine Datei",
+ "app.cofferlock.f1d": "Eine einzige verschlüsselte Datei, die wie Zufallsdaten aussieht. Bewahren Sie sie in einem Ordner Ihrer Wahl auf; eine Kopie der Datei ist Ihr Backup.",
+ "app.cofferlock.f2": "Starke Verschlüsselung",
+ "app.cofferlock.f2d": "AES-256-GCM für jeden 4-KB-Block, das Passwort geschützt durch Argon2id.",
+ "app.cofferlock.f3": "Entsperren, wie Sie möchten",
+ "app.cofferlock.f3d": "Ihr Passwort oder optional ein Fingerabdruck, und eine Wiederherstellungsphrase aus 12 Wörtern, falls Sie das Passwort vergessen.",
+ "app.cofferlock.f4": "Ein echter Dateimanager",
+ "app.cofferlock.f4d": "Ordner, Vorschaubilder, Suche, Filter und Mehrfachauswahl. Öffnen Sie eine Datei in einer anderen App, ohne dass eine entschlüsselte Kopie geschrieben wird.",
+ "app.cofferlock.f5": "Privat von Grund auf",
+ "app.cofferlock.f5d": "Keine Werbung, keine Analyse, kein Konto. Automatische Sperre, blockierte Screenshots und ein Verlauf fehlgeschlagener Entsperrversuche. Kostenlos bis 5 GB; Pro ist ein Einmalkauf."
 }

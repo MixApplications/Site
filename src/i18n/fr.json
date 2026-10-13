@@ -543,5 +543,16 @@
  "sup.md.18": "Comment modifier mon consentement publicitaire ou supprimer mes données ?",
  "sup.md.19": "Ouvrez <strong>Paramètres → Choix de confidentialité publicitaire</strong> (affiché là où la loi de votre région impose un choix). Il n'y a pas de compte. Utilisez <strong>Paramètres → Stockage → Effacer les fichiers temporaires</strong>, <strong>Effacer</strong> à côté de Récents, ou dans Android <strong>Applications → MixDocs → Stockage → Vider l'espace de stockage</strong> ; les fichiers que vous avez enregistrés restent à vous. Consultez la <a href=\"/mixdocs_privacy.html\">politique de confidentialité de MixDocs</a>.",
  "sup.md.20": "Comment transférer mes réglages MixDocs vers un nouveau téléphone ?",
- "sup.md.21": "Utilisez <strong>Paramètres → Sauvegarde → Exporter les réglages et la bibliothèque</strong>, puis <strong>Importer une sauvegarde</strong> sur le nouveau téléphone. Les documents ne sont pas copiés ; ajoutez à nouveau vos dossiers sur le nouveau téléphone."
+ "sup.md.21": "Utilisez <strong>Paramètres → Sauvegarde → Exporter les réglages et la bibliothèque</strong>, puis <strong>Importer une sauvegarde</strong> sur le nouveau téléphone. Les documents ne sont pas copiés ; ajoutez à nouveau vos dossiers sur le nouveau téléphone.",
+ "app.cofferlock.h": "Vos photos, vidéos et documents privés dans un seul fichier coffre chiffré sur votre téléphone, avec un vrai gestionnaire de fichiers à l’intérieur. Sans compte et sans cloud.",
+ "app.cofferlock.f1": "Un coffre, un fichier",
+ "app.cofferlock.f1d": "Un seul fichier chiffré qui ressemble à des données aléatoires. Gardez-le dans le dossier de votre choix ; copier le fichier, c’est votre sauvegarde.",
+ "app.cofferlock.f2": "Chiffrement solide",
+ "app.cofferlock.f2d": "AES-256-GCM sur chaque bloc de 4 Ko, avec le mot de passe protégé par Argon2id.",
+ "app.cofferlock.f3": "Déverrouillez à votre façon",
+ "app.cofferlock.f3d": "Votre mot de passe ou une empreinte digitale facultative, et une phrase de récupération de 12 mots si vous oubliez le mot de passe.",
+ "app.cofferlock.f4": "Un vrai gestionnaire de fichiers",
+ "app.cofferlock.f4d": "Dossiers, miniatures, recherche, filtres et sélection multiple. Ouvrez un fichier dans une autre app sans qu’une copie déchiffrée soit écrite.",
+ "app.cofferlock.f5": "Confidentiel par conception",
+ "app.cofferlock.f5d": "Sans publicité, sans statistiques, sans compte. Verrouillage auto, captures d’écran bloquées et historique des tentatives échouées. Gratuit jusqu’à 5 Go ; Pro est un achat unique."
 }

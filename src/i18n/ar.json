@@ -543,5 +543,16 @@
  "sup.md.18": "كيف أغيّر موافقتي على الإعلانات أو أحذف بياناتي؟",
  "sup.md.19": "افتح <strong>Settings → Ad privacy choices</strong> (يظهر حيث يتطلب القانون في منطقتك خيارًا). لا يوجد حساب. استخدم <strong>Settings → Storage → Clear temporary files</strong>، أو <strong>Clear</strong> بجانب Recent، أو في Android <strong>التطبيقات → MixDocs → مساحة التخزين → محو مساحة التخزين</strong>؛ الملفات التي حفظتها تبقى لك. راجع <a href=\"/mixdocs_privacy.html\">سياسة خصوصية MixDocs</a>.",
  "sup.md.20": "كيف أنقل إعدادات MixDocs إلى هاتف جديد؟",
- "sup.md.21": "استخدم <strong>Settings → Backup → Export settings and library</strong>، ثم <strong>Import from a backup</strong> على الهاتف الجديد. لا تُنسخ المستندات؛ أضف مجلداتك مرة أخرى على الهاتف الجديد."
+ "sup.md.21": "استخدم <strong>Settings → Backup → Export settings and library</strong>، ثم <strong>Import from a backup</strong> على الهاتف الجديد. لا تُنسخ المستندات؛ أضف مجلداتك مرة أخرى على الهاتف الجديد.",
+ "app.cofferlock.h": "صورك وفيديوهاتك ومستنداتك الخاصة في ملف خزنة واحد مشفّر على هاتفك، مع مدير ملفات حقيقي بداخله. بلا حساب وبلا سحابة.",
+ "app.cofferlock.f1": "خزنة واحدة، ملف واحد",
+ "app.cofferlock.f1d": "ملف مشفّر واحد يبدو كبيانات عشوائية. احفظه في مجلد تختاره؛ ونسخ الملف هو نسختك الاحتياطية.",
+ "app.cofferlock.f2": "تشفير قوي",
+ "app.cofferlock.f2d": "AES-256-GCM لكل كتلة بحجم 4 KB، وكلمة المرور محمية بـ Argon2id.",
+ "app.cofferlock.f3": "افتح بطريقتك",
+ "app.cofferlock.f3d": "بكلمة المرور أو ببصمة الإصبع اختياريًا، وعبارة استرداد من 12 كلمة إذا نسيت كلمة المرور.",
+ "app.cofferlock.f4": "مدير ملفات حقيقي",
+ "app.cofferlock.f4d": "مجلدات وصور مصغّرة وبحث وفلاتر وتحديد متعدد. افتح ملفًا في تطبيق آخر دون كتابة نسخة غير مشفّرة.",
+ "app.cofferlock.f5": "الخصوصية في التصميم",
+ "app.cofferlock.f5d": "بلا إعلانات وبلا تحليلات وبلا حساب. قفل تلقائي، ومنع لقطات الشاشة، وسجل لمحاولات الفتح الفاشلة. مجاني حتى 5 GB، وPro شراء لمرة واحدة."
 }

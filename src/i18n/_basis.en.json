@@ -537,5 +537,16 @@
  "sup.u.23": "Can I theme or password-protect a Ventoy drive?",
  "sup.u.24": "Yes, in Ultimate USB and Ventoy. <strong>Theme Manager</strong> imports a GRUB2 theme archive onto the drive, and <strong>Get more themes</strong> opens a theme website in your browser. <strong>Config Hub</strong> sets a boot-menu password, menu options and persistence. These settings are written only to the drive.",
  "sup.u.25": "How do I get an erasure certificate?",
- "sup.u.26": "In Ultimate USB and USB Tools, run <strong>Wipe USB</strong>. When it finishes, tap <strong>View erasure report</strong> or <strong>View erasure certificate</strong> and save it. It can't be produced again later. The certificate is made on your phone and goes nowhere unless you share it."
+ "sup.u.26": "In Ultimate USB and USB Tools, run <strong>Wipe USB</strong>. When it finishes, tap <strong>View erasure report</strong> or <strong>View erasure certificate</strong> and save it. It can't be produced again later. The certificate is made on your phone and goes nowhere unless you share it.",
+ "app.cofferlock.h": "Your private photos, videos and documents in one encrypted vault file on your phone, with a real file manager inside. No account and no cloud.",
+ "app.cofferlock.f1": "One vault, one file",
+ "app.cofferlock.f1d": "A single encrypted file that looks like random data. Keep it in a folder you choose; copying the file is your backup.",
+ "app.cofferlock.f2": "Strong encryption",
+ "app.cofferlock.f2d": "AES-256-GCM on every 4 KB block, with the password protected by Argon2id.",
+ "app.cofferlock.f3": "Unlock your way",
+ "app.cofferlock.f3d": "Your password or an optional fingerprint, and a 12-word recovery phrase if you forget the password.",
+ "app.cofferlock.f4": "A real file manager",
+ "app.cofferlock.f4d": "Folders, thumbnails, search, filters and multi-select. Open a file in another app without a decrypted copy being written.",
+ "app.cofferlock.f5": "Private by design",
+ "app.cofferlock.f5d": "No ads, no analytics, no account. Auto-lock, blocked screenshots and a history of failed unlock attempts. Free up to 5 GB; Pro is a one-time purchase."
 }
