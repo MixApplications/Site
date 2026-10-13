@@ -400,36 +400,40 @@
       "faq": "cofferlock",
       "policy": "cofferlock_privacy.html",
       "descKey": "home.coffer",
-      "desc": "An encrypted vault for your files that never leave your phone. Fingerprint unlock, a recovery phrase, and one vault file you can back up anywhere.",
+      "desc": "A private vault for your photos, videos and files, which never leave your phone. Fingerprint unlock, 12 recovery words, and one vault file you can back up anywhere.",
       "chips": [
-        "AES-256-GCM",
+        "photo &amp; file vault",
         "fingerprint unlock",
-        "12-word recovery",
-        "no ads",
+        "12 recovery words",
         "no account",
-        "11 languages"
+        "no cloud",
+        "no ads"
       ],
-      "headline": "Your private photos, videos and documents in one encrypted vault file on your phone, with a real file manager inside. No account and no cloud.",
+      "headline": "Keep your private photos, videos and documents locked in one vault that only you can open. It works like a normal file manager, and your files never leave your phone. No account and no cloud.",
       "features": [
         {
           "title": "One vault, one file",
-          "text": "A single encrypted file that looks like random data. Keep it in a folder you choose; copying the file is your backup."
+          "text": "Your whole vault is one locked file. Keep it in any folder you like; to back it up, just copy that file."
         },
         {
-          "title": "Strong encryption",
-          "text": "AES-256-GCM on every 4 KB block, with the password protected by Argon2id."
+          "title": "Strong protection",
+          "text": "Strong encryption locks every file: even someone who copies the vault file cannot read it without your password. If an import stops halfway, the vault is not damaged, and a built-in tool repairs a damaged vault."
         },
         {
           "title": "Unlock your way",
-          "text": "Your password or an optional fingerprint, and a 12-word recovery phrase if you forget the password."
+          "text": "Your password or your fingerprint. Forgot your password? 12 recovery words open your vault."
         },
         {
           "title": "A real file manager",
-          "text": "Folders, thumbnails, search, filters and multi-select. Open a file in another app without a decrypted copy being written."
+          "text": "Folders, previews, search, filters and selecting many files at once. Open files in your usual apps, and no unlocked copy is left behind."
         },
         {
           "title": "Private by design",
-          "text": "No ads, no analytics, no account. Auto-lock, blocked screenshots and a history of failed unlock attempts. Free up to 5 GB; Pro is a one-time purchase."
+          "text": "No account, no cloud, no ads, no tracking. It locks by itself, blocks screenshots and shows every unlock and every failed try. Free with a vault of up to 5 GB."
+        },
+        {
+          "title": "Pro: pay once",
+          "text": "Unlimited space and more vaults, a decoy vault, encrypted Trash, one-tap backup, sealed envelopes and adding files from any app's Share menu. No subscription."
         }
       ],
       "category": "tools"
