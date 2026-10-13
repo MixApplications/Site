@@ -543,5 +543,16 @@
  "sup.md.18": "Bagaimana cara mengubah persetujuan iklan, atau menghapus data saya?",
  "sup.md.19": "Buka <strong>Setelan → Pilihan privasi iklan</strong> (ditampilkan jika hukum di wilayah Anda mewajibkan pilihan). Tidak ada akun. Gunakan <strong>Setelan → Penyimpanan → Hapus file sementara</strong>, <strong>Hapus</strong> di samping Terbaru, atau <strong>Aplikasi → MixDocs → Penyimpanan → Hapus penyimpanan</strong> di Android; file yang Anda simpan tetap milik Anda. Lihat <a href=\"/mixdocs_privacy.html\">kebijakan privasi MixDocs</a>.",
  "sup.md.20": "Bagaimana cara memindahkan setelan MixDocs saya ke ponsel baru?",
- "sup.md.21": "Gunakan <strong>Setelan → Cadangan → Ekspor setelan dan pustaka</strong>, lalu <strong>Impor dari cadangan</strong> di ponsel baru. Dokumen tidak ikut disalin; tambahkan lagi folder Anda di ponsel baru."
+ "sup.md.21": "Gunakan <strong>Setelan → Cadangan → Ekspor setelan dan pustaka</strong>, lalu <strong>Impor dari cadangan</strong> di ponsel baru. Dokumen tidak ikut disalin; tambahkan lagi folder Anda di ponsel baru.",
+ "app.cofferlock.h": "Foto, video, dan dokumen pribadi Anda dalam satu file brankas terenkripsi di ponsel, dengan pengelola file sungguhan di dalamnya. Tanpa akun dan tanpa cloud.",
+ "app.cofferlock.f1": "Satu brankas, satu file",
+ "app.cofferlock.f1d": "Satu file terenkripsi yang terlihat seperti data acak. Simpan di folder pilihan Anda; menyalin file itu adalah cadangan Anda.",
+ "app.cofferlock.f2": "Enkripsi kuat",
+ "app.cofferlock.f2d": "AES-256-GCM pada setiap blok 4 KB, dengan kata sandi dilindungi Argon2id.",
+ "app.cofferlock.f3": "Buka dengan cara Anda",
+ "app.cofferlock.f3d": "Kata sandi atau sidik jari opsional, serta frasa pemulihan 12 kata jika Anda lupa kata sandi.",
+ "app.cofferlock.f4": "Pengelola file sungguhan",
+ "app.cofferlock.f4d": "Folder, thumbnail, pencarian, filter, dan pilih banyak. Buka file di aplikasi lain tanpa salinan terdekripsi ditulis.",
+ "app.cofferlock.f5": "Privat sejak dirancang",
+ "app.cofferlock.f5d": "Tanpa iklan, tanpa analitik, tanpa akun. Kunci otomatis, screenshot diblokir, dan riwayat percobaan buka yang gagal. Gratis hingga 5 GB; Pro adalah pembelian sekali."
 }

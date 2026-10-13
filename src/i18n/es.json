@@ -543,5 +543,16 @@
  "sup.md.18": "¿Cómo cambio mi consentimiento de anuncios o borro mis datos?",
  "sup.md.19": "Abre <strong>Ajustes → Opciones de privacidad de anuncios</strong> (aparece donde la ley de tu región exige elegir). No hay cuenta. Usa <strong>Ajustes → Almacenamiento → Borrar archivos temporales</strong>, <strong>Borrar</strong> junto a Recientes, o en Android <strong>Aplicaciones → MixDocs → Almacenamiento → Borrar almacenamiento</strong>; los archivos que guardaste siguen siendo tuyos. Consulta la <a href=\"/mixdocs_privacy.html\">política de privacidad de MixDocs</a>.",
  "sup.md.20": "¿Cómo paso mis ajustes de MixDocs a un teléfono nuevo?",
- "sup.md.21": "Usa <strong>Ajustes → Copia de seguridad → Exportar ajustes y biblioteca</strong> y luego <strong>Importar desde una copia</strong> en el teléfono nuevo. Los documentos no se copian; vuelve a añadir tus carpetas en el teléfono nuevo."
+ "sup.md.21": "Usa <strong>Ajustes → Copia de seguridad → Exportar ajustes y biblioteca</strong> y luego <strong>Importar desde una copia</strong> en el teléfono nuevo. Los documentos no se copian; vuelve a añadir tus carpetas en el teléfono nuevo.",
+ "app.cofferlock.h": "Tus fotos, vídeos y documentos privados en un único archivo de bóveda cifrado en tu teléfono, con un verdadero gestor de archivos dentro. Sin cuenta y sin nube.",
+ "app.cofferlock.f1": "Una bóveda, un archivo",
+ "app.cofferlock.f1d": "Un único archivo cifrado que parece datos aleatorios. Guárdalo en la carpeta que elijas; copiar el archivo es tu copia de seguridad.",
+ "app.cofferlock.f2": "Cifrado fuerte",
+ "app.cofferlock.f2d": "AES-256-GCM en cada bloque de 4 KB, con la contraseña protegida por Argon2id.",
+ "app.cofferlock.f3": "Desbloquea a tu manera",
+ "app.cofferlock.f3d": "Tu contraseña o una huella opcional, y una frase de recuperación de 12 palabras si olvidas la contraseña.",
+ "app.cofferlock.f4": "Un verdadero gestor de archivos",
+ "app.cofferlock.f4d": "Carpetas, miniaturas, búsqueda, filtros y selección múltiple. Abre un archivo en otra app sin que se escriba una copia descifrada.",
+ "app.cofferlock.f5": "Privacidad desde el diseño",
+ "app.cofferlock.f5d": "Sin anuncios, sin analíticas, sin cuenta. Bloqueo automático, capturas de pantalla bloqueadas e historial de intentos fallidos. Gratis hasta 5 GB; Pro es una compra única."
 }

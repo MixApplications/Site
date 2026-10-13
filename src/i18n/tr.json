@@ -543,5 +543,16 @@
  "sup.md.18": "Reklam onayımı nasıl değiştiririm veya verilerimi nasıl silerim?",
  "sup.md.19": "<strong>Ayarlar → Reklam gizliliği tercihleri</strong> bölümünü açın (bölgenizdeki yasaların bir seçim gerektirdiği yerlerde gösterilir). Hesap yoktur. <strong>Ayarlar → Depolama → Geçici dosyaları temizle</strong>'yi, Son kullanılanlar'ın yanındaki <strong>Temizle</strong>'yi ya da Android'in <strong>Uygulamalar → MixDocs → Depolama → Depolama alanını temizle</strong> seçeneğini kullanın; kaydettiğiniz dosyalar sizde kalır. <a href=\"/mixdocs_privacy.html\">MixDocs gizlilik politikasına</a> bakın.",
  "sup.md.20": "MixDocs ayarlarımı yeni bir telefona nasıl taşırım?",
- "sup.md.21": "<strong>Ayarlar → Yedekleme → Ayarları ve kitaplığı dışa aktar</strong>'ı kullanın, ardından yeni telefonda <strong>Yedekten içe aktar</strong>'ı kullanın. Belgeler kopyalanmaz; klasörlerinizi yeni telefonda yeniden ekleyin."
+ "sup.md.21": "<strong>Ayarlar → Yedekleme → Ayarları ve kitaplığı dışa aktar</strong>'ı kullanın, ardından yeni telefonda <strong>Yedekten içe aktar</strong>'ı kullanın. Belgeler kopyalanmaz; klasörlerinizi yeni telefonda yeniden ekleyin.",
+ "app.cofferlock.h": "Özel fotoğraflarınız, videolarınız ve belgeleriniz telefonunuzda tek bir şifreli kasa dosyasında; içinde gerçek bir dosya yöneticisiyle. Hesap yok, bulut yok.",
+ "app.cofferlock.f1": "Tek kasa, tek dosya",
+ "app.cofferlock.f1d": "Rastgele veri gibi görünen tek bir şifreli dosya. Seçtiğiniz bir klasörde tutun; dosyayı kopyalamak yedeğinizdir.",
+ "app.cofferlock.f2": "Güçlü şifreleme",
+ "app.cofferlock.f2d": "Her 4 KB blokta AES-256-GCM; parola Argon2id ile korunur.",
+ "app.cofferlock.f3": "Kilidi istediğiniz gibi açın",
+ "app.cofferlock.f3d": "Parolanız veya isteğe bağlı parmak izi; parolayı unutursanız 12 kelimelik kurtarma ifadesi.",
+ "app.cofferlock.f4": "Gerçek bir dosya yöneticisi",
+ "app.cofferlock.f4d": "Klasörler, küçük resimler, arama, filtreler ve çoklu seçim. Bir dosyayı şifresi çözülmüş kopya yazılmadan başka bir uygulamada açın.",
+ "app.cofferlock.f5": "Tasarımdan gizlilik",
+ "app.cofferlock.f5d": "Reklam yok, analiz yok, hesap yok. Otomatik kilit, engellenen ekran görüntüleri ve başarısız kilit açma denemeleri geçmişi. 5 GB’a kadar ücretsiz; Pro tek seferlik bir satın alımdır."
 }
