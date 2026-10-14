@@ -391,6 +391,18 @@
       "category": "tools"
     },
     {
+      "id": "mixmedia",
+      "name": "MixMedia",
+      "pkg": "com.mixapplications.mixmedia",
+      "status": "unlisted",
+      "color": "blue",
+      "icon": "doc",
+      "policy": "mixmedia_privacy.html",
+      "descKey": "home.mixmedia",
+      "desc": "Compress, convert, trim and merge video, audio and photos, make GIFs and handle subtitles, all on your device.",
+      "category": "tools"
+    },
+    {
       "id": "cofferlock",
       "name": "Cofferlock",
       "pkg": "com.mixapplications.cofferlock",
