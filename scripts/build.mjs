@@ -113,6 +113,7 @@ const allPolicies = [
   { file: 'usb_file_manager_privacy.html', label: 'USB File Manager', app: 'usb-file-manager' },
   { file: 'mixdocs_privacy.html', label: 'MixDocs', app: 'mixdocs' },
   { file: 'cofferlock_privacy.html', label: 'Cofferlock', app: 'cofferlock' },
+  { file: 'mixmedia_privacy.html', label: 'MixMedia', app: 'mixmedia' },
 ];
 for (const p of allPolicies) p.listed = !p.app || isLive(p.app);
 const policies = allPolicies.filter(p => p.listed);
