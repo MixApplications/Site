@@ -16,7 +16,7 @@ GitHub Pages by `.github/workflows/site.yml`.
     src/assets/              site.css, site.js, support.js (versioned by content hash)
     src/static/              copied as-is: icons, logos, CNAME, app-ads.txt, robots.txt
     src/i18n/                translations; see src/i18n/README.md
-    scripts/                 build, check, sync-play, i18n, serve
+    scripts/                 build, check, sync-play, sync-console, i18n, serve
 
 ## Everyday work
 
@@ -32,3 +32,15 @@ Google Play, then `live` with its `pkg`), run `npm run sync` and
 follow from that one entry.
 
 Pushing to `main` builds, checks and deploys. A failing check stops the deploy.
+
+## Play Console numbers
+
+In CI only, installs and the rating come from Play Console's bulk reports
+(Cloud Storage) instead of the Play page: `scripts/sync-console.mjs` overlays
+them on `play.json` before the build, and says how each number is made. CI
+signs in with keyless Workload Identity Federation (Google Cloud project
+`mixapps-site-stats`, service account `play-stats-reader`, invited in Play
+Console with read-only bulk-report access), configured by the repo Variables
+`GCP_WIF_PROVIDER`, `GCP_SA_EMAIL` and `PLAY_REPORTS_BUCKET`. There are no
+keys or secrets. If anything fails, that app keeps its Play page numbers; the
+Console numbers are never committed.
