@@ -10,6 +10,12 @@
 # so the site is never emptied by a Play outage. When an app appears on or
 # leaves Google Play, the run opens a GitHub issue saying what changed.
 #
+# Installs and the rating then come from Play Console's bulk reports (Cloud
+# Storage), read with keyless Workload Identity Federation: no keys, no secrets,
+# only the repo Variables GCP_WIF_PROVIDER, GCP_SA_EMAIL and PLAY_REPORTS_BUCKET.
+# scripts/sync-console.mjs says how each number is made; any failure keeps the
+# Play page numbers for that app and field, and never stops the site.
+#
 # Pages must be set to "GitHub Actions" as its source (Settings > Pages).
 name: Site
 
@@ -34,6 +40,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       report: ${{ steps.sync.outputs.report }}
+    permissions:
+      contents: read
+      id-token: write   # GitHub OIDC token for Workload Identity Federation (no keys)
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -53,6 +62,34 @@ jobs:
             cat "$RUNNER_TEMP/play-report.md"
             echo 'PLAY_REPORT_EOF'
           } >> "$GITHUB_OUTPUT"
+      # Play Console numbers; without them the Play page numbers above stay
+      - name: Sign in to Google Cloud for Play Console reports (keyless)
+        id: gcp
+        if: github.event_name != 'pull_request' && vars.GCP_WIF_PROVIDER != ''
+        continue-on-error: true
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_SA_EMAIL }}
+      - name: Set up gcloud
+        if: github.event_name != 'pull_request' && vars.GCP_WIF_PROVIDER != '' && steps.gcp.outcome == 'success'
+        continue-on-error: true
+        uses: google-github-actions/setup-gcloud@v3
+      - name: Apply Play Console installs and rating
+        if: github.event_name != 'pull_request' && vars.GCP_WIF_PROVIDER != '' && steps.gcp.outcome == 'success'
+        continue-on-error: true
+        env:
+          BUCKET: ${{ vars.PLAY_REPORTS_BUCKET }}
+        run: |
+          dir="$RUNNER_TEMP/play-console"; mkdir -p "$dir"
+          # installs: every month of the overview (the total is their sum); rating: the last 6 months of reviews
+          months=$(for i in 0 1 2 3 4 5; do date -u -d "$(date -u +%Y-%m-15) -$i month" +%Y%m; done)
+          for pkg in $(node -e "for (const a of require('./src/data/apps.json').apps) if (a.pkg) console.log(a.pkg)"); do
+            echo "$BUCKET/stats/installs/installs_${pkg}_*_overview.csv"
+            for m in $months; do echo "$BUCKET/reviews/reviews_${pkg}_${m}.csv"; done
+          done | gcloud storage cp -I "$dir/" --continue-on-error --no-user-output-enabled || echo "some report files are missing (those apps keep the Play page numbers)"
+          echo "downloaded $(ls "$dir" | wc -l) report files"
+          node scripts/sync-console.mjs "$dir"
       - name: Build
         run: node scripts/build.mjs --ci
       - name: Check HTML, links, anchors, app data and policy URLs
