@@ -12,9 +12,11 @@
 //             average star rating with a 22-day half-life, fitted to the
 //             Console's own figures (DROFUS 4.778 -> 4.777, Ultimate USB
 //             4.643 -> 4.644). Used only for apps with at least 300 ratings in
-//             the last 30 days, and only within 0.3 of the Play page rating;
-//             apps with few recent ratings keep the Play page rating, where
-//             Google blends in older ratings in a way the reports can't rebuild.
+//             the last 30 days, and only within 0.3 of the Play page rating.
+//             Apps with fewer recent ratings show NO rating ("HIDE"): for them
+//             Google blends in older ratings in a way the reports can't rebuild
+//             (Console: ChaoMe 2.980, USB File Manager 3.910; no model came
+//             within 0.18 of both), and a different number would be wrong.
 //             (The stats reports' "Total Average Rating" is just the daily
 //             average since 2026-10-12, so it is not used.)
 //   ratings   count of ratings: stays as sync-play read it from the Play page
@@ -138,7 +140,7 @@ function consoleScore(dir, pkg, playScore) {
   const all = [...byReview.values()];
   const end = Math.max(...all.map(r => r.at));
   const recent = all.filter(r => end - r.at <= 30 * DAY).length;
-  if (recent < MIN_RECENT) throw new Error(`only ${recent} ratings in the last 30 days (needs ${MIN_RECENT})`);
+  if (recent < MIN_RECENT) throw Object.assign(new Error(`only ${recent} ratings in the last 30 days (needs ${MIN_RECENT})`), { hide: true });
   let sw = 0, sv = 0;
   for (const r of all) { const w = 0.5 ** ((end - r.at) / DAY / HALF_LIFE_DAYS); sw += w; sv += w * r.star; }
   const value = sv / sw;
@@ -168,7 +170,14 @@ try {
       const c = consoleScore(dir, pkg, p.score);
       p.score = c.score;
       Object.assign(info, { score: Math.round(c.value * 1000) / 1000, scoreRecentRatings: c.recent, scoreThrough: c.through });
-    } catch (e) { console.log(`FALLBACK ${pkg} score: ${e.message}`); }
+    } catch (e) {
+      if (e.hide) {
+        // the Console rating exists but can't be rebuilt: show none rather than a different number
+        p.score = null;
+        info.scoreHidden = e.message;
+        console.log(`HIDE ${pkg} score: ${e.message}`);
+      } else console.log(`FALLBACK ${pkg} score: ${e.message}`);
+    }
     if (Object.keys(info).length) { p.console = info; changed++; }
     rows.push([pkg, String(before.installs), String(p.installs), info.installs?.toLocaleString('en-US') ?? '-',
       String(before.score), String(p.score), info.score?.toFixed(3) ?? '-', info.installsThrough ?? '-']);
