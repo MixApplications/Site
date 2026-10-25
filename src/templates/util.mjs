@@ -8,9 +8,17 @@ export function esc(s) {
 
 /** Decode the few entities Google Play text can carry, then escape for HTML. */
 export function playText(s) {
+  // &amp; last, so "&amp;lt;" stays the literal text "&lt;"
   const decoded = String(s ?? '')
-    .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
   return esc(decoded);
+}
+
+/** Plain text of a short HTML snippet: tags removed until none are left, stray angle brackets dropped. */
+export function stripTags(s) {
+  let out = String(s ?? ''), prev;
+  do { prev = out; out = out.replace(/<[^<>]*>/g, ''); } while (out !== prev);
+  return out.replace(/[<>]/g, '');
 }
 
 /** Play image URLs take a size suffix after "=". */

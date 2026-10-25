@@ -1,6 +1,6 @@
 // Page bodies. Each returns { path, title, description, nav, main, ... } for layout().
 import { ICON, PLAY_DEV, SITE, EMAIL, WHATSAPP } from './layout.mjs';
-import { esc, playText, playImg, installsNumber, compact, MIN_RATING } from './util.mjs';
+import { esc, playText, stripTags, playImg, installsNumber, compact, MIN_RATING } from './util.mjs';
 
 const playUrl = pkg => `https://play.google.com/store/apps/details?id=${pkg}`;
 const style = a => `--c:var(--${a.color});--csoft:var(--${a.color}-soft)`;
@@ -213,7 +213,7 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
     operatingSystem: 'Android', applicationCategory: a.category === 'games' ? 'GameApplication' : 'UtilitiesApplication',
     url: SITE + `/apps/${a.id}.html`, image: playImg(p.icon, 's512'), installUrl: playUrl(a.pkg),
     publisher: { '@type': 'Organization', name: 'MixApplications' },
-    description: [a.headline, a.desc].filter(Boolean).map(t => t.replace(/<[^>]+>/g, '')).join(' '),
+    description: [a.headline, a.desc].filter(Boolean).map(stripTags).join(' '),
     ...(a.features ? { featureList: a.features.map(f => `${f.title}: ${f.text}`) } : {}),
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   };
@@ -223,7 +223,7 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
   return {
     path: `/apps/${a.id}.html`, nav: 'apps',
     title: `${a.short || a.name} for Android — MixApplications`,
-    description: (a.headline || playText(p.summary || '') || (a.desc || '')).replace(/<[^>]+>/g, ''),
+    description: stripTags(a.headline || playText(p.summary || '') || a.desc || ''),
     ogImage: playImg(p.icon, 's512'),
     head: `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>\n`,
     main,
