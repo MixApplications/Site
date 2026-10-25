@@ -56,8 +56,8 @@ await new Promise(r => ws.addEventListener('open', r));
 let seq = 0; const pending = new Map(); const errors = []; const paused = [];
 ws.addEventListener('message', e => {
   const m = JSON.parse(e.data);
-  const done = m.id && pending.get(m.id);
-  if (done) { pending.delete(m.id); done(m); }
+  const done = typeof m.id === 'number' ? pending.get(m.id) : undefined;
+  if (typeof done === 'function') { pending.delete(m.id); done(m); }
   if (m.method === 'Fetch.requestPaused') paused.push(m.params.requestId);
   if (m.method === 'Runtime.exceptionThrown') errors.push(m.params.exceptionDetails.exception?.description || m.params.exceptionDetails.text);
   if (m.method === 'Runtime.consoleAPICalled' && m.params.type === 'error') errors.push(m.params.args.map(a => a.value ?? a.description).join(' '));
