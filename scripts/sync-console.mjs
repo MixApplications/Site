@@ -87,7 +87,7 @@ function parse(text, need) {
 function files(dir, re) {
   return readdirSync(dir).map(f => [f, f.match(re)]).filter(([, m]) => m).map(([f, m]) => ({ file: path.join(dir, f), month: m[1] })).sort((a, b) => a.month.localeCompare(b.month));
 }
-const esc = pkg => pkg.replace(/\./g, '\\.');
+const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 function nextMonth(m) {
   const y = +m.slice(0, 4), mo = +m.slice(4);

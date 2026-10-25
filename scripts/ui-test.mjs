@@ -53,17 +53,18 @@ for (let i = 0; i < 75 && !target; i++) {
 if (!target) { stopAll(); console.error('Chrome did not start'); process.exit(1); }
 const ws = new WebSocket(target.webSocketDebuggerUrl);
 await new Promise(r => ws.addEventListener('open', r));
-let seq = 0; const pending = {}; const errors = []; const paused = [];
+let seq = 0; const pending = new Map(); const errors = []; const paused = [];
 ws.addEventListener('message', e => {
   const m = JSON.parse(e.data);
-  if (m.id && pending[m.id]) { pending[m.id](m); delete pending[m.id]; }
+  const done = m.id && pending.get(m.id);
+  if (done) { pending.delete(m.id); done(m); }
   if (m.method === 'Fetch.requestPaused') paused.push(m.params.requestId);
   if (m.method === 'Runtime.exceptionThrown') errors.push(m.params.exceptionDetails.exception?.description || m.params.exceptionDetails.text);
   if (m.method === 'Runtime.consoleAPICalled' && m.params.type === 'error') errors.push(m.params.args.map(a => a.value ?? a.description).join(' '));
   if (m.method === 'Log.entryAdded' && m.params.entry.level === 'error' && !/fonts\.g|play-lh|favicon/.test(m.params.entry.url || '')) errors.push(m.params.entry.text + ' ' + (m.params.entry.url || ''));
 });
 const send = (method, params = {}) => new Promise((res, rej) => {
-  const id = ++seq; pending[id] = m => (m.error ? rej(new Error(m.error.message)) : res(m.result));
+  const id = ++seq; pending.set(id, m => (m.error ? rej(new Error(m.error.message)) : res(m.result)));
   ws.send(JSON.stringify({ id, method, params }));
 });
 const js = async expr => {
