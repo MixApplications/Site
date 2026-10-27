@@ -388,6 +388,41 @@
       "policy": "mixdocs_privacy.html",
       "descKey": "home.mixdocs",
       "desc": "Open, edit, convert and scan documents — PDF, Word, Excel, PowerPoint and OpenDocument — with text recognition, all on your device.",
+      "chips": [
+       "PDF &amp; Office editor",
+       "scanner &amp; OCR",
+       "50+ file types",
+       "on your device",
+       "no account",
+       "Pro: pay once"
+      ],
+      "headline": "Open, edit, convert, scan and sign your documents in one app: PDF, Word, Excel, PowerPoint and more than 50 file types. Everything is processed on your phone, and every tool is free, with no page limits, no watermarks and no account.",
+      "features": [
+       {
+        "title": "Every document opens",
+        "text": "PDF, Office and OpenDocument files in their original layout, plus Pages, Numbers, Keynote, e-books, comics, e-mail and images. Search, bookmarks, night mode and reflowed text make reading easy."
+       },
+       {
+        "title": "Edit PDF and Office",
+        "text": "Highlight, draw, add notes and edit text and pictures in a PDF, and fill in forms. Write documents, work with formulas in spreadsheets, and present slides."
+       },
+       {
+        "title": "Convert and organize",
+        "text": "PDF to Word, Excel, PowerPoint, EPUB or images, and many files to PDF at once. Merge, split, rotate and compress; recipes run several steps on many files."
+       },
+       {
+        "title": "Scan and recognize",
+        "text": "Scan pages and ID cards, turn photos into text and searchable PDFs, and read QR codes and barcodes. Translate documents and listen to them read aloud, or save them as audio."
+       },
+       {
+        "title": "Sign and protect",
+        "text": "Sign by hand or with a digital signature, lock a PDF with a password, black out text so it is gone for good, and remove hidden data before you share."
+       },
+       {
+        "title": "Private, with Pro once",
+        "text": "Your documents never leave your phone: no account and no cloud. Every tool is free with ads; a one-time Pro purchase removes all ads and lets MixDocs work offline."
+       }
+      ],
       "category": "tools"
     },
     {
