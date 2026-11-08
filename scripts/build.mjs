@@ -15,6 +15,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { layout } from '../src/templates/layout.mjs';
 import { ICON } from '../src/templates/layout.mjs';
@@ -184,10 +185,17 @@ for (const page of list) {
 }
 
 // ---------------------------------------------------------------- sitemap
-const urls = list.filter(p => !p.noindex).map(p => SITE + (p.path === '/index.html' ? '/' : p.path));
+// lastmod = date of the last commit to the page's own source; the daily Play numbers do not count as a change
+const sourceOf = p => p.path === '/index.html' || p.path.startsWith('/apps/') ? ['src/data/apps.json', 'src/templates/pages.mjs']
+  : p.path === '/contact.html' ? ['src/content/support.html'] : ['src/content/policies' + p.path];
+const lastmod = files => {
+  try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', ...files], { cwd: ROOT }).toString().trim(); }
+  catch { return ''; }   // no git history: leave lastmod out rather than guess
+};
+const urls = list.filter(p => !p.noindex).map(p => ({ loc: SITE + (p.path === '/index.html' ? '/' : p.path), mod: lastmod(sourceOf(p)) }));
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}
+${urls.map(u => `  <url><loc>${u.loc}</loc>${u.mod ? `<lastmod>${u.mod}</lastmod>` : ''}</url>`).join('\n')}
 </urlset>
 `);
 
