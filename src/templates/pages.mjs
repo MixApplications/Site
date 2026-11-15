@@ -217,15 +217,21 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
     ...(a.features ? { featureList: a.features.map(f => `${f.title}: ${f.text}`) } : {}),
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   };
-  if (typeof p.score === 'number' && p.ratings) {
-    ld.aggregateRating = { '@type': 'AggregateRating', ratingValue: p.score.toFixed(1), ratingCount: p.ratings };
-  }
+  // No aggregateRating: Google's review-snippet rules forbid ratings taken from another site (Google Play);
+  // the Play rating is shown as visible text on the page instead.
+  const crumbs = {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Apps', item: SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: a.short || a.name, item: SITE + `/apps/${a.id}.html` },
+    ],
+  };
   return {
     path: `/apps/${a.id}.html`, nav: 'apps',
     title: `${a.short || a.name} for Android — MixApplications`,
     description: stripTags(a.headline || playText(p.summary || '') || a.desc || ''),
+    ...(a.headline ? { descKey: `app.${a.id}.h` } : {}),   // language copies use the translated headline
     ogImage: playImg(p.icon, 's512'),
-    head: `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>\n`,
+    head: [ld, crumbs].map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>\n`).join(''),
     main,
   };
 }

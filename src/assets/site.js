@@ -58,6 +58,7 @@
      language is listed — see i18n/README.md. */
 
   var STORE = 'mixapp.lang';
+  var STATIC = document.documentElement.getAttribute('data-static-lang');
   var picker = document.getElementById('langpicker');
   var english = null;
   var cache = {};
@@ -186,14 +187,25 @@
     menu.addEventListener('click', function (e) {
       var b = e.target.closest('[data-lang]');
       if (!b) return;
-      setLang(b.getAttribute('data-lang'));
+      var code = b.getAttribute('data-lang');
       toggle(false);
+      if (STATIC) {
+        // A pre-translated page: open the same page in the chosen language. The
+        // last pick wins (each assign replaces the pending navigation).
+        if (code === STATIC) return;
+        try { localStorage.setItem(STORE, code); } catch (err) {}
+        var alt = document.querySelector('link[rel="alternate"][hreflang="' + code + '"]');
+        // same origin, so a preview or test server never jumps to the live site
+        if (alt) location.assign(new URL(alt.getAttribute('href')).pathname + location.hash);
+        return;
+      }
+      setLang(code);
     });
     document.addEventListener('click', function () { toggle(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggle(false); });
   }
 
-  snapshot();
+  if (!STATIC) snapshot();
   if (picker) picker.hidden = true;      // stays hidden unless the manifest offers a choice
 
   fetch('/i18n/languages.json', { cache: 'default' })
@@ -201,7 +213,10 @@
     .then(function (d) {
       if (d && Array.isArray(d.languages) && d.languages.length) LANGS = d.languages;
       buildPicker();
-      setLang(preferred(), false);
+      // A pre-translated page is already in its language and never switches or
+      // redirects on load (search engines must see it as it is).
+      if (STATIC) paint(known(STATIC) || LANGS[0]);
+      else setLang(preferred(), false);
     })
     .catch(function () { buildPicker(); });
 

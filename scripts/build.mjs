@@ -20,8 +20,8 @@ import { fileURLToPath } from 'node:url';
 import { layout } from '../src/templates/layout.mjs';
 import { ICON } from '../src/templates/layout.mjs';
 import * as pages from '../src/templates/pages.mjs';
-import { SITE } from '../src/templates/layout.mjs';
-import { playText } from '../src/templates/util.mjs';
+import { SITE, PLAY_DEV } from '../src/templates/layout.mjs';
+import { playText, esc } from '../src/templates/util.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(ROOT, 'src');
@@ -184,21 +184,6 @@ for (const page of list) {
   write(page.path, html);
 }
 
-// ---------------------------------------------------------------- sitemap
-// lastmod = date of the last commit to the page's own source; the daily Play numbers do not count as a change
-const sourceOf = p => p.path === '/index.html' || p.path.startsWith('/apps/') ? ['src/data/apps.json', 'src/templates/pages.mjs']
-  : p.path === '/contact.html' ? ['src/content/support.html'] : ['src/content/policies' + p.path];
-const lastmod = files => {
-  try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', ...files], { cwd: ROOT }).toString().trim(); }
-  catch { return ''; }   // no git history: leave lastmod out rather than guess
-};
-const urls = list.filter(p => !p.noindex).map(p => ({ loc: SITE + (p.path === '/index.html' ? '/' : p.path), mod: lastmod(sourceOf(p)) }));
-write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(u => `  <url><loc>${u.loc}</loc>${u.mod ? `<lastmod>${u.mod}</lastmod>` : ''}</url>`).join('\n')}
-</urlset>
-`);
-
 // ---------------------------------------------------------------- i18n
 const ENT = { ldquo: '“', rdquo: '”', lsquo: '‘', rsquo: '’', mdash: '—', ndash: '–', rarr: '→', larr: '←',
   middot: '·', copy: '©', hellip: '…', ccedil: 'ç', atilde: 'ã', quot: '"' };
@@ -258,6 +243,7 @@ const basis = readJson('i18n/_basis.en.json');
 const langs = readJson('i18n/languages.json');
 write('i18n/languages.json', JSON.stringify({ languages: langs.languages }));
 const report = [];
+const shipped = {};
 for (const l of langs.languages) {
   if (l.code === 'en') continue;
   const dict = readJson(`i18n/${l.code}.json`);
@@ -270,10 +256,142 @@ for (const l of langs.languages) {
     ship[key] = dict[key];
   }
   Object.assign(ship, playI18n[l.code] || {});
+  shipped[l.code] = ship;
   write(`i18n/${l.code}.json`, JSON.stringify(ship));
   const fromPlay = Object.keys(playI18n[l.code] || {}).length;
   report.push(`${l.code}: ${Object.keys(ship).length - fromPlay}/${Object.keys(sorted).length} shipped + ${fromPlay} from Play` + (stale ? `, ${stale} stale` : '') + (missing ? `, ${missing} missing` : ''));
 }
 
-console.log(`built ${list.length} pages into _site/ (${Object.keys(sorted).length} translatable strings)`);
+// ---------------------------------------------------------------- static language pages
+// Crawlers do not use the language picker, so every page whose strings are all
+// translated is also written per language at /<lang>/<path>, with hreflang links
+// between all versions. Legal pages stay English only. A page with any missing
+// (non-Play) string is not written in that language: no half-English copies.
+const urlOf = p => (p === '/index.html' ? '/' : p);
+const strip = s => String(s || '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+const escAttr = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+const escText = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+function translate(html, dict) {
+  let out = '', pos = 0;
+  const open = /<([a-zA-Z][a-zA-Z0-9]*)\b([^>]*)>/g;
+  let m;
+  while ((m = open.exec(html))) {
+    const [whole, tag, attrs] = m;
+    let at = attrs, text = null;
+    const ph = attrs.match(/\sdata-i18n-ph="([^"]+)"/);
+    if (ph) {
+      if (dict[ph[1]] == null) return null;
+      at = at.replace(/\splaceholder="[^"]*"/, ` placeholder="${escAttr(dict[ph[1]])}"`);
+    }
+    const tp = attrs.match(/\sdata-i18n-tpl="([^"]+)"/);
+    if (tp) {
+      if (dict[tp[1]] == null) return null;
+      at = at.replace(/\sdata-tpl="[^"]*"/, ` data-tpl="${escAttr(dict[tp[1]])}"`);
+      const n = attrs.match(/\sdata-n="([^"]*)"/);
+      if (n) text = escText(dict[tp[1]].replace('{n}', n[1]));
+    }
+    const k = attrs.match(/\sdata-i18n="([^"]+)"/);
+    if (k) {
+      const v = dict[k[1]];
+      if (v == null && !k[1].startsWith('play.')) return null;   // Play listing text may fall back to English
+      if (v != null) text = tag.toLowerCase() === 'title' ? escText(v) : v;
+    }
+    out += html.slice(pos, m.index) + `<${tag}${at}>`;
+    pos = m.index + whole.length;
+    if (text !== null) {
+      const inner = innerOf(html, pos, tag);
+      out += text;
+      pos += inner.length;
+      open.lastIndex = pos;   // the translated text replaces any nested markup
+    }
+  }
+  return out + html.slice(pos);
+}
+const langList = langs.languages.filter(l => l.code !== 'en');
+const versionsOf = {};   // English path -> language codes it was written in
+const localized = {};    // `${code}${path}` -> html (links/hreflang added below)
+for (const page of list) {
+  if (page.noindex || page.ltrOnly) continue;
+  for (const l of langList) {
+    let html = translate(rendered[page.path], shipped[l.code]);
+    if (!html) continue;
+    const d = page.descKey && shipped[l.code][page.descKey];
+    if (d) {
+      const en = esc(page.description), tr = esc(strip(d));
+      html = html.replace(`<meta name="description" content="${en}">`, `<meta name="description" content="${tr}">`)
+        .replace(`<meta property="og:description" content="${en}">`, `<meta property="og:description" content="${tr}">`);
+    }
+    (versionsOf[page.path] ??= []).push(l.code);
+    localized[l.code + page.path] = html;
+  }
+}
+const hreflang = p => {
+  const codes = versionsOf[p];
+  if (!codes) return '';
+  return [`<link rel="alternate" hreflang="en" href="${SITE}${urlOf(p)}">`,
+    ...codes.map(c => `<link rel="alternate" hreflang="${c}" href="${SITE}/${c}${urlOf(p)}">`),
+    `<link rel="alternate" hreflang="x-default" href="${SITE}${urlOf(p)}">`].join('\n') + '\n';
+};
+for (const page of list) {
+  const codes = versionsOf[page.path];
+  if (!codes) continue;
+  rendered[page.path] = rendered[page.path].replace('</head>', hreflang(page.path) + '</head>');
+  write(page.path, rendered[page.path]);
+  for (const c of codes) {
+    const meta = langList.find(l => l.code === c);
+    let html = localized[c + page.path]
+      .replace('<html lang="en">', `<html lang="${c}"${meta.rtl ? ' dir="rtl"' : ''} data-static-lang="${c}">`)
+      .replace(`<link rel="canonical" href="${SITE}${urlOf(page.path)}">`, `<link rel="canonical" href="${SITE}/${c}${urlOf(page.path)}">`)
+      .replace(`<meta property="og:url" content="${SITE}${urlOf(page.path)}">`, `<meta property="og:url" content="${SITE}/${c}${urlOf(page.path)}">`)
+      // links to pages that exist in this language stay in this language
+      .replace(/href="(\/[^"#?]*)([#?][^"]*)?"/g, (all, p, rest = '') => {
+        const key = p === '/' ? '/index.html' : p;
+        return versionsOf[key]?.includes(c) ? `href="/${c}${urlOf(key)}${rest}"` : all;
+      })
+      .replace('</head>', hreflang(page.path) + '</head>');
+    if (!html.includes(`data-static-lang="${c}"`) || !html.includes(`<link rel="canonical" href="${SITE}/${c}`)) fail(`language page ${c}${page.path}: lang or canonical not set`);
+    write(`${c}${page.path}`, html);
+  }
+}
+
+// ---------------------------------------------------------------- sitemap
+// lastmod = date of the last commit to the page's own source; the daily Play numbers do not count as a change
+const sourceOf = p => p.path === '/index.html' || p.path.startsWith('/apps/') ? ['src/data/apps.json', 'src/templates/pages.mjs']
+  : p.path === '/contact.html' ? ['src/content/support.html'] : ['src/content/policies' + p.path];
+const lastmod = files => {
+  try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', ...files], { cwd: ROOT }).toString().trim(); }
+  catch { return ''; }   // no git history: leave lastmod out rather than guess
+};
+const urls = [];
+for (const p of list.filter(x => !x.noindex)) {
+  const mod = lastmod(sourceOf(p));
+  urls.push({ loc: SITE + urlOf(p.path), mod });
+  // a translation counts as a change of the language copy too
+  for (const c of versionsOf[p.path] || []) urls.push({ loc: `${SITE}/${c}${urlOf(p.path)}`, mod: [mod, lastmod([`src/i18n/${c}.json`])].sort().pop() });
+}
+write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(u => `  <url><loc>${u.loc}</loc>${u.mod ? `<lastmod>${u.mod}</lastmod>` : ''}</url>`).join('\n')}
+</urlset>
+`);
+
+// ---------------------------------------------------------------- llms.txt (llmstxt.org)
+// One section per live app with links to all of its pages (pages carry `app: <id>` and `linkTitle`).
+const home = list.find(p => p.path === '/index.html');
+const llms = [`# MixApplications`, '', `> ${strip(home.description)}`, '',
+  `Developer on Google Play: ${PLAY_DEV}. Every page also exists in: ${langList.map(l => `${l.name} (/${l.code}/)`).join(', ')}.`, ''];
+for (const a of apps.filter(x => x.status === 'live')) {
+  const own = list.filter(p => p.app === a.id && !p.noindex && p.path !== `/apps/${a.id}.html`);
+  llms.push(`## ${a.short || a.name}`, '',
+    `- [${a.short || a.name} overview](${SITE}/apps/${a.id}.html): ${strip(a.headline || a.desc)}`,
+    ...own.map(p => `- [${p.linkTitle || p.title}](${SITE}${p.path}): ${strip(p.description)}`),
+    `- [${a.short || a.name} on Google Play](https://play.google.com/store/apps/details?id=${a.pkg})`, '');
+}
+const shared = list.filter(p => !p.noindex && !p.app && !p.ltrOnly && p.path !== '/index.html' && !p.path.startsWith('/apps/'));
+llms.push('## Help and guides', '', ...shared.map(p => `- [${p.linkTitle || strip(p.title)}](${SITE}${urlOf(p.path)}): ${strip(p.description)}`), '');
+llms.push('## Privacy', '', ...policies.map(p => `- [Privacy policy: ${p.label}](${SITE}/${p.file})`), '');
+write('llms.txt', llms.join('\n'));
+
+const langPages = Object.keys(localized).length;
+console.log(`built ${list.length} pages into _site/ + ${langPages} language copies (${Object.keys(sorted).length} translatable strings)`);
 console.log('translations: ' + report.join(' | '));

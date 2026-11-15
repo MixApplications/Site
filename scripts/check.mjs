@@ -128,8 +128,61 @@ for (const u of ['/privacy_policy.html', '/privacy_policy', '/tumtum_privacy.htm
   if (!target(u)) bad(`required URL missing: ${u}`);
 }
 
+// ---- 5. search-engine signals: self canonical, reciprocal hreflang, sitemap coverage, valid JSON-LD
+const SITE = 'https://www.mixapplications.com';
+const sitemap = fs.readFileSync(path.join(OUT, 'sitemap.xml'), 'utf8');
+const inSitemap = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]));
+const urlFor = f => SITE + rel(f).replace(/(^|\/)index\.html$/, '$1');
+const alternatesOf = html => new Map([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m => [m[1], m[2]]));
+let ldBlocks = 0;
+for (const f of htmlFiles) {
+  const html = fs.readFileSync(f, 'utf8');
+  const url = urlFor(f);
+  const head = html.match(/<head>[\s\S]*<\/head>/);
+  if (!head) {   // not a page (e.g. the Search Console verification file)
+    if (inSitemap.has(url)) bad(`${rel(f)}: file without <head> is in the sitemap`);
+    continue;
+  }
+  if (/<meta name="robots"[^>]*noindex/.test(html)) {
+    if (inSitemap.has(url)) bad(`${rel(f)}: noindex page is in the sitemap`);
+    continue;
+  }
+  const canon = html.match(/<link rel="canonical" href="([^"]+)">/);
+  if (!canon || canon[1] !== url) bad(`${rel(f)}: canonical ${canon ? canon[1] : '(none)'} is not the page itself`);
+  if (!inSitemap.has(url)) bad(`${rel(f)}: indexable page missing from sitemap.xml`);
+  if (/nosnippet|max-snippet|nofollow/.test(head[0])) bad(`${rel(f)}: snippet/follow restriction in <head>`);
+  const alts = alternatesOf(html);
+  if (alts.size) {
+    if (![...alts.values()].includes(url)) bad(`${rel(f)}: hreflang set does not include the page itself`);
+    if (alts.get('x-default') !== alts.get('en')) bad(`${rel(f)}: x-default is not the English page`);
+    for (const [lang, href] of alts) {
+      const target = path.join(OUT, href.slice(SITE.length).replace(/\/$/, '/index.html'));
+      if (!fs.existsSync(target)) { bad(`${rel(f)}: hreflang ${lang} -> missing ${href}`); continue; }
+      const back = alternatesOf(fs.readFileSync(target, 'utf8'));
+      if ([...alts].some(([l, h]) => back.get(l) !== h)) bad(`${rel(f)}: hreflang ${lang} -> ${href} does not link back with the same set`);
+      const lm = fs.readFileSync(target, 'utf8').match(/<html lang="([^"]+)"/);
+      if (lang !== 'x-default' && (!lm || lm[1] !== lang)) bad(`${href}: <html lang> is ${lm && lm[1]}, hreflang says ${lang}`);
+    }
+  }
+  for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    ldBlocks++;
+    try {
+      const ld = JSON.parse(m[1]);
+      if (ld['@context'] !== 'https://schema.org' || !ld['@type']) bad(`${rel(f)}: JSON-LD without schema.org @context/@type`);
+      if (ld.aggregateRating) bad(`${rel(f)}: aggregateRating (ratings from Google Play may not be marked up)`);
+    } catch (e) { bad(`${rel(f)}: JSON-LD does not parse: ${e.message}`); }
+  }
+}
+for (const loc of inSitemap) {
+  const p = loc.slice(SITE.length);
+  if (!fs.existsSync(path.join(OUT, p.endsWith('/') ? p + 'index.html' : p))) bad(`sitemap lists a missing page: ${loc}`);
+}
+for (const f of ['robots.txt', 'llms.txt']) if (!fs.existsSync(path.join(OUT, f))) bad(`missing /${f}`);
+if (!/^Sitemap: https:\/\/www\.mixapplications\.com\/sitemap\.xml$/m.test(fs.readFileSync(path.join(OUT, 'robots.txt'), 'utf8'))) bad('robots.txt has no Sitemap line');
+if (/^Disallow:\s*\/\S*/m.test(fs.readFileSync(path.join(OUT, 'robots.txt'), 'utf8'))) bad('robots.txt disallows a path');
+
 if (problems.length) {
   console.error('\nCHECK FAILED:\n- ' + problems.join('\n- '));
   process.exit(1);
 }
-console.log(`check passed: ${htmlFiles.length} pages valid, all links and anchors resolve, app data consistent`);
+console.log(`check passed: ${htmlFiles.length} pages valid, all links and anchors resolve, app data consistent, ${inSitemap.size} sitemap URLs, canonicals + hreflang reciprocal, ${ldBlocks} JSON-LD blocks parse`);

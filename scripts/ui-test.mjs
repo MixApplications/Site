@@ -183,8 +183,36 @@ try {
     await js(`localStorage.removeItem('mixapp.lang')`);
   }
 
+  // 5b. pre-translated language pages (what search engines index): the page is already in its language,
+  //     never redirects on load (not even with another saved choice), and the picker opens the same page
+  //     in the chosen language exactly once, with the last pick winning.
+  if (rtl && ltr) {
+    const dict = JSON.parse(fs.readFileSync(path.join(ROOT, `src/i18n/${rtl.code}.json`), 'utf8'));
+    const app = (data.apps.find(x => x.status === 'live' && play[x.pkg]) || {}).id;
+    await open('/');
+    await js(`localStorage.setItem('mixapp.lang', 'en')`);
+    await open(`/${rtl.code}/apps/${app}.html`);
+    await sleep(1500);
+    const s = await js(`({ path: location.pathname, lang: document.documentElement.lang, dir: document.documentElement.dir,
+      nav: document.querySelector('nav.top a').innerHTML.trim(), label: document.querySelector('.lang-current').textContent })`);
+    check(`/${rtl.code}/ page is in ${rtl.code}, right-to-left, and stays put with "en" saved`,
+      s.path === `/${rtl.code}/apps/${app}.html` && s.lang === rtl.code && s.dir === 'rtl' && s.nav === dict['nav.apps'] && s.label === rtl.code.toUpperCase(), JSON.stringify(s));
+    await shot(`static-${rtl.code}-app`);
+    const before = await js('history.length');
+    await js(`(() => { const b = document.querySelector('.lang-menu [data-lang="${ltr.code}"]'); b.click(); b.click(); })()`);
+    await sleep(2500);
+    const d = await js(`({ path: location.pathname, lang: document.documentElement.lang, hist: history.length, stored: localStorage.getItem('mixapp.lang') })`);
+    check(`double tap on ${ltr.name} in the picker opens /${ltr.code}/ once`,
+      d.path === `/${ltr.code}/apps/${app}.html` && d.lang === ltr.code && d.hist === before + 1 && d.stored === ltr.code, JSON.stringify({ ...d, before }));
+    await js(`(() => { const m = document.querySelector('.lang-menu'); m.querySelector('[data-lang="${rtl.code}"]').click(); m.querySelector('[data-lang="en"]').click(); })()`);
+    await sleep(2500);
+    const e = await js(`({ path: location.pathname, lang: document.documentElement.lang, stored: localStorage.getItem('mixapp.lang') })`);
+    check('rapid taps on a translated page end on the last language picked (English)', e.path === `/apps/${app}.html` && e.lang === 'en' && e.stored === 'en', JSON.stringify(e));
+    await js(`localStorage.removeItem('mixapp.lang')`);
+  }
+
   // 6. every page loads without script errors, and nothing overflows a phone screen
-  const pages = ['/', '/contact.html', '/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_privacy.html', '/cofferlock_privacy.html', '/404.html', ...Object.keys(play).map(pkg => {
+  const pages = [`/${rtl ? rtl.code : 'en'}/`, `/${ltr ? ltr.code : 'en'}/contact.html`, '/', '/contact.html', '/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_privacy.html', '/cofferlock_privacy.html', '/404.html', ...Object.keys(play).map(pkg => {
     const a = data.apps.find(x => x.pkg === pkg); return `/apps/${a ? a.id : pkg.split('.').pop().replace(/_/g, '-')}.html`; })];
   for (const p of pages) {
     errors.length = 0;
