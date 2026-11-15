@@ -77,14 +77,27 @@
       "descKey": "home.5",
       "desc": "The all-in-one USB toolbox. Partition drives with GPT or MBR, format across six file systems, write bootable ISOs, install Ventoy on a drive, image drives byte-by-byte, encrypt drives with a password, and prepare drives for retro gaming consoles — <strong>from one app</strong>.",
       "chips": [
+        "Ventoy",
+        "ISO burner",
+        "Windows To Go",
+        "Win 11 bypass",
+        "Linux persistence",
+        "Raw Write (DD)",
         "FAT16→ext4",
         "MBR / GPT",
-        "Ventoy",
-        "Windows To Go",
-        "Linux persistence",
+        "partition wizard",
+        "data recovery",
+        "secure wipe + PDF cert",
         "USB encryption",
+        "bad-blocks scan",
         "fake-flash check",
-        "PS2/PS3 tools"
+        "benchmark",
+        "backup &amp; restore",
+        "defragmenter",
+        "file manager",
+        "archive extractor",
+        "PS2/PS3 tools",
+        "game converter"
       ],
       "headline": "Everything a PC does with a USB drive, done from your phone — the all-in-one USB workshop for Android.",
       "features": [
@@ -129,13 +142,19 @@
       "desc": "A dedicated bootable-USB creator. Pick an ISO, plug in a drive, and get a bootable installer — <strong>no PC and no root required</strong>. Full manual control over partition scheme and file system, with Windows 11 requirement bypass and automated setup customization. <strong>DROFUS now carries every feature from ISO 2 USB</strong>, so it is the one app to install for burning images.",
       "chips": [
         "Windows 7–11",
+        "Windows To Go",
+        "Win 11 bypass",
+        "local account",
         "WIM split",
         "Linux",
+        "persistence",
         "macOS DMG",
         "Raspberry Pi",
+        "FreeDOS · MS-DOS",
+        ".gz · .xz · .zip",
         "NTFS / FAT32",
         "GPT / MBR",
-        "persistence"
+        "high-speed mode"
       ],
       "headline": "The full-power ISO burner for Android: PC-grade control over every bootable USB, with no PC at all.",
       "features": [
@@ -180,7 +199,12 @@
         "exFAT · NTFS · FAT32",
         "Secure Boot",
         "Win 11 bypass",
-        "theme import"
+        "Config Hub",
+        "theme import",
+        "Linux persistence",
+        "download ISOs to USB",
+        "boot passwords",
+        "file manager"
       ],
       "headline": "Carry every operating system on one USB drive: install Ventoy from your phone, copy ISOs, and choose at boot.",
       "features": [
@@ -215,13 +239,21 @@
       "descKey": "home.17",
       "desc": "Maintenance and rescue for flash drives: format, securely wipe with a signed PDF erasure certificate, detect fake-capacity drives, benchmark, defragment, and <strong>try to repair corrupted and unreadable drives</strong> — without root.",
       "chips": [
+        "FAT16→ext4",
+        "partition wizard",
+        "MBR ↔ GPT",
         "repair drives",
+        "data recovery",
+        "partition recovery",
         "secure wipe + PDF cert",
         "bad-blocks scan",
         "fake-flash detect",
         "benchmark",
-        "FAT16→ext4",
-        "PS2/PS3 tools"
+        "backup &amp; restore",
+        "defragmenter",
+        "device info",
+        "PS2/PS3 tools",
+        "game converter"
       ],
       "headline": "A complete maintenance and rescue kit for USB drives: diagnose, repair, test and securely wipe — from your phone.",
       "features": [
@@ -265,7 +297,11 @@
         "copy · move · rename",
         "open &amp; share",
         "tabs &amp; two panes",
-        "safe eject"
+        "hubs &amp; card readers",
+        "pause &amp; resume",
+        "drive check &amp; repair",
+        "safe eject",
+        "no root"
       ],
       "headline": "Open any USB drive on Android — NTFS, exFAT, FAT and ext4 — and read and write it without root.",
       "features": [
@@ -308,7 +344,12 @@
         "MIUI · HyperOS",
         ".mtz export",
         "icons &amp; fonts",
+        "wallpaper &amp; lock screen",
+        "status bar &amp; Control Center",
+        "sounds &amp; boot animation",
+        "starter templates",
         "theme check",
+        "MAML editor",
         "Shizuku install"
       ],
       "headline": "A complete theme studio for Xiaomi phones: design, build and install MIUI and HyperOS themes on the phone itself.",
@@ -355,8 +396,10 @@
         "1,100 levels",
         "one-swipe puzzles",
         "undo &amp; hints",
+        "no timers or lives",
         "plays offline",
         "11 languages",
+        "no account",
         "no purchases"
       ],
       "headline": "A cozy puzzle built on one brilliant rule — one swipe moves everyone — with 1,100 handmade levels to master.",

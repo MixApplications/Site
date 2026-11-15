@@ -42,7 +42,7 @@ export function home(ctx) {
           </div>
         </div>
         ${badges(p)}
-${a.chips && a.chips.length ? `        <div class="chips">${a.chips.slice(0, 4).map(c => `<span class="chip">${c}</span>`).join('')}</div>
+${a.chips && a.chips.length ? `        <div class="chips">${a.chips.map(c => `<span class="chip">${c}</span>`).join('')}</div>
 ` : ''}
         <div class="actions">
           <a class="btn btn--ghost btn--sm" href="/apps/${a.id}.html"><span data-i18n="home.details">Details</span></a>
