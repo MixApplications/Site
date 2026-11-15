@@ -299,8 +299,12 @@ for (const l of langs.languages) {
 // between all versions. Legal pages stay English only. A page with any missing
 // (non-Play) string is not written in that language: no half-English copies.
 const urlOf = p => (p === '/index.html' ? '/' : p);
-// tags out, then any stray angle bracket (a nested tag such as <scr<b>ipt> must not leave one behind)
-const strip = s => String(s || '').replace(/<[^>]+>/g, '').replace(/[<>]/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+// tags out until none is left (a nested tag such as <scr<b>ipt> must not leave one behind), then any stray bracket
+function strip(s) {
+  let t = String(s || ''), prev;
+  do { prev = t; t = t.replace(/<[^>]*>/g, ''); } while (t !== prev);
+  return t.replace(/[<>]/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+}
 const escAttr = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 const escText = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 function translate(html, dict) {
