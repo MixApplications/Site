@@ -35,7 +35,7 @@
 <p data-i18n="fq.ultimate-usb.26">Pro works fully offline.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.27">Can I pay instead of watching ads, and what does a purchase include?</summary><div class="a">
-<p data-i18n="fq.ultimate-usb.28">Yes. You can buy a token pack, or buy Pro. Pro is a one-time, lifetime purchase with no subscription: no ads, no tokens, archive extraction straight to USB, and full offline use, also with an ad blocker on. Apart from archive extraction to USB, the tools are the same.</p>
+<p data-i18n="fq.ultimate-usb.28">Yes. You can buy a token pack, or buy Pro. Pro is a one-time, lifetime purchase with no subscription: no ads, no tokens, and full offline use, also with an ad blocker on. The tools are the same with and without Pro.</p>
 <p data-i18n="fq.ultimate-usb.29">Pro is tied to your Google account. Tokens are stored on your device.</p>
 <p data-i18n="fq.ultimate-usb.145">If a purchase cannot be checked, the app shows <strong>Could not verify the purchase. Try again later.</strong></p>
 </div></details>
@@ -64,7 +64,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.46">What does "CRITICAL WARNING: BAD DRIVE!" mean, and how do I find a fake-capacity drive?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.47">The app checks the drive when you connect it. If the drive may be fake or faulty, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really holds. Tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
-<p data-i18n="fq.ultimate-usb.147">Sometimes the drive does not keep the data the app wrote for this check. The app then says so, opens the drive's files read-only and offers <strong>Try restore again</strong>. Tools that erase the whole drive still run after one more <strong>Yes</strong>; <strong>No</strong> gives the tokens back.</p>
+<p data-i18n="fq.ultimate-usb.147">Sometimes the drive fails this check. The app then says so, opens the drive's files read-only and offers <strong>Try restore again</strong>. Tools that erase the whole drive still run after one more <strong>Yes</strong>; <strong>No</strong> gives the tokens back.</p>
 <p data-i18n="fq.ultimate-usb.48">ISO Burner does not write to a drive that fails this test until the real size has been scanned.</p>
 <p data-i18n="fq.ultimate-usb.49">For a full test, run <a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> with <strong>Detect fake / counterfeit capacity</strong> ticked. It tests the whole drive and erases everything on it.</p>
 </div></details>
@@ -126,7 +126,7 @@
 <ul>
   <li data-i18n="fq.ultimate-usb.89"><strong>The app was minimised.</strong> A job pauses while the app is in the background and continues when it is in front again.</li>
   <li data-i18n="fq.ultimate-usb.90"><strong>No internet or an ad blocker (free version).</strong> Running jobs wait until this is fixed. Pro does not pause for these.</li>
-  <li data-i18n="fq.ultimate-usb.91"><strong>The drive was removed or stopped answering.</strong> The job ends as failed. Reconnect the drive and start again; the tokens come back.</li>
+  <li data-i18n="fq.ultimate-usb.91"><strong>The drive was removed or stopped answering.</strong> During a burn (ISO Burner or Raw Write), a backup or a restore, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: the job continues from where it stopped. A different drive is never written. If you cancel instead, the tokens come back. Other jobs end as failed: reconnect the drive and start again; the tokens come back.</li>
   <li data-i18n="fq.ultimate-usb.148"><strong>A short connection failure.</strong> It does not stop the job: the app tries again and goes on.</li>
 </ul>
 <p data-i18n="fq.ultimate-usb.92">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Run Bad Blocks Check with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive).</p>

@@ -202,7 +202,7 @@ ${a.features.map((f, i) => `          <div class="feature"><h3 data-i18n="app.${
 ${shots.map((u, i) => `          <img src="${playImg(u, 'h600')}" alt="${esc(a.short || a.name)} screenshot ${i + 1}" height="300" loading="lazy">`).join('\n')}
         </div>
       </section>` : ''}
-${p.description ? `      <details class="full"${a.desc ? '' : ' open'}>
+${p.description && !a.hidePlayDescription ? `      <details class="full"${a.desc ? '' : ' open'}>
         <summary data-i18n="home.full">Full description from Google Play</summary>
         <div class="fulldesc" data-i18n="play.${a.id}.description">${playText(p.description.trim())}</div>
       </details>` : ''}

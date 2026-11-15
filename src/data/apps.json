@@ -1,5 +1,5 @@
 {
-  "_comment": "Hand-written extras for the apps. Every app published by the developer below is found on Google Play by scripts/sync-play.mjs and shown automatically with its Play texts; an entry here only adds what Play cannot know: a curated description (desc + descKey, translated in src/i18n), chips, colour, category, its support answers (faq) and its policy page. status 'unlisted' = not released yet: nothing about it is shown (its policy page stays reachable by its URL, unlinked and noindex) until its pkg appears on Google Play, then it goes live by itself. A live entry that leaves Google Play is shown as unpublished.",
+  "_comment": "Hand-written extras for the apps. Every app published by the developer below is found on Google Play by scripts/sync-play.mjs and shown automatically with its Play texts; an entry here only adds what Play cannot know: a curated description (desc + descKey, translated in src/i18n), chips, colour, category, its support answers (faq) and its policy page. status 'unlisted' = not released yet: nothing about it is shown (its policy page stays reachable by its URL, unlinked and noindex) until its pkg appears on Google Play, then it goes live by itself. A live entry that leaves Google Play is shown as unpublished. hidePlayDescription: true hides the Play description block (Ultimate USB, owner 2026-11-15: its Play text still says Pro is needed to extract archives to USB; remove the flag once the Play listing is edited).",
   "developer": "MixApplications",
   "categories": [
     {
@@ -67,6 +67,7 @@
   "apps": [
     {
       "id": "ultimate-usb",
+      "hidePlayDescription": true,
       "name": "Ultimate USB",
       "pkg": "com.mixapplications.ultimateusb",
       "status": "live",
@@ -461,8 +462,7 @@
         "fingerprint unlock",
         "12 recovery words",
         "no account",
-        "no cloud",
-        "no ads"
+        "no cloud"
       ],
       "headline": "Keep your private photos, videos and documents locked in one vault that only you can open. It works like a normal file manager, and your files never leave your phone. No account and no cloud.",
       "features": [
@@ -484,7 +484,7 @@
         },
         {
           "title": "Private by design",
-          "text": "No account, no cloud, no ads, no tracking. It locks by itself, blocks screenshots and shows every unlock and every failed try. Free with a vault of up to 5 GB."
+          "text": "No account, no cloud, no tracking. It locks by itself, blocks screenshots and shows every unlock and every failed try. Free with a vault of up to 5 GB."
         },
         {
           "title": "Pro: pay once",
