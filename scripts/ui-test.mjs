@@ -150,6 +150,8 @@ try {
     check(`choosing ${rtl.name} switches the page to ${rtl.code}, right-to-left`, r.lang === rtl.code && r.dir === 'rtl' && r.nav !== 'Apps', JSON.stringify(r));
     for (const [pg, w] of [['/', 1280], ['/', 390], ['/contact.html', 390], ['/apps/tumtum.html', 390]]) {
       await open(pg, w);
+      // the translation is applied after its language file loads: wait for it (up to 5 s) instead of a fixed pause
+      for (let i = 0; i < 50 && await js('document.documentElement.dir') !== 'rtl'; i++) await sleep(100);
       const o = await js(`({ sw: document.documentElement.scrollWidth, iw: innerWidth, dir: document.documentElement.dir,
         wide: [...document.querySelectorAll('body *')].filter(e => { const r = e.getBoundingClientRect(); return r.width && (r.right > innerWidth + 1 || r.left < -1) && getComputedStyle(e).position !== 'fixed'; })
           .slice(0, 5).map(e => e.tagName + '.' + e.className + ' ' + Math.round(e.getBoundingClientRect().left) + '..' + Math.round(e.getBoundingClientRect().right)) })`);

@@ -1,4 +1,15 @@
 <!--meta {"key":"gd.usb-safety","kind":"guide","apps":["ultimate-usb","drofus","ventoy","usb-tools"],"title":"Are MixApplications USB apps safe for my drive and my data?","h1":"How do MixApplications USB apps keep your drive and your data safe?","description":"Every MixApplications USB app tests the drive when you connect it, refuses a drive that cannot be written, asks before anything is erased, checks an image before it touches the drive, and tests the result after formatting. Everything runs on your phone, with no PC and no root."} -->
+<h2 data-i18n="gd.usb-safety.27">An advanced USB connection built to keep your drive and your data safe</h2>
+<p data-i18n="gd.usb-safety.28">Our USB apps use a very advanced USB connection. If anything goes wrong while data is being transferred, the app recovers the connection. It protects your USB devices from damage and your data from loss, and it tells you when a write did not complete instead of reporting success.</p>
+<ul>
+  <li data-i18n="gd.usb-safety.30"><strong>Recovers by itself.</strong> If the USB connection has a short failure during a job, the app recovers it automatically and the job continues, with no action from you.</li>
+  <li data-i18n="gd.usb-safety.31"><strong>Stays connected.</strong> A connected drive does not drop off when it is idle.</li>
+  <li data-i18n="gd.usb-safety.32"><strong>Continue after a re-plug.</strong> If the drive is unplugged or stops answering during a burn, a backup or a restore, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: the job continues from where it stopped. A different drive is never written. If you cancel instead, the tokens come back.</li>
+  <li data-i18n="gd.usb-safety.34"><strong>Fake drives are caught.</strong> If a drive does not keep the data written to it, the app tells you, keeps its files read-only so nothing more is lost, and asks before any whole-drive tool runs on it.</li>
+  <li data-i18n="gd.usb-safety.35"><strong>No half-written drives.</strong> A burn that fails or is cancelled leaves the drive marked to be formatted again, so a half-written drive is never mistaken for a good one.</li>
+</ul>
+<p data-i18n="gd.usb-safety.29">We fully test this connection in the worst cases before every release, to make sure it is the best, most stable and safest USB connection.</p>
+
 <h2 data-i18n="gd.usb-safety.1">Checks before anything is written</h2>
 <ul>
   <li data-i18n="gd.usb-safety.2"><strong>Drive test on connect.</strong> The app checks the drive when you connect it. A drive that fails this check may be counterfeit (smaller than it claims) or faulty, and the app warns you before you use it.</li>
@@ -36,5 +47,13 @@
 </ul>
 
 <h2 data-i18n="gd.usb-safety.24">Tested before every release</h2>
-<p data-i18n="gd.usb-safety.25">Each release of our USB apps is tested on real phones with real USB drives before it is published on Google Play.</p>
+<p data-i18n="gd.usb-safety.25">Each release of our USB apps is tested on real phones with real USB drives before it is published on Google Play, including the worst cases:</p>
+<ul>
+  <li data-i18n="gd.usb-safety.36">a drive unplugged in the middle of a write;</li>
+  <li data-i18n="gd.usb-safety.37">loose cables and unreliable USB hubs;</li>
+  <li data-i18n="gd.usb-safety.38">drives that stop answering, and drives that turn read-only while in use;</li>
+  <li data-i18n="gd.usb-safety.39">slow and very old drives, and fake-capacity drives;</li>
+  <li data-i18n="gd.usb-safety.40">empty card readers, and power cut to the USB port or hub;</li>
+  <li data-i18n="gd.usb-safety.41">many drive models on several phone models.</li>
+</ul>
 <p data-i18n="gd.usb-safety.26">Each tool has its own page with every step and option: start from <a href="/tools/format-usb.html">Format USB</a>, <a href="/tools/iso-burner.html">ISO Burner</a>, <a href="/tools/ventoy.html">Ventoy</a> or <a href="/tools/wipe-usb.html">Wipe USB</a>, or read <a href="/guides/choose-a-bootable-usb-app.html">how to choose a bootable USB app</a>.</p>
