@@ -1,0 +1,35 @@
+<!--meta {"key":"tl.bad-blocks-check","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Check a USB drive for bad blocks and fake capacity on Android","h1":"How do I check my USB drive for bad blocks or fake capacity?","description":"Open <strong>Bad Blocks Check</strong> in Ultimate USB or USB Tools, choose 1 or 2 passes and tap <strong>START</strong>. It finds failing sectors and fake-capacity drives. <strong>It erases all data on the drive.</strong>"} -->
+<h2 data-i18n="tl.bad-blocks-check.1">Steps</h2>
+<ol>
+  <li data-i18n="tl.bad-blocks-check.2">Copy any files you want to keep off the drive. The check destroys all data on it.</li>
+  <li data-i18n="tl.bad-blocks-check.3">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
+  <li data-i18n="tl.bad-blocks-check.4">Open the <strong>Diagnostics &amp; Info</strong> group and tap <strong>Bad Blocks Check</strong>.</li>
+  <li data-i18n="tl.bad-blocks-check.5"><strong>Number of Passes:</strong> choose <strong>1 Pass</strong> or <strong>2 Passes</strong>.</li>
+  <li data-i18n="tl.bad-blocks-check.6">Keep <strong>Detect fake / counterfeit capacity</strong> ticked to test the real size of the drive.</li>
+  <li data-i18n="tl.bad-blocks-check.7">Tap <strong>START</strong>. The app warns that all data will be destroyed. Confirm to start.</li>
+</ol>
+<p data-i18n="tl.bad-blocks-check.8">Keep the app in the foreground while the check runs: operations pause when the app is minimized, to protect the drive.</p>
+
+<h2 data-i18n="tl.bad-blocks-check.9">Options and their values</h2>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.bad-blocks-check.10">Option</th><th data-i18n="tl.bad-blocks-check.11">Values</th><th data-i18n="tl.bad-blocks-check.12">Default</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.bad-blocks-check.13"><strong>Number of Passes</strong></td><td data-i18n="tl.bad-blocks-check.14"><strong>1 Pass</strong>, <strong>2 Passes</strong></td><td data-i18n="tl.bad-blocks-check.15">1 Pass</td></tr>
+    <tr><td data-i18n="tl.bad-blocks-check.16"><strong>Detect fake / counterfeit capacity</strong></td><td data-i18n="tl.bad-blocks-check.17">On, off</td><td data-i18n="tl.bad-blocks-check.18">On</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 data-i18n="tl.bad-blocks-check.19">What does Bad Blocks Check find?</h2>
+<ul>
+  <li data-i18n="tl.bad-blocks-check.20"><strong>Failing sectors:</strong> places on the drive that do not keep data correctly are reported as bad blocks.</li>
+  <li data-i18n="tl.bad-blocks-check.21"><strong>Fake-capacity drives:</strong> a counterfeit USB drive or SD card reports a large capacity but silently discards anything past its real size. The check exposes this.</li>
+</ul>
+
+<h2 data-i18n="tl.bad-blocks-check.22">What do I do if the check finds errors?</h2>
+<p data-i18n="tl.bad-blocks-check.23">Replace the drive. Physical flash failure cannot be repaired by any software.</p>
+
+<h2 data-i18n="tl.bad-blocks-check.24">Does Bad Blocks Check use tokens?</h2>
+<p data-i18n="tl.bad-blocks-check.25">No. Bad Blocks Check is free. The app only asks you to confirm before it starts.</p>
+<p data-i18n="tl.bad-blocks-check.26">To measure the drive's speed without erasing it, use <a href="/tools/benchmark.html">Benchmark</a> with <strong>Read Only</strong>.</p>

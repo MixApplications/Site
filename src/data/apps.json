@@ -112,7 +112,8 @@
           "title": "Native engine, no root",
           "text": "Its own C/C++ file-system drivers work over a plain OTG cable. Root is only needed for the internal SD slot."
         }
-      ]
+      ],
+      "definition": "Ultimate USB is an Android app that makes bootable USB drives, formats, partitions, tests, wipes and encrypts USB drives, recovers deleted files and manages PS2 and PS3 games, without a PC or root. It has 21 tools in 6 groups."
     },
     {
       "id": "drofus",
@@ -158,7 +159,8 @@
           "title": "Any USB target, no root",
           "text": "Flash drives, SD card adapters and external SSDs over OTG. Root only for the internal SD slot."
         }
-      ]
+      ],
+      "definition": "DROFUS is an Android app that writes bootable USB drives from Windows, Linux, macOS DMG, Raspberry Pi and DOS images, without a PC or root. DROFUS is an independent app, not affiliated with Rufus."
     },
     {
       "id": "ventoy",
@@ -198,7 +200,8 @@
           "title": "Full control",
           "text": "GPT or MBR, exFAT, NTFS or FAT32, Windows 11 requirements bypass, and Ventoy themes and settings without editing files."
         }
-      ]
+      ],
+      "definition": "Ventoy (Unofficial) is an Android app that installs Ventoy on a USB drive, so one drive holds many ISO files and boots any of them, without a PC or root. It is an independent app, not affiliated with the Ventoy project."
     },
     {
       "id": "usb-tools",
@@ -242,7 +245,8 @@
           "title": "Backup, defragment, games",
           "text": "Full drive backup and restore, a FAT32/exFAT defragmenter (needed by PS2 OPL), and PS2/PS3 game tools."
         }
-      ]
+      ],
+      "definition": "USB Tools is an Android app that formats, partitions, tests, wipes, backs up and recovers USB drives and manages PS2 and PS3 games on them, without a PC or root. It has 13 tools in 4 groups."
     },
     {
       "id": "usb-file-manager",
@@ -285,7 +289,8 @@
           "title": "Safe by design",
           "text": "Eject writes out every change before you unplug, and a warning flags drives that may store less than their size says. Root is only needed for the internal SD card slot."
         }
-      ]
+      ],
+      "definition": "USB File Manager is an Android app that opens USB drives formatted as NTFS, exFAT, FAT or ext4 and reads and writes their files, without a PC or root."
     },
     {
       "id": "chaome",
@@ -332,7 +337,8 @@
           "title": "Theme library",
           "text": "Every theme you build is kept in a library on the phone: search it, compare two themes, reuse single parts, and back it up to a zip file."
         }
-      ]
+      ],
+      "definition": "ChaoMe Theme Editor is an Android app that edits, builds and installs themes for Xiaomi phones with MIUI and HyperOS: icons, lock screen and fonts."
     },
     {
       "id": "tumtum",
@@ -375,7 +381,8 @@
           "title": "Fair by design",
           "text": "Free, with no in-app purchases. Plays fully offline, in 11 languages."
         }
-      ]
+      ],
+      "definition": "TumTum is an offline logic puzzle game for Android in which one swipe slides every character, with 1,100 levels."
     },
     {
       "id": "mixdocs",
@@ -389,41 +396,42 @@
       "descKey": "home.mixdocs",
       "desc": "Open, edit, convert and scan documents — PDF, Word, Excel, PowerPoint and OpenDocument — with text recognition, all on your device.",
       "chips": [
-       "PDF &amp; Office editor",
-       "scanner &amp; OCR",
-       "50+ file types",
-       "on your device",
-       "no account",
-       "Pro: pay once"
+        "PDF &amp; Office editor",
+        "scanner &amp; OCR",
+        "50+ file types",
+        "on your device",
+        "no account",
+        "Pro: pay once"
       ],
       "headline": "Open, edit, convert, scan and sign your documents in one app: PDF, Word, Excel, PowerPoint and more than 50 file types. Everything is processed on your phone, and every tool is free, with no page limits, no watermarks and no account.",
       "features": [
-       {
-        "title": "Every document opens",
-        "text": "PDF, Office and OpenDocument files in their original layout, plus Pages, Numbers, Keynote, e-books, comics, e-mail and images. Search, bookmarks, night mode and reflowed text make reading easy."
-       },
-       {
-        "title": "Edit PDF and Office",
-        "text": "Highlight, draw, add notes and edit text and pictures in a PDF, and fill in forms. Write documents, work with formulas in spreadsheets, and present slides."
-       },
-       {
-        "title": "Convert and organize",
-        "text": "PDF to Word, Excel, PowerPoint, EPUB or images, and many files to PDF at once. Merge, split, rotate and compress; recipes run several steps on many files."
-       },
-       {
-        "title": "Scan and recognize",
-        "text": "Scan pages and ID cards, turn photos into text and searchable PDFs, and read QR codes and barcodes. Translate documents and listen to them read aloud, or save them as audio."
-       },
-       {
-        "title": "Sign and protect",
-        "text": "Sign by hand or with a digital signature, lock a PDF with a password, black out text so it is gone for good, and remove hidden data before you share."
-       },
-       {
-        "title": "Private, with Pro once",
-        "text": "Your documents never leave your phone: no account and no cloud. Every tool is free with ads; a one-time Pro purchase removes all ads and lets MixDocs work offline."
-       }
+        {
+          "title": "Every document opens",
+          "text": "PDF, Office and OpenDocument files in their original layout, plus Pages, Numbers, Keynote, e-books, comics, e-mail and images. Search, bookmarks, night mode and reflowed text make reading easy."
+        },
+        {
+          "title": "Edit PDF and Office",
+          "text": "Highlight, draw, add notes and edit text and pictures in a PDF, and fill in forms. Write documents, work with formulas in spreadsheets, and present slides."
+        },
+        {
+          "title": "Convert and organize",
+          "text": "PDF to Word, Excel, PowerPoint, EPUB or images, and many files to PDF at once. Merge, split, rotate and compress; recipes run several steps on many files."
+        },
+        {
+          "title": "Scan and recognize",
+          "text": "Scan pages and ID cards, turn photos into text and searchable PDFs, and read QR codes and barcodes. Translate documents and listen to them read aloud, or save them as audio."
+        },
+        {
+          "title": "Sign and protect",
+          "text": "Sign by hand or with a digital signature, lock a PDF with a password, black out text so it is gone for good, and remove hidden data before you share."
+        },
+        {
+          "title": "Private, with Pro once",
+          "text": "Your documents never leave your phone: no account and no cloud. Every tool is free with ads; a one-time Pro purchase removes all ads and lets MixDocs work offline."
+        }
       ],
-      "category": "tools"
+      "category": "tools",
+      "definition": "MixDocs is an Android app that opens, edits, converts, scans and signs PDF and Office documents, with 59 tools and more than 50 file types."
     },
     {
       "id": "mixmedia",
@@ -483,7 +491,8 @@
           "text": "Unlimited space and more vaults, a decoy vault, encrypted Trash, one-tap backup, sealed envelopes and adding files from any app's Share menu. No subscription."
         }
       ],
-      "category": "tools"
+      "category": "tools",
+      "definition": "Cofferlock is an Android app that locks photos, videos and files in one private vault on the phone, with no cloud and no account."
     },
     {
       "id": "iso2usb",

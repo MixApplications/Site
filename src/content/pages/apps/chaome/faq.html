@@ -1,0 +1,52 @@
+<!--meta {"key":"fq.chaome","kind":"faq","app":"chaome","title":"ChaoMe Theme Editor FAQ: MIUI and HyperOS themes, .mtz files","h1":"What do I need to know about ChaoMe Theme Editor?","description":"<strong>ChaoMe Theme Editor</strong> opens a theme or a downloaded .mtz file, lets you edit it and builds a new .mtz theme for MIUI and HyperOS phones. Editing and exporting work without Shizuku; installing on Android 11 and newer needs Shizuku or root."} -->
+<h2 data-i18n="fq.chaome.1">Applying and installing themes</h2>
+<details class="q"><summary data-i18n="fq.chaome.2">Why does my theme reset to the default after a while, and how do I keep it applied?</summary><div class="a">
+<p data-i18n="fq.chaome.3">The phone may go back to its default theme after a while, usually within a few hours. Xiaomi resets themes it did not sell. The app cannot make a theme stay permanently.</p>
+<p data-i18n="fq.chaome.4">Your edits stay in the .mtz file, so apply the theme again. A wallpaper set with <strong>Set Wallpaper</strong> stays even when the rest of the theme is reset.</p>
+<p data-i18n="fq.chaome.5">On recent HyperOS versions, Xiaomi's Themes app may refuse an edited theme. You can still try single parts under <strong>Customize theme</strong> in the Themes app.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.chaome.6">How do I install a theme from an .mtz file?</summary><div class="a">
+<p data-i18n="fq.chaome.7">To open a file, tap <strong>Browse</strong> on the start screen and pick the .mtz file, or open it from another app with <strong>Open with</strong>. A file that is cut off is reported as incomplete: download it again.</p>
+<p data-i18n="fq.chaome.8">After you export, the app offers to install the theme. On Android 10 and older it installs directly. From Android 11, installing needs the Shizuku app or root. On Android 13 and later, Shizuku started in ADB (wireless debugging) mode cannot install themes; Shizuku started with root can.</p>
+<p data-i18n="fq.chaome.9">Without installing, the .mtz file is still saved in your output folder. Apply it in the Themes app.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.chaome.10">Can I use a HyperOS theme on a MIUI phone?</summary><div class="a">
+<p data-i18n="fq.chaome.11">Yes, by converting it. In the Theme library, choose <strong>Convert for another system version</strong> (Pro). The result lists what changed and what is not shown on that system version. Nothing is removed, and the original theme is unchanged.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.chaome.12">What does the "theme rules not met" message mean when applying?</summary><div class="a">
+<p data-i18n="fq.chaome.13">ChaoMe's <strong>Theme check</strong> checks a theme against the official theme rules and lists each finding as <strong>Error</strong>, <strong>Warning</strong> or <strong>Store rule</strong>, with the screen that fixes it. For example, a theme without description.xml is not accepted by the Themes app. Theme check is advice only and never blocks an export.</p>
+<p data-i18n="fq.chaome.14">Open it from its tile in the editor, or from the button after a theme is saved. When it finds nothing, it shows <strong>No problems found.</strong></p>
+</div></details>
+
+<h2 data-i18n="fq.chaome.15">Editing</h2>
+<details class="q"><summary data-i18n="fq.chaome.16">Why are my edits not in the exported theme file?</summary><div class="a">
+<ul>
+  <li data-i18n="fq.chaome.17">In Settings, <strong>Status bar and Control Center</strong> set to <strong>System's own</strong> leaves the theme's status bar, notification and Control Center parts out of the export, together with your edits to them.</li>
+  <li data-i18n="fq.chaome.18">Parts made for another system version may not show on your phone.</li>
+  <li data-i18n="fq.chaome.19">Some editors exist only on certain system versions.</li>
+  <li data-i18n="fq.chaome.20">After a Xiaomi reset the phone shows the default theme again, but the .mtz file keeps your edits.</li>
+</ul>
+</div></details>
+<details class="q"><summary data-i18n="fq.chaome.21">Can I keep some parts of the phone default (for example launcher art) while using a theme?</summary><div class="a">
+<p data-i18n="fq.chaome.22">Yes. Rows you leave alone keep the theme's own value. When you remove a piece of art, the phone's default shows instead. <strong>Reset Edits</strong> undoes the surfaces you pick. <strong>Hide Elements</strong> switches off parts of the system UI, and unchecking one restores it.</p>
+<p data-i18n="fq.chaome.23">In the Themes app, to change one part only, pick the plain entry under <strong>Customize theme</strong>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.chaome.24">Can I change the icon shape for icon packs?</summary><div class="a">
+<p data-i18n="fq.chaome.25">Yes. After <strong>Import whole Icon Pack</strong>, set <strong>Shape of icon-pack icons</strong>: Circle, Squircle, Rounded square, Square or Teardrop. <strong>Original</strong> keeps the icons as they are. The shape applies only to apps that have no icon in the theme.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.chaome.26">Can I change the fingerprint icon on the lock screen?</summary><div class="a">
+<p data-i18n="fq.chaome.27">Yes. The <strong>Fingerprint</strong> tile has <strong>Fingerprint Icon</strong> and <strong>Unlock Animation</strong>. Pick a GIF or a picture and an effect, such as Pulse, Spin or Glow. The tile is shown on newer system versions.</p>
+<p data-i18n="fq.chaome.28">This works only with an in-screen sensor. Phones with the sensor on the side or the back do not draw a fingerprint icon on the lock screen.</p>
+</div></details>
+
+<h2 data-i18n="fq.chaome.29">Phones, files and Pro</h2>
+<details class="q"><summary data-i18n="fq.chaome.30">Does the app work on MIUI 14 and HyperOS?</summary><div class="a">
+<p data-i18n="fq.chaome.31">Yes. Themes can be built for MIUI 9.4 or earlier, MIUI 9.5 to 11, MIUI 12, 12.5, 13 and 14, and HyperOS 1, 2 and 3. Choose yours under <strong>Settings</strong> &rarr; <strong>Phone system version</strong>. The app runs on Android 7.0 and newer.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.chaome.32">Where are my themes saved?</summary><div class="a">
+<p data-i18n="fq.chaome.33">Exported .mtz files go to MIUI/theme on your phone, or to a folder you choose on the export screen. Every theme you build is also kept in the Theme library inside the app. Uninstalling the app or clearing its data deletes the library, so back it up to a zip file from the library first.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.chaome.34">What does PRO add, and why does the free version need the internet?</summary><div class="a">
+<p data-i18n="fq.chaome.35">The free version is supported by ads and needs a connection while it is open. PRO is a one-time purchase that removes every ad, lets you use the app offline and opens the advanced tools: the advanced editors, lock screen options, the new lock screen builder, always-on display and power menu, MAML code, and combining and converting themes in the library. Every other editor stays free.</p>
+<p data-i18n="fq.chaome.36">Your themes are built on your phone and are never uploaded.</p>
+</div></details>

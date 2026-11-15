@@ -1,0 +1,122 @@
+<!--meta {"key":"tl.iso-burner","kind":"tool","apps":["ultimate-usb","drofus"],"title":"Bootable USB from an ISO on Android: Windows, Linux — ISO Burner","h1":"How do I make a bootable USB drive from an ISO file on my Android phone?","description":"Open <strong>ISO Burner</strong> in Ultimate USB or DROFUS, tap <strong>Pick ISO</strong>, check the options and tap <strong>START</strong>. It writes Windows, Linux, macOS DMG and Raspberry Pi images, and can also make an MS-DOS or FreeDOS drive or just format the drive."} -->
+<h2 data-i18n="tl.iso-burner.1">Steps</h2>
+<ol>
+  <li data-i18n="tl.iso-burner.2">Connect the drive to your phone with a USB OTG adapter. Open <strong>DROFUS</strong>, which starts on the ISO Burner screen, or in <strong>Ultimate USB</strong> open the <strong>Bootable &amp; Image Writing</strong> group and tap <strong>ISO Burner</strong>.</li>
+  <li data-i18n="tl.iso-burner.3"><strong>Boot Selection</strong>: keep <strong>Disk or ISO image</strong> to write an image file, or choose <strong>Non-bootable</strong>, <strong>MS-DOS</strong> or <strong>FreeDOS</strong>. Changing it resets your other choices.</li>
+  <li data-i18n="tl.iso-burner.4">Tap <strong>Pick ISO</strong> and choose the image. The app shows <strong>Reading ISO File</strong> while it reads the image; you can cancel this.</li>
+  <li data-i18n="tl.iso-burner.5">Check <strong>ISO Label:</strong> and <strong>Size:</strong>, then the options the app shows for this image. It sets their defaults from the image.</li>
+  <li data-i18n="tl.iso-burner.6">Tap <strong>START</strong>. The app shows <strong>All Data Will Be Permanently Deleted</strong> and how many tokens the burn uses. Tap <strong>OK</strong> to start.</li>
+  <li data-i18n="tl.iso-burner.7">Keep the app in front until the burn finishes.</li>
+</ol>
+<p class="note" data-i18n="tl.iso-burner.8">DROFUS is an independent app, not affiliated with Rufus.</p>
+
+<h2 data-i18n="tl.iso-burner.9">Options and their values</h2>
+<p data-i18n="tl.iso-burner.10">The app shows only the options that fit the chosen mode and image.</p>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.iso-burner.11">Option</th><th data-i18n="tl.iso-burner.12">Values</th><th data-i18n="tl.iso-burner.13">Default</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.iso-burner.14"><strong>Boot Selection</strong></td><td data-i18n="tl.iso-burner.15">Non-bootable, Disk or ISO image, MS-DOS, FreeDOS</td><td data-i18n="tl.iso-burner.16">Disk or ISO image</td></tr>
+    <tr><td data-i18n="tl.iso-burner.17">Windows installation type (images that support Windows To Go)</td><td data-i18n="tl.iso-burner.18">Standard Windows Installation, Windows To Go</td><td data-i18n="tl.iso-burner.19">Standard Windows Installation</td></tr>
+    <tr><td data-i18n="tl.iso-burner.20">Windows edition (Windows To Go, images with more than one edition)</td><td data-i18n="tl.iso-burner.21">The editions in the image</td><td data-i18n="tl.iso-burner.22">The first Pro or Professional edition that is not Education or Workstation, otherwise the first edition</td></tr>
+    <tr><td data-i18n="tl.iso-burner.23"><strong>Advanced Options (Filesystem, Partition &amp; Persistence)</strong> (Linux ISOs that can be written both ways)</td><td data-i18n="tl.iso-burner.24">Off: the image is written as it is. On: the image's files are copied, and file system, partition table and persistence can be set.</td><td data-i18n="tl.iso-burner.25">Off</td></tr>
+    <tr><td data-i18n="tl.iso-burner.26"><strong>Partition Table</strong></td><td data-i18n="tl.iso-burner.27">MBR (BIOS or UEFI-CSM), GPT (UEFI); MBR, GPT for Non-bootable</td><td data-i18n="tl.iso-burner.28">Set from the image. Locked when the image allows only one. GPT is set and locked above 2 TB.</td></tr>
+    <tr><td data-i18n="tl.iso-burner.29"><strong>File System</strong></td><td data-i18n="tl.iso-burner.30">FAT32, NTFS (FAT32 only for a non-Windows image that fits on FAT32); FAT32, EXFAT, NTFS for Non-bootable</td><td data-i18n="tl.iso-burner.31">FAT32. NTFS is set for Windows To Go, for an image with a file over 4 GB (unless split is on) and for drives over 2 TB. FAT32 is set when split is on or when the image cannot start from NTFS.</td></tr>
+    <tr><td data-i18n="tl.iso-burner.32"><strong>Cluster Size</strong> (Non-bootable only)</td><td data-i18n="tl.iso-burner.33">The sizes allowed for the file system and drive</td><td data-i18n="tl.iso-burner.34">Chosen by the app (<strong>Default Value</strong> when the app cannot choose a size)</td></tr>
+    <tr><td data-i18n="tl.iso-burner.35"><strong>Split image for FAT32 compatibility.</strong></td><td data-i18n="tl.iso-burner.36">On, off</td><td data-i18n="tl.iso-burner.37">Off</td></tr>
+    <tr><td data-i18n="tl.iso-burner.38"><strong>Persistent partition size</strong></td><td data-i18n="tl.iso-burner.39">Disabled, or from 256 MB up to the space left after the main partition minus 128 MB</td><td data-i18n="tl.iso-burner.40">Disabled</td></tr>
+    <tr><td data-i18n="tl.iso-burner.41"><strong>Persistence file system</strong></td><td data-i18n="tl.iso-burner.42">ext3, ext4 (ext4 only for Android-x86)</td><td data-i18n="tl.iso-burner.43">ext4</td></tr>
+    <tr><td data-i18n="tl.iso-burner.44"><strong>High-speed mode. (Recommended)</strong></td><td data-i18n="tl.iso-burner.45">On, off</td><td data-i18n="tl.iso-burner.46">On when phone storage has enough free space, otherwise off</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 data-i18n="tl.iso-burner.47">How do I make a Windows 10 or Windows 11 installer?</h2>
+<p data-i18n="tl.iso-burner.48">Pick the Windows ISO and keep <strong>Standard Windows Installation</strong>. Check the partition table and file system the app sets from the image, choose the <strong>Windows Setup Customization</strong> options you want, and tap <strong>START</strong>. Windows 7, 8, 8.1, 10 and 11 images are supported, and official Microsoft ISOs work unmodified.</p>
+<ul>
+  <li data-i18n="tl.iso-burner.49"><strong>Partition Table:</strong> <strong>GPT (UEFI)</strong> or <strong>MBR (BIOS or UEFI-CSM)</strong>. The app preselects one from the image and locks the choice when the image allows only one.</li>
+  <li data-i18n="tl.iso-burner.50"><strong>File System:</strong> FAT32 or NTFS. When the image has a file over 4 GB, tick <strong>Split image for FAT32 compatibility.</strong> in the <strong>Advanced File System</strong> card so the image fits on FAT32. Without the tick the app uses NTFS, which not every UEFI firmware accepts.</li>
+  <li data-i18n="tl.iso-burner.51">The split option is shown when the image can be split, the drive is 2 TB or smaller and you are not making Windows To Go. It turns off when you change the file system away from FAT32.</li>
+  <li data-i18n="tl.iso-burner.52"><strong>High-speed mode. (Recommended)</strong> uses free space in phone storage. If there is not enough, the app shows how much is required and how much is available, and <strong>START</strong> stays disabled until you turn the mode off or free up space.</li>
+</ul>
+
+<h2 data-i18n="tl.iso-burner.53">Which Windows Setup Customization options are there?</h2>
+<p data-i18n="tl.iso-burner.54">The <strong>Windows Setup Customization</strong> card changes the Windows installer you write. It appears for Windows 10 and 11 images that have no unattend file of their own, and always for Windows To Go. Nothing you enter leaves the phone.</p>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.iso-burner.55">Option</th><th data-i18n="tl.iso-burner.56">Shown for</th><th data-i18n="tl.iso-burner.57">Default</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.iso-burner.58"><strong>Remove requirement for 4GB+ RAM, Secure Boot and TPM 2.0.</strong></td><td data-i18n="tl.iso-burner.59">Windows 11</td><td data-i18n="tl.iso-burner.60">On (off for Windows To Go)</td></tr>
+    <tr><td data-i18n="tl.iso-burner.61"><strong>Remove requirement for an online Microsoft account.</strong></td><td data-i18n="tl.iso-burner.62">Windows 11 build 22500 and later</td><td data-i18n="tl.iso-burner.63">On</td></tr>
+    <tr><td data-i18n="tl.iso-burner.64"><strong>Create local account.</strong></td><td data-i18n="tl.iso-burner.65">Every image with this card</td><td data-i18n="tl.iso-burner.66">Off</td></tr>
+    <tr><td data-i18n="tl.iso-burner.67"><strong>Set regional options to the same as this device:</strong></td><td data-i18n="tl.iso-burner.68">Every image with this card</td><td data-i18n="tl.iso-burner.69">Off</td></tr>
+    <tr><td data-i18n="tl.iso-burner.70"><strong>Disable data collection (Skip privacy questions).</strong></td><td data-i18n="tl.iso-burner.71">Every image with this card</td><td data-i18n="tl.iso-burner.72">Off</td></tr>
+    <tr><td data-i18n="tl.iso-burner.73"><strong>Disable BitLocker automatic device encryption.</strong></td><td data-i18n="tl.iso-burner.74">Windows 11, not Windows To Go</td><td data-i18n="tl.iso-burner.75">Off</td></tr>
+    <tr><td data-i18n="tl.iso-burner.76"><strong>Set the target's internal drives offline</strong></td><td data-i18n="tl.iso-burner.77">Windows To Go only</td><td data-i18n="tl.iso-burner.78">On</td></tr>
+    <tr><td data-i18n="tl.iso-burner.79"><strong>QoL improvements (Don't force Copilot, OneDrive, Outlook, Fast Startup, etc.).</strong></td><td data-i18n="tl.iso-burner.80">Windows 11</td><td data-i18n="tl.iso-burner.81">Off</td></tr>
+    <tr><td data-i18n="tl.iso-burner.82"><strong>Use "Windows CA 2023" signed bootloaders (Requires a compatible target PC).</strong></td><td data-i18n="tl.iso-burner.83">Windows 11 build 26200 and later</td><td data-i18n="tl.iso-burner.84">Off</td></tr>
+    <tr><td data-i18n="tl.iso-burner.85"><strong>Apply SkuSiPolicy.p7b on installation (See KB5042562).</strong></td><td data-i18n="tl.iso-burner.86">Windows 11 build 26200 and later, not Windows To Go</td><td data-i18n="tl.iso-burner.87">Off</td></tr>
+  </tbody>
+</table>
+</div>
+<p data-i18n="tl.iso-burner.88">When you tick <strong>Create local account.</strong>, the app asks for a <strong>User name</strong> of at least 3 characters; Windows asks for the account's password at first sign-in. When you tick the "Windows CA 2023" option, the app asks you to confirm first.</p>
+
+<h2 data-i18n="tl.iso-burner.89">What is Windows To Go, and where is the option?</h2>
+<p data-i18n="tl.iso-burner.90">Windows To Go puts a portable Windows 10 or 11 on the USB drive that runs from the drive itself. After you pick the Windows ISO, choose <strong>Windows To Go</strong> instead of <strong>Standard Windows Installation</strong>. The choice appears only for images that support Windows To Go, and not for a bare .wim file.</p>
+<ul>
+  <li data-i18n="tl.iso-burner.91">If the image has more than one edition, choose the edition in the list that appears. The app preselects the first Pro or Professional edition that is not Education or Workstation.</li>
+  <li data-i18n="tl.iso-burner.92">The file system is NTFS, and <strong>Set the target's internal drives offline</strong> is on by default.</li>
+  <li data-i18n="tl.iso-burner.93">The app warns that Windows To Go is a very long process that may take several hours. Use a high-end phone, a high-speed USB drive and <strong>High-speed mode. (Recommended)</strong>, and charge the phone fully before you start.</li>
+</ul>
+
+<h2 data-i18n="tl.iso-burner.94">How do I write a Linux ISO, and can I add persistence?</h2>
+<p data-i18n="tl.iso-burner.95">By default the app writes a Linux ISO as it is, keeping its original layout. This uses no tokens.</p>
+<p data-i18n="tl.iso-burner.96">To choose the file system and partition table yourself, or to add persistence, tick <strong>Advanced Options (Filesystem, Partition &amp; Persistence)</strong>. The app then copies the image's files to the drive instead, which uses 2 tokens. The tick is shown only for ISOs that can be written both ways.</p>
+<ul>
+  <li data-i18n="tl.iso-burner.97"><strong>Persistent partition size</strong>: move the slider from <strong>Disabled</strong> to add a persistent partition. It keeps your files and changes between boots.</li>
+  <li data-i18n="tl.iso-burner.98"><strong>Persistence file system:</strong> ext3 or ext4. It is shown when a size is set and more than one file system is possible.</li>
+  <li data-i18n="tl.iso-burner.99">Where persistence is not possible, the app shows a note instead of the slider: the image does not support it, the distribution sets it up itself, or the image is written as it is. Persistence also needs enough free space on the drive.</li>
+</ul>
+
+<h2 data-i18n="tl.iso-burner.100">Can I write a macOS DMG or a Raspberry Pi image?</h2>
+<p data-i18n="tl.iso-burner.101">Yes. Keep <strong>Disk or ISO image</strong> and pick the file. The app writes macOS DMG images (Intel-based), Raspberry Pi OS and other ARM images as they are, with no file system or partition options. These writes use no tokens. An image inside an archive can be written too.</p>
+
+<h2 data-i18n="tl.iso-burner.102">How do I make an MS-DOS or FreeDOS drive, or just format the drive?</h2>
+<p data-i18n="tl.iso-burner.103">Choose <strong>MS-DOS</strong> or <strong>FreeDOS</strong> under <strong>Boot Selection</strong> and tap <strong>START</strong>. No image file is needed. This uses 1 token.</p>
+<p data-i18n="tl.iso-burner.104">Choose <strong>Non-bootable</strong> to format the drive without making it bootable. Set <strong>Partition Table:</strong>, <strong>File System:</strong> and <strong>Cluster Size:</strong>, then tap <strong>START</strong>. This uses 1 token. It also gives back the full space of a drive after a bootable write.</p>
+
+<h2 data-i18n="tl.iso-burner.105">What does the app check before it writes?</h2>
+<p data-i18n="tl.iso-burner.106">The app checks the drive and the image first, and it stops or asks you when something is wrong:</p>
+<ul>
+  <li data-i18n="tl.iso-burner.107"><strong>Fake capacity:</strong> the app checks the drive when you connect it. If it may be fake or faulty, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really has. A burn on such a drive is refused until the real size is set; otherwise use a different drive.</li>
+  <li data-i18n="tl.iso-burner.108"><strong>Drive cannot be used:</strong> if the app cannot read or write the drive, it shows <strong>Failed to read USB device.</strong> and asks you to reinsert the drive. The drive may be write-protected, or the cable or connector may be faulty.</li>
+  <li data-i18n="tl.iso-burner.109"><strong>Drive too small:</strong> the app shows <strong>Not enough space on the drive.</strong> with the space needed and the space available. It counts the drive size minus 100 MB as available.</li>
+  <li data-i18n="tl.iso-burner.110"><strong>Drives over 2 TB:</strong> MBR and FAT32 cannot be used, and the app says so.</li>
+  <li data-i18n="tl.iso-burner.111"><strong>Truncated or corrupt ISO:</strong> when an ISO looks truncated or corrupted, which usually means the download was interrupted, the app says so and asks whether to continue anyway. An image that is incomplete or damaged is refused, with a message to download it again.</li>
+  <li data-i18n="tl.iso-burner.112"><strong>Not bootable:</strong> the app shows <strong>The selected file is not a bootable image.</strong> and asks whether to continue anyway. A file it cannot use shows <strong>Unsupported File.</strong></li>
+  <li data-i18n="tl.iso-burner.113"><strong>File no longer there:</strong> if the image cannot be opened when you tap <strong>START</strong>, the app shows <strong>Cannot Open File</strong>.</li>
+  <li data-i18n="tl.iso-burner.114"><strong>Phone storage:</strong> with High-speed mode on, the app checks the free space in phone storage first.</li>
+  <li data-i18n="tl.iso-burner.115"><strong>Erase confirmation:</strong> nothing is written before you confirm <strong>All Data Will Be Permanently Deleted</strong>.</li>
+</ul>
+
+<h2 data-i18n="tl.iso-burner.116">How many tokens does a burn use?</h2>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.iso-burner.117">Action</th><th data-i18n="tl.iso-burner.118">Tokens</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.iso-burner.119"><strong>Disk or ISO image</strong> with the image's files copied: Windows, Windows To Go, Linux with Advanced Options</td><td>2</td></tr>
+    <tr><td data-i18n="tl.iso-burner.120"><strong>Disk or ISO image</strong> written as it is: Linux without Advanced Options, macOS DMG, Raspberry Pi and other raw images</td><td>0</td></tr>
+    <tr><td data-i18n="tl.iso-burner.121"><strong>MS-DOS</strong>, <strong>FreeDOS</strong>, <strong>Non-bootable</strong></td><td>1</td></tr>
+  </tbody>
+</table>
+</div>
+<p data-i18n="tl.iso-burner.122">The app shows the cost before it starts, and you earn a token by watching one short rewarded video. With Pro, burning uses no tokens. If you do not have enough tokens, the app shows <strong>Not Enough Tokens</strong> with a <strong>Get Tokens</strong> button, and nothing starts.</p>
+<p data-i18n="tl.iso-burner.123">The tokens come back automatically when the burn fails, is cancelled or stops with an error, and when the app is closed during the burn (they are returned the next time the app starts).</p>
+
+<h2 data-i18n="tl.iso-burner.124">How long does a burn take?</h2>
+<p data-i18n="tl.iso-burner.125">It depends on the speed of the USB drive and of the phone's USB port. Turn on <strong>High-speed mode. (Recommended)</strong> when the app offers it. Windows To Go can take several hours.</p>
+
+<h2 data-i18n="tl.iso-burner.126">What happens if the burn is interrupted?</h2>
+<p data-i18n="tl.iso-burner.127">Keep the app in front. When it goes to the background, Windows, Linux and raw-image burns pause, and they continue when you come back to the app while it is still running. The app keeps the screen on while it is shown.</p>
+<p data-i18n="tl.iso-burner.128">In the free version, a running burn also pauses while the phone has no internet connection or an ad blocker or blocking Private DNS is active, and continues when that is fixed. With Pro, only the background pause applies.</p>
+<p data-i18n="tl.iso-burner.129">If the drive is removed or stops answering, the burn ends and the app shows <strong>The drive was removed or stopped answering. Reconnect it and try again.</strong> The tokens come back. Reconnect the drive and start the burn again.</p>

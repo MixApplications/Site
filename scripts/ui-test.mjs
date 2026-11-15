@@ -29,6 +29,11 @@ const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/apps.json'), '
 const play = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/play.json'), 'utf8')).apps;
 const langs = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/i18n/languages.json'), 'utf8')).languages;
 const PLAY_PKGS = Object.keys(play).sort();
+// content pages (src/content/pages/<path>.html -> /<path>.html), only those of live apps are built
+const contentPages = (function walk(d, base = '') {
+  if (!fs.existsSync(d)) return [];
+  return fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name), base + '/' + e.name) : e.name.endsWith('.html') ? [base + '/' + e.name] : []);
+})(path.join(ROOT, 'src/content/pages')).filter(p => fs.existsSync(path.join(ROOT, '_site', p)));
 
 // ---- local server + browser
 const PORT = 8790 + Math.floor(Math.random() * 100);
@@ -188,7 +193,10 @@ try {
   //     in the chosen language exactly once, with the last pick winning.
   if (rtl && ltr) {
     const dict = JSON.parse(fs.readFileSync(path.join(ROOT, `src/i18n/${rtl.code}.json`), 'utf8'));
-    const app = (data.apps.find(x => x.status === 'live' && play[x.pkg]) || {}).id;
+    // an app whose page is already translated (a page with untranslated text has no language copy yet)
+    const app = (data.apps.find(x => play[x.pkg] && fs.existsSync(path.join(ROOT, '_site', rtl.code, 'apps', x.id + '.html'))
+      && fs.existsSync(path.join(ROOT, '_site', ltr.code, 'apps', x.id + '.html'))) || {}).id;
+    check(`a translated app page exists in ${rtl.code} and ${ltr.code}`, !!app);
     await open('/');
     await js(`localStorage.setItem('mixapp.lang', 'en')`);
     await open(`/${rtl.code}/apps/${app}.html`);
@@ -213,11 +221,21 @@ try {
 
   // 6. every page loads without script errors, and nothing overflows a phone screen
   const pages = [`/${rtl ? rtl.code : 'en'}/`, `/${ltr ? ltr.code : 'en'}/contact.html`, '/', '/contact.html', '/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_privacy.html', '/cofferlock_privacy.html', '/404.html', ...Object.keys(play).map(pkg => {
-    const a = data.apps.find(x => x.pkg === pkg); return `/apps/${a ? a.id : pkg.split('.').pop().replace(/_/g, '-')}.html`; })];
+    const a = data.apps.find(x => x.pkg === pkg); return `/apps/${a ? a.id : pkg.split('.').pop().replace(/_/g, '-')}.html`; }),
+    ...contentPages];
   for (const p of pages) {
     errors.length = 0;
     await open(p, 390);
     check(`${p}: no script errors`, errors.length === 0, errors.join(' | '));
+  }
+  // one picture per kind of content page (tool, FAQ, what's new, tokens, guide), phone and desktop
+  const shotKinds = new Set();
+  for (const p of contentPages) {
+    const kind = p.split('/').slice(-1)[0].replace('.html', '').replace(/^(?!faq|whats-new|tokens).*/, p.startsWith('/tools/') ? 'tool' : 'guide');
+    if (shotKinds.has(kind)) continue;
+    shotKinds.add(kind);
+    await open(p, 390); await shot(`content-${kind}-390`);
+    await open(p, 1280); await shot(`content-${kind}-1280`);
   }
 
   // 7. every page adapts to every common screen: small phones to large desktops.

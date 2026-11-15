@@ -1,0 +1,40 @@
+<!--meta {"key":"gd.usb-safety","kind":"guide","apps":["ultimate-usb","drofus","ventoy","usb-tools"],"title":"Are MixApplications USB apps safe for my drive and my data?","h1":"How do MixApplications USB apps keep your drive and your data safe?","description":"Every MixApplications USB app tests the drive when you connect it, refuses a drive that cannot be written, asks before anything is erased, checks an image before it touches the drive, and tests the result after formatting. Everything runs on your phone, with no PC and no root."} -->
+<h2 data-i18n="gd.usb-safety.1">Checks before anything is written</h2>
+<ul>
+  <li data-i18n="gd.usb-safety.2"><strong>Drive test on connect.</strong> The app checks the drive when you connect it. A drive that fails this check may be counterfeit (smaller than it claims) or faulty, and the app warns you before you use it.</li>
+  <li data-i18n="gd.usb-safety.3"><strong>Write-protected drives are stopped first.</strong> A drive that is write-protected or does not take writes is refused with one clear message, before any question and before any token is used.</li>
+  <li data-i18n="gd.usb-safety.4"><strong>Nothing is erased without your OK.</strong> Before a format, a burn or a wipe, the app shows <strong>All Data Will Be Permanently Deleted</strong> and waits for you to confirm.</li>
+  <li data-i18n="gd.usb-safety.5"><strong>The image is checked before the drive is wiped.</strong> When you burn an image, the app first checks it. An incomplete or unreadable image is refused, and nothing is written to the drive.</li>
+  <li data-i18n="gd.usb-safety.6"><strong>Warnings about the file.</strong> DROFUS warns when an ISO looks truncated or corrupted from an interrupted download, and when the file you picked is not bootable.</li>
+  <li data-i18n="gd.usb-safety.7"><strong>Space is checked.</strong> DROFUS checks the free space on both the drive and the phone before it starts.</li>
+</ul>
+
+<h2 data-i18n="gd.usb-safety.8">Protection while a job runs</h2>
+<ul>
+  <li data-i18n="gd.usb-safety.9"><strong>Pause and continue.</strong> When the app goes to the background, a write, wipe or scan pauses, and it continues when you come back while the app is still running.</li>
+  <li data-i18n="gd.usb-safety.10"><strong>The right drive only.</strong> If a different drive is plugged in during a burn, the app never writes to it.</li>
+  <li data-i18n="gd.usb-safety.11"><strong>A cancelled format is cleaned up.</strong> If you cancel a format, the app makes sure the unfinished drive is not opened by mistake. Format the drive again to use it.</li>
+  <li data-i18n="gd.usb-safety.12"><strong>Only the partition you picked.</strong> Partition Wizard changes only the partition you chose, and you can undo your changes before you apply them.</li>
+  <li data-i18n="gd.usb-safety.13"><strong>Unsafe drives are not defragmented.</strong> USB Defragmenter refuses a drive that was not closed properly, that cannot be read, that is smaller than reported or too full, and says why.</li>
+  <li data-i18n="gd.usb-safety.14"><strong>Tests that leave your files alone.</strong> Benchmark in <strong>Read / Write</strong> mode leaves your files as they were.</li>
+</ul>
+
+<h2 data-i18n="gd.usb-safety.15">Checks after the job</h2>
+<ul>
+  <li data-i18n="gd.usb-safety.16"><strong>Every format is tested.</strong> After formatting, the app tests the drive and only then reports success.</li>
+  <li data-i18n="gd.usb-safety.17"><strong>Proof of erasure.</strong> After a wipe, the app makes a PDF erasure report and certificate on your phone.</li>
+</ul>
+
+<h2 data-i18n="gd.usb-safety.18">Your tokens are safe too</h2>
+<p data-i18n="gd.usb-safety.19">The app shows the token cost before a job starts. If the job fails, is cancelled, or the drive is removed, the tokens come back automatically. If the app is closed during a job, they are returned the next time the app starts.</p>
+
+<h2 data-i18n="gd.usb-safety.20">Your data stays on your phone</h2>
+<ul>
+  <li data-i18n="gd.usb-safety.21">All the work happens on your phone; no PC is needed.</li>
+  <li data-i18n="gd.usb-safety.22">USB drives work without root. NTFS and ext2/3/4 drives that your phone cannot read still open in the app.</li>
+  <li data-i18n="gd.usb-safety.23">Nothing the apps do is unrecoverable at the hardware level: the worst case is a drive that needs formatting again.</li>
+</ul>
+
+<h2 data-i18n="gd.usb-safety.24">Tested before every release</h2>
+<p data-i18n="gd.usb-safety.25">Each release of our USB apps is tested on real phones with real USB drives before it is published on Google Play.</p>
+<p data-i18n="gd.usb-safety.26">Each tool has its own page with every step and option: start from <a href="/tools/format-usb.html">Format USB</a>, <a href="/tools/iso-burner.html">ISO Burner</a>, <a href="/tools/ventoy.html">Ventoy</a> or <a href="/tools/wipe-usb.html">Wipe USB</a>, or read <a href="/guides/choose-a-bootable-usb-app.html">how to choose a bootable USB app</a>.</p>

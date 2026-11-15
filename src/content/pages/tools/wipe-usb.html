@@ -1,0 +1,77 @@
+<!--meta {"key":"tl.wipe-usb","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Securely wipe a USB drive on Android: NIST, DoD, Gutmann — Wipe USB","h1":"How do I securely wipe a USB drive from my Android phone?","description":"Open <strong>Wipe USB</strong> in Ultimate USB or USB Tools, choose the method and the verification, and tap <strong>START</strong>. The app overwrites the whole drive, can check it afterwards, and issues an erasure report and certificate. Wiping uses no tokens."} -->
+<h2 data-i18n="tl.wipe-usb.1">Steps</h2>
+<ol>
+  <li data-i18n="tl.wipe-usb.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
+  <li data-i18n="tl.wipe-usb.3">Open the <strong>Disk Management</strong> group and tap <strong>Wipe USB</strong>. All data and all partitions on the drive will be deleted.</li>
+  <li data-i18n="tl.wipe-usb.4"><strong>Method:</strong> choose how the drive is overwritten (see the table below).</li>
+  <li data-i18n="tl.wipe-usb.5"><strong>Verification:</strong> choose <strong>None</strong>, <strong>Sampled (recommended)</strong> or <strong>Full</strong>.</li>
+  <li data-i18n="tl.wipe-usb.6">Check the <strong>Estimated time</strong>. The app says what it is based on: this drive's speed measured in this session, a short read test of this drive, or a cautious default speed.</li>
+  <li data-i18n="tl.wipe-usb.7">Tap <strong>START</strong>. If the wipe will take more than one hour, the app shows <strong>Long erasure</strong>: the app has to stay open in the foreground all that time. Tap <strong>Start</strong> to go on.</li>
+  <li data-i18n="tl.wipe-usb.8">The app shows the drive's vendor, product and serial number and says that everything on the drive will be overwritten and that this cannot be undone. Check that it is the right drive, then confirm.</li>
+  <li data-i18n="tl.wipe-usb.9">While it runs, the app shows <strong>Wiping · pass</strong> x <strong>of</strong> y and <strong>Do not disconnect the drive.</strong> With verification, it then shows <strong>Verifying</strong> and checks the drive.</li>
+  <li data-i18n="tl.wipe-usb.10">At the end the result card shows <strong>Erasure complete</strong>, <strong>Erasure incomplete</strong> or <strong>Erasure failed</strong>. Tap <strong>View erasure certificate</strong> or <strong>View erasure report</strong> and save it.</li>
+</ol>
+
+<h2 data-i18n="tl.wipe-usb.11">Which wipe methods can I choose?</h2>
+<p data-i18n="tl.wipe-usb.12">Five methods. The default is <strong>NIST SP 800-88 Clear (1 pass)</strong>, and the app remembers your choice for the next wipe.</p>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.wipe-usb.13">Method</th><th data-i18n="tl.wipe-usb.14">What each pass writes</th><th data-i18n="tl.wipe-usb.15">Verification</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.wipe-usb.16"><strong>NIST SP 800-88 Clear (1 pass)</strong></td><td data-i18n="tl.wipe-usb.17">Zeros (0x00)</td><td data-i18n="tl.wipe-usb.18">As chosen</td></tr>
+    <tr><td data-i18n="tl.wipe-usb.19"><strong>Australian ISM, flash media (2 passes)</strong></td><td data-i18n="tl.wipe-usb.20">Random data, then random data again</td><td data-i18n="tl.wipe-usb.21">Always full</td></tr>
+    <tr><td data-i18n="tl.wipe-usb.22"><strong>DoD 5220.22-M (3 passes)</strong></td><td data-i18n="tl.wipe-usb.23">0x00, then 0xFF, then random data</td><td data-i18n="tl.wipe-usb.24">Always full</td></tr>
+    <tr><td data-i18n="tl.wipe-usb.25"><strong>Bruce Schneier (7 passes)</strong></td><td data-i18n="tl.wipe-usb.26">0xFF, then 0x00, then random data five times</td><td data-i18n="tl.wipe-usb.27">As chosen</td></tr>
+    <tr><td data-i18n="tl.wipe-usb.28"><strong>Peter Gutmann (35 passes)</strong></td><td data-i18n="tl.wipe-usb.29">4 random passes, 27 fixed patterns in random order, then 4 random passes</td><td data-i18n="tl.wipe-usb.30">As chosen</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 data-i18n="tl.wipe-usb.31">How does the app verify the wipe?</h2>
+<p data-i18n="tl.wipe-usb.32">It checks the drive after writing. The default is <strong>Sampled (recommended)</strong>. Australian ISM and DoD 5220.22-M always use <strong>Full</strong>, whatever you select.</p>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.wipe-usb.33">Verification</th><th data-i18n="tl.wipe-usb.34">What it does</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.wipe-usb.35"><strong>None</strong></td><td data-i18n="tl.wipe-usb.36">No check. The report states that no check was performed.</td></tr>
+    <tr><td data-i18n="tl.wipe-usb.37"><strong>Sampled (recommended)</strong></td><td data-i18n="tl.wipe-usb.38">Checks samples from across the whole drive. Adds about ten seconds. On a very small drive, the whole drive is checked.</td></tr>
+    <tr><td data-i18n="tl.wipe-usb.39"><strong>Full</strong></td><td data-i18n="tl.wipe-usb.40">Checks the whole drive. The app shows how much time this adds for your drive.</td></tr>
+  </tbody>
+</table>
+</div>
+<p data-i18n="tl.wipe-usb.41">The wipe covers the writable size of the drive. On a drive that reports more space than it really stores, only the writable part is overwritten, and the report says so.</p>
+
+<h2 data-i18n="tl.wipe-usb.42">What is in the erasure report and certificate?</h2>
+<p data-i18n="tl.wipe-usb.43">The <strong>Data erasure report</strong> describes the wipe in detail. The <strong>Certificate of erasure</strong> is issued only for a completed erasure. Both are made on your phone, offline, and go nowhere unless you share them. They contain:</p>
+<ul>
+  <li data-i18n="tl.wipe-usb.44"><strong>Header:</strong> Report ID, issue date and the time it was generated. Each page footer shows the page number and the report ID.</li>
+  <li data-i18n="tl.wipe-usb.45"><strong>Device:</strong> the drive\'s maker, model, serial number and capacity.</li>
+  <li data-i18n="tl.wipe-usb.46"><strong>Sanitization method:</strong> the erasure method and standard, and each pass.</li>
+  <li data-i18n="tl.wipe-usb.47"><strong>Result:</strong> whether it completed, stopped or failed; start and finish time, duration, data written, errors, and every pause and continue.</li>
+  <li data-i18n="tl.wipe-usb.48"><strong>Verification:</strong> whether the check passed, failed or was not done.</li>
+  <li data-i18n="tl.wipe-usb.49"><strong>Scope and limitations:</strong> what a wipe over USB can and cannot reach (see below).</li>
+  <li data-i18n="tl.wipe-usb.50"><strong>Your details (optional):</strong> name, title, organization, location, contact, asset number, media source, an attestation, and a place to sign and date. Tap <strong>Apply</strong> to add them. They are kept on your phone only and remembered for the next wipe.</li>
+  <li data-i18n="tl.wipe-usb.51">A disclaimer.</li>
+</ul>
+<h3 data-i18n="tl.wipe-usb.52">How do I save the report?</h3>
+<p data-i18n="tl.wipe-usb.53">Tap <strong>Save</strong> to store it as a PDF in a place you pick, <strong>Share</strong> to send it, or <strong>Export as plain text</strong>. Turn on <strong>Open this automatically after a wipe</strong> to see it every time a wipe ends.</p>
+<p class="note" data-i18n="tl.wipe-usb.54">Save the report before you leave. It cannot be produced again later. If you leave without saving, the app shows <strong>Report not saved</strong> with <strong>Save now</strong> and <strong>Discard</strong>.</p>
+
+<h2 data-i18n="tl.wipe-usb.55">What can a wipe over USB not reach?</h2>
+<p data-i18n="tl.wipe-usb.56">The report states these limits openly:</p>
+<ul>
+  <li data-i18n="tl.wipe-usb.57">The wipe is at the NIST "Clear" level, not "Purge" or "Destroy".</li>
+  <li data-i18n="tl.wipe-usb.58">Hidden spare areas inside a flash drive cannot be reached from a phone.</li>
+  <li data-i18n="tl.wipe-usb.60">Device identifiers are shown as the device reports them.</li>
+</ul>
+
+<h2 data-i18n="tl.wipe-usb.61">How many tokens does a wipe use?</h2>
+<p data-i18n="tl.wipe-usb.62">None. Wipe USB is free with every method.</p>
+
+<h2 data-i18n="tl.wipe-usb.63">Can I pause a wipe or continue it later?</h2>
+<ul>
+  <li data-i18n="tl.wipe-usb.64">Yes. Tap <strong>Pause</strong>. The app saves its position, and nothing is written to the drive until you tap <strong>Continue</strong>. It then goes on from the same pass and the same place.</li>
+  <li data-i18n="tl.wipe-usb.65">If you leave the app, the wipe is paused the same way and continues when the app is in front again. Without Pro, it is also paused while the phone is offline or an ad blocker is active.</li>
+  <li data-i18n="tl.wipe-usb.66">If the wipe is stopped, the drive is removed or the app is closed, the wipe stays saved. When you connect the same drive again, the app shows <strong>Continue wipe</strong> with <strong>Continue</strong> and <strong>Discard</strong>.</li>
+  <li data-i18n="tl.wipe-usb.67">If you discard a saved wipe, the drive stays partly erased, and a new wipe starts from the beginning.</li>
+</ul>

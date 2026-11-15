@@ -1,0 +1,38 @@
+<!--meta {"key":"fq.usb-file-manager","kind":"faq","app":"usb-file-manager","title":"USB File Manager FAQ: NTFS, exFAT, ext4 drives on Android over OTG","h1":"What do I need to know about USB File Manager?","description":"<strong>USB File Manager</strong> reads and writes NTFS, exFAT, FAT and ext4 drives on your phone or tablet over USB OTG, with no root and no formatting. Every feature is free; Pro removes the ads and lets the app work offline and with ad blockers."} -->
+<h2 data-i18n="fq.usb-file-manager.1">Internet and ads</h2>
+<details class="q"><summary data-i18n="fq.usb-file-manager.2">Why does the app need an internet connection?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.3">The free version shows ads, and ads need the internet. While the free version is offline it shows <strong>No Internet Connection</strong> and pauses. Ads, analytics and crash reports use the internet, and all connections are encrypted.</p>
+<p data-i18n="fq.usb-file-manager.4">Pro is a one-time purchase that removes all ads and lets the app work offline. Once Pro is confirmed, it works offline for up to 30 days at a time. Pro adds no other features.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-file-manager.5">Why does the app say an ad blocker or private DNS is active when moving files?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.6">While an operation runs, the free version pauses if ads are blocked by an ad-blocker app, Private DNS or your network. Turn the blocker off, or set Private DNS to <code>dns.google</code>, then restart the app. Pro works with ad blockers and Private DNS.</p>
+</div></details>
+
+<h2 data-i18n="fq.usb-file-manager.7">Drives and file systems</h2>
+<details class="q"><summary data-i18n="fq.usb-file-manager.8">Can I copy files to and from an NTFS hard drive or SSD?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.9">Yes. NTFS drives are fully readable and writable. A drive opens read-only only when Windows hibernated it (Fast Startup), when Windows did not close it cleanly and it could not be repaired, or when the drive is write-protected or refuses writes. Shut Windows down fully (not Restart or Sleep), or check the drive in Windows, then connect it again.</p>
+<p data-i18n="fq.usb-file-manager.10">Hard disks may need a powered USB hub, because a phone often cannot supply enough power on its own.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-file-manager.11">Can I read and write an ext4 drive?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.12">Yes. The app reads and writes ext2, ext3 and ext4, as well as NTFS, exFAT, FAT12, FAT16 and FAT32.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-file-manager.13">Can I copy an ISO file to a USB drive?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.14">Yes, like any other file. In a folder on the drive, tap <strong>Add</strong> &rarr; <strong>Import File / Files</strong>. The app checks the space before a copy starts.</p>
+<p data-i18n="fq.usb-file-manager.15">A FAT32 drive cannot store a single file over 4 GB. Use a drive formatted as exFAT or NTFS for a larger ISO.</p>
+<p data-i18n="fq.usb-file-manager.16">To start a PC from ISO files, use our <a href="/apps/ventoy.html">Ventoy (Unofficial)</a> app: it installs Ventoy on the drive, and then you copy ISO files to it.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-file-manager.17">Does it work with external SSDs on a tablet?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.18">Yes. You can connect a USB flash drive, hard drive, SSD or card reader to a phone or tablet through an OTG cable or adapter. The phone or tablet needs Android 7.0 or newer with USB host (OTG) support. Large hard drives may need a powered USB hub.</p>
+<p data-i18n="fq.usb-file-manager.19">On tablets and foldables you can use two panes side by side with drag and drop. Several drives and partitions can be open at once, also through a USB hub.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-file-manager.20">Do I need root?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.21">Not for USB drives. Root is needed only for the phone's internal SD card slot, and your root manager must allow the app.</p>
+</div></details>
+
+<h2 data-i18n="fq.usb-file-manager.22">Copying and safety</h2>
+<details class="q"><summary data-i18n="fq.usb-file-manager.23">How do I unplug the drive safely?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.24">Wait for any running operation to finish, then tap <strong>Eject</strong> on the drive's card. When it says <strong>Safe to unplug</strong>, pull the drive out. Unplugging during a copy can damage the files being written. If the drive is unplugged during a copy, the finished files stay and no partial file is left behind.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-file-manager.25">Are my files uploaded anywhere?</summary><div class="a">
+<p data-i18n="fq.usb-file-manager.26">No. Files on your drive and phone are never uploaded. They leave the device only when you share them or open them in another app. The app has no storage or location permission: it reaches phone files only through the system file picker you open.</p>
+</div></details>

@@ -1,0 +1,202 @@
+<!--meta {"key":"fq.ultimate-usb","kind":"faq","app":"ultimate-usb","title":"Ultimate USB FAQ: tokens, bootable USB, Ventoy, recovery, wipe","h1":"What do I need to know about Ultimate USB?","description":"<strong>Ultimate USB</strong> works over a USB OTG adapter without root. Many tools are free; Ventoy, ISO burning, formatting, the Partition Wizard, encryption and PS2 drive formatting use 1 to 3 tokens, and Pro uses none. Answers to common questions are below."} -->
+<h2 data-i18n="fq.ultimate-usb.1">Tokens, ads and Pro</h2>
+<details class="q"><summary data-i18n="fq.ultimate-usb.2">How many tokens does a write or a format use, and how do I earn one?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.3">The app shows the number of tokens before you confirm. These actions use tokens:</p>
+<ul>
+  <li data-i18n="fq.ultimate-usb.4"><strong>Ventoy</strong>: Install 2, Update 1, Clear 1. Copying or downloading files, Theme Manager, Config Hub and persistence are free.</li>
+  <li data-i18n="fq.ultimate-usb.5"><strong>ISO Burner</strong>: 2 when the image's files are copied (for example a Windows ISO), none when the image is written as it is, and 1 for MS-DOS, FreeDOS or Non-bootable.</li>
+  <li data-i18n="fq.ultimate-usb.6"><strong>Format USB</strong>: 1. <strong>Partition Wizard</strong>: 1 for each Create or Format step, at most 3 per Apply Changes.</li>
+  <li data-i18n="fq.ultimate-usb.7"><strong>PS2 USB Utils</strong>: 1 when Fix has to format the drive. <strong>USB Encryption</strong>: 1 for Encrypt Drive.</li>
+</ul>
+<p data-i18n="fq.ultimate-usb.8">Raw Write, Wipe USB, the recovery tools, Bad Blocks Check, Benchmark, Backup / Restore, USB Defragmenter, the file tools and the game tools use no tokens.</p>
+<p data-i18n="fq.ultimate-usb.9">To earn a token, tap the token counter on the main screen to open <strong>Get Tokens</strong>, then tap <strong>Watch</strong> under <strong>Get 1 free token</strong>. One short rewarded video (60 seconds at most) gives 1 token. Free tokens stop at a balance of 5, and at 4 videos each time you open the app. You can also buy a pack. With Pro, no action uses tokens. More: <a href="/apps/ultimate-usb/tokens.html">Ultimate USB tokens</a>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.10">What happens to my tokens when a write does not complete?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.11">They come back automatically. Tokens are taken when you tap <strong>OK</strong>, before the job starts. If the job fails or is cancelled, or you answer <strong>No</strong> to the question about overwriting the whole drive, the app gives them back.</p>
+<p data-i18n="fq.ultimate-usb.12">If the app is closed during a job, the tokens come back the next time you open the app.</p>
+<p data-i18n="fq.ultimate-usb.13">When a Partition Wizard run stops partway, the tokens for the Create and Format steps that finished are kept, and the rest come back.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.14">Why does the rewarded ad not load, and what can I do to still earn a token?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.15">This is nearly always the network. Try these in order:</p>
+<ol>
+  <li data-i18n="fq.ultimate-usb.16"><strong>Private DNS</strong>: open Settings, search for Private DNS, choose <strong>Private DNS provider hostname</strong> and enter <code>dns.google</code>. Save, switch the connection off and on, then restart the app.</li>
+  <li data-i18n="fq.ultimate-usb.17">Turn off ad blockers and blocking VPNs for the app.</li>
+  <li data-i18n="fq.ultimate-usb.18">Switch between Wi-Fi and mobile data.</li>
+  <li data-i18n="fq.ultimate-usb.19">Watch the ad to the end and close it with the X. Pressing Back early cancels the reward.</li>
+</ol>
+<p data-i18n="fq.ultimate-usb.20">If the ad finished and the balance did not change, force-stop the app (Settings &rarr; Apps &rarr; the app &rarr; Force stop) and open it again while online. You can also buy a token pack, or get Pro, which uses no tokens.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.21">Why does the app say an ad blocker or private DNS is active?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.22">The free version cannot load its ads through an ad blocker, a blocking VPN or ad-blocking Private DNS. Running operations wait until it is switched off for the app. Set Private DNS to <code>dns.google</code> or turn it off, then restart the app.</p>
+<p data-i18n="fq.ultimate-usb.23">Pro, or any token pack you bought on this install, lets the app run with an ad blocker on.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.24">Why does the app need an internet connection?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.25">The tools themselves do not need it. The free version needs a connection to load ads, which pay for the free tools. While you are offline it shows <strong>No Internet Connection</strong> and running operations wait. They continue on their own when you are back online.</p>
+<p data-i18n="fq.ultimate-usb.26">Pro works fully offline.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.27">Can I pay instead of watching ads, and what does a purchase include?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.28">Yes. You can buy a token pack, or buy Pro. Pro is a one-time, lifetime purchase with no subscription: no ads, no tokens, archive extraction straight to USB, and full offline use, also with an ad blocker on. Apart from archive extraction to USB, the tools are the same.</p>
+<p data-i18n="fq.ultimate-usb.29">Pro is tied to your Google account. Tokens are stored on your device.</p>
+</div></details>
+
+<h2 data-i18n="fq.ultimate-usb.30">Connecting a drive</h2>
+<details class="q"><summary data-i18n="fq.ultimate-usb.31">Why is my USB drive not detected (USB-C drive, card reader, OTG adapter)?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.32">The phone has to detect the drive first. Work through this list:</p>
+<ol>
+  <li data-i18n="fq.ultimate-usb.33">Open the phone's Settings, search for OTG and switch it on if the option exists.</li>
+  <li data-i18n="fq.ultimate-usb.34">Use a data OTG adapter. Charge-only cables cannot carry data.</li>
+  <li data-i18n="fq.ultimate-usb.35">When Android asks whether the app may use the USB device, tap <strong>OK</strong>. If you refused, unplug the drive and plug it in again. Check that the mode on the main screen is <strong>USB OTG</strong>, not <strong>SD Slot</strong>.</li>
+  <li data-i18n="fq.ultimate-usb.36">Plug in a FAT32 or exFAT drive and check that the phone notices it. If even that drive is not noticed, the cause is the cable, the port or the drive.</li>
+  <li data-i18n="fq.ultimate-usb.37">Test the drive on a PC, and check the phone's port for dust.</li>
+</ol>
+<p data-i18n="fq.ultimate-usb.38">Flash drives, portable SSDs, card readers and OTG hubs work. Hard disk drives (HDDs) are not officially supported because of power limits. If you try one, charge the phone and use a powered USB hub.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.39">Do I need root?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.40">No, not for USB drives over OTG. The app reads and writes FAT16, FAT32, exFAT, NTFS and EXT2/3/4 drives.</p>
+<p data-i18n="fq.ultimate-usb.41">Root is needed only for the phone's internal SD card slot. Without root, put the card in a USB card reader and connect it over OTG.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.42">Can I use an NTFS drive on Android?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.43">Yes. Ultimate USB opens NTFS drives in its own <a href="/tools/file-manager.html">USB File Manager</a>, also when the phone itself cannot read them.</p>
+<p data-i18n="fq.ultimate-usb.44">After you format or write a drive as NTFS, Android may say the drive is damaged or unsupported. That is expected: many phones cannot read NTFS on their own. Dismiss the notice and do not tap Android's offer to format: it would erase the drive.</p>
+<p data-i18n="fq.ultimate-usb.45">For a drive that the phone's own apps can read, use exFAT. <a href="/tools/partition-mounter.html">Partition Mounter</a> can also make a partition available to other apps through the Android Files app.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.46">What does "CRITICAL WARNING: BAD DRIVE!" mean, and how do I find a fake-capacity drive?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.47">The app checks the drive when you connect it. If the drive may be fake or faulty, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really holds. Tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+<p data-i18n="fq.ultimate-usb.48">ISO Burner does not write to a drive that fails this test until the real size has been scanned.</p>
+<p data-i18n="fq.ultimate-usb.49">For a full test, run <a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> with <strong>Detect fake / counterfeit capacity</strong> ticked. It tests the whole drive and erases everything on it.</p>
+</div></details>
+
+<h2 data-i18n="fq.ultimate-usb.50">Bootable USB drives</h2>
+<details class="q"><summary data-i18n="fq.ultimate-usb.51">How do I make a bootable Windows USB from my phone?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.52">Use <a href="/tools/iso-burner.html">ISO Burner</a>:</p>
+<ol>
+  <li data-i18n="fq.ultimate-usb.53">Open <strong>ISO Burner</strong> and keep <strong>Boot Selection</strong> on <strong>Disk or ISO image</strong>.</li>
+  <li data-i18n="fq.ultimate-usb.54">Tap <strong>Pick ISO</strong> and choose the Windows ISO. The app reads the file.</li>
+  <li data-i18n="fq.ultimate-usb.55">If the app shows the Windows type, keep <strong>Standard Windows Installation</strong>. Choose the <strong>Partition Table</strong> and <strong>File System</strong>, and set the <strong>Windows Setup Customization</strong> options you want.</li>
+  <li data-i18n="fq.ultimate-usb.56">Tap <strong>START</strong>. The app shows <strong>All Data Will Be Permanently Deleted</strong> and the tokens it uses. Tap <strong>OK</strong>.</li>
+</ol>
+<p data-i18n="fq.ultimate-usb.57">A Windows ISO written this way uses 2 tokens (none with Pro). Keep the app in front until it finishes.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.58">How do I install Windows 11 on a PC without TPM 2.0 or Secure Boot?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.59">In ISO Burner, keep <strong>Remove requirement for 4GB+ RAM, Secure Boot and TPM 2.0.</strong> ticked in the <strong>Windows Setup Customization</strong> card. It is shown for Windows 11 images and is on by default for a standard installation. The card is not shown when the image has its own unattend file.</p>
+<p data-i18n="fq.ultimate-usb.60">The same card can remove the online Microsoft account requirement, create a local account, skip the privacy questions, copy the regional options from your phone and turn off automatic BitLocker encryption.</p>
+<p data-i18n="fq.ultimate-usb.61">On a Ventoy drive, use <strong>Config Hub</strong> &rarr; <strong>Boot</strong> &rarr; <strong>Windows 11: bypass hardware checks</strong> instead.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.62">My Windows ISO has a file over 4 GB. Can I still use FAT32?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.63">Yes. That file is install.wim. In ISO Burner, tick <strong>Split image for FAT32 compatibility.</strong> in the <strong>Advanced File System</strong> card. The app splits the file into parts so the drive can stay FAT32, and Windows setup puts the parts back together. Splitting takes a long time.</p>
+<p data-i18n="fq.ultimate-usb.64">The option is shown when the image can be split, the drive is 2 TB or smaller and Windows To Go is not chosen. Without it, the app uses NTFS for an image with a file over 4 GB. On a Ventoy drive the ISO is copied as one file, so use exFAT or NTFS there.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.65">What is Windows To Go, and where is the option?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.66">Windows To Go puts a portable Windows 10 or 11 on the USB drive, which then runs from the drive. It is not an installer.</p>
+<p data-i18n="fq.ultimate-usb.67">In ISO Burner, pick a Windows ISO that supports it, then choose <strong>Windows To Go</strong> instead of <strong>Standard Windows Installation</strong>. If the image has more than one edition, choose the edition from the list; the app selects a Pro edition first. Windows To Go uses NTFS.</p>
+<p data-i18n="fq.ultimate-usb.68">It can take several hours. Use a fast phone and a fast USB drive, turn on <strong>High-speed mode</strong>, and start with a fully charged phone.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.69">Can I write a bootable drive with NTFS?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.70">Yes. For Windows images ISO Burner offers FAT32 and NTFS. NTFS is set and locked for Windows To Go, for an image with a file over 4 GB (unless you split it) and for a drive over 2 TB. FAT32 is locked when the image's boot loader cannot read NTFS.</p>
+<p data-i18n="fq.ultimate-usb.71">Ventoy offers FAT32, exFAT and NTFS, and NTFS is the default.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.72">How do I put several ISO files on one USB drive?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.73">Use <a href="/tools/ventoy.html">Ventoy - Unofficial</a>. You install Ventoy once, copy ISO files to the drive, and pick one from a menu when the PC starts.</p>
+<ol>
+  <li data-i18n="fq.ultimate-usb.74">Connect the drive and open <strong>Ventoy - Unofficial</strong>.</li>
+  <li data-i18n="fq.ultimate-usb.75">Choose the options and tap <strong>Install</strong>. This erases the drive and uses 2 tokens.</li>
+  <li data-i18n="fq.ultimate-usb.76">Tap <strong>Copy File To USB</strong> to copy an ISO file, or <strong>Download File Directly To USB FROM INTERNET</strong> to save one straight to the drive. Both are free, and the app checks the free space first.</li>
+</ol>
+<p data-i18n="fq.ultimate-usb.77">To remove an ISO, delete it in USB File Manager. Ventoy can be installed only on drives with 512-byte sectors.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.78">Can I use a specific Ventoy version?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.79">Yes. One Ventoy version is built into the app. Tap the version next to <strong>Ventoy In Package:</strong> to open the <strong>Ventoy version</strong> sheet.</p>
+<ul>
+  <li data-i18n="fq.ultimate-usb.80">The built-in version is selected by default.</li>
+  <li data-i18n="fq.ultimate-usb.81"><strong>Other version…</strong> shows the list of Ventoy releases. Tap a version and confirm the download.</li>
+  <li data-i18n="fq.ultimate-usb.82">Downloaded versions show <strong>On this phone</strong> and can be deleted.</li>
+</ul>
+<p data-i18n="fq.ultimate-usb.83">The version you select is used for both Install and Update. If a downloaded version cannot be used, nothing is written to the drive and the tokens come back.</p>
+</div></details>
+
+<h2 data-i18n="fq.ultimate-usb.84">Writing, speed and safety</h2>
+<details class="q"><summary data-i18n="fq.ultimate-usb.85">How long does a write take, and why can it be slow?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.86">The speed depends on the USB drive and on the phone's USB port. A USB 3.0 drive in a USB 2.0 adapter runs at USB 2.0 speed, and many small files write much slower than one large file. Large drives and large images take time.</p>
+<p data-i18n="fq.ultimate-usb.87">In ISO Burner, <strong>High-speed mode. (Recommended)</strong> is on when the phone has enough free storage for it. Windows To Go can take several hours. <a href="/tools/benchmark.html">Benchmark</a> measures the real speed of your drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.88">Why did the write stop at a percentage or the app close during the write?</summary><div class="a">
+<ul>
+  <li data-i18n="fq.ultimate-usb.89"><strong>The app was minimised.</strong> A job pauses while the app is in the background and continues when it is in front again.</li>
+  <li data-i18n="fq.ultimate-usb.90"><strong>No internet or an ad blocker (free version).</strong> Running jobs wait until this is fixed. Pro does not pause for these.</li>
+  <li data-i18n="fq.ultimate-usb.91"><strong>The drive was removed or stopped answering.</strong> The job ends as failed. Reconnect the drive and start again; the tokens come back.</li>
+</ul>
+<p data-i18n="fq.ultimate-usb.92">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Run Bad Blocks Check with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive).</p>
+<p data-i18n="fq.ultimate-usb.93">If the app was closed during a job, the tokens come back the next time you open it.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.94">Can I use other apps while a write is running?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.95">No. Jobs pause when the app leaves the foreground, to protect the drive. Keep the app open and in front until the job finishes. The app keeps the screen on while it is shown. Start long jobs when you do not need the phone.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.96">My PC does not boot from the USB drive. What should I check?</summary><div class="a">
+<ol>
+  <li data-i18n="fq.ultimate-usb.97"><strong>Boot menu</strong>: select the USB drive in the PC's boot menu (often F12, F11, F9 or Esc at power-on).</li>
+  <li data-i18n="fq.ultimate-usb.98"><strong>Secure Boot</strong>: turn it off in the BIOS/UEFI, or use a drive that supports it. Ventoy has a <strong>Secure Boot Support</strong> option.</li>
+  <li data-i18n="fq.ultimate-usb.99"><strong>Partition scheme</strong>: GPT drives need UEFI mode; MBR drives need legacy or CSM mode.</li>
+  <li data-i18n="fq.ultimate-usb.100"><strong>USB port</strong>: try a port directly on the motherboard, not on the front panel or a hub.</li>
+  <li data-i18n="fq.ultimate-usb.101"><strong>The ISO</strong>: download it again from the official source. A truncated ISO writes without error but does not boot. ISO Burner warns when an ISO looks truncated.</li>
+</ol>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.102">My drive shows less space after writing. How do I get the full capacity back?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.103">A bootable write can leave hidden partitions. <a href="/tools/format-usb.html">Format USB</a> makes the whole drive one partition again. In <a href="/tools/partition-wizard.html">Partition Wizard</a> you can delete the partitions and create one across the drive. On a Ventoy drive, <strong>Clear</strong> removes Ventoy.</p>
+<p data-i18n="fq.ultimate-usb.104">Drive makers count in decimal gigabytes and phones in binary ones, so a "64 GB" drive holds about 59 GiB. A large shortfall can mean a counterfeit drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.105">Can the app damage my USB drive?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.106">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
+<p data-i18n="fq.ultimate-usb.107">The app tests each drive when it is connected and asks for confirmation before it erases one. Format USB tests the drive after formatting and only then reports success.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.108">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.109">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>
+<p data-i18n="fq.ultimate-usb.110">The Windows setup options you enter do not leave the phone. The erasure certificate is made on your phone and goes nowhere unless you share it.</p>
+</div></details>
+
+<h2 data-i18n="fq.ultimate-usb.111">Disk tools and recovery</h2>
+<details class="q"><summary data-i18n="fq.ultimate-usb.112">Can the app repair a drive that no longer formats?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.113">A broken partition table or file system is usually fixed by formatting fresh with Format USB or Wipe USB. The app does not repair a drive in place, so copy off what you need first. Recover deleted files only reads the drive.</p>
+<p data-i18n="fq.ultimate-usb.114">If a format fails its check, the drive has a hardware fault. Run Bad Blocks Check to confirm it (it erases the drive); if it reports errors, replace the drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.115">Can I recover deleted files from a USB drive?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.116">Yes. Open <a href="/tools/recover-files.html">Recover deleted files</a> and tap <strong>Start scan</strong>. It works with FAT12, FAT16, FAT32, exFAT, NTFS and ext2/3/4 drives and can find 201 file types. The scan only reads the drive and uses no tokens.</p>
+<p data-i18n="fq.ultimate-usb.117">Tap a file to preview or check it, tick the files you want and tap <strong>Recover</strong>. They are saved on the phone in Downloads/Ultimate USB Recovery, in a new folder named by date and time. A USB drive or memory card cannot be the target.</p>
+<p data-i18n="fq.ultimate-usb.118">You can pause or stop the scan; it is saved so you can continue later. If the drive is unplugged, the scan pauses and continues when the same drive is plugged in again. To find lost partitions, use <a href="/tools/recover-partitions.html">Recover lost partitions</a>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.119">How do I check a drive for bad blocks and test its speed?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.120"><a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> tests the whole drive. Choose <strong>1 Pass</strong> or <strong>2 Passes</strong>, keep <strong>Detect fake / counterfeit capacity</strong> ticked and tap <strong>START</strong>. It erases all data on the drive. It uses no tokens.</p>
+<p data-i18n="fq.ultimate-usb.121"><a href="/tools/benchmark.html">Benchmark</a> measures sequential and random speed. Choose the <strong>Mode:</strong> (Sequential, Random or Both) and the <strong>Type:</strong> (Read Only or Read / Write), then tap <strong>START</strong>. It uses no tokens.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.122">How do I securely wipe a drive and get a certificate?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.123">Use <a href="/tools/wipe-usb.html">Wipe USB</a>. Choose the method and the verification, tap <strong>START</strong> and confirm. It uses no tokens.</p>
+<ul>
+  <li data-i18n="fq.ultimate-usb.124">Methods: NIST SP 800-88 Clear (1 pass, the default), Australian ISM, flash media (2 passes), DoD 5220.22-M (3 passes), Bruce Schneier (7 passes) and Peter Gutmann (35 passes).</li>
+  <li data-i18n="fq.ultimate-usb.125">Verification: None, Sampled (recommended, the default) or Full. ISM and DoD always use Full verification.</li>
+</ul>
+<p data-i18n="fq.ultimate-usb.126">When it finishes, tap <strong>View erasure certificate</strong> or <strong>View erasure report</strong>, then save it as a PDF, share it or export it as plain text. Save it before you leave: it cannot be produced again. It is made on your phone.</p>
+<p data-i18n="fq.ultimate-usb.127">You can pause a wipe, and a stopped wipe can be continued later on the same drive. The app has to stay open in front while it runs.</p>
+</div></details>
+
+<h2 data-i18n="fq.ultimate-usb.128">Games, files and images</h2>
+<details class="q"><summary data-i18n="fq.ultimate-usb.129">How do I add PS2 games for OPL, and which format should I convert to (ISO, ZSO, VCD)?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.130">Open <a href="/tools/ps2-usb-utils.html">PS2 USB Utils</a>. If the drive is not FAT32 or exFAT with an MBR partition table, tap <strong>Fix</strong>. When Fix has to format the drive, it erases it and uses 1 token.</p>
+<p data-i18n="fq.ultimate-usb.131">Tap <strong>Import &amp; Split ISO</strong> and pick an ISO or ZSO file. Files under 4 GB, and any file on exFAT, can use <strong>Direct Copy - Recommended</strong>. Files of 4 GB or more on FAT32 are converted to USBExtreme (.ul) parts, and ul.cfg is updated. CSO files are not accepted.</p>
+<p data-i18n="fq.ultimate-usb.132">PS1 games: <strong>Import VCD Game</strong> accepts .VCD files for POPStarter; the POPS system file must be supplied by you. <a href="/tools/game-converter.html">Game Converter</a> converts between ISO, BIN/CUE, VCD, ZSO, CSO and CHD. OPL needs unfragmented files, so tap <strong>Defragment</strong> if needed.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.133">Can I put PS3 games on a FAT32 drive?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.134">FAT32 cannot hold a single file over 4 GB. <a href="/tools/ps3-iso-tools.html">PS3 ISO TOOLS</a> prepares files for FAT32 drives:</p>
+<ul>
+  <li data-i18n="fq.ultimate-usb.135"><strong>Split ISO</strong> and <strong>Split PKG</strong> cut a file into parts of 1, 2 or 3 GB (3 GB is the default) or a custom size; <strong>Join ISO</strong> and <strong>Join PKG</strong> put them back together.</li>
+  <li data-i18n="fq.ultimate-usb.136"><strong>Make ISO</strong> has <strong>Split into 4 GB parts (for FAT32 drives)</strong>, and <strong>Extract ISO</strong> has <strong>Split files over 4 GB into parts (for FAT32 drives)</strong>.</li>
+</ul>
+<p data-i18n="fq.ultimate-usb.137">These tools use no tokens.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.138">How do I copy many files at once with the file manager?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.139">In <a href="/tools/file-manager.html">USB File Manager</a>, select the files; the selection bar has <strong>Select All</strong>, <strong>Cut</strong>, <strong>Copy</strong> and <strong>Delete</strong>. Open the target folder and tap <strong>Paste</strong>. <strong>Export</strong> copies the selected files to the phone.</p>
+<p data-i18n="fq.ultimate-usb.140">To copy from the phone to the drive, open <strong>More</strong> and tap <strong>Import File / Files</strong> or <strong>Import Directory</strong>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.141">Can I mount a disk image (for example .vhd) as a drive?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.142"><a href="/tools/partition-image-manager.html">Partition Image Manager</a> opens .img and .bk images with <strong>View Partition Image (.img/.bk)</strong>, and you browse and edit them like a drive. <strong>Create Partition Image .img</strong> makes a new image with FAT32, exFAT, NTFS, Ext2, Ext3 or Ext4.</p>
+<p data-i18n="fq.ultimate-usb.143"><a href="/tools/partition-mounter.html">Partition Mounter</a> makes a partition of a connected USB drive available in the Android Files app, <strong>Read Only</strong> or <strong>Read / Write</strong>. Unmount it before you unplug the drive.</p>
+<p data-i18n="fq.ultimate-usb.144">On a Ventoy drive you can copy VHD files and boot them from the Ventoy menu.</p>
+</div></details>

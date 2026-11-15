@@ -1,0 +1,59 @@
+<!--meta {"key":"gd.choose-usb-app","kind":"guide","apps":["ultimate-usb","drofus","ventoy","usb-tools"],"title":"How to choose a safe bootable USB app for Android","h1":"How do I choose a safe bootable USB app for Android?","description":"Check what the app does before and after it writes: it should test the drive, warn before erasing, check the image file and the free space, give tokens back when a write fails, and work on your phone without an account. This checklist shows which MixApplications app does each check."} -->
+<h2 data-i18n="gd.choose-usb-app.1">Does it test the drive for fake capacity before writing?</h2>
+<p data-i18n="gd.choose-usb-app.2">A counterfeit drive reports more space than it has, and a write to it fails or loses data. A safe app checks the drive before it writes.</p>
+<p data-i18n="gd.choose-usb-app.3">Ultimate USB, DROFUS and Ventoy (Unofficial) check each drive when you connect it. If the drive may be fake or faulty, they show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offer to scan for the real size. The ISO Burner in Ultimate USB and DROFUS does not write to such a drive until its real size has been scanned. For a full test of the whole drive, Ultimate USB and USB Tools have <a href="/tools/bad-blocks-check.html">Bad Blocks Check</a>.</p>
+
+<h2 data-i18n="gd.choose-usb-app.4">Does it warn before erasing the drive?</h2>
+<p data-i18n="gd.choose-usb-app.5">Writing a bootable drive erases it, so the app should ask first. Ultimate USB and DROFUS show <strong>All Data Will Be Permanently Deleted</strong> before ISO Burner and Raw Write start. Ultimate USB and Ventoy (Unofficial) show <strong>The disk will be formatted and all data will be lost.</strong> before Ventoy Install or Clear. You confirm with <strong>OK</strong> or stop with <strong>Cancel</strong>.</p>
+
+<h2 data-i18n="gd.choose-usb-app.6">Does it detect a truncated, corrupted or non-bootable image?</h2>
+<p data-i18n="gd.choose-usb-app.7">An ISO from an interrupted download writes without error but does not boot. In Ultimate USB and DROFUS, <a href="/tools/iso-burner.html">ISO Burner</a> warns when an ISO looks truncated or corrupted and when the selected file is not a bootable image. It refuses images that are incomplete or damaged and asks you to download them again.</p>
+
+<h2 data-i18n="gd.choose-usb-app.8">Does it check the free space first?</h2>
+<p data-i18n="gd.choose-usb-app.9">In Ultimate USB and DROFUS, ISO Burner checks that the drive is large enough and, in High-speed mode, that the phone has enough free storage before it starts. In Ultimate USB and Ventoy (Unofficial), <strong>Copy File To USB</strong> and downloads to a Ventoy drive check the free space on the drive and show <strong>Not Enough Space.</strong> when the file does not fit.</p>
+
+<h2 data-i18n="gd.choose-usb-app.10">Does it give tokens back when a write does not complete?</h2>
+<p data-i18n="gd.choose-usb-app.11">If an app charges for a write, a failed write should not cost you. In Ultimate USB, DROFUS and Ventoy (Unofficial), the tokens come back when a burn or a Ventoy job fails, when a burn is cancelled, and when nothing was written. If the app is closed during a job, the tokens come back the next time it opens.</p>
+
+<h2 data-i18n="gd.choose-usb-app.12">Does it offer GPT or MBR, and NTFS, FAT32 or exFAT?</h2>
+<p data-i18n="gd.choose-usb-app.13">The partition table must match how the PC starts: GPT for UEFI, MBR for legacy BIOS or CSM.</p>
+<ul>
+  <li data-i18n="gd.choose-usb-app.14">Ultimate USB and DROFUS (ISO Burner): <strong>GPT (UEFI)</strong> or <strong>MBR (BIOS or UEFI-CSM)</strong>; FAT32 or NTFS for bootable images, and FAT32, exFAT or NTFS for a Non-bootable drive.</li>
+  <li data-i18n="gd.choose-usb-app.15">Ultimate USB and Ventoy (Unofficial) (Ventoy): MBR or GPT, and FAT32, exFAT or NTFS.</li>
+</ul>
+
+<h2 data-i18n="gd.choose-usb-app.16">Can it split install.wim for FAT32?</h2>
+<p data-i18n="gd.choose-usb-app.17">Many PCs with Secure Boot need a FAT32 drive, but FAT32 cannot hold a file over 4 GB. Ultimate USB and DROFUS offer <strong>Split image for FAT32 compatibility.</strong>, which splits install.wim into parts. Windows setup puts the parts back together.</p>
+
+<h2 data-i18n="gd.choose-usb-app.18">Can you pick the exact Windows edition?</h2>
+<p data-i18n="gd.choose-usb-app.19">In Ultimate USB and DROFUS, when you write <strong>Windows To Go</strong> from an image with more than one edition, the app lists the editions and you choose one.</p>
+
+<h2 data-i18n="gd.choose-usb-app.20">Can you pick the Ventoy version?</h2>
+<p data-i18n="gd.choose-usb-app.21">In Ultimate USB and Ventoy (Unofficial), the <strong>Ventoy version</strong> sheet lists the built-in version, versions you downloaded, and <strong>Other version…</strong>, which lists more Ventoy releases. The version you select is used for Install and Update.</p>
+
+<h2 data-i18n="gd.choose-usb-app.22">Does it check the file system after formatting?</h2>
+<p data-i18n="gd.choose-usb-app.23">In Ultimate USB and USB Tools, <a href="/tools/format-usb.html">Format USB</a> tests the drive after formatting and only then reports success. If a check fails, the format is reported as failed.</p>
+
+<h2 data-i18n="gd.choose-usb-app.24">Does it work on your phone with no account?</h2>
+<p data-i18n="gd.choose-usb-app.25">Your files and images should stay on your phone. In all MixApplications apps, files are processed on the phone and their contents are never uploaded, and there is no account or sign-up. The free versions need an internet connection for ads, and running jobs wait while the phone is offline; Pro works offline.</p>
+
+<h2 data-i18n="gd.choose-usb-app.26">Which app does which check?</h2>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="gd.choose-usb-app.27">Check</th><th data-i18n="gd.choose-usb-app.28">Ultimate USB</th><th data-i18n="gd.choose-usb-app.29">DROFUS</th><th data-i18n="gd.choose-usb-app.30">Ventoy (Unofficial)</th><th data-i18n="gd.choose-usb-app.31">USB Tools</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="gd.choose-usb-app.32">Tests the drive for fake capacity</td><td data-i18n="gd.choose-usb-app.33">Yes</td><td data-i18n="gd.choose-usb-app.34">Yes</td><td data-i18n="gd.choose-usb-app.35">Yes</td><td data-i18n="gd.choose-usb-app.36">Yes</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.37">Warns before erasing</td><td data-i18n="gd.choose-usb-app.38">Yes</td><td data-i18n="gd.choose-usb-app.39">Yes</td><td data-i18n="gd.choose-usb-app.40">Yes</td><td data-i18n="gd.choose-usb-app.41">Yes</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.42">Detects truncated or non-bootable images</td><td data-i18n="gd.choose-usb-app.43">Yes</td><td data-i18n="gd.choose-usb-app.44">Yes</td><td>—</td><td>—</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.45">Checks free space</td><td data-i18n="gd.choose-usb-app.46">Yes</td><td data-i18n="gd.choose-usb-app.47">Yes</td><td data-i18n="gd.choose-usb-app.48">Yes (copying files)</td><td>—</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.49">Gives tokens back when a write fails</td><td data-i18n="gd.choose-usb-app.50">Yes</td><td data-i18n="gd.choose-usb-app.51">Yes</td><td data-i18n="gd.choose-usb-app.52">Yes</td><td data-i18n="gd.choose-usb-app.53">Yes</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.54">GPT/MBR and NTFS, FAT32, exFAT</td><td data-i18n="gd.choose-usb-app.55">Yes</td><td data-i18n="gd.choose-usb-app.56">Yes</td><td data-i18n="gd.choose-usb-app.57">Yes</td><td data-i18n="gd.choose-usb-app.58">Yes (formatting only)</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.59">Splits install.wim for FAT32</td><td data-i18n="gd.choose-usb-app.60">Yes</td><td data-i18n="gd.choose-usb-app.61">Yes</td><td>—</td><td>—</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.62">Lets you pick the Windows edition</td><td data-i18n="gd.choose-usb-app.63">Yes (Windows To Go)</td><td data-i18n="gd.choose-usb-app.64">Yes (Windows To Go)</td><td>—</td><td>—</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.65">Lets you pick the Ventoy version</td><td data-i18n="gd.choose-usb-app.66">Yes</td><td>—</td><td data-i18n="gd.choose-usb-app.67">Yes</td><td>—</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.68">Checks the file system after formatting</td><td data-i18n="gd.choose-usb-app.69">Yes</td><td>—</td><td>—</td><td data-i18n="gd.choose-usb-app.70">Yes</td></tr>
+    <tr><td data-i18n="gd.choose-usb-app.71">Works locally with no account</td><td data-i18n="gd.choose-usb-app.72">Yes</td><td data-i18n="gd.choose-usb-app.73">Yes</td><td data-i18n="gd.choose-usb-app.74">Yes</td><td data-i18n="gd.choose-usb-app.75">Yes</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="note" data-i18n="gd.choose-usb-app.76">USB Tools does not write bootable drives; it is listed for its drive checks and formatting.</p>

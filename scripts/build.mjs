@@ -173,7 +173,38 @@ for (const p of allPolicies) {
   if (!p.listed) page.noindex = true;   // reachable by URL only
   list.push(page);
 }
+// content pages: src/content/pages/<path>.html -> /<path>.html (tools, FAQ, what's new, tokens, guides)
+const gitDate = files => {
+  try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', ...files], { cwd: ROOT }).toString().trim(); }
+  catch { return ''; }
+};
+const TODAY = new Date().toISOString().slice(0, 10);
+const contentDir = path.join(SRC, 'content', 'pages');
+const contentFiles = fs.existsSync(contentDir) ? (function walk(d) {
+  return fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]);
+})(contentDir).filter(f => f.endsWith('.html')).sort() : [];
+ctx.content = [];
+for (const f of contentFiles) {
+  const rel = path.relative(contentDir, f).split(path.sep).join('/');
+  const raw = fs.readFileSync(f, 'utf8');
+  const m = raw.match(/^<!--meta (\{[\s\S]*?\}) -->\n/);
+  if (!m) fail('content page without meta header: ' + rel);
+  let meta;
+  try { meta = JSON.parse(m[1]); } catch (e) { fail(`content page ${rel}: meta is not JSON (${e.message})`); }
+  // held pages (written for an app release that is not on Google Play yet) are built only for a local preview
+  if (meta.hold && !process.env.SITE_PREVIEW) continue;
+  // pages of an app that is not live (yet) are not built
+  if (meta.app && !isLive(meta.app)) continue;
+  if (meta.apps && !meta.apps.some(isLive)) continue;
+  const updated = gitDate([`src/content/pages/${rel}`]) || TODAY;   // uncommitted: today
+  let page;
+  try { page = pages.contentPage(rel, meta, raw.slice(m[0].length), ctx, updated); } catch (e) { fail(e.message); }
+  page.source = `src/content/pages/${rel}`;
+  page.apps = meta.apps || (meta.app ? [meta.app] : []);
+  ctx.content.push(page);
+}
 for (const a of apps.filter(x => x.status === 'live')) list.push(pages.appPage(a, ctx));
+list.push(...ctx.content);
 for (const a of apps.filter(x => x.unpublished)) list.push(pages.unpublishedPage(a));
 list.push(pages.notFound(ctx));
 
@@ -356,7 +387,7 @@ for (const page of list) {
 
 // ---------------------------------------------------------------- sitemap
 // lastmod = date of the last commit to the page's own source; the daily Play numbers do not count as a change
-const sourceOf = p => p.path === '/index.html' || p.path.startsWith('/apps/') ? ['src/data/apps.json', 'src/templates/pages.mjs']
+const sourceOf = p => p.source ? [p.source] : p.path === '/index.html' || p.path.startsWith('/apps/') ? ['src/data/apps.json', 'src/templates/pages.mjs']
   : p.path === '/contact.html' ? ['src/content/support.html'] : ['src/content/policies' + p.path];
 const lastmod = files => {
   try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', ...files], { cwd: ROOT }).toString().trim(); }

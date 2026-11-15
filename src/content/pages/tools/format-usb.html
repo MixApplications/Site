@@ -1,0 +1,38 @@
+<!--meta {"key":"tl.format-usb","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Format a USB drive on Android: FAT32, exFAT, NTFS, ext4 — Format USB","h1":"How do I format a USB drive from my Android phone?","description":"Open <strong>Format USB</strong> in Ultimate USB or USB Tools, choose the file system, cluster size and partition table, and tap <strong>Format</strong>. It works over a USB OTG adapter without root, and the app tests the drive after formatting and only then reports success."} -->
+<h2 data-i18n="tl.format-usb.1">Steps</h2>
+<ol>
+  <li data-i18n="tl.format-usb.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
+  <li data-i18n="tl.format-usb.3">Open the <strong>Disk Management</strong> group and tap <strong>Format USB</strong>.</li>
+  <li data-i18n="tl.format-usb.4"><strong>File System:</strong> choose FAT16, FAT32, exFAT, NTFS, EXT2, EXT3 or EXT4.</li>
+  <li data-i18n="tl.format-usb.5"><strong>Cluster Size:</strong> keep the size the app selects for your drive, or pick another one from the list.</li>
+  <li data-i18n="tl.format-usb.6"><strong>Partition Table:</strong> choose MBR or GPT.</li>
+  <li data-i18n="tl.format-usb.7"><strong>Volume Label:</strong> type a name for the drive (up to 32 characters).</li>
+  <li data-i18n="tl.format-usb.8">Tap <strong>Format</strong>. The app shows <strong>All Data Will Be Permanently Deleted</strong> and how many tokens the format uses. Tap <strong>OK</strong> to start.</li>
+</ol>
+<p data-i18n="tl.format-usb.9">The whole drive becomes one partition with the file system you chose.</p>
+
+<h2 data-i18n="tl.format-usb.10">Options and their values</h2>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.format-usb.11">Option</th><th data-i18n="tl.format-usb.12">Values</th><th data-i18n="tl.format-usb.13">Default</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.format-usb.14"><strong>File System</strong></td><td data-i18n="tl.format-usb.15">FAT16, FAT32, exFAT, NTFS, EXT2, EXT3, EXT4. Drives under 32 MB use FAT16; FAT16 is not offered above 2 GB; FAT32 is not offered above 2 TB.</td><td data-i18n="tl.format-usb.16">FAT32 (exFAT above 2 TB)</td></tr>
+    <tr><td data-i18n="tl.format-usb.17"><strong>Cluster Size</strong></td><td data-i18n="tl.format-usb.18">Only sizes valid for the file system and drive are listed: FAT16 up to 64 KB, exFAT 4 KB to 512 KB, NTFS 4 KB to 128 KB, EXT 1 KB to 4 KB.</td><td data-i18n="tl.format-usb.19">Chosen by drive size, for example FAT32 4 KB up to 8 GB and 32 KB above 32 GB; exFAT 32 KB up to 32 GB and 128 KB above.</td></tr>
+    <tr><td data-i18n="tl.format-usb.20"><strong>Partition Table</strong></td><td data-i18n="tl.format-usb.21">MBR, GPT</td><td data-i18n="tl.format-usb.22">MBR (GPT is set and locked above 2 TB)</td></tr>
+    <tr><td data-i18n="tl.format-usb.23"><strong>Volume Label</strong></td><td data-i18n="tl.format-usb.24">Any name up to 32 characters</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+<p data-i18n="tl.format-usb.26">Under the file system list the app adds a note where it helps: EXT2, EXT3 and EXT4 take a long time on large drives, and FAT16 and NTFS drives may not open in the phone's own file manager (they always open in our apps).</p>
+
+<h2 data-i18n="tl.format-usb.27">What does the app check after formatting?</h2>
+<p data-i18n="tl.format-usb.28">Before it reports success, the app tests the drive it has just formatted.</p>
+<p data-i18n="tl.format-usb.32">If the test fails, the format is reported as failed, not as a success.</p>
+
+<h2 data-i18n="tl.format-usb.33">How many tokens does formatting use?</h2>
+<p data-i18n="tl.format-usb.34">A format uses <strong>1 token</strong>. The app shows the cost before it starts, and you earn a token by watching one short rewarded video. With Pro, formatting uses no tokens.</p>
+<p data-i18n="tl.format-usb.35">The token comes back automatically when the drive is removed before the start, when you answer <strong>No</strong>, when the format fails or is cancelled, and when the app is closed during the format (it is returned the next time the app starts).</p>
+
+<h2 data-i18n="tl.format-usb.36">Can I stop a format that is running?</h2>
+<p data-i18n="tl.format-usb.37">Yes. Tap <strong>Cancel</strong> and confirm. The app then makes sure the unfinished volume is not opened by mistake, and the token comes back. Format the drive again to use it. If the drive is unplugged during a format, the app reports <strong>Device Removed</strong> and the token comes back too.</p>
+<p data-i18n="tl.format-usb.38">Keep the app open until the format finishes.</p>

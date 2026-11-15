@@ -1,0 +1,33 @@
+<!--meta {"key":"tl.partition-image-manager","kind":"tool","apps":["ultimate-usb"],"title":"Create and open partition image files (.img, .bk) on Android","h1":"How do I create or open a partition image file on my phone?","description":"In Ultimate USB, open <strong>Partition Image Manager</strong>. Tap <strong>Create Partition Image .img</strong> to make a new image with FAT32, exFAT, NTFS or ext2/3/4, or <strong>View Partition Image (.img/.bk)</strong> to open one and browse and edit its files like a drive."} -->
+<h2 data-i18n="tl.partition-image-manager.1">How do I create a new partition image?</h2>
+<ol>
+  <li data-i18n="tl.partition-image-manager.2">Open <strong>Ultimate USB</strong>, open the <strong>File &amp; Storage</strong> group and tap <strong>Partition Image Manager</strong>.</li>
+  <li data-i18n="tl.partition-image-manager.3">Tap <strong>Create Partition Image .img</strong>.</li>
+  <li data-i18n="tl.partition-image-manager.4">Enter the name, the size and its unit (MB or GB), and a volume label, and choose the file system.</li>
+  <li data-i18n="tl.partition-image-manager.5">Pick the folder where the image file is saved. The app checks that there is enough free space and whether a file with that name already exists.</li>
+  <li data-i18n="tl.partition-image-manager.6">The app shows <strong>Your partition is ready! Would you like to open it?</strong> Open it to add files.</li>
+</ol>
+
+<h2 data-i18n="tl.partition-image-manager.7">Options and their values</h2>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.partition-image-manager.8">Option</th><th data-i18n="tl.partition-image-manager.9">Values</th><th data-i18n="tl.partition-image-manager.10">Default</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.partition-image-manager.11">Size</td><td data-i18n="tl.partition-image-manager.12">A number of up to 3 digits; at least 40 MB</td><td>—</td></tr>
+    <tr><td data-i18n="tl.partition-image-manager.13">Unit</td><td data-i18n="tl.partition-image-manager.14">MB, GB</td><td data-i18n="tl.partition-image-manager.15">GB</td></tr>
+    <tr><td data-i18n="tl.partition-image-manager.16">File system</td><td data-i18n="tl.partition-image-manager.17">FAT32, exFAT, NTFS, Ext2, Ext3, Ext4 (FAT16 is not offered)</td><td data-i18n="tl.partition-image-manager.18">FAT32</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 data-i18n="tl.partition-image-manager.19">How do I open an image file and see what is inside?</h2>
+<ol>
+  <li data-i18n="tl.partition-image-manager.20">In <strong>Partition Image Manager</strong>, tap <strong>View Partition Image (.img/.bk)</strong>.</li>
+  <li data-i18n="tl.partition-image-manager.21">Pick the image file, then pick a partition in it.</li>
+  <li data-i18n="tl.partition-image-manager.22">Browse it as you would a drive in <a href="/tools/file-manager.html">USB File Manager</a>: Copy, Cut, Paste, Delete, Rename, Import, Export, Search and Sort.</li>
+</ol>
+<p data-i18n="tl.partition-image-manager.23">This also opens a <code>.bk</code> backup made with <a href="/tools/backup-restore.html">Backup / Restore</a>, so you can look inside it without restoring it to a drive.</p>
+
+<h2 data-i18n="tl.partition-image-manager.24">Does Partition Image Manager use tokens?</h2>
+<p data-i18n="tl.partition-image-manager.25">No. Partition Image Manager is free.</p>
+<p data-i18n="tl.partition-image-manager.26">To write an image file to a drive, use <a href="/tools/raw-write.html">Raw Write</a>.</p>

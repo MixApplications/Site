@@ -1,0 +1,53 @@
+<!--meta {"key":"tl.recover-partitions","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Recover a lost partition on a USB drive on Android","h1":"How do I recover a lost partition on a USB drive?","description":"Open <strong>Recover lost partitions</strong> in Ultimate USB or USB Tools and tap <strong>Search for partitions</strong>. For a partition it finds, <strong>Browse files</strong> copies its files to your phone, and <strong>Put back</strong> writes it back into the partition table. You can undo it."} -->
+<h2 data-i18n="tl.recover-partitions.1">Steps</h2>
+<ol>
+  <li data-i18n="tl.recover-partitions.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
+  <li data-i18n="tl.recover-partitions.3">Open the <strong>Data Recovery</strong> group and tap <strong>Recover lost partitions</strong>.</li>
+  <li data-i18n="tl.recover-partitions.4">Tap <strong>Search for partitions</strong>. What it finds is listed under <strong>Partitions found</strong>.</li>
+  <li data-i18n="tl.recover-partitions.5">For a partition in the list, choose <strong>Browse files</strong> or <strong>Put back</strong> (see below).</li>
+</ol>
+
+<h2 data-i18n="tl.recover-partitions.6">Browse files or Put back: which one?</h2>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.recover-partitions.7">Choice</th><th data-i18n="tl.recover-partitions.8">What it does</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.recover-partitions.9"><strong>Browse files</strong></td><td data-i18n="tl.recover-partitions.10">Shows the files of the partition. Tick the ones you want and tap <strong>Recover</strong> to copy them to your phone. The drive is not changed.</td></tr>
+    <tr><td data-i18n="tl.recover-partitions.11"><strong>Put back</strong></td><td data-i18n="tl.recover-partitions.12">Writes the partition back into the drive's partition table.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 data-i18n="tl.recover-partitions.13">What does Put back change, and can I undo it?</h2>
+<p data-i18n="tl.recover-partitions.14">Only the partition table. The app asks <strong>Put this partition back?</strong> and explains: only the drive's partition table is written; the partition's data is not touched. The old table is saved first, so you can undo this.</p>
+<ol>
+  <li data-i18n="tl.recover-partitions.15">Tap <strong>Put back</strong> and confirm.</li>
+  <li data-i18n="tl.recover-partitions.16">When it is done, unplug the drive and connect it again.</li>
+  <li data-i18n="tl.recover-partitions.17">To go back, tap <strong>Undo</strong>. The app writes the old table back.</li>
+</ol>
+<p data-i18n="tl.recover-partitions.18">If the partition table is damaged, the app offers <strong>Write a new partition table</strong>.</p>
+
+<h2 data-i18n="tl.recover-partitions.19">Why can a partition not be put back?</h2>
+<p data-i18n="tl.recover-partitions.20">The app refuses <strong>Put back</strong> and tells you the reason when the found partition:</p>
+<ul>
+  <li data-i18n="tl.recover-partitions.21">overlaps a partition that is in use,</li>
+  <li data-i18n="tl.recover-partitions.22">overlaps another found partition,</li>
+  <li data-i18n="tl.recover-partitions.23">lies outside the drive,</li>
+  <li data-i18n="tl.recover-partitions.24">does not start on a sector boundary,</li>
+  <li data-i18n="tl.recover-partitions.25">is too large for this partition table,</li>
+  <li data-i18n="tl.recover-partitions.26">lies outside the area the partition table can use.</li>
+</ul>
+<p data-i18n="tl.recover-partitions.27">A partition found inside an ISO or disk image can only be copied, not put back. In these cases you can still use <strong>Browse files</strong> to copy the files to your phone.</p>
+
+<h2 data-i18n="tl.recover-partitions.28">What if no partition is found?</h2>
+<p data-i18n="tl.recover-partitions.29">The app offers <strong>Search for deleted files</strong>, which looks for single files instead. See <a href="/tools/recover-files.html">Recover deleted files</a>.</p>
+
+<h2 data-i18n="tl.recover-partitions.30">How many tokens does it use?</h2>
+<p data-i18n="tl.recover-partitions.31">None. Searching for partitions, copying files and putting partitions back are free.</p>
+
+<h2 data-i18n="tl.recover-partitions.32">Can I stop a search or unplug the drive?</h2>
+<ul>
+  <li data-i18n="tl.recover-partitions.33">When you stop a search, the app tells you whether it can be resumed later.</li>
+  <li data-i18n="tl.recover-partitions.34">If you leave the app, the search is paused until the app is in front again. Without Pro, it is also paused while the phone is offline or an ad blocker is active.</li>
+  <li data-i18n="tl.recover-partitions.35">If the drive is unplugged, the search pauses. Plug the same drive in again and it continues. Another drive is never read in its place.</li>
+</ul>

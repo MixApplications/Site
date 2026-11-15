@@ -74,6 +74,7 @@ for (const appId of candidates) {
       genre: a.genre || '',
       genreId: a.genreId || '',
       privacyPolicy: a.privacyPolicy || '',
+      updated: a.updated ? new Date(a.updated).toISOString().slice(0, 10) : '',
       url: a.url,
       i18n: {},
     };

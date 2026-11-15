@@ -1,0 +1,40 @@
+<!--meta {"key":"tl.usb-encryption","kind":"tool","apps":["ultimate-usb"],"title":"Encrypt a USB drive with a password on Android — USB Encryption","h1":"How do I encrypt a USB drive with a password on Android?","description":"Open <strong>USB Encryption</strong> in Ultimate USB, type a password of at least 8 characters, type I UNDERSTAND and tap <strong>Encrypt Drive</strong>. The drive is erased and encrypted with your password, and then it opens only in Ultimate USB."} -->
+<h2 data-i18n="tl.usb-encryption.1">Steps</h2>
+<ol>
+  <li data-i18n="tl.usb-encryption.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong>.</li>
+  <li data-i18n="tl.usb-encryption.3">Open the <strong>Disk Management</strong> group and tap <strong>USB Encryption</strong>. The app shows <strong>This drive is not encrypted</strong>.</li>
+  <li data-i18n="tl.usb-encryption.4">Read the notes under <strong>Before you encrypt</strong>.</li>
+  <li data-i18n="tl.usb-encryption.5">Type your password in <strong>Password</strong> and again in <strong>Confirm password</strong>. <strong>Show password</strong> shows what you typed. Use at least 8 characters; there are no other rules.</li>
+  <li data-i18n="tl.usb-encryption.6">Type <strong>I UNDERSTAND</strong> in <strong>Type the words above</strong> (upper or lower case does not matter).</li>
+  <li data-i18n="tl.usb-encryption.7">Tap <strong>Encrypt Drive</strong>. On Android 13 and newer the app may first ask to show notifications.</li>
+  <li data-i18n="tl.usb-encryption.8">The app shows <strong>Everything on the drive will be deleted, and the drive will only be readable in Ultimate USB.</strong> and how many tokens encryption uses. Confirm to start.</li>
+  <li data-i18n="tl.usb-encryption.9">Wait while <strong>Encrypting</strong> runs: <strong>Measuring this phone's speed…</strong>, <strong>Writing the encryption header…</strong> and <strong>Creating the file system…</strong>.</li>
+</ol>
+<p data-i18n="tl.usb-encryption.10">Under the password fields, <strong>Password strength</strong> shows very weak, weak, fair, strong or very strong.</p>
+<p data-i18n="tl.usb-encryption.11">Inside the encryption, the drive gets an exFAT file system with the label <strong>ENCRYPTED</strong>. The app tests this new file system the same way as <a href="/tools/format-usb.html">Format USB</a> does.</p>
+
+<h2 data-i18n="tl.usb-encryption.12">How do I open an encrypted drive?</h2>
+<ol>
+  <li data-i18n="tl.usb-encryption.13">Connect the drive and open <strong>USB Encryption</strong> in Ultimate USB. The app shows <strong>This drive is encrypted</strong>.</li>
+  <li data-i18n="tl.usb-encryption.14">Enter your password to unlock the drive.</li>
+  <li data-i18n="tl.usb-encryption.15">Tap <strong>Open Files</strong> or <strong>Browse Files</strong> to work with your files.</li>
+</ol>
+<p data-i18n="tl.usb-encryption.16">The drive locks itself again when you leave the app for more than 3 seconds.</p>
+<p data-i18n="tl.usb-encryption.17">The encrypted drive can be read only in Ultimate USB.</p>
+
+<h2 data-i18n="tl.usb-encryption.18">How do I change the password?</h2>
+<p data-i18n="tl.usb-encryption.19">Unlock the drive and tap <strong>Change Password</strong>. This is quick. The old password stops working immediately. Unlocking the drive and changing the password use no tokens; only encrypting uses one.</p>
+
+<h2 data-i18n="tl.usb-encryption.20">What if I forget the password?</h2>
+<p data-i18n="tl.usb-encryption.21">The password cannot be recovered or reset; that is what protects the files. <strong>USB Encryption</strong> can only make the drive usable again by formatting it, which erases everything. While you still know the password, use <strong>Change Password</strong>.</p>
+
+<h2 data-i18n="tl.usb-encryption.22">How many tokens does encryption use?</h2>
+<p data-i18n="tl.usb-encryption.23"><strong>Encrypt Drive</strong> uses <strong>1 token</strong>. The app shows the cost before it starts, and you earn a token by watching one short rewarded video. With Pro, encryption uses no tokens.</p>
+<p data-i18n="tl.usb-encryption.24">The token comes back automatically when the encryption does not succeed, for example when the drive is missing or busy. If the app is closed during encryption, the token is returned the next time the app starts.</p>
+
+<h2 data-i18n="tl.usb-encryption.25">What happens if encryption is interrupted?</h2>
+<p data-i18n="tl.usb-encryption.26">During encryption the app shows a notification that asks you not to unplug the drive. If encryption stops early:</p>
+<ul>
+  <li data-i18n="tl.usb-encryption.27">If it stops right at the start, the drive looks like a blank drive.</li>
+  <li data-i18n="tl.usb-encryption.28">If it stops later, the app shows <strong>Encryption did not finish. The drive has to be set up again before it can be used.</strong></li>
+</ul>

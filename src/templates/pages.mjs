@@ -145,6 +145,24 @@ function proof(p) {
   return items.length ? `        <div class="proof">${items.join('')}</div>
 ` : '';
 }
+// links from an app overview to its own help pages and to every tool page that includes the app
+function guides(a, ctx) {
+  const own = (ctx.content || []).filter(p => p.kind !== 'tool' && (p.app === a.id || (p.kind === 'guide' && p.apps?.includes(a.id))));
+  const tools = (ctx.content || []).filter(p => p.kind === 'tool' && p.apps.includes(a.id));
+  if (!own.length && !tools.length) return '';
+  const card = p => `          <a href="${p.path}"><b data-i18n="${p.descKey.replace(/\.desc$/, '.h1')}">${p.h1}</b></a>`;
+  return `      <section class="panel">
+${own.length ? `        <h2 data-i18n="app.guides">Help and guides</h2>
+        <div class="toolgrid">
+${own.map(card).join('\n')}
+        </div>
+` : ''}${tools.length ? `        <h2 data-i18n="app.tools">Tools in this app, step by step</h2>
+        <div class="toolgrid">
+${tools.map(card).join('\n')}
+        </div>
+` : ''}      </section>
+`;
+}
 export function appPage(a, ctx) {
   const { apps, play } = ctx;
   const p = play[a.pkg] || {};
@@ -170,14 +188,15 @@ export function appPage(a, ctx) {
     <div class="appmain">
 ${a.desc || a.headline ? `      <section class="panel about">
         <h2 data-i18n="app.about">About the app</h2>
-${a.headline ? `        <p class="headline" data-i18n="app.${a.id}.h">${a.headline}</p>
+${a.definition ? `        <p class="lead" data-i18n="app.${a.id}.def">${a.definition}</p>
+` : ''}${a.headline ? `        <p class="headline" data-i18n="app.${a.id}.h">${a.headline}</p>
 ` : ''}${a.desc ? `        <p class="lead" data-i18n="${a.descKey}">${a.desc}</p>
 ` : ''}${proof(p)}${(a.features || []).length ? `        <div class="features">
 ${a.features.map((f, i) => `          <div class="feature"><h3 data-i18n="app.${a.id}.f${i + 1}">${f.title}</h3><p data-i18n="app.${a.id}.f${i + 1}d">${f.text}</p></div>`).join('\n')}
         </div>
 ` : ''}${a.chips && a.chips.length ? `        <div class="chips">${a.chips.map(c => `<span class="chip">${c}</span>`).join('')}</div>
 ` : ''}      </section>
-` : ''}${shots.length ? `      <section class="panel">
+` : ''}${guides(a, ctx)}${shots.length ? `      <section class="panel">
         <h2 data-i18n="app.shots">Screenshots</h2>
         <div class="shots">
 ${shots.map((u, i) => `          <img src="${playImg(u, 'h600')}" alt="${esc(a.short || a.name)} screenshot ${i + 1}" height="300" loading="lazy">`).join('\n')}
@@ -213,9 +232,10 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
     operatingSystem: 'Android', applicationCategory: a.category === 'games' ? 'GameApplication' : 'UtilitiesApplication',
     url: SITE + `/apps/${a.id}.html`, image: playImg(p.icon, 's512'), installUrl: playUrl(a.pkg),
     publisher: { '@type': 'Organization', name: 'MixApplications' },
-    description: [a.headline, a.desc].filter(Boolean).map(stripTags).join(' '),
+    description: [a.definition, a.headline, a.desc].filter(Boolean).map(stripTags).join(' '),
     ...(a.features ? { featureList: a.features.map(f => `${f.title}: ${f.text}`) } : {}),
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    ...(p.updated ? { dateModified: p.updated } : {}),
   };
   // No aggregateRating: Google's review-snippet rules forbid ratings taken from another site (Google Play);
   // the Play rating is shown as visible text on the page instead.
@@ -228,8 +248,9 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
   return {
     path: `/apps/${a.id}.html`, nav: 'apps',
     title: `${a.short || a.name} for Android — MixApplications`,
-    description: stripTags(a.headline || playText(p.summary || '') || a.desc || ''),
-    ...(a.headline ? { descKey: `app.${a.id}.h` } : {}),   // language copies use the translated headline
+    description: stripTags(a.definition || a.headline || playText(p.summary || '') || a.desc || ''),
+    // language copies use the translated sentence
+    ...(a.definition ? { descKey: `app.${a.id}.def` } : a.headline ? { descKey: `app.${a.id}.h` } : {}),
     ogImage: playImg(p.icon, 's512'),
     head: [ld, crumbs].map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>\n`).join(''),
     main,
@@ -314,6 +335,60 @@ ${ctx.policies.map(p => `      <a href="/${p.file}"${p.file === file ? ' aria-cu
   return {
     path: '/' + file, nav: 'privacy', ltrOnly: true,
     title: meta.title, description: meta.description, main,
+  };
+}
+
+// ---------------------------------------------------------------- content pages (tools, FAQ, what's new, tokens, guides)
+// Source: src/content/pages/<path>.html = `<!--meta {...} -->` + body. Meta:
+//   key      i18n prefix of the page (unique), e.g. "tl.format-usb"
+//   title    <title> text;  h1  visible heading;  description  answer-first lead = meta description
+//   app      owning app id (llms.txt section, breadcrumb); apps  ids of every app that has this tool
+//   kind     tool | faq | whatsnew | tokens | guide
+const KIND = { tool: ['Tools', 'pg.k.tool'], faq: ['FAQ', 'pg.k.faq'], whatsnew: ["What's new", 'pg.k.new'], tokens: ['Tokens', 'pg.k.tokens'], guide: ['Guides', 'pg.k.guide'] };
+export function contentPage(rel, meta, body, ctx, updated) {
+  const { apps, play } = ctx;
+  for (const k of ['key', 'title', 'h1', 'description', 'kind']) if (!meta[k]) throw new Error(`${rel}: meta.${k} missing`);
+  if (!KIND[meta.kind]) throw new Error(`${rel}: unknown kind ${meta.kind}`);
+  const live = id => apps.find(a => a.id === id && a.status === 'live');
+  const owner = meta.app ? live(meta.app) : null;
+  if (meta.app && !owner) throw new Error(`${rel}: app ${meta.app} is not live`);
+  const inApps = (meta.apps || (owner ? [owner.id] : [])).map(live).filter(Boolean);
+  const path = '/' + rel;
+  const crumbs = [['/', 'Apps', 'nav.apps'], ...(owner ? [[`/apps/${owner.id}.html`, owner.short || owner.name, null]] : [])];
+  const appCards = inApps.length ? `    <section class="panel inapps">
+      ${inApps.length > 1 ? '<h2 data-i18n="pg.inapps.n">Available in these apps</h2>' : '<h2 data-i18n="pg.inapps.1">Available in</h2>'}
+      <ul class="others">
+${inApps.map(a => `        <li><a href="/apps/${a.id}.html"><img src="${playImg(play[a.pkg]?.icon, 's68')}" alt="" width="34" height="34" loading="lazy">${a.short || a.name}</a> <a class="btn btn--sm" href="${playUrl(a.pkg)}">${ICON.play}<span data-i18n="home.get">Google Play</span></a></li>`).join('\n')}
+      </ul>
+      <p><a href="/contact.html" data-i18n="pg.help">Still stuck? Ask us by WhatsApp or email.</a></p>
+    </section>
+` : '';
+  const main = `<main id="main" class="wrap narrow">
+  <nav class="crumbs" aria-label="Breadcrumb">${crumbs.map(([h, t, k]) => `<a href="${h}"${k ? ` data-i18n="${k}"` : ''}>${t}</a>`).join(' / ')} / <span data-i18n="${KIND[meta.kind][1]}">${KIND[meta.kind][0]}</span></nav>
+  <article class="panel doc">
+    <h1 data-i18n="${meta.key}.h1">${meta.h1}</h1>
+    <p class="lead" data-i18n="${meta.key}.desc">${meta.description}</p>
+    <p class="updated"><span data-i18n="pg.updated">Last updated</span> <time datetime="${updated}">${updated}</time></p>
+${body.trim()}
+  </article>
+${appCards}</main>`;
+  const ld = [{
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      ...crumbs.map(([h, t], i) => ({ '@type': 'ListItem', position: i + 1, name: t, item: SITE + h })),
+      { '@type': 'ListItem', position: crumbs.length + 1, name: stripTags(meta.h1), item: SITE + path },
+    ],
+  }];
+  if (meta.kind === 'faq') {
+    const qa = [...body.matchAll(/<details class="q">\s*<summary[^>]*>([\s\S]*?)<\/summary>\s*<div class="a">([\s\S]*?)<\/div>\s*<\/details>/g)];
+    if (!qa.length) throw new Error(`${rel}: FAQ page without <details class="q"> answers`);
+    ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qa.map(([, q, a]) => ({
+      '@type': 'Question', name: stripTags(q), acceptedAnswer: { '@type': 'Answer', text: stripTags(a) } })) });
+  }
+  return {
+    path, nav: 'apps', app: meta.app || null, kind: meta.kind, h1: meta.h1, linkTitle: stripTags(meta.h1),
+    title: meta.title, titleKey: `${meta.key}.title`, description: stripTags(meta.description), descKey: `${meta.key}.desc`,
+    head: ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>\n`).join(''),
+    main,
   };
 }
 

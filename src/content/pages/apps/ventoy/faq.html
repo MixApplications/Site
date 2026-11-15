@@ -1,0 +1,159 @@
+<!--meta {"key":"fq.ventoy","kind":"faq","app":"ventoy","title":"Ventoy (Unofficial) FAQ: multiboot USB on Android, tokens, versions","h1":"What do I need to know about Ventoy (Unofficial)?","description":"<strong>Ventoy (Unofficial)</strong> installs Ventoy on a USB drive from your phone. Then you copy ISO files to the drive and pick one from a menu when the PC starts. Install uses 2 tokens, Update and Clear 1; copying files is free, and Pro uses no tokens."} -->
+<h2 data-i18n="fq.ventoy.1">Tokens, ads and Pro</h2>
+<details class="q"><summary data-i18n="fq.ventoy.2">How many tokens does a write or a format use, and how do I earn one?</summary><div class="a">
+<p data-i18n="fq.ventoy.3">The app shows the number of tokens before you confirm:</p>
+<ul>
+  <li data-i18n="fq.ventoy.4"><strong>Install</strong>: 2 tokens.</li>
+  <li data-i18n="fq.ventoy.5"><strong>Update</strong>: 1 token.</li>
+  <li data-i18n="fq.ventoy.6"><strong>Clear</strong>: 1 token.</li>
+</ul>
+<p data-i18n="fq.ventoy.7">Free: <strong>Copy File To USB</strong>, downloading files to the drive, <strong>USB File Manager</strong>, <strong>Theme Manager</strong>, <strong>Config Hub</strong> and persistence images.</p>
+<p data-i18n="fq.ventoy.8">To earn a token, tap the token counter on the main screen to open <strong>Get Tokens</strong>, then tap <strong>Watch</strong> under <strong>Get 1 free token</strong>. One short rewarded video (60 seconds at most) gives 1 token. Free tokens stop at a balance of 5, and at 4 videos each time you open the app. You can also buy tokens. With Pro, no action uses tokens. More: <a href="/apps/ventoy/tokens.html">Ventoy tokens</a>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.9">What happens to my tokens when a write does not complete?</summary><div class="a">
+<p data-i18n="fq.ventoy.10">They come back automatically. Tokens are taken when you tap <strong>OK</strong>, before the job starts. If Install, Update or Clear fails, or nothing was written, the app gives them back.</p>
+<p data-i18n="fq.ventoy.11">If the app is closed during a job, the tokens come back the next time you open the app. Install, Update and Clear have no Cancel button.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.12">Why does the rewarded ad not load, and what can I do to still earn a token?</summary><div class="a">
+<p data-i18n="fq.ventoy.13">This is nearly always the network. Try these in order:</p>
+<ol>
+  <li data-i18n="fq.ventoy.14"><strong>Private DNS</strong>: open Settings, search for Private DNS, choose <strong>Private DNS provider hostname</strong> and enter <code>dns.google</code>. Save, switch the connection off and on, then restart the app.</li>
+  <li data-i18n="fq.ventoy.15">Turn off ad blockers and blocking VPNs for the app.</li>
+  <li data-i18n="fq.ventoy.16">Switch between Wi-Fi and mobile data.</li>
+  <li data-i18n="fq.ventoy.17">Watch the ad to the end and close it with the X. Pressing Back early cancels the reward.</li>
+</ol>
+<p data-i18n="fq.ventoy.18">If the ad finished and the balance did not change, force-stop the app (Settings &rarr; Apps &rarr; the app &rarr; Force stop) and open it again while online. You can also buy tokens, or get Pro, which turns the token system off.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.19">Why does the app say an ad blocker or private DNS is active?</summary><div class="a">
+<p data-i18n="fq.ventoy.20">The free version cannot load its ads through an ad blocker, a blocking VPN or ad-blocking Private DNS. Running operations wait until it is switched off for the app. Set Private DNS to <code>dns.google</code> or turn it off, then restart the app.</p>
+<p data-i18n="fq.ventoy.21">Pro, or any token pack you bought on this install, lets the app run with an ad blocker on.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.22">Why does the app need an internet connection?</summary><div class="a">
+<p data-i18n="fq.ventoy.23">Installing Ventoy does not need it. The free version needs a connection to load ads, which pay for the free tools. While you are offline it shows <strong>No Internet Connection</strong> and running operations wait. They continue on their own when you are back online.</p>
+<p data-i18n="fq.ventoy.24">Pro works offline. Downloading files to the drive and loading other Ventoy versions need the internet in any case.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.25">Can I pay instead of watching ads, and what does a purchase include?</summary><div class="a">
+<p data-i18n="fq.ventoy.26">Yes. You can buy tokens, or buy Pro. Pro is a one-time, lifetime purchase with no subscription. It removes all ads, turns the token system off, and lets you use the app offline and with an ad blocker on. The Ventoy features are the same with and without Pro.</p>
+</div></details>
+
+<h2 data-i18n="fq.ventoy.27">Connecting a drive</h2>
+<details class="q"><summary data-i18n="fq.ventoy.28">Why is my USB drive not detected (USB-C drive, card reader, OTG adapter)?</summary><div class="a">
+<p data-i18n="fq.ventoy.29">The phone has to detect the drive first. Work through this list:</p>
+<ol>
+  <li data-i18n="fq.ventoy.30">Open the phone's Settings, search for OTG and switch it on if the option exists.</li>
+  <li data-i18n="fq.ventoy.31">Use a data OTG adapter. Charge-only cables cannot carry data.</li>
+  <li data-i18n="fq.ventoy.32">When Android asks whether the app may use the USB device, tap <strong>OK</strong>. If you refused, unplug the drive and plug it in again. Check that the mode on the main screen is <strong>USB OTG</strong>, not <strong>SD Slot</strong>.</li>
+  <li data-i18n="fq.ventoy.33">Plug in a FAT32 or exFAT drive and check that the phone notices it. If even that drive is not noticed, the cause is the cable, the port or the drive.</li>
+  <li data-i18n="fq.ventoy.34">Test the drive on a PC, and check the phone's port for dust.</li>
+</ol>
+<p data-i18n="fq.ventoy.35">If the phone does not recognise the drive after Ventoy was installed, it is likely working: test it on a PC.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.36">Do I need root?</summary><div class="a">
+<p data-i18n="fq.ventoy.37">No, not for USB drives over OTG. Root is needed only for the phone's internal SD card slot. Without root, put the card in a USB card reader and connect it over OTG.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.38">Can I use an NTFS drive on Android?</summary><div class="a">
+<p data-i18n="fq.ventoy.39">Yes. The app's <strong>USB File Manager</strong> opens FAT, exFAT, NTFS and EXT drives, also when the phone itself cannot read them. NTFS is the default file system for a Ventoy drive.</p>
+<p data-i18n="fq.ventoy.40">Android may say the drive is damaged or unsupported. That is expected: many phones cannot read NTFS on their own. Dismiss the notice and do not tap Android's offer to format: it would erase the drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.41">Why does Ventoy refuse my drive?</summary><div class="a">
+<p data-i18n="fq.ventoy.42">Ventoy supports only drives with 512-byte sectors. A drive with 4096-byte sectors (4K native) is refused with a message that says so.</p>
+<p data-i18n="fq.ventoy.43">The app also checks the drive when you connect it. If the check fails, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong>: the drive may be faulty or counterfeit (smaller than it claims). The app offers to scan for the size the drive really holds; tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+</div></details>
+
+<h2 data-i18n="fq.ventoy.44">Ventoy drives</h2>
+<details class="q"><summary data-i18n="fq.ventoy.45">How do I put several ISO files on one USB drive?</summary><div class="a">
+<p data-i18n="fq.ventoy.46">Install Ventoy once, then copy ISO, WIM, IMG, VHD or EFI files to the drive. When the PC starts, you pick one from the Ventoy menu.</p>
+<ol>
+  <li data-i18n="fq.ventoy.47">Connect the drive. The Ventoy screen opens when you start the app.</li>
+  <li data-i18n="fq.ventoy.48">Choose <strong>*Partition Table:</strong>, <strong>*File System:</strong> and the other options, and tap <strong>Install</strong>.</li>
+  <li data-i18n="fq.ventoy.49">The app shows <strong>The disk will be formatted and all data will be lost.</strong> and the tokens. Tap <strong>OK</strong>.</li>
+  <li data-i18n="fq.ventoy.50">When it is done, copy your ISO files to the drive with <strong>Copy File To USB</strong>.</li>
+</ol>
+<p data-i18n="fq.ventoy.51">More: <a href="/tools/ventoy.html">Ventoy</a>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.52">Can I install Ventoy with GPT, or only MBR?</summary><div class="a">
+<p data-i18n="fq.ventoy.53">Both. Choose <strong>MBR</strong> or <strong>GPT</strong> under <strong>*Partition Table:</strong>, then tap <strong>Install</strong>. MBR is the default; on a drive over 2 TB, GPT is set and locked.</p>
+<p data-i18n="fq.ventoy.54">Install erases the drive, including ISO files already on it, so copy them back afterwards. <strong>Update</strong> keeps your ISO files and keeps the drive's partition style.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.55">How do I copy ISO files onto a Ventoy drive?</summary><div class="a">
+<p data-i18n="fq.ventoy.56">Tap <strong>Copy File To USB</strong> and pick the file with the system file picker, or tap <strong>Download File Directly To USB FROM INTERNET</strong> to save a download straight to the drive. Both are free. Copying the files on a PC works too.</p>
+<p data-i18n="fq.ventoy.57">The app checks the free space first and shows <strong>Not Enough Space.</strong> when the file does not fit. When a file with the same name exists, it asks <strong>File already exists. Replace it?</strong> To remove an ISO, delete it in <strong>USB File Manager</strong>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.58">Why does the PC say no bootable file was found on the Ventoy drive?</summary><div class="a">
+<ul>
+  <li data-i18n="fq.ventoy.59">Check that <strong>Ventoy In Device:</strong> shows a version. If it is empty, Ventoy is not on the drive.</li>
+  <li data-i18n="fq.ventoy.60">Check that the file is one Ventoy can boot: ISO, WIM, IMG, VHD or EFI.</li>
+  <li data-i18n="fq.ventoy.61">Download the file again if the copy may be incomplete. A truncated ISO copies without error but does not boot.</li>
+  <li data-i18n="fq.ventoy.62">In <strong>Config Hub</strong> &rarr; <strong>Boot</strong>, the sections <strong>Finding images</strong> (<strong>Search root</strong>, <strong>Max search depth</strong>) and <strong>Hide from the menu</strong> (for example <strong>Hide .iso files in menu</strong>) change which files the menu lists. Check them if a file is missing.</li>
+</ul>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.63">How do I choose which ISO boots at startup?</summary><div class="a">
+<p data-i18n="fq.ventoy.64">When the PC starts from the drive, Ventoy shows a menu of the files on it, and you pick one.</p>
+<p data-i18n="fq.ventoy.65">To set a default, open <strong>Config Hub</strong> &rarr; <strong>Boot</strong> and set <strong>Default boot entry</strong> and <strong>Menu timeout</strong> (whole seconds, 0 to 3600). <strong>Default menu mode</strong> switches between <strong>List</strong> and <strong>TreeView</strong>. After you save, the app shows <strong>Saved. Takes effect on next boot.</strong></p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.66">Can I use a specific Ventoy version?</summary><div class="a">
+<p data-i18n="fq.ventoy.67">Yes. One Ventoy version is built into the app. Tap the version next to <strong>Ventoy In Package:</strong> to open the <strong>Ventoy version</strong> sheet.</p>
+<ul>
+  <li data-i18n="fq.ventoy.68">The built-in version is selected by default.</li>
+  <li data-i18n="fq.ventoy.69"><strong>Other version…</strong> shows the list of Ventoy releases. Tap a version and confirm the download.</li>
+  <li data-i18n="fq.ventoy.70">Downloaded versions show <strong>On this phone</strong> and can be deleted.</li>
+</ul>
+<p data-i18n="fq.ventoy.71">The version you select is used for both Install and Update. If a downloaded version cannot be used, nothing is written to the drive and the tokens come back.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.72">Can I theme or password-protect a Ventoy drive?</summary><div class="a">
+<p data-i18n="fq.ventoy.73">Yes. <strong>Theme Manager</strong> imports a GRUB2 theme archive (zip, tar.gz or tar.xz) onto the drive. <strong>Config Hub</strong> sets a boot-menu password, menu options and persistence in the drive's ventoy.json file. Both are free, and the settings are written only to the drive.</p>
+</div></details>
+
+<h2 data-i18n="fq.ventoy.74">Windows on a Ventoy drive</h2>
+<details class="q"><summary data-i18n="fq.ventoy.75">How do I make a bootable Windows USB from my phone?</summary><div class="a">
+<p data-i18n="fq.ventoy.76">Install Ventoy on the drive, then copy the Windows ISO to it with <strong>Copy File To USB</strong>. When the PC starts from the drive, pick the ISO in the Ventoy menu.</p>
+<p data-i18n="fq.ventoy.77">The ISO is copied as one file, and FAT32 cannot hold a single file over 4 GB. For an ISO over 4 GB, use exFAT or NTFS for the drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.78">How do I install Windows 11 on a PC without TPM 2.0 or Secure Boot?</summary><div class="a">
+<p data-i18n="fq.ventoy.79">Open <strong>Config Hub</strong> &rarr; <strong>Boot</strong> and turn on <strong>Windows 11: bypass hardware checks</strong>. <strong>Windows 11: bypass online account</strong> removes the online-account requirement. Save; the change takes effect on the next boot.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.80">Can I copy an ISO with a file over 4 GB to a FAT32 Ventoy drive?</summary><div class="a">
+<p data-i18n="fq.ventoy.81">No. FAT32 cannot hold a single file over 4 GB, and on a Ventoy drive the ISO is copied as one file. Use exFAT or NTFS for the drive. The app checks the free space before it copies.</p>
+</div></details>
+
+<h2 data-i18n="fq.ventoy.82">Writing, speed and safety</h2>
+<details class="q"><summary data-i18n="fq.ventoy.83">How long does a write take, and why can it be slow?</summary><div class="a">
+<p data-i18n="fq.ventoy.84">The speed depends on the whole chain: a USB 3.0 drive in a USB 2.0 adapter runs at USB 2.0 speed, and many small files write much slower than one large file. Large drives and large ISO files take time.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.85">Why did the write stop at a percentage or the app close during the write?</summary><div class="a">
+<ul>
+  <li data-i18n="fq.ventoy.86"><strong>The app was minimised.</strong> A job pauses while the app is in the background and continues when it is in front again.</li>
+  <li data-i18n="fq.ventoy.87"><strong>No internet or an ad blocker (free version).</strong> Running jobs wait until this is fixed. Pro does not pause for these.</li>
+  <li data-i18n="fq.ventoy.88"><strong>The drive was removed or stopped answering.</strong> The job ends as failed. Reconnect the drive and start again; the tokens come back.</li>
+</ul>
+<p data-i18n="fq.ventoy.89">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Reconnect the drive: if the drive check fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong>.</p>
+<p data-i18n="fq.ventoy.90">If the app was closed during a job, the tokens come back the next time you open it.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.91">Can I use other apps while a write is running?</summary><div class="a">
+<p data-i18n="fq.ventoy.92">No. Jobs pause when the app leaves the foreground, to protect the drive. Keep the app open and in front until the job finishes. The app keeps the screen on while it is shown.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.93">My PC does not boot from the USB drive. What should I check?</summary><div class="a">
+<ol>
+  <li data-i18n="fq.ventoy.94"><strong>Boot menu</strong>: select the USB drive in the PC's boot menu (often F12, F11, F9 or Esc at power-on).</li>
+  <li data-i18n="fq.ventoy.95"><strong>Secure Boot</strong>: keep <strong>Secure Boot Support</strong> ticked when you install (it is on by default), or turn Secure Boot off in the BIOS/UEFI.</li>
+  <li data-i18n="fq.ventoy.96"><strong>Partition scheme</strong>: GPT drives need UEFI mode; MBR drives need legacy or CSM mode.</li>
+  <li data-i18n="fq.ventoy.97"><strong>USB port</strong>: try a port directly on the motherboard, not on the front panel or a hub.</li>
+  <li data-i18n="fq.ventoy.98"><strong>The ISO</strong>: download it again from the official source. A truncated ISO copies without error but does not boot.</li>
+</ol>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.99">My drive shows less space after writing. How do I get the full capacity back?</summary><div class="a">
+<p data-i18n="fq.ventoy.100">Tap <strong>Clear</strong> to remove Ventoy from the drive (1 token). It formats the drive, so copy off your files first.</p>
+<p data-i18n="fq.ventoy.101">Drive makers count in decimal gigabytes and phones in binary ones, so a "64 GB" drive holds about 59 GiB. A large shortfall can mean a counterfeit drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.102">Can the app damage my USB drive?</summary><div class="a">
+<p data-i18n="fq.ventoy.103">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
+<p data-i18n="fq.ventoy.104">The app tests each drive when it is connected, refuses drives Ventoy does not support, and asks for confirmation before Install or Clear erases a drive. Update does not format the drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.105">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
+<p data-i18n="fq.ventoy.106">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. Config Hub and theme settings are written only to the drive. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>
+</div></details>
+
+<h2 data-i18n="fq.ventoy.107">About this app</h2>
+<details class="q"><summary data-i18n="fq.ventoy.108">How is this app related to the Ventoy project?</summary><div class="a">
+<p data-i18n="fq.ventoy.109">Ventoy (Unofficial) is an independent app, not affiliated with the Ventoy project. Ventoy is an open-source project of its own authors, and they do not endorse this app.</p>
+</div></details>

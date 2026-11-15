@@ -1,0 +1,29 @@
+<!--meta {"key":"tl.backup-restore","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Back up and restore a whole USB drive on Android — Backup / Restore","h1":"How do I back up and restore a whole USB drive on Android?","description":"Open <strong>Backup / Restore</strong> in Ultimate USB or USB Tools. <strong>Backup</strong> saves a full copy of the drive as a .bk file in a folder you pick. <strong>Restore</strong> writes a .bk file back to a drive. Both use no tokens."} -->
+<h2 data-i18n="tl.backup-restore.1">How do I back up a drive?</h2>
+<ol>
+  <li data-i18n="tl.backup-restore.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
+  <li data-i18n="tl.backup-restore.3">Open the <strong>Disk Management</strong> group and tap <strong>Backup / Restore</strong>.</li>
+  <li data-i18n="tl.backup-restore.4">Tap <strong>Backup</strong> and pick the folder where the backup goes.</li>
+  <li data-i18n="tl.backup-restore.5">The whole drive is saved as one file named <code>ultimate_backup_</code> plus a number, with the extension <code>.bk</code>.</li>
+</ol>
+<p data-i18n="tl.backup-restore.6">The backup file is as large as the whole drive. If the folder has too little space, the app shows <strong>Not Enough Space.</strong> If the folder cannot be opened, it shows <strong>Error opening output directory.</strong> A file over 4 GB cannot be saved to a FAT32 drive, and the app tells you so.</p>
+
+<h2 data-i18n="tl.backup-restore.7">How do I restore a backup?</h2>
+<ol>
+  <li data-i18n="tl.backup-restore.8">Connect the drive and open <strong>Backup / Restore</strong>.</li>
+  <li data-i18n="tl.backup-restore.9">Tap <strong>Restore</strong> and pick the <code>.bk</code> file.</li>
+  <li data-i18n="tl.backup-restore.10">The app shows <strong>All Data Will Be Permanently Deleted</strong>. Confirm, and the file is written to the drive.</li>
+</ol>
+<p data-i18n="tl.backup-restore.11">The drive must be at least as big as the backup file.</p>
+<p data-i18n="tl.backup-restore.12">To look inside a <code>.bk</code> file without restoring it, open it in Ultimate USB's <a href="/tools/partition-image-manager.html">Partition Image Manager</a>. To back up one partition instead of the whole drive, use <strong>Backup</strong> in <a href="/tools/partition-wizard.html">Partition Wizard</a>.</p>
+
+<h2 data-i18n="tl.backup-restore.13">How many tokens does a backup or restore use?</h2>
+<p data-i18n="tl.backup-restore.14">None. Backup and Restore are free.</p>
+
+<h2 data-i18n="tl.backup-restore.15">What if I stop it or unplug the drive?</h2>
+<ul>
+  <li data-i18n="tl.backup-restore.16">To stop, tap cancel and confirm <strong>Are you sure you want to cancel the process?</strong></li>
+  <li data-i18n="tl.backup-restore.17">A cancelled backup deletes its unfinished file.</li>
+  <li data-i18n="tl.backup-restore.18">A cancelled restore leaves the drive only partly written.</li>
+  <li data-i18n="tl.backup-restore.19">If the drive is unplugged, the app reports <strong>Device Removed</strong>.</li>
+</ul>

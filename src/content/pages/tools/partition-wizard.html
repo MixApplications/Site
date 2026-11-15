@@ -1,0 +1,44 @@
+<!--meta {"key":"tl.partition-wizard","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Partition a USB drive on Android, convert MBR/GPT — Partition Wizard","h1":"How do I partition a USB drive from my Android phone?","description":"Open <strong>Partition Wizard</strong> in Ultimate USB or USB Tools, tap a partition or the unallocated space, pick an action and tap <strong>Apply Changes</strong>. Your changes are listed first, so you can review them and undo them before they run."} -->
+<h2 data-i18n="tl.partition-wizard.1">Steps</h2>
+<ol>
+  <li data-i18n="tl.partition-wizard.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
+  <li data-i18n="tl.partition-wizard.3">Open the <strong>Disk Management</strong> group and tap <strong>Partition Wizard</strong>.</li>
+  <li data-i18n="tl.partition-wizard.4">Tap a partition, or <strong>Unallocated Space</strong>, in the list.</li>
+  <li data-i18n="tl.partition-wizard.5">Pick an action: <strong>Create</strong>, <strong>Format</strong>, <strong>Delete</strong>, <strong>Wipe</strong>, <strong>Rename</strong>, <strong>Backup</strong>, <strong>Restore</strong> or <strong>Convert</strong>. The action is added to the <strong>Changes</strong> list.</li>
+  <li data-i18n="tl.partition-wizard.6">Add more actions if you need them. <strong>Undo</strong> removes the last planned change.</li>
+  <li data-i18n="tl.partition-wizard.7">Tap <strong>Apply Changes</strong>. The app asks <strong>Are you sure you want to apply all changes? This operation cannot be undone.</strong> and shows how many tokens the changes use. Confirm to start.</li>
+</ol>
+<p data-i18n="tl.partition-wizard.8">If you leave the screen with planned changes, the app shows <strong>Unsaved Changes</strong> and asks whether you want to exit without saving.</p>
+
+<h2 data-i18n="tl.partition-wizard.9">What does each action do?</h2>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.partition-wizard.10">Action</th><th data-i18n="tl.partition-wizard.11">What it does</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.partition-wizard.12"><strong>Create</strong></td><td data-i18n="tl.partition-wizard.13">Makes a new partition in empty space of at least 32 MB, with FAT16, FAT32, exFAT, NTFS, EXT2, EXT3 or EXT4. It uses all of the space unless you set a custom size.</td></tr>
+    <tr><td data-i18n="tl.partition-wizard.14"><strong>Format</strong></td><td data-i18n="tl.partition-wizard.15">Formats the partition with the file system, <strong>Cluster Size</strong> and label you choose.</td></tr>
+    <tr><td data-i18n="tl.partition-wizard.16"><strong>Delete</strong></td><td data-i18n="tl.partition-wizard.17">Removes the partition, so its space becomes unallocated.</td></tr>
+    <tr><td data-i18n="tl.partition-wizard.18"><strong>Wipe</strong></td><td data-i18n="tl.partition-wizard.19">Erases everything on the partition and removes it.</td></tr>
+    <tr><td data-i18n="tl.partition-wizard.20"><strong>Rename</strong></td><td data-i18n="tl.partition-wizard.21">Gives the partition a new name.</td></tr>
+    <tr><td data-i18n="tl.partition-wizard.22"><strong>Backup</strong></td><td data-i18n="tl.partition-wizard.23">Saves the partition as an .img file named <code>backup_</code> plus a number, in a folder you pick.</td></tr>
+    <tr><td data-i18n="tl.partition-wizard.24"><strong>Restore</strong></td><td data-i18n="tl.partition-wizard.25">Writes an image file back to the partition. The file must be exactly the size of the partition.</td></tr>
+    <tr><td data-i18n="tl.partition-wizard.26"><strong>Convert</strong></td><td data-i18n="tl.partition-wizard.27">Converts the partition table from MBR to GPT or from GPT to MBR.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 data-i18n="tl.partition-wizard.28">Which limits does the wizard check?</h2>
+<p data-i18n="tl.partition-wizard.29">The wizard stops a change that the drive cannot hold, and tells you why:</p>
+<ul>
+  <li data-i18n="tl.partition-wizard.30">A new partition needs at least 32 MB of empty space.</li>
+  <li data-i18n="tl.partition-wizard.31">An MBR drive holds at most 4 partitions. A GPT drive with more than 4 partitions cannot be converted to MBR.</li>
+  <li data-i18n="tl.partition-wizard.32"><strong>FAT32 cannot handle partitions larger than 2TB</strong> and <strong>MBR cannot handle partitions larger than 2TB</strong>. Use exFAT or NTFS, or GPT, for a larger partition.</li>
+</ul>
+<p data-i18n="tl.partition-wizard.33">Back up the drive first with <a href="/tools/backup-restore.html">Backup / Restore</a>: a change to a partition table is not one you want to stop halfway through.</p>
+
+<h2 data-i18n="tl.partition-wizard.34">How many tokens does Partition Wizard use?</h2>
+<p data-i18n="tl.partition-wizard.35"><strong>Apply Changes</strong> uses <strong>1 token</strong> for each <strong>Create</strong> or <strong>Format</strong> in the list, and at most <strong>3 tokens</strong> in total. <strong>Convert</strong>, <strong>Delete</strong>, <strong>Wipe</strong>, <strong>Rename</strong>, <strong>Backup</strong> and <strong>Restore</strong> are free. The app shows the cost before it starts, and you earn a token by watching one short rewarded video. With Pro, Partition Wizard uses no tokens.</p>
+<p data-i18n="tl.partition-wizard.36">If the changes fail, the tokens for the Create and Format steps that did not finish come back. If the app is closed while the changes run, the tokens are returned the next time the app starts.</p>
+
+<h2 data-i18n="tl.partition-wizard.37">Can I stop the changes while they run?</h2>
+<p data-i18n="tl.partition-wizard.38">Yes. Tap cancel and the app asks <strong>Are you sure you want to cancel the process?</strong> If the drive is unplugged while the changes run, the app reports <strong>Device Removed</strong>.</p>

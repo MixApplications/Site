@@ -1,0 +1,74 @@
+<!--meta {"key":"tl.ps2-usb-utils","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Add PS2 games to a USB drive for OPL on Android — PS2 USB Utils","h1":"How do I add PS2 games to a USB drive for OPL from my phone?","description":"Open <strong>PS2 USB Utils</strong> in Ultimate USB or USB Tools. Tap <strong>Fix</strong> if the drive is not FAT32 or exFAT with MBR, then tap <strong>Import &amp; Split ISO</strong>. Games are copied directly or split into USBExtreme (.ul) parts. It also imports PS1 .VCD games for POPStarter."} -->
+<h2 data-i18n="tl.ps2-usb-utils.1">Steps</h2>
+<ol>
+  <li data-i18n="tl.ps2-usb-utils.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
+  <li data-i18n="tl.ps2-usb-utils.3">Open the <strong>Gaming Tools</strong> group and tap <strong>PS2 USB Utils</strong>.</li>
+  <li data-i18n="tl.ps2-usb-utils.4">At the top, check <strong>File System:</strong>, <strong>Partition Table:</strong> and <strong>Available Space:</strong>. If the drive is not FAT32 or exFAT with an MBR partition table, tap <strong>Fix</strong> first.</li>
+  <li data-i18n="tl.ps2-usb-utils.5">Tap <strong>Import &amp; Split ISO</strong> and pick an ISO or ZSO game file.</li>
+  <li data-i18n="tl.ps2-usb-utils.6">Choose the <strong>Installation Method</strong> when the app asks, and start the copy.</li>
+  <li data-i18n="tl.ps2-usb-utils.7">The game appears in the list. The app shows <strong>Found N game(s)</strong>, or <strong>No Games Found</strong> when the drive has none.</li>
+</ol>
+<p data-i18n="tl.ps2-usb-utils.8">The list shows the games in <code>ul.cfg</code>, the PS2 ISO games in <code>/CD</code> and <code>/DVD</code>, and the PS1 games in <code>/POPS</code>.</p>
+
+<h2 data-i18n="tl.ps2-usb-utils.9">How do I prepare the drive for OPL with Fix?</h2>
+<p data-i18n="tl.ps2-usb-utils.10"><strong>Fix</strong> is available when the drive is not FAT32 or exFAT, or when its partition table is not MBR. What it does depends on the drive:</p>
+<ul>
+  <li data-i18n="tl.ps2-usb-utils.11">If the file system is not FAT32 or exFAT, the drive does not have exactly one partition, or the partition is larger than MBR allows, the app formats the drive. Choose FAT32 or exFAT; the label is <strong>PS2</strong> unless you change it. The app shows <strong>All Data Will Be Permanently Deleted</strong> and the token cost before it starts. The drive gets an MBR partition table, and the partition is limited to the MBR maximum size.</li>
+  <li data-i18n="tl.ps2-usb-utils.12">If the drive already has one FAT32 or exFAT partition that fits, the app only rewrites the partition table as MBR. It does not format, your files stay on the drive, and it uses no token.</li>
+</ul>
+
+<h2 data-i18n="tl.ps2-usb-utils.13">Should I use Direct Copy or split the game to UL?</h2>
+<p data-i18n="tl.ps2-usb-utils.14">Use <strong>Direct Copy - Recommended</strong> when the app offers it. The choice appears when the game file is smaller than 4 GB, or when the drive is exFAT. A game of 4 GB or more on a drive that is not exFAT is always split into USBExtreme (<code>.ul</code>) parts, and <code>ul.cfg</code> is updated.</p>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.ps2-usb-utils.15">Option</th><th data-i18n="tl.ps2-usb-utils.16">Values</th><th data-i18n="tl.ps2-usb-utils.17">Default</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.ps2-usb-utils.18"><strong>Installation Method</strong></td><td data-i18n="tl.ps2-usb-utils.19"><strong>Direct Copy - Recommended</strong>, <strong>Convert &amp; Split to UL</strong></td><td data-i18n="tl.ps2-usb-utils.20">Direct Copy - Recommended</td></tr>
+    <tr><td data-i18n="tl.ps2-usb-utils.21"><strong>File Name</strong> (split)</td><td data-i18n="tl.ps2-usb-utils.22">Up to 31 characters</td><td data-i18n="tl.ps2-usb-utils.23">The file name without .iso or .zso</td></tr>
+    <tr><td data-i18n="tl.ps2-usb-utils.24"><strong>Chunk Size</strong> (split)</td><td data-i18n="tl.ps2-usb-utils.25">256 MB, 512 MB, 1 GB, 2 GB, 3 GB</td><td data-i18n="tl.ps2-usb-utils.26">1 GB</td></tr>
+  </tbody>
+</table>
+</div>
+<p data-i18n="tl.ps2-usb-utils.27">The game name is taken from the file name, cut to 31 characters, with characters that Windows does not allow in file names removed. A direct copy goes to <code>/CD</code> when the image fits the CD size, otherwise to <code>/DVD</code>.</p>
+<p data-i18n="tl.ps2-usb-utils.28">CSO files are refused with <strong>Unsupported File.</strong> Convert them to ISO or ZSO first with <a href="/tools/game-converter.html">Game Converter</a>. If an image is not complete, the app says <strong>This image is incomplete. Download it again.</strong></p>
+
+<h2 data-i18n="tl.ps2-usb-utils.29">How do I import a game that is already in .ul format?</h2>
+<p data-i18n="tl.ps2-usb-utils.30">Tap <strong>Import .ul game</strong> and pick the folder. If the folder holds <code>ul.*</code> parts or a <code>ul.cfg</code>, the app imports the UL game. Otherwise it offers the .iso and .zso files in that folder.</p>
+
+<h2 data-i18n="tl.ps2-usb-utils.31">How do I add PS1 games for POPStarter?</h2>
+<p data-i18n="tl.ps2-usb-utils.32">Tap <strong>Import VCD Game</strong> and pick a <code>.VCD</code> file. Only .VCD files are accepted. The app then shows <strong>Copying image…</strong>, <strong>Writing launcher…</strong> and <strong>Updating conf_apps.cfg…</strong>. It creates the launcher <code>/POPS/XX.&lt;name&gt;.ELF</code>.</p>
+<ul>
+  <li data-i18n="tl.ps2-usb-utils.33">The name may use letters, numbers, spaces, dots, hyphens and underscores. The launcher path can be up to 89 characters.</li>
+  <li data-i18n="tl.ps2-usb-utils.34">A game with the same name already in <code>/POPS</code> is refused.</li>
+  <li data-i18n="tl.ps2-usb-utils.35">On FAT32, a .VCD file of 4 GB or more is refused. The app also checks that there is enough free space.</li>
+  <li data-i18n="tl.ps2-usb-utils.36">The app warns you when the drive uses GPT.</li>
+</ul>
+<p data-i18n="tl.ps2-usb-utils.37">POPStarter needs a system file (<code>POPS_IOX.PAK</code>) that the app does not include; you supply it yourself. While it is missing, the app shows <strong>Setup incomplete</strong>. Tap the banner, and in <strong>One step remains</strong> tap <strong>Select file</strong> to add it.</p>
+
+<h2 data-i18n="tl.ps2-usb-utils.38">How do I rename, delete, export or tidy up games?</h2>
+<div class="table-container">
+<table>
+  <thead><tr><th data-i18n="tl.ps2-usb-utils.39">Button</th><th data-i18n="tl.ps2-usb-utils.40">What it does</th><th data-i18n="tl.ps2-usb-utils.41">Available when</th></tr></thead>
+  <tbody>
+    <tr><td data-i18n="tl.ps2-usb-utils.42"><strong>Rename</strong></td><td data-i18n="tl.ps2-usb-utils.43">Asks <strong>Enter New Name</strong> and renames the game.</td><td data-i18n="tl.ps2-usb-utils.44">A game is selected</td></tr>
+    <tr><td data-i18n="tl.ps2-usb-utils.45"><strong>Delete</strong></td><td data-i18n="tl.ps2-usb-utils.46">Asks you to confirm, then removes the game.</td><td data-i18n="tl.ps2-usb-utils.47">A game is selected</td></tr>
+    <tr><td data-i18n="tl.ps2-usb-utils.48"><strong>Export Game</strong></td><td data-i18n="tl.ps2-usb-utils.49">Copies the game to a folder you pick. The app warns when the target is FAT32 and the file is 4 GB or more.</td><td data-i18n="tl.ps2-usb-utils.50">A UL game is selected</td></tr>
+    <tr><td data-i18n="tl.ps2-usb-utils.51"><strong>Export Game as ZSO</strong></td><td data-i18n="tl.ps2-usb-utils.52">Exports the game as a compressed ZSO file.</td><td data-i18n="tl.ps2-usb-utils.53">A UL game or an ISO game in /CD or /DVD is selected</td></tr>
+    <tr><td data-i18n="tl.ps2-usb-utils.54"><strong>Defragment</strong></td><td data-i18n="tl.ps2-usb-utils.55">Defragments the game files. If nothing needs it, the app says <strong>No fragmented files found</strong>.</td><td data-i18n="tl.ps2-usb-utils.56">The drive is FAT32 or exFAT</td></tr>
+    <tr><td data-i18n="tl.ps2-usb-utils.57"><strong>Clear Unused UL Files</strong></td><td data-i18n="tl.ps2-usb-utils.58">Deletes the leftover parts of copies that did not finish. Complete games that are not in the list are kept.</td><td data-i18n="tl.ps2-usb-utils.59">The drive is open</td></tr>
+    <tr><td data-i18n="tl.ps2-usb-utils.60"><strong>Regenerate ul.cfg</strong></td><td data-i18n="tl.ps2-usb-utils.61">Rebuilds <code>ul.cfg</code> and reports how many games it found.</td><td data-i18n="tl.ps2-usb-utils.62">The drive is open</td></tr>
+  </tbody>
+</table>
+</div>
+<p data-i18n="tl.ps2-usb-utils.63">OPL needs game files that are not fragmented. If a game shows <strong>Fragmented</strong>, tap <strong>Defragment</strong>. If the app reports <strong>Quick Defragmentation Failed</strong>, tap <strong>Run Full Defragmenter</strong>.</p>
+<p data-i18n="tl.ps2-usb-utils.64">On a write-protected (read-only) drive, the app refuses every action that writes to the drive.</p>
+
+<h2 data-i18n="tl.ps2-usb-utils.65">How do I download game covers?</h2>
+<p data-i18n="tl.ps2-usb-utils.66">Tap <strong>Download Game Arts</strong> and choose <strong>What to download</strong>: <strong>Artwork and game info</strong> or <strong>Artwork only</strong>. This needs an internet connection. A game with an unusual or renamed game ID may have no artwork to match.</p>
+
+<h2 data-i18n="tl.ps2-usb-utils.67">Does PS2 USB Utils use tokens?</h2>
+<p data-i18n="tl.ps2-usb-utils.68">Only <strong>Fix</strong> uses a token, and only when it formats the drive: <strong>1 token</strong>. The app shows the cost before it starts, and you earn a token by watching one short rewarded video. Adding, exporting, renaming, deleting games and downloading covers use no tokens. With Pro, Fix uses no tokens.</p>
+<p data-i18n="tl.ps2-usb-utils.69">The token comes back when the drive is gone after you confirm, when you decline the prompt to overwrite the whole drive, when the format fails or stops with an error, and when the job is cancelled or the app is closed (it is returned the next time the app starts).</p>
+
+<h2 data-i18n="tl.ps2-usb-utils.70">Does the app include PS2 or PS1 games?</h2>
+<p data-i18n="tl.ps2-usb-utils.71">No. The app organises game files you already own. It does not include game images, BIOS files or console firmware.</p>

@@ -413,6 +413,33 @@ details.q .a strong{color:var(--ink);font-weight:600}
 .policy-links a[aria-current=page]{color:var(--ink);border-color:var(--blue);background:var(--blue-soft)}
 .policy-links a:hover{text-decoration:none;color:var(--ink)}
 
+/* ---- 12b. content pages (tools, FAQ, what's new, tokens, guides) -------- */
+.doc{margin-top:22px}
+.doc h1{font-size:clamp(1.6rem,3.2vw,2.15rem);font-weight:700;line-height:1.2}
+.doc .lead{font-size:1.06rem;color:var(--ink);margin:14px 0 6px;max-width:68ch}
+.doc .updated{font-size:.84rem;color:var(--faint);margin-bottom:6px}
+.doc h2{font-size:1.25rem;font-weight:700;margin:34px 0 12px;padding-top:22px;border-top:1px solid var(--border)}
+.doc h3{font-size:1.04rem;font-weight:600;margin:22px 0 8px}
+.doc p{margin-bottom:14px;color:var(--dim)}
+.doc p strong,.doc li strong,.doc td strong{color:var(--ink);font-weight:600}
+.doc ul,.doc ol{margin:0 0 18px 22px;color:var(--dim)}
+.doc li{margin-bottom:8px}
+.doc table{width:100%;min-width:560px;border-collapse:collapse;font-size:.92rem}
+.doc th,.doc td{padding:11px 13px;border-bottom:1px solid var(--border);text-align:start;vertical-align:top}
+.doc th{background:var(--gray-soft);color:var(--ink);font-weight:600}
+.doc tr:last-child td{border-bottom:none}
+.doc td{color:var(--dim)}
+.doc details.q{margin-top:9px}
+.doc .note{background:var(--blue-soft);border-radius:var(--radius-sm);padding:14px 16px;color:var(--ink)}
+.inapps{margin-top:18px}
+.inapps h2{font-size:1.05rem;font-weight:700;margin-bottom:12px}
+.inapps ul{list-style:none;margin:0 0 12px;padding:0}
+.inapps li{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:14px}
+.toolgrid a{display:block;border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;color:var(--ink);font-weight:600;font-size:.94rem}
+.toolgrid a span{display:block;color:var(--dim);font-weight:400;font-size:.86rem;margin-top:3px}
+.toolgrid a:hover{text-decoration:none;border-color:var(--c,var(--blue))}
+
 /* ---- 13. 404 ------------------------------------------------------------ */
 .nf{text-align:center;padding-block:96px 40px}
 .nf .code{font-family:var(--mono);font-size:.8rem;color:var(--dim);background:var(--gray-soft);border-radius:8px;padding:6px 12px;display:inline-block}

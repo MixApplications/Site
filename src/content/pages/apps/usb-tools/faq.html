@@ -1,0 +1,156 @@
+<!--meta {"key":"fq.usb-tools","kind":"faq","app":"usb-tools","title":"USB Tools FAQ: format, recover, wipe and test USB drives on Android","h1":"What do I need to know about USB Tools?","description":"<strong>USB Tools</strong> formats, partitions, recovers, wipes and tests USB drives from your phone over USB OTG, without root. Formatting uses 1 token, the Partition Wizard up to 3 and PS2 drive formatting 1; everything else is free, and Pro uses no tokens."} -->
+<h2 data-i18n="fq.usb-tools.1">Tokens, ads and Pro</h2>
+<details class="q"><summary data-i18n="fq.usb-tools.2">How many tokens does a write or a format use, and how do I earn one?</summary><div class="a">
+<p data-i18n="fq.usb-tools.3">The app shows the number of tokens before you confirm. These actions use tokens:</p>
+<ul>
+  <li data-i18n="fq.usb-tools.4"><strong>Format USB</strong>: 1 token.</li>
+  <li data-i18n="fq.usb-tools.5"><strong>Partition Wizard</strong>: 1 for each Create or Format step, at most 3 per Apply Changes.</li>
+  <li data-i18n="fq.usb-tools.6"><strong>PS2 USB Utils</strong>: 1 when Fix has to format the drive.</li>
+</ul>
+<p data-i18n="fq.usb-tools.7">Everything else is free: Wipe USB, Backup / Restore, the recovery scans, Bad Blocks Check, Benchmark, USB Defragmenter, Device Info and the game tools.</p>
+<p data-i18n="fq.usb-tools.8">To earn a token, tap the token counter on the main screen to open <strong>Get Tokens</strong>, then tap <strong>Watch</strong> under <strong>Get 1 free token</strong>. One short rewarded video (60 seconds at most) gives 1 token. Free tokens stop at a balance of 5, and at 4 videos each time you open the app. You can also buy a pack. With Pro, no action uses tokens. More: <a href="/apps/usb-tools/tokens.html">USB Tools tokens</a>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.9">What happens to my tokens when a write does not complete?</summary><div class="a">
+<p data-i18n="fq.usb-tools.10">They come back automatically. Tokens are taken when you tap <strong>OK</strong>, before the job starts. If a format fails or is cancelled, the drive is removed before the start, or you answer <strong>No</strong> to the question about overwriting the whole drive, the app gives them back. The same applies to PS2 Fix.</p>
+<p data-i18n="fq.usb-tools.11">If the app is closed during a job, the tokens come back the next time you open the app.</p>
+<p data-i18n="fq.usb-tools.12">When a Partition Wizard run stops partway, the tokens for the Create and Format steps that finished are kept, and the rest come back.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.13">Why does the rewarded ad not load, and what can I do to still earn a token?</summary><div class="a">
+<p data-i18n="fq.usb-tools.14">This is nearly always the network. Try these in order:</p>
+<ol>
+  <li data-i18n="fq.usb-tools.15"><strong>Private DNS</strong>: open Settings, search for Private DNS, choose <strong>Private DNS provider hostname</strong> and enter <code>dns.google</code>. Save, switch the connection off and on, then restart the app.</li>
+  <li data-i18n="fq.usb-tools.16">Turn off ad blockers and blocking VPNs for the app.</li>
+  <li data-i18n="fq.usb-tools.17">Switch between Wi-Fi and mobile data.</li>
+  <li data-i18n="fq.usb-tools.18">Watch the ad to the end and close it with the X. Pressing Back early cancels the reward.</li>
+</ol>
+<p data-i18n="fq.usb-tools.19">If the ad finished and the balance did not change, force-stop the app (Settings &rarr; Apps &rarr; the app &rarr; Force stop) and open it again while online. You can also buy a token pack, or get Pro, which uses no tokens.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.20">Why does the app say an ad blocker or private DNS is active?</summary><div class="a">
+<p data-i18n="fq.usb-tools.21">The free version cannot load its ads through an ad blocker, a blocking VPN or ad-blocking Private DNS. Running operations wait until it is switched off for the app. Set Private DNS to <code>dns.google</code> or turn it off, then restart the app.</p>
+<p data-i18n="fq.usb-tools.22">Pro, or any token pack you bought on this install, lets the app run with an ad blocker on.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.23">Why does the app need an internet connection?</summary><div class="a">
+<p data-i18n="fq.usb-tools.24">The tools themselves do not need it. The free version needs a connection to load ads, which pay for the free tools. While you are offline it shows <strong>No Internet Connection</strong> and running operations wait. They continue on their own when you are back online.</p>
+<p data-i18n="fq.usb-tools.25">Pro works offline.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.26">Can I pay instead of watching ads, and what does a purchase include?</summary><div class="a">
+<p data-i18n="fq.usb-tools.27">Yes. You can buy a token pack, or buy Pro. Pro is a one-time, lifetime purchase with no subscription. It removes all ads and tokens, and lets you use the app offline and with an ad blocker on. The tools are the same with and without Pro.</p>
+</div></details>
+
+<h2 data-i18n="fq.usb-tools.28">Connecting a drive</h2>
+<details class="q"><summary data-i18n="fq.usb-tools.29">Why is my USB drive not detected (USB-C drive, card reader, OTG adapter)?</summary><div class="a">
+<p data-i18n="fq.usb-tools.30">The phone has to detect the drive first. Work through this list:</p>
+<ol>
+  <li data-i18n="fq.usb-tools.31">Open the phone's Settings, search for OTG and switch it on if the option exists.</li>
+  <li data-i18n="fq.usb-tools.32">Use a data OTG adapter. Charge-only cables cannot carry data.</li>
+  <li data-i18n="fq.usb-tools.33">When Android asks whether the app may use the USB device, tap <strong>OK</strong>. If you refused, unplug the drive and plug it in again. Check that the mode on the main screen is <strong>USB OTG</strong>, not <strong>SD Slot</strong>.</li>
+  <li data-i18n="fq.usb-tools.34">Plug in a FAT32 or exFAT drive and check that the phone notices it. If even that drive is not noticed, the cause is the cable, the port or the drive.</li>
+  <li data-i18n="fq.usb-tools.35">Test the drive on a PC, and check the phone's port for dust.</li>
+</ol>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.36">Do I need root?</summary><div class="a">
+<p data-i18n="fq.usb-tools.37">No, not for USB drives over OTG. Root is needed only for the phone's internal SD card slot. Without root, put the card in a USB card reader and connect it over OTG.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.38">Can I use an NTFS drive on Android?</summary><div class="a">
+<p data-i18n="fq.usb-tools.39">USB Tools can format a drive as NTFS. When you choose NTFS, the app notes that your phone may not support this file system. Android may then say the drive is damaged or unsupported. That is expected; dismiss the notice and do not tap Android's offer to format.</p>
+<p data-i18n="fq.usb-tools.40">To read and write files on an NTFS drive on the phone, use our <a href="/apps/usb-file-manager.html">USB File Manager</a> app. For a drive that the phone's own apps can read, format it as exFAT.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.41">What does "CRITICAL WARNING: BAD DRIVE!" mean, and how do I find a fake-capacity drive?</summary><div class="a">
+<p data-i18n="fq.usb-tools.42">The app checks the drive when you connect it. If the drive may be fake or faulty, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really holds. Tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+<p data-i18n="fq.usb-tools.43">For a full test, run <a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> with <strong>Detect fake / counterfeit capacity</strong> ticked. It tests the whole drive and erases everything on it.</p>
+</div></details>
+
+<h2 data-i18n="fq.usb-tools.44">Formatting and partitions</h2>
+<details class="q"><summary data-i18n="fq.usb-tools.45">Which file systems can I format to (FAT16, FAT32, exFAT, NTFS, ext2/3/4)?</summary><div class="a">
+<p data-i18n="fq.usb-tools.46">All of them. Open <strong>Disk Management</strong> &rarr; <a href="/tools/format-usb.html">Format USB</a>, choose the <strong>File System:</strong>, <strong>Cluster Size:</strong> and <strong>Partition Table:</strong>, type a <strong>Volume Label</strong> and tap <strong>Format</strong>. FAT32 is the default.</p>
+<ul>
+  <li data-i18n="fq.usb-tools.47">FAT32: works with TVs, car stereos, consoles and PC boot, but holds no single file over 4 GB. Not offered above 2 TB.</li>
+  <li data-i18n="fq.usb-tools.48">exFAT: no practical file-size limit; read by phones, Windows and macOS.</li>
+  <li data-i18n="fq.usb-tools.49">NTFS: for Windows; many phones cannot read it.</li>
+  <li data-i18n="fq.usb-tools.50">EXT2, EXT3, EXT4: for Linux. EXT formatting takes a long time on large drives.</li>
+  <li data-i18n="fq.usb-tools.51">FAT16: for drives up to 2 GB.</li>
+</ul>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.52">How do I choose MBR or GPT when formatting?</summary><div class="a">
+<p data-i18n="fq.usb-tools.53">Choose GPT for modern UEFI computers, and MBR for older BIOS/legacy boot and for consoles like the PS2. MBR is the default; on a drive over 2 TB, GPT is set and locked.</p>
+<p data-i18n="fq.usb-tools.54"><a href="/tools/partition-wizard.html">Partition Wizard</a> can also convert a drive between MBR and GPT. Back up the drive first.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.55">My TV or console does not see the drive after formatting. What should I check?</summary><div class="a">
+<p data-i18n="fq.usb-tools.56">Format the drive as FAT32 with an MBR partition table. FAT32 gives the widest compatibility with TVs, car stereos and consoles, and consoles like the PS2 need MBR. FAT32 is offered for drives up to 2 TB.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.57">Is my old data really gone after formatting, or should I use Wipe USB?</summary><div class="a">
+<p data-i18n="fq.usb-tools.58">Format makes a new, empty file system on the whole drive. To overwrite the data itself, use <a href="/tools/wipe-usb.html">Wipe USB</a>: it overwrites the data on the whole drive with the method you choose, and can check the drive afterwards. Normal file-recovery software then cannot get the data back.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.59">Can I format an external hard drive for PS3?</summary><div class="a">
+<p data-i18n="fq.usb-tools.60">Format USB can format a drive as FAT32 up to 2 TB. Hard disk drives (HDDs) are not officially supported because they need more power than a phone's USB port reliably gives. If you try one, charge the phone and use a powered USB hub.</p>
+<p data-i18n="fq.usb-tools.61">FAT32 cannot hold a single file over 4 GB. <a href="/tools/ps3-iso-tools.html">PS3 ISO TOOLS</a> splits ISO and PKG files into parts for FAT32 drives (<strong>Split ISO</strong>, <strong>Split PKG</strong>), and can split while making or extracting an ISO.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.62">My drive shows less space than it should. How do I get the full capacity back?</summary><div class="a">
+<p data-i18n="fq.usb-tools.63">A bootable write can leave hidden partitions. Format USB makes the whole drive one partition again. In Partition Wizard you can delete the partitions and create one across the drive, then tap <strong>Apply Changes</strong>.</p>
+<p data-i18n="fq.usb-tools.64">Drive makers count in decimal gigabytes and phones in binary ones, so a "64 GB" drive holds about 59 GiB. A large shortfall can mean a counterfeit drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.65">Can the app repair a drive that no longer formats?</summary><div class="a">
+<p data-i18n="fq.usb-tools.66">A broken partition table or file system is usually fixed by formatting fresh with Format USB or Wipe USB. The app does not repair a drive in place, so copy off what you need first.</p>
+<p data-i18n="fq.usb-tools.67">If a format fails its check, the drive has a hardware fault. Run Bad Blocks Check to confirm it (it erases the drive); if it reports errors, replace the drive.</p>
+</div></details>
+
+<h2 data-i18n="fq.usb-tools.68">Recovery, wipe and tests</h2>
+<details class="q"><summary data-i18n="fq.usb-tools.69">Can I recover deleted files from a USB drive?</summary><div class="a">
+<p data-i18n="fq.usb-tools.70">Yes. Open <a href="/tools/recover-files.html">Recover deleted files</a> and tap <strong>Start scan</strong>. It works with FAT12, FAT16, FAT32, exFAT, NTFS and ext2/3/4 drives and can find 201 file types. The scan only reads the drive and uses no tokens.</p>
+<p data-i18n="fq.usb-tools.71">Tap a file to preview or check it, tick the files you want and tap <strong>Recover</strong>. They are saved on the phone in Downloads/USB TOOLS Recovery, in a new folder named by date and time. A USB drive or memory card cannot be the target.</p>
+<p data-i18n="fq.usb-tools.72">You can pause or stop the scan; it is saved so you can continue later. If the drive is unplugged, the scan pauses and continues when the same drive is plugged in again. To find lost partitions, use <a href="/tools/recover-partitions.html">Recover lost partitions</a>.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.73">How do I check a drive for bad blocks and test its speed?</summary><div class="a">
+<p data-i18n="fq.usb-tools.74"><a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> tests the whole drive. Choose <strong>1 Pass</strong> or <strong>2 Passes</strong>, keep <strong>Detect fake / counterfeit capacity</strong> ticked and tap <strong>START</strong>. It erases all data on the drive. It uses no tokens.</p>
+<p data-i18n="fq.usb-tools.75"><a href="/tools/benchmark.html">Benchmark</a> measures sequential and random speed. Choose the <strong>Mode:</strong> (Sequential, Random or Both) and the <strong>Type:</strong> (Read Only or Read / Write), then tap <strong>START</strong>. It uses no tokens.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.76">How do I securely wipe a drive and get a certificate?</summary><div class="a">
+<p data-i18n="fq.usb-tools.77">Use <a href="/tools/wipe-usb.html">Wipe USB</a>. Choose the method and the verification, tap <strong>START</strong> and confirm. It uses no tokens.</p>
+<ul>
+  <li data-i18n="fq.usb-tools.78">Methods: NIST SP 800-88 Clear (1 pass, the default), Australian ISM, flash media (2 passes), DoD 5220.22-M (3 passes), Bruce Schneier (7 passes) and Peter Gutmann (35 passes).</li>
+  <li data-i18n="fq.usb-tools.79">Verification: None, Sampled (recommended, the default) or Full. ISM and DoD always use Full verification.</li>
+</ul>
+<p data-i18n="fq.usb-tools.80">When it finishes, tap <strong>View erasure certificate</strong> or <strong>View erasure report</strong>, then save it as a PDF, share it or export it as plain text. Save it before you leave: it cannot be produced again. It is made on your phone.</p>
+<p data-i18n="fq.usb-tools.81">You can pause a wipe, and a stopped wipe can be continued later on the same drive. The app has to stay open in front while it runs.</p>
+</div></details>
+
+<h2 data-i18n="fq.usb-tools.82">Writing, speed and safety</h2>
+<details class="q"><summary data-i18n="fq.usb-tools.83">How long does a write take, and why can it be slow?</summary><div class="a">
+<p data-i18n="fq.usb-tools.84">The speed depends on the whole chain: a USB 3.0 drive in a USB 2.0 adapter runs at USB 2.0 speed, and many small files write much slower than one large file. Large drives take time, and EXT formatting takes a long time on large drives.</p>
+<p data-i18n="fq.usb-tools.85">Wipe USB shows an estimated time before it starts. Benchmark measures the real speed of your drive.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.86">Why did the write stop at a percentage or the app close during the write?</summary><div class="a">
+<ul>
+  <li data-i18n="fq.usb-tools.87"><strong>The app was minimised.</strong> Keep the app in front during USB operations. Wipe USB, the recovery scans and USB Defragmenter pause while the app is in the background and continue when it is in front again.</li>
+  <li data-i18n="fq.usb-tools.88"><strong>No internet or an ad blocker (free version).</strong> Running operations wait until this is fixed. Pro does not pause for these.</li>
+  <li data-i18n="fq.usb-tools.89"><strong>The drive was removed.</strong> A format reports <strong>Device Removed</strong> and the token comes back. A wipe is saved so you can continue it on the same drive, and a recovery scan continues when the same drive is plugged in again.</li>
+</ul>
+<p data-i18n="fq.usb-tools.90">If the app was closed during a paid job, the tokens come back the next time you open it.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.91">Can I use other apps while a write is running?</summary><div class="a">
+<p data-i18n="fq.usb-tools.92">No. Keep the app open and in front during USB operations. For a wipe estimated at over an hour, the app reminds you that it has to stay open in front all that time. Start long jobs when you do not need the phone.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.93">My PC does not boot from the USB drive. What should I check?</summary><div class="a">
+<p data-i18n="fq.usb-tools.94">USB Tools does not write bootable drives. To make one, use <a href="/apps/ultimate-usb.html">Ultimate USB</a>, <a href="/apps/drofus.html">DROFUS</a> or <a href="/apps/ventoy.html">Ventoy (Unofficial)</a>. If a bootable drive does not start, check:</p>
+<ol>
+  <li data-i18n="fq.usb-tools.95"><strong>Boot menu</strong>: select the USB drive in the PC's boot menu (often F12, F11, F9 or Esc at power-on).</li>
+  <li data-i18n="fq.usb-tools.96"><strong>Secure Boot</strong>: turn it off in the BIOS/UEFI, or use a drive that supports it.</li>
+  <li data-i18n="fq.usb-tools.97"><strong>Partition scheme</strong>: GPT drives need UEFI mode; MBR drives need legacy or CSM mode.</li>
+  <li data-i18n="fq.usb-tools.98"><strong>USB port</strong>: try a port directly on the motherboard, not on the front panel or a hub.</li>
+</ol>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.99">Can the app damage my USB drive?</summary><div class="a">
+<p data-i18n="fq.usb-tools.100">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
+<p data-i18n="fq.usb-tools.101">The app tests each drive when it is connected and asks for confirmation before it erases one. Format USB tests the drive after formatting and only then reports success.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.102">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
+<p data-i18n="fq.usb-tools.103">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>
+<p data-i18n="fq.usb-tools.104">The erasure certificate is made on your phone and goes nowhere unless you share it. Details you add to it are kept on the phone only.</p>
+</div></details>
+
+<h2 data-i18n="fq.usb-tools.105">Games</h2>
+<details class="q"><summary data-i18n="fq.usb-tools.106">How do I add PS2 games for OPL, and which format should I convert to?</summary><div class="a">
+<p data-i18n="fq.usb-tools.107">Open <a href="/tools/ps2-usb-utils.html">PS2 USB Utils</a>. If the drive is not FAT32 or exFAT with an MBR partition table, tap <strong>Fix</strong>. When Fix has to format the drive, it erases it and uses 1 token.</p>
+<p data-i18n="fq.usb-tools.108">Tap <strong>Import &amp; Split ISO</strong> and pick an ISO or ZSO file. Files under 4 GB, and any file on exFAT, can use <strong>Direct Copy - Recommended</strong>. Files of 4 GB or more on FAT32 are converted to USBExtreme (.ul) parts, and ul.cfg is updated. CSO files are not accepted.</p>
+<p data-i18n="fq.usb-tools.109">PS1 games: <strong>Import VCD Game</strong> accepts .VCD files for POPStarter; the POPS system file must be supplied by you. <a href="/tools/game-converter.html">Game Converter</a> converts between ISO, BIN/CUE, VCD, ZSO, CSO and CHD. OPL needs unfragmented files, so tap <strong>Defragment</strong> if needed.</p>
+</div></details>
