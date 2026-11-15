@@ -37,6 +37,7 @@
 <details class="q"><summary data-i18n="fq.ultimate-usb.27">Can I pay instead of watching ads, and what does a purchase include?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.28">Yes. You can buy a token pack, or buy Pro. Pro is a one-time, lifetime purchase with no subscription: no ads, no tokens, archive extraction straight to USB, and full offline use, also with an ad blocker on. Apart from archive extraction to USB, the tools are the same.</p>
 <p data-i18n="fq.ultimate-usb.29">Pro is tied to your Google account. Tokens are stored on your device.</p>
+<p data-i18n="fq.ultimate-usb.145">If a purchase cannot be checked, the app shows <strong>Could not verify the purchase. Try again later.</strong></p>
 </div></details>
 
 <h2 data-i18n="fq.ultimate-usb.30">Connecting a drive</h2>
@@ -50,6 +51,7 @@
   <li data-i18n="fq.ultimate-usb.37">Test the drive on a PC, and check the phone's port for dust.</li>
 </ol>
 <p data-i18n="fq.ultimate-usb.38">Flash drives, portable SSDs, card readers and OTG hubs work. Hard disk drives (HDDs) are not officially supported because of power limits. If you try one, charge the phone and use a powered USB hub.</p>
+<p data-i18n="fq.ultimate-usb.146">If a card reader has no card in it, the app says that there is no card or disk in the drive.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.39">Do I need root?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.40">No, not for USB drives over OTG. The app reads and writes FAT16, FAT32, exFAT, NTFS and EXT2/3/4 drives.</p>
@@ -62,6 +64,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.46">What does "CRITICAL WARNING: BAD DRIVE!" mean, and how do I find a fake-capacity drive?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.47">The app checks the drive when you connect it. If the drive may be fake or faulty, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really holds. Tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+<p data-i18n="fq.ultimate-usb.147">Sometimes the drive does not keep the data the app wrote for this check. The app then says so, opens the drive's files read-only and offers <strong>Try restore again</strong>. Tools that erase the whole drive still run after one more <strong>Yes</strong>; <strong>No</strong> gives the tokens back.</p>
 <p data-i18n="fq.ultimate-usb.48">ISO Burner does not write to a drive that fails this test until the real size has been scanned.</p>
 <p data-i18n="fq.ultimate-usb.49">For a full test, run <a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> with <strong>Detect fake / counterfeit capacity</strong> ticked. It tests the whole drive and erases everything on it.</p>
 </div></details>
@@ -124,6 +127,7 @@
   <li data-i18n="fq.ultimate-usb.89"><strong>The app was minimised.</strong> A job pauses while the app is in the background and continues when it is in front again.</li>
   <li data-i18n="fq.ultimate-usb.90"><strong>No internet or an ad blocker (free version).</strong> Running jobs wait until this is fixed. Pro does not pause for these.</li>
   <li data-i18n="fq.ultimate-usb.91"><strong>The drive was removed or stopped answering.</strong> The job ends as failed. Reconnect the drive and start again; the tokens come back.</li>
+  <li data-i18n="fq.ultimate-usb.148"><strong>A short connection failure.</strong> It does not stop the job: the app tries again and goes on.</li>
 </ul>
 <p data-i18n="fq.ultimate-usb.92">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Run Bad Blocks Check with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive).</p>
 <p data-i18n="fq.ultimate-usb.93">If the app was closed during a job, the tokens come back the next time you open it.</p>
@@ -147,10 +151,16 @@
 <details class="q"><summary data-i18n="fq.ultimate-usb.105">Can the app damage my USB drive?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.106">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
 <p data-i18n="fq.ultimate-usb.107">The app tests each drive when it is connected and asks for confirmation before it erases one. Format USB tests the drive after formatting and only then reports success.</p>
+<p data-i18n="fq.ultimate-usb.149">A drive that is write-protected, or one that does not take writes, is refused at the start with one message, before any question and before any token is used.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.108">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.109">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>
 <p data-i18n="fq.ultimate-usb.110">The Windows setup options you enter do not leave the phone. The erasure certificate is made on your phone and goes nowhere unless you share it.</p>
+<p data-i18n="fq.ultimate-usb.150">The app asks for Bluetooth permission only on Android 8.1 and older.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.151">Which languages is the app available in?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.152">Many. The most recently added are Azerbaijani, Catalan, Estonian, Kazakh, Lithuanian, Latvian, Malayalam, Slovak, Slovenian, Swahili, Tagalog (Filipino) and Uzbek.</p>
+<p data-i18n="fq.ultimate-usb.153">On Android 13 and later, you can choose the app's language in the phone's settings.</p>
 </div></details>
 
 <h2 data-i18n="fq.ultimate-usb.111">Disk tools and recovery</h2>

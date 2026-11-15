@@ -35,6 +35,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.26">Can I pay instead of watching ads, and what does a purchase include?</summary><div class="a">
 <p data-i18n="fq.usb-tools.27">Yes. You can buy a token pack, or buy Pro. Pro is a one-time, lifetime purchase with no subscription. It removes all ads and tokens, and lets you use the app offline and with an ad blocker on. The tools are the same with and without Pro.</p>
+<p data-i18n="fq.usb-tools.110">If a purchase cannot be checked, the app shows <strong>Could not verify the purchase. Try again later.</strong></p>
 </div></details>
 
 <h2 data-i18n="fq.usb-tools.28">Connecting a drive</h2>
@@ -46,6 +47,7 @@
   <li data-i18n="fq.usb-tools.33">When Android asks whether the app may use the USB device, tap <strong>OK</strong>. If you refused, unplug the drive and plug it in again. Check that the mode on the main screen is <strong>USB OTG</strong>, not <strong>SD Slot</strong>.</li>
   <li data-i18n="fq.usb-tools.34">Plug in a FAT32 or exFAT drive and check that the phone notices it. If even that drive is not noticed, the cause is the cable, the port or the drive.</li>
   <li data-i18n="fq.usb-tools.35">Test the drive on a PC, and check the phone's port for dust.</li>
+<p data-i18n="fq.usb-tools.111">If a card reader has no card in it, the app says that there is no card or disk in the drive.</p>
 </ol>
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.36">Do I need root?</summary><div class="a">
@@ -57,6 +59,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.41">What does "CRITICAL WARNING: BAD DRIVE!" mean, and how do I find a fake-capacity drive?</summary><div class="a">
 <p data-i18n="fq.usb-tools.42">The app checks the drive when you connect it. If the drive may be fake or faulty, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really holds. Tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+<p data-i18n="fq.usb-tools.112">Sometimes the drive does not keep the data the app wrote for this check. The app then says so, opens the drive's files read-only and offers <strong>Try restore again</strong>. Tools that erase the whole drive still run after one more <strong>Yes</strong>; <strong>No</strong> gives the tokens back.</p>
 <p data-i18n="fq.usb-tools.43">For a full test, run <a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> with <strong>Detect fake / counterfeit capacity</strong> ticked. It tests the whole drive and erases everything on it.</p>
 </div></details>
 
@@ -124,6 +127,8 @@
   <li data-i18n="fq.usb-tools.87"><strong>The app was minimised.</strong> Keep the app in front during USB operations. Wipe USB, the recovery scans and USB Defragmenter pause while the app is in the background and continue when it is in front again.</li>
   <li data-i18n="fq.usb-tools.88"><strong>No internet or an ad blocker (free version).</strong> Running operations wait until this is fixed. Pro does not pause for these.</li>
   <li data-i18n="fq.usb-tools.89"><strong>The drive was removed.</strong> A format reports <strong>Device Removed</strong> and the token comes back. A wipe is saved so you can continue it on the same drive, and a recovery scan continues when the same drive is plugged in again.</li>
+  <li data-i18n="fq.usb-tools.119"><strong>The drive stopped answering.</strong> The app says that the drive was removed or stopped answering. Reconnect it and try again; the tokens come back.</li>
+  <li data-i18n="fq.usb-tools.113"><strong>A short connection failure.</strong> It does not stop the job: the app tries again and goes on.</li>
 </ul>
 <p data-i18n="fq.usb-tools.90">If the app was closed during a paid job, the tokens come back the next time you open it.</p>
 </div></details>
@@ -142,10 +147,16 @@
 <details class="q"><summary data-i18n="fq.usb-tools.99">Can the app damage my USB drive?</summary><div class="a">
 <p data-i18n="fq.usb-tools.100">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
 <p data-i18n="fq.usb-tools.101">The app tests each drive when it is connected and asks for confirmation before it erases one. Format USB tests the drive after formatting and only then reports success.</p>
+<p data-i18n="fq.usb-tools.114">A drive that is write-protected, or one that does not take writes, is refused at the start with one message, before any question and before any token is used.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.102">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
 <p data-i18n="fq.usb-tools.103">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>
 <p data-i18n="fq.usb-tools.104">The erasure certificate is made on your phone and goes nowhere unless you share it. Details you add to it are kept on the phone only.</p>
+<p data-i18n="fq.usb-tools.115">The app asks for Bluetooth permission only on Android 8.1 and older.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.usb-tools.116">Which languages is the app available in?</summary><div class="a">
+<p data-i18n="fq.usb-tools.117">Many. The most recently added are Azerbaijani, Catalan, Estonian, Kazakh, Lithuanian, Latvian, Malayalam, Slovak, Slovenian, Swahili, Tagalog (Filipino) and Uzbek.</p>
+<p data-i18n="fq.usb-tools.118">On Android 13 and later, you can choose the app's language in the phone's settings.</p>
 </div></details>
 
 <h2 data-i18n="fq.usb-tools.105">Games</h2>

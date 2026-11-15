@@ -26,6 +26,7 @@
   </tbody>
 </table>
 </div>
+<p data-i18n="tl.partition-wizard.42">Each action changes only the partition you picked.</p>
 
 <h2 data-i18n="tl.partition-wizard.28">Which limits does the wizard check?</h2>
 <p data-i18n="tl.partition-wizard.29">The wizard stops a change that the drive cannot hold, and tells you why:</p>
@@ -33,6 +34,9 @@
   <li data-i18n="tl.partition-wizard.30">A new partition needs at least 32 MB of empty space.</li>
   <li data-i18n="tl.partition-wizard.31">An MBR drive holds at most 4 partitions. A GPT drive with more than 4 partitions cannot be converted to MBR.</li>
   <li data-i18n="tl.partition-wizard.32"><strong>FAT32 cannot handle partitions larger than 2TB</strong> and <strong>MBR cannot handle partitions larger than 2TB</strong>. Use exFAT or NTFS, or GPT, for a larger partition.</li>
+  <li data-i18n="tl.partition-wizard.39">A partition that reaches past the drive's real size is marked in the list.</li>
+  <li data-i18n="tl.partition-wizard.40">If a conversion from MBR to GPT is refused, the app explains why.</li>
+  <li data-i18n="tl.partition-wizard.41">On a write-protected drive, only <strong>Backup</strong> runs.</li>
 </ul>
 <p data-i18n="tl.partition-wizard.33">Back up the drive first with <a href="/tools/backup-restore.html">Backup / Restore</a>: a change to a partition table is not one you want to stop halfway through.</p>
 

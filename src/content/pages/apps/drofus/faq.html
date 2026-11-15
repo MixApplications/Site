@@ -34,6 +34,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.25">Can I pay instead of watching ads, and what does a purchase include?</summary><div class="a">
 <p data-i18n="fq.drofus.26">Yes. You can buy tokens, or buy Pro. Pro is a one-time, lifetime purchase with no subscription. It removes all ads, turns the token system off, and lets you use the app offline or with an ad blocker on. The burning features are the same with and without Pro.</p>
+<p data-i18n="fq.drofus.101">If a purchase cannot be checked, the app shows <strong>Could not verify the purchase. Try again later.</strong></p>
 </div></details>
 
 <h2 data-i18n="fq.drofus.27">Connecting a drive</h2>
@@ -47,6 +48,7 @@
   <li data-i18n="fq.drofus.34">Test the drive on a PC, and check the phone's port for dust.</li>
 </ol>
 <p data-i18n="fq.drofus.35">DROFUS works with USB flash drives, SD card adapters and external SSDs.</p>
+<p data-i18n="fq.drofus.102">If a card reader has no card in it, the app says that there is no card or disk in the drive.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.36">Do I need root?</summary><div class="a">
 <p data-i18n="fq.drofus.37">No, not for USB drives over OTG. Root is needed only for the phone's internal SD card slot. Without root, put the card in a USB card reader and connect it over OTG.</p>
@@ -58,6 +60,7 @@
 <details class="q"><summary data-i18n="fq.drofus.41">What does "CRITICAL WARNING: BAD DRIVE!" mean?</summary><div class="a">
 <p data-i18n="fq.drofus.42">DROFUS checks the drive when you connect it. If the check fails, the drive may be faulty or counterfeit (smaller than it claims), or the cable may be loose. The app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really holds.</p>
 <p data-i18n="fq.drofus.43">Tap <strong>Yes</strong> to use only the part that works, or try another cable or drive. The app does not burn to a drive that fails this test until the real size has been scanned.</p>
+<p data-i18n="fq.drofus.103">Sometimes the drive does not keep the data the app wrote for this check. The app then says so and offers <strong>Try restore again</strong>. A burn still runs after one more <strong>Yes</strong>; <strong>No</strong> gives the tokens back.</p>
 </div></details>
 
 <h2 data-i18n="fq.drofus.44">Windows</h2>
@@ -107,6 +110,7 @@
   <li data-i18n="fq.drofus.75"><strong>The app was minimised.</strong> A burn pauses while the app is in the background and continues when it is in front again.</li>
   <li data-i18n="fq.drofus.76"><strong>No internet or an ad blocker (free version).</strong> Running burns wait until this is fixed. Pro does not pause for these.</li>
   <li data-i18n="fq.drofus.77"><strong>The drive was removed or stopped answering.</strong> The burn ends as failed. Reconnect the drive and start again; the tokens come back.</li>
+  <li data-i18n="fq.drofus.104"><strong>A short connection failure.</strong> It does not stop the job: the app tries again and goes on.</li>
 </ul>
 <p data-i18n="fq.drofus.78">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Reconnect the drive: if the drive check fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and may offer to scan for the real size.</p>
 <p data-i18n="fq.drofus.79">If the app was closed during a burn, the tokens come back the next time you open it.</p>
@@ -130,9 +134,15 @@
 <details class="q"><summary data-i18n="fq.drofus.91">Can the app damage my USB drive?</summary><div class="a">
 <p data-i18n="fq.drofus.92">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
 <p data-i18n="fq.drofus.93">Before a burn, the app warns when an ISO looks truncated or corrupted, warns when the file is not bootable, checks the space on the drive and in phone storage, and asks for confirmation before it erases the drive.</p>
+<p data-i18n="fq.drofus.105">A drive that is write-protected, or one that does not take writes, is refused at the start with one message, before any question and before any token is used.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.94">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
 <p data-i18n="fq.drofus.95">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. The Windows setup options you enter do not leave the phone. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>
+<p data-i18n="fq.drofus.106">The app asks for Bluetooth permission only on Android 8.1 and older.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.drofus.107">Which languages is the app available in?</summary><div class="a">
+<p data-i18n="fq.drofus.108">Many. The most recently added are Azerbaijani, Catalan, Estonian, Kazakh, Lithuanian, Latvian, Malayalam, Slovak, Slovenian, Swahili, Tagalog (Filipino) and Uzbek.</p>
+<p data-i18n="fq.drofus.109">On Android 13 and later, you can choose the app's language in the phone's settings.</p>
 </div></details>
 
 <h2 data-i18n="fq.drofus.96">About DROFUS</h2>

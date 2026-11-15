@@ -3,7 +3,7 @@
 <ol>
   <li data-i18n="tl.iso-burner.2">Connect the drive to your phone with a USB OTG adapter. Open <strong>DROFUS</strong>, which starts on the ISO Burner screen, or in <strong>Ultimate USB</strong> open the <strong>Bootable &amp; Image Writing</strong> group and tap <strong>ISO Burner</strong>.</li>
   <li data-i18n="tl.iso-burner.3"><strong>Boot Selection</strong>: keep <strong>Disk or ISO image</strong> to write an image file, or choose <strong>Non-bootable</strong>, <strong>MS-DOS</strong> or <strong>FreeDOS</strong>. Changing it resets your other choices.</li>
-  <li data-i18n="tl.iso-burner.4">Tap <strong>Pick ISO</strong> and choose the image. The app shows <strong>Reading ISO File</strong> while it reads the image; you can cancel this.</li>
+  <li data-i18n="tl.iso-burner.4">Tap <strong>Pick ISO</strong> and choose the image. The app shows <strong>Reading ISO File</strong> and its progress while it reads the image; you can stop this with <strong>Cancel</strong>.</li>
   <li data-i18n="tl.iso-burner.5">Check <strong>ISO Label:</strong> and <strong>Size:</strong>, then the options the app shows for this image. It sets their defaults from the image.</li>
   <li data-i18n="tl.iso-burner.6">Tap <strong>START</strong>. The app shows <strong>All Data Will Be Permanently Deleted</strong> and how many tokens the burn uses. Tap <strong>OK</strong> to start.</li>
   <li data-i18n="tl.iso-burner.7">Keep the app in front until the burn finishes.</li>
@@ -22,7 +22,7 @@
     <tr><td data-i18n="tl.iso-burner.23"><strong>Advanced Options (Filesystem, Partition &amp; Persistence)</strong> (Linux ISOs that can be written both ways)</td><td data-i18n="tl.iso-burner.24">Off: the image is written as it is. On: the image's files are copied, and file system, partition table and persistence can be set.</td><td data-i18n="tl.iso-burner.25">Off</td></tr>
     <tr><td data-i18n="tl.iso-burner.26"><strong>Partition Table</strong></td><td data-i18n="tl.iso-burner.27">MBR (BIOS or UEFI-CSM), GPT (UEFI); MBR, GPT for Non-bootable</td><td data-i18n="tl.iso-burner.28">Set from the image. Locked when the image allows only one. GPT is set and locked above 2 TB.</td></tr>
     <tr><td data-i18n="tl.iso-burner.29"><strong>File System</strong></td><td data-i18n="tl.iso-burner.30">FAT32, NTFS (FAT32 only for a non-Windows image that fits on FAT32); FAT32, EXFAT, NTFS for Non-bootable</td><td data-i18n="tl.iso-burner.31">FAT32. NTFS is set for Windows To Go, for an image with a file over 4 GB (unless split is on) and for drives over 2 TB. FAT32 is set when split is on or when the image cannot start from NTFS.</td></tr>
-    <tr><td data-i18n="tl.iso-burner.32"><strong>Cluster Size</strong> (Non-bootable only)</td><td data-i18n="tl.iso-burner.33">The sizes allowed for the file system and drive</td><td data-i18n="tl.iso-burner.34">Chosen by the app (<strong>Default Value</strong> when the app cannot choose a size)</td></tr>
+    <tr><td data-i18n="tl.iso-burner.32"><strong>Cluster Size</strong> (Non-bootable only)</td><td data-i18n="tl.iso-burner.33">The sizes allowed for the file system and drive</td><td data-i18n="tl.iso-burner.34">Chosen by the app; each file system has its own default (<strong>Default Value</strong> when the app cannot choose a size). The size you pick is used.</td></tr>
     <tr><td data-i18n="tl.iso-burner.35"><strong>Split image for FAT32 compatibility.</strong></td><td data-i18n="tl.iso-burner.36">On, off</td><td data-i18n="tl.iso-burner.37">Off</td></tr>
     <tr><td data-i18n="tl.iso-burner.38"><strong>Persistent partition size</strong></td><td data-i18n="tl.iso-burner.39">Disabled, or from 256 MB up to the space left after the main partition minus 128 MB</td><td data-i18n="tl.iso-burner.40">Disabled</td></tr>
     <tr><td data-i18n="tl.iso-burner.41"><strong>Persistence file system</strong></td><td data-i18n="tl.iso-burner.42">ext3, ext4 (ext4 only for Android-x86)</td><td data-i18n="tl.iso-burner.43">ext4</td></tr>
@@ -90,13 +90,28 @@
 <ul>
   <li data-i18n="tl.iso-burner.107"><strong>Fake capacity:</strong> the app checks the drive when you connect it. If it may be fake or faulty, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really has. A burn on such a drive is refused until the real size is set; otherwise use a different drive.</li>
   <li data-i18n="tl.iso-burner.108"><strong>Drive cannot be used:</strong> if the app cannot read or write the drive, it shows <strong>Failed to read USB device.</strong> and asks you to reinsert the drive. The drive may be write-protected, or the cable or connector may be faulty.</li>
+  <li data-i18n="tl.iso-burner.130"><strong>Write-protected drive:</strong> a drive that is write-protected or does not take writes is refused at the start, with one message, before any question and before any token is used.</li>
   <li data-i18n="tl.iso-burner.109"><strong>Drive too small:</strong> the app shows <strong>Not enough space on the drive.</strong> with the space needed and the space available. It counts the drive size minus 100 MB as available.</li>
   <li data-i18n="tl.iso-burner.110"><strong>Drives over 2 TB:</strong> MBR and FAT32 cannot be used, and the app says so.</li>
   <li data-i18n="tl.iso-burner.111"><strong>Truncated or corrupt ISO:</strong> when an ISO looks truncated or corrupted, which usually means the download was interrupted, the app says so and asks whether to continue anyway. An image that is incomplete or damaged is refused, with a message to download it again.</li>
+  <li data-i18n="tl.iso-burner.131"><strong>Checking image...</strong>: before the drive is erased, the app checks the image. An image that is incomplete or cannot be read is refused, and nothing is written to the drive.</li>
   <li data-i18n="tl.iso-burner.112"><strong>Not bootable:</strong> the app shows <strong>The selected file is not a bootable image.</strong> and asks whether to continue anyway. A file it cannot use shows <strong>Unsupported File.</strong></li>
+  <li data-i18n="tl.iso-burner.133"><strong>No BIOS boot loader:</strong> if the image has no boot loader for BIOS, the drive is finished as UEFI-only, and the app shows a warning.</li>
   <li data-i18n="tl.iso-burner.113"><strong>File no longer there:</strong> if the image cannot be opened when you tap <strong>START</strong>, the app shows <strong>Cannot Open File</strong>.</li>
+  <li data-i18n="tl.iso-burner.132"><strong>File cannot be picked:</strong> the app shows <strong>Storage is not ready</strong>, or <strong>Pick the file from Internal storage, or copy it first</strong>.</li>
   <li data-i18n="tl.iso-burner.114"><strong>Phone storage:</strong> with High-speed mode on, the app checks the free space in phone storage first.</li>
   <li data-i18n="tl.iso-burner.115"><strong>Erase confirmation:</strong> nothing is written before you confirm <strong>All Data Will Be Permanently Deleted</strong>.</li>
+</ul>
+
+<h2 data-i18n="tl.iso-burner.134">Why did the burn fail, and what do I do?</h2>
+<p data-i18n="tl.iso-burner.135">When a burn cannot finish, the message names the cause:</p>
+<ul>
+  <li data-i18n="tl.iso-burner.136">The drive is write-protected.</li>
+  <li data-i18n="tl.iso-burner.137">The image is incomplete or damaged. Download it again.</li>
+  <li data-i18n="tl.iso-burner.138">The WIM file cannot be split for FAT32. Choose NTFS.</li>
+  <li data-i18n="tl.iso-burner.139">The drive did not keep the copy. It may be counterfeit.</li>
+  <li data-i18n="tl.iso-burner.140">NTFS could not be started. Choose FAT32 or exFAT.</li>
+  <li data-i18n="tl.iso-burner.141">The phone does not have enough memory.</li>
 </ul>
 
 <h2 data-i18n="tl.iso-burner.116">How many tokens does a burn use?</h2>
@@ -120,3 +135,4 @@
 <p data-i18n="tl.iso-burner.127">Keep the app in front. When it goes to the background, Windows, Linux and raw-image burns pause, and they continue when you come back to the app while it is still running. The app keeps the screen on while it is shown.</p>
 <p data-i18n="tl.iso-burner.128">In the free version, a running burn also pauses while the phone has no internet connection or an ad blocker or blocking Private DNS is active, and continues when that is fixed. With Pro, only the background pause applies.</p>
 <p data-i18n="tl.iso-burner.129">If the drive is removed or stops answering, the burn ends and the app shows <strong>The drive was removed or stopped answering. Reconnect it and try again.</strong> The tokens come back. Reconnect the drive and start the burn again.</p>
+<p data-i18n="tl.iso-burner.142">If you plug in a different drive during a burn, the app never writes to it.</p>

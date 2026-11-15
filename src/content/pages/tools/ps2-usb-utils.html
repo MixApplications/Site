@@ -16,6 +16,7 @@
   <li data-i18n="tl.ps2-usb-utils.11">If the file system is not FAT32 or exFAT, the drive does not have exactly one partition, or the partition is larger than MBR allows, the app formats the drive. Choose FAT32 or exFAT; the label is <strong>PS2</strong> unless you change it. The app shows <strong>All Data Will Be Permanently Deleted</strong> and the token cost before it starts. The drive gets an MBR partition table, and the partition is limited to the MBR maximum size.</li>
   <li data-i18n="tl.ps2-usb-utils.12">If the drive already has one FAT32 or exFAT partition that fits, the app only rewrites the partition table as MBR. It does not format, your files stay on the drive, and it uses no token.</li>
 </ul>
+<p data-i18n="tl.ps2-usb-utils.73"><strong>Fix</strong> stays off when another volume on the drive was not closed properly.</p>
 
 <h2 data-i18n="tl.ps2-usb-utils.13">Should I use Direct Copy or split the game to UL?</h2>
 <p data-i18n="tl.ps2-usb-utils.14">Use <strong>Direct Copy - Recommended</strong> when the app offers it. The choice appears when the game file is smaller than 4 GB, or when the drive is exFAT. A game of 4 GB or more on a drive that is not exFAT is always split into USBExtreme (<code>.ul</code>) parts, and <code>ul.cfg</code> is updated.</p>
@@ -62,9 +63,11 @@
 </div>
 <p data-i18n="tl.ps2-usb-utils.63">OPL needs game files that are not fragmented. If a game shows <strong>Fragmented</strong>, tap <strong>Defragment</strong>. If the app reports <strong>Quick Defragmentation Failed</strong>, tap <strong>Run Full Defragmenter</strong>.</p>
 <p data-i18n="tl.ps2-usb-utils.64">On a write-protected (read-only) drive, the app refuses every action that writes to the drive.</p>
+<p data-i18n="tl.ps2-usb-utils.74">After <strong>Rename</strong> or <strong>Delete</strong>, the app tells you what the drive did. If a job stops at a bad sector, the app offers <strong>Check the drive</strong>.</p>
 
 <h2 data-i18n="tl.ps2-usb-utils.65">How do I download game covers?</h2>
 <p data-i18n="tl.ps2-usb-utils.66">Tap <strong>Download Game Arts</strong> and choose <strong>What to download</strong>: <strong>Artwork and game info</strong> or <strong>Artwork only</strong>. This needs an internet connection. A game with an unusual or renamed game ID may have no artwork to match.</p>
+<p data-i18n="tl.ps2-usb-utils.72">With <strong>Artwork and game info</strong>, the game info is saved in <code>CFG/&lt;ID&gt;.cfg</code>, where &lt;ID&gt; is the game ID. A CFG file that is already on the drive is never replaced.</p>
 
 <h2 data-i18n="tl.ps2-usb-utils.67">Does PS2 USB Utils use tokens?</h2>
 <p data-i18n="tl.ps2-usb-utils.68">Only <strong>Fix</strong> uses a token, and only when it formats the drive: <strong>1 token</strong>. The app shows the cost before it starts, and you earn a token by watching one short rewarded video. Adding, exporting, renaming, deleting games and downloading covers use no tokens. With Pro, Fix uses no tokens.</p>

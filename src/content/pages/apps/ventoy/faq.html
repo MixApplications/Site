@@ -34,6 +34,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.ventoy.25">Can I pay instead of watching ads, and what does a purchase include?</summary><div class="a">
 <p data-i18n="fq.ventoy.26">Yes. You can buy tokens, or buy Pro. Pro is a one-time, lifetime purchase with no subscription. It removes all ads, turns the token system off, and lets you use the app offline and with an ad blocker on. The Ventoy features are the same with and without Pro.</p>
+<p data-i18n="fq.ventoy.110">If a purchase cannot be checked, the app shows <strong>Could not verify the purchase. Try again later.</strong></p>
 </div></details>
 
 <h2 data-i18n="fq.ventoy.27">Connecting a drive</h2>
@@ -47,6 +48,7 @@
   <li data-i18n="fq.ventoy.34">Test the drive on a PC, and check the phone's port for dust.</li>
 </ol>
 <p data-i18n="fq.ventoy.35">If the phone does not recognise the drive after Ventoy was installed, it is likely working: test it on a PC.</p>
+<p data-i18n="fq.ventoy.111">If a card reader has no card in it, the app says that there is no card or disk in the drive.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ventoy.36">Do I need root?</summary><div class="a">
 <p data-i18n="fq.ventoy.37">No, not for USB drives over OTG. Root is needed only for the phone's internal SD card slot. Without root, put the card in a USB card reader and connect it over OTG.</p>
@@ -58,6 +60,7 @@
 <details class="q"><summary data-i18n="fq.ventoy.41">Why does Ventoy refuse my drive?</summary><div class="a">
 <p data-i18n="fq.ventoy.42">Ventoy supports only drives with 512-byte sectors. A drive with 4096-byte sectors (4K native) is refused with a message that says so.</p>
 <p data-i18n="fq.ventoy.43">The app also checks the drive when you connect it. If the check fails, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong>: the drive may be faulty or counterfeit (smaller than it claims). The app offers to scan for the size the drive really holds; tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+<p data-i18n="fq.ventoy.112">Sometimes the drive does not keep the data the app wrote for this check. The app then says so, opens the drive's files read-only and offers <strong>Try restore again</strong>. Install and Clear still run after one more <strong>Yes</strong>; <strong>No</strong> gives the tokens back.</p>
 </div></details>
 
 <h2 data-i18n="fq.ventoy.44">Ventoy drives</h2>
@@ -125,6 +128,7 @@
   <li data-i18n="fq.ventoy.86"><strong>The app was minimised.</strong> A job pauses while the app is in the background and continues when it is in front again.</li>
   <li data-i18n="fq.ventoy.87"><strong>No internet or an ad blocker (free version).</strong> Running jobs wait until this is fixed. Pro does not pause for these.</li>
   <li data-i18n="fq.ventoy.88"><strong>The drive was removed or stopped answering.</strong> The job ends as failed. Reconnect the drive and start again; the tokens come back.</li>
+  <li data-i18n="fq.ventoy.113"><strong>A short connection failure.</strong> It does not stop the job: the app tries again and goes on.</li>
 </ul>
 <p data-i18n="fq.ventoy.89">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Reconnect the drive: if the drive check fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong>.</p>
 <p data-i18n="fq.ventoy.90">If the app was closed during a job, the tokens come back the next time you open it.</p>
@@ -148,9 +152,15 @@
 <details class="q"><summary data-i18n="fq.ventoy.102">Can the app damage my USB drive?</summary><div class="a">
 <p data-i18n="fq.ventoy.103">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
 <p data-i18n="fq.ventoy.104">The app tests each drive when it is connected, refuses drives Ventoy does not support, and asks for confirmation before Install or Clear erases a drive. Update does not format the drive.</p>
+<p data-i18n="fq.ventoy.114">A drive that is write-protected, or one that does not take writes, is refused at the start with one message, before any question and before any token is used.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ventoy.105">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
 <p data-i18n="fq.ventoy.106">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. Config Hub and theme settings are written only to the drive. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>
+<p data-i18n="fq.ventoy.115">The app asks for Bluetooth permission only on Android 8.1 and older.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ventoy.116">Which languages is the app available in?</summary><div class="a">
+<p data-i18n="fq.ventoy.117">Many. The most recently added are Azerbaijani, Catalan, Estonian, Kazakh, Lithuanian, Latvian, Malayalam, Slovak, Slovenian, Swahili, Tagalog (Filipino) and Uzbek.</p>
+<p data-i18n="fq.ventoy.118">On Android 13 and later, you can choose the app's language in the phone's settings.</p>
 </div></details>
 
 <h2 data-i18n="fq.ventoy.107">About this app</h2>
