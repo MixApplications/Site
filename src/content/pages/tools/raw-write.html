@@ -12,7 +12,7 @@
 <h2 data-i18n="tl.raw-write.8">What does the app check before it writes?</h2>
 <ul>
   <li data-i18n="tl.raw-write.9">If the file is larger than the drive, the app shows <strong>Not Enough Size…</strong> and does not write.</li>
-  <li data-i18n="tl.raw-write.10">When you connect a drive, the app checks it. If it may be fake or faulty, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really has.</li>
+  <li data-i18n="tl.raw-write.10">When you connect a drive, the app checks it. If reading or writing at the end of the drive fails, it may be fake or faulty, and the app asks whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>.</li>
   <li data-i18n="tl.raw-write.11">Nothing is written before you confirm <strong>All Data Will Be Permanently Deleted</strong>.</li>
 </ul>
 
@@ -21,6 +21,7 @@
 <ul>
   <li data-i18n="tl.raw-write.22">A drive that is write-protected or does not take writes is recognised as soon as you start a job: one clear message, and nothing is charged.</li>
   <li data-i18n="tl.raw-write.23">If the drive did not keep its test data, it may be fake. The app says so, keeps its files read-only and offers <strong>Try restore again</strong>. Raw Write still runs after an extra <strong>Yes</strong>.</li>
+  <li data-i18n="gd.usb-safety.123">If you kept the claimed size of a drive that may be fake, the app warns you once before it writes, with <strong>Continue</strong> and <strong>Cancel</strong>. If you cancel, nothing is written and no token is used.</li>
   <li data-i18n="tl.raw-write.24">A job never writes to a different drive than the one it started on.</li>
   <li data-i18n="tl.raw-write.25">If the USB connection fails for a moment during a job, the app recovers it automatically and the job continues.</li>
 </ul>

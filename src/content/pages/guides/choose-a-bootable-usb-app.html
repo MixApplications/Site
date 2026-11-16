@@ -50,7 +50,7 @@
 
 <h3 data-i18n="gd.choose-usb-app.1">Does it test the drive for fake capacity before writing?</h3>
 <p data-i18n="gd.choose-usb-app.2">A counterfeit drive reports more space than it has, and a write to it fails or loses data. A safe app checks the drive before it writes.</p>
-<p data-i18n="gd.choose-usb-app.3">Ultimate USB, DROFUS and Ventoy (Unofficial) check each drive when you connect it. If the drive may be fake or faulty, they show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offer to scan for the real size. The ISO Burner in Ultimate USB and DROFUS does not write to such a drive until its real size has been scanned. For a full test of the whole drive, Ultimate USB has <a href="/tools/bad-blocks-check.html">Bad Blocks Check</a>.</p>
+<p data-i18n="gd.choose-usb-app.3">Ultimate USB, DROFUS and Ventoy (Unofficial) check each drive when you connect it. If reading or writing at the end of the drive fails, the drive may be fake or faulty, and they ask whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>. After a scan, every tool works inside the real size. No tool refuses such a drive: if you keep the claimed size, every write warns you once before anything is written. For a full test of the whole drive, Ultimate USB has <a href="/tools/bad-blocks-check.html">Bad Blocks Check</a>.</p>
 
 <h3 data-i18n="gd.choose-usb-app.120">Does it refuse a drive that cannot be written?</h3>
 <p data-i18n="gd.choose-usb-app.121">Yes. In all three apps, a drive that is write-protected or does not take writes is recognised as soon as you start a job, with one clear message, and nothing is charged.</p>

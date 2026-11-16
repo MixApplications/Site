@@ -59,7 +59,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.ventoy.41">Why does Ventoy refuse my drive?</summary><div class="a">
 <p data-i18n="fq.ventoy.42">Ventoy supports only drives with 512-byte sectors. A drive with 4096-byte sectors (4K native) is refused with a message that says so.</p>
-<p data-i18n="fq.ventoy.43">The app also checks the drive when you connect it. If the check fails, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong>: the drive may be faulty or counterfeit (smaller than it claims). The app offers to scan for the size the drive really holds; tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+<p data-i18n="fq.ventoy.43">The app also checks the drive when you connect it. If reading or writing at the end of the drive fails, the drive may be faulty or counterfeit (smaller than it claims), and the app asks whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>. The scan finds the size the drive really stores; tap <strong>Yes</strong> to use it. If you keep the claimed size, Install and Clear warn you once, with <strong>Continue</strong> and <strong>Cancel</strong>, before anything is written and before any token is used.</p>
 <p data-i18n="fq.ventoy.112">Sometimes the drive fails this check. The app then says so, opens the drive's files read-only and offers <strong>Try restore again</strong>. Install and Clear still run after one more <strong>Yes</strong>; <strong>No</strong> gives the tokens back.</p>
 </div></details>
 
@@ -133,7 +133,7 @@
   <li data-i18n="fq.ventoy.88"><strong>The drive was removed or stopped answering.</strong> The job ends as failed. Reconnect the drive and start again; the tokens come back.</li>
   <li data-i18n="fq.ventoy.113"><strong>A short connection failure.</strong> It does not stop the job: the app tries again and goes on.</li>
 </ul>
-<p data-i18n="fq.ventoy.89">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Reconnect the drive: if the drive check fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong>.</p>
+<p data-i18n="fq.ventoy.89">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Reconnect the drive: if the end of the drive fails the check, the app asks whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>.</p>
 <p data-i18n="fq.ventoy.90">If the app was closed during a job, the tokens come back the next time you open it.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ventoy.91">Can I use other apps while a write is running?</summary><div class="a">

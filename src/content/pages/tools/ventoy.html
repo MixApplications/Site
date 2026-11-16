@@ -31,8 +31,9 @@
 <h2 data-i18n="tl.ventoy.101">Is installing Ventoy safe for my drive?</h2>
 <p data-i18n="tl.ventoy.102">Yes. The app tests every Ventoy install before it reports success, and it protects the drive at each step:</p>
 <ul>
-  <li data-i18n="tl.ventoy.103">The app checks the drive when you connect it. If the drive may be fake or faulty, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really has.</li>
+  <li data-i18n="tl.ventoy.103">When you connect a drive, the app checks it. If reading or writing at the end of the drive fails, it may be fake or faulty, and the app asks whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>.</li>
   <li data-i18n="tl.ventoy.104">If the drive did not keep its test data, it may be fake. The app says so, keeps its files read-only and offers <strong>Try restore again</strong>. <strong>Install</strong> still runs after an extra <strong>Yes</strong>; if you answer <strong>No</strong>, the tokens come back.</li>
+  <li data-i18n="gd.usb-safety.123">If you kept the claimed size of a drive that may be fake, the app warns you once before it writes, with <strong>Continue</strong> and <strong>Cancel</strong>. If you cancel, nothing is written and no token is used.</li>
   <li data-i18n="tl.ventoy.105">A drive that is write-protected or does not take writes is recognised as soon as you start a job: one clear message, and nothing is charged.</li>
   <li data-i18n="tl.ventoy.106"><strong>Install</strong> checks and tests the new file system before the app reports success.</li>
   <li data-i18n="tl.ventoy.107">A job never writes to a different drive than the one it started on.</li>

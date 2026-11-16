@@ -111,7 +111,7 @@
       <details class="q" data-app="usb" data-cat="connect">
         <summary data-i18n="sup.u.19">What does &ldquo;CRITICAL WARNING: BAD DRIVE!&rdquo; mean?</summary>
         <div class="a">
-          <p data-i18n="sup.u.20">When a drive is connected, the app tests it. If the test fails, the drive is faulty, the cable is loose, or the drive is counterfeit and smaller than it claims, and a write is likely to fail. If the app offers to scan for the real size, tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+          <p data-i18n="sup.u.20">When a drive is connected, the app tests it. <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> means the drive dropped out or stopped answering during this test: the drive may be faulty, the cable loose, or the drive counterfeit. Try another cable or drive. If only the end of the drive fails, the app instead asks whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>; after a scan, tap <strong>Yes</strong> to use only the part that works.</p>
         </div>
       </details>
 
@@ -363,7 +363,7 @@
           <ul>
             <li data-i18n="sup.108">Manufacturers count in decimal gigabytes; your phone counts in binary. A "64&nbsp;GB" drive genuinely holds about 59&nbsp;GiB.</li>
             <li data-i18n="sup.109">A previous bootable write may have left hidden partitions. Recover the space with <strong>Partition Wizard</strong> or <strong>Format USB</strong> in Ultimate USB and USB Tools, by writing the drive with <strong>Non-bootable</strong> in DROFUS, or with <strong>Clear</strong> in Ventoy.</li>
-            <li data-i18n="sup.110">If the shortfall is large, the drive may be counterfeit. All four apps test the drive when it is connected and show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> if it fails.</li>
+            <li data-i18n="sup.110">If the shortfall is large, the drive may be counterfeit. All four apps test the drive when it is connected and, if reading or writing at its end fails, ask whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>.</li>
           </ul>
         </div>
       </details>
@@ -496,7 +496,7 @@
         <summary data-i18n="sup.150">It stalls near the very end — 99%, or in the last few percent</summary>
         <div class="a">
           <p data-i18n="sup.151">The end of a write is where data reaches the far end of the drive. Stalling there is the classic signature of a drive that <strong>reports more capacity than it physically has</strong>, or whose flash is failing at the far end.</p>
-          <p data-i18n="sup.152">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive). In DROFUS and Ventoy, reconnect the drive: if the drive test fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and may offer to scan for the size the drive really holds. If the drive is bad, no app can fix it.</p>
+          <p data-i18n="sup.152">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive). In DROFUS and Ventoy, reconnect the drive: if the end of the drive fails the test, the app asks whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>. If the drive is bad, no app can fix it.</p>
         </div>
       </details>
 
@@ -532,7 +532,7 @@
       <details class="q" data-app="usb" data-cat="health">
         <summary data-i18n="sup.161">How do I tell if a drive is counterfeit?</summary>
         <div class="a">
-          <p data-i18n="sup.162">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked. It tests the whole drive, so it <strong>erases everything on it</strong>. A counterfeit drive reports a large capacity but silently discards anything past its real size, which the test exposes. All four apps also test the drive when it is connected and show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> if it fails.</p>
+          <p data-i18n="sup.162">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked. It tests the whole drive, so it <strong>erases everything on it</strong>. A counterfeit drive reports a large capacity but silently discards anything past its real size, which the test exposes. All four apps also test the drive when it is connected and, if reading or writing at its end fails, ask whether to <strong>Scan for real size</strong> or <strong>Continue anyway</strong>.</p>
           <p data-i18n="sup.163">Symptoms before you test: files that copy successfully but are corrupt afterwards, and writes that stall near the end.</p>
         </div>
       </details>
