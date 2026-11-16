@@ -391,11 +391,13 @@ for (const page of list) {
 }
 
 // ---------------------------------------------------------------- sitemap
-// lastmod = date of the last commit to the page's own source; the daily Play numbers do not count as a change
+// lastmod = time (UTC) of the last commit to the page's own source; the daily Play numbers do not count as a change.
+// A full time, not only the day, so a second push on the same day still shows as a change (IndexNow, Google).
 const sourceOf = p => p.source ? [p.source] : p.path === '/index.html' || p.path.startsWith('/apps/') ? ['src/data/apps.json', 'src/templates/pages.mjs']
   : p.path === '/contact.html' ? ['src/content/support.html'] : ['src/content/policies' + p.path];
 const lastmod = files => {
-  try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', ...files], { cwd: ROOT }).toString().trim(); }
+  try { const t = execFileSync('git', ['log', '-1', '--format=%ct', '--', ...files], { cwd: ROOT }).toString().trim();
+    return t ? new Date(t * 1000).toISOString().replace('.000Z', 'Z') : ''; }
   catch { return ''; }   // no git history: leave lastmod out rather than guess
 };
 const urls = [];
