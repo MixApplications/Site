@@ -2991,5 +2991,9 @@
  "gd.usb-safety.116": "và, trong mô phỏng, ổ giả dung lượng, ổ lớn hơn 2 TB, ổ có sector 4K và ổ bị hỏng.",
  "gd.usb-safety.117": "<strong>Kiểm thử đầy đủ:</strong> mọi phiên bản đều được kiểm thử đầy đủ trước mỗi bản phát hành, trên 4 điện thoại của 3 hãng (Android 10 đến 16) và 13 thiết bị lưu trữ USB: ổ USB flash, một ổ cứng USB và đầu đọc thẻ SD, dùng trực tiếp và qua hub USB.",
  "home.tr.13": "Mọi phiên bản đều được kiểm thử đầy đủ trước mỗi bản phát hành, trên 4 điện thoại của 3 hãng (Android 10 đến 16) và 13 thiết bị lưu trữ USB: ổ USB flash, một ổ cứng USB và đầu đọc thẻ SD, dùng trực tiếp và qua hub USB.",
- "sup.208": "Mọi lần định dạng đều được kiểm tra trước khi báo thành công, và việc ghi ảnh chờ đến khi ổ xác nhận dữ liệu đã được ghi. Mọi phiên bản đều được kiểm thử đầy đủ trước mỗi bản phát hành, trên 4 điện thoại của 3 hãng (Android 10 đến 16) và 13 thiết bị lưu trữ USB: ổ USB flash, một ổ cứng USB và đầu đọc thẻ SD, dùng trực tiếp và qua hub USB."
+ "sup.208": "Mọi lần định dạng đều được kiểm tra trước khi báo thành công, và việc ghi ảnh chờ đến khi ổ xác nhận dữ liệu đã được ghi. Mọi phiên bản đều được kiểm thử đầy đủ trước mỗi bản phát hành, trên 4 điện thoại của 3 hãng (Android 10 đến 16) và 13 thiết bị lưu trữ USB: ổ USB flash, một ổ cứng USB và đầu đọc thẻ SD, dùng trực tiếp và qua hub USB.",
+ "gd.usb-safety.121": "Lần ghi bị dừng đột ngột: ứng dụng bị buộc đóng, hoặc điện thoại tắt nguồn hay gặp sự cố",
+ "gd.usb-safety.122": "Với mọi kiểu ghi, ổ được đánh dấu cần định dạng lại, nên ổ ghi dở không bao giờ trông như đã xong.",
+ "tl.iso-burner.153": "Điều này cũng đúng khi lần ghi bị dừng đột ngột, chẳng hạn khi ứng dụng bị buộc đóng hoặc điện thoại tắt nguồn, với mọi kiểu ghi: sao chép tệp, ảnh đĩa, ảnh trong tệp nén, DMG, Windows To Go, MS-DOS và FreeDOS.",
+ "tl.wipe-usb.76": "Nếu dung lượng thật của ổ chưa được quét, chứng nhận và kết quả không khẳng định rằng toàn bộ dung lượng ghi trên ổ đã được xóa: dung lượng thật hiển thị là —, kèm ghi chú rằng chỉ phần ổ thực sự lưu được mới được xử lý."
 }

@@ -3003,5 +3003,9 @@
  "gd.usb-safety.116": "and, in simulations, fake-capacity drives, drives over 2 TB, drives with 4K sectors and damaged drives.",
  "gd.usb-safety.117": "<strong>Fully tested:</strong> every version is fully tested before each release, on 4 phones from 3 brands (Android 10 to 16) and 13 USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.",
  "home.tr.13": "Every version is fully tested before each release, on 4 phones from 3 brands (Android 10 to 16) and 13 USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.",
- "sup.208": "Every format is tested before success is shown, and image writes wait until the drive confirms the data is written. Every version is fully tested before each release, on 4 phones from 3 brands (Android 10 to 16) and 13 USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs."
+ "sup.208": "Every format is tested before success is shown, and image writes wait until the drive confirms the data is written. Every version is fully tested before each release, on 4 phones from 3 brands (Android 10 to 16) and 13 USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.",
+ "gd.usb-safety.121": "A burn is stopped by force: the app is force-closed, or the phone switches off or crashes",
+ "gd.usb-safety.122": "For every burn type, the drive is left marked to be formatted again, so a half-written drive never looks finished.",
+ "tl.iso-burner.153": "This also holds when a burn is stopped by force, for example when the app is force-closed or the phone switches off, for every burn type: file copy, disk image, image in an archive, DMG, Windows To Go, MS-DOS and FreeDOS.",
+ "tl.wipe-usb.76": "If the drive's real size was not scanned, the certificate and the result do not claim that its whole stated size was erased: the real capacity shows as —, with a note that only the part the drive really stores was covered."
 }
