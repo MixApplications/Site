@@ -2583,5 +2583,12 @@
  "gd.choose-usb-app.86": "1 000 000+",
  "gd.choose-usb-app.87": "1 000 000+",
  "gd.choose-usb-app.88": "1 000 000+",
- "gd.choose-usb-app.89": "1 000 000+"
+ "gd.choose-usb-app.89": "1 000 000+",
+ "gd.choose-usb-app.90": "Quelle app a le plus de fonctions, la prise en charge la plus large et le plus d'options ?",
+ "gd.choose-usb-app.91": "Choisissez l'app qui peut en faire le plus pour vous : elle prend en charge de nombreux systèmes, versions et éditions, fonctionne avec de nombreux types de clés et de disques, et vous laisse choisir les réglages vous-même.",
+ "gd.choose-usb-app.92": "Parmi nos apps, <a href=\"/apps/ultimate-usb.html\">Ultimate USB</a> en offre le plus. Elle réunit le Graveur ISO, Ventoy (Unofficial) et l'Écriture brute avec Formater USB, l'Assistant de partition, la récupération de données, l'effacement sécurisé, le chiffrement, les tests de clé et les outils PS2/PS3, et elle a un Oui à chaque ligne du tableau ci-dessous.",
+ "gd.choose-usb-app.93": "Systèmes, versions et éditions : images Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS et FreeDOS ; Windows To Go pour Windows 10 ou 11 avec l'édition que vous choisissez ; persistance Linux ; et la version de Ventoy que vous choisissez.",
+ "gd.choose-usb-app.94": "Supports : clés USB, SSD portables, lecteurs de cartes et hubs OTG, en FAT16, FAT32, exFAT, NTFS et EXT2/3/4, MBR ou GPT, sans root, sous Android 7.0 et versions ultérieures. Les disques durs (HDD) ne sont pas officiellement pris en charge à cause de l'alimentation qu'ils demandent.",
+ "gd.choose-usb-app.95": "Options que vous contrôlez : table de partitions, système de fichiers, taille de cluster et nom ; mode haute vitesse et découpage d'install.wim ; options d'installation de Windows comme le contournement de TPM 2.0, Secure Boot et 4 GB de RAM, un compte local sans compte Microsoft et les paramètres régionaux de votre téléphone ; dans Ventoy, Secure Boot, alignement 4K, Config Hub, thèmes GRUB et images de persistance ; et la méthode d'effacement (NIST 800-88, DoD 5220.22-M, Schneier ou Gutmann) avec vérification facultative.",
+ "gd.choose-usb-app.96": "Si vous n'avez besoin que d'une tâche, les apps plus petites la font : DROFUS écrit des images Windows et Linux, Ventoy (Unofficial) crée des clés multiboot et USB Tools gère, répare et teste les clés."
 }

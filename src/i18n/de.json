@@ -2583,5 +2583,12 @@
  "gd.choose-usb-app.86": "1.000.000+",
  "gd.choose-usb-app.87": "1.000.000+",
  "gd.choose-usb-app.88": "1.000.000+",
- "gd.choose-usb-app.89": "1.000.000+"
+ "gd.choose-usb-app.89": "1.000.000+",
+ "gd.choose-usb-app.90": "Welche App hat die meisten Funktionen, die breiteste Unterstützung und die meisten Optionen?",
+ "gd.choose-usb-app.91": "Wählen Sie die App, die am meisten für Sie tun kann: Sie unterstützt viele Systeme, Versionen und Editionen, funktioniert mit vielen Arten von Laufwerken und lässt Sie die Einstellungen selbst wählen.",
+ "gd.choose-usb-app.92": "Von unseren Apps bietet <a href=\"/apps/ultimate-usb.html\">Ultimate USB</a> am meisten. Sie hat den ISO-Brenner, Ventoy (Unofficial) und Raw schreiben zusammen mit USB formatieren, Partitions-Assistent, Datenrettung, sicherem Löschen, Verschlüsselung, Laufwerkstests und PS2/PS3-Tools und hat in jeder Zeile der Tabelle unten ein Ja.",
+ "gd.choose-usb-app.93": "Systeme, Versionen und Editionen: Images von Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS und FreeDOS; Windows To Go für Windows 10 oder 11 mit der Edition Ihrer Wahl; Linux-Persistenz; und die Ventoy-Version Ihrer Wahl.",
+ "gd.choose-usb-app.94": "Laufwerke: USB-Sticks, tragbare SSDs, Kartenleser und OTG-Hubs, mit FAT16, FAT32, exFAT, NTFS und EXT2/3/4, MBR oder GPT, ohne Root, ab Android 7.0. Festplatten (HDD) werden wegen ihres Strombedarfs nicht offiziell unterstützt.",
+ "gd.choose-usb-app.95": "Optionen, die Sie bestimmen: Partitionstabelle, Dateisystem, Clustergröße und Bezeichnung; Hochgeschwindigkeitsmodus und Aufteilen von install.wim; Windows-Setup-Optionen wie das Umgehen von TPM 2.0, Secure Boot und 4 GB RAM, ein lokales Konto ohne Microsoft-Konto und Regionaleinstellungen von Ihrem Smartphone; in Ventoy Secure Boot, 4K-Ausrichtung, Config Hub, GRUB-Designs und Persistenz-Images; und die Löschmethode (NIST 800-88, DoD 5220.22-M, Schneier oder Gutmann) mit optionaler Überprüfung.",
+ "gd.choose-usb-app.96": "Wenn Sie nur eine Aufgabe brauchen, erledigen die kleineren Apps sie: DROFUS schreibt Windows- und Linux-Images, Ventoy (Unofficial) erstellt Multiboot-Laufwerke, und USB Tools verwaltet, repariert und testet Laufwerke."
 }

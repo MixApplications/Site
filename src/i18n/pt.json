@@ -2583,5 +2583,12 @@
  "gd.choose-usb-app.86": "1.000.000+",
  "gd.choose-usb-app.87": "1.000.000+",
  "gd.choose-usb-app.88": "1.000.000+",
- "gd.choose-usb-app.89": "1.000.000+"
+ "gd.choose-usb-app.89": "1.000.000+",
+ "gd.choose-usb-app.90": "Qual app tem mais recursos, o suporte mais amplo e mais opções?",
+ "gd.choose-usb-app.91": "Escolha o app que pode fazer mais por você: ele suporta muitos sistemas, versões e edições, funciona com muitos tipos de drive e deixa você mesmo escolher as configurações.",
+ "gd.choose-usb-app.92": "Entre os nossos apps, o <a href=\"/apps/ultimate-usb.html\">Ultimate USB</a> oferece mais. Ele tem o Gravador de ISO, o Ventoy (Unofficial) e a Gravação bruta junto com Formatar USB, Assistente de partição, recuperação de dados, apagamento seguro, criptografia, testes de drive e ferramentas de PS2/PS3, e tem um Sim em todas as linhas da tabela abaixo.",
+ "gd.choose-usb-app.93": "Sistemas, versões e edições: imagens de Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS e FreeDOS; Windows To Go para Windows 10 ou 11 com a edição que você escolher; persistência no Linux; e a versão do Ventoy que você escolher.",
+ "gd.choose-usb-app.94": "Drives: pen drives, SSDs portáteis, leitores de cartão e hubs OTG, com FAT16, FAT32, exFAT, NTFS e EXT2/3/4, MBR ou GPT, sem precisar de root, no Android 7.0 ou posterior. Discos rígidos (HDD) não são oficialmente suportados por causa da energia que exigem.",
+ "gd.choose-usb-app.95": "Opções que você controla: tabela de partição, sistema de arquivos, tamanho do cluster e rótulo; modo de alta velocidade e divisão do install.wim; opções de instalação do Windows, como ignorar TPM 2.0, Secure Boot e 4 GB de RAM, uma conta local sem conta Microsoft e configurações regionais do seu celular; no Ventoy, Secure Boot, alinhamento 4K, Config Hub, temas GRUB e imagens de persistência; e o método de apagamento (NIST 800-88, DoD 5220.22-M, Schneier ou Gutmann) com verificação opcional.",
+ "gd.choose-usb-app.96": "Se você precisa de apenas uma tarefa, os apps menores a fazem: o DROFUS grava imagens de Windows e Linux, o Ventoy (Unofficial) cria drives multiboot e o USB Tools gerencia, repara e testa drives."
 }

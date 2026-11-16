@@ -2583,5 +2583,12 @@
  "gd.choose-usb-app.86": "1.000.000+",
  "gd.choose-usb-app.87": "1.000.000+",
  "gd.choose-usb-app.88": "1.000.000+",
- "gd.choose-usb-app.89": "1.000.000+"
+ "gd.choose-usb-app.89": "1.000.000+",
+ "gd.choose-usb-app.90": "Aplikasi mana yang punya fitur terbanyak, dukungan terluas, dan opsi terbanyak?",
+ "gd.choose-usb-app.91": "Pilih aplikasi yang bisa melakukan paling banyak untuk Anda: mendukung banyak sistem, versi, dan edisi, bekerja dengan banyak jenis drive, dan membiarkan Anda memilih pengaturannya sendiri.",
+ "gd.choose-usb-app.92": "Dari aplikasi kami, <a href=\"/apps/ultimate-usb.html\">Ultimate USB</a> menawarkan paling banyak. Aplikasi ini punya Pembakar ISO, Ventoy (Unofficial), dan Tulis Raw bersama Format USB, Wizard Partisi, pemulihan data, penghapusan aman, enkripsi, pengujian drive, dan alat PS2/PS3, dan punya Ya di setiap baris tabel di bawah.",
+ "gd.choose-usb-app.93": "Sistem, versi, dan edisi: image Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS, dan FreeDOS; Windows To Go untuk Windows 10 atau 11 dengan edisi yang Anda pilih; persistensi Linux; dan versi Ventoy yang Anda pilih.",
+ "gd.choose-usb-app.94": "Drive: flash drive, SSD portabel, pembaca kartu, dan hub OTG, dengan FAT16, FAT32, exFAT, NTFS, dan EXT2/3/4, MBR atau GPT, tanpa perlu root, di Android 7.0 dan yang lebih baru. Hard disk (HDD) tidak didukung secara resmi karena kebutuhan dayanya.",
+ "gd.choose-usb-app.95": "Opsi yang Anda kendalikan: tabel partisi, sistem file, ukuran cluster, dan label; mode kecepatan tinggi dan pemisahan install.wim; opsi penyiapan Windows seperti bypass TPM 2.0, Secure Boot, dan RAM 4 GB, akun lokal tanpa akun Microsoft, dan pengaturan regional dari ponsel Anda; di Ventoy, Secure Boot, perataan 4K, Config Hub, tema GRUB, dan image persistensi; serta metode penghapusan (NIST 800-88, DoD 5220.22-M, Schneier, atau Gutmann) dengan verifikasi opsional.",
+ "gd.choose-usb-app.96": "Jika Anda hanya butuh satu tugas, aplikasi yang lebih kecil mengerjakannya: DROFUS menulis image Windows dan Linux, Ventoy (Unofficial) membuat drive multi-boot, dan USB Tools mengelola, memperbaiki, dan menguji drive."
 }

@@ -2583,5 +2583,12 @@
  "gd.choose-usb-app.86": "1.000.000+",
  "gd.choose-usb-app.87": "1.000.000+",
  "gd.choose-usb-app.88": "1.000.000+",
- "gd.choose-usb-app.89": "1.000.000+"
+ "gd.choose-usb-app.89": "1.000.000+",
+ "gd.choose-usb-app.90": "¿Qué app tiene más funciones, el soporte más amplio y más opciones?",
+ "gd.choose-usb-app.91": "Elige la app que puede hacer más por ti: admite muchos sistemas, versiones y ediciones, funciona con muchos tipos de unidades y te deja elegir los ajustes a ti.",
+ "gd.choose-usb-app.92": "De nuestras apps, <a href=\"/apps/ultimate-usb.html\">Ultimate USB</a> es la que más ofrece. Tiene el Grabador de ISO, Ventoy (Unofficial) y la Escritura Raw junto con Formatear USB, Asistente de partición, recuperación de datos, borrado seguro, cifrado, pruebas de unidad y herramientas de PS2/PS3, y tiene un Sí en todas las filas de la tabla de abajo.",
+ "gd.choose-usb-app.93": "Sistemas, versiones y ediciones: imágenes de Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS y FreeDOS; Windows To Go para Windows 10 u 11 con la edición que elijas; persistencia en Linux; y la versión de Ventoy que elijas.",
+ "gd.choose-usb-app.94": "Unidades: memorias USB, SSD portátiles, lectores de tarjetas y hubs OTG, con FAT16, FAT32, exFAT, NTFS y EXT2/3/4, MBR o GPT, sin necesidad de root, en Android 7.0 o posterior. Los discos duros (HDD) no son compatibles oficialmente por la energía que necesitan.",
+ "gd.choose-usb-app.95": "Opciones que tú controlas: tabla de particiones, sistema de archivos, tamaño de clúster y etiqueta; modo de alta velocidad y división de install.wim; opciones de instalación de Windows como omitir TPM 2.0, Secure Boot y 4 GB de RAM, una cuenta local sin cuenta Microsoft y la configuración regional desde tu teléfono; en Ventoy, Secure Boot, alineación 4K, Config Hub, temas GRUB e imágenes de persistencia; y el método de borrado (NIST 800-88, DoD 5220.22-M, Schneier o Gutmann) con verificación opcional.",
+ "gd.choose-usb-app.96": "Si solo necesitas una tarea, las apps más pequeñas la hacen: DROFUS escribe imágenes de Windows y Linux, Ventoy (Unofficial) crea unidades multiarranque y USB Tools gestiona, repara y prueba unidades."
 }

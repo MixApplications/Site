@@ -2583,5 +2583,12 @@
  "gd.choose-usb-app.86": "1.000.000+",
  "gd.choose-usb-app.87": "1.000.000+",
  "gd.choose-usb-app.88": "1.000.000+",
- "gd.choose-usb-app.89": "1.000.000+"
+ "gd.choose-usb-app.89": "1.000.000+",
+ "gd.choose-usb-app.90": "Hangi uygulamada en çok özellik, en geniş destek ve en çok seçenek var?",
+ "gd.choose-usb-app.91": "Sizin için en çok şeyi yapabilen uygulamayı seçin: birçok sistemi, sürümü ve baskıyı destekler, birçok sürücü türüyle çalışır ve ayarları kendiniz seçmenize izin verir.",
+ "gd.choose-usb-app.92": "Uygulamalarımız arasında en çoğunu <a href=\"/apps/ultimate-usb.html\">Ultimate USB</a> sunar. ISO Yazıcı, Ventoy (Unofficial) ve Ham Yazma'yı USB Biçimlendir, Bölüm Sihirbazı, veri kurtarma, güvenli silme, şifreleme, sürücü testleri ve PS2/PS3 araçlarıyla bir arada sunar ve aşağıdaki tablonun her satırında Evet alır.",
+ "gd.choose-usb-app.93": "Sistemler, sürümler ve baskılar: Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS ve FreeDOS imajları; seçtiğiniz baskıyla Windows 10 veya 11 için Windows To Go; Linux kalıcılığı; ve seçtiğiniz Ventoy sürümü.",
+ "gd.choose-usb-app.94": "Sürücüler: flash bellekler, taşınabilir SSD'ler, kart okuyucular ve OTG hub'ları; FAT16, FAT32, exFAT, NTFS ve EXT2/3/4, MBR veya GPT ile, root gerekmeden, Android 7.0 ve sonrasında. Sabit disk sürücüleri (HDD), güç ihtiyaçları nedeniyle resmi olarak desteklenmez.",
+ "gd.choose-usb-app.95": "Sizin kontrol ettiğiniz seçenekler: bölüm tablosu, dosya sistemi, küme boyutu ve etiket; yüksek hız modu ve install.wim bölme; TPM 2.0, Secure Boot ve 4 GB RAM atlatma, Microsoft hesabı olmadan yerel hesap ve telefonunuzdan bölge ayarları gibi Windows kurulum seçenekleri; Ventoy'da Secure Boot, 4K hizalama, Config Hub, GRUB temaları ve kalıcılık imajları; ve isteğe bağlı doğrulamayla silme yöntemi (NIST 800-88, DoD 5220.22-M, Schneier veya Gutmann).",
+ "gd.choose-usb-app.96": "Yalnızca tek bir işe ihtiyacınız varsa, daha küçük uygulamalar bunu yapar: DROFUS Windows ve Linux imajları yazar, Ventoy (Unofficial) çoklu önyüklemeli sürücüler oluşturur, USB Tools ise sürücüleri yönetir, onarır ve test eder."
 }
