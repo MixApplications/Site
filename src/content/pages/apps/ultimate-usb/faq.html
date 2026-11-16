@@ -83,6 +83,7 @@
 <details class="q"><summary data-i18n="fq.ultimate-usb.58">How do I install Windows 11 on a PC without TPM 2.0 or Secure Boot?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.59">In ISO Burner, keep <strong>Remove requirement for 4GB+ RAM, Secure Boot and TPM 2.0.</strong> ticked in the <strong>Windows Setup Customization</strong> card. It is shown for Windows 11 images and is on by default for a standard installation. The card is not shown when the image has its own unattend file.</p>
 <p data-i18n="fq.ultimate-usb.60">The same card can remove the online Microsoft account requirement, create a local account, skip the privacy questions, copy the regional options from your phone and turn off automatic BitLocker encryption.</p>
+<p data-i18n="fq.ultimate-usb.154">For Windows 11, <strong>QoL improvements</strong> stops Windows from forcing Copilot, OneDrive, Outlook, Fast Startup and more. Recent Windows 11 images also offer "Windows CA 2023" bootloaders for a compatible PC, and <strong>Apply SkuSiPolicy.p7b on installation (See KB5042562).</strong> With Windows To Go, <strong>Set the target's internal drives offline</strong> is on by default.</p>
 <p data-i18n="fq.ultimate-usb.61">On a Ventoy drive, use <strong>Config Hub</strong> &rarr; <strong>Boot</strong> &rarr; <strong>Windows 11: bypass hardware checks</strong> instead.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.62">My Windows ISO has a file over 4 GB. Can I still use FAT32?</summary><div class="a">
@@ -126,7 +127,7 @@
 <ul>
   <li data-i18n="fq.ultimate-usb.89"><strong>The app was minimised.</strong> A job pauses while the app is in the background and continues when it is in front again.</li>
   <li data-i18n="fq.ultimate-usb.90"><strong>No internet or an ad blocker (free version).</strong> Running jobs wait until this is fixed. Pro does not pause for these.</li>
-  <li data-i18n="fq.ultimate-usb.91"><strong>The drive was removed or stopped answering.</strong> During a burn (ISO Burner or Raw Write), a backup or a restore, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: the job continues from where it stopped. A different drive is never written. If you cancel instead, the tokens come back. Other jobs end as failed: reconnect the drive and start again; the tokens come back.</li>
+  <li data-i18n="fq.ultimate-usb.91"><strong>The drive was removed or stopped answering.</strong> During a burn (ISO Burner or Raw Write), a backup or a restore, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: most jobs continue where they stopped. A different drive is never written. If you cancel instead, the tokens come back. Other jobs end as failed: reconnect the drive and start again; the tokens come back.</li>
   <li data-i18n="fq.ultimate-usb.148"><strong>A short connection failure.</strong> It does not stop the job: the app tries again and goes on.</li>
 </ul>
 <p data-i18n="fq.ultimate-usb.92">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Run Bad Blocks Check with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive).</p>
@@ -150,7 +151,8 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.105">Can the app damage my USB drive?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.106">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
-<p data-i18n="fq.ultimate-usb.107">The app tests each drive when it is connected and asks for confirmation before it erases one. Format USB tests the drive after formatting and only then reports success.</p>
+<p data-i18n="fq.ultimate-usb.107">The app tests each drive when it is connected and asks for confirmation before it erases one. Every job that formats the drive (Format USB, ISO Burner, Ventoy Install, Partition Wizard Create and Format, and the PS2 drive format) checks and tests the file system before the app reports success.</p>
+<p data-i18n="fq.ultimate-usb.155">Every format is tested before success is shown, image writes wait until the drive confirms the data is written, and a job only ever writes to the drive it started on. When you burn an image, the app first shows <strong>Checking image…</strong>: an incomplete or unreadable image is refused, and nothing is written to the drive.</p>
 <p data-i18n="fq.ultimate-usb.149">A drive that is write-protected, or one that does not take writes, is refused at the start with one message, before any question and before any token is used.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.108">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
@@ -159,13 +161,13 @@
 <p data-i18n="fq.ultimate-usb.150">The app asks for Bluetooth permission only on Android 8.1 and older.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.151">Which languages is the app available in?</summary><div class="a">
-<p data-i18n="fq.ultimate-usb.152">Many. The most recently added are Azerbaijani, Catalan, Estonian, Kazakh, Lithuanian, Latvian, Malayalam, Slovak, Slovenian, Swahili, Tagalog (Filipino) and Uzbek.</p>
+<p data-i18n="fq.ultimate-usb.152">58 languages. The most recently added are Azerbaijani, Catalan, Estonian, Kazakh, Lithuanian, Latvian, Malayalam, Slovak, Slovenian, Swahili, Tagalog (Filipino) and Uzbek.</p>
 <p data-i18n="fq.ultimate-usb.153">On Android 13 and later, you can choose the app's language in the phone's settings.</p>
 </div></details>
 
 <h2 data-i18n="fq.ultimate-usb.111">Disk tools and recovery</h2>
 <details class="q"><summary data-i18n="fq.ultimate-usb.112">Can the app repair a drive that no longer formats?</summary><div class="a">
-<p data-i18n="fq.ultimate-usb.113">A broken partition table or file system is usually fixed by formatting fresh with Format USB or Wipe USB. The app does not repair a drive in place, so copy off what you need first. Recover deleted files only reads the drive.</p>
+<p data-i18n="fq.ultimate-usb.113">Not in place. A broken partition table or file system is usually fixed by formatting fresh with Format USB or Wipe USB, so copy off what you need first. Recover deleted files only reads the drive.</p>
 <p data-i18n="fq.ultimate-usb.114">If a format fails its check, the drive has a hardware fault. Run Bad Blocks Check to confirm it (it erases the drive); if it reports errors, replace the drive.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.115">Can I recover deleted files from a USB drive?</summary><div class="a">
@@ -175,7 +177,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.119">How do I check a drive for bad blocks and test its speed?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.120"><a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> tests the whole drive. Choose <strong>1 Pass</strong> or <strong>2 Passes</strong>, keep <strong>Detect fake / counterfeit capacity</strong> ticked and tap <strong>START</strong>. It erases all data on the drive. It uses no tokens.</p>
-<p data-i18n="fq.ultimate-usb.121"><a href="/tools/benchmark.html">Benchmark</a> measures sequential and random speed. Choose the <strong>Mode:</strong> (Sequential, Random or Both) and the <strong>Type:</strong> (Read Only or Read / Write), then tap <strong>START</strong>. It uses no tokens.</p>
+<p data-i18n="fq.ultimate-usb.121"><a href="/tools/benchmark.html">Benchmark</a> measures sequential and random speed. Choose the <strong>Mode:</strong> (Sequential, Random or Both) and the <strong>Type:</strong> (Read Only or Read / Write), then tap <strong>START</strong>. It uses no tokens. In <strong>Read / Write</strong> mode, Benchmark leaves your files as they were.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.122">How do I securely wipe a drive and get a certificate?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.123">Use <a href="/tools/wipe-usb.html">Wipe USB</a>. Choose the method and the verification, tap <strong>START</strong> and confirm. It uses no tokens.</p>
@@ -185,6 +187,11 @@
 </ul>
 <p data-i18n="fq.ultimate-usb.126">When it finishes, tap <strong>View erasure certificate</strong> or <strong>View erasure report</strong>, then save it as a PDF, share it or export it as plain text. Save it before you leave: it cannot be produced again. It is made on your phone.</p>
 <p data-i18n="fq.ultimate-usb.127">You can pause a wipe, and a stopped wipe can be continued later on the same drive. The app has to stay open in front while it runs.</p>
+<p data-i18n="fq.ultimate-usb.159">The erasure report also lists the bus recoveries: the times the app recovered the USB connection by itself during the wipe.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.ultimate-usb.156">Can I encrypt a USB drive with a password?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.157">Yes. Open <a href="/tools/usb-encryption.html">USB Encryption</a>, enter a <strong>Password</strong> of at least 8 characters and <strong>Confirm password</strong>, type <strong>I UNDERSTAND</strong> and tap <strong>Encrypt Drive</strong>. Encrypting erases everything on the drive and uses 1 token (none with Pro). If the encryption does not succeed, the token comes back.</p>
+<p data-i18n="fq.ultimate-usb.158">The encrypted drive opens only in Ultimate USB. <strong>Change Password</strong> sets a new password without encrypting the files again, so it is quick, and the old password stops working at once.</p>
 </div></details>
 
 <h2 data-i18n="fq.ultimate-usb.128">Games, files and images</h2>
@@ -194,7 +201,7 @@
 <p data-i18n="fq.ultimate-usb.132">PS1 games: <strong>Import VCD Game</strong> accepts .VCD files for POPStarter; the POPS system file must be supplied by you. <a href="/tools/game-converter.html">Game Converter</a> converts between ISO, BIN/CUE, VCD, ZSO, CSO and CHD. OPL needs unfragmented files, so tap <strong>Defragment</strong> if needed.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.133">Can I put PS3 games on a FAT32 drive?</summary><div class="a">
-<p data-i18n="fq.ultimate-usb.134">FAT32 cannot hold a single file over 4 GB. <a href="/tools/ps3-iso-tools.html">PS3 ISO TOOLS</a> prepares files for FAT32 drives:</p>
+<p data-i18n="fq.ultimate-usb.134">Yes, after splitting files over 4 GB. FAT32 cannot hold a single file over 4 GB. <a href="/tools/ps3-iso-tools.html">PS3 ISO TOOLS</a> prepares files for FAT32 drives:</p>
 <ul>
   <li data-i18n="fq.ultimate-usb.135"><strong>Split ISO</strong> and <strong>Split PKG</strong> cut a file into parts of 1, 2 or 3 GB (3 GB is the default) or a custom size; <strong>Join ISO</strong> and <strong>Join PKG</strong> put them back together.</li>
   <li data-i18n="fq.ultimate-usb.136"><strong>Make ISO</strong> has <strong>Split into 4 GB parts (for FAT32 drives)</strong>, and <strong>Extract ISO</strong> has <strong>Split files over 4 GB into parts (for FAT32 drives)</strong>.</li>
@@ -206,7 +213,12 @@
 <p data-i18n="fq.ultimate-usb.140">To copy from the phone to the drive, open <strong>More</strong> and tap <strong>Import File / Files</strong> or <strong>Import Directory</strong>.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.141">Can I mount a disk image (for example .vhd) as a drive?</summary><div class="a">
-<p data-i18n="fq.ultimate-usb.142"><a href="/tools/partition-image-manager.html">Partition Image Manager</a> opens .img and .bk images with <strong>View Partition Image (.img/.bk)</strong>, and you browse and edit them like a drive. <strong>Create Partition Image .img</strong> makes a new image with FAT32, exFAT, NTFS, Ext2, Ext3 or Ext4.</p>
+<p data-i18n="fq.ultimate-usb.142">Not a .vhd file. <a href="/tools/partition-image-manager.html">Partition Image Manager</a> opens .img and .bk images with <strong>View Partition Image (.img/.bk)</strong>, and you browse and edit them like a drive. <strong>Create Partition Image .img</strong> makes a new image with FAT32, exFAT, NTFS, Ext2, Ext3 or Ext4.</p>
 <p data-i18n="fq.ultimate-usb.143"><a href="/tools/partition-mounter.html">Partition Mounter</a> makes a partition of a connected USB drive available in the Android Files app, <strong>Read Only</strong> or <strong>Read / Write</strong>. Unmount it before you unplug the drive.</p>
 <p data-i18n="fq.ultimate-usb.144">On a Ventoy drive you can copy VHD files and boot them from the Ventoy menu.</p>
+</div></details>
+
+<h2 data-i18n="fq.ultimate-usb.160">About Ultimate USB</h2>
+<details class="q"><summary data-i18n="fq.ultimate-usb.161">How long has Ultimate USB been on Google Play, and how many people use it?</summary><div class="a">
+<p data-i18n="fq.ultimate-usb.162">Since May 2023. Ultimate USB has more than 1,000,000 downloads on Google Play, and we have built USB apps for more than five years.</p>
 </div></details>

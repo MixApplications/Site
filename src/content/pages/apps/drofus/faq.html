@@ -80,6 +80,7 @@
 <details class="q"><summary data-i18n="fq.drofus.54">How do I install Windows 11 on a PC without TPM 2.0 or Secure Boot?</summary><div class="a">
 <p data-i18n="fq.drofus.55">Keep <strong>Remove requirement for 4GB+ RAM, Secure Boot and TPM 2.0.</strong> ticked in the <strong>Windows Setup Customization</strong> card. It is shown for Windows 11 images and is on by default for a standard installation. The card is not shown when the image has its own unattend file.</p>
 <p data-i18n="fq.drofus.56">The same card can remove the online Microsoft account requirement, create a local account, skip the privacy questions, copy the regional options from your phone and turn off automatic BitLocker encryption. Nothing you enter leaves the phone.</p>
+<p data-i18n="fq.drofus.110">For Windows 11, <strong>QoL improvements</strong> stops Windows from forcing Copilot, OneDrive, Outlook, Fast Startup and more. Recent Windows 11 images also offer "Windows CA 2023" bootloaders for a compatible PC, and <strong>Apply SkuSiPolicy.p7b on installation (See KB5042562).</strong> With Windows To Go, <strong>Set the target's internal drives offline</strong> is on by default.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.57">My Windows ISO has a file over 4 GB. Can I still use FAT32?</summary><div class="a">
 <p data-i18n="fq.drofus.58">Yes. That file is install.wim. Tick <strong>Split image for FAT32 compatibility.</strong> in the <strong>Advanced File System</strong> card. The app splits the file into parts so the drive can stay FAT32, and Windows setup puts the parts back together. Splitting takes a long time.</p>
@@ -97,7 +98,7 @@
 <p data-i18n="fq.drofus.67">Persistence keeps your files and changes between boots. It is offered only for images that support it, and the app says why when it is not.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.68">Can I burn a macOS DMG or a Raspberry Pi image?</summary><div class="a">
-<p data-i18n="fq.drofus.69">Yes, with <strong>Disk or ISO image</strong> and no token cost. macOS DMG (Intel-based only), Raspberry Pi OS and other ARM images are written as they are. You can pick compressed .gz, .xz and .zip images without unpacking them first.</p>
+<p data-i18n="fq.drofus.69">Yes, with <strong>Disk or ISO image</strong> and no token cost. macOS DMG (Intel-based only), Raspberry Pi OS and other ARM images are written as they are. You can pick compressed .gz, .xz, .bz2 and .zip images without unpacking them first.</p>
 </div></details>
 
 <h2 data-i18n="fq.drofus.70">Writing, speed and safety</h2>
@@ -109,11 +110,23 @@
 <ul>
   <li data-i18n="fq.drofus.75"><strong>The app was minimised.</strong> A burn pauses while the app is in the background and continues when it is in front again.</li>
   <li data-i18n="fq.drofus.76"><strong>No internet or an ad blocker (free version).</strong> Running burns wait until this is fixed. Pro does not pause for these.</li>
-  <li data-i18n="fq.drofus.77"><strong>The drive was removed or stopped answering.</strong> During a burn, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: the burn continues from where it stopped. A different drive is never written. If you cancel instead, the tokens come back.</li>
+  <li data-i18n="fq.drofus.77"><strong>The drive was removed or stopped answering.</strong> During a burn, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: most burns continue where they stopped (a Windows To Go burn in normal mode repeats its image step). A different drive is never written. If you cancel instead, the tokens come back.</li>
   <li data-i18n="fq.drofus.104"><strong>A short connection failure.</strong> It does not stop the job: the app tries again and goes on.</li>
 </ul>
 <p data-i18n="fq.drofus.78">A stop near the very end often means the drive reports more space than it has, or its flash fails at the end. Reconnect the drive: if the drive check fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and may offer to scan for the real size.</p>
 <p data-i18n="fq.drofus.79">If the app was closed during a burn, the tokens come back the next time you open it.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.drofus.112">Why did the burn fail, and what does the message mean?</summary><div class="a">
+<p data-i18n="fq.drofus.113">The message names the cause, and you do not lose the tokens:</p>
+<ul>
+  <li data-i18n="fq.drofus.114">The drive is write-protected.</li>
+  <li data-i18n="fq.drofus.115">The image is incomplete or damaged: download it again.</li>
+  <li data-i18n="fq.drofus.116">The Windows image (WIM) cannot be split for FAT32: choose NTFS.</li>
+  <li data-i18n="fq.drofus.117">The drive did not keep the copy: it may be counterfeit.</li>
+  <li data-i18n="fq.drofus.118">NTFS could not start: choose FAT32 or exFAT.</li>
+  <li data-i18n="fq.drofus.119">The phone does not have enough memory.</li>
+</ul>
+<p data-i18n="fq.drofus.120">If the BIOS boot loader cannot be installed for a Linux image that is copied file by file, the burn does not fail: the drive is finished with the note <strong>It may start only on UEFI computers</strong>.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.80">Can I use other apps while a write is running?</summary><div class="a">
 <p data-i18n="fq.drofus.81">No. A burn pauses when the app leaves the foreground, to protect the drive. Keep the app open and in front until it finishes. The app keeps the screen on while it is shown. Start long burns when you do not need the phone.</p>
@@ -134,6 +147,7 @@
 <details class="q"><summary data-i18n="fq.drofus.91">Can the app damage my USB drive?</summary><div class="a">
 <p data-i18n="fq.drofus.92">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
 <p data-i18n="fq.drofus.93">Before a burn, the app warns when an ISO looks truncated or corrupted, warns when the file is not bootable, checks the space on the drive and in phone storage, and asks for confirmation before it erases the drive.</p>
+<p data-i18n="fq.drofus.111">Before the drive is wiped, the app shows <strong>Checking image…</strong>: an incomplete or unreadable image is refused, and nothing is written to the drive. When a burn formats the drive, the app checks and tests the file system before it reports success. Every format is tested before success is shown, image writes wait until the drive confirms the data is written, and a job only ever writes to the drive it started on.</p>
 <p data-i18n="fq.drofus.105">A drive that is write-protected, or one that does not take writes, is refused at the start with one message, before any question and before any token is used.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.94">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
@@ -141,7 +155,7 @@
 <p data-i18n="fq.drofus.106">The app asks for Bluetooth permission only on Android 8.1 and older.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.107">Which languages is the app available in?</summary><div class="a">
-<p data-i18n="fq.drofus.108">Many. The most recently added are Azerbaijani, Catalan, Estonian, Kazakh, Lithuanian, Latvian, Malayalam, Slovak, Slovenian, Swahili, Tagalog (Filipino) and Uzbek.</p>
+<p data-i18n="fq.drofus.108">58 languages. The most recently added are Azerbaijani, Catalan, Estonian, Kazakh, Lithuanian, Latvian, Malayalam, Slovak, Slovenian, Swahili, Tagalog (Filipino) and Uzbek.</p>
 <p data-i18n="fq.drofus.109">On Android 13 and later, you can choose the app's language in the phone's settings.</p>
 </div></details>
 
@@ -151,4 +165,7 @@
 </div></details>
 <details class="q"><summary data-i18n="fq.drofus.99">What happened to ISO 2 USB?</summary><div class="a">
 <p data-i18n="fq.drofus.100">It has been retired. Every feature it had is in DROFUS, which is also known as ISO 2 USB or ISO to USB.</p>
+</div></details>
+<details class="q"><summary data-i18n="fq.drofus.121">How long has DROFUS been on Google Play, and how many people use it?</summary><div class="a">
+<p data-i18n="fq.drofus.122">Since July 2022. DROFUS has more than 1,000,000 downloads on Google Play, and we have built USB apps for more than five years.</p>
 </div></details>

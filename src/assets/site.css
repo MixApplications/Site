@@ -269,6 +269,8 @@ details.full[open]>summary::before{transform:rotate(90deg)}
 .principles b{display:flex;align-items:center;gap:9px;font-weight:700;font-size:.98rem;margin-bottom:6px}
 .principles b::before{content:'';width:10px;height:10px;border-radius:3px;background:var(--c)}
 .principles span{color:var(--dim);font-size:.9rem}
+.trustlead{color:var(--dim);max-width:72ch;margin:0 0 16px}
+.trustlinks{margin-top:14px;font-size:.94rem}
 
 /* ---- 10. app page ------------------------------------------------------- */
 .crumbs{font-size:.86rem;color:var(--faint);padding-top:28px}
@@ -323,6 +325,10 @@ details.full[open]>summary::before{transform:rotate(90deg)}
 .checklist ol{margin:10px 0 0 20px;color:var(--dim);font-size:.94rem}
 .checklist li{margin-bottom:5px}
 .checklist li strong{color:var(--ink);font-weight:600}
+.doc .checklist h2{margin:0;padding:0;border:0}
+.doc .proof{margin:18px 0 0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.doc .toc{margin-top:22px}
+.doc tbody th[scope=colgroup]{text-align:start;background:var(--gray-soft);font-weight:700}
 
 .kb{margin-top:46px}
 .kb-head h2{font-size:1.6rem;font-weight:700}

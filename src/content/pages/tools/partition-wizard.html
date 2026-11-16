@@ -1,5 +1,5 @@
-<!--meta {"key":"tl.partition-wizard","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Partition a USB drive on Android, convert MBR/GPT — Partition Wizard","h1":"How do I partition a USB drive from my Android phone?","description":"Open <strong>Partition Wizard</strong> in Ultimate USB or USB Tools, tap a partition or the unallocated space, pick an action and tap <strong>Apply Changes</strong>. Your changes are listed first, so you can review them and undo them before they run."} -->
-<h2 data-i18n="tl.partition-wizard.1">Steps</h2>
+<!--meta {"key":"tl.partition-wizard","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Partition a USB drive on Android, convert MBR/GPT — Partition Wizard","h1":"How do I partition a USB drive from my Android phone?","description":"Open <strong>Partition Wizard</strong> in Ultimate USB or USB Tools, tap a partition or the unallocated space, pick an action and tap <strong>Apply Changes</strong>. Your changes are listed first, so you can review them and undo them before they run. Each Create or Format uses 1 token, at most 3 in total."} -->
+<h2 data-i18n="tl.partition-wizard.1">How do I change partitions step by step?</h2>
 <ol>
   <li data-i18n="tl.partition-wizard.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
   <li data-i18n="tl.partition-wizard.3">Open the <strong>Disk Management</strong> group and tap <strong>Partition Wizard</strong>.</li>
@@ -39,6 +39,17 @@
   <li data-i18n="tl.partition-wizard.41">On a write-protected drive, only <strong>Backup</strong> runs.</li>
 </ul>
 <p data-i18n="tl.partition-wizard.33">Back up the drive first with <a href="/tools/backup-restore.html">Backup / Restore</a>: a change to a partition table is not one you want to stop halfway through.</p>
+
+<h2 data-i18n="tl.partition-wizard.43">Is Partition Wizard safe for my drive?</h2>
+<p data-i18n="tl.partition-wizard.44">Yes. The app tests every new or formatted partition before it reports success, and it protects the drive at each step:</p>
+<ul>
+  <li data-i18n="tl.partition-wizard.45"><strong>Create</strong> and <strong>Format</strong> check and test the new file system before the app reports success.</li>
+  <li data-i18n="tl.partition-wizard.46">If the drive did not keep its test data, it may be fake. The app says so, keeps its files read-only and offers <strong>Try restore again</strong>.</li>
+  <li data-i18n="tl.partition-wizard.47">A job never writes to a different drive than the one it started on.</li>
+  <li data-i18n="tl.partition-wizard.48">If the USB connection fails for a moment during a job, the app recovers it automatically and the job continues.</li>
+</ul>
+<p data-i18n="tl.partition-wizard.49">More than five years of building USB apps, and over 1,000,000 downloads each on Google Play for Ultimate USB and USB Tools.</p>
+<p data-i18n="tl.partition-wizard.50">Read more: <a href="/guides/usb-safety.html">How our USB apps keep your drive and your data safe</a>.</p>
 
 <h2 data-i18n="tl.partition-wizard.34">How many tokens does Partition Wizard use?</h2>
 <p data-i18n="tl.partition-wizard.35"><strong>Apply Changes</strong> uses <strong>1 token</strong> for each <strong>Create</strong> or <strong>Format</strong> in the list, and at most <strong>3 tokens</strong> in total. <strong>Convert</strong>, <strong>Delete</strong>, <strong>Wipe</strong>, <strong>Rename</strong>, <strong>Backup</strong> and <strong>Restore</strong> are free. The app shows the cost before it starts, and you earn a token by watching one short rewarded video. With Pro, Partition Wizard uses no tokens.</p>

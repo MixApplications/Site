@@ -1,5 +1,5 @@
-<!--meta {"key":"tl.format-usb","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Format a USB drive on Android: FAT32, exFAT, NTFS, ext4 — Format USB","h1":"How do I format a USB drive from my Android phone?","description":"Open <strong>Format USB</strong> in Ultimate USB or USB Tools, choose the file system, cluster size and partition table, and tap <strong>Format</strong>. It works over a USB OTG adapter without root, and the app tests the drive after formatting and only then reports success."} -->
-<h2 data-i18n="tl.format-usb.1">Steps</h2>
+<!--meta {"key":"tl.format-usb","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Format a USB drive on Android: FAT32, exFAT, NTFS, ext4 — Format USB","h1":"How do I format a USB drive from my Android phone?","description":"Open <strong>Format USB</strong> in Ultimate USB or USB Tools, choose the file system, cluster size and partition table, and tap <strong>Format</strong>. It works over a USB OTG adapter without root, and the app tests the drive after formatting and only then reports success. It offers 7 file systems and uses 1 token."} -->
+<h2 data-i18n="tl.format-usb.1">How do I format a USB drive step by step?</h2>
 <ol>
   <li data-i18n="tl.format-usb.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
   <li data-i18n="tl.format-usb.3">Open the <strong>Disk Management</strong> group and tap <strong>Format USB</strong>.</li>
@@ -12,7 +12,7 @@
 <p data-i18n="tl.format-usb.9">The whole drive becomes one partition with the file system you chose.</p>
 <p data-i18n="tl.format-usb.39">If the drive is read-only, the app tells you so.</p>
 
-<h2 data-i18n="tl.format-usb.10">Options and their values</h2>
+<h2 data-i18n="tl.format-usb.10">Which options can I set, and what are the defaults?</h2>
 <div class="table-container">
 <table>
   <thead><tr><th data-i18n="tl.format-usb.11">Option</th><th data-i18n="tl.format-usb.12">Values</th><th data-i18n="tl.format-usb.13">Default</th></tr></thead>
@@ -29,6 +29,18 @@
 <h2 data-i18n="tl.format-usb.27">What does the app check after formatting?</h2>
 <p data-i18n="tl.format-usb.28">Before it reports success, the app tests the drive it has just formatted.</p>
 <p data-i18n="tl.format-usb.32">If the test fails, the format is reported as failed, not as a success.</p>
+
+<h2 data-i18n="tl.format-usb.40">Is formatting safe for my drive?</h2>
+<p data-i18n="tl.format-usb.41">Yes. The app tests every format before it reports success, and it protects the drive at each step:</p>
+<ul>
+  <li data-i18n="tl.format-usb.42">A drive that is write-protected or does not take writes is recognised as soon as you start a job: one clear message, and nothing is charged.</li>
+  <li data-i18n="tl.format-usb.43">If the drive did not keep its test data, it may be fake. The app says so, keeps its files read-only and offers <strong>Try restore again</strong>. A format still runs after an extra <strong>Yes</strong>; if you answer <strong>No</strong>, the token comes back.</li>
+  <li data-i18n="tl.format-usb.44">A job never writes to a different drive than the one it started on.</li>
+  <li data-i18n="tl.format-usb.45">If the USB connection fails for a moment during a job, the app recovers it automatically and the job continues.</li>
+  <li data-i18n="tl.format-usb.46">While a format runs, the Back button does not stop it. Use <strong>Cancel</strong> to stop a format.</li>
+</ul>
+<p data-i18n="tl.format-usb.47">More than five years of building USB apps, and over 1,000,000 downloads each on Google Play for Ultimate USB and USB Tools.</p>
+<p data-i18n="tl.format-usb.48">Read more: <a href="/guides/usb-safety.html">How our USB apps keep your drive and your data safe</a>.</p>
 
 <h2 data-i18n="tl.format-usb.33">How many tokens does formatting use?</h2>
 <p data-i18n="tl.format-usb.34">A format uses <strong>1 token</strong>. The app shows the cost before it starts, and you earn a token by watching one short rewarded video. With Pro, formatting uses no tokens.</p>

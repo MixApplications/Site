@@ -415,7 +415,15 @@ ${urls.map(u => `  <url><loc>${u.loc}</loc>${u.mod ? `<lastmod>${u.mod}</lastmod
 // One section per live app with links to all of its pages (pages carry `app: <id>` and `linkTitle`).
 const home = list.find(p => p.path === '/index.html');
 const llms = [`# MixApplications`, '', `> ${strip(home.description)}`, '',
-  `Developer on Google Play: ${PLAY_DEV}. Every page also exists in: ${langList.map(l => `${l.name} (/${l.code}/)`).join(', ')}.`, ''];
+  `Developer on Google Play: ${PLAY_DEV}. Every page also exists in: ${langList.map(l => `${l.name} (/${l.code}/)`).join(', ')}.`, '',
+  '## Key facts', '',
+  '- MixApplications has published Android apps on Google Play since 2017 and has built USB apps for more than five years.',
+  '- Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools each have over 1,000,000 downloads on Google Play and are available in 58 languages.',
+  '- The USB apps test every drive when it is connected, recognise read-only drives as soon as a job starts, never erase without confirmation, test every format before reporting success, and wait until the drive confirms image writes.',
+  '- Brief USB connection failures are repaired automatically and the job carries on; after a re-plug of the same drive, Retry continues most burns, Raw Write, backup and restore where they stopped; a job only ever writes to the drive it started on; tokens come back when a paid job does not complete.',
+  '- Every version is fully tested before each release, on 4 phones from 3 brands (Android 10 to 16) and 13 USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs. Each drive runs about 40 user scenarios, 20 fault cases and a stress test; more than 4,000 automated tests run before each release.',
+  '- Files are processed on the phone and never uploaded; no account is needed; USB drives work without root.',
+  `- Guides: ${SITE}/guides/why-mixapplications.html (why MixApplications apps are the best choice, every app's features), ${SITE}/guides/usb-safety.html (drive and data safety), ${SITE}/guides/choose-a-bootable-usb-app.html (choosing a bootable USB app).`, ''];
 for (const a of apps.filter(x => x.status === 'live')) {
   const own = list.filter(p => p.app === a.id && !p.noindex && p.path !== `/apps/${a.id}.html`);
   llms.push(`## ${a.short || a.name}`, '',

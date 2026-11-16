@@ -25,8 +25,9 @@ const cmd = process.argv[2];
 
 if (cmd === 'todo') {
   const todo = {};
+  const dicts = Object.fromEntries(codes.map(c => [c, read(c + '.json')]));  // read each language file once
   for (const [k, en] of Object.entries(source)) {
-    const missing = codes.filter(c => { const v = read(c + '.json')[k]; return typeof v !== 'string' || !v; });
+    const missing = codes.filter(c => { const v = dicts[c][k]; return typeof v !== 'string' || !v; });
     const changed = k in basis && norm(basis[k]) !== en;
     if (missing.length || changed || !(k in basis)) {
       todo[k] = { en, ...(changed ? { previous_en: basis[k] } : {}), ...(missing.length && missing.length < codes.length ? { missing_in: missing } : {}) };

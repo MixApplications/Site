@@ -1,5 +1,5 @@
-<!--meta {"key":"tl.wipe-usb","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Securely wipe a USB drive on Android: NIST, DoD, Gutmann — Wipe USB","h1":"How do I securely wipe a USB drive from my Android phone?","description":"Open <strong>Wipe USB</strong> in Ultimate USB or USB Tools, choose the method and the verification, and tap <strong>START</strong>. The app overwrites the whole drive, can check it afterwards, and issues an erasure report and certificate. Wiping uses no tokens."} -->
-<h2 data-i18n="tl.wipe-usb.1">Steps</h2>
+<!--meta {"key":"tl.wipe-usb","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Securely wipe a USB drive on Android: NIST, DoD, Gutmann — Wipe USB","h1":"How do I securely wipe a USB drive from my Android phone?","description":"Open <strong>Wipe USB</strong> in Ultimate USB or USB Tools, choose one of five methods and the verification, and tap <strong>START</strong>. The app overwrites the whole drive, can check it afterwards, and issues an erasure report and certificate. Wiping uses no tokens."} -->
+<h2 data-i18n="tl.wipe-usb.1">How do I wipe a USB drive step by step?</h2>
 <ol>
   <li data-i18n="tl.wipe-usb.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
   <li data-i18n="tl.wipe-usb.3">Open the <strong>Disk Management</strong> group and tap <strong>Wipe USB</strong>. All data and all partitions on the drive will be deleted.</li>
@@ -46,7 +46,7 @@
 <p data-i18n="tl.wipe-usb.43">The <strong>Data erasure report</strong> describes the wipe in detail. The <strong>Certificate of erasure</strong> is issued only for a completed erasure. Both are made on your phone, offline, and go nowhere unless you share them. They contain:</p>
 <ul>
   <li data-i18n="tl.wipe-usb.44"><strong>Header:</strong> Report ID, issue date and the time it was generated. Each page footer shows the page number and the report ID.</li>
-  <li data-i18n="tl.wipe-usb.45"><strong>Device:</strong> the drive's maker, model, serial number and capacity.</li>
+  <li data-i18n="tl.wipe-usb.45"><strong>Device:</strong> the drive's maker, model and serial number, its <strong>Reported capacity</strong> and its <strong>Writable capacity</strong>. A drive that stores less than it claims shows a smaller writable capacity.</li>
   <li data-i18n="tl.wipe-usb.46"><strong>Sanitization method:</strong> the erasure method and standard, and each pass.</li>
   <li data-i18n="tl.wipe-usb.47"><strong>Result:</strong> whether it completed, stopped or failed; start and finish time, duration, data written, errors, and every pause and continue.</li>
   <li data-i18n="tl.wipe-usb.48"><strong>Verification:</strong> whether the check passed, failed or was not done.</li>
@@ -66,6 +66,15 @@
   <li data-i18n="tl.wipe-usb.60">Device identifiers are shown as the device reports them.</li>
 </ul>
 
+<h2 data-i18n="tl.wipe-usb.70">Is wiping safe for my drive?</h2>
+<p data-i18n="tl.wipe-usb.71">Yes. The app can read the drive back to check the wipe, and it erases only the drive you confirmed:</p>
+<ul>
+  <li data-i18n="tl.wipe-usb.72">If the drive did not keep its test data, it may be fake. The app says so, keeps its files read-only and offers <strong>Try restore again</strong>. A wipe still runs after an extra <strong>Yes</strong>.</li>
+  <li data-i18n="tl.wipe-usb.73">A job never writes to a different drive than the one it started on.</li>
+</ul>
+<p data-i18n="tl.wipe-usb.74">More than five years of building USB apps, and over 1,000,000 downloads each on Google Play for Ultimate USB and USB Tools.</p>
+<p data-i18n="tl.wipe-usb.75">Read more: <a href="/guides/usb-safety.html">How our USB apps keep your drive and your data safe</a>.</p>
+
 <h2 data-i18n="tl.wipe-usb.61">How many tokens does a wipe use?</h2>
 <p data-i18n="tl.wipe-usb.62">None. Wipe USB is free with every method.</p>
 
@@ -75,5 +84,5 @@
   <li data-i18n="tl.wipe-usb.65">If you leave the app, the wipe is paused the same way and continues when the app is in front again. Without Pro, it is also paused while the phone is offline or an ad blocker is active.</li>
   <li data-i18n="tl.wipe-usb.66">If the wipe is stopped, the drive is removed or the app is closed, the wipe stays saved. When you connect the same drive again, the app shows <strong>Continue wipe</strong> with <strong>Continue</strong> and <strong>Discard</strong>.</li>
   <li data-i18n="tl.wipe-usb.67">If you discard a saved wipe, the drive stays partly erased, and a new wipe starts from the beginning.</li>
-  <li data-i18n="tl.wipe-usb.69">If the connection to the drive fails for a moment, the app tries again and goes on. The report counts these as write retries and bus recoveries.</li>
+  <li data-i18n="tl.wipe-usb.69">If the connection to the drive fails for a moment, the app recovers it and goes on. The report lists these as bus recoveries.</li>
 </ul>

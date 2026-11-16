@@ -67,6 +67,7 @@
   "apps": [
     {
       "id": "ultimate-usb",
+      "released": "2023-05-10",
       "name": "Ultimate USB",
       "pkg": "com.mixapplications.ultimateusb",
       "status": "live",
@@ -130,6 +131,7 @@
     },
     {
       "id": "drofus",
+      "released": "2022-07-03",
       "name": "DROFUS — ISO 2 USB",
       "short": "DROFUS",
       "pkg": "com.mixapplications.rufus",
@@ -183,8 +185,9 @@
     },
     {
       "id": "ventoy",
+      "released": "2021-07-10",
       "name": "Ventoy — Unofficial",
-      "short": "Ventoy",
+      "short": "Ventoy (Unofficial)",
       "pkg": "com.mixapplications.ventoy_app",
       "status": "live",
       "category": "usb",
@@ -229,6 +232,7 @@
     },
     {
       "id": "usb-tools",
+      "released": "2022-06-23",
       "name": "USB Tools",
       "pkg": "com.mixapplications.usbtools",
       "status": "live",
@@ -282,6 +286,7 @@
     },
     {
       "id": "usb-file-manager",
+      "released": "2022-09-01",
       "name": "USB File Manager",
       "pkg": "com.mixapplications.usbfilemanager",
       "status": "live",
@@ -330,6 +335,7 @@
     },
     {
       "id": "chaome",
+      "released": "2017-06-04",
       "name": "ChaoMe Theme Editor",
       "short": "ChaoMe",
       "pkg": "com.mixapplications.miuithemeeditor",
@@ -383,6 +389,7 @@
     },
     {
       "id": "tumtum",
+      "released": "2026-09-18",
       "name": "TumTum",
       "pkg": "com.mixapplications.tumtum",
       "status": "live",
@@ -429,6 +436,7 @@
     },
     {
       "id": "mixdocs",
+      "released": "2026-10-24",
       "name": "MixDocs",
       "pkg": "com.mixapplications.mixdocs",
       "status": "unlisted",
@@ -499,6 +507,7 @@
     },
     {
       "id": "cofferlock",
+      "released": "2026-10-10",
       "name": "Cofferlock",
       "pkg": "com.mixapplications.cofferlock",
       "status": "unlisted",

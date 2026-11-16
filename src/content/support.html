@@ -66,7 +66,7 @@
       <details class="q" data-app="usb usbfm" data-cat="connect">
         <summary data-i18n="sup.16">The app says no device is connected</summary>
         <div class="a">
-          <p data-i18n="sup.17">Our apps talk to the drive directly over USB, so they can open drives Android itself can't, such as NTFS, ext4 or bootable drives. The phone still has to detect the drive. Work through this in order:</p>
+          <p data-i18n="sup.17">Our apps can open drives Android itself can't, such as NTFS, ext4 or bootable drives. The phone still has to detect the drive. Work through this in order:</p>
           <ol>
             <li data-i18n="sup.18">Open your phone's <strong>Settings</strong>, search for <code>OTG</code>, and switch it on if the option exists.</li>
             <li data-i18n="sup.19">Check your adapter is a real <strong>data</strong> OTG adapter, not a charge-only cable. This is by far the most common cause.</li>
@@ -111,14 +111,16 @@
       <details class="q" data-app="usb" data-cat="connect">
         <summary data-i18n="sup.u.19">What does &ldquo;CRITICAL WARNING: BAD DRIVE!&rdquo; mean?</summary>
         <div class="a">
-          <p data-i18n="sup.u.20">When a drive is connected, the app writes a test pattern near its end and reads it back. If that fails, the drive is faulty, the cable is loose, or the drive is counterfeit and smaller than it claims, and a write is likely to fail. If the app offers to scan for the real size, tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
+          <p data-i18n="sup.u.20">When a drive is connected, the app tests it. If the test fails, the drive is faulty, the cable is loose, or the drive is counterfeit and smaller than it claims, and a write is likely to fail. If the app offers to scan for the real size, tap <strong>Yes</strong> to use only the part that works, or try another cable or drive.</p>
         </div>
       </details>
 
       <details class="q" data-app="usb usbfm" data-cat="connect">
         <summary data-i18n="sup.31">The drive disconnects part-way through an operation</summary>
         <div class="a">
-          <p data-i18n="sup.32">A drive that drops out mid-write is almost always a physical connection problem, not a software one:</p>
+          <p data-i18n="sup.32">If the USB connection has a short failure during a job, the app recovers it automatically and the job continues, with no action from you.</p>
+          <p data-i18n="sup.203">If the drive is unplugged or stops answering during a burn, a Raw Write, a backup or a restore, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: most jobs continue where they stopped. A different drive is never written. If you cancel instead, the tokens come back.</p>
+          <p data-i18n="sup.204">If the drive drops out often, the cause is almost always the physical connection:</p>
           <ul>
             <li data-i18n="sup.33">Don't move the phone or the cable while an operation is running — a fractionally loose adapter will disconnect on the smallest movement.</li>
             <li data-i18n="sup.34">Try a different OTG adapter. Cheap adapters fail under sustained load even when they work for a quick file copy.</li>
@@ -131,7 +133,7 @@
         <summary data-i18n="sup.36">Android says the drive is corrupted or unsupported after I format it</summary>
         <div class="a">
           <p data-i18n="sup.37">That notification is expected after a drive is formatted as <strong>NTFS</strong> or <strong>ext2/3/4</strong>, and often after a bootable drive is written. It does not mean anything is wrong. Most Android devices have no built-in driver for these, so the system sees a drive it can't read and reports it as damaged or unsupported.</p>
-          <p data-i18n="sup.38">The write succeeded. Our apps read and write these file systems with their own drivers, so in Ultimate USB and Ventoy the drive still opens in <strong>USB File Manager</strong>.</p>
+          <p data-i18n="sup.38">The write succeeded. In Ultimate USB and Ventoy the drive still opens in <strong>USB File Manager</strong>.</p>
           <p data-i18n="sup.39">Dismiss the notification and <strong>never tap the option to format</strong> — that offer comes from Android, not from us, and it will erase the drive you just prepared.</p>
         </div>
       </details>
@@ -336,7 +338,7 @@
         <summary data-i18n="sup.96">I formatted to NTFS (or ext4) and now my phone can't read the drive</summary>
         <div class="a">
           <p data-i18n="sup.97">The format succeeded. The limitation is Android itself: <strong>most Android devices have no built-in NTFS or ext2/3/4 support</strong>, so the system can't mount the drive even though a PC will read it perfectly. A handful of manufacturers add NTFS support, but it is the exception rather than the rule.</p>
-          <p data-i18n="sup.98">Ultimate USB and Ventoy still open the drive in <strong>USB File Manager</strong>, because they carry their own drivers for these file systems instead of relying on Android's.</p>
+          <p data-i18n="sup.98">Ultimate USB and Ventoy still open the drive in <strong>USB File Manager</strong>.</p>
           <p data-i18n="sup.99">If you need the drive readable by the phone's own file manager and other apps, use <strong>exFAT</strong>. It has no practical file-size limit and is read by Android, Windows and macOS alike.</p>
         </div>
       </details>
@@ -350,7 +352,7 @@
             <li data-i18n="sup.103">Try a different USB port on the adapter or a different adapter entirely.</li>
             <li data-i18n="sup.104">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> to confirm whether the flash itself is at fault. It erases the drive.</li>
           </ol>
-          <p data-i18n="sup.105">A verification failure means data written to the drive read back differently. That is a hardware symptom, and no app can format around it.</p>
+          <p data-i18n="sup.105">A verification failure means the drive did not keep the data written to it. That is a hardware symptom, and no app can format around it.</p>
         </div>
       </details>
 
@@ -361,7 +363,7 @@
           <ul>
             <li data-i18n="sup.108">Manufacturers count in decimal gigabytes; your phone counts in binary. A "64&nbsp;GB" drive genuinely holds about 59&nbsp;GiB.</li>
             <li data-i18n="sup.109">A previous bootable write may have left hidden partitions. Recover the space with <strong>Partition Wizard</strong> or <strong>Format USB</strong> in Ultimate USB and USB Tools, by writing the drive with <strong>Non-bootable</strong> in DROFUS, or with <strong>Clear</strong> in Ventoy.</li>
-            <li data-i18n="sup.110">If the shortfall is large, the drive may be counterfeit. All four apps test the end of the drive when it is connected and show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> if it fails.</li>
+            <li data-i18n="sup.110">If the shortfall is large, the drive may be counterfeit. All four apps test the drive when it is connected and show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> if it fails.</li>
           </ul>
         </div>
       </details>
@@ -395,6 +397,7 @@
             <li data-i18n="sup.120"><strong>Ventoy (Unofficial)</strong> — install once, then drag as many ISOs onto the drive as it holds and pick at boot. Best if you carry several installers.</li>
             <li data-i18n="sup.121"><strong>Ultimate USB</strong> — contains both, plus partitioning, diagnostics and the rest.</li>
           </ul>
+          <p data-i18n="sup.207">To compare them side by side, read <a href="/guides/choose-a-bootable-usb-app.html">how to choose a bootable USB app</a>.</p>
         </div>
       </details>
 
@@ -493,7 +496,7 @@
         <summary data-i18n="sup.150">It stalls near the very end — 99%, or in the last few percent</summary>
         <div class="a">
           <p data-i18n="sup.151">The end of a write is where data reaches the far end of the drive. Stalling there is the classic signature of a drive that <strong>reports more capacity than it physically has</strong>, or whose flash is failing at the far end.</p>
-          <p data-i18n="sup.152">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive). In DROFUS and Ventoy, reconnect the drive: if the end-of-drive test fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and may offer to scan for the size the drive really holds. If the drive is bad, no app can fix it.</p>
+          <p data-i18n="sup.152">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked (it erases the drive). In DROFUS and Ventoy, reconnect the drive: if the drive test fails, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and may offer to scan for the size the drive really holds. If the drive is bad, no app can fix it.</p>
         </div>
       </details>
 
@@ -501,6 +504,8 @@
         <summary data-i18n="sup.153">Can the app damage my USB drive?</summary>
         <div class="a">
           <p data-i18n="sup.154">No. Nothing the app does is unrecoverable at the hardware level — the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
+          <p data-i18n="sup.208">Every format is tested before success is shown, and image writes wait until the drive confirms the data is written. Every version is fully tested before each release, on 4 phones from 3 brands (Android 10 to 16) and 13 USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.</p>
+          <p data-i18n="sup.206"><a href="/guides/usb-safety.html">How our USB apps keep your drive and your data safe</a></p>
         </div>
       </details>
 
@@ -527,7 +532,7 @@
       <details class="q" data-app="usb" data-cat="health">
         <summary data-i18n="sup.161">How do I tell if a drive is counterfeit?</summary>
         <div class="a">
-          <p data-i18n="sup.162">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked. It writes across the whole drive and reads it back, so it <strong>erases everything on it</strong>. A counterfeit drive reports a large capacity but silently discards anything past its real size, which the test exposes. All four apps also test the end of the drive when it is connected and show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> if it fails.</p>
+          <p data-i18n="sup.162">In Ultimate USB and USB Tools, run <strong>Bad Blocks Check</strong> with <strong>Detect fake / counterfeit capacity</strong> ticked. It tests the whole drive, so it <strong>erases everything on it</strong>. A counterfeit drive reports a large capacity but silently discards anything past its real size, which the test exposes. All four apps also test the drive when it is connected and show <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> if it fails.</p>
           <p data-i18n="sup.163">Symptoms before you test: files that copy successfully but are corrupt afterwards, and writes that stall near the end.</p>
         </div>
       </details>
@@ -543,7 +548,7 @@
       <details class="q" data-app="usb" data-cat="health">
         <summary data-i18n="sup.167">Does Wipe USB really erase everything?</summary>
         <div class="a">
-          <p data-i18n="sup.168"><strong>Wipe USB</strong> (Ultimate USB, USB Tools) overwrites the whole drive once with zeros, which matches the "Clear" level in NIST SP 800-88 and defeats all normal file-recovery software. Choose <strong>Sampled (recommended)</strong> or <strong>Full</strong> verification to have it read the drive back, and save the erasure report and certificate when it finishes.</p>
+          <p data-i18n="sup.168"><strong>Wipe USB</strong> (Ultimate USB, USB Tools) overwrites the whole drive once, which matches the "Clear" level in NIST SP 800-88 and defeats all normal file-recovery software. Choose <strong>Sampled (recommended)</strong> or <strong>Full</strong> verification to have it read the drive back, and save the erasure report and certificate when it finishes.</p>
           <p data-i18n="sup.169">It is not a multi-pass or "Purge"-level erase, and we don't claim it is. For legally mandated destruction standards, follow your own policy.</p>
         </div>
       </details>
@@ -668,7 +673,7 @@
       <details class="q" data-app="usb usbfm chaome cofferlock" data-cat="apps">
         <summary data-i18n="sup.194">Is the app available in my language?</summary>
         <div class="a">
-          <p data-i18n="sup.195">The apps are translated into many languages and follow your phone's language setting. If a translation is wrong or missing, send us the screen and the correct wording — corrections from native speakers are genuinely welcome.</p>
+          <p data-i18n="sup.195">Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools are available in 58 languages, and USB File Manager in 46. Cofferlock and TumTum are available in 11 languages, and ChaoMe in 5. The apps follow your phone's language setting, and this website is available in 17 languages. If a translation is wrong or missing, send us the screen and the correct wording — corrections from native speakers are genuinely welcome.</p>
         </div>
       </details>
 

@@ -1,5 +1,5 @@
-<!--meta {"key":"tl.iso-burner","kind":"tool","apps":["ultimate-usb","drofus"],"title":"Bootable USB from an ISO on Android: Windows, Linux — ISO Burner","h1":"How do I make a bootable USB drive from an ISO file on my Android phone?","description":"Open <strong>ISO Burner</strong> in Ultimate USB or DROFUS, tap <strong>Pick ISO</strong>, check the options and tap <strong>START</strong>. It writes Windows, Linux, macOS DMG and Raspberry Pi images, and can also make an MS-DOS or FreeDOS drive or just format the drive."} -->
-<h2 data-i18n="tl.iso-burner.1">Steps</h2>
+<!--meta {"key":"tl.iso-burner","kind":"tool","apps":["ultimate-usb","drofus"],"title":"Bootable USB from an ISO on Android: Windows, Linux — ISO Burner","h1":"How do I make a bootable USB drive from an ISO file on my Android phone?","description":"Open <strong>ISO Burner</strong> in Ultimate USB or DROFUS, tap <strong>Pick ISO</strong>, check the options and tap <strong>START</strong>. It writes Windows, Linux, macOS DMG and Raspberry Pi images, and can also make an MS-DOS or FreeDOS drive or just format the drive. Images written as they are use no tokens; other burns use 1 or 2."} -->
+<h2 data-i18n="tl.iso-burner.1">How do I burn an image to a USB drive step by step?</h2>
 <ol>
   <li data-i18n="tl.iso-burner.2">Connect the drive to your phone with a USB OTG adapter. Open <strong>DROFUS</strong>, which starts on the ISO Burner screen, or in <strong>Ultimate USB</strong> open the <strong>Bootable &amp; Image Writing</strong> group and tap <strong>ISO Burner</strong>.</li>
   <li data-i18n="tl.iso-burner.3"><strong>Boot Selection</strong>: keep <strong>Disk or ISO image</strong> to write an image file, or choose <strong>Non-bootable</strong>, <strong>MS-DOS</strong> or <strong>FreeDOS</strong>. Changing it resets your other choices.</li>
@@ -8,9 +8,10 @@
   <li data-i18n="tl.iso-burner.6">Tap <strong>START</strong>. The app shows <strong>All Data Will Be Permanently Deleted</strong> and how many tokens the burn uses. Tap <strong>OK</strong> to start.</li>
   <li data-i18n="tl.iso-burner.7">Keep the app in front until the burn finishes.</li>
 </ol>
+<p data-i18n="tl.iso-burner.143">It works with USB flash drives, SD card adapters and external SSDs.</p>
 <p class="note" data-i18n="tl.iso-burner.8">DROFUS is an independent app, not affiliated with Rufus.</p>
 
-<h2 data-i18n="tl.iso-burner.9">Options and their values</h2>
+<h2 data-i18n="tl.iso-burner.9">Which options can I set, and what are the defaults?</h2>
 <p data-i18n="tl.iso-burner.10">The app shows only the options that fit the chosen mode and image.</p>
 <div class="table-container">
 <table>
@@ -71,6 +72,7 @@
 
 <h2 data-i18n="tl.iso-burner.94">How do I write a Linux ISO, and can I add persistence?</h2>
 <p data-i18n="tl.iso-burner.95">By default the app writes a Linux ISO as it is, keeping its original layout. This uses no tokens.</p>
+<p data-i18n="tl.iso-burner.144">Modern Linux distributions released after 2010 are supported, such as Ubuntu, Fedora, Debian and Arch.</p>
 <p data-i18n="tl.iso-burner.96">To choose the file system and partition table yourself, or to add persistence, tick <strong>Advanced Options (Filesystem, Partition &amp; Persistence)</strong>. The app then copies the image's files to the drive instead, which uses 2 tokens. The tick is shown only for ISOs that can be written both ways.</p>
 <ul>
   <li data-i18n="tl.iso-burner.97"><strong>Persistent partition size</strong>: move the slider from <strong>Disabled</strong> to add a persistent partition. It keeps your files and changes between boots.</li>
@@ -79,7 +81,7 @@
 </ul>
 
 <h2 data-i18n="tl.iso-burner.100">Can I write a macOS DMG or a Raspberry Pi image?</h2>
-<p data-i18n="tl.iso-burner.101">Yes. Keep <strong>Disk or ISO image</strong> and pick the file. The app writes macOS DMG images (Intel-based), Raspberry Pi OS and other ARM images as they are, with no file system or partition options. These writes use no tokens. An image inside an archive can be written too.</p>
+<p data-i18n="tl.iso-burner.101">Yes. Keep <strong>Disk or ISO image</strong> and pick the file. The app writes macOS DMG images (Intel-based), Raspberry Pi OS and other ARM images as they are, with no file system or partition options. These writes use no tokens. Compressed images (.gz, .xz, .bz2 or .zip, holding one bootable disk image) are unpacked as they are written.</p>
 
 <h2 data-i18n="tl.iso-burner.102">How do I make an MS-DOS or FreeDOS drive, or just format the drive?</h2>
 <p data-i18n="tl.iso-burner.103">Choose <strong>MS-DOS</strong> or <strong>FreeDOS</strong> under <strong>Boot Selection</strong> and tap <strong>START</strong>. No image file is needed. This uses 1 token.</p>
@@ -88,15 +90,16 @@
 <h2 data-i18n="tl.iso-burner.105">What does the app check before it writes?</h2>
 <p data-i18n="tl.iso-burner.106">The app checks the drive and the image first, and it stops or asks you when something is wrong:</p>
 <ul>
-  <li data-i18n="tl.iso-burner.107"><strong>Fake capacity:</strong> the app checks the drive when you connect it. If it may be fake or faulty, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really has. A burn on such a drive is refused until the real size is set; otherwise use a different drive.</li>
+  <li data-i18n="tl.iso-burner.107"><strong>Fake capacity:</strong> the app checks the drive when you connect it. If it may be fake or faulty, the app shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really has. A burn on such a drive is refused until the real size is set, and the tokens come back. If the drive did not keep its test data, the app says so, keeps its files read-only and offers <strong>Try restore again</strong>. A burn still runs after an extra <strong>Yes</strong>; if you answer <strong>No</strong>, the burn ends and the tokens come back.</li>
   <li data-i18n="tl.iso-burner.108"><strong>Drive cannot be used:</strong> if the app cannot read or write the drive, it shows <strong>Failed to read USB device.</strong> and asks you to reinsert the drive. The drive may be write-protected, or the cable or connector may be faulty.</li>
+  <li data-i18n="tl.iso-burner.145"><strong>Empty card reader:</strong> if there is no card in the card reader, the app says there is no card or disk in the drive.</li>
   <li data-i18n="tl.iso-burner.130"><strong>Write-protected drive:</strong> a drive that is write-protected or does not take writes is refused at the start, with one message, before any question and before any token is used.</li>
   <li data-i18n="tl.iso-burner.109"><strong>Drive too small:</strong> the app shows <strong>Not enough space on the drive.</strong> with the space needed and the space available. It counts the drive size minus 100 MB as available.</li>
   <li data-i18n="tl.iso-burner.110"><strong>Drives over 2 TB:</strong> MBR and FAT32 cannot be used, and the app says so.</li>
   <li data-i18n="tl.iso-burner.111"><strong>Truncated or corrupt ISO:</strong> when an ISO looks truncated or corrupted, which usually means the download was interrupted, the app says so and asks whether to continue anyway. An image that is incomplete or damaged is refused, with a message to download it again.</li>
   <li data-i18n="tl.iso-burner.131"><strong>Checking image...</strong>: before the drive is erased, the app checks the image. An image that is incomplete or cannot be read is refused, and nothing is written to the drive.</li>
   <li data-i18n="tl.iso-burner.112"><strong>Not bootable:</strong> the app shows <strong>The selected file is not a bootable image.</strong> and asks whether to continue anyway. A file it cannot use shows <strong>Unsupported File.</strong></li>
-  <li data-i18n="tl.iso-burner.133"><strong>No BIOS boot loader:</strong> if the image has no boot loader for BIOS, the drive is finished as UEFI-only, and the app shows a warning.</li>
+  <li data-i18n="tl.iso-burner.133"><strong>No BIOS boot loader:</strong> if the BIOS boot loader cannot be installed for a Linux image copied file by file, the drive is finished with the note <strong>It may start only on UEFI computers</strong>.</li>
   <li data-i18n="tl.iso-burner.113"><strong>File no longer there:</strong> if the image cannot be opened when you tap <strong>START</strong>, the app shows <strong>Cannot Open File</strong>.</li>
   <li data-i18n="tl.iso-burner.132"><strong>File cannot be picked:</strong> the app shows <strong>Storage is not ready</strong>, or <strong>Pick the file from Internal storage, or copy it first</strong>.</li>
   <li data-i18n="tl.iso-burner.114"><strong>Phone storage:</strong> with High-speed mode on, the app checks the free space in phone storage first.</li>
@@ -113,6 +116,16 @@
   <li data-i18n="tl.iso-burner.140">The drive could not be set up as NTFS. Choose FAT32 or exFAT.</li>
   <li data-i18n="tl.iso-burner.141">The phone does not have enough memory.</li>
 </ul>
+
+<h2 data-i18n="tl.iso-burner.146">Is a burn safe for my drive?</h2>
+<p data-i18n="tl.iso-burner.147">Yes. Every burn that makes a file system is tested before success is shown, and image writes wait until the drive confirms the data is written. Besides the checks above:</p>
+<ul>
+  <li data-i18n="tl.iso-burner.148">Every burn that formats the drive checks and tests the file system before the app reports success.</li>
+  <li data-i18n="tl.iso-burner.149">A burn that fails or is cancelled leaves the drive marked to be formatted again, so a half-written drive is never mistaken for a good one.</li>
+  <li data-i18n="tl.iso-burner.150">If the USB connection fails for a moment during a job, the app recovers it automatically and the job continues.</li>
+</ul>
+<p data-i18n="tl.iso-burner.151">More than five years of building USB apps, and over 1,000,000 downloads each on Google Play for Ultimate USB and DROFUS.</p>
+<p data-i18n="tl.iso-burner.152">Read more: <a href="/guides/usb-safety.html">How our USB apps keep your drive and your data safe</a>.</p>
 
 <h2 data-i18n="tl.iso-burner.116">How many tokens does a burn use?</h2>
 <div class="table-container">
@@ -134,5 +147,5 @@
 <h2 data-i18n="tl.iso-burner.126">What happens if the burn is interrupted?</h2>
 <p data-i18n="tl.iso-burner.127">Keep the app in front. When it goes to the background, Windows, Linux and raw-image burns pause, and they continue when you come back to the app while it is still running. The app keeps the screen on while it is shown.</p>
 <p data-i18n="tl.iso-burner.128">In the free version, a running burn also pauses while the phone has no internet connection or an ad blocker or blocking Private DNS is active, and continues when that is fixed. With Pro, only the background pause applies.</p>
-<p data-i18n="tl.iso-burner.129">If the drive is unplugged or stops answering, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: the burn continues from where it stopped. If you cancel instead, the tokens come back.</p>
+<p data-i18n="tl.iso-burner.129">If the drive is unplugged or stops answering, the app shows <strong>Device Removed</strong> with <strong>Retry</strong>. Plug the same drive back in and tap <strong>Retry</strong>: most burns continue where they stopped (a Windows To Go burn in normal mode repeats its image step). If you cancel instead, the tokens come back.</p>
 <p data-i18n="tl.iso-burner.142">If you plug in a different drive during a burn, the app never writes to it.</p>

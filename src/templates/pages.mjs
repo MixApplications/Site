@@ -79,7 +79,7 @@ ${list.map(card).join('\n')}
       <div>
         <p class="eyebrow" data-i18n="home.eyebrow">Android apps by MixApplications</p>
         <h1 data-i18n="home.1">Android apps that do the real work on <em>your phone</em>.</h1>
-        <p class="sub" data-i18n="home.2">MixApplications builds Android utilities and games: bootable USB drives, drive repair and USB file management over a plain OTG connection, MIUI and HyperOS theme building, and calm puzzle games. <strong>Your files are processed on your device and never uploaded. No PC, and no root needed for USB drives.</strong></p>
+        <p class="sub" data-i18n="home.2">MixApplications builds Android utilities and games: bootable USB drives, drive repair and USB file management over a plain OTG connection, PDF and Office documents, a private vault for photos and files, MIUI and HyperOS theme building, and calm puzzle games. <strong>Your files are processed on your device and never uploaded. No PC, and no root needed for USB drives.</strong></p>
         <div class="ctas">
           <a class="btn" href="#apps"><span data-i18n="home.cta.apps">Browse the apps</span></a>
           <a class="btn btn--ghost" href="/contact.html"><span data-i18n="home.cta.help">Get support</span></a>
@@ -112,11 +112,24 @@ ${retired.map(retiredItem).join('\n')}
     </section>
 
     <section>
+      <div class="shelf"><h2 data-i18n="home.tr.h">Why do millions of people trust our USB apps?</h2></div>
+      <p class="trustlead" data-i18n="home.tr.1">We have published Android apps on Google Play since 2017 and built USB apps for more than five years. Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools each have over 1,000,000 downloads and are available in 58 languages.</p>
+      <p class="trustlead" data-i18n="home.tr.13">Every version is fully tested before each release, on 4 phones from 3 brands (Android 10 to 16) and 13 USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.</p>
+      <div class="principles">
+        <div class="tile reveal" style="--c:var(--blue)"><b data-i18n="home.tr.2">Every drive is checked</b><span data-i18n="home.tr.3">Each drive is tested when you connect it. Read-only and fake drives are caught, and nothing is erased without your OK.</span></div>
+        <div class="tile reveal" style="--c:var(--green)"><b data-i18n="home.tr.4">Every format is tested</b><span data-i18n="home.tr.5">Every format is tested before success is shown, and image writes wait until the drive confirms the data is written.</span></div>
+        <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.tr.6">The connection recovers</b><span data-i18n="home.tr.7">A short USB connection failure is recovered by itself and the job continues. Re-plug the same drive and tap Retry to go on.</span></div>
+        <div class="tile reveal" style="--c:var(--amber)"><b data-i18n="home.tr.8">Never the wrong drive</b><span data-i18n="home.tr.9">A job only writes to the drive it started on, and your tokens come back when a job does not complete.</span></div>
+      </div>
+      <p class="trustlinks"><a href="/guides/why-mixapplications.html" data-i18n="home.tr.12">Why our apps are the best choice</a> · <a href="/guides/usb-safety.html" data-i18n="home.tr.10">How our USB apps keep your drive and your data safe</a> · <a href="/guides/choose-a-bootable-usb-app.html" data-i18n="home.tr.11">How to choose a safe bootable USB app</a></p>
+    </section>
+
+    <section>
       <div class="shelf"><h2 data-i18n="home.29">How every app here is built</h2></div>
       <div class="principles">
         <div class="tile reveal" style="--c:var(--blue)"><b data-i18n="home.pr.1">On-device processing</b><span data-i18n="home.prd.1">Your files, drives and documents are processed on your phone and never uploaded to us.</span></div>
         <div class="tile reveal" style="--c:var(--green)"><b data-i18n="home.pr.2">No root for USB drives</b><span data-i18n="home.prd.2">Everything works over USB-OTG on a stock phone. Root is only ever needed for internal SD cards.</span></div>
-        <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.pr.3">Native low-level engine</b><span data-i18n="home.prd.3">File systems and partition tables are handled by native C/C++ code written for Android.</span></div>
+        <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.pr.3">Every drive opens</b><span data-i18n="home.prd.3">NTFS, exFAT and ext2/3/4 drives open in the app, even when your phone cannot read them.</span></div>
         <div class="tile reveal" style="--c:var(--amber)"><b data-i18n="home.pr.4">Free first</b><span data-i18n="home.prd.4">Every app is free to use, supported by ads. Where an app has a paid upgrade, it is a one-time purchase — never a subscription.</span></div>
       </div>
     </section>
@@ -129,16 +142,17 @@ ${retired.map(retiredItem).join('\n')}
   };
   return {
     path: '/index.html', nav: 'apps',
-    title: 'MixApplications — USB Tools, Theme Editor and Games for Android', titleKey: 'home.title',
-    description: 'Android apps by MixApplications: create bootable USB drives without a PC, multi-boot with Ventoy, format and repair drives, manage USB files on NTFS/exFAT/ext4, build MIUI and HyperOS themes, and play the TumTum puzzle game. Everything is processed on your device.',
+    title: 'MixApplications — USB, PDF, Vault, Theme and Game Apps for Android', titleKey: 'home.title',
+    description: 'Android apps by MixApplications: create bootable USB drives without a PC, multi-boot with Ventoy, format and repair drives, manage USB files on NTFS/exFAT/ext4, edit and convert PDF and Office documents, lock photos and files in a private vault, build MIUI and HyperOS themes, and play the TumTum puzzle game. Everything is processed on your device.',
     head: `<script type="application/ld+json">${JSON.stringify(ld)}</script>\n`,
     main,
   };
 }
 
 // ---------------------------------------------------------------- app page
-function proof(p) {
+function proof(p, a) {
   const items = [];
+  if (a.released) items.push(`<div><b>${a.released.slice(0, 4)}</b><span data-i18n="app.since">on Google Play since</span></div>`);
   if (installsNumber(p.installs) > 0) items.push(`<div><b>${compact(installsNumber(p.installs))}+</b><span data-i18n="home.dl">downloads</span></div>`);
   if (typeof p.score === 'number' && p.score >= MIN_RATING) items.push(`<div><b>${p.score.toFixed(1)} ★</b><span data-i18n="app.rating">average rating</span></div>`);
   if (p.ratings && typeof p.score === 'number' && p.score >= MIN_RATING) items.push(`<div><b>${reviews(p.ratings)}</b><span data-i18n="home.rv">reviews</span></div>`);
@@ -191,7 +205,7 @@ ${a.desc || a.headline ? `      <section class="panel about">
 ${a.definition ? `        <p class="lead" data-i18n="app.${a.id}.def">${a.definition}</p>
 ` : ''}${a.headline ? `        <p class="headline" data-i18n="app.${a.id}.h">${a.headline}</p>
 ` : ''}${a.desc ? `        <p class="lead" data-i18n="${a.descKey}">${a.desc}</p>
-` : ''}${proof(p)}${(a.features || []).length ? `        <div class="features">
+` : ''}${proof(p, a)}${(a.features || []).length ? `        <div class="features">
 ${a.features.map((f, i) => `          <div class="feature"><h3 data-i18n="app.${a.id}.f${i + 1}">${f.title}</h3><p data-i18n="app.${a.id}.f${i + 1}d">${f.text}</p></div>`).join('\n')}
         </div>
 ` : ''}${a.chips && a.chips.length ? `        <div class="chips">${a.chips.map(c => `<span class="chip">${c}</span>`).join('')}</div>
@@ -235,6 +249,7 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
     description: [a.definition, a.headline, a.desc].filter(Boolean).map(stripTags).join(' '),
     ...(a.features ? { featureList: a.features.map(f => `${f.title}: ${f.text}`) } : {}),
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    ...(a.released ? { datePublished: a.released } : {}),
     ...(p.updated ? { dateModified: p.updated } : {}),
   };
   // No aggregateRating: Google's review-snippet rules forbid ratings taken from another site (Google Play);
@@ -305,6 +320,13 @@ ${fragment.replace('<!--applist-->', applist).replace(/\{count\}/g, String(count
       return `Answers to the most common questions about ${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}, and how to contact MixApplications by email or WhatsApp.`;
     })(),
     scripts: ['support.js'],
+    head: (() => {
+      const qa = [...fragment.matchAll(/<details class="q"[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>\s*<div class="a">([\s\S]*?)<\/div>\s*<\/details>/g)];
+      if (!qa.length) return '';
+      const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qa.map(([, q, a]) => ({
+        '@type': 'Question', name: stripTags(q), acceptedAnswer: { '@type': 'Answer', text: stripTags(a) } })) };
+      return `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>\n`;
+    })(),
     main,
   };
 }
@@ -378,6 +400,11 @@ ${appCards}</main>`;
       { '@type': 'ListItem', position: crumbs.length + 1, name: stripTags(meta.h1), item: SITE + path },
     ],
   }];
+  if (meta.kind === 'guide') ld.push({ '@context': 'https://schema.org', '@type': 'Article', headline: stripTags(meta.h1),
+    description: stripTags(meta.description), url: SITE + path, dateModified: updated, inLanguage: 'en',
+    author: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/' },
+    publisher: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/', logo: SITE + '/assets/logo.png' },
+    about: inApps.map(x => ({ '@type': 'SoftwareApplication', name: x.short || x.name, operatingSystem: 'Android', url: SITE + `/apps/${x.id}.html` })) });
   if (meta.kind === 'faq') {
     const qa = [...body.matchAll(/<details class="q">\s*<summary[^>]*>([\s\S]*?)<\/summary>\s*<div class="a">([\s\S]*?)<\/div>\s*<\/details>/g)];
     if (!qa.length) throw new Error(`${rel}: FAQ page without <details class="q"> answers`);

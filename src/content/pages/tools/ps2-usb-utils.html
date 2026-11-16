@@ -1,5 +1,5 @@
-<!--meta {"key":"tl.ps2-usb-utils","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Add PS2 games to a USB drive for OPL on Android — PS2 USB Utils","h1":"How do I add PS2 games to a USB drive for OPL from my phone?","description":"Open <strong>PS2 USB Utils</strong> in Ultimate USB or USB Tools. Tap <strong>Fix</strong> if the drive is not FAT32 or exFAT with MBR, then tap <strong>Import &amp; Split ISO</strong>. Games are copied directly or split into USBExtreme (.ul) parts. It also imports PS1 .VCD games for POPStarter."} -->
-<h2 data-i18n="tl.ps2-usb-utils.1">Steps</h2>
+<!--meta {"key":"tl.ps2-usb-utils","kind":"tool","apps":["ultimate-usb","usb-tools"],"title":"Add PS2 games to a USB drive for OPL on Android — PS2 USB Utils","h1":"How do I add PS2 games to a USB drive for OPL from my phone?","description":"Open <strong>PS2 USB Utils</strong> in Ultimate USB or USB Tools. Tap <strong>Fix</strong> if the drive is not FAT32 or exFAT with MBR, then tap <strong>Import &amp; Split ISO</strong>. Games are copied directly or split into USBExtreme (.ul) parts. It also imports PS1 .VCD games for POPStarter. Only a Fix that formats uses a token."} -->
+<h2 data-i18n="tl.ps2-usb-utils.1">How do I add a PS2 game step by step?</h2>
 <ol>
   <li data-i18n="tl.ps2-usb-utils.2">Connect the drive to your phone with a USB OTG adapter and open <strong>Ultimate USB</strong> or <strong>USB Tools</strong>.</li>
   <li data-i18n="tl.ps2-usb-utils.3">Open the <strong>Gaming Tools</strong> group and tap <strong>PS2 USB Utils</strong>.</li>
@@ -68,6 +68,17 @@
 <h2 data-i18n="tl.ps2-usb-utils.65">How do I download game covers?</h2>
 <p data-i18n="tl.ps2-usb-utils.66">Tap <strong>Download Game Arts</strong> and choose <strong>What to download</strong>: <strong>Artwork and game info</strong> or <strong>Artwork only</strong>. This needs an internet connection. A game with an unusual or renamed game ID may have no artwork to match.</p>
 <p data-i18n="tl.ps2-usb-utils.72">With <strong>Artwork and game info</strong>, the game info is saved in <code>CFG/&lt;ID&gt;.cfg</code>, where &lt;ID&gt; is the game ID. A CFG file that is already on the drive is never replaced.</p>
+
+<h2 data-i18n="tl.ps2-usb-utils.75">Is PS2 USB Utils safe for my drive?</h2>
+<p data-i18n="tl.ps2-usb-utils.76">Yes. The app tests every format before it reports success, and it protects the drive at each step:</p>
+<ul>
+  <li data-i18n="tl.ps2-usb-utils.77">When <strong>Fix</strong> formats the drive, it checks and tests the new file system before the app reports success.</li>
+  <li data-i18n="tl.ps2-usb-utils.78">If the drive did not keep its test data, it may be fake. The app says so, keeps its files read-only and offers <strong>Try restore again</strong>. <strong>Fix</strong> still formats the drive after an extra <strong>Yes</strong>; if you answer <strong>No</strong>, the token comes back.</li>
+  <li data-i18n="tl.ps2-usb-utils.79">A job never writes to a different drive than the one it started on.</li>
+  <li data-i18n="tl.ps2-usb-utils.80">If the USB connection fails for a moment during a job, the app recovers it automatically and the job continues.</li>
+</ul>
+<p data-i18n="tl.ps2-usb-utils.81">More than five years of building USB apps, and over 1,000,000 downloads each on Google Play for Ultimate USB and USB Tools.</p>
+<p data-i18n="tl.ps2-usb-utils.82">Read more: <a href="/guides/usb-safety.html">How our USB apps keep your drive and your data safe</a>.</p>
 
 <h2 data-i18n="tl.ps2-usb-utils.67">Does PS2 USB Utils use tokens?</h2>
 <p data-i18n="tl.ps2-usb-utils.68">Only <strong>Fix</strong> uses a token, and only when it formats the drive: <strong>1 token</strong>. The app shows the cost before it starts, and you earn a token by watching one short rewarded video. Adding, exporting, renaming, deleting games and downloading covers use no tokens. With Pro, Fix uses no tokens.</p>

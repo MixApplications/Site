@@ -1,5 +1,5 @@
-<!--meta {"key":"tl.ventoy","kind":"tool","apps":["ultimate-usb","ventoy"],"title":"Install Ventoy on a USB drive from Android: MBR or GPT — Ventoy","h1":"How do I install Ventoy on a USB drive from my Android phone?","description":"Open <strong>Ventoy</strong>, choose the partition table, file system and options, and tap <strong>Install</strong>. Then copy ISO files to the drive with <strong>Copy File To USB</strong> and pick one from the Ventoy menu when the PC starts. No PC is needed to set up the drive."} -->
-<h2 data-i18n="tl.ventoy.1">Steps</h2>
+<!--meta {"key":"tl.ventoy","kind":"tool","apps":["ultimate-usb","ventoy"],"title":"Install Ventoy on a USB drive from Android: MBR or GPT — Ventoy","h1":"How do I install Ventoy on a USB drive from my Android phone?","description":"Open <strong>Ventoy</strong>, choose the partition table, file system and options, and tap <strong>Install</strong>. Then copy ISO files to the drive with <strong>Copy File To USB</strong> and pick one from the Ventoy menu when the PC starts. No PC is needed to set up the drive. Install uses 2 tokens, Update and Clear 1 each."} -->
+<h2 data-i18n="tl.ventoy.1">How do I install Ventoy step by step?</h2>
 <ol>
   <li data-i18n="tl.ventoy.2">Connect the drive to your phone with a USB OTG adapter. Open <strong>Ventoy (Unofficial)</strong>, or in <strong>Ultimate USB</strong> open the <strong>Bootable &amp; Image Writing</strong> group and tap <strong>Ventoy - Unofficial</strong>.</li>
   <li data-i18n="tl.ventoy.3"><strong>Ventoy In Package:</strong> shows the Ventoy version the app will install. <strong>Ventoy In Device:</strong> shows the version already on the drive, and stays empty when there is none.</li>
@@ -13,7 +13,7 @@
 <p data-i18n="tl.ventoy.10">Options marked with an asterisk (*) are used only by the install. When Ventoy is already on the drive, the screen shows that drive's partition table, file system, Secure Boot and alignment settings. After an install, the app confirms the Ventoy version on the drive.</p>
 <p class="note" data-i18n="tl.ventoy.11">Ventoy is built into the app and ready to install, and you can choose another Ventoy version (see below). Ventoy (Unofficial) is an independent app, not affiliated with the Ventoy project.</p>
 
-<h2 data-i18n="tl.ventoy.12">Options and their values</h2>
+<h2 data-i18n="tl.ventoy.12">Which options can I set, and what are the defaults?</h2>
 <div class="table-container">
 <table>
   <thead><tr><th data-i18n="tl.ventoy.13">Option</th><th data-i18n="tl.ventoy.14">Values</th><th data-i18n="tl.ventoy.15">Default</th></tr></thead>
@@ -27,6 +27,19 @@
 </table>
 </div>
 <p data-i18n="tl.ventoy.31">Ventoy needs a drive with 512-byte sectors. On a drive with 4096-byte sectors (4K native), the app says that Ventoy cannot be installed on this drive, and nothing is installed.</p>
+
+<h2 data-i18n="tl.ventoy.101">Is installing Ventoy safe for my drive?</h2>
+<p data-i18n="tl.ventoy.102">Yes. The app tests every Ventoy install before it reports success, and it protects the drive at each step:</p>
+<ul>
+  <li data-i18n="tl.ventoy.103">The app checks the drive when you connect it. If the drive may be fake or faulty, it shows <strong>&#128721; CRITICAL WARNING: BAD DRIVE!</strong> and offers to scan for the size the drive really has.</li>
+  <li data-i18n="tl.ventoy.104">If the drive did not keep its test data, it may be fake. The app says so, keeps its files read-only and offers <strong>Try restore again</strong>. <strong>Install</strong> still runs after an extra <strong>Yes</strong>; if you answer <strong>No</strong>, the tokens come back.</li>
+  <li data-i18n="tl.ventoy.105">A drive that is write-protected or does not take writes is recognised as soon as you start a job: one clear message, and nothing is charged.</li>
+  <li data-i18n="tl.ventoy.106"><strong>Install</strong> checks and tests the new file system before the app reports success.</li>
+  <li data-i18n="tl.ventoy.107">A job never writes to a different drive than the one it started on.</li>
+  <li data-i18n="tl.ventoy.112">If the USB connection fails for a moment during a job, the app recovers it automatically and the job continues.</li>
+</ul>
+<p data-i18n="tl.ventoy.108">More than five years of building USB apps, and over 1,000,000 downloads each on Google Play for Ultimate USB and Ventoy (Unofficial).</p>
+<p data-i18n="tl.ventoy.109">Read more: <a href="/guides/usb-safety.html">How our USB apps keep your drive and your data safe</a>.</p>
 
 <h2 data-i18n="tl.ventoy.32">Can I install Ventoy with GPT, or only MBR?</h2>
 <p data-i18n="tl.ventoy.33">Both. Choose MBR or GPT under <strong>*Partition Table:</strong> before you tap <strong>Install</strong>. Drives larger than 2 TB always use GPT.</p>
@@ -62,6 +75,7 @@
 </ul>
 <p data-i18n="tl.ventoy.55">To delete or rename files on the drive, tap <strong>USB File Manager</strong>. An ISO you delete leaves the boot menu. <strong>Copy File To USB</strong>, the download button and <strong>USB File Manager</strong> work only when Ventoy is on the drive.</p>
 <p data-i18n="tl.ventoy.98">In <strong>USB File Manager</strong> you can pick several files at once. If a file cannot be read during an import, the app skips it and copies the rest.</p>
+<p data-i18n="tl.ventoy.111"><strong>USB File Manager</strong> can also open a file from the drive in another app without copying it first.</p>
 
 <h2 data-i18n="tl.ventoy.56">Can I download ISO files straight to the drive?</h2>
 <p data-i18n="tl.ventoy.57">Yes. Tap <strong>Download File Directly To USB FROM INTERNET</strong>. The app opens its own browser, and the file you download is written to the Ventoy drive, with the same free-space check and replace question as a copy. Downloading uses no tokens.</p>
@@ -96,7 +110,9 @@
 <h2 data-i18n="tl.ventoy.79">What can I change with Config Hub and Theme Manager?</h2>
 <p data-i18n="tl.ventoy.80"><strong>Config Hub</strong> changes Ventoy's settings on the drive (its <code>ventoy.json</code> file) without a computer. It has the tabs <strong>Boot</strong>, <strong>Names</strong>, <strong>Tips</strong>, <strong>Security</strong> and <strong>Persistence</strong>. After you save, the app shows <strong>Saved. Takes effect on next boot.</strong></p>
 <p data-i18n="tl.ventoy.81">On the <strong>Boot</strong> tab you set, for example, <strong>Menu timeout</strong> (0 to 3600 seconds), <strong>Default menu mode</strong> (<strong>List</strong> or <strong>TreeView</strong>), <strong>Menu language</strong>, <strong>Keyboard layout</strong>, the file types to hide from the menu, <strong>Windows 11: bypass hardware checks</strong> and <strong>Windows 11: bypass online account</strong>. Settings in <code>ventoy.json</code> that the app does not show are kept.</p>
+<p data-i18n="tl.ventoy.99">Config Hub can also rename boot-menu entries, set a boot password and passwords for each file type, and set the tips text, its position and its color. It can repair a damaged <code>ventoy.json</code> file, with a backup.</p>
 <p data-i18n="tl.ventoy.82"><strong>Theme Manager</strong> changes how the Ventoy boot menu looks, with GRUB2 themes. Download a GRUB2 theme archive (zip, tar.gz or tar.xz), come back to <strong>Theme Manager</strong>, tap <strong>Import Theme</strong> and select the file. If the archive holds several themes, the app asks you to choose one. <strong>Use default</strong> goes back to the default theme.</p>
+<p data-i18n="tl.ventoy.100">In <strong>Theme Manager</strong> you can also apply, rename or delete a theme, and set the menu resolution.</p>
 <p data-i18n="tl.ventoy.83">Config Hub and Theme Manager work only when Ventoy is on the drive, and they use no tokens.</p>
 
 <h2 data-i18n="tl.ventoy.84">How many tokens does Ventoy use?</h2>
@@ -118,3 +134,4 @@
 <p data-i18n="tl.ventoy.94">Install, Update and Clear have no Cancel button, so let them finish. Keep the app in front: when it goes to the background, the job pauses, and it continues when you come back to the app. The app keeps the screen on while it is shown.</p>
 <p data-i18n="tl.ventoy.95">In the free version, a running job also pauses while the phone has no internet connection or an ad blocker or blocking Private DNS is active, and continues when that is fixed. With Pro, only the background pause applies.</p>
 <p data-i18n="tl.ventoy.96">If the drive is removed or stops answering, the job ends and the app shows <strong>The drive was removed or stopped answering. Reconnect it and try again.</strong> The tokens come back. Reconnect the drive and run the job again.</p>
+<p data-i18n="tl.ventoy.110">Each failure has its own message, so you know what went wrong.</p>
