@@ -819,7 +819,7 @@
  "gd.choose-usb-app.20": "Czy można wybrać wersję Ventoy?",
  "gd.choose-usb-app.21": "W Ultimate USB i Ventoy (Unofficial) panel <strong>Wersja Ventoy</strong> pokazuje wersję wbudowaną, pobrane wersje oraz <strong>Inna wersja…</strong>, gdzie jest lista kolejnych wydań Ventoy. Wybrana wersja jest używana do instalacji i aktualizacji.",
  "gd.choose-usb-app.22": "Czy sprawdza system plików po formatowaniu?",
- "gd.choose-usb-app.23": "W Ultimate USB i USB Tools <a href=\"/tools/format-usb.html\">Formatuj USB</a> testuje dysk po formatowaniu i dopiero wtedy zgłasza sukces. Jeśli test się nie powiedzie, formatowanie jest zgłaszane jako nieudane.",
+ "gd.choose-usb-app.23": "W Ultimate USB, DROFUS, Ventoy (Unofficial) i USB Tools każde zadanie, które formatuje dysk, sprawdza i testuje potem system plików i dopiero wtedy zgłasza sukces. Dotyczy to <a href=\"/tools/format-usb.html\">Formatuj USB</a>, <a href=\"/tools/iso-burner.html\">Nagrywarki ISO</a> i instalacji <a href=\"/tools/ventoy.html\">Ventoy</a>. Jeśli test się nie powiedzie, zadanie jest zgłaszane jako nieudane.",
  "gd.choose-usb-app.24": "Czy działa na telefonie bez konta?",
  "gd.choose-usb-app.25": "Twoje pliki i obrazy powinny zostać na telefonie. W naszych aplikacjach USB (Ultimate USB, DROFUS, Ventoy (Unofficial), USB Tools) pliki są przetwarzane na telefonie, a ich zawartość nigdy nie jest wysyłana; nie ma konta ani rejestracji. Darmowe wersje potrzebują połączenia z internetem dla reklam, a trwające zadania czekają, gdy telefon jest offline; Pro działa offline.",
  "gd.choose-usb-app.26": "Która aplikacja wykonuje który test?",
@@ -2572,5 +2572,7 @@
  "tl.wipe-usb.69": "Jeśli połączenie z dyskiem na chwilę zawiedzie, aplikacja próbuje ponownie i kontynuuje. Raport liczy to jako ponowienia zapisu i odzyskania magistrali.",
  "tl.wipe-usb.desc": "Otwórz <strong>Wyczyść USB</strong> w Ultimate USB lub USB Tools, wybierz metodę i weryfikację, a potem dotknij <strong>START</strong>. Aplikacja nadpisuje cały dysk, może go potem sprawdzić i wystawia raport oraz certyfikat usunięcia. Czyszczenie nie zużywa żetonów.",
  "tl.wipe-usb.h1": "Jak bezpiecznie wymazać dysk USB z telefonu z Androidem?",
- "tl.wipe-usb.title": "Bezpieczne wymazywanie dysku USB na Androidzie: NIST, DoD, Gutmann — Wyczyść USB"
+ "tl.wipe-usb.title": "Bezpieczne wymazywanie dysku USB na Androidzie: NIST, DoD, Gutmann — Wyczyść USB",
+ "gd.choose-usb-app.97": "Tak",
+ "gd.choose-usb-app.98": "Tak"
 }

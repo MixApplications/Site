@@ -1268,7 +1268,7 @@
  "gd.choose-usb-app.20": "هل يمكنك اختيار إصدار Ventoy؟",
  "gd.choose-usb-app.21": "في Ultimate USB وVentoy (Unofficial)، تعرض لوحة <strong>إصدار Ventoy</strong> الإصدار المدمج، والإصدارات التي نزّلتها، و<strong>إصدار آخر…</strong> الذي يعرض مزيدًا من إصدارات Ventoy. والإصدار الذي تحدده يُستخدم للتثبيت والتحديث.",
  "gd.choose-usb-app.22": "هل يفحص نظام الملفات بعد التهيئة؟",
- "gd.choose-usb-app.23": "في Ultimate USB وUSB Tools، تختبر <a href=\"/tools/format-usb.html\">تهيئة USB</a> المحرك بعد التهيئة ولا تبلّغ عن النجاح إلا بعد ذلك. وإن فشل أي فحص، يُبلَّغ عن فشل التهيئة.",
+ "gd.choose-usb-app.23": "في Ultimate USB وDROFUS وVentoy (Unofficial) وUSB Tools، كل عملية تهيّئ المحرك تفحص نظام الملفات وتختبره بعدها، ولا تبلّغ عن النجاح إلا بعد ذلك. ويشمل ذلك <a href=\"/tools/format-usb.html\">تهيئة USB</a> و<a href=\"/tools/iso-burner.html\">حارق ISO</a> وتثبيت <a href=\"/tools/ventoy.html\">Ventoy</a>. وإن فشل أي فحص، يُبلَّغ عن فشل العملية.",
  "gd.choose-usb-app.24": "هل يعمل على هاتفك بلا حساب؟",
  "gd.choose-usb-app.25": "يجب أن تبقى ملفاتك وصورك على هاتفك. في تطبيقات USB الخاصة بنا (Ultimate USB وDROFUS وVentoy (Unofficial) وUSB Tools)، تتم معالجة الملفات على الهاتف ولا يُرفع محتواها أبدًا، ولا يوجد حساب ولا تسجيل. تحتاج النسخ المجانية إلى اتصال بالإنترنت للإعلانات، وتنتظر المهام الجارية أثناء انقطاع الهاتف عن الإنترنت؛ أما Pro فيعمل دون اتصال.",
  "gd.choose-usb-app.26": "أي تطبيق يجري أي فحص؟",
@@ -2590,5 +2590,7 @@
  "gd.choose-usb-app.93": "الأنظمة والإصدارات والنسخ: صور Windows وLinux وApple DMG وRaspberry Pi وMS-DOS وFreeDOS؛ وWindows To Go لنظام Windows 10 أو 11 بالنسخة التي تختارها؛ والتخزين الدائم في Linux؛ وإصدار Ventoy الذي تختاره.",
  "gd.choose-usb-app.94": "المحركات: الفلاشات وأقراص SSD المحمولة وقارئات البطاقات وموزّعات OTG، بأنظمة FAT16 وFAT32 وexFAT وNTFS وEXT2/3/4، وMBR أو GPT، دون حاجة إلى صلاحيات الروت، على Android 7.0 وما بعده. الأقراص الصلبة HDD غير مدعومة رسميًا بسبب احتياجها إلى الطاقة.",
  "gd.choose-usb-app.95": "خيارات تتحكم فيها: جدول الأقسام ونظام الملفات وحجم الكتلة والاسم؛ والوضع عالي السرعة وتقسيم install.wim؛ وخيارات إعداد Windows مثل تجاوز TPM 2.0 وSecure Boot وذاكرة 4 GB RAM، وحساب محلي بدون حساب Microsoft، والإعدادات الإقليمية من هاتفك؛ وفي Ventoy خيارات Secure Boot ومحاذاة 4K وConfig Hub وسمات GRUB وصور التخزين الدائم؛ وطريقة المسح (NIST 800-88 أو DoD 5220.22-M أو Schneier أو Gutmann) مع تحقق اختياري.",
- "gd.choose-usb-app.96": "إن كنت تحتاج إلى مهمة واحدة فقط، فالتطبيقات الأصغر تؤديها: يكتب DROFUS صور Windows وLinux، وينشئ Ventoy (Unofficial) محركات متعددة الإقلاع، ويدير USB Tools المحركات ويصلحها ويختبرها."
+ "gd.choose-usb-app.96": "إن كنت تحتاج إلى مهمة واحدة فقط، فالتطبيقات الأصغر تؤديها: يكتب DROFUS صور Windows وLinux، وينشئ Ventoy (Unofficial) محركات متعددة الإقلاع، ويدير USB Tools المحركات ويصلحها ويختبرها.",
+ "gd.choose-usb-app.97": "نعم",
+ "gd.choose-usb-app.98": "نعم"
 }

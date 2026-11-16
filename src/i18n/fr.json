@@ -1268,7 +1268,7 @@
  "gd.choose-usb-app.20": "Peut-on choisir la version de Ventoy ?",
  "gd.choose-usb-app.21": "Dans Ultimate USB et Ventoy (Unofficial), la fenêtre <strong>Version de Ventoy</strong> liste la version intégrée, les versions que vous avez téléchargées, et <strong>Autre version…</strong>, qui liste d'autres versions de Ventoy. La version que vous sélectionnez sert pour Installer et Mettre à jour.",
  "gd.choose-usb-app.22": "Vérifie-t-elle le système de fichiers après le formatage ?",
- "gd.choose-usb-app.23": "Dans Ultimate USB et USB Tools, <a href=\"/tools/format-usb.html\">Formater USB</a> teste la clé après le formatage et n'annonce la réussite qu'ensuite. Si une vérification échoue, le formatage est signalé comme échoué.",
+ "gd.choose-usb-app.23": "Dans Ultimate USB, DROFUS, Ventoy (Unofficial) et USB Tools, chaque opération qui formate une clé vérifie et teste ensuite le système de fichiers, et n'annonce la réussite qu'après. Cela comprend <a href=\"/tools/format-usb.html\">Formater USB</a>, <a href=\"/tools/iso-burner.html\">Graveur ISO</a> et l'installation de <a href=\"/tools/ventoy.html\">Ventoy</a>. Si une vérification échoue, l'opération est signalée comme échouée.",
  "gd.choose-usb-app.24": "Fonctionne-t-elle sur votre téléphone sans compte ?",
  "gd.choose-usb-app.25": "Vos fichiers et vos images doivent rester sur votre téléphone. Dans nos apps USB (Ultimate USB, DROFUS, Ventoy (Unofficial), USB Tools), les fichiers sont traités sur le téléphone et leur contenu n'est jamais envoyé, et il n'y a ni compte ni inscription. Les versions gratuites ont besoin d'une connexion Internet pour les publicités, et les opérations en cours attendent tant que le téléphone est hors ligne ; Pro fonctionne hors ligne.",
  "gd.choose-usb-app.26": "Quelle app fait quelle vérification ?",
@@ -2590,5 +2590,7 @@
  "gd.choose-usb-app.93": "Systèmes, versions et éditions : images Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS et FreeDOS ; Windows To Go pour Windows 10 ou 11 avec l'édition que vous choisissez ; persistance Linux ; et la version de Ventoy que vous choisissez.",
  "gd.choose-usb-app.94": "Supports : clés USB, SSD portables, lecteurs de cartes et hubs OTG, en FAT16, FAT32, exFAT, NTFS et EXT2/3/4, MBR ou GPT, sans root, sous Android 7.0 et versions ultérieures. Les disques durs (HDD) ne sont pas officiellement pris en charge à cause de l'alimentation qu'ils demandent.",
  "gd.choose-usb-app.95": "Options que vous contrôlez : table de partitions, système de fichiers, taille de cluster et nom ; mode haute vitesse et découpage d'install.wim ; options d'installation de Windows comme le contournement de TPM 2.0, Secure Boot et 4 GB de RAM, un compte local sans compte Microsoft et les paramètres régionaux de votre téléphone ; dans Ventoy, Secure Boot, alignement 4K, Config Hub, thèmes GRUB et images de persistance ; et la méthode d'effacement (NIST 800-88, DoD 5220.22-M, Schneier ou Gutmann) avec vérification facultative.",
- "gd.choose-usb-app.96": "Si vous n'avez besoin que d'une tâche, les apps plus petites la font : DROFUS écrit des images Windows et Linux, Ventoy (Unofficial) crée des clés multiboot et USB Tools gère, répare et teste les clés."
+ "gd.choose-usb-app.96": "Si vous n'avez besoin que d'une tâche, les apps plus petites la font : DROFUS écrit des images Windows et Linux, Ventoy (Unofficial) crée des clés multiboot et USB Tools gère, répare et teste les clés.",
+ "gd.choose-usb-app.97": "Oui",
+ "gd.choose-usb-app.98": "Oui"
 }

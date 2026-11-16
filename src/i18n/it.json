@@ -819,7 +819,7 @@
  "gd.choose-usb-app.20": "Puoi scegliere la versione di Ventoy?",
  "gd.choose-usb-app.21": "In Ultimate USB e Ventoy (Unofficial), il pannello <strong>Ventoy version</strong> elenca la versione integrata, le versioni che hai scaricato e <strong>Other version…</strong>, che elenca altre versioni di Ventoy. La versione che selezioni viene usata per Installa e Aggiorna.",
  "gd.choose-usb-app.22": "Controlla il file system dopo la formattazione?",
- "gd.choose-usb-app.23": "In Ultimate USB e USB Tools, <a href=\"/tools/format-usb.html\">Format USB</a> testa l'unità dopo la formattazione e solo allora segnala il successo. Se un controllo non riesce, la formattazione viene segnalata come non riuscita.",
+ "gd.choose-usb-app.23": "In Ultimate USB, DROFUS, Ventoy (Unofficial) e USB Tools, ogni operazione che formatta un'unità controlla e testa poi il file system e solo allora segnala il successo. Questo vale per <a href=\"/tools/format-usb.html\">Format USB</a>, <a href=\"/tools/iso-burner.html\">ISO Burner</a> e l'installazione di <a href=\"/tools/ventoy.html\">Ventoy</a>. Se un controllo non riesce, l'operazione viene segnalata come non riuscita.",
  "gd.choose-usb-app.24": "Funziona sul tuo telefono senza account?",
  "gd.choose-usb-app.25": "I tuoi file e le tue immagini dovrebbero restare sul telefono. Nelle nostre app USB (Ultimate USB, DROFUS, Ventoy (Unofficial), USB Tools), i file vengono elaborati sul telefono e il loro contenuto non viene mai caricato, e non c'è nessun account né registrazione. Le versioni gratuite richiedono una connessione Internet per gli annunci, e i lavori in corso attendono mentre il telefono è offline; Pro funziona offline.",
  "gd.choose-usb-app.26": "Quale app esegue quale controllo?",
@@ -2572,5 +2572,7 @@
  "tl.wipe-usb.69": "Se la connessione all'unità si interrompe per un momento, l'app riprova e continua. Il rapporto le conta come nuovi tentativi di scrittura e ripristini del bus.",
  "tl.wipe-usb.desc": "Apri <strong>Cancella USB</strong> in Ultimate USB o USB Tools, scegli il metodo e la verifica, e tocca <strong>AVVIA</strong>. L'app sovrascrive l'intera unità, può controllarla al termine e rilascia un rapporto e un certificato di cancellazione. La cancellazione non usa gettoni.",
  "tl.wipe-usb.h1": "Come cancello in modo sicuro un'unità USB dal mio telefono Android?",
- "tl.wipe-usb.title": "Cancellare in modo sicuro un'unità USB su Android: NIST, DoD, Gutmann — Wipe USB"
+ "tl.wipe-usb.title": "Cancellare in modo sicuro un'unità USB su Android: NIST, DoD, Gutmann — Wipe USB",
+ "gd.choose-usb-app.97": "Sì",
+ "gd.choose-usb-app.98": "Sì"
 }

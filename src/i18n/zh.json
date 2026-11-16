@@ -819,7 +819,7 @@
  "gd.choose-usb-app.20": "能选择 Ventoy 版本吗？",
  "gd.choose-usb-app.21": "在 Ultimate USB 和 Ventoy (Unofficial) 中，<strong>Ventoy 版本</strong> 面板会列出内置版本、您下载过的版本，以及 <strong>其他版本…</strong>，后者会列出更多 Ventoy 发布版本。所选版本用于安装和更新。",
  "gd.choose-usb-app.22": "格式化后会检查文件系统吗？",
- "gd.choose-usb-app.23": "在 Ultimate USB 和 USB Tools 中，<a href=\"/tools/format-usb.html\">格式化USB</a> 会在格式化后测试驱动器，之后才报告成功。如果检查失败，会报告格式化失败。",
+ "gd.choose-usb-app.23": "在 Ultimate USB、DROFUS、Ventoy (Unofficial) 和 USB Tools 中，每个会格式化驱动器的操作都会在之后检查并测试文件系统，之后才报告成功。这包括 <a href=\"/tools/format-usb.html\">格式化USB</a>、<a href=\"/tools/iso-burner.html\">ISO刻录器</a> 和 <a href=\"/tools/ventoy.html\">Ventoy</a> 安装。如果检查失败，会报告该操作失败。",
  "gd.choose-usb-app.24": "能在手机上无需账号使用吗？",
  "gd.choose-usb-app.25": "您的文件和镜像应当留在手机上。在我们的 USB 应用（Ultimate USB、DROFUS、Ventoy (Unofficial)、USB Tools）中，文件在手机上处理，其内容绝不会被上传，也无需账号或注册。免费版需要联网加载广告，手机离线时正在进行的任务会等待；Pro 可以离线使用。",
  "gd.choose-usb-app.26": "哪个应用做哪项检查？",
@@ -2572,5 +2572,7 @@
  "tl.wipe-usb.69": "如果与驱动器的连接短暂中断，应用会重试并继续。报告会把这些情况计为写入重试和总线恢复。",
  "tl.wipe-usb.desc": "在 Ultimate USB 或 USB Tools 中打开 <strong>擦除USB</strong>，选择方式和验证，然后点按 <strong>开始</strong>。应用会覆盖整个驱动器，可在之后进行检查，并生成擦除报告和证书。擦除不消耗代币。",
  "tl.wipe-usb.h1": "怎样用 Android 手机安全擦除 U 盘？",
- "tl.wipe-usb.title": "在 Android 上安全擦除 U 盘：NIST、DoD、Gutmann — 擦除USB"
+ "tl.wipe-usb.title": "在 Android 上安全擦除 U 盘：NIST、DoD、Gutmann — 擦除USB",
+ "gd.choose-usb-app.97": "是",
+ "gd.choose-usb-app.98": "是"
 }

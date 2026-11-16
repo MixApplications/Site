@@ -819,7 +819,7 @@
  "gd.choose-usb-app.20": "Có thể chọn phiên bản Ventoy không?",
  "gd.choose-usb-app.21": "Trong Ultimate USB và Ventoy (Unofficial), bảng <strong>Phiên bản Ventoy</strong> liệt kê phiên bản có sẵn, các phiên bản bạn đã tải về, và <strong>Phiên bản khác…</strong>, nơi liệt kê thêm các bản phát hành Ventoy. Phiên bản bạn chọn được dùng cho Cài đặt và Cập nhật.",
  "gd.choose-usb-app.22": "Ứng dụng có kiểm tra hệ thống tệp sau khi định dạng không?",
- "gd.choose-usb-app.23": "Trong Ultimate USB và USB Tools, <a href=\"/tools/format-usb.html\">Định dạng USB</a> kiểm tra ổ sau khi định dạng và chỉ khi đó mới báo thành công. Nếu kiểm tra thất bại, việc định dạng được báo là thất bại.",
+ "gd.choose-usb-app.23": "Trong Ultimate USB, DROFUS, Ventoy (Unofficial) và USB Tools, mọi tác vụ định dạng ổ đều kiểm tra và thử nghiệm hệ thống tệp sau đó, và chỉ khi đó mới báo thành công. Điều này bao gồm <a href=\"/tools/format-usb.html\">Định dạng USB</a>, <a href=\"/tools/iso-burner.html\">Trình ghi ISO</a> và cài đặt <a href=\"/tools/ventoy.html\">Ventoy</a>. Nếu kiểm tra thất bại, tác vụ được báo là thất bại.",
  "gd.choose-usb-app.24": "Ứng dụng có hoạt động trên điện thoại mà không cần tài khoản không?",
  "gd.choose-usb-app.25": "Tệp và ảnh đĩa của bạn nên ở lại trên điện thoại. Trong các ứng dụng USB của chúng tôi (Ultimate USB, DROFUS, Ventoy (Unofficial), USB Tools), tệp được xử lý trên điện thoại và nội dung không bao giờ được tải lên, và không có tài khoản hay đăng ký. Bản miễn phí cần kết nối Internet cho quảng cáo, và các công việc đang chạy sẽ chờ khi điện thoại ngoại tuyến; Pro hoạt động ngoại tuyến.",
  "gd.choose-usb-app.26": "Ứng dụng nào thực hiện kiểm tra nào?",
@@ -2572,5 +2572,7 @@
  "tl.wipe-usb.69": "Nếu kết nối với ổ bị lỗi trong giây lát, ứng dụng thử lại và tiếp tục. Báo cáo tính những lần này là lần ghi lại và lần khôi phục bus.",
  "tl.wipe-usb.desc": "Mở <strong>Xóa USB</strong> trong Ultimate USB hoặc USB Tools, chọn phương pháp và cách xác minh, rồi chạm <strong>Bắt đầu</strong>. Ứng dụng ghi đè toàn bộ ổ, có thể kiểm tra sau đó, và cấp báo cáo và chứng nhận xóa dữ liệu. Xóa không dùng token.",
  "tl.wipe-usb.h1": "Làm sao để xóa an toàn ổ USB từ điện thoại Android?",
- "tl.wipe-usb.title": "Xóa an toàn ổ USB trên Android: NIST, DoD, Gutmann — Xóa USB"
+ "tl.wipe-usb.title": "Xóa an toàn ổ USB trên Android: NIST, DoD, Gutmann — Xóa USB",
+ "gd.choose-usb-app.97": "Có",
+ "gd.choose-usb-app.98": "Có"
 }

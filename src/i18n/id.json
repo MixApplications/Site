@@ -1268,7 +1268,7 @@
  "gd.choose-usb-app.20": "Bisakah Anda memilih versi Ventoy?",
  "gd.choose-usb-app.21": "Di Ultimate USB dan Ventoy (Unofficial), lembar <strong>Versi Ventoy</strong> menampilkan versi bawaan, versi yang pernah Anda unduh, dan <strong>Versi lain…</strong>, yang menampilkan lebih banyak rilis Ventoy. Versi yang Anda pilih dipakai untuk Instal dan Perbarui.",
  "gd.choose-usb-app.22": "Apakah aplikasi memeriksa sistem file setelah memformat?",
- "gd.choose-usb-app.23": "Di Ultimate USB dan USB Tools, <a href=\"/tools/format-usb.html\">Format USB</a> menguji drive setelah memformat dan baru kemudian melaporkan berhasil. Jika pemeriksaan gagal, format dilaporkan gagal.",
+ "gd.choose-usb-app.23": "Di Ultimate USB, DROFUS, Ventoy (Unofficial) dan USB Tools, setiap proses yang memformat drive memeriksa dan menguji sistem file sesudahnya dan baru kemudian melaporkan berhasil. Ini termasuk <a href=\"/tools/format-usb.html\">Format USB</a>, <a href=\"/tools/iso-burner.html\">Pembakar ISO</a>, dan instalasi <a href=\"/tools/ventoy.html\">Ventoy</a>. Jika pemeriksaan gagal, proses dilaporkan gagal.",
  "gd.choose-usb-app.24": "Apakah aplikasi bekerja di ponsel Anda tanpa akun?",
  "gd.choose-usb-app.25": "File dan image Anda seharusnya tetap di ponsel Anda. Di aplikasi USB kami (Ultimate USB, DROFUS, Ventoy (Unofficial), USB Tools), file diproses di ponsel dan isinya tidak pernah diunggah, dan tidak ada akun atau pendaftaran. Versi gratis memerlukan koneksi internet untuk iklan, dan tugas yang sedang berjalan menunggu selama ponsel offline; Pro berfungsi offline.",
  "gd.choose-usb-app.26": "Aplikasi mana yang melakukan pemeriksaan apa?",
@@ -2590,5 +2590,7 @@
  "gd.choose-usb-app.93": "Sistem, versi, dan edisi: image Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS, dan FreeDOS; Windows To Go untuk Windows 10 atau 11 dengan edisi yang Anda pilih; persistensi Linux; dan versi Ventoy yang Anda pilih.",
  "gd.choose-usb-app.94": "Drive: flash drive, SSD portabel, pembaca kartu, dan hub OTG, dengan FAT16, FAT32, exFAT, NTFS, dan EXT2/3/4, MBR atau GPT, tanpa perlu root, di Android 7.0 dan yang lebih baru. Hard disk (HDD) tidak didukung secara resmi karena kebutuhan dayanya.",
  "gd.choose-usb-app.95": "Opsi yang Anda kendalikan: tabel partisi, sistem file, ukuran cluster, dan label; mode kecepatan tinggi dan pemisahan install.wim; opsi penyiapan Windows seperti bypass TPM 2.0, Secure Boot, dan RAM 4 GB, akun lokal tanpa akun Microsoft, dan pengaturan regional dari ponsel Anda; di Ventoy, Secure Boot, perataan 4K, Config Hub, tema GRUB, dan image persistensi; serta metode penghapusan (NIST 800-88, DoD 5220.22-M, Schneier, atau Gutmann) dengan verifikasi opsional.",
- "gd.choose-usb-app.96": "Jika Anda hanya butuh satu tugas, aplikasi yang lebih kecil mengerjakannya: DROFUS menulis image Windows dan Linux, Ventoy (Unofficial) membuat drive multi-boot, dan USB Tools mengelola, memperbaiki, dan menguji drive."
+ "gd.choose-usb-app.96": "Jika Anda hanya butuh satu tugas, aplikasi yang lebih kecil mengerjakannya: DROFUS menulis image Windows dan Linux, Ventoy (Unofficial) membuat drive multi-boot, dan USB Tools mengelola, memperbaiki, dan menguji drive.",
+ "gd.choose-usb-app.97": "Ya",
+ "gd.choose-usb-app.98": "Ya"
 }

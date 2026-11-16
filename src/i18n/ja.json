@@ -819,7 +819,7 @@
  "gd.choose-usb-app.20": "Ventoy のバージョンを選べますか？",
  "gd.choose-usb-app.21": "Ultimate USB と Ventoy (Unofficial) では、<strong>Ventoy のバージョン</strong> シートに組み込みのバージョン、ダウンロードしたバージョン、そしてさらに多くの Ventoy リリースを一覧表示する <strong>別のバージョン…</strong> が表示されます。選んだバージョンはインストールと更新に使われます。",
  "gd.choose-usb-app.22": "フォーマット後にファイルシステムをチェックしますか？",
- "gd.choose-usb-app.23": "Ultimate USB と USB Tools の <a href=\"/tools/format-usb.html\">USBをフォーマット</a> は、フォーマット後にドライブをテストしてから成功を報告します。チェックに失敗した場合、フォーマットは失敗として報告されます。",
+ "gd.choose-usb-app.23": "Ultimate USB、DROFUS、Ventoy (Unofficial)、USB Tools では、ドライブをフォーマットするすべての処理が、その後にファイルシステムをチェック・テストしてから成功を報告します。<a href=\"/tools/format-usb.html\">USBをフォーマット</a>、<a href=\"/tools/iso-burner.html\">ISOバーナー</a>、<a href=\"/tools/ventoy.html\">Ventoy</a> のインストールも含まれます。チェックに失敗した場合、その処理は失敗として報告されます。",
  "gd.choose-usb-app.24": "アカウントなしでスマートフォン上で動作しますか？",
  "gd.choose-usb-app.25": "ファイルやイメージはスマートフォンに残るべきです。当社の USB アプリ（Ultimate USB、DROFUS、Ventoy (Unofficial)、USB Tools）では、ファイルはスマートフォン上で処理され、その内容がアップロードされることはなく、アカウントも登録もありません。無料版は広告のためにインターネット接続が必要で、スマートフォンがオフラインの間は実行中の処理が待機します。Pro はオフラインで使えます。",
  "gd.choose-usb-app.26": "どのアプリがどのチェックを行いますか？",
@@ -2572,5 +2572,7 @@
  "tl.wipe-usb.69": "ドライブとの接続が一瞬途切れた場合、アプリは再試行して続けます。レポートでは、これらは書き込みの再試行とバスの回復として数えられます。",
  "tl.wipe-usb.desc": "Ultimate USB または USB Tools で <strong>USBを消去</strong> を開き、方式と検証を選んで <strong>開始</strong> をタップします。アプリはドライブ全体を上書きし、その後に確認することもでき、消去レポートと証明書を発行します。消去にトークンは使いません。",
  "tl.wipe-usb.h1": "Android スマートフォンで USB ドライブを安全に消去するにはどうすればよいですか？",
- "tl.wipe-usb.title": "Android で USB ドライブを安全に消去：NIST、DoD、Gutmann — USBを消去"
+ "tl.wipe-usb.title": "Android で USB ドライブを安全に消去：NIST、DoD、Gutmann — USBを消去",
+ "gd.choose-usb-app.97": "はい",
+ "gd.choose-usb-app.98": "はい"
 }

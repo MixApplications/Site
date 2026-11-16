@@ -1268,7 +1268,7 @@
  "gd.choose-usb-app.20": "Dá para escolher a versão do Ventoy?",
  "gd.choose-usb-app.21": "No Ultimate USB e no Ventoy (Unofficial), a folha <strong>Versão do Ventoy</strong> lista a versão integrada, as versões que você baixou e <strong>Outra versão…</strong>, que lista mais versões do Ventoy. A versão que você selecionar é usada para Instalar e Atualizar.",
  "gd.choose-usb-app.22": "Ele verifica o sistema de arquivos depois de formatar?",
- "gd.choose-usb-app.23": "No Ultimate USB e no USB Tools, o <a href=\"/tools/format-usb.html\">Formatar USB</a> testa o drive depois de formatar e só então informa o sucesso. Se uma verificação falhar, a formatação é informada como falha.",
+ "gd.choose-usb-app.23": "No Ultimate USB, DROFUS, Ventoy (Unofficial) e no USB Tools, toda tarefa que formata um drive verifica e testa o sistema de arquivos depois e só então informa o sucesso. Isso inclui <a href=\"/tools/format-usb.html\">Formatar USB</a>, <a href=\"/tools/iso-burner.html\">Gravador de ISO</a> e a instalação do <a href=\"/tools/ventoy.html\">Ventoy</a>. Se uma verificação falhar, a tarefa é informada como falha.",
  "gd.choose-usb-app.24": "Ele funciona no seu celular sem conta?",
  "gd.choose-usb-app.25": "Seus arquivos e imagens devem ficar no seu celular. Nos nossos apps USB (Ultimate USB, DROFUS, Ventoy (Unofficial), USB Tools), os arquivos são processados no celular e o conteúdo deles nunca é enviado, e não há conta nem cadastro. As versões grátis precisam de conexão com a internet para os anúncios, e as tarefas em andamento esperam enquanto o celular está offline; o Pro funciona offline.",
  "gd.choose-usb-app.26": "Qual app faz qual verificação?",
@@ -2590,5 +2590,7 @@
  "gd.choose-usb-app.93": "Sistemas, versões e edições: imagens de Windows, Linux, Apple DMG, Raspberry Pi, MS-DOS e FreeDOS; Windows To Go para Windows 10 ou 11 com a edição que você escolher; persistência no Linux; e a versão do Ventoy que você escolher.",
  "gd.choose-usb-app.94": "Drives: pen drives, SSDs portáteis, leitores de cartão e hubs OTG, com FAT16, FAT32, exFAT, NTFS e EXT2/3/4, MBR ou GPT, sem precisar de root, no Android 7.0 ou posterior. Discos rígidos (HDD) não são oficialmente suportados por causa da energia que exigem.",
  "gd.choose-usb-app.95": "Opções que você controla: tabela de partição, sistema de arquivos, tamanho do cluster e rótulo; modo de alta velocidade e divisão do install.wim; opções de instalação do Windows, como ignorar TPM 2.0, Secure Boot e 4 GB de RAM, uma conta local sem conta Microsoft e configurações regionais do seu celular; no Ventoy, Secure Boot, alinhamento 4K, Config Hub, temas GRUB e imagens de persistência; e o método de apagamento (NIST 800-88, DoD 5220.22-M, Schneier ou Gutmann) com verificação opcional.",
- "gd.choose-usb-app.96": "Se você precisa de apenas uma tarefa, os apps menores a fazem: o DROFUS grava imagens de Windows e Linux, o Ventoy (Unofficial) cria drives multiboot e o USB Tools gerencia, repara e testa drives."
+ "gd.choose-usb-app.96": "Se você precisa de apenas uma tarefa, os apps menores a fazem: o DROFUS grava imagens de Windows e Linux, o Ventoy (Unofficial) cria drives multiboot e o USB Tools gerencia, repara e testa drives.",
+ "gd.choose-usb-app.97": "Sim",
+ "gd.choose-usb-app.98": "Sim"
 }
