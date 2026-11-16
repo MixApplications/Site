@@ -10,6 +10,13 @@
   { "code": "fr", "name": "French", "native": "Français" },
   { "code": "ru", "name": "Russian", "native": "Русский" },
   { "code": "tr", "name": "Turkish", "native": "Türkçe" },
-  { "code": "de", "name": "German", "native": "Deutsch" }
+  { "code": "de", "name": "German", "native": "Deutsch" },
+  { "code": "fa", "name": "Persian", "native": "فارسی", "rtl": true },
+  { "code": "it", "name": "Italian", "native": "Italiano" },
+  { "code": "pl", "name": "Polish", "native": "Polski" },
+  { "code": "th", "name": "Thai", "native": "ไทย" },
+  { "code": "vi", "name": "Vietnamese", "native": "Tiếng Việt" },
+  { "code": "zh", "name": "Chinese (Simplified)", "native": "简体中文" },
+  { "code": "ja", "name": "Japanese", "native": "日本語" }
  ]
 }
