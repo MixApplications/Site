@@ -114,7 +114,7 @@ ${retired.map(retiredItem).join('\n')}
     <section>
       <div class="shelf"><h2 data-i18n="home.tr.h">Why do millions of people trust our USB apps?</h2></div>
       <p class="trustlead" data-i18n="home.tr.1">We have published Android apps on Google Play since 2017 and built USB apps for more than five years. Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools each have over 1,000,000 downloads and are available in 58 languages.</p>
-      <p class="trustlead" data-i18n="home.tr.13">Every version is fully tested before each release, on 4 phones from 3 brands (Android 10 to 16) and 13 USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.</p>
+      <p class="trustlead" data-i18n="home.tr.13">Every version is fully tested before each release, on 5+ phones from different brands (Android 10 to 16) and 15+ USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.</p>
       <div class="principles">
         <div class="tile reveal" style="--c:var(--blue)"><b data-i18n="home.tr.2">Every drive is checked</b><span data-i18n="home.tr.3">Each drive is tested when you connect it. Read-only and fake drives are caught, and nothing is erased without your OK.</span></div>
         <div class="tile reveal" style="--c:var(--green)"><b data-i18n="home.tr.4">Every format is tested</b><span data-i18n="home.tr.5">Every format is tested before success is shown, and image writes wait until the drive confirms the data is written.</span></div>
