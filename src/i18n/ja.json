@@ -1208,7 +1208,7 @@
  "sup.192": "バックアップを復元したり、.bk ファイルを開いたりするにはどうすればよいですか？",
  "sup.193": "Ultimate USB と USB Tools で <strong>バックアップ / 復元</strong> を開き、<strong>復元</strong> をタップすると、<code>.bk</code> のバックアップをドライブに書き戻せます。復元せずに中身を見るには、<code>.bk</code> ファイルを Ultimate USB の <strong>パーティションイメージマネージャー</strong> で開きます。",
  "sup.194": "アプリは自分の言語に対応していますか？",
- "sup.195": "Ultimate USB、DROFUS、Ventoy (Unofficial)、USB Tools は 58 言語、USB File Manager は 46 言語で利用できます。Cofferlock と TumTum は 11 言語、ChaoMe は 5 言語です。アプリはスマートフォンの言語設定に従い、このウェブサイトは 17 言語で利用できます。翻訳が間違っていたり抜けていたりしたら、その画面と正しい表現をお送りください。ネイティブスピーカーからの修正は大歓迎です。",
+ "sup.195": "Ultimate USB、DROFUS、Ventoy (Unofficial)、USB Tools は 58 言語、USB File Manager は 46 言語で利用できます。Cofferlock と TumTum は 11 言語、ChaoMe は 5 言語です。アプリはスマートフォンの言語設定に従い、このウェブサイトは 19 言語で利用できます。翻訳が間違っていたり抜けていたりしたら、その画面と正しい表現をお送りください。ネイティブスピーカーからの修正は大歓迎です。",
  "sup.196": "ChaoMe：テーマが適用されない、またはしばらくするとリセットされる",
  "sup.197": "最近の HyperOS では、Xiaomi のテーマアプリがテーマの権利を Xiaomi のサーバーで確認し、編集したテーマを受け付けないことがあります。これはどのアプリでも変えられません。その場合でも、テーマアプリの <strong>Customize theme</strong> で個別のパーツを試せます。また、ChaoMe の <strong>Set Wallpaper</strong> ボタンでテーマの壁紙を直接適用できます。テーマが適用できた場合も、通常は数時間以内に Xiaomi の権利チェックでリセットされます。編集内容は .mtz ファイルに残っているので、もう一度適用できます。",
  "sup.198": "ChaoMe：なぜ Shizuku が必要なのですか？",

@@ -79,18 +79,23 @@
   }
 
   function known(code) {
-    for (var i = 0; i < LANGS.length; i++) if (LANGS[i].code === code) return LANGS[i];
+    var c = String(code).toLowerCase();   // BCP 47 tags are case-insensitive (zh-Hant = zh-hant)
+    for (var i = 0; i < LANGS.length; i++) if (LANGS[i].code.toLowerCase() === c) return LANGS[i];
     return null;
   }
 
   function preferred() {
     var saved = null;
     try { saved = localStorage.getItem(STORE); } catch (e) {}
-    if (saved && known(saved)) return saved;
+    if (saved && known(saved)) return known(saved).code;
     var navLangs = navigator.languages || [navigator.language || 'en'];
     for (var i = 0; i < navLangs.length; i++) {
-      var base = String(navLangs[i]).toLowerCase().split('-')[0];
-      if (known(base)) return base;
+      var tag = String(navLangs[i]).toLowerCase();
+      if (known(tag)) return known(tag).code;
+      // Taiwan, Hong Kong and Macau read Traditional Chinese; zh-CN, zh-SG and plain zh read Simplified
+      if (/^zh-(hant|tw|hk|mo)\b/.test(tag) && known('zh-Hant')) return known('zh-Hant').code;
+      var base = tag.split('-')[0];
+      if (known(base)) return known(base).code;
     }
     return 'en';
   }
@@ -157,7 +162,7 @@
   function paint(meta) {
     if (!picker) return;
     var label = picker.querySelector('.lang-current');
-    if (label) label.textContent = meta.code.toUpperCase();
+    if (label) label.textContent = meta.short || meta.code.toUpperCase();
     picker.querySelectorAll('[data-lang]').forEach(function (b) {
       b.setAttribute('aria-current', String(b.getAttribute('data-lang') === meta.code));
     });

@@ -190,6 +190,23 @@ try {
     await js(`localStorage.removeItem('mixapp.lang')`);
   }
 
+  // 5a. the browser's language picks the script: Taiwan/Hong Kong read Traditional, mainland China Simplified
+  const hant = langs.find(l => l.code === 'zh-Hant'), hans = langs.find(l => l.code === 'zh');
+  if (hant && hans) {
+    const ua = await js('navigator.userAgent');
+    for (const [accept, want] of [['zh-TW', hant], ['zh-HK', hant], ['zh-CN', hans]]) {
+      await send('Emulation.setUserAgentOverride', { userAgent: ua, acceptLanguage: accept });
+      await open('/');
+      await js(`localStorage.removeItem('mixapp.lang')`);
+      await open('/');
+      for (let i = 0; i < 50 && await js('document.documentElement.lang') !== want.code; i++) await sleep(100);
+      const z = await js(`({ nav: navigator.language, lang: document.documentElement.lang, label: document.querySelector('.lang-current').textContent })`);
+      check(`a ${accept} browser gets ${want.name}`, z.nav === accept && z.lang === want.code && z.label === (want.short || want.code.toUpperCase()), JSON.stringify(z));
+    }
+    await send('Emulation.setUserAgentOverride', { userAgent: ua });
+    await js(`localStorage.removeItem('mixapp.lang')`);
+  }
+
   // 5b. pre-translated language pages (what search engines index): the page is already in its language,
   //     never redirects on load (not even with another saved choice), and the picker opens the same page
   //     in the chosen language exactly once, with the last pick winning.

@@ -36,7 +36,7 @@ const prevIds = Object.keys(prev.apps || {});
 
 const notFound = e => /404|not found/i.test(String(e && e.message));
 // site code -> Play listing language where they differ (site "zh" is Simplified Chinese)
-const PLAY_LANG = { zh: 'zh-CN' };
+const PLAY_LANG = { zh: 'zh-CN', 'zh-Hant': 'zh-TW' };
 async function details(appId, lang = 'en') {
   let last;
   for (const country of COUNTRIES) {

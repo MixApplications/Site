@@ -1208,7 +1208,7 @@
  "sup.192": "怎样还原备份，或打开 .bk 文件？",
  "sup.193": "在 Ultimate USB 和 USB Tools 中，打开 <strong>备份 / 恢复</strong>，点按 <strong>恢复</strong>，即可把 <code>.bk</code> 备份写回驱动器。要在不还原的情况下查看 <code>.bk</code> 文件中的内容，请在 Ultimate USB 的 <strong>分区镜像管理器</strong> 中打开它。",
  "sup.194": "应用有我的语言版本吗？",
- "sup.195": "Ultimate USB、DROFUS、Ventoy (Unofficial) 和 USB Tools 提供 58 种语言，USB File Manager 提供 46 种。Cofferlock 和 TumTum 提供 11 种语言，ChaoMe 提供 5 种。这些应用跟随手机的语言设置，本网站提供 17 种语言。如果翻译有误或缺失，请把界面和正确的措辞发给我们——我们非常欢迎母语人士的指正。",
+ "sup.195": "Ultimate USB、DROFUS、Ventoy (Unofficial) 和 USB Tools 提供 58 种语言，USB File Manager 提供 46 种。Cofferlock 和 TumTum 提供 11 种语言，ChaoMe 提供 5 种。这些应用跟随手机的语言设置，本网站提供 19 种语言。如果翻译有误或缺失，请把界面和正确的措辞发给我们——我们非常欢迎母语人士的指正。",
  "sup.196": "ChaoMe：我的主题无法应用，或过一段时间就被重置",
  "sup.197": "在较新的 HyperOS 版本上，小米的“主题”应用会通过小米服务器检查主题的授权，并可能拒绝经过修改的主题。任何应用都无法改变这一点。您仍可以在“主题”应用的 <strong>Customize theme</strong> 中尝试单独应用各个部分，ChaoMe 的 <strong>设置壁纸</strong> 按钮也可以直接应用主题中的壁纸。即使主题能够应用，小米的授权检查通常也会在几小时内将其重置；您的修改保存在 .mtz 文件中，可以再次应用。",
  "sup.198": "ChaoMe：为什么需要 Shizuku？",
