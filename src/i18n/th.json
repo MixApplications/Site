@@ -3001,5 +3001,8 @@
  "gd.why.98": "<strong>ISO 2 USB:</strong> แอป USB ตัวแรกของเรา อยู่บน Google Play ตั้งแต่เดือนตุลาคม 2017 ดาวน์โหลดมากกว่า 2,400,000 ครั้ง ตอนนี้ฟีเจอร์ทั้งหมดอยู่ใน DROFUS",
  "home.emui": "สร้างและแก้ไขธีมสำหรับโทรศัพท์ Huawei (EMUI) อยู่บน Google Play ตั้งแต่ปี 2016",
  "home.chaomecreator": "สร้างธีมสำหรับโทรศัพท์ Xiaomi (MIUI) อยู่บน Google Play ตั้งแต่ปี 2017",
- "home.merged.chaome": "รวมเข้ากับ <a href=\"/apps/chaome.html\">ChaoMe</a> แล้ว"
+ "home.merged.chaome": "รวมเข้ากับ <a href=\"/apps/chaome.html\">ChaoMe</a> แล้ว",
+ "home.desc": "แอป Android ฟรี: USB บูตได้และ Ventoy ซ่อม USB และตัวจัดการไฟล์ ตัวแก้ไข PDF และ Office ห้องนิรภัยส่วนตัว ธีม MIUI และเกมปริศนา ทั้งหมดบนโทรศัพท์ของคุณ",
+ "sup.desc": "คำตอบสำหรับคำถามที่พบบ่อยที่สุดเกี่ยวกับแอปของ MixApplications และวิธีติดต่อเราทางอีเมลหรือ WhatsApp",
+ "app.title": "{name} สำหรับ Android — MixApplications"
 }

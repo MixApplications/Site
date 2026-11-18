@@ -3019,5 +3019,8 @@
  "gd.why.98": "<strong>ISO 2 USB:</strong> наше первое USB-приложение, в Google Play с октября 2017 года, более 2,400,000 загрузок. Все его возможности теперь есть в DROFUS.",
  "home.emui": "Создание и редактирование тем для телефонов Huawei (EMUI). В Google Play с 2016 года.",
  "home.chaomecreator": "Создание тем для телефонов Xiaomi (MIUI). В Google Play с 2017 года.",
- "home.merged.chaome": "Объединено с <a href=\"/apps/chaome.html\">ChaoMe</a>"
+ "home.merged.chaome": "Объединено с <a href=\"/apps/chaome.html\">ChaoMe</a>",
+ "home.desc": "Бесплатные приложения для Android: загрузочная USB-флешка и Ventoy, ремонт USB и файловый менеджер, редактор PDF и Office, личный сейф, темы MIUI и игра-головоломка. Всё на вашем телефоне.",
+ "sup.desc": "Ответы на самые частые вопросы о приложениях MixApplications и способы связаться с нами по электронной почте или в WhatsApp.",
+ "app.title": "{name} для Android — MixApplications"
 }

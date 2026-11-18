@@ -3019,5 +3019,8 @@
  "gd.why.98": "<strong>ISO 2 USB:</strong> nosso primeiro app USB, no Google Play desde outubro de 2017, mais de 2.400.000 downloads. Seus recursos agora estão no DROFUS.",
  "home.emui": "Crie e edite temas para celulares Huawei (EMUI). No Google Play desde 2016.",
  "home.chaomecreator": "Crie temas para celulares Xiaomi (MIUI). No Google Play desde 2017.",
- "home.merged.chaome": "Incorporado ao <a href=\"/apps/chaome.html\">ChaoMe</a>"
+ "home.merged.chaome": "Incorporado ao <a href=\"/apps/chaome.html\">ChaoMe</a>",
+ "home.desc": "Apps Android gratuitos: USB inicializável e Ventoy, reparo de USB e gerenciador de arquivos, editor de PDF e Office, cofre privado, temas MIUI e um jogo de quebra-cabeça. Tudo no seu celular.",
+ "sup.desc": "Respostas às perguntas mais comuns sobre os apps da MixApplications e como falar conosco por e-mail ou WhatsApp.",
+ "app.title": "{name} para Android — MixApplications"
 }

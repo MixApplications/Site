@@ -3019,5 +3019,8 @@
  "gd.why.98": "<strong>ISO 2 USB:</strong> aplikasi USB pertama kami, di Google Play sejak Oktober 2017, lebih dari 2.400.000 unduhan. Fiturnya kini ada di DROFUS.",
  "home.emui": "Buat dan edit tema untuk ponsel Huawei (EMUI). Di Google Play sejak 2016.",
  "home.chaomecreator": "Buat tema untuk ponsel Xiaomi (MIUI). Di Google Play sejak 2017.",
- "home.merged.chaome": "Digabungkan ke <a href=\"/apps/chaome.html\">ChaoMe</a>"
+ "home.merged.chaome": "Digabungkan ke <a href=\"/apps/chaome.html\">ChaoMe</a>",
+ "home.desc": "Aplikasi Android gratis: USB bootable dan Ventoy, perbaikan USB dan pengelola file, editor PDF dan Office, brankas pribadi, tema MIUI, dan game puzzle. Semua di ponsel Anda.",
+ "sup.desc": "Jawaban atas pertanyaan paling umum tentang aplikasi MixApplications, dan cara menghubungi kami lewat email atau WhatsApp.",
+ "app.title": "{name} untuk Android — MixApplications"
 }

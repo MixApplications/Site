@@ -256,6 +256,8 @@ for (const [file, html] of Object.entries(rendered)) {
     if (tp) put(tp[1], asText(attrs.match(/\sdata-tpl="([^"]*)"/)[1]), file);
   }
 }
+// strings that live only in <head> (meta description, title template)
+for (const page of list) for (const [k, v] of Object.entries(page.i18n || {})) put(k, v, page.path);
 const sorted = Object.fromEntries(Object.keys(source).sort((a, b) => a.localeCompare(b, 'en', { numeric: true })).map(k => [k, source[k]]));
 const sourceJson = JSON.stringify(sorted, null, 1) + '\n';
 const sourcePath = path.join(SRC, 'i18n', '_source.en.json');
@@ -357,9 +359,50 @@ for (const page of list) {
       html = html.replace(`<meta name="description" content="${en}">`, `<meta name="description" content="${tr}">`)
         .replace(`<meta property="og:description" content="${en}">`, `<meta property="og:description" content="${tr}">`);
     }
+    const tt = page.titleTpl && shipped[l.code][page.titleTpl.key];
+    if (tt) html = html.replace(`<title>${page.title}</title>`, `<title>${escText(strip(tt).replace('{name}', page.titleTpl.name))}</title>`);
+    const shownTitle = html.match(/<title[^>]*>([^<]*)<\/title>/)[1];
+    html = html.replace(`<meta property="og:title" content="${page.title}">`, `<meta property="og:title" content="${shownTitle.replace(/"/g, '&quot;')}">`);
     (versionsOf[page.path] ??= []).push(l.code);
     localized[l.code + page.path] = html;
   }
+}
+function localizeLd(html, c, dict, pagePath) {
+  const own = SITE + urlOf(pagePath);
+  const toLang = u => {
+    if (typeof u !== 'string' || !u.startsWith(SITE + '/')) return u;
+    const p = u.slice(SITE.length), key = p === '/' ? '/index.html' : p;
+    return versionsOf[key]?.includes(c) ? `${SITE}/${c}${urlOf(key)}` : u;
+  };
+  const h1 = strip((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1]);
+  const desc = (html.match(/<meta name="description" content="([^"]*)"/) || [])[1]?.replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+  const faq = [...html.matchAll(/<details class="q"[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>\s*<div class="a">([\s\S]*?)<\/div>\s*<\/details>/g)];
+  const feats = [...html.matchAll(/<div class="feature"><h3[^>]*>([\s\S]*?)<\/h3><p[^>]*>([\s\S]*?)<\/p><\/div>/g)];
+  return html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (all, json) => {
+    const x = JSON.parse(json);
+    switch (x['@type']) {
+      case 'FAQPage':
+        if (faq.length !== x.mainEntity.length) fail(`${c}${pagePath}: ${faq.length} answers on the page, ${x.mainEntity.length} in FAQPage data`);
+        x.mainEntity = faq.map(([, q, a]) => ({ '@type': 'Question', name: strip(q), acceptedAnswer: { '@type': 'Answer', text: strip(a) } }));
+        break;
+      case 'Article':
+        Object.assign(x, { headline: h1, description: desc, inLanguage: c, url: toLang(x.url) });
+        for (const a of x.about || []) a.url = toLang(a.url);
+        break;
+      case 'BreadcrumbList':
+        for (const it of x.itemListElement) {
+          if (it.item === own) it.name = h1;
+          else if (it.item === SITE + '/' && dict['nav.apps']) it.name = strip(dict['nav.apps']);
+          it.item = toLang(it.item);
+        }
+        break;
+      case 'SoftwareApplication':
+        Object.assign(x, { description: desc, url: toLang(x.url) });
+        if (x.featureList && feats.length === x.featureList.length) x.featureList = feats.map(([, t, d]) => `${strip(t)}: ${strip(d)}`);
+        break;
+    }
+    return `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`;
+  });
 }
 const hreflang = p => {
   const codes = versionsOf[p];
@@ -375,7 +418,7 @@ for (const page of list) {
   write(page.path, rendered[page.path]);
   for (const c of codes) {
     const meta = langList.find(l => l.code === c);
-    let html = localized[c + page.path]
+    let html = localizeLd(localized[c + page.path], c, shipped[c], page.path)
       .replace('<html lang="en">', `<html lang="${c}"${meta.rtl ? ' dir="rtl"' : ''} data-static-lang="${c}">`)
       .replace(`<link rel="canonical" href="${SITE}${urlOf(page.path)}">`, `<link rel="canonical" href="${SITE}/${c}${urlOf(page.path)}">`)
       .replace(`<meta property="og:url" content="${SITE}${urlOf(page.path)}">`, `<meta property="og:url" content="${SITE}/${c}${urlOf(page.path)}">`)

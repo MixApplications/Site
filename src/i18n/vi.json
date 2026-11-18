@@ -3001,5 +3001,8 @@
  "gd.why.98": "<strong>ISO 2 USB:</strong> ứng dụng USB đầu tiên của chúng tôi, có mặt trên Google Play từ tháng 10 năm 2017, hơn 2,400,000 lượt tải. Các tính năng của nó giờ đã có trong DROFUS.",
  "home.emui": "Tạo và chỉnh sửa chủ đề cho điện thoại Huawei (EMUI). Có trên Google Play từ năm 2016.",
  "home.chaomecreator": "Tạo chủ đề cho điện thoại Xiaomi (MIUI). Có trên Google Play từ năm 2017.",
- "home.merged.chaome": "Đã gộp vào <a href=\"/apps/chaome.html\">ChaoMe</a>"
+ "home.merged.chaome": "Đã gộp vào <a href=\"/apps/chaome.html\">ChaoMe</a>",
+ "home.desc": "Ứng dụng Android miễn phí: USB khởi động và Ventoy, sửa USB và trình quản lý tệp, trình chỉnh sửa PDF và Office, kho riêng tư, chủ đề MIUI và một trò chơi giải đố. Tất cả trên điện thoại của bạn.",
+ "sup.desc": "Câu trả lời cho các câu hỏi thường gặp nhất về ứng dụng của MixApplications, và cách liên hệ với chúng tôi qua email hoặc WhatsApp.",
+ "app.title": "{name} cho Android — MixApplications"
 }

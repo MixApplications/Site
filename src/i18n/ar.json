@@ -3019,5 +3019,8 @@
  "gd.why.98": "<strong>ISO 2 USB:</strong> أول تطبيق USB لدينا، على Google Play منذ أكتوبر 2017، أكثر من 2,400,000 تنزيل. ميزاته موجودة الآن في DROFUS.",
  "home.emui": "إنشاء سمات لهواتف Huawei (EMUI) وتعديلها. على Google Play منذ 2016.",
  "home.chaomecreator": "إنشاء سمات لهواتف Xiaomi (MIUI). على Google Play منذ 2017.",
- "home.merged.chaome": "مدمج في <a href=\"/apps/chaome.html\">ChaoMe</a>"
+ "home.merged.chaome": "مدمج في <a href=\"/apps/chaome.html\">ChaoMe</a>",
+ "home.desc": "تطبيقات Android مجانية: USB قابل للإقلاع وVentoy، وإصلاح USB ومدير ملفات، ومحرر PDF وOffice، وخزنة خاصة، وسمات MIUI، ولعبة ألغاز. كل ذلك على هاتفك.",
+ "sup.desc": "إجابات عن أكثر الأسئلة شيوعًا حول تطبيقات MixApplications، وطريقة التواصل معنا عبر البريد الإلكتروني أو واتساب.",
+ "app.title": "{name} لنظام Android — MixApplications"
 }

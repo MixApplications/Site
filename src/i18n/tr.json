@@ -3019,5 +3019,8 @@
  "gd.why.98": "<strong>ISO 2 USB:</strong> ilk USB uygulamamız, Ekim 2017'den beri Google Play'de, 2.400.000'den fazla indirme. Özellikleri artık DROFUS'ta.",
  "home.emui": "Huawei telefonlar (EMUI) için tema oluşturun ve düzenleyin. 2016'dan beri Google Play'de.",
  "home.chaomecreator": "Xiaomi telefonlar (MIUI) için tema oluşturun. 2017'den beri Google Play'de.",
- "home.merged.chaome": "<a href=\"/apps/chaome.html\">ChaoMe</a> ile birleştirildi"
+ "home.merged.chaome": "<a href=\"/apps/chaome.html\">ChaoMe</a> ile birleştirildi",
+ "home.desc": "Ücretsiz Android uygulamaları: önyüklenebilir USB ve Ventoy, USB onarımı ve dosya yöneticisi, PDF ve Office düzenleyici, özel kasa, MIUI temaları ve bir bulmaca oyunu. Hepsi telefonunuzda.",
+ "sup.desc": "MixApplications uygulamalarıyla ilgili en sık sorulan soruların yanıtları ve bize e-posta ya da WhatsApp ile nasıl ulaşabileceğiniz.",
+ "app.title": "Android için {name} — MixApplications"
 }

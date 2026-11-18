@@ -3001,5 +3001,8 @@
  "gd.why.98": "<strong>ISO 2 USB:</strong> نخستین برنامه USB ما، از اکتبر 2017 در Google Play، بیش از 2,400,000 دانلود. امکانات آن اکنون در DROFUS است.",
  "home.emui": "ساخت و ویرایش تم برای گوشی‌های Huawei (EMUI). از سال 2016 در Google Play.",
  "home.chaomecreator": "ساخت تم برای گوشی‌های Xiaomi (MIUI). از سال 2017 در Google Play.",
- "home.merged.chaome": "ادغام‌شده در <a href=\"/apps/chaome.html\">ChaoMe</a>"
+ "home.merged.chaome": "ادغام‌شده در <a href=\"/apps/chaome.html\">ChaoMe</a>",
+ "home.desc": "برنامه‌های رایگان Android: USB قابل بوت و Ventoy، تعمیر USB و مدیر فایل، ویرایشگر PDF و Office، گاوصندوق خصوصی، تم‌های MIUI و یک بازی پازل. همه روی گوشی شما.",
+ "sup.desc": "پاسخ پرتکرارترین پرسش‌ها درباره برنامه‌های MixApplications، و راه تماس با ما از طریق ایمیل یا واتس‌اپ.",
+ "app.title": "{name} برای Android — MixApplications"
 }

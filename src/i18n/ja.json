@@ -3001,5 +3001,8 @@
  "gd.why.98": "<strong>ISO 2 USB：</strong>当社初の USB アプリ。2017 年 10 月から Google Play で公開、2,400,000 回以上ダウンロード。その機能は現在 DROFUS に引き継がれています。",
  "home.emui": "Huawei スマートフォン（EMUI）のテーマを作成・編集。2016 年から Google Play で公開。",
  "home.chaomecreator": "Xiaomi スマートフォン（MIUI）のテーマを作成。2017 年から Google Play で公開。",
- "home.merged.chaome": "<a href=\"/apps/chaome.html\">ChaoMe</a> に統合"
+ "home.merged.chaome": "<a href=\"/apps/chaome.html\">ChaoMe</a> に統合",
+ "home.desc": "無料の Android アプリ：起動可能な USB と Ventoy、USB 修復とファイルマネージャー、PDF と Office エディター、プライベート保管庫、MIUI テーマ、パズルゲーム。すべてスマートフォン上で。",
+ "sup.desc": "MixApplications のアプリに関するよくある質問への回答と、メールまたは WhatsApp でのお問い合わせ方法。",
+ "app.title": "Android 向け {name} — MixApplications"
 }
