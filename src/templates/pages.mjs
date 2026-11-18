@@ -28,8 +28,10 @@ function appIcon(a, p, size) {
 export function home(ctx) {
   const { apps, play, data } = ctx;
   const live = apps.filter(a => a.status === 'live');
-  const totalInstalls = live.reduce((s, a) => s + installsNumber(play[a.pkg]?.installs), 0);
-  const totalReviews = live.reduce((s, a) => s + (play[a.pkg]?.ratings || 0), 0);
+  // retired apps with hand-entered Play Console numbers (apps.json "stats") still count: their downloads were on Google Play
+  const counted = [...live.map(a => play[a.pkg] || {}), ...apps.filter(a => a.status === 'retired' && a.stats).map(a => a.stats)];
+  const totalInstalls = counted.reduce((s, p) => s + installsNumber(p.installs), 0);
+  const totalReviews = counted.reduce((s, p) => s + (p.ratings || 0), 0);
 
   const card = a => {
     const p = play[a.pkg] || {};
@@ -51,13 +53,14 @@ ${a.chips && a.chips.length ? `        <div class="chips">${a.chips.map(c => `<s
       </article>`;
   };
   const retiredItem = a => {
-    const note = a.mergedInto
-      ? `<span class="note merged" data-i18n="home.merged">Merged into <a href="/apps/${a.mergedInto}.html">DROFUS</a></span>`
+    const into = a.mergedInto && apps.find(x => x.id === a.mergedInto);
+    const note = into
+      ? `<span class="note merged" data-i18n="${into.id === 'drofus' ? 'home.merged' : 'home.merged.' + into.id}">Merged into <a href="/apps/${into.id}.html">${into.short || into.name}</a></span>`
       : `<span class="note" data-i18n="home.offline">Currently unpublished from Google Play</span>`;
     const desc = a.descKey ? `<p data-i18n="${a.descKey}">${a.desc}</p>` : '';
     return `      <div class="tile item" style="${style(a)}">
         ${appIcon(a, null, 46)}
-        <div><h3>${a.short || a.name}</h3>${desc}${note}</div>
+        <div><h3>${a.short || a.name}</h3>${desc}${a.stats ? badges(a.stats) : ''}${note}</div>
       </div>`;
   };
 
@@ -113,7 +116,7 @@ ${retired.map(retiredItem).join('\n')}
 
     <section>
       <div class="shelf"><h2 data-i18n="home.tr.h">Why do millions of people trust our USB apps?</h2></div>
-      <p class="trustlead" data-i18n="home.tr.1">We have published Android apps on Google Play since 2017 and built USB apps for more than five years. Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools each have over 1,000,000 downloads and are available in 58 languages.</p>
+      <p class="trustlead" data-i18n="home.tr.1">We have published Android apps on Google Play since 2016 and built USB apps for more than nine years. Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools each have over 1,000,000 downloads and are available in 58 languages.</p>
       <p class="trustlead" data-i18n="home.tr.13">Every version is fully tested before each release, on 5+ phones from different brands (Android 10 to 16) and 15+ USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.</p>
       <div class="principles">
         <div class="tile reveal" style="--c:var(--blue)"><b data-i18n="home.tr.2">Every drive is checked</b><span data-i18n="home.tr.3">Each drive is tested when you connect it. Read-only and fake drives are caught, and nothing is erased without your OK.</span></div>
