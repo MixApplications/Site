@@ -3022,5 +3022,17 @@
  "home.merged.chaome": "Intégrée à <a href=\"/apps/chaome.html\">ChaoMe</a>",
  "home.desc": "Applications Android gratuites : clé USB bootable et Ventoy, réparation USB et gestionnaire de fichiers, éditeur PDF et Office, coffre privé, thèmes MIUI et un jeu de réflexion. Tout sur votre téléphone.",
  "sup.desc": "Réponses aux questions les plus fréquentes sur les applications MixApplications, et comment nous contacter par e-mail ou WhatsApp.",
- "app.title": "{name} pour Android — MixApplications"
+ "app.title": "{name} pour Android — MixApplications",
+ "ab.title": "À propos de MixApplications — applis Android depuis 2016",
+ "ab.h1": "À propos de MixApplications",
+ "ab.desc": "MixApplications crée des applications Android pour les clés USB, les documents, la confidentialité, les thèmes et les jeux : sur Google Play depuis 2016, plus de 19 000 000 de téléchargements. Développées en Égypte.",
+ "ab.1": "Qui sommes-nous",
+ "ab.2": "Ce que nous créons",
+ "ab.3": "Comment fonctionnent nos applications",
+ "ab.4": "Comment nous testons nos applications USB",
+ "ab.5": "Le <a href=\"/guides/usb-safety.html\">guide de sécurité USB</a> explique ce que les applications vérifient et ce qui se passe en cas de problème.",
+ "ab.6": "Nous contacter",
+ "ab.7": "Pour l'assistance, les achats, les demandes professionnelles et la presse, <a href=\"/contact.html\">écrivez-nous par e-mail ou WhatsApp</a>. Toutes nos applications sont sur notre <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">page développeur Google Play</a>.",
+ "pg.k.about": "À propos",
+ "foot.about": "À propos"
 }

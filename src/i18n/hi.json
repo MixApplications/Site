@@ -3022,5 +3022,17 @@
  "home.merged.chaome": "<a href=\"/apps/chaome.html\">ChaoMe</a> में शामिल कर दिया गया",
  "home.desc": "मुफ़्त Android ऐप: बूट करने योग्य USB और Ventoy, USB रिपेयर और फ़ाइल मैनेजर, PDF और Office एडिटर, निजी वॉल्ट, MIUI थीम और एक पज़ल गेम। सब कुछ आपके फ़ोन पर।",
  "sup.desc": "MixApplications ऐप के बारे में सबसे आम सवालों के जवाब, और ईमेल या WhatsApp से हमसे संपर्क करने का तरीका।",
- "app.title": "Android के लिए {name} — MixApplications"
+ "app.title": "Android के लिए {name} — MixApplications",
+ "ab.title": "MixApplications के बारे में — 2016 से Android ऐप",
+ "ab.h1": "MixApplications के बारे में",
+ "ab.desc": "MixApplications USB ड्राइव, डॉक्यूमेंट, प्राइवेसी, थीम और गेम के लिए Android ऐप बनाता है: 2016 से Google Play पर, 19,000,000 से ज़्यादा डाउनलोड के साथ। मिस्र में बनाए गए।",
+ "ab.1": "हम कौन हैं",
+ "ab.2": "हम क्या बनाते हैं",
+ "ab.3": "हमारे ऐप कैसे काम करते हैं",
+ "ab.4": "हम अपने USB ऐप की जाँच कैसे करते हैं",
+ "ab.5": "<a href=\"/guides/usb-safety.html\">USB सुरक्षा गाइड</a> बताती है कि ऐप क्या जाँचते हैं और कुछ गलत होने पर क्या होता है।",
+ "ab.6": "हमसे संपर्क करें",
+ "ab.7": "सहायता, खरीदारी, बिज़नेस पूछताछ और प्रेस के लिए <a href=\"/contact.html\">हमें ईमेल या WhatsApp पर लिखें</a>। हमारे सभी ऐप हमारे <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">Google Play डेवलपर पेज</a> पर हैं।",
+ "pg.k.about": "हमारे बारे में",
+ "foot.about": "हमारे बारे में"
 }

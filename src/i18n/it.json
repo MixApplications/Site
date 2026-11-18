@@ -3004,5 +3004,17 @@
  "home.merged.chaome": "Integrata in <a href=\"/apps/chaome.html\">ChaoMe</a>",
  "home.desc": "App Android gratuite: USB avviabile e Ventoy, riparazione USB e file manager, editor PDF e Office, cassaforte privata, temi MIUI e un gioco rompicapo. Tutto sul tuo telefono.",
  "sup.desc": "Risposte alle domande più frequenti sulle app di MixApplications e come contattarci via email o WhatsApp.",
- "app.title": "{name} per Android — MixApplications"
+ "app.title": "{name} per Android — MixApplications",
+ "ab.title": "Chi è MixApplications — app Android dal 2016",
+ "ab.h1": "Chi è MixApplications",
+ "ab.desc": "MixApplications crea app Android per unità USB, documenti, privacy, temi e giochi: su Google Play dal 2016, con più di 19,000,000 di download. Sviluppate in Egitto.",
+ "ab.1": "Chi siamo",
+ "ab.2": "Cosa realizziamo",
+ "ab.3": "Come funzionano le nostre app",
+ "ab.4": "Come testiamo le nostre app USB",
+ "ab.5": "La <a href=\"/guides/usb-safety.html\">guida alla sicurezza USB</a> spiega cosa controllano le app e cosa succede quando qualcosa va storto.",
+ "ab.6": "Contattaci",
+ "ab.7": "Per assistenza, acquisti, richieste commerciali e stampa, <a href=\"/contact.html\">scrivici via email o WhatsApp</a>. Tutte le nostre app sono sulla nostra <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">pagina sviluppatore su Google Play</a>.",
+ "pg.k.about": "Chi siamo",
+ "foot.about": "Chi siamo"
 }

@@ -3022,5 +3022,17 @@
  "home.merged.chaome": "<a href=\"/apps/chaome.html\">ChaoMe</a> ile birleştirildi",
  "home.desc": "Ücretsiz Android uygulamaları: önyüklenebilir USB ve Ventoy, USB onarımı ve dosya yöneticisi, PDF ve Office düzenleyici, özel kasa, MIUI temaları ve bir bulmaca oyunu. Hepsi telefonunuzda.",
  "sup.desc": "MixApplications uygulamalarıyla ilgili en sık sorulan soruların yanıtları ve bize e-posta ya da WhatsApp ile nasıl ulaşabileceğiniz.",
- "app.title": "Android için {name} — MixApplications"
+ "app.title": "Android için {name} — MixApplications",
+ "ab.title": "MixApplications hakkında — 2016'dan beri Android uygulamaları",
+ "ab.h1": "MixApplications hakkında",
+ "ab.desc": "MixApplications; USB sürücüler, belgeler, gizlilik, temalar ve oyunlar için Android uygulamaları geliştirir: 2016'dan beri Google Play'de, 19.000.000'dan fazla indirme. Mısır'da geliştirildi.",
+ "ab.1": "Biz kimiz",
+ "ab.2": "Neler yapıyoruz",
+ "ab.3": "Uygulamalarımız nasıl çalışır",
+ "ab.4": "USB uygulamalarımızı nasıl test ediyoruz",
+ "ab.5": "<a href=\"/guides/usb-safety.html\">USB güvenlik rehberi</a>, uygulamaların neleri kontrol ettiğini ve bir sorun çıktığında ne olduğunu anlatır.",
+ "ab.6": "Bize ulaşın",
+ "ab.7": "Destek, satın almalar, iş birliği talepleri ve basın için <a href=\"/contact.html\">bize e-posta veya WhatsApp ile yazın</a>. Tüm uygulamalarımız <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">Google Play geliştirici sayfamızda</a>.",
+ "pg.k.about": "Hakkında",
+ "foot.about": "Hakkımızda"
 }

@@ -3004,5 +3004,17 @@
  "home.merged.chaome": "ادغام‌شده در <a href=\"/apps/chaome.html\">ChaoMe</a>",
  "home.desc": "برنامه‌های رایگان Android: USB قابل بوت و Ventoy، تعمیر USB و مدیر فایل، ویرایشگر PDF و Office، گاوصندوق خصوصی، تم‌های MIUI و یک بازی پازل. همه روی گوشی شما.",
  "sup.desc": "پاسخ پرتکرارترین پرسش‌ها درباره برنامه‌های MixApplications، و راه تماس با ما از طریق ایمیل یا واتس‌اپ.",
- "app.title": "{name} برای Android — MixApplications"
+ "app.title": "{name} برای Android — MixApplications",
+ "ab.title": "درباره MixApplications — برنامه‌های Android از سال 2016",
+ "ab.h1": "درباره MixApplications",
+ "ab.desc": "MixApplications برنامه‌های Android برای درایوهای USB، اسناد، حریم خصوصی، تم‌ها و بازی‌ها می‌سازد: از سال 2016 در Google Play، با بیش از 19,000,000 دانلود. توسعه‌یافته در مصر.",
+ "ab.1": "ما که هستیم",
+ "ab.2": "چه می‌سازیم",
+ "ab.3": "برنامه‌های ما چگونه کار می‌کنند",
+ "ab.4": "برنامه‌های USB خود را چگونه آزمایش می‌کنیم",
+ "ab.5": "<a href=\"/guides/usb-safety.html\">راهنمای ایمنی USB</a> توضیح می‌دهد برنامه‌ها چه چیزهایی را بررسی می‌کنند و وقتی مشکلی پیش بیاید چه می‌شود.",
+ "ab.6": "تماس با ما",
+ "ab.7": "برای پشتیبانی، خرید، درخواست‌های تجاری و رسانه‌ها، <a href=\"/contact.html\">از طریق ایمیل یا واتس‌اپ به ما پیام دهید</a>. همه برنامه‌های ما در <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">صفحه توسعه‌دهنده ما در Google Play</a> هستند.",
+ "pg.k.about": "درباره ما",
+ "foot.about": "درباره ما"
 }

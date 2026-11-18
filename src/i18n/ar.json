@@ -3022,5 +3022,17 @@
  "home.merged.chaome": "مدمج في <a href=\"/apps/chaome.html\">ChaoMe</a>",
  "home.desc": "تطبيقات Android مجانية: USB قابل للإقلاع وVentoy، وإصلاح USB ومدير ملفات، ومحرر PDF وOffice، وخزنة خاصة، وسمات MIUI، ولعبة ألغاز. كل ذلك على هاتفك.",
  "sup.desc": "إجابات عن أكثر الأسئلة شيوعًا حول تطبيقات MixApplications، وطريقة التواصل معنا عبر البريد الإلكتروني أو واتساب.",
- "app.title": "{name} لنظام Android — MixApplications"
+ "app.title": "{name} لنظام Android — MixApplications",
+ "ab.title": "عن MixApplications — تطبيقات Android منذ 2016",
+ "ab.h1": "عن MixApplications",
+ "ab.desc": "تصنع MixApplications تطبيقات Android لمحركات USB والمستندات والخصوصية والسمات والألعاب: على Google Play منذ 2016، مع أكثر من 19,000,000 تنزيل. طُوّرت في مصر.",
+ "ab.1": "من نحن",
+ "ab.2": "ماذا نصنع",
+ "ab.3": "كيف تعمل تطبيقاتنا",
+ "ab.4": "كيف نختبر تطبيقات USB",
+ "ab.5": "يشرح <a href=\"/guides/usb-safety.html\">دليل أمان USB</a> ما تفحصه التطبيقات وما يحدث عندما يقع خطأ ما.",
+ "ab.6": "تواصل معنا",
+ "ab.7": "للدعم والمشتريات واستفسارات الأعمال والصحافة، <a href=\"/contact.html\">راسلنا عبر البريد الإلكتروني أو واتساب</a>. كل تطبيقاتنا موجودة على <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">صفحة المطوّر على Google Play</a>.",
+ "pg.k.about": "من نحن",
+ "foot.about": "من نحن"
 }

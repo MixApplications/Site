@@ -366,7 +366,7 @@ ${ctx.policies.map(p => `      <a href="/${p.file}"${p.file === file ? ' aria-cu
 //   title    <title> text;  h1  visible heading;  description  answer-first lead = meta description
 //   app      owning app id (llms.txt section, breadcrumb); apps  ids of every app that has this tool
 //   kind     tool | faq | whatsnew | tokens | guide
-const KIND = { tool: ['Tools', 'pg.k.tool'], faq: ['FAQ', 'pg.k.faq'], whatsnew: ["What's new", 'pg.k.new'], tokens: ['Tokens', 'pg.k.tokens'], guide: ['Guides', 'pg.k.guide'] };
+const KIND = { tool: ['Tools', 'pg.k.tool'], faq: ['FAQ', 'pg.k.faq'], whatsnew: ["What's new", 'pg.k.new'], tokens: ['Tokens', 'pg.k.tokens'], guide: ['Guides', 'pg.k.guide'], about: ['About', 'pg.k.about'] };
 const HOME_DESC = 'Free Android apps: bootable USB and Ventoy, USB repair and file manager, PDF and Office editor, private vault, MIUI themes and a puzzle game. All on your phone.';
 const SUP_DESC = 'Answers to the most common questions about MixApplications apps, and how to contact us by email or WhatsApp.';
 const APP_TITLE = '{name} for Android — MixApplications';
@@ -408,6 +408,9 @@ ${appCards}</main>`;
     author: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/' },
     publisher: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/', logo: SITE + '/assets/logo.png' },
     about: inApps.map(x => ({ '@type': 'SoftwareApplication', name: x.short || x.name, operatingSystem: 'Android', url: SITE + `/apps/${x.id}.html` })) });
+  if (meta.kind === 'about') ld.push({ '@context': 'https://schema.org', '@type': 'AboutPage', name: stripTags(meta.h1),
+    description: stripTags(meta.description), url: SITE + path, dateModified: updated, inLanguage: 'en',
+    mainEntity: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/', logo: SITE + '/assets/logo.png', email: EMAIL, sameAs: [PLAY_DEV] } });
   if (meta.kind === 'faq') {
     const qa = [...body.matchAll(/<details class="q">\s*<summary[^>]*>([\s\S]*?)<\/summary>\s*<div class="a">([\s\S]*?)<\/div>\s*<\/details>/g)];
     if (!qa.length) throw new Error(`${rel}: FAQ page without <details class="q"> answers`);

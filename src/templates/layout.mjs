@@ -100,6 +100,7 @@ ${live.map(a => `          <li><a href="/apps/${a.id}.html">${a.short || a.name}
       <div class="fcol">
         <h2 data-i18n="foot.help">Help</h2>
         <ul>
+          <li><a href="/about.html" data-i18n="foot.about">About us</a></li>
           <li><a href="/contact.html" data-i18n="foot.faq">Support &amp; answers</a></li>
           <li><a href="/guides/why-mixapplications.html" data-i18n="foot.g3">Why choose our apps</a></li>
           <li><a href="/guides/usb-safety.html" data-i18n="foot.g1">USB safety guide</a></li>

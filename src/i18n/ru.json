@@ -3022,5 +3022,17 @@
  "home.merged.chaome": "Объединено с <a href=\"/apps/chaome.html\">ChaoMe</a>",
  "home.desc": "Бесплатные приложения для Android: загрузочная USB-флешка и Ventoy, ремонт USB и файловый менеджер, редактор PDF и Office, личный сейф, темы MIUI и игра-головоломка. Всё на вашем телефоне.",
  "sup.desc": "Ответы на самые частые вопросы о приложениях MixApplications и способы связаться с нами по электронной почте или в WhatsApp.",
- "app.title": "{name} для Android — MixApplications"
+ "app.title": "{name} для Android — MixApplications",
+ "ab.title": "О MixApplications — приложения для Android с 2016 года",
+ "ab.h1": "О MixApplications",
+ "ab.desc": "MixApplications создаёт приложения для Android: для USB-накопителей, документов, приватности, тем и игр. В Google Play с 2016 года, более 19,000,000 загрузок. Разработано в Египте.",
+ "ab.1": "Кто мы",
+ "ab.2": "Что мы делаем",
+ "ab.3": "Как работают наши приложения",
+ "ab.4": "Как мы тестируем наши USB-приложения",
+ "ab.5": "В <a href=\"/guides/usb-safety.html\">руководстве по безопасности USB</a> описано, что проверяют приложения и что происходит, если что-то пошло не так.",
+ "ab.6": "Связаться с нами",
+ "ab.7": "По вопросам поддержки, покупок, сотрудничества и для прессы <a href=\"/contact.html\">напишите нам по электронной почте или в WhatsApp</a>. Все наши приложения — на нашей <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">странице разработчика в Google Play</a>.",
+ "pg.k.about": "О нас",
+ "foot.about": "О нас"
 }

@@ -389,6 +389,9 @@ function localizeLd(html, c, dict, pagePath) {
         Object.assign(x, { headline: h1, description: desc, inLanguage: c, url: toLang(x.url) });
         for (const a of x.about || []) a.url = toLang(a.url);
         break;
+      case 'AboutPage':
+        Object.assign(x, { name: h1, description: desc, inLanguage: c, url: toLang(x.url) });
+        break;
       case 'BreadcrumbList':
         for (const it of x.itemListElement) {
           if (it.item === own) it.name = h1;

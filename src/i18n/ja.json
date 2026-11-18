@@ -3004,5 +3004,17 @@
  "home.merged.chaome": "<a href=\"/apps/chaome.html\">ChaoMe</a> に統合",
  "home.desc": "無料の Android アプリ：起動可能な USB と Ventoy、USB 修復とファイルマネージャー、PDF と Office エディター、プライベート保管庫、MIUI テーマ、パズルゲーム。すべてスマートフォン上で。",
  "sup.desc": "MixApplications のアプリに関するよくある質問への回答と、メールまたは WhatsApp でのお問い合わせ方法。",
- "app.title": "Android 向け {name} — MixApplications"
+ "app.title": "Android 向け {name} — MixApplications",
+ "ab.title": "MixApplications について — 2016 年からの Android アプリ",
+ "ab.h1": "MixApplications について",
+ "ab.desc": "MixApplications は、USB ドライブ、文書、プライバシー、テーマ、ゲームのための Android アプリを開発しています。2016 年から Google Play で公開し、ダウンロード数は 19,000,000 回以上。エジプトで開発しています。",
+ "ab.1": "私たちについて",
+ "ab.2": "開発しているアプリ",
+ "ab.3": "アプリの仕組み",
+ "ab.4": "USB アプリのテスト方法",
+ "ab.5": "<a href=\"/guides/usb-safety.html\">USB 安全ガイド</a>では、アプリが何を確認するか、問題が起きたときにどうなるかを説明しています。",
+ "ab.6": "お問い合わせ",
+ "ab.7": "サポート、購入、ビジネスのご相談、報道関係のお問い合わせは、<a href=\"/contact.html\">メールまたは WhatsApp でご連絡ください</a>。すべてのアプリは <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">Google Play のデベロッパーページ</a>でご覧いただけます。",
+ "pg.k.about": "私たちについて",
+ "foot.about": "私たちについて"
 }

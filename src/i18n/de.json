@@ -3022,5 +3022,17 @@
  "home.merged.chaome": "In <a href=\"/apps/chaome.html\">ChaoMe</a> aufgegangen",
  "home.desc": "Kostenlose Android-Apps: bootfähiger USB-Stick und Ventoy, USB-Reparatur und Dateimanager, PDF- und Office-Editor, privater Tresor, MIUI-Themes und ein Puzzlespiel. Alles auf Ihrem Smartphone.",
  "sup.desc": "Antworten auf die häufigsten Fragen zu den Apps von MixApplications und wie Sie uns per E-Mail oder WhatsApp erreichen.",
- "app.title": "{name} für Android — MixApplications"
+ "app.title": "{name} für Android — MixApplications",
+ "ab.title": "Über MixApplications — Android-Apps seit 2016",
+ "ab.h1": "Über MixApplications",
+ "ab.desc": "MixApplications entwickelt Android-Apps für USB-Laufwerke, Dokumente, Privatsphäre, Themes und Spiele: seit 2016 bei Google Play, mit mehr als 19.000.000 Downloads. Entwickelt in Ägypten.",
+ "ab.1": "Wer wir sind",
+ "ab.2": "Was wir entwickeln",
+ "ab.3": "So arbeiten unsere Apps",
+ "ab.4": "So testen wir unsere USB-Apps",
+ "ab.5": "Der <a href=\"/guides/usb-safety.html\">USB-Sicherheitsleitfaden</a> erklärt, was die Apps prüfen und was passiert, wenn etwas schiefgeht.",
+ "ab.6": "Kontakt",
+ "ab.7": "Für Support, Käufe, geschäftliche Anfragen und Presse <a href=\"/contact.html\">schreiben Sie uns per E-Mail oder WhatsApp</a>. Alle unsere Apps finden Sie auf unserer <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">Entwicklerseite bei Google Play</a>.",
+ "pg.k.about": "Über uns",
+ "foot.about": "Über uns"
 }

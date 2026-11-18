@@ -3016,5 +3016,17 @@
  "home.merged.chaome": "Merged into <a href=\"/apps/chaome.html\">ChaoMe</a>",
  "app.title": "{name} for Android — MixApplications",
  "home.desc": "Free Android apps: bootable USB and Ventoy, USB repair and file manager, PDF and Office editor, private vault, MIUI themes and a puzzle game. All on your phone.",
- "sup.desc": "Answers to the most common questions about MixApplications apps, and how to contact us by email or WhatsApp."
+ "sup.desc": "Answers to the most common questions about MixApplications apps, and how to contact us by email or WhatsApp.",
+ "ab.1": "Who we are",
+ "ab.2": "What we make",
+ "ab.3": "How our apps work",
+ "ab.4": "How we test our USB apps",
+ "ab.5": "The <a href=\"/guides/usb-safety.html\">USB safety guide</a> explains what the apps check and what happens when something goes wrong.",
+ "ab.6": "Contact us",
+ "ab.7": "For support, purchases, business enquiries and press, <a href=\"/contact.html\">write to us by email or WhatsApp</a>. All our apps are on our <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">Google Play developer page</a>.",
+ "ab.desc": "MixApplications builds Android apps for USB drives, documents, privacy, themes and games: on Google Play since 2016, with more than 19,000,000 downloads. Developed in Egypt.",
+ "ab.h1": "About MixApplications",
+ "ab.title": "About MixApplications — Android apps since 2016",
+ "foot.about": "About us",
+ "pg.k.about": "About"
 }

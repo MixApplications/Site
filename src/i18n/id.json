@@ -3022,5 +3022,17 @@
  "home.merged.chaome": "Digabungkan ke <a href=\"/apps/chaome.html\">ChaoMe</a>",
  "home.desc": "Aplikasi Android gratis: USB bootable dan Ventoy, perbaikan USB dan pengelola file, editor PDF dan Office, brankas pribadi, tema MIUI, dan game puzzle. Semua di ponsel Anda.",
  "sup.desc": "Jawaban atas pertanyaan paling umum tentang aplikasi MixApplications, dan cara menghubungi kami lewat email atau WhatsApp.",
- "app.title": "{name} untuk Android — MixApplications"
+ "app.title": "{name} untuk Android — MixApplications",
+ "ab.title": "Tentang MixApplications — aplikasi Android sejak 2016",
+ "ab.h1": "Tentang MixApplications",
+ "ab.desc": "MixApplications membuat aplikasi Android untuk drive USB, dokumen, privasi, tema, dan game: di Google Play sejak 2016, dengan lebih dari 19.000.000 unduhan. Dikembangkan di Mesir.",
+ "ab.1": "Siapa kami",
+ "ab.2": "Apa yang kami buat",
+ "ab.3": "Cara kerja aplikasi kami",
+ "ab.4": "Cara kami menguji aplikasi USB kami",
+ "ab.5": "<a href=\"/guides/usb-safety.html\">Panduan keamanan USB</a> menjelaskan apa yang diperiksa aplikasi dan apa yang terjadi saat ada masalah.",
+ "ab.6": "Hubungi kami",
+ "ab.7": "Untuk dukungan, pembelian, pertanyaan bisnis, dan pers, <a href=\"/contact.html\">kirim pesan kepada kami lewat email atau WhatsApp</a>. Semua aplikasi kami ada di <a href=\"https://play.google.com/store/apps/developer?id=MixApplications\">halaman developer kami di Google Play</a>.",
+ "pg.k.about": "Tentang",
+ "foot.about": "Tentang kami"
 }
