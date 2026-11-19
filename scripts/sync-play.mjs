@@ -77,6 +77,8 @@ for (const appId of candidates) {
       genreId: a.genreId || '',
       privacyPolicy: a.privacyPolicy || '',
       updated: a.updated ? new Date(a.updated).toISOString().slice(0, 10) : '',
+      // latest release's version name as Play shows it; Play's "varies with device" placeholder is dropped
+      version: a.version && !/^VARY$|varies/i.test(a.version) ? a.version : '',
       url: a.url,
       i18n: {},
     };

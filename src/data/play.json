@@ -24,6 +24,7 @@
    "genreId": "PRODUCTIVITY",
    "privacyPolicy": "https://www.mixapplications.com/mixdocs_privacy.html",
    "updated": "2026-11-09",
+   "version": "1.0.3",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.mixdocs&hl=en&gl=us",
    "i18n": {
     "ar": {
@@ -86,6 +87,7 @@
    "genreId": "TOOLS",
    "privacyPolicy": "https://www.mixapplications.com/cofferlock_privacy.html",
    "updated": "2026-10-19",
+   "version": "1.0.0",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.cofferlock&hl=en&gl=us",
    "i18n": {
     "ar": {
@@ -148,6 +150,7 @@
    "genreId": "PERSONALIZATION",
    "privacyPolicy": "https://www.mixapplications.com/chaome_privacy.html",
    "updated": "2026-10-13",
+   "version": "3.0.1",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.miuithemeeditor&hl=en&gl=us",
    "i18n": {
     "ar": {
@@ -206,6 +209,7 @@
    "genreId": "TOOLS",
    "privacyPolicy": "https://www.mixapplications.com/drofus_privacy.html",
    "updated": "2026-10-29",
+   "version": "12.5.0",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.rufus&hl=en&gl=us",
    "i18n": {
     "ar": {
@@ -263,6 +267,7 @@
    "genreId": "TOOLS",
    "privacyPolicy": "https://www.mixapplications.com/ventoy_privacy.html",
    "updated": "2026-10-29",
+   "version": "12.5.0 (1.1.18)",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.ventoy_app&hl=en&gl=us",
    "i18n": {
     "ar": {
@@ -320,6 +325,7 @@
    "genreId": "TOOLS",
    "privacyPolicy": "https://www.mixapplications.com/usb_tools_privacy.html",
    "updated": "2026-10-29",
+   "version": "12.5.0",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.usbtools&hl=en&gl=us",
    "i18n": {
     "ar": {
@@ -382,6 +388,7 @@
    "genreId": "GAME_PUZZLE",
    "privacyPolicy": "https://www.mixapplications.com/tumtum_privacy.html",
    "updated": "2026-10-07",
+   "version": "1.0.6",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.tumtum&hl=en&gl=us",
    "i18n": {
     "ar": {
@@ -439,6 +446,7 @@
    "genreId": "TOOLS",
    "privacyPolicy": "https://www.mixapplications.com/ultimate_usb_privacy.html",
    "updated": "2026-10-29",
+   "version": "12.5.0",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.ultimateusb&hl=en&gl=us",
    "i18n": {
     "ar": {
@@ -501,6 +509,7 @@
    "genreId": "TOOLS",
    "privacyPolicy": "https://www.mixapplications.com/usb_file_manager_privacy.html",
    "updated": "2026-10-29",
+   "version": "13.0.0",
    "url": "https://play.google.com/store/apps/details?id=com.mixapplications.usbfilemanager&hl=en&gl=us",
    "i18n": {
     "ar": {

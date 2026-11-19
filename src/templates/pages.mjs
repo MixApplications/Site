@@ -156,6 +156,7 @@ ${retired.map(retiredItem).join('\n')}
 function proof(p, a) {
   const items = [];
   if (a.released) items.push(`<div><b>${a.released.slice(0, 4)}</b><span data-i18n="app.since">on Google Play since</span></div>`);
+  if (p.version) items.push(`<div><b>${esc(p.version)}</b><span data-i18n="app.version">latest version</span></div>`);
   if (installsNumber(p.installs) > 0) items.push(`<div><b>${compact(installsNumber(p.installs))}+</b><span data-i18n="home.dl">downloads</span></div>`);
   if (typeof p.score === 'number' && p.score >= MIN_RATING) items.push(`<div><b>${p.score.toFixed(1)} ★</b><span data-i18n="app.rating">average rating</span></div>`);
   if (p.ratings && typeof p.score === 'number' && p.score >= MIN_RATING) items.push(`<div><b>${reviews(p.ratings)}</b><span data-i18n="home.rv">reviews</span></div>`);
@@ -255,6 +256,7 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     ...(a.released ? { datePublished: a.released } : {}),
     ...(p.updated ? { dateModified: p.updated } : {}),
+    ...(p.version ? { softwareVersion: p.version } : {}),
   };
   // No aggregateRating: Google's review-snippet rules forbid ratings taken from another site (Google Play);
   // the Play rating is shown as visible text on the page instead.

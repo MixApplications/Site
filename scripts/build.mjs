@@ -447,8 +447,10 @@ const lastmod = files => {
   catch { return ''; }   // no git history: leave lastmod out rather than guess
 };
 const urls = [];
+// a new release on Google Play (its "updated" day, which also brings the new version name) counts as a change of the app page
+const releaseOf = p => { const a = apps.find(x => p.path === `/apps/${x.id}.html`); const d = a && play[a.pkg]?.updated; return d ? `${d}T00:00:00Z` : ''; };
 for (const p of list.filter(x => !x.noindex)) {
-  const mod = lastmod(sourceOf(p));
+  const mod = [lastmod(sourceOf(p)), releaseOf(p)].sort().pop();
   urls.push({ loc: SITE + urlOf(p.path), mod });
   // a translation counts as a change of the language copy too
   for (const c of versionsOf[p.path] || []) urls.push({ loc: `${SITE}/${c}${urlOf(p.path)}`, mod: [mod, lastmod([`src/i18n/${c}.json`])].sort().pop() });
@@ -476,6 +478,8 @@ for (const a of apps.filter(x => x.status === 'live')) {
   const own = list.filter(p => p.app === a.id && !p.noindex && p.path !== `/apps/${a.id}.html`);
   llms.push(`## ${a.short || a.name}`, '',
     `- [${a.short || a.name} overview](${SITE}/apps/${a.id}.html): ${strip(a.headline || a.desc)}`,
+    // refreshed by every build from Google Play (daily), so agents always read the current release
+    ...(play[a.pkg]?.version ? [`- Latest version on Google Play: ${play[a.pkg].version}${play[a.pkg].updated ? ` (updated ${play[a.pkg].updated})` : ''}`] : []),
     ...own.map(p => `- [${p.linkTitle || p.title}](${SITE}${p.path}): ${strip(p.description)}`),
     `- [${a.short || a.name} on Google Play](https://play.google.com/store/apps/details?id=${a.pkg})`, '');
 }

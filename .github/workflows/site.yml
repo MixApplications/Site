@@ -106,8 +106,8 @@ jobs:
           path: ui-shots
           if-no-files-found: ignore
           retention-days: 14
-      - name: List pages changed by this push (for IndexNow, compared with the live sitemap)
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      - name: List pages changed by this run (for IndexNow, compared with the live sitemap)
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         # never blocks the deploy; the indexnow job fails loudly when this list is missing
         continue-on-error: true
         run: |
@@ -115,7 +115,7 @@ jobs:
           mkdir -p indexnow && node scripts/indexnow.mjs changed _site/sitemap.xml > indexnow/urls.txt
           echo "$(wc -l < indexnow/urls.txt) changed URL(s)"
       - name: Keep the changed-page list
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v7
         with:
           name: indexnow-urls
@@ -147,7 +147,7 @@ jobs:
   indexnow:
     name: Tell IndexNow which pages changed
     needs: deploy
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: read
