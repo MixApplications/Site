@@ -2978,5 +2978,10 @@
  "tl.wipe-usb.76": "드라이브의 실제 크기를 검사하지 않았다면, 증명서와 결과는 표시된 크기 전체가 지워졌다고 주장하지 않습니다. 실제 용량은 —로 표시되며, 드라이브가 실제로 저장하는 부분만 대상이 되었다는 안내가 함께 표시됩니다.",
  "tl.wipe-usb.desc": "Ultimate USB 또는 USB Tools에서 <strong>USB 지우기</strong>를 열고 다섯 가지 방식 중 하나와 검증을 선택한 뒤 <strong>시작</strong>을 탭하세요. 앱은 드라이브 전체를 덮어쓰고, 이후 확인할 수 있으며, 삭제 보고서와 증명서를 발급합니다. 완전 삭제는 토큰을 사용하지 않습니다.",
  "tl.wipe-usb.h1": "Android 휴대폰에서 USB 드라이브를 어떻게 안전하게 완전 삭제하나요?",
- "tl.wipe-usb.title": "Android에서 USB 드라이브 안전하게 완전 삭제: NIST, DoD, Gutmann — USB 지우기"
+ "tl.wipe-usb.title": "Android에서 USB 드라이브 안전하게 완전 삭제: NIST, DoD, Gutmann — USB 지우기",
+ "app.drofus.title": "DROFUS – ISO 2 USB: Android용 부팅 USB 제작 앱",
+ "gd.choose-usb-app.185": "ISO 2 USB의 후속 앱, 2017년부터 Google Play 제공",
+ "app.easy": "간단하고 쉬운 사용",
+ "app.easyd": "초보자부터 고급 사용자와 전문가까지 모두를 위해 설계: 이해하기 쉬운 간단한 화면으로 몇 단계만에 작업이 끝납니다.",
+ "gd.why.99": "<strong>간단하고 쉬운 사용:</strong> 저희 USB 앱은 초보자부터 고급 사용자와 전문가까지 모두를 위해 설계되었으며, 이해하기 쉬운 간단한 화면으로 몇 단계만에 작업이 끝납니다."
 }

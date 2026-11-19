@@ -210,7 +210,8 @@ ${a.definition ? `        <p class="lead" data-i18n="app.${a.id}.def">${a.defini
 ` : ''}${a.desc ? `        <p class="lead" data-i18n="${a.descKey}">${a.desc}</p>
 ` : ''}${proof(p, a)}${(a.features || []).length ? `        <div class="features">
 ${a.features.map((f, i) => `          <div class="feature"><h3 data-i18n="app.${a.id}.f${i + 1}">${f.title}</h3><p data-i18n="app.${a.id}.f${i + 1}d">${f.text}</p></div>`).join('\n')}
-        </div>
+${a.category === 'usb' ? `          <div class="feature"><h3 data-i18n="app.easy">${USB_EASY.title}</h3><p data-i18n="app.easyd">${USB_EASY.text}</p></div>
+` : ''}        </div>
 ` : ''}${a.chips && a.chips.length ? `        <div class="chips">${a.chips.map(c => `<span class="chip">${c}</span>`).join('')}</div>
 ` : ''}      </section>
 ` : ''}${guides(a, ctx)}${shots.length ? `      <section class="panel">
@@ -250,7 +251,7 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
     url: SITE + `/apps/${a.id}.html`, image: playImg(p.icon, 's512'), installUrl: playUrl(a.pkg),
     publisher: { '@type': 'Organization', name: 'MixApplications' },
     description: [a.definition, a.headline, a.desc].filter(Boolean).map(stripTags).join(' '),
-    ...(a.features ? { featureList: a.features.map(f => `${f.title}: ${f.text}`) } : {}),
+    ...(a.features ? { featureList: [...a.features, ...(a.category === 'usb' ? [USB_EASY] : [])].map(f => `${f.title}: ${f.text}`) } : {}),
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     ...(a.released ? { datePublished: a.released } : {}),
     ...(p.updated ? { dateModified: p.updated } : {}),
@@ -265,7 +266,8 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
   };
   return {
     path: `/apps/${a.id}.html`, nav: 'apps',
-    title: APP_TITLE.replace('{name}', a.short || a.name), titleTpl: { key: 'app.title', name: a.short || a.name }, i18n: { 'app.title': APP_TITLE },
+    // an app may set its own full title (translatable as app.<id>.title); otherwise the shared "{name} for Android" template
+    ...(a.title ? { title: a.title, titleKey: `app.${a.id}.title` } : { title: APP_TITLE.replace('{name}', a.short || a.name), titleTpl: { key: 'app.title', name: a.short || a.name } }), i18n: { 'app.title': APP_TITLE },
     description: stripTags(a.definition || a.headline || playText(p.summary || '') || a.desc || ''),
     // language copies use the translated sentence
     ...(a.definition ? { descKey: `app.${a.id}.def` } : a.headline ? { descKey: `app.${a.id}.h` } : {}),
@@ -370,6 +372,8 @@ const KIND = { tool: ['Tools', 'pg.k.tool'], faq: ['FAQ', 'pg.k.faq'], whatsnew:
 const HOME_DESC = 'Free Android apps: bootable USB and Ventoy, USB repair and file manager, PDF and Office editor, private vault, MIUI themes and a puzzle game. All on your phone.';
 const SUP_DESC = 'Answers to the most common questions about MixApplications apps, and how to contact us by email or WhatsApp.';
 const APP_TITLE = '{name} for Android — MixApplications';
+// shared last feature card on every USB app page (owner 2026-11-19); also in its JSON-LD featureList so counts match
+const USB_EASY = { title: 'Simple and easy to use', text: 'Designed for everyone, from beginners to power users and professionals: a simple interface that is clear to understand, and the job is done in a few steps.' };
 export function contentPage(rel, meta, body, ctx, updated) {
   const { apps, play } = ctx;
   for (const k of ['key', 'title', 'h1', 'description', 'kind']) if (!meta[k]) throw new Error(`${rel}: meta.${k} missing`);

@@ -2978,5 +2978,10 @@
  "tl.wipe-usb.76": "如果沒有掃描隨身碟的真實容量，證明書和結果不會聲稱其標稱的全部容量都已抹除：真實容量顯示為 —，並附註說明只覆寫了隨身碟真正能儲存的部分。",
  "tl.wipe-usb.desc": "在 Ultimate USB 或 USB Tools 中開啟 <strong>擦除 USB</strong>，選擇五種方式之一和驗證方式，然後輕觸 <strong>開始</strong>。應用程式會覆寫整個隨身碟，可在之後進行檢查，並產生清除報告和證明書。抹除不消耗代幣。",
  "tl.wipe-usb.h1": "怎樣用 Android 手機安全抹除 USB 隨身碟？",
- "tl.wipe-usb.title": "在 Android 上安全抹除 USB 隨身碟：NIST、DoD、Gutmann — 擦除 USB"
+ "tl.wipe-usb.title": "在 Android 上安全抹除 USB 隨身碟：NIST、DoD、Gutmann — 擦除 USB",
+ "app.drofus.title": "DROFUS – ISO 2 USB：Android 可開機隨身碟製作工具",
+ "gd.choose-usb-app.185": "延續 ISO 2 USB，自 2017 年起上架 Google Play",
+ "app.easy": "簡單易用",
+ "app.easyd": "為所有人設計，從新手到進階使用者和專業人士都適用：介面簡單、清楚易懂，幾個步驟就能完成工作。",
+ "gd.why.99": "<strong>簡單易用：</strong>我們的 USB 應用程式為所有人設計，從新手到進階使用者和專業人士都適用，介面簡單、清楚易懂，幾個步驟就能完成工作。"
 }

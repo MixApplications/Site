@@ -134,6 +134,7 @@
       "released": "2022-07-03",
       "name": "DROFUS — ISO 2 USB",
       "short": "DROFUS",
+      "title": "DROFUS – ISO 2 USB: Bootable USB Maker for Android",
       "pkg": "com.mixapplications.rufus",
       "status": "live",
       "category": "usb",
