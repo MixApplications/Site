@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stripTags } from '../src/templates/util.mjs';
 import { HtmlValidate, FileSystemConfigLoader, formatterFactory } from 'html-validate';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -138,7 +139,8 @@ const enSource = readI18n('_source.en.json'), enBasis = readI18n('_basis.en.json
 const langCodes = readI18n('languages.json').languages.map(l => l.code).filter(c => c !== 'en');
 const langFiles = Object.fromEntries(langCodes.map(c => [c, readI18n(c + '.json')]));
 const decode = s => s.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
-const plain = s => decode(String(s).replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+// decode first, then strip: the shared stripTags removes tags until none is left, then any stray bracket
+const plain = s => stripTags(decode(String(s))).replace(/\s+/g, ' ').trim();
 const want = (code, k) => code !== 'en' && langFiles[code][k] && enBasis[k] === enSource[k] ? langFiles[code][k] : enSource[k];
 for (const code of ['en', ...langCodes]) {
   const pre = code === 'en' ? '' : '/' + code;
