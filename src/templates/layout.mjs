@@ -117,7 +117,7 @@ ${ctx.policies.map(p => `          <li><a href="/${p.file}">${p.label}</a></li>`
         </ul>
       </div>
     </div>
-    <p class="fnote" data-i18n="foot.note">&copy; 2026 MixApplications. Ratings, icons and screenshots come from the apps' Google Play listings.</p>
+    <p class="fnote" data-i18n="foot.note">&copy; {{year}} MixApplications. Ratings, icons and screenshots come from the apps' Google Play listings.</p>
   </div>
 </footer>
 

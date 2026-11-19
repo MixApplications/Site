@@ -93,7 +93,9 @@ jobs:
           echo "downloaded $(ls "$dir" | wc -l) report files"
           node scripts/sync-console.mjs "$dir"
       - name: Build
-        run: node scripts/build.mjs --ci
+        run: |
+          node scripts/facts.mjs --self-test
+          node scripts/build.mjs --ci
       - name: Check HTML, links, anchors, app data and policy URLs
         run: node scripts/check.mjs
       - name: UI test in a real browser (filters, double taps, languages, phone width)

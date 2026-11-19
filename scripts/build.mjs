@@ -21,7 +21,8 @@ import { layout } from '../src/templates/layout.mjs';
 import { ICON } from '../src/templates/layout.mjs';
 import * as pages from '../src/templates/pages.mjs';
 import { SITE, PLAY_DEV } from '../src/templates/layout.mjs';
-import { playText, esc } from '../src/templates/util.mjs';
+import { playText, esc, installsNumber } from '../src/templates/util.mjs';
+import { fillFacts, fullYears } from './facts.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(ROOT, 'src');
@@ -33,7 +34,9 @@ const readJson = p => JSON.parse(read(p));
 const write = (rel, data) => {
   const p = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(p), { recursive: true });
-  fs.writeFileSync(p, data);
+  // {{fact}} tokens are filled in for the file's language: /<lang>/... and i18n/<lang>.json, else English
+  const lang = typeof data === 'string' && (rel.match(/^i18n\/([A-Za-z-]+)\.json$/) || rel.match(/^([A-Za-z-]+)\//) || [])[1];
+  fs.writeFileSync(p, typeof data === 'string' ? fillFacts(data, LANG_CODES.has(lang) ? lang : 'en', factValue) : data);
 };
 function copyDir(from, to) {
   for (const e of fs.readdirSync(from, { withFileTypes: true })) {
@@ -87,6 +90,29 @@ for (const a of apps) {
   ids.add(a.id);
   if (!a.auto && (!a.descKey || !a.desc)) fail(`app ${a.id} needs descKey and desc in apps.json`);
 }
+// ---------------------------------------------------------------- facts that grow
+// Counts that grow are written in the text as {{token}} (scripts/facts.mjs fills them in per language); the values
+// come from this build's Play / Play Console data and today's date, so the daily run keeps them current:
+//   {{year}}  {{usbYears}} (full years since apps.json usbSince)  {{apps}} (apps on Google Play)
+//   {{dl:total}} (all downloads, retired apps' Console numbers included)  {{dl:<id>[,<id>...]}} (the smallest of
+//   those apps), rounded DOWN to whole millions so "more than X" stays true
+const LANG_CODES = new Set(readJson('i18n/languages.json').languages.map(l => l.code));
+const NOW = new Date();
+const usbYears = fullYears(data.usbSince || fail('apps.json needs usbSince'), NOW);
+const installsOf = id => {
+  const a = apps.find(x => x.id === id) || fail(`{{dl:${id}}}: no app ${id}`);
+  return installsNumber((a.status === 'live' ? play[a.pkg] : a.stats)?.installs);
+};
+const millions = (n, what) => Math.floor(n / 1e6) * 1e6 || fail(`{{dl:${what}}} is under 1,000,000 (${n}); the sentence would say "more than 0"`);
+function factValue(name, arg) {
+  if (name === 'year') return NOW.getUTCFullYear();
+  if (name === 'usbYears') return usbYears;
+  if (name === 'apps') return apps.filter(a => a.status === 'live').length;
+  if (name === 'dl' && arg === 'total') return millions(apps.filter(a => a.status === 'live' || a.stats).reduce((s, a) => s + installsOf(a.id), 0), arg);
+  if (name === 'dl' && arg) return millions(Math.min(...arg.split(',').map(installsOf)), arg);
+  fail(`unknown fact {{${name}${arg ? ':' + arg : ''}}}`);
+}
+
 // Play's own listing translations, shipped with the site translations
 const playI18n = {};
 for (const a of apps.filter(x => x.status === 'live')) {
@@ -449,8 +475,24 @@ const lastmod = files => {
 const urls = [];
 // a new release on Google Play (its "updated" day, which also brings the new version name) counts as a change of the app page
 const releaseOf = p => { const a = apps.find(x => p.path === `/apps/${x.id}.html`); const d = a && play[a.pkg]?.updated; return d ? `${d}T00:00:00Z` : ''; };
+// A page also changes when a {{fact}} it shows changes (a new million, another year of USB apps; the footer year
+// does not count). facts.json lists each page's fact values and since when they hold; in CI the live copy says
+// whether they changed, and a change moves lastmod to this run. No live copy (first run, offline): git time only.
+let liveFacts = null;
+// SITE_LIVE: another copy of the site to compare with (tests)
+if (CI) try { const r = await fetch((process.env.SITE_LIVE || SITE) + '/facts.json', { signal: AbortSignal.timeout(15000) }); if (r.ok) liveFacts = await r.json(); } catch {}
+const factsNow = {};
+const sinceOf = p => {
+  const key = [...new Set(rendered[p.path].match(/\{\{(?!plural:|year\}\})[^}]+\}\}/g) || [])].sort()
+    .map(t => { const [, n, a] = t.match(/\{\{(\w+)(?::([\w,-]+))?\}\}/); return `${n}${a ? ':' + a : ''}=${factValue(n, a)}`; }).join(' ');
+  if (!key) return '';
+  const prev = liveFacts?.[p.path];
+  const since = prev?.key === key ? prev.since : liveFacts ? NOW.toISOString().replace(/\.\d+Z$/, 'Z') : '';
+  factsNow[p.path] = { key, since };
+  return since;
+};
 for (const p of list.filter(x => !x.noindex)) {
-  const mod = [lastmod(sourceOf(p)), releaseOf(p)].sort().pop();
+  const mod = [lastmod(sourceOf(p)), releaseOf(p), sinceOf(p)].sort().pop();
   urls.push({ loc: SITE + urlOf(p.path), mod });
   // a translation counts as a change of the language copy too
   for (const c of versionsOf[p.path] || []) urls.push({ loc: `${SITE}/${c}${urlOf(p.path)}`, mod: [mod, lastmod([`src/i18n/${c}.json`])].sort().pop() });
@@ -460,6 +502,7 @@ write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.map(u => `  <url><loc>${u.loc}</loc>${u.mod ? `<lastmod>${u.mod}</lastmod>` : ''}</url>`).join('\n')}
 </urlset>
 `);
+write('facts.json', JSON.stringify(factsNow));
 
 // ---------------------------------------------------------------- llms.txt (llmstxt.org)
 // One section per live app with links to all of its pages (pages carry `app: <id>` and `linkTitle`).
@@ -467,8 +510,8 @@ const home = list.find(p => p.path === '/index.html');
 const llms = [`# MixApplications`, '', `> ${strip(home.description)}`, '',
   `Developer on Google Play: ${PLAY_DEV}. Every page also exists in: ${langList.map(l => `${l.name} (/${l.code}/)`).join(', ')}.`, '',
   '## Key facts', '',
-  '- MixApplications has published Android apps on Google Play since 2017 and has built USB apps for more than five years.',
-  '- Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools each have over 1,000,000 downloads on Google Play and are available in 58 languages.',
+  '- MixApplications has published Android apps on Google Play since 2016, with more than {{dl:total}} downloads, and has built USB apps for more than {{usbYears}} years.',
+  '- Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools each have over {{dl:ultimate-usb,drofus,ventoy,usb-tools}} downloads on Google Play and are available in 58 languages.',
   '- The USB apps test every drive when it is connected, recognise read-only drives as soon as a job starts, never erase without confirmation, test every format before reporting success, and wait until the drive confirms image writes.',
   '- Brief USB connection failures are repaired automatically and the job carries on; after a re-plug of the same drive, Retry continues most burns, Raw Write, backup and restore where they stopped; a job only ever writes to the drive it started on; tokens come back when a paid job does not complete.',
   '- Every version is fully tested before each release, on 5+ phones from different brands (Android 10 to 16) and 15+ USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs. Each drive runs about 40 user scenarios, 20 fault cases and a stress test; more than 4,000 automated tests run before each release.',

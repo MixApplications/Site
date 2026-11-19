@@ -1,6 +1,8 @@
 {
   "_comment": "Hand-written extras for the apps. Every app published by the developer below is found on Google Play by scripts/sync-play.mjs and shown automatically with its Play texts; an entry here only adds what Play cannot know: a curated description (desc + descKey, translated in src/i18n), chips, colour, category, its support answers (faq) and its policy page. status 'unlisted' = not released yet: nothing about it is shown (its policy page stays reachable by its URL, unlinked and noindex) until its pkg appears on Google Play, then it goes live by itself. A live entry that leaves Google Play is shown as unpublished.",
   "developer": "MixApplications",
+  "usbSince": "2017-10-23",
+  "_usbSince": "first release of ISO 2 USB, our first USB app; {{usbYears}} in the site text counts full years from this day",
   "categories": [
     {
       "id": "usb",

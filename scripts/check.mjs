@@ -23,6 +23,12 @@ const files = walk(OUT);
 const htmlFiles = files.filter(f => f.endsWith('.html'));
 const rel = f => '/' + path.relative(OUT, f).split(path.sep).join('/');
 
+// ---- 0. every {{fact}} token was filled in by the build (a left-over one would show to visitors as code)
+for (const f of files.filter(f => /\.(html|json|txt|xml)$/.test(f))) {
+  const m = fs.readFileSync(f, 'utf8').match(/\{\{[^}]*\}\}/);
+  if (m) bad(`${rel(f)}: unfilled ${m[0]}`);
+}
+
 // ---- 1. HTML validity
 const loader = new FileSystemConfigLoader();
 const validator = new HtmlValidate(loader);
