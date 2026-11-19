@@ -41,7 +41,11 @@ const server = spawn(process.execPath, [path.join(ROOT, 'scripts/serve.mjs')], {
 const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'ui-test-'));
 const DBG = PORT + 1000;
 const chrome = spawn(CHROME, ['--headless=new', '--disable-gpu', '--no-first-run', '--no-sandbox', '--hide-scrollbars',
-  `--remote-debugging-port=${DBG}`, `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
+  `--remote-debugging-port=${DBG}`, `--user-data-dir=${profile}`, 'about:blank'], { stdio: ['ignore', 'ignore', 'pipe'] });
+// Chrome's own last words, printed only when it does not start (CI showed "Chrome did not start" with no reason)
+let chromeErr = '', chromeExit = null;
+chrome.stderr.on('data', d => { chromeErr = (chromeErr + d).slice(-3000); });
+chrome.on('exit', (code, sig) => { chromeExit = sig || code; });
 function stopAll() {
   try { server.kill(); } catch {}
   if (process.platform === 'win32') spawnSync('taskkill', ['/T', '/F', '/PID', String(chrome.pid)]);
@@ -55,7 +59,11 @@ for (let i = 0; i < 75 && !target; i++) {
   await sleep(200);
   try { target = (await (await fetch(`http://127.0.0.1:${DBG}/json`)).json()).find(t => t.type === 'page'); } catch {}
 }
-if (!target) { stopAll(); console.error('Chrome did not start'); process.exit(1); }
+if (!target) {
+  stopAll();
+  console.error(`Chrome did not start (${CHROME}, debug port ${DBG}, ${chromeExit === null ? 'still running after 15 s' : 'exited: ' + chromeExit})\n${chromeErr.trim() || '(no output on stderr)'}`);
+  process.exit(1);
+}
 const ws = new WebSocket(target.webSocketDebuggerUrl);
 await new Promise(r => ws.addEventListener('open', r));
 let seq = 0; const pending = new Map(); const errors = []; const paused = [];
