@@ -122,6 +122,49 @@ for (const page of ['/privacy_policy.html', '/tumtum_privacy.html', '/mixdocs_pr
   if (AD_SUPPORTED.includes(page)) for (const [name, re] of Object.entries(AD_RULES)) if (!re.test(html)) bad(`${page}: ad-supported app policy lacks ${name}`);
 }
 
+// ---- 3d. owner-requested claims (2026-11-19), in every language: every USB app page has the "Simple and easy
+//          to use" card (no other app does) and lists it last in its JSON-LD featureList; an app's own "title" is
+//          its page title; both guides carry the gd.why.99 bullet; the choose guide has the DROFUS/ISO 2 USB note.
+//          Expected text = the language's translation while it is current, else English (the build's fallback rule).
+const i18nDir = path.join(ROOT, 'src/i18n');
+const readI18n = f => JSON.parse(fs.readFileSync(path.join(i18nDir, f), 'utf8'));
+const enSource = readI18n('_source.en.json'), enBasis = readI18n('_basis.en.json');
+const langCodes = readI18n('languages.json').languages.map(l => l.code).filter(c => c !== 'en');
+const langFiles = Object.fromEntries(langCodes.map(c => [c, readI18n(c + '.json')]));
+const decode = s => s.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+const plain = s => decode(String(s).replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+const want = (code, k) => code !== 'en' && langFiles[code][k] && enBasis[k] === enSource[k] ? langFiles[code][k] : enSource[k];
+for (const code of ['en', ...langCodes]) {
+  const pre = code === 'en' ? '' : '/' + code;
+  for (const a of data.apps.filter(x => (x.features || []).length)) {
+    const page = `${pre}/apps/${a.id}.html`, html = pages[page];
+    if (!html) continue;   // unlisted apps have no page; missing live pages are reported in section 3
+    const card = html.match(/<h3 data-i18n="app\.easy">([\s\S]*?)<\/h3><p data-i18n="app\.easyd">([\s\S]*?)<\/p>/);
+    if (a.category !== 'usb') { if (card) bad(`${page}: "Simple and easy to use" card on a non-USB app`); }
+    else if (!card) bad(`${page}: USB app page lacks the "Simple and easy to use" card`);
+    else {
+      if (plain(card[1]) !== plain(want(code, 'app.easy')) || plain(card[2]) !== plain(want(code, 'app.easyd'))) bad(`${page}: easy-to-use card text is not the ${code} text`);
+      const sa = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => { try { return JSON.parse(m[1]); } catch { return {}; } }).find(x => x['@type'] === 'SoftwareApplication');
+      const fl = sa && sa.featureList || [];
+      if (fl.length !== a.features.length + 1 || plain(fl[fl.length - 1]) !== `${plain(want(code, 'app.easy'))}: ${plain(want(code, 'app.easyd'))}`) bad(`${page}: JSON-LD featureList does not end with the ${code} easy-to-use feature`);
+    }
+    if (a.title) {
+      const t = plain(code === 'en' ? a.title : want(code, `app.${a.id}.title`));
+      const shown = html.match(/<title[^>]*>([^<]*)<\/title>/), og = html.match(/<meta property="og:title" content="([^"]*)">/);
+      if (!shown || plain(shown[1]) !== t || !og || plain(og[1]) !== t) bad(`${page}: <title>/og:title is not "${t}"`);
+    }
+  }
+  for (const g of ['why-mixapplications', 'choose-a-bootable-usb-app']) {
+    const page = `${pre}/guides/${g}.html`, html = pages[page];
+    if (!html) { bad(`${page}: guide missing`); continue; }
+    const li = html.match(/<li data-i18n="gd\.why\.99">([\s\S]*?)<\/li>/);
+    if (!li || plain(li[1]) !== plain(want(code, 'gd.why.99'))) bad(`${page}: "Simple and easy to use" bullet missing or not the ${code} text`);
+  }
+  const choose = pages[`${pre}/guides/choose-a-bootable-usb-app.html`] || '';
+  const note = choose.match(/<span data-i18n="gd\.choose-usb-app\.82">[^<]*<\/span><br><small data-i18n="gd\.choose-usb-app\.185">([^<]*)<\/small>/);
+  if (!note || plain(note[1]) !== plain(want(code, 'gd.choose-usb-app.185'))) bad(`${pre}/guides/choose-a-bootable-usb-app.html: DROFUS "continues ISO 2 USB" note missing from its table cell`);
+}
+
 // ---- 4. URLs that live outside this repo (Play listings, apps) must keep working
 for (const u of ['/privacy_policy.html', '/privacy_policy', '/tumtum_privacy.html', '/mixdocs_privacy.html',
   '/cofferlock_privacy.html', '/chaome_privacy.html', '/usb_file_manager_privacy.html', ...USB_POLICIES, '/contact.html', '/app-ads.txt', '/robots.txt', '/sitemap.xml', '/CNAME']) {
