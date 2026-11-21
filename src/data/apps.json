@@ -343,6 +343,7 @@
       "pkg": "com.mixapplications.virtualdrive",
       "status": "site",
       "download": "/download/virtual-drive.apk",
+      "policy": "virtual_drive_privacy.html",
       "iconFile": "/icons/virtual-drive.svg",
       "minAndroid": "7.0",
       "languages": 58,

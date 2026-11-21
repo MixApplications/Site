@@ -1,0 +1,176 @@
+<!--meta {"title": "Privacy Policy — Virtual Drive", "description": "How the Virtual Drive app handles data: your virtual drives stay in the app's private storage on your phone, it checks with Google Firebase whether a newer version is available, and it may read the current time from public internet time servers. No accounts, ads or analytics. Your rights under GDPR, CCPA and LGPD."} -->
+  <section class="pagehead reveal in">
+    <h1>Privacy Policy — Virtual Drive</h1>
+    <p>This policy applies to the <strong>Virtual Drive</strong> app (<code>com.mixapplications.virtualdrive</code>) published by MixApplications. It is specific to Virtual Drive; other MixApplications apps have their own policies, listed in the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to Virtual Drive.</p>
+    <span class="stamp">Last updated: November 21, 2026</span>
+  </section>
+
+  <div class="highlight reveal">
+    <b>The short version</b>
+    <p>Virtual Drive makes your phone appear to a computer as a USB flash drive. <strong>Your virtual drives and everything on them stay on your phone</strong>, in the App&rsquo;s private storage; the App never uploads them. It has no accounts, no analytics, no advertising and no crash-reporting service. To tell you when a newer version is available, it asks Google Firebase, which receives a random installation identifier and basic app and device details. It may also read the current time from public internet time servers. A device report leaves your phone only if you share it yourself.</p>
+  </div>
+
+  <nav class="toc reveal d1" aria-label="Contents">
+    <b>Contents</b>
+    <ol>
+      <li><a href="#s1">Overview</a></li>
+      <li><a href="#s2">Where your data is</a></li>
+      <li><a href="#s3">Permissions and root access</a></li>
+      <li><a href="#s4">Other apps and the computer</a></li>
+      <li><a href="#s5">Device report you choose to share</a></li>
+      <li><a href="#s6">Support</a></li>
+      <li><a href="#s7">Backups</a></li>
+      <li><a href="#s8">Data retention and deletion</a></li>
+      <li><a href="#s9">European privacy rights (GDPR)</a></li>
+      <li><a href="#s10">United States privacy rights (CCPA)</a></li>
+      <li><a href="#s11">Brazil privacy rights (LGPD)</a></li>
+      <li><a href="#s12">Other global privacy rights</a></li>
+      <li><a href="#s13">Children and audience</a></li>
+      <li><a href="#s14">Data types collected and shared</a></li>
+      <li><a href="#s15">Security</a></li>
+      <li><a href="#s16">Changes to this policy</a></li>
+      <li><a href="#s17">Data controller and contact</a></li>
+    </ol>
+  </nav>
+
+  <article class="panel reveal d2">
+<p>This Privacy Policy explains how the mobile app <strong>Virtual Drive</strong> (the &ldquo;App&rdquo;), published by <strong>MixApplications</strong> ("we," "us," or "our"), handles information. By downloading or using the App, you agree to the practices described here.</p>
+
+    <h2 id="s1">1. Overview</h2>
+    <p>Virtual Drive creates virtual drives on your phone and shows the active one to a computer connected with a USB cable, as a USB flash drive. It contains no analytics, advertising or crash-reporting software, and it has no user accounts.</p>
+    <p>The App uses the internet only for the following.</p>
+    <p><strong>Update check.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version of Virtual Drive is available or required. As Google documents for Firebase (<a href="https://firebase.google.com/docs/android/play-data-disclosure" rel="nofollow">Firebase data disclosure</a>), Firebase collects with it a random <strong>Firebase installation identifier</strong> (created for this installation of the App; Google states it does not uniquely identify a user or a physical device), your device&rsquo;s model, brand and Android version, its country, language and time zone, and the App&rsquo;s package name and version. The answer is only version information. See also <a href="https://firebase.google.com/support/privacy" rel="nofollow">Privacy and Security in Firebase</a>.</p>
+    <p><strong>Time check.</strong> If your phone&rsquo;s automatic date and time is turned off, the App reads the current date from public internet time servers (such as time.google.com or pool.ntp.org). The request contains no information about you.</p>
+    <p>If a version is no longer supported, the App asks you to update it; your drives are not changed. Every internet request reveals your IP address to the server that answers it; we do not store it. We do not receive your drives or their contents, file or folder names, usage data, location or contacts.</p>
+
+    <h2 id="s2">2. Where Your Data Is</h2>
+    <ul>
+        <li><strong>Your virtual drives</strong> (each one a file with the name and size you chose) and everything written to them are stored in the App&rsquo;s private storage on your phone, where file managers and other apps cannot see them. The App never uploads them.</li>
+        <li><strong>App settings</strong>, which drive is active, and the connection state and log of the App&rsquo;s USB helper are kept in the same private storage.</li>
+        <li>We have no copy of your drives and cannot see, open or recover them.</li>
+    </ul>
+
+    <h2 id="s3">3. Permissions and Root Access</h2>
+    <p><strong>Root access.</strong> Connecting a drive to a computer needs root access, which you grant in your root manager (for example Magisk or KernelSU). The App uses it only on your phone: to show the active drive to the computer over USB and to put the phone&rsquo;s USB settings back afterwards. Creating and preparing drives works without root.</p>
+    <p><strong>Notifications.</strong> While a drive is connected to a computer, the App shows a notification with a <em>Disconnect</em> button; on Android 13 and later it asks for the notification permission for this. For the same connection it uses a foreground service and keeps the phone awake (wake lock) while the computer uses the drive.</p>
+    <p><strong>Internet.</strong> The App declares the internet permission for the connections described in Section 1. The Google Firebase library may add its own standard entries, as its documentation describes. The App requests no storage, camera, microphone, location or contacts permission.</p>
+
+    <h2 id="s4">4. Other Apps and the Computer</h2>
+    <p>Our USB apps (Ultimate USB, Ventoy (Unofficial), DROFUS, ISO 2 USB and USB Tools) can read and write the <strong>active</strong> drive through the App, on your phone, so that you can prepare it there; other apps are refused. Nothing is sent to us by this.</p>
+    <p>While a drive is connected, the computer can read and write everything on that drive, like any USB flash drive. What the computer does with it is governed by that computer&rsquo;s own software and settings.</p>
+
+    <h2 id="s5">5. Device Report You Choose to Share</h2>
+    <p>The <em>Device check</em> screen has a <em>Send report</em> button. The report contains the App version, the device manufacturer and model, the Android and kernel versions, the connection state, the results of the device check and the log of the App&rsquo;s USB helper. It leaves your phone <strong>only if you</strong> tap <em>Send report</em> and send it with an app you choose (for example your email app). Nothing is ever sent automatically. We use a report you send only to fix the problem you reported.</p>
+
+    <h2 id="s6">6. Support</h2>
+    <p>If you contact us through our <a href="contact.html">contact page</a>, by email or through WhatsApp, we receive what you send (such as your email address or phone number and your message) and use it only to answer you.</p>
+
+    <h2 id="s7">7. Backups</h2>
+    <p>Android cloud backup and device-to-device transfer of the App&rsquo;s data are <strong>disabled</strong>, so your drives and settings are not copied to Google or to another phone. To keep a copy of what is on a drive, copy its files yourself while it is connected to a computer.</p>
+
+    <h2 id="s8">8. Data Retention and Deletion</h2>
+    <p>We do not maintain a database of users.</p>
+    <ul>
+        <li><strong>On-device data</strong> (your drives, settings and the helper&rsquo;s log) stays on your phone. Deleting a drive in the App removes it and everything on it; uninstalling the App or clearing its data removes all of it permanently, and nobody, including us, can recover it.</li>
+        <li><strong>Support conversations and device reports you send us</strong> are kept only as long as needed to resolve your request and are deleted when the support case is closed.</li>
+        <li><strong>The Firebase installation identifier</strong> is kept by Google Firebase as Google describes in <a href="https://firebase.google.com/support/privacy" rel="nofollow">Privacy and Security in Firebase</a>; uninstalling the App ends its use. We do not store it.</li>
+    </ul>
+    <p><strong>Deletion requests:</strong> we do not offer a data deletion service. We keep no user database and no account, and the App sends us nothing that we keep, so we hold no data from the App that we can find and delete for one person. Support conversations and device reports you send us are deleted when the support case is closed (above). Uninstalling the App or clearing its data removes everything it keeps on your phone.</p>
+
+    <h2 id="s9">9. European Privacy Rights (GDPR)</h2>
+    <p>If you are located in the EU/EEA or the UK, any personal data we process (only what you send us for support and the Firebase installation identifier used for the update check) is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>performance of a contract</strong> (providing the App, keeping it up to date, and answering your request) and <strong>legitimate interests</strong> (keeping the App secure and working, including the time check in Section 1). Google acts as our processor for Firebase. You have the following rights:</p>
+    <ul>
+        <li>The right to request access to the personal data that we process.</li>
+        <li>The right to correct inaccurate personal data.</li>
+        <li>The right to request deletion of your personal data.</li>
+        <li>The right to restrict or object to processing, and to data portability.</li>
+        <li>The right to lodge a complaint with a supervisory authority.</li>
+    </ul>
+
+    <h3>International data transfers</h3>
+    <p>MixApplications is based in Egypt. The service providers named in this policy, such as Google (Firebase) and the public time servers named in Section 1, may process data in other countries, including the United States and member states of the European Union. When data from the EEA, the UK or Switzerland is transferred to a country without an adequacy decision, these providers rely on recognised safeguards such as the European Commission&rsquo;s Standard Contractual Clauses.</p>
+
+    <h2 id="s10">10. United States Privacy Rights (CCPA)</h2>
+    <p>This section covers the California Consumer Privacy Act (CCPA/CPRA) and the privacy laws of Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA) and Utah (UCPA).</p>
+    <ul>
+        <li><strong>We do not sell or share personal information</strong>, and we do not use it for targeted advertising. Virtual Drive has no advertising.</li>
+        <li><strong>Right to Know:</strong> you may ask what personal data we hold about you. In practice that is only what you sent us for support and the Firebase installation identifier used for the update check (Sections 1 and 8).</li>
+        <li><strong>Right to Delete:</strong> you may ask us to delete it.</li>
+        <li><strong>Right to Non-Discrimination:</strong> we will not discriminate against you for exercising your privacy rights.</li>
+    </ul>
+
+    <h2 id="s11">11. Brazil Privacy Rights (LGPD)</h2>
+    <p>Under the Lei Geral de Prote&ccedil;&atilde;o de Dados (LGPD), users in Brazil have the right to request access, correction, anonymization, blocking, or deletion of personal data. You can exercise these rights using the contact details in Section 17.</p>
+
+    <h2 id="s12">12. Other Global Privacy Rights</h2>
+    <p>We aim to honor data subject rights for users in other jurisdictions with comprehensive privacy laws, including Canada (PIPEDA), South Korea (PIPA), Japan (APPI), South Africa (POPIA), India (DPDPA), and Australia (Privacy Act 1988), to the extent required by applicable law. Where those laws apply to you, you may request access, correction, or deletion using the contact details in Section 17. This section describes rights we extend on request and is not a representation of independently certified or audited compliance with each named framework.</p>
+
+    <h2 id="s13">13. Children and Audience</h2>
+    <p>The App is <strong>not directed to children</strong>, and we do not knowingly collect personal information from children. If you believe a child has sent us personal information through support, contact us (Section 17) and we will delete it.</p>
+
+    <h2 id="s14">14. Data Types Collected and Shared</h2>
+    <p>Virtual Drive collects one data type, for app functionality, encrypted in transit and not shared with third parties: <strong>device or other IDs</strong> (the Firebase installation identifier that Google Firebase collects for the update check). Virtual Drive collects nothing else.</p>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>What happens to it</th>
+                    <th>Leaves your device?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Your virtual drives and their contents</strong></td>
+                    <td>Stored in the App&rsquo;s private storage on your phone.</td>
+                    <td>Only to the computer you connect with a USB cable, and to our USB apps on your phone (Section 4).</td>
+                </tr>
+                <tr>
+                    <td><strong>Settings and helper log</strong></td>
+                    <td>App-private storage; excluded from Android backups.</td>
+                    <td>The log only inside a device report you share yourself (Section 5).</td>
+                </tr>
+                <tr>
+                    <td><strong>Device report</strong></td>
+                    <td>App version, device model, Android and kernel versions, connection state, device check results, helper log.</td>
+                    <td>Only if you share it yourself (Section 5).</td>
+                </tr>
+                <tr>
+                    <td><strong>Firebase installation identifier</strong>, device model and brand, Android version, country, language, time zone, app version</td>
+                    <td>Sent to Google Firebase Remote Config to learn whether a newer version is available (Section 1).</td>
+                    <td>Yes, over HTTPS, when the App starts.</td>
+                </tr>
+                <tr>
+                    <td><strong>Time request</strong></td>
+                    <td>Asks a public time server for the current date; contains no information about you (Section 1).</td>
+                    <td>Only if automatic date and time is turned off.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="fnote">The App uses Google Firebase only for the update check (Remote Config). It contains no analytics, advertising, attribution or crash-reporting SDK. If that ever changes, this page will be updated before the change is released.</p>
+
+    <h2 id="s15">15. Security</h2>
+    <p>Your drives are kept in the App&rsquo;s private storage, which other apps cannot read; only our USB apps can reach the active drive through the App (Section 4). The update check uses an encrypted connection (HTTPS). While a drive is connected, anyone using that computer can read and change what is on it, as with any USB flash drive, so connect your phone only to computers you trust and disconnect when you are done. No method of protection is perfect.</p>
+
+    <h2 id="s16">16. Changes to This Privacy Policy</h2>
+    <p>We may update this policy periodically. We will notify you by updating the &ldquo;Last updated&rdquo; date at the top.</p>
+
+    <h2 id="s17">17. Data Controller and Contact Information</h2>
+    <p>Our company, <strong>MixApplications</strong>, acts as the Data Controller responsible for the personal data processed under this policy.</p>
+    <ul>
+        <li><strong>Name of Data Controller:</strong> MixApplications</li>
+        <li><strong>Data Protection Officer (DPO):</strong> Islam Saad Darwish Mohammed</li>
+        <li><strong>Contact Email:</strong> <a href="mailto:islam.saad2005@gmail.com">islam.saad2005@gmail.com</a></li>
+        <li><strong>Support:</strong> <a href="contact.html">https://www.mixapplications.com/contact.html</a></li>
+    </ul>
+    <p>We answer privacy requests (access, correction, deletion, objection or opt-out) free of charge and within 30 days, or within the shorter period your local law sets. We may ask you to confirm that a request comes from you before we act on it. Because we hold no data from the App tied to you as a person, we answer a deletion request by explaining this and pointing you to the steps in Section 8.</p>
+    <address>
+        <strong>Company Address:</strong><br>
+        MixApplications<br>
+        Floor No. 6, Building No. 3, Zahraa Street<br>
+        Desouk, Kafr El-Sheikh 33611<br>
+        Egypt
+    </address>
+  </article>
