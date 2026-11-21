@@ -73,6 +73,8 @@ for (const a of data.apps) {
   if (a.pkg) curatedPkgs.add(a.pkg);
   const onPlay = a.pkg && play[a.pkg];
   if (onPlay) apps.push({ ...(a.policy ? {} : policyFor(onPlay)), ...a, status: 'live', category: a.category || categoryFor(onPlay.genreId) });
+  // distributed from this site ("download"): live once its file is in src/static, hidden like an unreleased app until then
+  else if (a.download) apps.push({ ...a, status: fs.existsSync(path.join(SRC, 'static', a.download)) || process.env.SITE_PREVIEW ? 'live' : 'unlisted' });
   else if (a.status === 'live') apps.push({ ...a, status: 'retired', unpublished: true });
   else apps.push(a);
 }
@@ -107,7 +109,7 @@ const millions = (n, what) => Math.floor(n / 1e6) * 1e6 || fail(`{{dl:${what}}} 
 function factValue(name, arg) {
   if (name === 'year') return NOW.getUTCFullYear();
   if (name === 'usbYears') return usbYears;
-  if (name === 'apps') return apps.filter(a => a.status === 'live').length;
+  if (name === 'apps') return apps.filter(a => a.status === 'live' && !a.download).length;   // apps on Google Play
   if (name === 'dl' && arg === 'total') return millions(apps.filter(a => a.status === 'live' || a.stats).reduce((s, a) => s + installsOf(a.id), 0), arg);
   if (name === 'dl' && arg) return millions(Math.min(...arg.split(',').map(installsOf)), arg);
   fail(`unknown fact {{${name}${arg ? ':' + arg : ''}}}`);
@@ -116,7 +118,7 @@ function factValue(name, arg) {
 // Play's own listing translations, shipped with the site translations
 const playI18n = {};
 for (const a of apps.filter(x => x.status === 'live')) {
-  for (const [lang, t] of Object.entries(play[a.pkg].i18n || {})) {
+  for (const [lang, t] of Object.entries(play[a.pkg]?.i18n || {})) {
     playI18n[lang] ??= {};
     if (t.summary) playI18n[lang][`play.${a.id}.summary`] = playText(t.summary);
     if (t.description) playI18n[lang][`play.${a.id}.description`] = playText(t.description.trim());
@@ -524,7 +526,7 @@ for (const a of apps.filter(x => x.status === 'live')) {
     // refreshed by every build from Google Play (daily), so agents always read the current release
     ...(play[a.pkg]?.version ? [`- Latest version on Google Play: ${play[a.pkg].version}${play[a.pkg].updated ? ` (updated ${play[a.pkg].updated})` : ''}`] : []),
     ...own.map(p => `- [${p.linkTitle || p.title}](${SITE}${p.path}): ${strip(p.description)}`),
-    `- [${a.short || a.name} on Google Play](https://play.google.com/store/apps/details?id=${a.pkg})`, '');
+    a.download ? `- [Download ${a.short || a.name} (APK, from this site)](${SITE}${a.download})` : `- [${a.short || a.name} on Google Play](https://play.google.com/store/apps/details?id=${a.pkg})`, '');
 }
 const shared = list.filter(p => !p.noindex && !p.app && !p.ltrOnly && p.path !== '/index.html' && !p.path.startsWith('/apps/'));
 llms.push('## Help and guides', '', ...shared.map(p => `- [${p.linkTitle || strip(p.title)}](${SITE}${urlOf(p.path)}): ${strip(p.description)}`), '');

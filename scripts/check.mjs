@@ -148,7 +148,8 @@ for (const code of ['en', ...langCodes]) {
     const page = `${pre}/apps/${a.id}.html`, html = pages[page];
     if (!html) continue;   // unlisted apps have no page; missing live pages are reported in section 3
     const card = html.match(/<h3 data-i18n="app\.easy">([\s\S]*?)<\/h3><p data-i18n="app\.easyd">([\s\S]*?)<\/p>/);
-    if (a.category !== 'usb') { if (card) bad(`${page}: "Simple and easy to use" card on a non-USB app`); }
+    // apps from this site (download) say only what their app session confirmed: no shared claim card
+    if (a.category !== 'usb' || a.download) { if (card) bad(`${page}: "Simple and easy to use" card on a non-USB or site-download app`); }
     else if (!card) bad(`${page}: USB app page lacks the "Simple and easy to use" card`);
     else {
       if (plain(card[1]) !== plain(want(code, 'app.easy')) || plain(card[2]) !== plain(want(code, 'app.easyd'))) bad(`${page}: easy-to-use card text is not the ${code} text`);
@@ -171,6 +172,15 @@ for (const code of ['en', ...langCodes]) {
   const choose = pages[`${pre}/guides/choose-a-bootable-usb-app.html`] || '';
   const note = choose.match(/<span data-i18n="gd\.choose-usb-app\.82">[^<]*<\/span><br><small data-i18n="gd\.choose-usb-app\.185">([^<]*)<\/small>/);
   if (!note || plain(note[1]) !== plain(want(code, 'gd.choose-usb-app.185'))) bad(`${pre}/guides/choose-a-bootable-usb-app.html: DROFUS "continues ISO 2 USB" note missing from its table cell`);
+}
+
+// ---- 3e. an app distributed from this site: its page offers its file (which exists) and never a Google Play link
+for (const a of data.apps.filter(x => x.download)) {
+  const html = pages[`/apps/${a.id}.html`];
+  if (!html) continue;   // not released yet: nothing is built
+  if (!target(a.download)) bad(`app ${a.id}: download ${a.download} does not exist`);
+  if (!html.includes(`href="${a.download}"`)) bad(`/apps/${a.id}.html: no link to ${a.download}`);
+  if (html.includes(`play.google.com/store/apps/details?id=${a.pkg}`)) bad(`/apps/${a.id}.html: links a Google Play listing, but the app is distributed from this site`);
 }
 
 // ---- 4. URLs that live outside this repo (Play listings, apps) must keep working

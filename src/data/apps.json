@@ -337,6 +337,58 @@
       "definition": "USB File Manager is an Android app that opens USB drives formatted as NTFS, exFAT, FAT or ext4 and reads and writes their files, without a PC or root."
     },
     {
+      "_comment": "Distributed from this site only (not published on Google Play). status 'site' + download: the app is shown once the file named in download is in src/static (SITE_PREVIEW=1 shows it in a local preview); until then nothing about it is built. Text: only the facts the app session confirmed.",
+      "id": "virtual-drive",
+      "name": "Virtual Drive",
+      "pkg": "com.mixapplications.virtualdrive",
+      "status": "site",
+      "download": "/download/virtual-drive.apk",
+      "iconFile": "/icons/virtual-drive.svg",
+      "minAndroid": "7.0",
+      "languages": 58,
+      "category": "usb",
+      "color": "blue",
+      "summary": "Your rooted phone becomes a USB flash drive for your computer.",
+      "descKey": "home.vd",
+      "desc": "Create virtual drives on your phone, prepare them with <strong>Ultimate USB</strong>, <strong>Ventoy (Unofficial)</strong>, <strong>DROFUS</strong> or <strong>USB Tools</strong>, and connect the phone to a computer with a USB cable: the computer sees a normal USB drive that it can read and write.",
+      "chips": [
+        "phone as a USB drive",
+        "several drives",
+        "Device check",
+        "Ultimate USB",
+        "Ventoy (Unofficial)",
+        "DROFUS",
+        "USB Tools"
+      ],
+      "features": [
+        {
+          "title": "Your phone as a USB flash drive",
+          "text": "Connect the phone to a computer with a USB cable: the computer sees a normal USB drive and can read and write it."
+        },
+        {
+          "title": "Several drives, one active",
+          "text": "Create one or more virtual drives, each with the size you choose, and pick the one that is active."
+        },
+        {
+          "title": "Works with our USB apps",
+          "text": "Ultimate USB, Ventoy (Unofficial), DROFUS and USB Tools see the active drive as a connected USB drive: partition it, format it, write an ISO or install Ventoy on it."
+        },
+        {
+          "title": "Nothing to set up",
+          "text": "The app chooses by itself how to present the drive on your phone. The Device check screen shows what your phone supports."
+        },
+        {
+          "title": "Your phone's USB comes back",
+          "text": "When you disconnect, the phone's USB goes back to exactly what it was, such as file transfer or debugging. Nothing the app changes survives a restart of the phone."
+        },
+        {
+          "title": "In your language",
+          "text": "The app follows your phone's language: English and 57 more."
+        }
+      ],
+      "definition": "Virtual Drive is an Android app that makes a rooted phone appear to a computer as a USB flash drive. You create virtual drives on the phone, choose the active one and connect the phone to the computer with a USB cable."
+    },
+    {
       "id": "chaome",
       "released": "2017-06-04",
       "name": "ChaoMe Theme Editor",

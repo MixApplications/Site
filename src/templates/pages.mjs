@@ -3,6 +3,15 @@ import { ICON, PLAY_DEV, SITE, EMAIL, WHATSAPP } from './layout.mjs';
 import { esc, playText, stripTags, playImg, installsNumber, compact, MIN_RATING } from './util.mjs';
 
 const playUrl = pkg => `https://play.google.com/store/apps/details?id=${pkg}`;
+// an app with apps.json "download" is distributed from this site: its button downloads the file instead of opening Google Play
+const getButton = (a, cls) => a.download
+  ? `<a class="${cls}" href="${a.download}">${ICON.download}${/btn--sm/.test(cls) ? '<span data-i18n="app.get">Download</span>' : '<span data-i18n="app.dl">Download APK</span>'}</a>`
+  : `<a class="${cls}" href="${playUrl(a.pkg)}">${ICON.play}<span data-i18n="home.get">Google Play</span></a>`;
+const iconSrc = (a, play, size) => a.iconFile || playImg(play[a.pkg]?.icon, size);
+// the line under the name: the Play summary, or the app's own (apps.json "summary") when it is not on Google Play
+const summaryOf = (a, p) => a.summary && !p.summary
+  ? `<p class="summary" data-i18n="app.${a.id}.s">${a.summary}</p>`
+  : `<p class="summary" data-i18n="play.${a.id}.summary">${playText(p.summary || '')}</p>`;
 const style = a => `--c:var(--${a.color});--csoft:var(--${a.color}-soft)`;
 const reviews = n => (n >= 1e3 ? (Math.floor(n / 100) / 10).toFixed(1).replace(/\.0$/, '') + 'K' : String(n));
 
@@ -18,8 +27,8 @@ function badges(p) {
 }
 
 function appIcon(a, p, size) {
-  if (p && p.icon) {
-    return `<div class="appicon"><img src="${playImg(p.icon, 's' + size * 2)}" alt="${esc(a.short || a.name)} icon" width="${size}" height="${size}"${size < 100 ? ' loading="lazy"' : ''}></div>`;
+  if (a.iconFile || (p && p.icon)) {
+    return `<div class="appicon"><img src="${a.iconFile || playImg(p.icon, 's' + size * 2)}" alt="${esc(a.short || a.name)} icon" width="${size}" height="${size}"${size < 100 ? ' loading="lazy"' : ''}></div>`;
   }
   return `<div class="appicon gen" aria-hidden="true">${ICON[a.icon] || ICON.doc}</div>`;
 }
@@ -40,7 +49,7 @@ export function home(ctx) {
           ${appIcon(a, p, 64)}
           <div>
             <h3><a href="/apps/${a.id}.html">${a.name}</a></h3>
-            <p class="summary" data-i18n="play.${a.id}.summary">${playText(p.summary || '')}</p>
+            ${summaryOf(a, p)}
           </div>
         </div>
         ${badges(p)}
@@ -48,7 +57,7 @@ ${a.chips && a.chips.length ? `        <div class="chips">${a.chips.map(c => `<s
 ` : ''}
         <div class="actions">
           <a class="btn btn--ghost btn--sm" href="/apps/${a.id}.html"><span data-i18n="home.details">Details</span></a>
-          <a class="btn btn--sm" href="${playUrl(a.pkg)}">${ICON.play}<span data-i18n="home.get">Google Play</span></a>
+          ${getButton(a, 'btn btn--sm')}
         </div>
       </article>`;
   };
@@ -90,12 +99,12 @@ ${list.map(card).join('\n')}
       </div>
       <aside class="stats" aria-label="At a glance">
         <div class="iconrow">
-${live.map(a => `          <a href="/apps/${a.id}.html" title="${esc(a.short || a.name)}"><img src="${playImg(play[a.pkg]?.icon, 's96')}" alt="${esc(a.short || a.name)}" width="48" height="48"></a>`).join('\n')}
+${live.map(a => `          <a href="/apps/${a.id}.html" title="${esc(a.short || a.name)}"><img src="${iconSrc(a, play, 's96')}" alt="${esc(a.short || a.name)}" width="48" height="48"></a>`).join('\n')}
         </div>
         <div class="statgrid">
           <div class="stat"><b>${compact(totalInstalls)}+</b><span data-i18n="home.st.dl">downloads on Google Play</span></div>
           <div class="stat"><b>${compact(totalReviews)}+</b><span data-i18n="home.st.rv">reviews from users</span></div>
-          <div class="stat"><b>${live.length}</b><span data-i18n="home.st.apps">apps on Google Play</span></div>
+          <div class="stat"><b>${live.filter(a => !a.download).length}</b><span data-i18n="home.st.apps">apps on Google Play</span></div>
         </div>
       </aside>
     </section>
@@ -155,6 +164,9 @@ ${retired.map(retiredItem).join('\n')}
 // ---------------------------------------------------------------- app page
 function proof(p, a) {
   const items = [];
+  // an app from this site: what it needs and what it speaks (it has no Play numbers)
+  if (a.minAndroid) items.push(`<div><b>${esc(a.minAndroid)}+</b><span data-i18n="app.minos">Android version</span></div>`);
+  if (a.languages) items.push(`<div><b>${a.languages}</b><span data-i18n="app.langs">languages</span></div>`);
   if (a.released) items.push(`<div><b>${a.released.slice(0, 4)}</b><span data-i18n="app.since">on Google Play since</span></div>`);
   if (p.version) items.push(`<div><b>${esc(p.version)}</b><span data-i18n="app.version">latest version</span></div>`);
   if (installsNumber(p.installs) > 0) items.push(`<div><b>${compact(installsNumber(p.installs))}+</b><span data-i18n="home.dl">downloads</span></div>`);
@@ -194,11 +206,11 @@ export function appPage(a, ctx) {
     ${appIcon(a, p, 112)}
     <div>
       <h1>${a.name}</h1>
-      <p class="summary" data-i18n="play.${a.id}.summary">${playText(p.summary || '')}</p>
+      ${summaryOf(a, p)}
       ${badges(p)}
     </div>
     <div class="cta">
-      <a class="btn" href="${playUrl(a.pkg)}">${ICON.play}<span data-i18n="home.get">Google Play</span></a>
+      ${getButton(a, 'btn')}
       <a class="btn btn--ghost" href="${helpUrl}"><span data-i18n="app.help">Help &amp; answers</span></a>
     </div>
   </header>
@@ -211,7 +223,7 @@ ${a.definition ? `        <p class="lead" data-i18n="app.${a.id}.def">${a.defini
 ` : ''}${a.desc ? `        <p class="lead" data-i18n="${a.descKey}">${a.desc}</p>
 ` : ''}${proof(p, a)}${(a.features || []).length ? `        <div class="features">
 ${a.features.map((f, i) => `          <div class="feature"><h3 data-i18n="app.${a.id}.f${i + 1}">${f.title}</h3><p data-i18n="app.${a.id}.f${i + 1}d">${f.text}</p></div>`).join('\n')}
-${a.category === 'usb' ? `          <div class="feature"><h3 data-i18n="app.easy">${USB_EASY.title}</h3><p data-i18n="app.easyd">${USB_EASY.text}</p></div>
+${a.category === 'usb' && !a.download ? `          <div class="feature"><h3 data-i18n="app.easy">${USB_EASY.title}</h3><p data-i18n="app.easyd">${USB_EASY.text}</p></div>
 ` : ''}        </div>
 ` : ''}${a.chips && a.chips.length ? `        <div class="chips">${a.chips.map(c => `<span class="chip">${c}</span>`).join('')}</div>
 ` : ''}      </section>
@@ -233,14 +245,14 @@ ${p.description ? `      <details class="full"${a.desc ? '' : ' open'}>
           <li><a href="${helpUrl}">${ICON.help}<span data-i18n="${a.faq ? 'app.faq' : 'foot.faq'}">${a.faq ? 'Answers for this app' : 'Support &amp; answers'}</span></a></li>
 ${policyUrl ? `          <li><a href="${policyUrl}">${ICON.shield}<span data-i18n="app.policy">Privacy policy</span></a></li>
 ` : ''}
-          <li><a href="${playUrl(a.pkg)}">${ICON.play}<span data-i18n="home.view">View on Google Play</span></a></li>
+          <li>${a.download ? `<a href="${a.download}">${ICON.download}<span data-i18n="app.dl">Download APK</span></a>` : `<a href="${playUrl(a.pkg)}">${ICON.play}<span data-i18n="home.view">View on Google Play</span></a>`}</li>
         </ul>
         <p class="meta">${a.pkg}</p>
       </div>
       <div class="panel">
         <h2 data-i18n="app.more">More apps</h2>
         <div class="others">
-${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(play[o.pkg]?.icon, 's68')}" alt="" width="34" height="34" loading="lazy">${o.short || o.name}</a>`).join('\n')}
+${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${iconSrc(o, play, 's68')}" alt="" width="34" height="34" loading="lazy">${o.short || o.name}</a>`).join('\n')}
         </div>
       </div>
     </aside>
@@ -249,11 +261,13 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
   const ld = {
     '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: a.short || a.name,
     operatingSystem: 'Android', applicationCategory: a.category === 'games' ? 'GameApplication' : 'UtilitiesApplication',
-    url: SITE + `/apps/${a.id}.html`, image: playImg(p.icon, 's512'), installUrl: playUrl(a.pkg),
+    url: SITE + `/apps/${a.id}.html`, image: a.iconFile ? SITE + a.iconFile : playImg(p.icon, 's512'),
+    ...(a.download ? { installUrl: SITE + a.download, downloadUrl: SITE + a.download } : { installUrl: playUrl(a.pkg) }),
+    ...(a.minAndroid ? { softwareRequirements: `Android ${a.minAndroid} or later` } : {}),
     publisher: { '@type': 'Organization', name: 'MixApplications' },
     description: [a.definition, a.headline, a.desc].filter(Boolean).map(stripTags).join(' '),
-    ...(a.features ? { featureList: [...a.features, ...(a.category === 'usb' ? [USB_EASY] : [])].map(f => `${f.title}: ${f.text}`) } : {}),
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    ...(a.features ? { featureList: [...a.features, ...(a.category === 'usb' && !a.download ? [USB_EASY] : [])].map(f => `${f.title}: ${f.text}`) } : {}),
+    ...(a.download ? {} : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } }),
     ...(a.released ? { datePublished: a.released } : {}),
     ...(p.updated ? { dateModified: p.updated } : {}),
     ...(p.version ? { softwareVersion: p.version } : {}),
@@ -273,7 +287,7 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${playImg(pl
     description: stripTags(a.definition || a.headline || playText(p.summary || '') || a.desc || ''),
     // language copies use the translated sentence
     ...(a.definition ? { descKey: `app.${a.id}.def` } : a.headline ? { descKey: `app.${a.id}.h` } : {}),
-    ogImage: playImg(p.icon, 's512'),
+    ogImage: a.iconFile ? '' : playImg(p.icon, 's512'),   // an SVG icon is no share image: the site logo is used
     head: [ld, crumbs].map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>\n`).join(''),
     main,
   };
@@ -389,7 +403,7 @@ export function contentPage(rel, meta, body, ctx, updated) {
   const appCards = inApps.length ? `    <section class="panel inapps">
       ${inApps.length > 1 ? '<h2 data-i18n="pg.inapps.n">Available in these apps</h2>' : '<h2 data-i18n="pg.inapps.1">Available in</h2>'}
       <ul class="others">
-${inApps.map(a => `        <li><a href="/apps/${a.id}.html"><img src="${playImg(play[a.pkg]?.icon, 's68')}" alt="" width="34" height="34" loading="lazy">${a.short || a.name}</a> <a class="btn btn--sm" href="${playUrl(a.pkg)}">${ICON.play}<span data-i18n="home.get">Google Play</span></a></li>`).join('\n')}
+${inApps.map(a => `        <li><a href="/apps/${a.id}.html"><img src="${iconSrc(a, play, 's68')}" alt="" width="34" height="34" loading="lazy">${a.short || a.name}</a> ${getButton(a, 'btn btn--sm')}</li>`).join('\n')}
       </ul>
       <p><a href="/contact.html" data-i18n="pg.help">Still stuck? Ask us by WhatsApp or email.</a></p>
     </section>
