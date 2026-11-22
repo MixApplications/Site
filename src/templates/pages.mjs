@@ -287,7 +287,7 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${iconSrc(o,
     description: stripTags(a.definition || a.headline || playText(p.summary || '') || a.desc || ''),
     // language copies use the translated sentence
     ...(a.definition ? { descKey: `app.${a.id}.def` } : a.headline ? { descKey: `app.${a.id}.h` } : {}),
-    ogImage: a.iconFile ? '' : playImg(p.icon, 's512'),   // an SVG icon is no share image: the site logo is used
+    ogImage: a.iconFile ? (a.iconFile.endsWith('.svg') ? '' : SITE + a.iconFile) : playImg(p.icon, 's512'),   // an SVG icon is no share image: the site logo is used
     head: [ld, crumbs].map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>\n`).join(''),
     main,
   };

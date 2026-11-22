@@ -344,7 +344,7 @@
       "status": "site",
       "download": "/download/virtual-drive.apk",
       "policy": "virtual_drive_privacy.html",
-      "iconFile": "/icons/virtual-drive.svg",
+      "iconFile": "/icons/virtual-drive.png",
       "minAndroid": "7.0",
       "languages": 58,
       "category": "usb",
