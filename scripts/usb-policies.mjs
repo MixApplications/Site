@@ -8,7 +8,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'src', 'content', 'policies');
-const UPDATED = 'October 6, 2026';
+const UPDATED = 'November 23, 2026';
 
 // ps2       PS2 tools: game list and cover art from our artwork server, game title in crash reports,
 //           a POPS system file the user picks is kept for later drives
@@ -79,7 +79,6 @@ ${sections.map((s, i) => `      <li><a href="#s${i + 1}">${s}</a></li>`).join('\
         <li><strong>Firebase Analytics</strong>, switched on only for users Google Play does not report as under 18, and only once the consent step is complete (or where your region requires none) (Section 13).</li>
         <li><strong>Crash reports</strong> sent to Firebase Crashlytics when the App crashes or hits an error (Section 13).</li>
         <li><strong>Update notice.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version is available or required. Firebase receives a Firebase installation identifier and basic app and device details.</li>
-        <li><strong>Time check.</strong> The App asks public internet time servers (such as Google&rsquo;s, Apple&rsquo;s, Microsoft&rsquo;s, NIST&rsquo;s and the NTP Pool&rsquo;s) for the current date. The request contains no information about you; like any connection, it shows your IP address to that time server.</li>
         <li><strong>Purchase check</strong> when you buy tokens or Pro (Section 4).</li>
         <li><strong>Ad connection check</strong> (free version only). To tell you when an ad blocker or Private DNS stops ads from loading, the App tries to connect to a few advertising servers. Nothing is sent beyond the connection attempt. The free version needs an internet connection: running operations pause while you are offline or while ads are blocked.</li>
 ${on(a.ps2, `        <li><strong>Game artwork.</strong> The PS2 tools download the game list and cover art (for PS2 and PS1 games) from our artwork server (<code>oplm.mixapplications.com</code>). A cover-art request carries only the identifier of a game found on your drive (such as its disc serial) and your IP address; file contents are never sent.</li>\n`)}${on(a.browser, `        <li><strong>Downloads you start.</strong> ${a.browser} opens a built-in browser that starts at Google; text you type that is not a web address is sent to Google Search. The websites you visit receive your requests as in any browser, and the file you choose is downloaded from that website straight onto your USB drive. Those requests go to the websites you choose, not to us.</li>\n`)}${on(a.themes, `        <li><strong>Ventoy themes.</strong> The theme gallery opens the theme website (gnome-look.org) in your browser.</li>\n`)}    </ul>
@@ -96,7 +95,7 @@ ${on(a.windows, `        <li><strong>Windows setup choices</strong> (such as a l
     <ul>
         <li><strong>USB access</strong>: to read and write a USB drive directly, after you allow it in Android&rsquo;s prompt.</li>
         <li><strong>Wake lock</strong>: to keep the phone awake during a long operation.</li>
-${on(a.service, `        <li><strong>Foreground service (connected device), the network-change permission Android requires for it, and notifications</strong>: ${a.service}.</li>\n`)}        <li><strong>Internet and network state</strong>: for ads, Firebase, Google Play billing, the connection check and the time check.</li>
+${on(a.service, `        <li><strong>Foreground service (connected device), the network-change permission Android requires for it, and notifications</strong>: ${a.service}.</li>\n`)}        <li><strong>Internet and network state</strong>: for ads, Firebase, Google Play billing and the connection check.</li>
         <li><strong>Advertising ID</strong>: used by the ad partners as described in Section 5.</li>
         <li><strong>Root access</strong> (rooted phones only): used only for the SD card slot. Your root manager may ask when the App starts; you can refuse. This is a prompt from your root manager, not an Android permission.</li>
     </ul>

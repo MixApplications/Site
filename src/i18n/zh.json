@@ -1278,7 +1278,7 @@
  "sup.cl.21": "Cofferlock 无法防范哪些情况？",
  "sup.cl.22": "应用自己在 <strong>Settings → About → What this app does not protect against</strong> 中列出了这些情况。简而言之：它无法保护已 root 或已被入侵的手机上处于解锁状态的保险箱，无法弥补弱密码，无法保护您已导出或分享的文件，也无法防止有人拍摄您的屏幕。",
  "sup.cl.23": "Cofferlock 会联网吗？",
- "sup.cl.24": "只用于检查应用更新、向 Google Play 确认购买，以及在手机关闭了自动日期和时间时，从公共时间服务器读取时间。保险箱可离线打开。您的文件、密码和恢复短语绝不会离开手机。请参阅 <a href=\"/cofferlock_privacy.html\">Cofferlock 隐私政策</a>。",
+ "sup.cl.24": "只用于检查应用更新和向 Google Play 确认购买。保险箱可离线打开。您的文件、密码和恢复短语绝不会离开手机。请参阅 <a href=\"/cofferlock_privacy.html\">Cofferlock 隐私政策</a>。",
  "sup.cl.25": "卸载 Cofferlock 或清除其数据时，应用内的保险箱会被永久删除，任何人都无法恢复。在此之前，请用 <strong>Settings → Copy file</strong> 复制一份，或使用 Pro 的 <strong>Back up</strong>。",
  "sup.cl.26": "能导入或复制出整个文件夹吗？",
  "sup.cl.27": "能。<strong>Import a folder</strong> 会导入一个文件夹及其所有子文件夹。要取出文件，请选择一个文件夹或多个文件，然后选择 <strong>Copy out</strong>。副本在手机上解密，保险箱外的副本是普通的未加密文件。",

@@ -316,7 +316,7 @@
  "sup.cl.21": "Cofferlock neye karşı koruma sağlamaz?",
  "sup.cl.22": "Uygulama bunu kendisi <strong>Settings → About → What this app does not protect against</strong> altında listeler. Kısacası: kilidi açıkken root'lu veya ele geçirilmiş bir telefondaki kasayı koruyamaz; zayıf bir parolaya, dışa aktardığınız veya paylaştığınız dosyalara ya da ekranınızı filme alan birine karşı da koruma sağlayamaz.",
  "sup.cl.23": "Cofferlock internet kullanıyor mu?",
- "sup.cl.24": "Yalnızca uygulama güncellemelerini denetlemek, satın almaları Google Play ile doğrulamak ve telefonunuzun otomatik tarih ve saati kapalıysa saati herkese açık bir saat sunucusundan okumak için. Kasalar çevrimdışı açılır. Dosyalarınız, parolalarınız ve kurtarma ifadeniz telefonunuzdan asla çıkmaz. <a href=\"/cofferlock_privacy.html\">Cofferlock gizlilik politikasına</a> bakın.",
+ "sup.cl.24": "Yalnızca uygulama güncellemelerini denetlemek ve satın almaları Google Play ile doğrulamak için. Kasalar çevrimdışı açılır. Dosyalarınız, parolalarınız ve kurtarma ifadeniz telefonunuzdan asla çıkmaz. <a href=\"/cofferlock_privacy.html\">Cofferlock gizlilik politikasına</a> bakın.",
  "sup.fm.1": "USB File Manager sürücümü görmüyor",
  "sup.fm.2": "Seçenek varsa telefonunuzun ayarlarında <strong>OTG</strong>'yi açın. Bazı telefonlar bir süre sonra bunu yeniden kapatır.",
  "sup.fm.3": "Başka bir OTG adaptörü veya kablosu deneyin. Yalnızca şarj eden adaptörler veri aktaramaz.",

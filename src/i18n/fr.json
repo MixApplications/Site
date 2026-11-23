@@ -316,7 +316,7 @@
  "sup.cl.21": "Contre quoi Cofferlock ne protège-t-il pas ?",
  "sup.cl.22": "L'application l'indique elle-même dans <strong>Paramètres → À propos → Ce contre quoi cette application ne protège pas</strong>. En bref : elle ne peut pas protéger un coffre sur un téléphone rooté ou compromis pendant qu'il est déverrouillé, ni vous protéger d'un mot de passe faible, de fichiers que vous avez exportés ou partagés, ou de quelqu'un qui filme votre écran.",
  "sup.cl.23": "Cofferlock utilise-t-il internet ?",
- "sup.cl.24": "Uniquement pour rechercher des mises à jour de l'application, confirmer les achats auprès de Google Play et, si la date et l'heure automatiques de votre téléphone sont désactivées, lire l'heure sur un serveur de temps public. Les coffres s'ouvrent hors ligne. Vos fichiers, mots de passe et phrase de récupération ne quittent jamais votre téléphone. Consultez la <a href=\"/cofferlock_privacy.html\">politique de confidentialité de Cofferlock</a>.",
+ "sup.cl.24": "Uniquement pour rechercher des mises à jour de l'application et confirmer les achats auprès de Google Play. Les coffres s'ouvrent hors ligne. Vos fichiers, mots de passe et phrase de récupération ne quittent jamais votre téléphone. Consultez la <a href=\"/cofferlock_privacy.html\">politique de confidentialité de Cofferlock</a>.",
  "sup.fm.1": "USB File Manager ne voit pas ma clé",
  "sup.fm.2": "Activez l'<strong>OTG</strong> dans les paramètres de votre téléphone si l'option existe. Certains téléphones le désactivent à nouveau au bout d'un moment.",
  "sup.fm.3": "Essayez un autre adaptateur ou câble OTG. Les adaptateurs de charge uniquement ne peuvent pas transmettre de données.",

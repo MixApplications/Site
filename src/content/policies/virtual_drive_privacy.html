@@ -1,13 +1,13 @@
-<!--meta {"title": "Privacy Policy — Virtual Drive", "description": "How the Virtual Drive app handles data: your virtual drives stay in the app's private storage on your phone, it checks with Google Firebase whether a newer version is available, and it may read the current time from public internet time servers. No accounts, ads or analytics. Your rights under GDPR, CCPA and LGPD."} -->
+<!--meta {"title": "Privacy Policy — Virtual Drive", "description": "How the Virtual Drive app handles data: your virtual drives stay in the app's private storage on your phone, and it checks with Google Firebase whether a newer version is available. No accounts, ads or analytics. Your rights under GDPR, CCPA and LGPD."} -->
   <section class="pagehead reveal in">
     <h1>Privacy Policy — Virtual Drive</h1>
     <p>This policy applies to the <strong>Virtual Drive</strong> app (<code>com.mixapplications.virtualdrive</code>) published by MixApplications. It is specific to Virtual Drive; other MixApplications apps have their own policies, listed in the <a href="privacy_policy.html">general privacy policy</a>. Where the two differ, this page applies to Virtual Drive.</p>
-    <span class="stamp">Last updated: November 21, 2026</span>
+    <span class="stamp">Last updated: November 23, 2026</span>
   </section>
 
   <div class="highlight reveal">
     <b>The short version</b>
-    <p>Virtual Drive makes your phone appear to a computer as a USB flash drive. <strong>Your virtual drives and everything on them stay on your phone</strong>, in the App&rsquo;s private storage; the App never uploads them. It has no accounts, no analytics, no advertising and no crash-reporting service. To tell you when a newer version is available, it asks Google Firebase, which receives a random installation identifier and basic app and device details. It may also read the current time from public internet time servers. A device report leaves your phone only if you share it yourself.</p>
+    <p>Virtual Drive makes your phone appear to a computer as a USB flash drive. <strong>Your virtual drives and everything on them stay on your phone</strong>, in the App&rsquo;s private storage; the App never uploads them. It has no accounts, no analytics, no advertising and no crash-reporting service. To tell you when a newer version is available, it asks Google Firebase, which receives a random installation identifier and basic app and device details. A device report leaves your phone only if you share it yourself.</p>
   </div>
 
   <nav class="toc reveal d1" aria-label="Contents">
@@ -40,7 +40,6 @@
     <p>Virtual Drive creates virtual drives on your phone and shows the active one to a computer connected with a USB cable, as a USB flash drive. It contains no analytics, advertising or crash-reporting software, and it has no user accounts.</p>
     <p>The App uses the internet only for the following.</p>
     <p><strong>Update check.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version of Virtual Drive is available or required. As Google documents for Firebase (<a href="https://firebase.google.com/docs/android/play-data-disclosure" rel="nofollow">Firebase data disclosure</a>), Firebase collects with it a random <strong>Firebase installation identifier</strong> (created for this installation of the App; Google states it does not uniquely identify a user or a physical device), your device&rsquo;s model, brand and Android version, its country, language and time zone, and the App&rsquo;s package name and version. The answer is only version information. See also <a href="https://firebase.google.com/support/privacy" rel="nofollow">Privacy and Security in Firebase</a>.</p>
-    <p><strong>Time check.</strong> If your phone&rsquo;s automatic date and time is turned off, the App reads the current date from public internet time servers (such as time.google.com or pool.ntp.org). The request contains no information about you.</p>
     <p>If a version is no longer supported, the App asks you to update it; your drives are not changed. Every internet request reveals your IP address to the server that answers it; we do not store it. We do not receive your drives or their contents, file or folder names, usage data, location or contacts.</p>
 
     <h2 id="s2">2. Where Your Data Is</h2>
@@ -78,7 +77,7 @@
     <p><strong>Deletion requests:</strong> we do not offer a data deletion service. We keep no user database and no account, and the App sends us nothing that we keep, so we hold no data from the App that we can find and delete for one person. Support conversations and device reports you send us are deleted when the support case is closed (above). Uninstalling the App or clearing its data removes everything it keeps on your phone.</p>
 
     <h2 id="s9">9. European Privacy Rights (GDPR)</h2>
-    <p>If you are located in the EU/EEA or the UK, any personal data we process (only what you send us for support and the Firebase installation identifier used for the update check) is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>performance of a contract</strong> (providing the App, keeping it up to date, and answering your request) and <strong>legitimate interests</strong> (keeping the App secure and working, including the time check in Section 1). Google acts as our processor for Firebase. You have the following rights:</p>
+    <p>If you are located in the EU/EEA or the UK, any personal data we process (only what you send us for support and the Firebase installation identifier used for the update check) is processed in accordance with the General Data Protection Regulation (GDPR) and UK GDPR. The legal bases are <strong>performance of a contract</strong> (providing the App, keeping it up to date, and answering your request) and <strong>legitimate interests</strong> (keeping the App secure and working). Google acts as our processor for Firebase. You have the following rights:</p>
     <ul>
         <li>The right to request access to the personal data that we process.</li>
         <li>The right to correct inaccurate personal data.</li>
@@ -88,7 +87,7 @@
     </ul>
 
     <h3>International data transfers</h3>
-    <p>MixApplications is based in Egypt. The service providers named in this policy, such as Google (Firebase) and the public time servers named in Section 1, may process data in other countries, including the United States and member states of the European Union. When data from the EEA, the UK or Switzerland is transferred to a country without an adequacy decision, these providers rely on recognised safeguards such as the European Commission&rsquo;s Standard Contractual Clauses.</p>
+    <p>MixApplications is based in Egypt. The service providers named in this policy, such as Google (Firebase), may process data in other countries, including the United States and member states of the European Union. When data from the EEA, the UK or Switzerland is transferred to a country without an adequacy decision, these providers rely on recognised safeguards such as the European Commission&rsquo;s Standard Contractual Clauses.</p>
 
     <h2 id="s10">10. United States Privacy Rights (CCPA)</h2>
     <p>This section covers the California Consumer Privacy Act (CCPA/CPRA) and the privacy laws of Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA) and Utah (UCPA).</p>
@@ -140,11 +139,6 @@
                     <td><strong>Firebase installation identifier</strong>, device model and brand, Android version, country, language, time zone, app version</td>
                     <td>Sent to Google Firebase Remote Config to learn whether a newer version is available (Section 1).</td>
                     <td>Yes, over HTTPS, when the App starts.</td>
-                </tr>
-                <tr>
-                    <td><strong>Time request</strong></td>
-                    <td>Asks a public time server for the current date; contains no information about you (Section 1).</td>
-                    <td>Only if automatic date and time is turned off.</td>
                 </tr>
             </tbody>
         </table>

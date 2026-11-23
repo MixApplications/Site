@@ -316,7 +316,7 @@
  "sup.cl.21": "Contra o que o Cofferlock não protege?",
  "sup.cl.22": "O próprio app lista isso em <strong>Settings → About → What this app does not protect against</strong>. Em resumo: ele não consegue proteger um cofre em um celular com root ou comprometido enquanto o cofre está desbloqueado, nem proteger contra uma senha fraca, arquivos que você exportou ou compartilhou, ou alguém filmando a sua tela.",
  "sup.cl.23": "O Cofferlock usa a internet?",
- "sup.cl.24": "Só para verificar atualizações do app, confirmar compras com o Google Play e, se a data e hora automáticas do seu celular estiverem desativadas, ler a hora de um servidor de horário público. Os cofres abrem off-line. Seus arquivos, senhas e frase de recuperação nunca saem do seu celular. Veja a <a href=\"/cofferlock_privacy.html\">política de privacidade do Cofferlock</a>.",
+ "sup.cl.24": "Só para verificar atualizações do app e confirmar compras com o Google Play. Os cofres abrem off-line. Seus arquivos, senhas e frase de recuperação nunca saem do seu celular. Veja a <a href=\"/cofferlock_privacy.html\">política de privacidade do Cofferlock</a>.",
  "sup.fm.1": "O USB File Manager não enxerga meu drive",
  "sup.fm.2": "Ative o <strong>OTG</strong> nas configurações do celular, se a opção existir. Alguns celulares desativam de novo depois de um tempo.",
  "sup.fm.3": "Teste outro adaptador ou cabo OTG. Adaptadores só de carga não transmitem dados.",

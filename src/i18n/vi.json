@@ -1278,7 +1278,7 @@
  "sup.cl.21": "Cofferlock không bảo vệ khỏi những gì?",
  "sup.cl.22": "Chính ứng dụng liệt kê điều này trong <strong>Settings → About → What this app does not protect against</strong>. Tóm lại: ứng dụng không thể bảo vệ kho trên điện thoại đã root hoặc bị xâm nhập khi kho đang mở khóa, mật khẩu yếu, tệp bạn đã xuất hoặc chia sẻ, hoặc người quay phim màn hình của bạn.",
  "sup.cl.23": "Cofferlock có dùng Internet không?",
- "sup.cl.24": "Chỉ để kiểm tra bản cập nhật ứng dụng, xác nhận giao dịch mua với Google Play và, nếu ngày giờ tự động của điện thoại bị tắt, để đọc thời gian từ máy chủ thời gian công cộng. Kho mở được khi ngoại tuyến. Tệp, mật khẩu và cụm từ khôi phục của bạn không bao giờ rời khỏi điện thoại. Xem <a href=\"/cofferlock_privacy.html\">chính sách quyền riêng tư của Cofferlock</a>.",
+ "sup.cl.24": "Chỉ để kiểm tra bản cập nhật ứng dụng và xác nhận giao dịch mua với Google Play. Kho mở được khi ngoại tuyến. Tệp, mật khẩu và cụm từ khôi phục của bạn không bao giờ rời khỏi điện thoại. Xem <a href=\"/cofferlock_privacy.html\">chính sách quyền riêng tư của Cofferlock</a>.",
  "sup.cl.25": "Kho được giữ bên trong ứng dụng sẽ bị xóa vĩnh viễn khi bạn gỡ cài đặt Cofferlock hoặc xóa dữ liệu của nó, và không ai có thể khôi phục. Trước đó, hãy tạo bản sao bằng <strong>Settings → Copy file</strong>, hoặc <strong>Back up</strong> với Pro.",
  "sup.cl.26": "Tôi có thể nhập hoặc sao chép ra cả thư mục không?",
  "sup.cl.27": "Được. <strong>Import a folder</strong> đưa vào một thư mục cùng mọi thư mục con. Để lấy tệp ra, chọn một thư mục hoặc nhiều tệp và chọn <strong>Copy out</strong>. Bản sao được giải mã trên điện thoại, và bản sao bên ngoài là tệp bình thường, không được mã hóa.",

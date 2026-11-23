@@ -1604,7 +1604,7 @@
  "sup.cl.21": "What doesn't Cofferlock protect against?",
  "sup.cl.22": "The app lists this itself under <strong>Settings → About → What this app does not protect against</strong>. In short: it can't protect a vault on a rooted or compromised phone while it is unlocked, a weak password, files you have exported or shared, or someone filming your screen.",
  "sup.cl.23": "Does Cofferlock use the internet?",
- "sup.cl.24": "Only to check for app updates, to confirm purchases with Google Play and, if your phone's automatic date and time is off, to read the time from a public time server. Vaults open offline. Your files, passwords and recovery phrase never leave your phone. See the <a href=\"/cofferlock_privacy.html\">Cofferlock privacy policy</a>.",
+ "sup.cl.24": "Only to check for app updates and to confirm purchases with Google Play. Vaults open offline. Your files, passwords and recovery phrase never leave your phone. See the <a href=\"/cofferlock_privacy.html\">Cofferlock privacy policy</a>.",
  "sup.cl.25": "A vault kept inside the app is deleted for good when you uninstall Cofferlock or clear its data, and nobody can recover it. Before that, make a copy with <strong>Settings → Copy file</strong>, or <strong>Back up</strong> with Pro.",
  "sup.cl.26": "Can I import or copy out a whole folder?",
  "sup.cl.27": "Yes. <strong>Import a folder</strong> brings in a folder with all its subfolders. To take files out, select a folder or several files and choose <strong>Copy out</strong>. The copy is decrypted on the phone, and the copy outside is a normal, unencrypted file.",

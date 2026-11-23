@@ -316,7 +316,7 @@
  "sup.cl.21": "Wovor schützt Cofferlock nicht?",
  "sup.cl.22": "Die App führt das selbst auf, unter <strong>Einstellungen → Über die App → Wovor diese App nicht schützt</strong>. Kurz gesagt: Sie kann einen Tresor auf einem gerooteten oder kompromittierten Smartphone nicht schützen, solange er entsperrt ist, und auch nicht vor einem schwachen Passwort, vor Dateien, die Sie exportiert oder geteilt haben, oder vor jemandem, der Ihren Bildschirm filmt.",
  "sup.cl.23": "Nutzt Cofferlock das Internet?",
- "sup.cl.24": "Nur, um nach App-Updates zu suchen, Käufe bei Google Play zu bestätigen und, falls Datum und Uhrzeit Ihres Smartphones nicht automatisch eingestellt werden, die Uhrzeit von einem öffentlichen Zeitserver abzurufen. Tresore lassen sich offline öffnen. Ihre Dateien, Passwörter und Ihre Wiederherstellungsphrase verlassen nie Ihr Smartphone. Siehe die <a href=\"/cofferlock_privacy.html\">Datenschutzerklärung von Cofferlock</a>.",
+ "sup.cl.24": "Nur, um nach App-Updates zu suchen und Käufe bei Google Play zu bestätigen. Tresore lassen sich offline öffnen. Ihre Dateien, Passwörter und Ihre Wiederherstellungsphrase verlassen nie Ihr Smartphone. Siehe die <a href=\"/cofferlock_privacy.html\">Datenschutzerklärung von Cofferlock</a>.",
  "sup.fm.1": "USB File Manager erkennt mein Laufwerk nicht",
  "sup.fm.2": "Schalten Sie in den Einstellungen Ihres Smartphones <strong>OTG</strong> ein, falls es die Option gibt. Manche Smartphones schalten es nach einer Weile wieder aus.",
  "sup.fm.3": "Probieren Sie einen anderen OTG-Adapter oder ein anderes Kabel. Reine Ladeadapter können keine Daten übertragen.",

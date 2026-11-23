@@ -316,7 +316,7 @@
  "sup.cl.21": "¿Contra qué no protege Cofferlock?",
  "sup.cl.22": "La propia app lo indica en <strong>Configuración → Acerca de → Contra qué no protege esta app</strong>. En resumen: no puede proteger una bóveda en un teléfono rooteado o comprometido mientras está desbloqueada, ni protegerte de una contraseña débil, de archivos que hayas exportado o compartido o de alguien que grabe tu pantalla.",
  "sup.cl.23": "¿Cofferlock usa internet?",
- "sup.cl.24": "Solo para buscar actualizaciones de la app, confirmar compras con Google Play y, si la fecha y hora automáticas de tu teléfono están desactivadas, leer la hora de un servidor de hora público. Las bóvedas se abren sin conexión. Tus archivos, contraseñas y frase de recuperación nunca salen de tu teléfono. Consulta la <a href=\"/cofferlock_privacy.html\">política de privacidad de Cofferlock</a>.",
+ "sup.cl.24": "Solo para buscar actualizaciones de la app y confirmar compras con Google Play. Las bóvedas se abren sin conexión. Tus archivos, contraseñas y frase de recuperación nunca salen de tu teléfono. Consulta la <a href=\"/cofferlock_privacy.html\">política de privacidad de Cofferlock</a>.",
  "sup.fm.1": "USB File Manager no ve mi unidad",
  "sup.fm.2": "Activa <strong>OTG</strong> en la configuración de tu teléfono si existe la opción. Algunos teléfonos lo vuelven a desactivar al cabo de un rato.",
  "sup.fm.3": "Prueba otro adaptador o cable OTG. Los adaptadores solo de carga no pueden transmitir datos.",

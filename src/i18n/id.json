@@ -316,7 +316,7 @@
  "sup.cl.21": "Apa yang tidak dilindungi oleh Cofferlock?",
  "sup.cl.22": "Aplikasi ini mencantumkannya sendiri di <strong>Settings → About → What this app does not protect against</strong>. Singkatnya: aplikasi tidak bisa melindungi brankas di ponsel yang di-root atau disusupi selama brankas terbuka, kata sandi yang lemah, file yang sudah Anda ekspor atau bagikan, atau seseorang yang merekam layar Anda.",
  "sup.cl.23": "Apakah Cofferlock memakai internet?",
- "sup.cl.24": "Hanya untuk memeriksa pembaruan aplikasi, mengonfirmasi pembelian dengan Google Play, dan, jika tanggal dan waktu otomatis di ponsel Anda nonaktif, membaca waktu dari server waktu publik. Brankas bisa dibuka secara offline. File, kata sandi, dan frasa pemulihan Anda tidak pernah keluar dari ponsel Anda. Lihat <a href=\"/cofferlock_privacy.html\">kebijakan privasi Cofferlock</a>.",
+ "sup.cl.24": "Hanya untuk memeriksa pembaruan aplikasi dan mengonfirmasi pembelian dengan Google Play. Brankas bisa dibuka secara offline. File, kata sandi, dan frasa pemulihan Anda tidak pernah keluar dari ponsel Anda. Lihat <a href=\"/cofferlock_privacy.html\">kebijakan privasi Cofferlock</a>.",
  "sup.fm.1": "USB File Manager tidak melihat drive saya",
  "sup.fm.2": "Aktifkan <strong>OTG</strong> di setelan ponsel Anda jika opsinya ada. Beberapa ponsel mematikannya lagi setelah beberapa saat.",
  "sup.fm.3": "Coba adaptor atau kabel OTG lain. Adaptor yang hanya untuk mengisi daya tidak bisa membawa data.",

@@ -1598,7 +1598,7 @@
  "sup.cl.21": "Cofferlock이 보호하지 못하는 것은 무엇인가요?",
  "sup.cl.22": "앱 자체의 <strong>Settings → About → What this app does not protect against</strong>에 나와 있습니다. 요약하면, 루팅되었거나 해킹된 휴대폰에서 잠금 해제된 상태의 보관함, 약한 비밀번호, 내보내거나 공유한 파일, 누군가 화면을 촬영하는 경우는 보호할 수 없습니다.",
  "sup.cl.23": "Cofferlock은 인터넷을 사용하나요?",
- "sup.cl.24": "앱 업데이트 확인, Google Play에서 구매 확인, 그리고 휴대폰의 자동 날짜 및 시간이 꺼져 있을 때 공개 시간 서버에서 시간을 읽는 용도로만 사용합니다. 보관함은 오프라인에서 열립니다. 파일, 비밀번호, 복구 문구는 휴대폰 밖으로 나가지 않습니다. <a href=\"/cofferlock_privacy.html\">Cofferlock 개인정보처리방침</a>을 참고하세요.",
+ "sup.cl.24": "앱 업데이트 확인과 Google Play에서 구매 확인 용도로만 사용합니다. 보관함은 오프라인에서 열립니다. 파일, 비밀번호, 복구 문구는 휴대폰 밖으로 나가지 않습니다. <a href=\"/cofferlock_privacy.html\">Cofferlock 개인정보처리방침</a>을 참고하세요.",
  "sup.cl.25": "앱 안에 보관한 보관함은 Cofferlock을 삭제하거나 데이터를 지우면 영구히 삭제되며, 누구도 복구할 수 없습니다. 그 전에 <strong>Settings → Copy file</strong>로 사본을 만들거나, Pro에서는 <strong>Back up</strong>을 사용하세요.",
  "sup.cl.26": "폴더 전체를 가져오거나 내보낼 수 있나요?",
  "sup.cl.27": "네. <strong>Import a folder</strong>는 하위 폴더를 모두 포함해 폴더를 가져옵니다. 파일을 꺼내려면 폴더나 여러 파일을 선택하고 <strong>Copy out</strong>을 선택하세요. 사본은 휴대폰에서 복호화되며, 밖에 있는 사본은 암호화되지 않은 일반 파일입니다.",
