@@ -80,6 +80,7 @@ ${sections.map((s, i) => `      <li><a href="#s${i + 1}">${s}</a></li>`).join('\
         <li><strong>Crash reports</strong> sent to Firebase Crashlytics when the App crashes or hits an error (Section 13).</li>
         <li><strong>Update notice.</strong> When the App starts, it asks <strong>Google Firebase Remote Config</strong> whether a newer version is available or required. Firebase receives a Firebase installation identifier and basic app and device details.</li>
         <li><strong>Purchase check</strong> when you buy tokens or Pro (Section 4).</li>
+        <li><strong>Network time.</strong> The App may connect to public network time services. These requests contain no personal information about you or your device; as with any internet connection, the service can see your IP address.</li>
         <li><strong>Ad connection check</strong> (free version only). To tell you when an ad blocker or Private DNS stops ads from loading, the App tries to connect to a few advertising servers. Nothing is sent beyond the connection attempt. The free version needs an internet connection: running operations pause while you are offline or while ads are blocked.</li>
 ${on(a.ps2, `        <li><strong>Game artwork.</strong> The PS2 tools download the game list and cover art (for PS2 and PS1 games) from our artwork server (<code>oplm.mixapplications.com</code>). A cover-art request carries only the identifier of a game found on your drive (such as its disc serial) and your IP address; file contents are never sent.</li>\n`)}${on(a.browser, `        <li><strong>Downloads you start.</strong> ${a.browser} opens a built-in browser that starts at Google; text you type that is not a web address is sent to Google Search. The websites you visit receive your requests as in any browser, and the file you choose is downloaded from that website straight onto your USB drive. Those requests go to the websites you choose, not to us.</li>\n`)}${on(a.themes, `        <li><strong>Ventoy themes.</strong> The theme gallery opens the theme website (gnome-look.org) in your browser.</li>\n`)}    </ul>
 
@@ -95,7 +96,7 @@ ${on(a.windows, `        <li><strong>Windows setup choices</strong> (such as a l
     <ul>
         <li><strong>USB access</strong>: to read and write a USB drive directly, after you allow it in Android&rsquo;s prompt.</li>
         <li><strong>Wake lock</strong>: to keep the phone awake during a long operation.</li>
-${on(a.service, `        <li><strong>Foreground service (connected device), the network-change permission Android requires for it, and notifications</strong>: ${a.service}.</li>\n`)}        <li><strong>Internet and network state</strong>: for ads, Firebase, Google Play billing and the connection check.</li>
+${on(a.service, `        <li><strong>Foreground service (connected device), the network-change permission Android requires for it, and notifications</strong>: ${a.service}.</li>\n`)}        <li><strong>Internet and network state</strong>: for ads, Firebase, Google Play billing, the connection check and network time.</li>
         <li><strong>Advertising ID</strong>: used by the ad partners as described in Section 5.</li>
         <li><strong>Root access</strong> (rooted phones only): used only for the SD card slot. Your root manager may ask when the App starts; you can refuse. This is a prompt from your root manager, not an Android permission.</li>
     </ul>
@@ -141,7 +142,7 @@ ${on(a.ps2, `        <li><strong>Requests to our artwork server</strong> are ans
     </ul>
 
     <h3>International data transfers</h3>
-    <p>MixApplications is based in Egypt. The service providers named in this policy, such as Google and our advertising partners, may process data in other countries, including the United States and member states of the European Union. When data from the EEA, the UK or Switzerland is transferred to a country without an adequacy decision, these providers rely on recognised safeguards such as the European Commission&rsquo;s Standard Contractual Clauses.</p>
+    <p>MixApplications is based in Egypt. The service providers named in this policy, such as Google, our advertising partners and public network time services, may process data in other countries, including the United States and member states of the European Union. When data from the EEA, the UK or Switzerland is transferred to a country without an adequacy decision, these providers rely on recognised safeguards such as the European Commission&rsquo;s Standard Contractual Clauses.</p>
 
     <h2 id="s9">9. United States Privacy Rights (CCPA)</h2>
     <p>This section covers the California Consumer Privacy Act (CCPA/CPRA) and the privacy laws of Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA) and Utah (UCPA).</p>
