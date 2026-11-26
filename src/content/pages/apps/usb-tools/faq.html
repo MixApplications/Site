@@ -8,7 +8,7 @@
   <li data-i18n="fq.usb-tools.6"><strong>PS2 USB Utils</strong>: 1 when Fix has to format the drive.</li>
 </ul>
 <p data-i18n="fq.usb-tools.7">Everything else is free: Wipe USB, Backup / Restore, the recovery scans, Bad Blocks Check, Benchmark, USB Defragmenter, Device Info and the game tools.</p>
-<p data-i18n="fq.usb-tools.8">To earn a token, tap the token counter on the main screen to open <strong>Get Tokens</strong>, then tap <strong>Watch</strong> under <strong>Get 1 free token</strong>. One short rewarded video (60 seconds at most) gives 1 token. Free tokens stop at a balance of 5, and at 4 videos each time you open the app. You can also buy a pack. With Pro, no action uses tokens. More: <a href="/apps/usb-tools/tokens.html">USB Tools tokens</a>.</p>
+<p data-i18n="fq.usb-tools.8">To earn a token, tap the token counter on the main screen to open <strong>Get Tokens</strong>, then tap <strong>Watch</strong> under <strong>Get 1 free token</strong>. One short rewarded video (60 seconds at most) gives 1 token. You can earn free tokens up to a balance of 5, and watch up to 4 videos each time you open the app. You can also buy a pack. With Pro, no action uses tokens. More: <a href="/apps/usb-tools/tokens.html">USB Tools tokens</a>.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.9">What happens to my tokens when a write does not complete?</summary><div class="a">
 <p data-i18n="fq.usb-tools.10">They come back automatically. Tokens are taken when you tap <strong>OK</strong>, before the job starts. If a format fails or is cancelled, the drive is removed before the start or during the format, or you answer <strong>No</strong> to the question about overwriting the whole drive, the app gives them back. The same applies to PS2 Fix.</p>
@@ -86,7 +86,7 @@
 <p data-i18n="fq.usb-tools.58">Format makes a new, empty file system on the whole drive. To overwrite the data itself, use <a href="/tools/wipe-usb.html">Wipe USB</a>: it overwrites the data on the whole drive with the method you choose, and can check the drive afterwards. Normal file-recovery software then cannot get the data back.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.59">Can I format an external hard drive for PS3?</summary><div class="a">
-<p data-i18n="fq.usb-tools.60">Yes, as FAT32 up to 2 TB; hard disk drives are not officially supported. Hard disk drives (HDDs) need more power than a phone's USB port reliably gives. If you try one, charge the phone and use a powered USB hub.</p>
+<p data-i18n="fq.usb-tools.60">Yes, as FAT32 up to 2 TB. Hard disk drives (HDDs) work too, but many need more power than a phone's USB port gives: charge the phone and use a powered USB hub.</p>
 <p data-i18n="fq.usb-tools.61">FAT32 cannot hold a single file over 4 GB. <a href="/tools/ps3-iso-tools.html">PS3 ISO TOOLS</a> splits ISO and PKG files into parts for FAT32 drives (<strong>Split ISO</strong>, <strong>Split PKG</strong>), and can split while making or extracting an ISO.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.62">My drive shows less space than it should. How do I get the full capacity back?</summary><div class="a">
@@ -96,6 +96,7 @@
 <details class="q"><summary data-i18n="fq.usb-tools.65">Can the app repair a drive that no longer formats?</summary><div class="a">
 <p data-i18n="fq.usb-tools.66">Not in place. A broken partition table or file system is usually fixed by formatting fresh with Format USB or Wipe USB, so copy off what you need first.</p>
 <p data-i18n="fq.usb-tools.67">If a format fails its check, the drive has a hardware fault. Run Bad Blocks Check to confirm it (it erases the drive); if it reports errors, replace the drive.</p>
+<p data-i18n="gd.fix-usb.more">For the full steps, see <a href="/guides/fix-usb-drive.html">how to fix a USB drive that stopped working or shows as damaged</a>.</p>
 </div></details>
 
 <h2 data-i18n="fq.usb-tools.68">Recovery, wipe and tests</h2>
@@ -149,11 +150,12 @@
 </ol>
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.99">Can the app damage my USB drive?</summary><div class="a">
-<p data-i18n="fq.usb-tools.100">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
+<p data-i18n="fq.usb-tools.100">No. The app only reads and writes data; it does not change the drive's hardware. The worst case is a drive that needs formatting again. A drive that stops working after a job usually had a hardware fault already.</p>
 <p data-i18n="fq.usb-tools.101">The app tests each drive when it is connected and asks for confirmation before it erases one. Every job that formats the drive (Format USB, Partition Wizard Create and Format, and the PS2 drive format) checks and tests the file system before the app reports success.</p>
 <p data-i18n="fq.usb-tools.114">A drive that is write-protected, or one that does not take writes, is refused at the start with one message, before any question and before any token is used.</p>
 <p data-i18n="fq.usb-tools.120">Every format is tested before success is shown, image writes wait until the drive confirms the data is written, and a job only ever writes to the drive it started on.</p>
 <p data-i18n="fq.usb-tools.121">Partition Wizard changes only the partition you pick, and you can undo your changes before you apply them. USB Defragmenter refuses a drive that is not safe to defragment and says why, for example a drive that was not closed properly, whose file table cannot be read, that is smaller than reported or that is too full.</p>
+<p data-i18n="gd.fix-usb.more">For the full steps, see <a href="/guides/fix-usb-drive.html">how to fix a USB drive that stopped working or shows as damaged</a>.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.usb-tools.102">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
 <p data-i18n="fq.usb-tools.103">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>

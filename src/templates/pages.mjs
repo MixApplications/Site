@@ -126,14 +126,14 @@ ${retired.map(retiredItem).join('\n')}
     <section>
       <div class="shelf"><h2 data-i18n="home.tr.h">Why do millions of people trust our USB apps?</h2></div>
       <p class="trustlead" data-i18n="home.tr.1">We have published Android apps on Google Play since 2016 and built USB apps for more than {{usbYears}} years. Ultimate USB, DROFUS, Ventoy (Unofficial) and USB Tools each have over {{dl:ultimate-usb,drofus,ventoy,usb-tools}} downloads and are available in 58 languages.</p>
-      <p class="trustlead" data-i18n="home.tr.13">Every version is fully tested before each release, on a wide range of phones from different brands (Android 10 to 16) and a large, varied set of USB storage devices: flash drives, a USB hard disk and SD card readers, used directly and through USB hubs.</p>
+      <p class="trustlead" data-i18n="home.tr.13">Every version is fully tested before each release, on a wide range of phones from different brands (Android 10 to 16) and a large, varied set of USB storage devices, including flash drives, SD card readers and external hard disks, used directly and through USB hubs.</p>
       <div class="principles">
         <div class="tile reveal" style="--c:var(--blue)"><b data-i18n="home.tr.2">Every drive is checked</b><span data-i18n="home.tr.3">Each drive is tested when you connect it. Read-only and fake drives are caught, and nothing is erased without your OK.</span></div>
         <div class="tile reveal" style="--c:var(--green)"><b data-i18n="home.tr.4">Every format is tested</b><span data-i18n="home.tr.5">Every format is tested before success is shown, and image writes wait until the drive confirms the data is written.</span></div>
-        <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.tr.6">The connection recovers</b><span data-i18n="home.tr.7">A short USB connection failure is recovered by itself and the job continues. Re-plug the same drive and tap Retry to go on.</span></div>
+        <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.tr.6">The connection recovers</b><span data-i18n="home.tr.7">A short USB connection failure is recovered by itself and the job continues. In Ultimate USB, DROFUS and USB Tools, re-plug the same drive and tap Retry to go on.</span></div>
         <div class="tile reveal" style="--c:var(--amber)"><b data-i18n="home.tr.8">Never the wrong drive</b><span data-i18n="home.tr.9">A job only writes to the drive it started on, and your tokens come back when a job does not complete.</span></div>
       </div>
-      <p class="trustlinks"><a href="/guides/why-mixapplications.html" data-i18n="home.tr.12">Why our apps are the best choice</a> · <a href="/guides/usb-safety.html" data-i18n="home.tr.10">How our USB apps keep your drive and your data safe</a> · <a href="/guides/choose-a-bootable-usb-app.html" data-i18n="home.tr.11">How to choose a safe bootable USB app</a></p>
+      <p class="trustlinks"><a href="/guides/why-mixapplications.html" data-i18n="home.tr.12">Why our apps are the best choice</a> · <a href="/guides/usb-safety.html" data-i18n="home.tr.10">How our USB apps keep your drive and your data safe</a> · <a href="/guides/choose-a-bootable-usb-app.html" data-i18n="home.tr.11">How to choose a safe bootable USB app</a> · <a href="/guides/fix-usb-drive.html" data-i18n="foot.g4">Fix a damaged USB drive</a></p>
     </section>
 
     <section>
@@ -142,7 +142,7 @@ ${retired.map(retiredItem).join('\n')}
         <div class="tile reveal" style="--c:var(--blue)"><b data-i18n="home.pr.1">On-device processing</b><span data-i18n="home.prd.1">Your files, drives and documents are processed on your phone and never uploaded to us.</span></div>
         <div class="tile reveal" style="--c:var(--green)"><b data-i18n="home.pr.2">No root for USB drives</b><span data-i18n="home.prd.2">Everything works over USB-OTG on a stock phone. Root is only ever needed for internal SD cards.</span></div>
         <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.pr.3">Every drive opens</b><span data-i18n="home.prd.3">NTFS, exFAT and ext2/3/4 drives open in the app, even when your phone cannot read them.</span></div>
-        <div class="tile reveal" style="--c:var(--amber)"><b data-i18n="home.pr.4">Free first</b><span data-i18n="home.prd.4">Every app is free to use, supported by ads. Where an app has a paid upgrade, it is a one-time purchase — never a subscription.</span></div>
+        <div class="tile reveal" style="--c:var(--amber)"><b data-i18n="home.pr.4">Free first</b><span data-i18n="home.prd.4">Every app is free to use. Most are supported by ads; Cofferlock has none. Where an app has a paid upgrade, it is a one-time purchase — never a subscription.</span></div>
       </div>
     </section>
   </div>
@@ -177,10 +177,10 @@ function proof(p, a) {
 }
 // links from an app overview to its own help pages and to every tool page that includes the app
 function guides(a, ctx) {
-  const own = (ctx.content || []).filter(p => p.kind !== 'tool' && (p.app === a.id || (p.kind === 'guide' && p.apps?.includes(a.id))));
+  const own = (ctx.content || []).filter(p => p.kind !== 'tool' && (p.app === a.id || (p.kind === 'guide' && (p.apps?.includes(a.id) || p.related?.includes(a.id)))));
   const tools = (ctx.content || []).filter(p => p.kind === 'tool' && p.apps.includes(a.id));
   if (!own.length && !tools.length) return '';
-  const card = p => `          <a href="${p.path}"><b data-i18n="${p.descKey.replace(/\.desc$/, '.h1')}">${p.h1}</b></a>`;
+  const card = p => `          <a href="${p.path}"><b data-i18n="${p.descKey.replace(/\.(desc|summary)$/, '.h1')}">${p.h1}</b></a>`;
   return `      <section class="panel">
 ${own.length ? `        <h2 data-i18n="app.guides">Help and guides</h2>
         <div class="toolgrid">
@@ -264,7 +264,9 @@ ${others.map(o => `          <a href="/apps/${o.id}.html"><img src="${iconSrc(o,
     url: SITE + `/apps/${a.id}.html`, image: a.iconFile ? SITE + a.iconFile : playImg(p.icon, 's512'),
     ...(a.download ? { installUrl: SITE + a.download, downloadUrl: SITE + a.download } : { installUrl: playUrl(a.pkg) }),
     ...(a.minAndroid ? { softwareRequirements: `Android ${a.minAndroid} or later` } : {}),
-    publisher: { '@type': 'Organization', name: 'MixApplications' },
+    author: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/', sameAs: [PLAY_DEV] },
+    publisher: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/', sameAs: [PLAY_DEV] },
+    ...(a.download ? {} : { sameAs: [playUrl(a.pkg)] }),
     description: [a.definition, a.headline, a.desc].filter(Boolean).map(stripTags).join(' '),
     ...(a.features ? { featureList: [...a.features, ...(a.category === 'usb' && !a.download ? [USB_EASY] : [])].map(f => `${f.title}: ${f.text}`) } : {}),
     ...(a.download ? {} : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } }),
@@ -405,7 +407,8 @@ export function contentPage(rel, meta, body, ctx, updated) {
       <ul class="others">
 ${inApps.map(a => `        <li><a href="/apps/${a.id}.html"><img src="${iconSrc(a, play, 's68')}" alt="" width="34" height="34" loading="lazy">${a.short || a.name}</a> ${getButton(a, 'btn btn--sm')}</li>`).join('\n')}
       </ul>
-      <p><a href="/contact.html" data-i18n="pg.help">Still stuck? Ask us by WhatsApp or email.</a></p>
+${meta.kind === 'tool' || (meta.kind === 'faq' && owner?.category === 'usb') ? `      <p><a href="/guides/fix-usb-drive.html" data-i18n="foot.g4">Fix a damaged USB drive</a></p>
+` : ''}      <p><a href="/contact.html" data-i18n="pg.help">Still stuck? Ask us by WhatsApp or email.</a></p>
     </section>
 ` : '';
   const main = `<main id="main" class="wrap narrow">
@@ -424,12 +427,12 @@ ${appCards}</main>`;
     ],
   }];
   if (meta.kind === 'guide') ld.push({ '@context': 'https://schema.org', '@type': 'Article', headline: stripTags(meta.h1),
-    description: stripTags(meta.description), url: SITE + path, dateModified: updated, inLanguage: 'en',
+    description: stripTags(meta.summary || meta.description), url: SITE + path, dateModified: updated, inLanguage: 'en',
     author: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/' },
     publisher: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/', logo: SITE + '/assets/logo.png' },
     about: inApps.map(x => ({ '@type': 'SoftwareApplication', name: x.short || x.name, operatingSystem: 'Android', url: SITE + `/apps/${x.id}.html` })) });
   if (meta.kind === 'about') ld.push({ '@context': 'https://schema.org', '@type': 'AboutPage', name: stripTags(meta.h1),
-    description: stripTags(meta.description), url: SITE + path, dateModified: updated, inLanguage: 'en',
+    description: stripTags(meta.summary || meta.description), url: SITE + path, dateModified: updated, inLanguage: 'en',
     mainEntity: { '@type': 'Organization', name: 'MixApplications', url: SITE + '/', logo: SITE + '/assets/logo.png', email: EMAIL, sameAs: [PLAY_DEV] } });
   if (meta.kind === 'faq') {
     const qa = [...body.matchAll(/<details class="q">\s*<summary[^>]*>([\s\S]*?)<\/summary>\s*<div class="a">([\s\S]*?)<\/div>\s*<\/details>/g)];
@@ -439,7 +442,10 @@ ${appCards}</main>`;
   }
   return {
     path, nav: 'apps', app: meta.app || null, kind: meta.kind, h1: meta.h1, linkTitle: stripTags(meta.h1),
-    title: meta.title, titleKey: `${meta.key}.title`, description: stripTags(meta.description), descKey: `${meta.key}.desc`,
+    // optional meta.summary: a short meta description (<= 160 chars); the long description stays the visible lead
+    title: meta.title, titleKey: `${meta.key}.title`, description: stripTags(meta.summary || meta.description),
+    descKey: meta.summary ? `${meta.key}.summary` : `${meta.key}.desc`,
+    ...(meta.summary ? { i18n: { [`${meta.key}.summary`]: meta.summary } } : {}),
     head: ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>\n`).join(''),
     main,
   };

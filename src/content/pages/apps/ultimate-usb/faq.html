@@ -9,7 +9,7 @@
   <li data-i18n="fq.ultimate-usb.7"><strong>PS2 USB Utils</strong>: 1 when Fix has to format the drive. <strong>USB Encryption</strong>: 1 for Encrypt Drive.</li>
 </ul>
 <p data-i18n="fq.ultimate-usb.8">Raw Write, Wipe USB, the recovery tools, Bad Blocks Check, Benchmark, Backup / Restore, USB Defragmenter, the file tools and the game tools use no tokens.</p>
-<p data-i18n="fq.ultimate-usb.9">To earn a token, tap the token counter on the main screen to open <strong>Get Tokens</strong>, then tap <strong>Watch</strong> under <strong>Get 1 free token</strong>. One short rewarded video (60 seconds at most) gives 1 token. Free tokens stop at a balance of 5, and at 4 videos each time you open the app. You can also buy a pack. With Pro, no action uses tokens. More: <a href="/apps/ultimate-usb/tokens.html">Ultimate USB tokens</a>.</p>
+<p data-i18n="fq.ultimate-usb.9">To earn a token, tap the token counter on the main screen to open <strong>Get Tokens</strong>, then tap <strong>Watch</strong> under <strong>Get 1 free token</strong>. One short rewarded video (60 seconds at most) gives 1 token. You can earn free tokens up to a balance of 5, and watch up to 4 videos each time you open the app. You can also buy a pack. With Pro, no action uses tokens. More: <a href="/apps/ultimate-usb/tokens.html">Ultimate USB tokens</a>.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.10">What happens to my tokens when a write does not complete?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.11">They come back automatically. Tokens are taken when you tap <strong>OK</strong>, before the job starts. If the job fails or is cancelled, or you answer <strong>No</strong> to the question about overwriting the whole drive, the app gives them back.</p>
@@ -50,7 +50,7 @@
   <li data-i18n="fq.ultimate-usb.36">Plug in a FAT32 or exFAT drive and check that the phone notices it. If even that drive is not noticed, the cause is the cable, the port or the drive.</li>
   <li data-i18n="fq.ultimate-usb.37">Test the drive on a PC, and check the phone's port for dust.</li>
 </ol>
-<p data-i18n="fq.ultimate-usb.38">Flash drives, portable SSDs, card readers and OTG hubs work. Hard disk drives (HDDs) are not officially supported because of power limits. If you try one, charge the phone and use a powered USB hub.</p>
+<p data-i18n="fq.ultimate-usb.38">Flash drives, portable SSDs, card readers and OTG hubs work. Hard disk drives (HDDs) work too, but many need more power than a phone's USB port gives: charge the phone and use a powered USB hub.</p>
 <p data-i18n="fq.ultimate-usb.146">If a card reader has no card in it, the app says that there is no card or disk in the drive.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.39">Do I need root?</summary><div class="a">
@@ -58,7 +58,7 @@
 <p data-i18n="fq.ultimate-usb.41">Root is needed only for the phone's internal SD card slot. Without root, put the card in a USB card reader and connect it over OTG.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.42">Can I use an NTFS drive on Android?</summary><div class="a">
-<p data-i18n="fq.ultimate-usb.43">Yes. Ultimate USB opens NTFS drives in its own <a href="/tools/file-manager.html">USB File Manager</a>, also when the phone itself cannot read them.</p>
+<p data-i18n="fq.ultimate-usb.43">Yes. Ultimate USB opens NTFS drives in its built-in <a href="/tools/file-manager.html">USB File Manager</a> tool, also when the phone itself cannot read them. USB File Manager is also available as a separate app.</p>
 <p data-i18n="fq.ultimate-usb.44">After you format or write a drive as NTFS, Android may say the drive is damaged or unsupported. That is expected: many phones cannot read NTFS on their own. Dismiss the notice and do not tap Android's offer to format: it would erase the drive.</p>
 <p data-i18n="fq.ultimate-usb.45">For a drive that the phone's own apps can read, use exFAT. <a href="/tools/partition-mounter.html">Partition Mounter</a> can also make a partition available to other apps through the Android Files app.</p>
 </div></details>
@@ -150,10 +150,11 @@
 <p data-i18n="fq.ultimate-usb.104">Drive makers count in decimal gigabytes and phones in binary ones, so a "64 GB" drive holds about 59 GiB. A large shortfall can mean a counterfeit drive.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.105">Can the app damage my USB drive?</summary><div class="a">
-<p data-i18n="fq.ultimate-usb.106">No. Nothing the app does is unrecoverable at the hardware level; the worst case is a drive that needs formatting again. If a drive stopped working after an operation, it was already failing.</p>
+<p data-i18n="fq.ultimate-usb.106">No. The app only reads and writes data; it does not change the drive's hardware. The worst case is a drive that needs formatting again. A drive that stops working after a job usually had a hardware fault already.</p>
 <p data-i18n="fq.ultimate-usb.107">The app tests each drive when it is connected and asks for confirmation before it erases one. Every job that formats the drive (Format USB, ISO Burner, Ventoy Install, Partition Wizard Create and Format, and the PS2 drive format) checks and tests the file system before the app reports success.</p>
 <p data-i18n="fq.ultimate-usb.155">Every format is tested before success is shown, image writes wait until the drive confirms the data is written, and a job only ever writes to the drive it started on. When you burn an image, the app first shows <strong>Checking image…</strong>: an incomplete or unreadable image is refused, and nothing is written to the drive.</p>
 <p data-i18n="fq.ultimate-usb.149">A drive that is write-protected, or one that does not take writes, is refused at the start with one message, before any question and before any token is used.</p>
+<p data-i18n="gd.fix-usb.more">For the full steps, see <a href="/guides/fix-usb-drive.html">how to fix a USB drive that stopped working or shows as damaged</a>.</p>
 </div></details>
 <details class="q"><summary data-i18n="fq.ultimate-usb.108">Is the app safe, and is my data uploaded anywhere?</summary><div class="a">
 <p data-i18n="fq.ultimate-usb.109">Your files are processed on your phone, and their contents are never uploaded. There is no account and no sign-up. What the app does send, such as ad requests, crash reports and purchase checks, is listed in its privacy policy.</p>

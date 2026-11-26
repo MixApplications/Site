@@ -1,0 +1,65 @@
+<!--meta {"key":"gd.fix-usb","kind":"guide","apps":["ultimate-usb","usb-tools"],"related":["drofus","ventoy","usb-file-manager"],"title":"How to fix a USB drive that shows as damaged on Android","h1":"How do I fix a USB drive that stopped working or shows as damaged?","description":"Most drives that Android calls damaged work again after a fresh format. Save your files first, then format and test the drive with Ultimate USB or USB Tools."} -->
+<section class="checklist">
+  <h2 data-i18n="gd.choose-usb-app.100">The short answer</h2>
+  <ol>
+    <li data-i18n="gd.fix-usb.1"><strong>Check that the drive is really damaged.</strong> Android calls a drive damaged when it cannot read it, for example after a bootable drive was written or the drive was formatted as NTFS or ext4. Often the drive is fine.</li>
+    <li data-i18n="gd.fix-usb.2"><strong>Make sure the phone sees the drive.</strong> Use a data OTG adapter, try another cable or port, and connect hard disks through a powered USB hub.</li>
+    <li data-i18n="gd.fix-usb.3"><strong>Save your files first.</strong> If the drive holds files you need, copy or recover them before you change anything.</li>
+    <li data-i18n="gd.fix-usb.4"><strong>Format the drive.</strong> A fresh format fixes a broken partition table or file system.</li>
+    <li data-i18n="gd.fix-usb.5"><strong>Test the drive.</strong> If Bad Blocks Check finds errors, replace the drive.</li>
+  </ol>
+</section>
+
+<h2 id="damaged" data-i18n="gd.fix-usb.6">1. Is the drive really damaged?</h2>
+<p data-i18n="gd.fix-usb.7">Android can read only some file systems. After a drive is formatted as NTFS or ext2/3/4, or after a bootable drive is written, Android often shows a notice that the drive is damaged or unsupported. This does not mean the drive is broken: Android simply cannot read it.</p>
+<p data-i18n="gd.fix-usb.8">To use the drive for normal files again, format it as FAT32 or exFAT (step 4). To keep the files on it, first copy them to your phone with <a href="/apps/usb-file-manager.html">USB File Manager</a>, which reads NTFS and ext drives.</p>
+
+<h2 id="detect" data-i18n="gd.fix-usb.9">2. The phone does not see the drive</h2>
+<ul>
+  <li data-i18n="fq.usb-tools.31">Open the phone's Settings, search for OTG and switch it on if the option exists.</li>
+  <li data-i18n="fq.usb-tools.32">Use a data OTG adapter. Charge-only cables cannot carry data.</li>
+  <li data-i18n="fq.usb-tools.34">Plug in a FAT32 or exFAT drive and check that the phone notices it. If even that drive is not noticed, the cause is the cable, the port or the drive.</li>
+  <li data-i18n="fq.usb-tools.35">Test the drive on a PC, and check the phone's port for dust.</li>
+  <li data-i18n="sup.fm.4">For hard disks, use a <strong>powered USB hub</strong>: a phone often can't supply enough power on its own.</li>
+</ul>
+
+<h2 id="save" data-i18n="gd.fix-usb.10">3. Save your files before you fix the drive</h2>
+<p data-i18n="gd.fix-usb.11">Formatting erases the drive. If you need files from it, save them first. These tools only read the drive:</p>
+<ul>
+  <li data-i18n="gd.fix-usb.12"><strong>Files you can still see:</strong> copy them to your phone with <a href="/apps/usb-file-manager.html">USB File Manager</a>.</li>
+  <li data-i18n="gd.fix-usb.13"><strong>Deleted or lost files:</strong> <a href="/tools/recover-files.html">Recover deleted files</a> in Ultimate USB or USB Tools scans the drive and saves the files you choose on your phone.</li>
+  <li data-i18n="gd.fix-usb.14"><strong>A lost partition:</strong> <a href="/tools/recover-partitions.html">Recover lost partitions</a> in Ultimate USB or USB Tools finds it and copies its files to your phone.</li>
+</ul>
+
+<h2 id="format" data-i18n="gd.fix-usb.15">4. Format the drive</h2>
+<p data-i18n="gd.fix-usb.16">A broken partition table or file system is usually fixed by formatting the drive fresh. The apps do not repair a drive in place.</p>
+<ol>
+  <li data-i18n="gd.fix-usb.17">Open <a href="/tools/format-usb.html">Format USB</a> in Ultimate USB or USB Tools.</li>
+  <li data-i18n="gd.fix-usb.18">Choose <strong>FAT32</strong> or <strong>exFAT</strong>. Phones, PCs and TVs can read both.</li>
+  <li data-i18n="gd.fix-usb.19">Tap <strong>Format</strong> and confirm. The app tests the drive after formatting and reports success only when the test passes.</li>
+</ol>
+<p data-i18n="gd.fix-usb.20">If the format does not succeed, run <a href="/tools/wipe-usb.html">Wipe USB</a> and then format the drive again.</p>
+
+<h2 id="test" data-i18n="gd.fix-usb.21">5. Test the drive's hardware</h2>
+<p data-i18n="gd.fix-usb.22"><a href="/tools/bad-blocks-check.html">Bad Blocks Check</a> in Ultimate USB or USB Tools finds failing sectors and fake-capacity drives that report more space than they have. It erases the drive, so save your files first.</p>
+<p data-i18n="gd.fix-usb.23">If it finds errors, replace the drive. Software cannot repair failed flash memory.</p>
+
+<h2 id="other-app" data-i18n="gd.fix-usb.24">The drive stopped working after I used another app</h2>
+<p data-i18n="gd.fix-usb.25">We can answer only for our own apps, listed under <a href="/about.html#official">Our official apps</a>. To check which app you used, open it on Google Play: our apps show the developer name MixApplications, and their package names start with <code>com.mixapplications</code>. If another app wrote to the drive, contact its developer. The steps on this page still help with the drive itself.</p>
+
+<h2 id="safe-app" data-i18n="gd.fix-usb.26">How to avoid this next time: what a safe USB app does</h2>
+<p data-i18n="gd.fix-usb.36">Not every USB app checks a drive before and after it writes. An app that skips these checks can leave a drive unreadable, corrupt its files, or report success when the data was never written. We often hear from people whose drive stopped working after they used such an app.</p>
+<p data-i18n="gd.fix-usb.37">A safe USB app:</p>
+<ul>
+  <li data-i18n="gd.fix-usb.38"><strong>Has a long record.</strong> It has been on Google Play for years, with many downloads and reviews. A brand-new app has no record yet, so you cannot know how it treats your drive.</li>
+  <li data-i18n="gd.fix-usb.27">Checks the drive when you connect it and refuses a drive that is write-protected or does not keep data.</li>
+  <li data-i18n="gd.fix-usb.28">Asks before it erases anything.</li>
+  <li data-i18n="gd.fix-usb.29">Checks an image before it writes it to the drive.</li>
+  <li data-i18n="gd.fix-usb.30">Tests every format before it reports success.</li>
+  <li data-i18n="gd.fix-usb.31">Recovers a lost USB connection and never writes to a different drive.</li>
+</ul>
+<p data-i18n="gd.fix-usb.32">Our USB apps do all of this. The <a href="/guides/usb-safety.html">USB safety guide</a> explains each check.</p>
+
+<h2 id="limits" data-i18n="gd.fix-usb.33">What these steps cannot do</h2>
+<p data-i18n="gd.fix-usb.34">Results depend on the drive's condition. Software cannot fix a drive whose hardware has failed, and not every file can be recovered.</p>
+<p data-i18n="gd.fix-usb.35">Still stuck? <a href="/contact.html">Contact us</a> with your phone model, the app name and version, and what the drive shows.</p>

@@ -78,7 +78,7 @@
       "faq": "usb",
       "policy": "ultimate_usb_privacy.html",
       "descKey": "home.5",
-      "desc": "The all-in-one USB toolbox. Partition drives with GPT or MBR, format across six file systems, write bootable ISOs, install Ventoy on a drive, image drives byte-by-byte, encrypt drives with a password, and prepare drives for retro gaming consoles — <strong>from one app</strong>.",
+      "desc": "The all-in-one USB toolbox. Partition drives with GPT or MBR, format across seven file systems, write bootable ISOs, install Ventoy on a drive, image drives byte-by-byte, encrypt drives with a password, and prepare drives for retro gaming consoles — <strong>from one app</strong>.",
       "chips": [
         "Ventoy",
         "ISO burner",
@@ -244,7 +244,7 @@
       "faq": "usb",
       "policy": "usb_tools_privacy.html",
       "descKey": "home.17",
-      "desc": "Maintenance and rescue for flash drives: format, securely wipe with a signed PDF erasure certificate, detect fake-capacity drives, benchmark, defragment, and <strong>try to repair corrupted and unreadable drives</strong> — without root.",
+      "desc": "Maintenance and rescue for flash drives: format, securely wipe with a PDF erasure certificate, detect fake-capacity drives, benchmark, defragment, and <strong>try to repair corrupted and unreadable drives</strong> — without root.",
       "chips": [
         "FAT16→ext4",
         "partition wizard",
@@ -278,7 +278,7 @@
         },
         {
           "title": "Secure wipe with certificate",
-          "text": "Erase all data and partitions, and get a signed PDF erasure certificate."
+          "text": "Erase all data and partitions, and get a PDF erasure certificate and report."
         },
         {
           "title": "Backup, defragment, games",
@@ -454,7 +454,7 @@
       "faq": "tumtum",
       "policy": "tumtum_privacy.html",
       "descKey": "home.tumtum",
-      "desc": "A calm sliding puzzle with one rule: when you swipe, every character on the board moves at once. 1,100 handmade levels across 110 chapters, undo and hints whenever you need them, and it plays fully offline. <strong>Free with ads, and no in-app purchases.</strong>",
+      "desc": "A calm sliding puzzle with one rule: when you swipe, every character on the board moves at once. 1,100 levels across 110 chapters, undo and hints whenever you need them, and it plays fully offline. <strong>Free with ads, and no in-app purchases.</strong>",
       "chips": [
         "1,100 levels",
         "one-swipe puzzles",
@@ -465,15 +465,15 @@
         "no account",
         "no purchases"
       ],
-      "headline": "A cozy puzzle built on one brilliant rule — one swipe moves everyone — with 1,100 handmade levels to master.",
+      "headline": "A cozy puzzle built on one simple rule — one swipe moves everyone — with 1,100 levels to master.",
       "features": [
         {
           "title": "One rule, endless depth",
           "text": "Every character slides until it hits something. Pits, spikes, crates, breakable blocks, one-way tiles, springs and belts keep it fresh."
         },
         {
-          "title": "1,100 handcrafted levels",
-          "text": "110 chapters, and every level checked by hand for a clean, fair solution."
+          "title": "1,100 levels",
+          "text": "110 chapters, and every level is checked to make sure it has a fair solution."
         },
         {
           "title": "Zero pressure",
