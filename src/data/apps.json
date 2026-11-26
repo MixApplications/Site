@@ -78,7 +78,7 @@
       "faq": "usb",
       "policy": "ultimate_usb_privacy.html",
       "descKey": "home.5",
-      "desc": "The all-in-one USB toolbox. Partition drives with GPT or MBR, format across seven file systems, write bootable ISOs, install Ventoy on a drive, image drives byte-by-byte, encrypt drives with a password, and prepare drives for retro gaming consoles — <strong>from one app</strong>.",
+      "desc": "Many USB tools in one app. Partition drives with GPT or MBR, format them with seven file systems, write bootable ISOs, install Ventoy, copy whole drives byte by byte, encrypt drives with a password and prepare drives for retro game consoles — <strong>from one app</strong>.",
       "chips": [
         "Ventoy",
         "ISO burner",
@@ -102,7 +102,7 @@
         "PS2/PS3 tools",
         "game converter"
       ],
-      "headline": "Everything a PC does with a USB drive, done from your phone — the all-in-one USB workshop for Android.",
+      "headline": "Make bootable drives and format, partition, test, wipe and encrypt USB drives from your Android phone, with no PC.",
       "features": [
         {
           "title": "Bootable USB without a PC",
@@ -113,7 +113,7 @@
           "text": "Install Ventoy, then keep many ISOs on one drive and choose at boot — with Secure Boot, MBR or GPT."
         },
         {
-          "title": "Real disk management",
+          "title": "Disk management",
           "text": "Format FAT16, FAT32, exFAT, NTFS and ext2/3/4, partition, convert MBR ↔ GPT, and back up or restore whole drives byte by byte."
         },
         {
@@ -125,7 +125,7 @@
           "text": "PS2 OPL utilities, PS3 ISO tools and a game converter for ISO, CSO, ZSO and CHD."
         },
         {
-          "title": "Native engine, no root",
+          "title": "Own drivers, no root",
           "text": "Its own C/C++ file-system drivers work over a plain OTG cable. Root is only needed for the internal SD slot."
         }
       ],
@@ -144,7 +144,7 @@
       "faq": "usb",
       "policy": "drofus_privacy.html",
       "descKey": "home.9",
-      "desc": "A dedicated bootable-USB creator. Pick an ISO, plug in a drive, and get a bootable installer — <strong>no PC and no root required</strong>. Full manual control over partition scheme and file system, with Windows 11 requirement bypass and automated setup customization. <strong>DROFUS now carries every feature from ISO 2 USB</strong>, so it is the one app to install for burning images.",
+      "desc": "An app that makes bootable USB drives. Pick an ISO, plug in a drive, and get a bootable installer — <strong>no PC and no root required</strong>. You choose the partition scheme and file system, can bypass the Windows 11 requirements and can set Windows setup options. <strong>DROFUS now has every feature of ISO 2 USB</strong>, so it is the app to install for burning images.",
       "chips": [
         "Windows 7–11",
         "Windows To Go",
@@ -161,14 +161,14 @@
         "GPT / MBR",
         "high-speed mode"
       ],
-      "headline": "The full-power ISO burner for Android: PC-grade control over every bootable USB, with no PC at all.",
+      "headline": "Write bootable USB drives from your Android phone, and choose the partition scheme and file system yourself. No PC needed.",
       "features": [
         {
-          "title": "Every major operating system",
+          "title": "Windows, Linux, macOS and more",
           "text": "Windows 7, 8, 8.1, 10 and 11, modern Linux distributions, macOS DMG (Intel), Raspberry Pi OS and ARM images, FreeDOS and MS-DOS."
         },
         {
-          "title": "Windows done right",
+          "title": "Windows options",
           "text": "GPT (UEFI) or MBR (BIOS), NTFS or FAT32, and automatic install.wim splitting for FAT32 — with official Microsoft ISOs, unmodified."
         },
         {
@@ -180,7 +180,7 @@
           "text": "Keep your files and changes between boots on distributions that support it."
         },
         {
-          "title": "Any USB target, no root",
+          "title": "Flash drives, SD cards, SSDs",
           "text": "Flash drives, SD card adapters and external SSDs over OTG. Root only for the internal SD slot."
         }
       ],
@@ -198,7 +198,7 @@
       "faq": "usb",
       "policy": "ventoy_privacy.html",
       "descKey": "home.13",
-      "desc": "Install Ventoy on a USB drive straight from Android. Then just copy as many ISO files as the drive holds — or download them directly to the drive — and pick the one to boot at startup. <strong>One drive, every OS installer you need.</strong>",
+      "desc": "Install Ventoy on a USB drive straight from Android. Then copy as many ISO files as the drive holds — or download them directly to the drive — and pick the one to boot at startup. <strong>One drive for many system installers.</strong>",
       "chips": [
         "multi-boot",
         "MBR / GPT",
@@ -212,22 +212,22 @@
         "boot passwords",
         "file manager"
       ],
-      "headline": "Carry every operating system on one USB drive: install Ventoy from your phone, copy ISOs, and choose at boot.",
+      "headline": "Keep many operating systems on one USB drive: install Ventoy from your phone, copy ISO files, and choose one at boot.",
       "features": [
         {
           "title": "One drive, many ISOs",
-          "text": "Copy as many ISO files as the drive holds. No reformatting and no reburning, ever."
+          "text": "Copy as many ISO files as the drive holds. You do not need to format or burn the drive again."
         },
         {
           "title": "Download straight to USB",
           "text": "Fetch ISO files directly onto the drive from inside the app."
         },
         {
-          "title": "Boots what you need",
-          "text": "Windows 7–11 and all major Linux distributions, in UEFI or legacy BIOS, with Secure Boot support."
+          "title": "Windows and Linux",
+          "text": "Windows 7–11 and many Linux distributions, in UEFI or legacy BIOS, with Secure Boot support."
         },
         {
-          "title": "Full control",
+          "title": "Your settings",
           "text": "GPT or MBR, exFAT, NTFS or FAT32, Windows 11 requirements bypass, and Ventoy themes and settings without editing files."
         }
       ],
@@ -262,7 +262,7 @@
         "PS2/PS3 tools",
         "game converter"
       ],
-      "headline": "A complete maintenance and rescue kit for USB drives: diagnose, repair, test and securely wipe — from your phone.",
+      "headline": "Format, repair, test, back up and securely wipe USB drives from your Android phone.",
       "features": [
         {
           "title": "Repair and format",
@@ -311,18 +311,18 @@
         "safe eject",
         "no root"
       ],
-      "headline": "Open any USB drive on Android — NTFS, exFAT, FAT and ext4 — and read and write it without root.",
+      "headline": "Open NTFS, exFAT, FAT and ext4 USB drives on Android, and read and write them without root.",
       "features": [
         {
-          "title": "Every file system",
+          "title": "NTFS, exFAT, FAT and ext4",
           "text": "FAT, exFAT, NTFS and ext2/3/4, read and write, through the app's own native drivers."
         },
         {
-          "title": "A real file manager",
+          "title": "Copy, move and share files",
           "text": "Copy, move, rename and delete between the phone and the drive, and open or share files with any app."
         },
         {
-          "title": "Drives of every kind",
+          "title": "Many kinds of drives",
           "text": "Flash drives, card readers, hard disks and SSDs, hubs and drives with several partitions."
         },
         {
@@ -330,7 +330,7 @@
           "text": "Open several drives and partitions at once in up to 12 tabs, side by side in two panes, with a queue you can pause, resume or stop."
         },
         {
-          "title": "Safe by design",
+          "title": "Safe eject and size warning",
           "text": "Eject writes out every change before you unplug, and a warning flags drives that may store less than their size says. Root is only needed for the internal SD card slot."
         }
       ],
@@ -401,7 +401,7 @@
       "faq": "chaome",
       "policy": "chaome_privacy.html",
       "descKey": "home.21",
-      "desc": "A complete theme studio for Xiaomi devices. Create, customize and install themes on <strong>MIUI and HyperOS</strong> — icons, wallpapers, fonts, status bar, Control Center — check them against the official theme rules, and export a standard .mtz file. No PC, no root.",
+      "desc": "A theme editor for Xiaomi devices. Create, customize and install themes on <strong>MIUI and HyperOS</strong> — icons, wallpapers, fonts, status bar, Control Center — check them against the official theme rules, and export a standard .mtz file. No PC, no root.",
       "chips": [
         "MIUI · HyperOS",
         ".mtz export",
@@ -414,10 +414,10 @@
         "MAML editor",
         "Shizuku install"
       ],
-      "headline": "A complete theme studio for Xiaomi phones: design, build and install MIUI and HyperOS themes on the phone itself.",
+      "headline": "Design, build and install MIUI and HyperOS themes on your Xiaomi phone itself.",
       "features": [
         {
-          "title": "Customize everything",
+          "title": "What you can change",
           "text": "Icons, icon packs and masks, dynamic calendar and clock icons, wallpapers and lock screen, status bar, notifications, Control Center and volume panel, fonts, contacts, dialer and call screen."
         },
         {
@@ -465,18 +465,18 @@
         "no account",
         "no purchases"
       ],
-      "headline": "A cozy puzzle built on one simple rule — one swipe moves everyone — with 1,100 levels to master.",
+      "headline": "A calm puzzle game with one simple rule: one swipe moves every character. It has 1,100 levels.",
       "features": [
         {
-          "title": "One rule, endless depth",
-          "text": "Every character slides until it hits something. Pits, spikes, crates, breakable blocks, one-way tiles, springs and belts keep it fresh."
+          "title": "One simple rule",
+          "text": "Every character slides until it hits something. Pits, spikes, crates, breakable blocks, one-way tiles, springs and belts add new challenges."
         },
         {
           "title": "1,100 levels",
           "text": "110 chapters, and every level is checked to make sure it has a fair solution."
         },
         {
-          "title": "Zero pressure",
+          "title": "No timers or lives",
           "text": "No timers and no lives. Undo, restart or take a hint whenever you like."
         },
         {
@@ -484,7 +484,7 @@
           "text": "Hand-drawn characters that each move their own way, and soft music made for the game."
         },
         {
-          "title": "Fair by design",
+          "title": "Free and offline",
           "text": "Free, with no in-app purchases. Plays fully offline, in 11 languages."
         }
       ],
@@ -522,7 +522,7 @@
       "headline": "Open, edit, convert, scan and sign your documents in one app: PDF, Word, Excel, PowerPoint and more than 50 file types. Everything is processed on your phone, and every tool is free, with no page limits, no watermarks and no account.",
       "features": [
         {
-          "title": "Every document opens",
+          "title": "Opens many file types",
           "text": "PDF, Office and OpenDocument files in their original layout, plus Pages, Numbers, Keynote, e-books, comics, e-mail and images. Search, bookmarks, night mode and reflowed text make reading easy."
         },
         {
@@ -602,7 +602,7 @@
           "text": "Your password or your fingerprint. Forgot your password? 12 recovery words open your vault."
         },
         {
-          "title": "A real file manager",
+          "title": "Works like a file manager",
           "text": "Folders, previews, search, filters and selecting many files at once. Open files in your usual apps, and no unlocked copy is left behind."
         },
         {

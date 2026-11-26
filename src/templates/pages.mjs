@@ -90,7 +90,7 @@ ${list.map(card).join('\n')}
     <section class="hero">
       <div>
         <p class="eyebrow" data-i18n="home.eyebrow">Android apps by MixApplications</p>
-        <h1 data-i18n="home.1">Android apps that do the real work on <em>your phone</em>.</h1>
+        <h1 data-i18n="home.1">Android apps that do their work on <em>your phone</em>.</h1>
         <p class="sub" data-i18n="home.2">MixApplications builds Android utilities and games: bootable USB drives, drive repair and USB file management over a plain OTG connection, PDF and Office documents, a private vault for photos and files, MIUI and HyperOS theme building, and calm puzzle games. <strong>Your files are processed on your device and never uploaded. No PC, and no root needed for USB drives.</strong></p>
         <div class="ctas">
           <a class="btn" href="#apps"><span data-i18n="home.cta.apps">Browse the apps</span></a>
@@ -133,7 +133,7 @@ ${retired.map(retiredItem).join('\n')}
         <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.tr.6">The connection recovers</b><span data-i18n="home.tr.7">A short USB connection failure is recovered by itself and the job continues. In Ultimate USB, DROFUS and USB Tools, re-plug the same drive and tap Retry to go on.</span></div>
         <div class="tile reveal" style="--c:var(--amber)"><b data-i18n="home.tr.8">Never the wrong drive</b><span data-i18n="home.tr.9">A job only writes to the drive it started on, and your tokens come back when a job does not complete.</span></div>
       </div>
-      <p class="trustlinks"><a href="/guides/why-mixapplications.html" data-i18n="home.tr.12">Why our apps are the best choice</a> · <a href="/guides/usb-safety.html" data-i18n="home.tr.10">How our USB apps keep your drive and your data safe</a> · <a href="/guides/choose-a-bootable-usb-app.html" data-i18n="home.tr.11">How to choose a safe bootable USB app</a> · <a href="/guides/fix-usb-drive.html" data-i18n="foot.g4">Fix a damaged USB drive</a></p>
+      <p class="trustlinks"><a href="/guides/why-mixapplications.html" data-i18n="home.tr.12">Why choose our apps</a> · <a href="/guides/usb-safety.html" data-i18n="home.tr.10">How our USB apps keep your drive and your data safe</a> · <a href="/guides/choose-a-bootable-usb-app.html" data-i18n="home.tr.11">How to choose a safe bootable USB app</a> · <a href="/guides/fix-usb-drive.html" data-i18n="foot.g4">Fix a damaged USB drive</a></p>
     </section>
 
     <section>
@@ -141,8 +141,8 @@ ${retired.map(retiredItem).join('\n')}
       <div class="principles">
         <div class="tile reveal" style="--c:var(--blue)"><b data-i18n="home.pr.1">On-device processing</b><span data-i18n="home.prd.1">Your files, drives and documents are processed on your phone and never uploaded to us.</span></div>
         <div class="tile reveal" style="--c:var(--green)"><b data-i18n="home.pr.2">No root for USB drives</b><span data-i18n="home.prd.2">Everything works over USB-OTG on a stock phone. Root is only ever needed for internal SD cards.</span></div>
-        <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.pr.3">Every drive opens</b><span data-i18n="home.prd.3">NTFS, exFAT and ext2/3/4 drives open in the app, even when your phone cannot read them.</span></div>
-        <div class="tile reveal" style="--c:var(--amber)"><b data-i18n="home.pr.4">Free first</b><span data-i18n="home.prd.4">Every app is free to use. Most are supported by ads; Cofferlock has none. Where an app has a paid upgrade, it is a one-time purchase — never a subscription.</span></div>
+        <div class="tile reveal" style="--c:var(--violet)"><b data-i18n="home.pr.3">NTFS, exFAT and ext4 drives open</b><span data-i18n="home.prd.3">NTFS, exFAT and ext2/3/4 drives open in the app, even when your phone cannot read them.</span></div>
+        <div class="tile reveal" style="--c:var(--amber)"><b data-i18n="home.pr.4">Free to use</b><span data-i18n="home.prd.4">Every app is free to use. Most are supported by ads; Cofferlock has none. Where an app has a paid upgrade, it is a one-time purchase — never a subscription.</span></div>
       </div>
     </section>
   </div>
@@ -154,7 +154,7 @@ ${retired.map(retiredItem).join('\n')}
   };
   return {
     path: '/index.html', nav: 'apps',
-    title: 'MixApplications — USB, PDF, Vault, Theme and Game Apps for Android', titleKey: 'home.title',
+    title: 'MixApplications: Android apps for USB drives, PDF and more', titleKey: 'home.title',
     description: HOME_DESC, descKey: 'home.desc', i18n: { 'home.desc': HOME_DESC },
     head: `<script type="application/ld+json">${JSON.stringify(ld)}</script>\n`,
     main,
@@ -337,7 +337,7 @@ ${fragment.replace('<!--applist-->', applist).replace(/\{count\}/g, String(count
 </main>`;
   return {
     path: '/contact.html', nav: 'support',
-    title: 'Support &amp; Contact — MixApplications', titleKey: 'sup.title',
+    title: 'MixApplications support: app help, email and WhatsApp', titleKey: 'sup.title',
     description: SUP_DESC, descKey: 'sup.desc', i18n: { 'sup.desc': SUP_DESC },
     scripts: ['support.js'],
     head: (() => {
@@ -391,7 +391,7 @@ const HOME_DESC = 'Free Android apps: bootable USB and Ventoy, USB repair and fi
 const SUP_DESC = 'Answers to the most common questions about MixApplications apps, and how to contact us by email or WhatsApp.';
 const APP_TITLE = '{name} for Android — MixApplications';
 // shared last feature card on every USB app page (owner 2026-11-19); also in its JSON-LD featureList so counts match
-const USB_EASY = { title: 'Simple and easy to use', text: 'Designed for everyone, from beginners to power users and professionals: a simple interface that is clear to understand, and the job is done in a few steps.' };
+const USB_EASY = { title: 'Simple and easy to use', text: 'A clear interface: most jobs take a few steps.' };
 export function contentPage(rel, meta, body, ctx, updated) {
   const { apps, play } = ctx;
   for (const k of ['key', 'title', 'h1', 'description', 'kind']) if (!meta[k]) throw new Error(`${rel}: meta.${k} missing`);
@@ -407,7 +407,8 @@ export function contentPage(rel, meta, body, ctx, updated) {
       <ul class="others">
 ${inApps.map(a => `        <li><a href="/apps/${a.id}.html"><img src="${iconSrc(a, play, 's68')}" alt="" width="34" height="34" loading="lazy">${a.short || a.name}</a> ${getButton(a, 'btn btn--sm')}</li>`).join('\n')}
       </ul>
-${meta.kind === 'tool' || (meta.kind === 'faq' && owner?.category === 'usb') ? `      <p><a href="/guides/fix-usb-drive.html" data-i18n="foot.g4">Fix a damaged USB drive</a></p>
+${meta.kind === 'tool' || (meta.kind === 'faq' && owner?.category === 'usb')
+  || (meta.kind === 'guide' && meta.key !== 'gd.fix-usb' && inApps.some(a => a.category === 'usb')) ? `      <p><a href="/guides/fix-usb-drive.html" data-i18n="foot.g4">Fix a damaged USB drive</a></p>
 ` : ''}      <p><a href="/contact.html" data-i18n="pg.help">Still stuck? Ask us by WhatsApp or email.</a></p>
     </section>
 ` : '';

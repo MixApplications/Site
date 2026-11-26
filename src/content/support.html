@@ -1,6 +1,6 @@
 <section class="pagehead">
     <h1 data-i18n="sup.1">Support</h1>
-    <p data-i18n="sup.2">The support button in the app brings you here. Most problems are answered below — these are the questions we actually get asked, in the order we get asked them. If yours isn't here, message us and we'll take it from there.</p>
+    <p data-i18n="sup.2">The support button in the app brings you here. Answers to the questions people often ask are below. If yours is not here, message us and we will help.</p>
   </section>
 
   <div class="support-hero" id="channels">
@@ -13,7 +13,7 @@
     <div class="tile ccard" style="--c:var(--blue);--csoft:var(--blue-soft)">
       <div class="ic">{mail}</div>
       <h2 data-i18n="sup.9">Email</h2>
-      <p data-i18n="sup.10">For purchases, refunds, business enquiries and press — anything that needs a written record.</p>
+      <p data-i18n="sup.10">For purchases, refunds, business inquiries and press — anything that needs a written record.</p>
       <a class="btn" href="mailto:islam.saad2005@gmail.com">islam.saad2005@gmail.com</a>
     </div>
   </div>
@@ -148,7 +148,7 @@
       <details class="q" data-app="usb" data-cat="tokens">
         <summary data-i18n="sup.41">The ad won't load, or says &ldquo;try again&rdquo;</summary>
         <div class="a">
-          <p data-i18n="sup.42">This is the single most common report, and it's nearly always the network — not the app. In order of how often it's the fix:</p>
+          <p data-i18n="sup.42">We get this question more than any other. The cause is almost always the network, not the app. Try these fixes in order, the most common first:</p>
           <ol>
             <li data-i18n="sup.43"><strong>Private DNS.</strong> Open Settings, search for <code>Private DNS</code>, choose <em>Private DNS provider hostname</em> and enter <code>dns.google</code>. Save, toggle your connection off and on, then restart the app. Ad-blocking DNS providers block the ad servers, so no ad can load.</li>
             <li data-i18n="sup.44"><strong>Ad blockers and blocking VPNs.</strong> Disable them for the app. There is nothing to load through a blocker.</li>
@@ -328,7 +328,7 @@
         <div class="a">
           <ul>
             <li data-i18n="sup.92"><strong>FAT32</strong> — maximum compatibility (TVs, car stereos, consoles, BIOS boot). Single files are limited to 4&nbsp;GB.</li>
-            <li data-i18n="sup.93"><strong>exFAT</strong> — no practical file-size limit, still read by phones, Windows and macOS. The best default for general use.</li>
+            <li data-i18n="sup.93"><strong>exFAT</strong> — no practical file-size limit, still read by phones, Windows and macOS. A good default for everyday use.</li>
             <li data-i18n="sup.94"><strong>NTFS</strong> — for Windows. No practical file-size limit, but most Android phones can't read it.</li>
             <li data-i18n="sup.95"><strong>ext2/3/4</strong> — for Linux. Neither Android nor Windows reads it without extra software.</li>
           </ul>
@@ -339,7 +339,7 @@
       <details class="q" data-app="usb" data-cat="format">
         <summary data-i18n="sup.96">I formatted to NTFS (or ext4) and now my phone can't read the drive</summary>
         <div class="a">
-          <p data-i18n="sup.97">The format succeeded. The limitation is Android itself: <strong>most Android devices have no built-in NTFS or ext2/3/4 support</strong>, so the system can't mount the drive even though a PC will read it perfectly. A handful of manufacturers add NTFS support, but it is the exception rather than the rule.</p>
+          <p data-i18n="sup.97">The format succeeded. The limit is Android itself: <strong>most Android devices have no built-in NTFS or ext2/3/4 support</strong>, so the system cannot mount the drive, even though a PC can read it. A few manufacturers add NTFS support, but most do not.</p>
           <p data-i18n="sup.98">Ultimate USB and Ventoy still open the drive in <strong>USB File Manager</strong>.</p>
           <p data-i18n="sup.99">If you need the drive readable by the phone's own file manager and other apps, use <strong>exFAT</strong>. It has no practical file-size limit and is read by Android, Windows and macOS alike.</p>
         </div>
@@ -396,7 +396,7 @@
         <div class="a">
           <ul>
             <li data-i18n="sup.119"><strong>DROFUS</strong> — one ISO, maximum control over the result. The straightforward choice for a Windows or Linux installer.</li>
-            <li data-i18n="sup.120"><strong>Ventoy (Unofficial)</strong> — install once, then drag as many ISOs onto the drive as it holds and pick at boot. Best if you carry several installers.</li>
+            <li data-i18n="sup.120"><strong>Ventoy (Unofficial)</strong> — install once, then drag as many ISOs onto the drive as it holds and pick at boot. Choose it if you carry several installers.</li>
             <li data-i18n="sup.121"><strong>Ultimate USB</strong> — contains both, plus partitioning, diagnostics and the rest.</li>
           </ul>
           <p data-i18n="sup.207">To compare them side by side, read <a href="/guides/choose-a-bootable-usb-app.html">how to choose a bootable USB app</a>.</p>
@@ -406,7 +406,7 @@
       <details class="q" data-app="usb" data-cat="boot">
         <summary data-i18n="sup.122">The drive was created but the PC won't boot from it</summary>
         <div class="a">
-          <p data-i18n="sup.123">The write can be perfect and the PC still refuse it. Check, in this order:</p>
+          <p data-i18n="sup.123">The drive can be written correctly and the PC can still refuse to start from it. Check, in this order:</p>
           <ol>
             <li data-i18n="sup.124"><strong>Boot menu.</strong> Actually select the USB drive in the boot menu (usually F12, F11, F9 or Esc at power-on) rather than expecting it to boot on its own.</li>
             <li data-i18n="sup.125"><strong>Secure Boot.</strong> Disable it in the BIOS/UEFI, or use a build that supports it.</li>
@@ -441,7 +441,7 @@
       </details>
 
       <details class="q" data-app="usb" data-cat="boot">
-        <summary data-i18n="sup.137">What is Linux persistence, and why is the option greyed out?</summary>
+        <summary data-i18n="sup.137">What is Linux persistence, and why is the option grayed out?</summary>
         <div class="a">
           <p data-i18n="sup.138">Persistence keeps your files and changes on the USB drive across reboots of a live Linux system. In Ultimate USB and DROFUS, tick <strong>Advanced Options (Filesystem, Partition &amp; Persistence)</strong>, then set <strong>Persistent partition size</strong>. The app adds an ext3 or ext4 partition for it.</p>
           <p data-i18n="sup.139">It's offered only for images that support it. For the others the app says why: the image doesn't support it, the distribution sets it up itself, or the image is written sector by sector. It also needs enough free space on the drive. On a Ventoy drive, use <strong>Add persistence</strong> in <strong>Config Hub</strong> (Ultimate USB, Ventoy).</p>
@@ -458,7 +458,7 @@
       <details class="q" data-app="usb" data-cat="boot">
         <summary data-i18n="sup.142">Can I burn a macOS DMG or a Raspberry Pi image?</summary>
         <div class="a">
-          <p data-i18n="sup.143">Yes, in Ultimate USB and DROFUS (<strong>ISO Burner</strong>, <strong>Disk or ISO image</strong>), with no token cost. macOS DMG (Intel-based), Raspberry Pi OS and other ARM images are written as raw blocks, preserving the original layout and boot structure. There's no customisation applied to these, by design.</p>
+          <p data-i18n="sup.143">Yes, in Ultimate USB and DROFUS (<strong>ISO Burner</strong>, <strong>Disk or ISO image</strong>), with no token cost. macOS DMG (Intel-based), Raspberry Pi OS and other ARM images are written as raw blocks, preserving the original layout and boot structure. There's no customization applied to these, by design.</p>
         </div>
       </details>
 
@@ -486,7 +486,7 @@
         <div class="a">
           <p data-i18n="sup.146">Three causes cover almost every case:</p>
           <ol>
-            <li data-i18n="sup.147"><strong>The app was minimised.</strong> Operations pause when the app leaves the foreground — that's deliberate, to protect the drive from a half-finished write. Keep it on screen and keep the screen awake.</li>
+            <li data-i18n="sup.147"><strong>The app was minimized.</strong> Operations pause when the app leaves the foreground — that's deliberate, to protect the drive from a half-finished write. Keep it on screen and keep the screen awake.</li>
             <li data-i18n="sup.148"><strong>The adapter or drive.</strong> Reseat the adapter, don't move the phone while it runs, and try another adapter if it recurs. A loose or charge-only adapter is the usual culprit.</li>
             <li data-i18n="sup.148b"><strong>No internet or an ad blocker (free version).</strong> The app shows <strong>No Internet Connection</strong> or <strong>Adblocker or Private DNS detected.</strong>, and running operations wait until that's fixed. Pro doesn't pause for either.</li>
           </ol>
@@ -515,7 +515,7 @@
       <details class="q" data-app="usb usbfm" data-cat="fail">
         <summary data-i18n="sup.155">Can I use my phone while an operation runs?</summary>
         <div class="a">
-          <p data-i18n="sup.156">Not on other apps — operations pause when the app is minimised. Leave it in the foreground until it finishes. Long operations on large drives can take a while, so start them when you don't need the phone.</p>
+          <p data-i18n="sup.156">Not on other apps — operations pause when the app is minimized. Leave it in the foreground until it finishes. Long operations on large drives can take a while, so start them when you don't need the phone.</p>
         </div>
       </details>
 
@@ -595,7 +595,7 @@
       <details class="q" data-app="usb" data-cat="games">
         <summary data-i18n="sup.179">Do you supply the games, BIOS files, or console firmware?</summary>
         <div class="a">
-          <p data-i18n="sup.180">No. The apps are tools for organising files you already own. We don't bundle, host or distribute game images, BIOS files, console firmware or any proprietary console component. PlayStation 1 games on a PS2 drive need a system file in <code>/POPS/</code> that you must supply yourself.</p>
+          <p data-i18n="sup.180">No. The apps are tools for organizing files you already own. We don't bundle, host or distribute game images, BIOS files, console firmware or any proprietary console component. PlayStation 1 games on a PS2 drive need a system file in <code>/POPS/</code> that you must supply yourself.</p>
         </div>
       </details>
 
@@ -746,7 +746,7 @@
       <details class="q" data-app="chaome" data-cat="privacy">
         <summary data-i18n="sup.ch.13">ChaoMe: how do I change my ad choices?</summary>
         <div class="a">
-          <p data-i18n="sup.ch.14">Open <strong>Settings &rarr; Privacy</strong>. Where your region requires it, <strong>Ad and data choices</strong> reopens the consent form, and in US states with an opt-out right <strong>Do not sell or share my personal information</strong> stops personalised ads. With PRO, <strong>Settings &rarr; Privacy</strong> shows only the privacy policy. See the <a href="/chaome_privacy.html">ChaoMe privacy policy</a>.</p>
+          <p data-i18n="sup.ch.14">Open <strong>Settings &rarr; Privacy</strong>. Where your region requires it, <strong>Ad and data choices</strong> reopens the consent form, and in US states with an opt-out right <strong>Do not sell or share my personal information</strong> stops personalized ads. With PRO, <strong>Settings &rarr; Privacy</strong> shows only the privacy policy. See the <a href="/chaome_privacy.html">ChaoMe privacy policy</a>.</p>
         </div>
       </details>
 
@@ -935,7 +935,7 @@
       <details class="q" data-cat="privacy" data-app="tumtum">
         <summary data-i18n="sup.tt.11">How do I turn off personalized ads or crash reports?</summary>
         <div class="a">
-          <p data-i18n="sup.tt.12">Open <strong>Settings &rarr; Privacy</strong> in the game. Tap <strong>Personalised ads &bull; On</strong> to turn personalisation off (with US English it's shown as <strong>Do not sell or share my personal information</strong>). Where your region requires it, <strong>Ad and data choices</strong> reopens the consent form. Switch <strong>Crash reports</strong> off or on there too. See the <a href="/tumtum_privacy.html">TumTum privacy policy</a> for the details.</p>
+          <p data-i18n="sup.tt.12">Open <strong>Settings &rarr; Privacy</strong> in the game. Tap <strong>Personalised ads &bull; On</strong> to turn personalization off (with US English it's shown as <strong>Do not sell or share my personal information</strong>). Where your region requires it, <strong>Ad and data choices</strong> reopens the consent form. Switch <strong>Crash reports</strong> off or on there too. See the <a href="/tumtum_privacy.html">TumTum privacy policy</a> for the details.</p>
         </div>
       </details>
 
