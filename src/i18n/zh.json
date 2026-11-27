@@ -3154,5 +3154,7 @@
  "tl.usb-defragmenter.summary": "Ultimate USB 和 USB Tools 中的 USB 碎片整理程序可对 FAT32 和 exFAT 分区进行碎片整理。不消耗代币；即使拔出 U 盘，已移动的文件也是安全的。",
  "tl.usb-encryption.summary": "Ultimate USB 中的 USB 加密会清除 U 盘，并用您设置的 8 个或更多字符的密码加密。之后，它只能在 Ultimate USB 中打开。",
  "tl.ventoy.summary": "用 Ultimate USB 或 Ventoy (Unofficial) 把 Ventoy 安装到 U 盘，复制 ISO 文件，启动时选择一个。安装消耗 2 个代币；更新和清除消耗 1 个。",
- "tl.wipe-usb.summary": "Ultimate USB 和 USB Tools 中的擦除USB 会用五种方法之一覆盖整个驱动器，可以进行验证，并提供擦除报告。不消耗代币。"
+ "tl.wipe-usb.summary": "Ultimate USB 和 USB Tools 中的擦除USB 会用五种方法之一覆盖整个驱动器，可以进行验证，并提供擦除报告。不消耗代币。",
+ "sup.wa.off": "WhatsApp 暂时无法使用",
+ "sup.mail.slow": "目前邮件回复可能较慢。"
 }

@@ -3172,5 +3172,7 @@
  "tl.usb-defragmenter.summary": "Ultimate USB ve USB Tools'taki USB Disk Birleştirici, FAT32 ve exFAT bölümlerini birleştirir. Jeton kullanmaz ve sürücüyü çıkarırsanız taşınan dosyalar güvende kalır.",
  "tl.usb-encryption.summary": "Ultimate USB'deki USB Şifreleme, bir USB sürücüyü siler ve 8 veya daha fazla karakterli parolanızla şifreler. Bundan sonra sürücü yalnızca Ultimate USB'de açılır.",
  "tl.ventoy.summary": "Ultimate USB veya Ventoy (Unofficial) ile bir USB sürücüye Ventoy kurun, ISO dosyalarını kopyalayın ve açılışta birini seçin. Kur 2 jeton; Güncelle ve Temizle 1 jeton kullanır.",
- "tl.wipe-usb.summary": "Ultimate USB ve USB Tools'taki USB'yi Sil, tüm sürücünün üzerine beş yöntemden biriyle yazar, doğrulayabilir ve bir silme raporu verir. Jeton kullanmaz."
+ "tl.wipe-usb.summary": "Ultimate USB ve USB Tools'taki USB'yi Sil, tüm sürücünün üzerine beş yöntemden biriyle yazar, doğrulayabilir ve bir silme raporu verir. Jeton kullanmaz.",
+ "sup.wa.off": "WhatsApp şu anda kullanılamıyor",
+ "sup.mail.slow": "E-posta yanıtları şu anda gecikebilir."
 }

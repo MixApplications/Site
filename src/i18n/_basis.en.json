@@ -3166,5 +3166,7 @@
  "tl.usb-defragmenter.summary": "USB Defragmenter in Ultimate USB and USB Tools defragments FAT32 and exFAT partitions. It uses no tokens, and moved files stay safe if you unplug.",
  "tl.usb-encryption.summary": "USB Encryption in Ultimate USB erases a USB drive and encrypts it with your password of 8 or more characters. After that, it opens only in Ultimate USB.",
  "tl.ventoy.summary": "Install Ventoy on a USB drive with Ultimate USB or Ventoy (Unofficial), copy ISO files and pick one at boot. Install uses 2 tokens; Update and Clear 1.",
- "tl.wipe-usb.summary": "Wipe USB in Ultimate USB and USB Tools overwrites the whole drive with one of five methods, can verify it, and gives an erasure report. It uses no tokens."
+ "tl.wipe-usb.summary": "Wipe USB in Ultimate USB and USB Tools overwrites the whole drive with one of five methods, can verify it, and gives an erasure report. It uses no tokens.",
+ "sup.mail.slow": "Email replies may be slow at the moment.",
+ "sup.wa.off": "WhatsApp is not available at the moment"
 }

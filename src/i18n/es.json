@@ -3172,5 +3172,7 @@
  "tl.usb-defragmenter.summary": "En Ultimate USB y USB Tools, Desfragmentador USB desfragmenta particiones FAT32 y exFAT. No usa tokens, y los archivos movidos están a salvo si desconectas la unidad.",
  "tl.usb-encryption.summary": "En Ultimate USB, Cifrado USB borra una unidad USB y la cifra con tu contraseña de 8 o más caracteres. Después, solo se abre en Ultimate USB.",
  "tl.ventoy.summary": "Instala Ventoy en una unidad USB con Ultimate USB o Ventoy (Unofficial), copia archivos ISO y elige uno al arrancar. Instalar usa 2 tokens; Actualizar y Limpiar, 1.",
- "tl.wipe-usb.summary": "En Ultimate USB y USB Tools, Borrar USB sobrescribe toda la unidad con uno de cinco métodos, puede comprobarla y emite un informe de borrado. No usa tokens."
+ "tl.wipe-usb.summary": "En Ultimate USB y USB Tools, Borrar USB sobrescribe toda la unidad con uno de cinco métodos, puede comprobarla y emite un informe de borrado. No usa tokens.",
+ "sup.wa.off": "WhatsApp no está disponible en este momento",
+ "sup.mail.slow": "Las respuestas por correo electrónico pueden tardar más en este momento."
 }

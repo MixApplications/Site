@@ -3116,5 +3116,7 @@
  "tl.usb-defragmenter.summary": "Ultimate USB 和 USB Tools 中的 USB 重組工具可對 FAT32 和 exFAT 分割區進行碎片整理。不消耗代幣；即使拔除隨身碟，已移動的檔案也是安全的。",
  "tl.usb-encryption.summary": "Ultimate USB 中的 USB 加密會清除隨身碟，並用您設定的 8 個或更多字元的密碼加密。之後，它只能在 Ultimate USB 中開啟。",
  "tl.ventoy.summary": "用 Ultimate USB 或 Ventoy (Unofficial) 把 Ventoy 安裝到隨身碟，複製 ISO 檔案，開機時選擇一個。安裝消耗 2 個代幣；更新和清除消耗 1 個。",
- "tl.wipe-usb.summary": "Ultimate USB 和 USB Tools 中的擦除 USB 會用五種方法之一覆寫整個隨身碟，可以進行驗證，並提供清除報告。不消耗代幣。"
+ "tl.wipe-usb.summary": "Ultimate USB 和 USB Tools 中的擦除 USB 會用五種方法之一覆寫整個隨身碟，可以進行驗證，並提供清除報告。不消耗代幣。",
+ "sup.wa.off": "WhatsApp 暫時無法使用",
+ "sup.mail.slow": "目前電子郵件回覆可能較慢。"
 }

@@ -3172,5 +3172,7 @@
  "tl.usb-defragmenter.summary": "Dans Ultimate USB et USB Tools, Défragmenteur USB défragmente les partitions FAT32 et exFAT. Aucun jeton, et les fichiers déplacés restent intacts si vous débranchez la clé.",
  "tl.usb-encryption.summary": "Dans Ultimate USB, Chiffrement USB efface une clé USB et la chiffre avec votre mot de passe de 8 caractères ou plus. Ensuite, elle ne s'ouvre que dans Ultimate USB.",
  "tl.ventoy.summary": "Installez Ventoy sur une clé USB avec Ultimate USB ou Ventoy (Unofficial), copiez des fichiers ISO et choisissez-en un au démarrage. Installer : 2 jetons ; Mettre à jour et Effacer : 1.",
- "tl.wipe-usb.summary": "Dans Ultimate USB et USB Tools, Effacer USB écrase toute la clé avec l'une de cinq méthodes, peut la vérifier et délivre un rapport d'effacement. Aucun jeton n'est utilisé."
+ "tl.wipe-usb.summary": "Dans Ultimate USB et USB Tools, Effacer USB écrase toute la clé avec l'une de cinq méthodes, peut la vérifier et délivre un rapport d'effacement. Aucun jeton n'est utilisé.",
+ "sup.wa.off": "WhatsApp n’est pas disponible pour le moment",
+ "sup.mail.slow": "Les réponses par e-mail peuvent être lentes pour le moment."
 }

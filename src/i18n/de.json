@@ -3172,5 +3172,7 @@
  "tl.usb-defragmenter.summary": "Der USB Defragmentierer in Ultimate USB und USB Tools defragmentiert FAT32- und exFAT-Partitionen. Keine Token; verschobene Dateien bleiben sicher, wenn Sie das Laufwerk abziehen.",
  "tl.usb-encryption.summary": "Die USB-Verschlüsselung in Ultimate USB löscht ein USB-Laufwerk und verschlüsselt es mit Ihrem Passwort aus 8 oder mehr Zeichen. Danach öffnet es sich nur in Ultimate USB.",
  "tl.ventoy.summary": "Ventoy mit Ultimate USB oder Ventoy (Unofficial) auf ein USB-Laufwerk installieren, ISO-Dateien kopieren und beim Booten eine wählen. Installieren: 2 Token; Aktualisieren und Löschen: 1.",
- "tl.wipe-usb.summary": "USB löschen in Ultimate USB und USB Tools überschreibt das ganze Laufwerk mit einer von fünf Methoden, kann das Ergebnis prüfen und erstellt einen Löschbericht. Es verbraucht keine Token."
+ "tl.wipe-usb.summary": "USB löschen in Ultimate USB und USB Tools überschreibt das ganze Laufwerk mit einer von fünf Methoden, kann das Ergebnis prüfen und erstellt einen Löschbericht. Es verbraucht keine Token.",
+ "sup.wa.off": "WhatsApp ist derzeit nicht verfügbar",
+ "sup.mail.slow": "Antworten per E-Mail können derzeit länger dauern."
 }

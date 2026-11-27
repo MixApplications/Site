@@ -3154,5 +3154,7 @@
  "tl.usb-defragmenter.summary": "Ultimate USB と USB Tools の USB デフラグツールは、FAT32 と exFAT のパーティションをデフラグします。トークンは使わず、途中で取り外しても移動済みのファイルは安全です。",
  "tl.usb-encryption.summary": "Ultimate USB の USB暗号化は、USB ドライブを消去し、8 文字以上のパスワードで暗号化します。その後、ドライブは Ultimate USB でしか開けません。",
  "tl.ventoy.summary": "Ultimate USB または Ventoy (Unofficial) で USB ドライブに Ventoy をインストールし、ISO ファイルをコピーして、起動時に 1 つ選びます。インストールは 2 トークン、更新とクリアは 1 トークンです。",
- "tl.wipe-usb.summary": "Ultimate USB と USB Tools の USBを消去は、5 つの方式のいずれかでドライブ全体を上書きし、検証もでき、消去レポートを作成します。トークンは使いません。"
+ "tl.wipe-usb.summary": "Ultimate USB と USB Tools の USBを消去は、5 つの方式のいずれかでドライブ全体を上書きし、検証もでき、消去レポートを作成します。トークンは使いません。",
+ "sup.wa.off": "WhatsAppは現在ご利用いただけません",
+ "sup.mail.slow": "現在、メールへの返信に時間がかかる場合があります。"
 }

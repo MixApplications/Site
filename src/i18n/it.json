@@ -3154,5 +3154,7 @@
  "tl.usb-defragmenter.summary": "In Ultimate USB e USB Tools, Deframmentatore USB deframmenta partizioni FAT32 ed exFAT. Non usa gettoni, e i file spostati restano al sicuro se scolleghi l'unità.",
  "tl.usb-encryption.summary": "In Ultimate USB, Crittografia USB cancella un'unità USB e la crittografa con la tua password di 8 o più caratteri. Dopo, si apre solo in Ultimate USB.",
  "tl.ventoy.summary": "Installa Ventoy su un'unità USB con Ultimate USB o Ventoy (Unofficial), copia i file ISO e scegline uno all'avvio. Installa usa 2 gettoni; Aggiorna e Pulisci 1.",
- "tl.wipe-usb.summary": "In Ultimate USB e USB Tools, Cancella USB sovrascrive l'intera unità con uno di cinque metodi, può verificarla e rilascia un rapporto di cancellazione. Non usa gettoni."
+ "tl.wipe-usb.summary": "In Ultimate USB e USB Tools, Cancella USB sovrascrive l'intera unità con uno di cinque metodi, può verificarla e rilascia un rapporto di cancellazione. Non usa gettoni.",
+ "sup.wa.off": "WhatsApp non è disponibile al momento",
+ "sup.mail.slow": "Le risposte via email potrebbero essere lente al momento."
 }

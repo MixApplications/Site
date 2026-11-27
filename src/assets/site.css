@@ -186,6 +186,8 @@ footer.site{background:var(--navy);color:var(--on-dark);padding:52px 0 40px;marg
 .btn svg{flex-shrink:0}
 .btn--ghost{background:var(--surface);color:var(--ink);border-color:var(--border)}
 .btn--ghost:hover{border-color:var(--c,var(--blue));filter:none}
+.btn--off,.btn--off:hover{cursor:not-allowed;color:var(--dim);border-color:var(--border)}
+.slow{margin-top:10px;font-weight:600;color:var(--dim)}
 .btn--sm{padding:8px 13px;font-size:.88rem;border-radius:7px}
 @media (prefers-color-scheme:dark){
   .btn:not(.btn--ghost){color:#0C1520}

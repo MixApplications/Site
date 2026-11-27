@@ -3154,5 +3154,7 @@
  "tl.usb-defragmenter.summary": "Trình chống phân mảnh USB trong Ultimate USB và USB Tools chống phân mảnh phân vùng FAT32 và exFAT. Công cụ không dùng token, và tệp đã di chuyển vẫn an toàn nếu bạn rút ổ.",
  "tl.usb-encryption.summary": "Mã hóa USB trong Ultimate USB xóa ổ USB và mã hóa ổ bằng mật khẩu của bạn dài 8 ký tự trở lên. Sau đó, ổ chỉ mở được trong Ultimate USB.",
  "tl.ventoy.summary": "Cài Ventoy lên ổ USB bằng Ultimate USB hoặc Ventoy (Unofficial), sao chép tệp ISO và chọn một tệp khi khởi động. Cài đặt dùng 2 token; Cập nhật và Xóa dùng 1.",
- "tl.wipe-usb.summary": "Xóa USB trong Ultimate USB và USB Tools ghi đè toàn bộ ổ bằng một trong năm phương pháp, có thể xác minh và cung cấp báo cáo xóa. Công cụ không dùng token."
+ "tl.wipe-usb.summary": "Xóa USB trong Ultimate USB và USB Tools ghi đè toàn bộ ổ bằng một trong năm phương pháp, có thể xác minh và cung cấp báo cáo xóa. Công cụ không dùng token.",
+ "sup.wa.off": "WhatsApp hiện không khả dụng",
+ "sup.mail.slow": "Phản hồi qua email hiện có thể chậm."
 }

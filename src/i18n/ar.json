@@ -3172,5 +3172,7 @@
  "tl.usb-defragmenter.summary": "في Ultimate USB وUSB Tools، تلغي أداة إلغاء تجزئة USB تجزئة أقسام FAT32 وexFAT. لا تستهلك توكنات، وتبقى الملفات المنقولة آمنة إن فصلت المحرك.",
  "tl.usb-encryption.summary": "في Ultimate USB، تمحو أداة تشفير USB محرك USB وتشفّره بكلمة مرورك المكوّنة من 8 أحرف أو أكثر. بعد ذلك لا يُفتح إلا في Ultimate USB.",
  "tl.ventoy.summary": "ثبّت Ventoy على محرك USB باستخدام Ultimate USB أو Ventoy (Unofficial)، وانسخ ملفات ISO واختر واحدًا منها عند الإقلاع. يستهلك التثبيت توكنين، والتحديث والمسح توكنًا واحدًا.",
- "tl.wipe-usb.summary": "في Ultimate USB وUSB Tools، تكتب أداة مسح USB فوق المحرك كله بأحد خمسة أساليب، ويمكنها التحقق منه، وتُصدر تقرير محو. لا تستهلك توكنات."
+ "tl.wipe-usb.summary": "في Ultimate USB وUSB Tools، تكتب أداة مسح USB فوق المحرك كله بأحد خمسة أساليب، ويمكنها التحقق منه، وتُصدر تقرير محو. لا تستهلك توكنات.",
+ "sup.wa.off": "واتساب غير متاح حاليًا",
+ "sup.mail.slow": "قد يتأخر الرد على البريد الإلكتروني حاليًا."
 }

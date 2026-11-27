@@ -3154,5 +3154,7 @@
  "tl.usb-defragmenter.summary": "Defragmentator USB w Ultimate USB i USB Tools defragmentuje partycje FAT32 i exFAT. Nie zużywa żetonów, a przeniesione pliki są bezpieczne, jeśli odłączysz dysk.",
  "tl.usb-encryption.summary": "Szyfrowanie USB w Ultimate USB wymazuje dysk USB i szyfruje go Twoim hasłem o długości 8 lub więcej znaków. Potem dysk otwiera się tylko w Ultimate USB.",
  "tl.ventoy.summary": "Zainstaluj Ventoy na dysku USB za pomocą Ultimate USB lub Ventoy (Unofficial), skopiuj pliki ISO i wybierz jeden przy rozruchu. Instalacja zużywa 2 żetony; aktualizacja i czyszczenie 1.",
- "tl.wipe-usb.summary": "Wyczyść USB w Ultimate USB i USB Tools nadpisuje cały dysk jedną z pięciu metod, może to zweryfikować i daje raport z wymazania. Nie zużywa żetonów."
+ "tl.wipe-usb.summary": "Wyczyść USB w Ultimate USB i USB Tools nadpisuje cały dysk jedną z pięciu metod, może to zweryfikować i daje raport z wymazania. Nie zużywa żetonów.",
+ "sup.wa.off": "WhatsApp jest obecnie niedostępny",
+ "sup.mail.slow": "Odpowiedzi na e-maile mogą obecnie się opóźniać."
 }

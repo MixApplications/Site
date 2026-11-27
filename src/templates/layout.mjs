@@ -103,7 +103,6 @@ ${live.map(a => `          <li><a href="/apps/${a.id}.html">${a.short || a.name}
           <li><a href="/guides/usb-safety.html" data-i18n="foot.g1">USB safety guide</a></li>
           <li><a href="/guides/choose-a-bootable-usb-app.html" data-i18n="foot.g2">Choose a bootable USB app</a></li>
           <li><a href="/guides/fix-usb-drive.html" data-i18n="foot.g4">Fix a damaged USB drive</a></li>
-          <li><a href="${WHATSAPP}" rel="noopener" data-i18n="sup.11">WhatsApp</a></li>
           <li><a href="mailto:${EMAIL}" data-i18n="sup.9">Email</a></li>
           <li><a href="${PLAY_DEV}" data-i18n="nav.play">Google Play</a></li>
         </ul>

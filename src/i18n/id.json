@@ -3172,5 +3172,7 @@
  "tl.usb-defragmenter.summary": "Defragmenter USB di Ultimate USB dan USB Tools mendefragmentasi partisi FAT32 dan exFAT. Tidak memakai token, dan file yang sudah dipindahkan tetap aman jika drive dicabut.",
  "tl.usb-encryption.summary": "Enkripsi USB di Ultimate USB menghapus drive USB dan mengenkripsinya dengan kata sandi Anda (8 karakter atau lebih). Setelah itu, drive hanya terbuka di Ultimate USB.",
  "tl.ventoy.summary": "Pasang Ventoy di drive USB dengan Ultimate USB atau Ventoy (Unofficial), salin file ISO, dan pilih salah satu saat boot. Instal memakai 2 token; Perbarui dan Bersihkan 1.",
- "tl.wipe-usb.summary": "Hapus USB di Ultimate USB dan USB Tools menimpa seluruh drive dengan salah satu dari lima metode, bisa memverifikasinya, dan memberikan laporan penghapusan. Tidak memakai token."
+ "tl.wipe-usb.summary": "Hapus USB di Ultimate USB dan USB Tools menimpa seluruh drive dengan salah satu dari lima metode, bisa memverifikasinya, dan memberikan laporan penghapusan. Tidak memakai token.",
+ "sup.wa.off": "WhatsApp sedang tidak tersedia",
+ "sup.mail.slow": "Balasan email mungkin lambat untuk saat ini."
 }
