@@ -6,7 +6,6 @@ export const EMAIL = 'islam.saad2005@gmail.com';
 export const WHATSAPP = 'https://wa.me/201111707320';
 export const PLAY_DEV = 'https://play.google.com/store/apps/developer?id=MixApplications';
 
-const FONTS = 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap';
 
 export const ICON = {
   globe: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg>',
@@ -59,10 +58,7 @@ ${page.noindex ? '<meta name="robots" content="noindex">\n' : `<link rel="canoni
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://play-lh.googleusercontent.com" crossorigin>
-<link href="${FONTS}" rel="stylesheet">
 <link rel="stylesheet" href="${ctx.asset('site.css')}">
 ${page.head || ''}</head>
 <body>
